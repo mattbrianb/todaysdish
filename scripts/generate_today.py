@@ -22,6 +22,7 @@ def get_recipe(tags):
 
     return {
         "name": recipe["title"],
+        "image": recipe.get("image"),
         "instructions": recipe.get("instructions", "No instructions available.")
     }
 
