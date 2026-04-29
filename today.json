@@ -1,0 +1,15 @@
+{
+  "date": "initial",
+  "breakfast": {
+    "name": "Example Breakfast",
+    "instructions": "This will be replaced automatically."
+  },
+  "lunch": {
+    "name": "Example Lunch",
+    "instructions": "This will be replaced automatically."
+  },
+  "dinner": {
+    "name": "Example Dinner",
+    "instructions": "This will be replaced automatically."
+  }
+}
