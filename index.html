@@ -1,31 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Today's Dish</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    .date {
+      text-align: center;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .meal {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .meal img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+
+    .meal h2 {
+      margin-top: 0;
+    }
+
+    .instructions {
+      white-space: pre-line;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      color: #aaa;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Today's Dishes</h1>
-  <div id="content">Loading today’s dishes…</div>
+  <div class="container">
+    <h1>Today's Dishes</h1>
+    <div class="date" id="date"></div>
+
+    <div id="content">Loading today’s dishes…</div>
+
+    <footer>
+      New dishes every day
+    </footer>
+  </div>
 
   <script>
     fetch('today.json')
-      .then(response => response.json())
+      .then(res => res.json())
       .then(data => {
+        document.getElementById('date').innerText =
+          "For " + new Date(data.date).toDateString();
+
         document.getElementById('content').innerHTML = `
-          <h2>Breakfast: ${data.breakfast.name}</h2>
-          <p>${data.breakfast.instructions}</p>
+          <div class="meal">
+            <h2>Breakfast: ${data.breakfast.name}</h2>
+            <img src="${data.breakfast.image}"  <div class="instructions">${data.breakfast.instructions}</div>
+          </div>
 
-          <h2>Lunch: ${data.lunch.name}</h2>
-          <p>${data.lunch.instructions}</p>
+          <div class="meal">
+            <h2>Lunch: ${data.lunch.name}</h2>
+            <img src="${data.lunch.image}" altiv class="instructions">${data.lunch.instructions}</div>
+          </div>
 
-          <h2>Dinner: ${data.dinner.name}</h2>
-          <p>${data.dinner.instructions}</p>
+          <div class="meal">
+            <h2>Dinner: ${data.dinner.name}</h2>
+            <img src="${data.dinner.image}"  <div class="instructions">${data.dinner.instructions}</div>
+          </div>
         `;
       })
       .catch(() => {
         document.getElementById('content').innerText =
-          'Today’s dishes are not available yet.';
+          "Unable to load today's dishes.";
       });
   </script>
 </body>
