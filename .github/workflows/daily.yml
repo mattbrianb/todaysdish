@@ -1,13 +1,35 @@
 name: Daily Dish Generator
 
 on:
+  schedule:
+    - cron: "0 4 * * *"   # 06:00 South Africa (UTC+2)
   workflow_dispatch:
 
 jobs:
   generate:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - name: Test workflow
-        run: echo "Workflow runs correctly"
-``
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Generate today's dishes
+        env:
+          SPOONACULAR_API_KEY: ${{ secrets.SPOONACULAR_API_KEY }}
+        run: python scripts/generate_today.py
+
+      - name: Commit updated today.json
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add today.json
+          git commit -m "Update today's dishes" || echo "No changes"
+          git push
