@@ -1,0 +1,13 @@
+name: Daily Dish Generator
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test workflow
+        run: echo "Workflow runs correctly"
+``
