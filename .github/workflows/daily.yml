@@ -1,5 +1,8 @@
 name: Daily Dish Generator
 
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: "0 4 * * *"   # 06:00 South Africa (UTC+2)
