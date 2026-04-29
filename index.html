@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Today's Dish</title>
+</head>
+<body>
+  <h1>Today's Dishes</h1>
+  <div id="content">Loading today’s dishes…</div>
+
+  <script>
+    fetch('today.json')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('content').innerHTML = `
+          <h2>Breakfast: ${data.breakfast.name}</h2>
+          <p>${data.breakfast.instructions}</p>
+
+          <h2>Lunch: ${data.lunch.name}</h2>
+          <p>${data.lunch.instructions}</p>
+
+          <h2>Dinner: ${data.dinner.name}</h2>
+          <p>${data.dinner.instructions}</p>
+        `;
+      })
+      .catch(() => {
+        document.getElementById('content').innerText =
+          'Today’s dishes are not available yet.';
+      });
+  </script>
+</body>
+</html>
+``
