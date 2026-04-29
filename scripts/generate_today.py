@@ -20,11 +20,25 @@ def get_recipe(tags):
 
     recipe = response.json()["recipes"][0]
 
+    ingredients = [
+        item["original"]
+        for item in recipe.get("extendedIngredients", [])
+    ]
+
+    instructions = recipe.get("analyzedInstructions", [])
+    steps = []
+
+    if instructions:
+        steps = [step["step"] for step in instructions[0]["steps"]]
+
     return {
         "name": recipe["title"],
         "image": recipe.get("image"),
-        "instructions": recipe.get("instructions", "No instructions available.")
+        "cookTime": recipe.get("readyInMinutes"),
+        "ingredients": ingredients,
+        "steps": steps
     }
+
 
 def main():
     today = {
