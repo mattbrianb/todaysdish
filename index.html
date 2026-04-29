@@ -134,7 +134,10 @@ fetch('today.json')
       <div class="card">
         <h2><span>${title}</span><br>${d.name}</h2>
         <div><strong>Cook time:</strong> ${d.cookTime} min</div>
-        <img src="${d.image}" altgredients</h3>
+        <img src="${d.image || 'https://via.placeholder.com/600x400?text=No+Image'}"
+             alt=""
+             loading="lazy"
+             onerror="this.src='https://via.placeholder.com/600x400?text=No+Image'">
         <ul>${d.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
         <h3>Method</h3>
         <ol>${d.steps.map(s => `<li>${s}</li>`).join('')}</ol>
