@@ -1,87 +1,68 @@
 {
-  "date": "2026-04-29",
+  "date": "2026-04-30",
   "breakfast": {
-    "name": "Whole Wheat Blueberry Muffins",
-    "image": "https://img.spoonacular.com/recipes/665273-556x370.jpg",
+    "name": "Overnight Steel Cut Oatmeal",
+    "image": "https://img.spoonacular.com/recipes/654274-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 1/2 teaspoon baking powder",
-      "1 teaspoon baking soda",
-      "2 very ripe large bananas",
-      "7 ounces fresh blueberries",
-      "1 cup melted butter",
-      "1 1/4 cup buttermilk",
-      "1 large egg, lightly beaten",
-      "1/2 cup light brown sugar",
-      "1 teaspoon raw sugar",
-      "pinch of fine sea salt",
-      "2 cups whole wheat flour"
+      "2 cups dry steel cut oats",
+      "8 cups water",
+      "3/4 cup dried fruit",
+      "2 tablespoons butter"
     ],
     "steps": [
-      "Preheat oven to 350 degrees an line a muffin tin with paper or silicon cups.Peel bananas and mash them in a bowl. Set aside.In a large bowl, combine flour, baking powder, baking soda, salt and light brown sugar. Make a well in the center an add buttermilk, beaten egg, olive oil (or butter) and bananas.",
-      "Combine until just mixed. Do not overmix!",
-      "Add in blueberries and give a couple of stirs.Spoon batter into muffin cups until full and then sprinkle the tops with raw sugar.",
-      "Bake for 20 - 25 minutes until golden brown.",
-      "Let cool a few minutes in the pan and then transfer to a wire rack to cool completely."
+      "Stir all ingredients together in a slow cooker. Cover and cook on low for 8 hours overnight. In the morning, stir well and add milk, spices, or additional toppings to your liking."
     ]
   },
   "lunch": {
-    "name": "Turkey BLT with Creamy Dijon Mustard",
-    "image": "https://img.spoonacular.com/recipes/663992-556x370.jpg",
+    "name": "3 Cheese Ravioli",
+    "image": "https://img.spoonacular.com/recipes/631863-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3 tablespoons dijon mustard",
-      "1 loaf of fresh italian bread",
-      "2 tablespoons of olive oil",
-      "4 romaine heart leaves cut in half",
-      "2 tablespoons salad dressing (i.e. Miracle Whip)",
-      "8 slices of swiss cheese",
-      "2 tomatoes, sliced",
-      "1 12 oz package of turkey bacon (16 slices)",
-      "1 medium vidalia onion, sliced"
+      "2 tablespoons butter, melted",
+      "\u00bc Cup chicken stock",
+      "3 teaspoons cooking oil",
+      "2 large eggs, beaten",
+      "2/3 pound flour",
+      "ground nutmeg",
+      "1/4 pound Gruyere cheese, grated",
+      "2 tablespoons Parmesan cheese, grated",
+      "2 tablespoons parsley, chopped",
+      "pound Ricotta cheese",
+      "teaspoon salt",
+      "salt and pepper"
     ],
     "steps": [
-      "Preheat oven at 350 degrees.Cook bacon in skillet on stove top.Slice italian bread in to 8 even slices.",
-      "Mix together dijon mustard and salad dressing in a small bowl.",
-      "Spread a thin layer of creamy dijon mustard to one side of each slice of bread.Top one of the slices with 2 pieces of cheese, 2 romaine leaves, 2 slices of tomato, 1 slice of onion and 4 slices of turkey bacon.Top with other half of bread.",
-      "Drizzle the top of the bread with olive oil and place on baking sheet.",
-      "Bake in the oven, turning half way until each side of bread is toasted and cheese is melted (approximately 4-5 minutes per side).Variation- instead of toasting in oven, use a panini maker or toast in a skillet on stove top."
+      "In a large bowl, mix the first four ingredients together (flour, egg, salt and oil). Form a ball of dough using your hands, then let it rest for about 1 hour.In another bowl, mix together: ricotta, Gruyere and Parmesan cheese, eggs, parsley - then season with nutmeg, salt and pepper. Divide the dough into 2 equal parts.",
+      "Roll them out (using a rolling pin) to very make a large, thin rectangle.",
+      "Place tablespoons of filling on the sheet of dough about 1 inch apart until all the filling and dough have been used up. Using a pizza cutter, cut the ravioli in squares.Boil the chicken stock or water in a large pot, then add the ravioli and let it boil in the stock for about 3-5 minutes, until cooked.",
+      "Remove and drain the ravioli, then sprinkle melted butter and Parmesan cheese. Toss and serve hot."
     ]
   },
   "dinner": {
-    "name": "Instant Pot Chili Mac",
-    "image": "https://img.spoonacular.com/recipes/1165787-556x370.jpg",
-    "cookTime": 14,
+    "name": "Farro & Leek Soup",
+    "image": "https://img.spoonacular.com/recipes/642597-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "1 tbsp olive oil",
-      "1 lb ground beef lean",
-      "1 onion medium",
-      "1 bell pepper red, medium",
-      "1/2 tsp cayenne pepper",
-      "1 tsp garlic powder",
-      "1 tbsp cumin",
-      "1 tbsp chili powder",
-      "1 tsp black pepper",
-      "1 tsp white pepper",
-      "1 tsp oregano",
-      "3 cups chicken broth",
-      "28 oz crushed tomatoes",
-      "14 oz red kidney beans canned, drained",
-      "2 cups Monterrey Jack Cheese",
-      "2 cups elbow macaroni uncooked"
+      "2-3 glugs or tablespoons olive oil",
+      "2 leeks, white parts only, sliced finely",
+      "1 cup or 150 gr farro",
+      "1 stalk of celery, finely diced",
+      "1 carrot, finely diced",
+      "1 onion, finely diced",
+      "1 liter meat stock (vegetable or chicken stock is OK, however meat stock adds richer flavor) **Please do not use bullion cubes for this! There are only 3 ingredients & they should be of the highest quality possible.",
+      "herbs - I use 1 sprig of thyme & a bay leaf",
+      "2 tablespoons Parmesan cheese, freshly grated",
+      "salt & pepper"
     ],
     "steps": [
-      "Turn on the pressure cooker and place on saut\u00e9 mode. Once heated, add the olive oil, onion, and bell pepper. Saut\u00e9 for 3 minutes.",
-      "Add in the ground beef and continue to stir until the beef is thoroughly cooked.",
-      "Add in the seasonings. Stir.",
-      "Add crushed tomatoes and kidney beans and mix well.",
-      "Pour in chicken broth and macaroni noodles. Stir the mixture until well combined.",
-      "Hit the cancel button on the Instant Pot.",
-      "Securely place the lid on the pressure cooker and lock the lid in place. Set the vent to seal and start the manual cook time for 4 minutes.",
-      "Once the cooking time is finished, carefully place the valve to vent and allow the pressure pin to drop before unlocking the lid to the Instant Pot.",
-      "Remove the lid and stir the chili mac recipe well.",
-      "Mix in the cheese.",
-      "Add your favorite toppings and serve."
+      "In a heavy bottomed pot, heat olive oil on med/low heat.",
+      "Add in the vegetables and sweat until translucent and soft WITHOUT browning. If the vegetables stick to the pan, lower the heat & add a spoonful of water.",
+      "Then toss in the farro, toasting with the vegetables for 1-2 minutes.",
+      "Add in the herbs & stock. Season with salt & pepper.",
+      "Then Bring up to a low simmer and continue to simmer for 30-40 minutes until the farro is tender.",
+      "You can control the consistency of the soup: to make it more 'stewy'  hold back a little stock, and the contrary if you like it 'soupy,' add a bit more stock.",
+      "Drizzle with extra virgin olive oil, sprinkle of Parmesan cheese and serve with toasty bread."
     ]
   }
 }
