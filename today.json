@@ -1,68 +1,93 @@
 {
-  "date": "2026-04-30",
+  "date": "2026-05-01",
   "breakfast": {
-    "name": "Overnight Steel Cut Oatmeal",
-    "image": "https://img.spoonacular.com/recipes/654274-556x370.jpg",
+    "name": "Caramelized cranberries coconut pancakes",
+    "image": "https://img.spoonacular.com/recipes/637055-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 cups dry steel cut oats",
-      "8 cups water",
-      "3/4 cup dried fruit",
-      "2 tablespoons butter"
+      "2 tsp baking powder",
+      "1 tablespoon brown sugar",
+      "1 cup coconut flour",
+      "2 cups coconut milk",
+      "1 cup fresh cranberries",
+      "4 eggs",
+      "1/2 teaspoon salt",
+      "1 tsp vanilla extract",
+      "1 cup whole wheat flour"
     ],
     "steps": [
-      "Stir all ingredients together in a slow cooker. Cover and cook on low for 8 hours overnight. In the morning, stir well and add milk, spices, or additional toppings to your liking."
+      "Heat a nonstick sauce pan over medium flame.",
+      "Add cranberries, brown sugar and vanilla extract to the pan.",
+      "Mix, cover and cook for 4-5 minutes till the cranberries are soft and mash it with a spoon.Turn off the flame and let it cool for a while.In a mixing bowl combine all the dry ingredients.In another bowl whip the eggs and mix in the milk.",
+      "Add the cranberries mix to the egg and milk. Beat thoroughly.",
+      "Pour the liquid ingredients to the dry ingredients and mix well.",
+      "Let it stand for 2 minutes.In the meantime heat the griddle or fry pan over medium flame and grease it with cooking spray or oil of your choice.",
+      "Pour a spoonful of the batter into the pan and shape it round.",
+      "Let it cook for 2 minutes or until golden brown. The pancake would rise a bit. Flip to the other side and cook again for 2 minutes or until golden brown. Repeat the same process for all the pancakes.",
+      "Drizzle sweetener of your choice and top it with cream if desired and serve warm."
     ]
   },
   "lunch": {
-    "name": "3 Cheese Ravioli",
-    "image": "https://img.spoonacular.com/recipes/631863-556x370.jpg",
+    "name": "Pasta With Chicken and Broccoli",
+    "image": "https://img.spoonacular.com/recipes/654901-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 tablespoons butter, melted",
-      "\u00bc Cup chicken stock",
-      "3 teaspoons cooking oil",
-      "2 large eggs, beaten",
-      "2/3 pound flour",
-      "ground nutmeg",
-      "1/4 pound Gruyere cheese, grated",
-      "2 tablespoons Parmesan cheese, grated",
-      "2 tablespoons parsley, chopped",
-      "pound Ricotta cheese",
-      "teaspoon salt",
-      "salt and pepper"
+      "1/4 cup olive oil",
+      "1/2 pound boneless chicken breasts cut in \u00bd in strips",
+      "1 pinch red pepper flakes",
+      "1/2 pound bow tie pasta or small lasagna noodles, (cooked)",
+      "2 garlic cloves, minced",
+      "1 1/2 cups broccoli florets",
+      "1 teaspoon dried basil leaves",
+      "1/4 cup white wine",
+      "3/4 cup chicken broth",
+      "Grated parmesan cheese"
     ],
     "steps": [
-      "In a large bowl, mix the first four ingredients together (flour, egg, salt and oil). Form a ball of dough using your hands, then let it rest for about 1 hour.In another bowl, mix together: ricotta, Gruyere and Parmesan cheese, eggs, parsley - then season with nutmeg, salt and pepper. Divide the dough into 2 equal parts.",
-      "Roll them out (using a rolling pin) to very make a large, thin rectangle.",
-      "Place tablespoons of filling on the sheet of dough about 1 inch apart until all the filling and dough have been used up. Using a pizza cutter, cut the ravioli in squares.Boil the chicken stock or water in a large pot, then add the ravioli and let it boil in the stock for about 3-5 minutes, until cooked.",
-      "Remove and drain the ravioli, then sprinkle melted butter and Parmesan cheese. Toss and serve hot."
+      "In a large skillet, heat oil over medium heat.",
+      "Sautee garlic for about one minute, stirring constantly. DO NOT BURN.",
+      "Add the chicken and cook until well done.",
+      "Add the broccoli and cook until crisp but tender.",
+      "Add basil; red pepper; salt and pepper to taste; wine and chicken broth. cook for about 5 minutes.",
+      "Add the cooked and drained pasta to the skillet and toss to combine.",
+      "Heat for 1 to 2 minutes",
+      "Serve.",
+      "Top with grated Parmesan cheese if desired."
     ]
   },
   "dinner": {
-    "name": "Farro & Leek Soup",
-    "image": "https://img.spoonacular.com/recipes/642597-556x370.jpg",
+    "name": "Bridget Jones's Shepherd's Pie",
+    "image": "https://img.spoonacular.com/recipes/636096-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2-3 glugs or tablespoons olive oil",
-      "2 leeks, white parts only, sliced finely",
-      "1 cup or 150 gr farro",
-      "1 stalk of celery, finely diced",
-      "1 carrot, finely diced",
-      "1 onion, finely diced",
-      "1 liter meat stock (vegetable or chicken stock is OK, however meat stock adds richer flavor) **Please do not use bullion cubes for this! There are only 3 ingredients & they should be of the highest quality possible.",
-      "herbs - I use 1 sprig of thyme & a bay leaf",
-      "2 tablespoons Parmesan cheese, freshly grated",
-      "salt & pepper"
+      "2 onions, finely chopped",
+      "2 tablespoons olive oil",
+      "600 grams minced lamb",
+      "2 tablespoons plain flour",
+      "thyme",
+      "rosemary",
+      "1 small tin chopped tomatoes",
+      "100 milliliters chicken, beef or lamb stock",
+      "salt and freshly ground black pepper",
+      "700 grams potatoes",
+      "55 milliliters milk",
+      "75 grams butter",
+      "1 free-range egg yolk"
     ],
     "steps": [
-      "In a heavy bottomed pot, heat olive oil on med/low heat.",
-      "Add in the vegetables and sweat until translucent and soft WITHOUT browning. If the vegetables stick to the pan, lower the heat & add a spoonful of water.",
-      "Then toss in the farro, toasting with the vegetables for 1-2 minutes.",
-      "Add in the herbs & stock. Season with salt & pepper.",
-      "Then Bring up to a low simmer and continue to simmer for 30-40 minutes until the farro is tender.",
-      "You can control the consistency of the soup: to make it more 'stewy'  hold back a little stock, and the contrary if you like it 'soupy,' add a bit more stock.",
-      "Drizzle with extra virgin olive oil, sprinkle of Parmesan cheese and serve with toasty bread."
+      "Preheat the oven to 180 C.",
+      "In a large frying pan, heat a little olive oil and fry the chopped onion and garlic.",
+      "Add the mince, stirring, until browned all over.",
+      "While the meat is frying, break up any lumps with the back of the spoon.",
+      "Add the flour (this helps to thicken the juices) and stir.",
+      "Mix well and add the thyme and the rosemary and stir.",
+      "Add the chopped tomatoes and pour the stock mixture.",
+      "Add a pinch of salt and freshly ground black pepper and let it simmer for about 5 minutes.",
+      "For the mash, boil the potatoes, then drain them in a sieve and place into a clean bowl.",
+      "Add the milk, butter and egg yolk, and mash together.",
+      "Season with salt and freshly ground black pepper.",
+      "Pour the meat into an ovenproof dish and spread the mash on top, smooth over and mark with a spatula.",
+      "Put the dish into the oven and cook until the surface is bubbling and golden-brown."
     ]
   }
 }
