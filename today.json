@@ -1,67 +1,86 @@
 {
-  "date": "2026-05-02",
+  "date": "2026-05-03",
   "breakfast": {
-    "name": "Cinnamon Mocha Quick Bread",
-    "image": "https://img.spoonacular.com/recipes/639465-556x370.jpg",
+    "name": "Strawberry Shortcake w. Mini Strawberry PopTarts",
+    "image": "https://img.spoonacular.com/recipes/716417-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "4 cups all-purpose flour",
-      "2 cups granulated sugar (divided)",
-      "3 teaspoons instant coffee granules",
-      "1 tablespoon cocoa",
-      "2 teaspoons baking soda",
-      "1 teaspoon salt",
-      "2 eggs",
-      "2 cups buttermilk",
-      "1/2 cup canola oil",
-      "3 teaspoons ground cinnamon",
-      "Optional: 1/2 cup raisins"
+      "1 Tbs + 1 cup heavy whipping cream",
+      "1 pie crust dough, homemade or store-bought",
+      "pinch of sea salt",
+      "1 lb. strawberries (I always get Driscoll's organic\u2014yes, even when I'm not writing about Driscoll's)",
+      "1/4 cup strawberry jam",
+      "1 tsp + 2 tsp vanilla sugar (or plain sugar)"
     ],
-    "steps": [
-      "In a bowl, combine the flour, 1 1/2 cups sugar, coffee granules, cocoa, baking soda, and salt. In a small bowl, whisk the eggs, buttermilk and oil. Stir into the dry ingredients just until moistened. (Optional -- fold in raisins)",
-      "Transfer a fourth of the batter into each of two greased 8\"x4\" loaf pans.",
-      "Combine cinnamon and remaining sugar; sprinkle half over batter in each loaf pan. Repeat layers.",
-      "Cut through batter with a knife to swirl.",
-      "Bake at 350 degrees for 55 to 60 minutes or until a toothpick inserted near the center comes out clean. Cool in pans for 10 minutes; remove from pans to wire racks to cool completely."
-    ]
+    "steps": []
   },
   "lunch": {
-    "name": "Spicy Korean Bbq Pork",
-    "image": "https://img.spoonacular.com/recipes/661117-556x370.jpg",
-    "cookTime": 45,
+    "name": "Easy Vegetable Beef Soup",
+    "image": "https://img.spoonacular.com/recipes/715447-556x370.jpg",
+    "cookTime": 150,
     "ingredients": [
-      "2 pounds boneless pork loin",
-      "1/4 cup brown sugar",
-      "3 teaspoons chili garlic sauce",
-      "2 teaspoons fresh ginger, minced",
-      "6 garlic cloves, minced",
-      "rice vinegar",
-      "2 teaspoons sesame oil",
-      "1/4 cup soy sauce"
+      "3 lbs of boneless beef short ribs",
+      "1/2 cup uncooked elbow macaroni",
+      "16 cups of water 4 Qts",
+      "1 28oz can diced tomatoes",
+      "1 cup of small diced potatoes",
+      "1 cup on thin sliced carrots",
+      "1 cup thin sliced celery",
+      "1 1/2 cups chopped onion",
+      "1 15oz kernal corn (uncooked)",
+      "1 15oz can butter beans",
+      "1 15oz can black \u2013 eyed peas",
+      "2 bay leaves",
+      "1 Tbsp garlic powder",
+      "1 tsp celery salt",
+      "1 Tbsp Worcestershire sauce",
+      "1 Tbsp salt",
+      "1 Tbsp fresh ground pepper",
+      "1 Tbsp Italian seasoning",
+      "2 beef bouillon cubes",
+      "2 Tbsp dried parsley or fresh parsley"
     ],
     "steps": [
-      "Mix the marinade ingredients (brown sugar, soy sauce, ginger, sesame oil, chili garlic sauce, and ginger).",
-      "Pour over your sliced pork.Marinate no less then 4 hours; overnight is recommended.Preheat your grill to high.",
-      "Place pork on grill and grill each side 3 minutes or until cooked through.If you want a sauce to pour over your meat, boil your leftover marinade in a sauce pan for a few minutes until it boils down and thickens. You can then add rice vinegar to taste to thin it and decrease the sweetness.",
-      "Pour sauce over meat."
+      "To get started, bring 4 quarts of water to a boil in a large pot.\u00a0",
+      "While waiting on the water to boil, cut the beef short ribs into bite-sized pieces and add them to the water.",
+      "Add in diced tomatoes, potatoes, diced onion, parsley, garlic powder, beef bouillon cubes, Italian seasoning, salt, pepper, Worcestershire sauce, celery salt, bay leaves, and stir.",
+      "Then add carrots, celery, black-eyed peas, butter beans, corn, and macaroni.",
+      "Heat on high, stirring occasionally until the stew mixture comes to a boil.",
+      "Once you have reached a boil, cover with a lid, lower heat enough to keep it simmering.\u00a0 Continue to simmer for 1.5 to 2 hours, stirring occasionally."
     ]
   },
   "dinner": {
-    "name": "Amazing Chicken Burgers",
-    "image": "https://img.spoonacular.com/recipes/632300-556x370.jpg",
-    "cookTime": 45,
+    "name": "Ancho Chipotle Chili",
+    "image": "https://img.spoonacular.com/recipes/610281-556x370.jpg",
+    "cookTime": 75,
     "ingredients": [
-      "1 cup loosely packed finely chopped baby spinach",
-      "fresh mozzarella",
-      "1 lb lean ground chicken",
-      "1/2 cup Italian seasoned bread crumbs",
-      "1 1/2- 2 Tbsp pesto",
-      "3/4 cup finely chopped roasted peppers",
-      "salt & pepper",
-      "whole grain sandwich thins"
+      "1 dried ancho chile",
+      "5 g vegetable bouillon powder",
+      "1 tsp cumin",
+      "1 dried chipotle chile",
+      "fresh cilantro",
+      "400 grams ground beef",
+      "6 large mushrooms, chopped",
+      "1 onion, chopped",
+      "2 tsp dried oregano",
+      "1 red bell pepper, chopped",
+      "salt and pepper",
+      "500 grams tomato sauce",
+      "500 ml hot water"
     ],
     "steps": [
-      "In a bowl mix together the chicken, spinach, roasted peppers, pesto, bread crumbs, salt and pepper.Form into 3 equal sized patties.Cook on a hot grill pan for about 5-6 mins per side, depending on thickness and temp of the grill (pan), or until the juices run clear. Top with fresh mozzarella and place a bowl overtop to allow the steam to melt the cheese."
+      "Slice open the dried ancho and chipotle chili and remove the seeds/pith.",
+      "Place the dried chili peppers in a warm skillet (medium heat) and press them flat with a spatula to toast them for a few seconds per side until fragrant (be careful not to burn them!). Be sure to wear gloves or wash your hands directly after handling the chili peppers.",
+      "Remove the dried chili and put them in a bowl or sauce pan.",
+      "Pour 250 ml boiling water over it and leave it to soak for at least 15 minutes.",
+      "In a large pot, saute the chopped bell pepper, onion, and mushrooms over medium heat.",
+      "Meanwhile, fry the beef in a hot skillet until crispy.",
+      "While the beef is frying, blend the chili peppers you've been soaking with the soaking liquid.",
+      "Add the beef to the large pot filled with the sauteed vegetables.",
+      "Add the tomato sauce and blended chili peppers to the pot. If it is not enough liquid, add beef or vegetable broth (the other 250 ml water and 5 grams bouillon powder, unless you have \"real\" broth on hand) until everything is covered.",
+      "Season with salt, pepper, cumin, and oregano to taste.",
+      "Simmer for about 45 minutes or until thick enough.",
+      "Serve with fresh cilantro."
     ]
   }
 }
