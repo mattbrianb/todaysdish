@@ -1,77 +1,70 @@
 {
-  "date": "2026-05-05",
+  "date": "2026-05-06",
   "breakfast": {
-    "name": "Cheesy Potato Corn Scones",
-    "image": "https://img.spoonacular.com/recipes/637675-556x370.jpg",
+    "name": "Chive and dill muffins",
+    "image": "https://img.spoonacular.com/recipes/638775-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2/3 cup water",
-      "2/3 cup instant mashed potato flakes",
-      "1/4 cup cold unsalted butter, diced",
-      "1 1/4 cups all-purpose flour",
-      "1/2 cup yellow cornmeal",
-      "1 cup shredded cheddar cheese (4 ounces)",
-      "4 teaspoons baking powder",
-      "1/2 teaspoon salt",
-      "1 teaspoon poppy seeds",
-      "1/2 cup milk"
+      "1 cup all purpose flour",
+      "1 cup yellow cornmeal",
+      "1 Tbs sugar",
+      "2 tsp baking powder",
+      "1 tsp salt",
+      "\u00bd tsp baking soda",
+      "\u00bd tsp cayenne pepper",
+      "\u00bc cup fresh chives and dill, chopped",
+      "1 \u00bd cups plain yogurt",
+      "2 large eggs",
+      "3 Tbs butter, melted"
     ],
     "steps": [
-      "Lightly greased a baking sheet; set aside.  In a small saucepan, bring the water just to a simmer; remove from heat.  Stir in potato flakes until moistened.  Stir in butter until it's incorporated to potato flakes.",
-      "In a large bowl, combine flour, cornmeal, 3/4 cup of the cheese, baking powder, salt, and poppy seeds; stir in potato mixture and milk.  With floured hand, gently knead and fold the dough for five to six strokes, or until the dough comes together in one mass.  Pat the dough lightly to flatten it into a 9-inch circle on prepared baking sheet.",
-      "Cut dough into eight wedges using a pizza cutter or floured knife (do not separate).",
-      "Sprinkle edges with remaining cheese.",
-      "Bake in a preheated 400 degree F oven for about 25 minutes or until lightly browned.  Gently pull or cut scones to separate.",
-      "Serve warm."
+      "Whisk flour, cornmeal, sugar, baking powder, salt, baking soda, and cayenne pepper in medium bowl. Stir in chives and dill.",
+      "Whisk yogurt, eggs, and melted butter in another medium bowl.",
+      "Add yogurt mixture to dry ingredients and stir just until blended.",
+      "Divide batter among greased (or silicone) muffin cups, using about 1/3 cup batter for each standard muffin cup.",
+      "Bake at 220C for 20 minutes or until muffins are puffed and golden (trick with a toothpick).",
+      "Let muffins cool in muffin cups, then remove from the cups and serve warm."
     ]
   },
   "lunch": {
-    "name": "Seared Scallops With Wilted Greens",
-    "image": "https://img.spoonacular.com/recipes/659679-556x370.jpg",
-    "cookTime": 45,
+    "name": "Slow Cooker Beef Stew",
+    "image": "https://img.spoonacular.com/recipes/715446-556x370.jpg",
+    "cookTime": 490,
     "ingredients": [
-      "1 tablespoon butter",
-      "3 cloves garlic, minced",
-      "2 bunchs of kale (chard, beet greens\u2026)",
-      "1 tablespoon extra-virgin olive oil",
-      "1 tablespoon Red wine vinegar",
-      "Salt and pepper",
-      "16 large sea scallops",
-      "2 shallots, sliced thin",
-      "1 tablespoon soy sauce",
-      "3 slices of thick-cut bacon cut into pieces"
+      "1 14.5oz can of Beef Broth",
+      "2 large carrots, chopped",
+      "2 stalks celery, chopped",
+      "1 26oz can Cream of Mushroom Soup",
+      "3 green onions, chopped",
+      "10 new (red)potatoes",
+      "1 small onion chopped",
+      "\u00bd cup Dale's Seasoning",
+      "2 pounds stew meat",
+      "2 cups water"
     ],
     "steps": [
-      "Slice the kale stems into thin pieces and the leaves into larger strips.",
-      "Heat a large, deep pan to medium-high.",
-      "Add the bacon a cook 3-4 minutes.  Then add the shallots and cook until soft3 more minutes.Next add the garlic, and kale STEMS.Cook another 4-5 minutes before adding the leaves.  Toss until wilted over the heat.",
-      "Add the soy sauce, vinegar, then salt and pepper to taste.  Keep warm.",
-      "Heat an iron skillet to high.  Dry the scallops thoroughly, then salt and pepper.",
-      "Add the oil to the pan and swirl around.  When it starts to smoke, quickly add the scallops.Cook on high for about 1-2 minutes.Flip the scallops and add the butter.  Spoon the butter over the scallops as they cook another 1-2 minutes.",
-      "Serve over warm greens."
+      "To get started, heat your slow cooker to low.",
+      "Pour in the cream of mushroom soup, Dale's seasoning, water, and beef broth and stir until mixed well.",
+      "Add in your stew meat, potatoes, onions, carrots, celery, and green onions. Stir well until covered and cook on low for 8 hours. You can add salt and pepper as desired, but the flavors and the Dale's marry together so well that you probably won\u2019t need them."
     ]
   },
   "dinner": {
-    "name": "Fettuccine With Bacon Mushroom and Peas",
-    "image": "https://img.spoonacular.com/recipes/642719-556x370.jpg",
-    "cookTime": 25,
+    "name": "Basil Marinated Grilled Chicken",
+    "image": "https://img.spoonacular.com/recipes/634434-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "200 grams bacon",
-      "grated cheese",
-      "1 small can condensed cream of mushroom",
-      "dried basil",
-      "10 ounces fettuccine",
-      "ground black pepper",
-      "1 small can sliced mushroom",
-      "dried oregano powder",
-      "2/3 cup frozen green peas"
+      "4 cloves garlic",
+      "2 cups lightly packed basil leaves",
+      "cup extra virgin olive oil, about \u00bd",
+      "1/2 teaspoon salt",
+      "8 boneless chicken breasts, patted dry so the marinade wil"
     ],
     "steps": [
-      "Bring a pot of water to boil over high heat, add salt and fettuccine, cook for about 9 minutes.Meanwhile, brown bacon in a pan over medium high heat.",
-      "Drain on paper towels and set aside.",
-      "Pour the oil out of the pan, saute mushroom for about a minute then pour a can of cream of mushroom, add a can of water. Season with ground black pepper and oregano and/or basil if using, bring to boil; add green peas and a little grated cheese.Taste it first before adding the cheese since the cream of mushroom is already salty.",
-      "Add the cooked fettuccine, mix then crumble the bacon and add it to the pasta.",
-      "Serve and enjoy!"
+      "Mince garlic in a food processor, then add basil and process until roughly chopped.",
+      "Drizzle in olive oil until a thin ketchup consistency is achieved.",
+      "Add salt and whirl for 5 seconds to combine.",
+      "Place chicken in a baking dish and pour marinade over chicken, turning pieces to coat evenly. Cover and refrigerate for 4 hours.",
+      "Grill over medium high heat until cooked through, about 8 minutes per side."
     ]
   }
 }
