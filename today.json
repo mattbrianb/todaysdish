@@ -1,70 +1,74 @@
 {
-  "date": "2026-05-06",
+  "date": "2026-05-07",
   "breakfast": {
-    "name": "Chive and dill muffins",
-    "image": "https://img.spoonacular.com/recipes/638775-556x370.jpg",
+    "name": "Cherry Coconut Milk Smoothie",
+    "image": "https://img.spoonacular.com/recipes/794350-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 cup all purpose flour",
-      "1 cup yellow cornmeal",
-      "1 Tbs sugar",
-      "2 tsp baking powder",
-      "1 tsp salt",
-      "\u00bd tsp baking soda",
-      "\u00bd tsp cayenne pepper",
-      "\u00bc cup fresh chives and dill, chopped",
-      "1 \u00bd cups plain yogurt",
-      "2 large eggs",
-      "3 Tbs butter, melted"
+      "1 frozen banana, sliced (2/3 cup frozen slices)",
+      "2 cups fresh cherries, pitted",
+      "2/3 cup coconut milk",
+      "1/3 cup almond or hemp milk, or more as needed",
+      "1 teaspoon vanilla"
     ],
     "steps": [
-      "Whisk flour, cornmeal, sugar, baking powder, salt, baking soda, and cayenne pepper in medium bowl. Stir in chives and dill.",
-      "Whisk yogurt, eggs, and melted butter in another medium bowl.",
-      "Add yogurt mixture to dry ingredients and stir just until blended.",
-      "Divide batter among greased (or silicone) muffin cups, using about 1/3 cup batter for each standard muffin cup.",
-      "Bake at 220C for 20 minutes or until muffins are puffed and golden (trick with a toothpick).",
-      "Let muffins cool in muffin cups, then remove from the cups and serve warm."
+      "Combine all of the ingredients in a blender and process until smooth.",
+      "Add a bit more almond or hemp milk if the mixture is too thick.Tip: To freeze bananas for smoothies, peel the banana and cut into slices.",
+      "Place the slices on a baking sheet lined with parchment paper and freeze. Once frozen, transfer to a freezer-friendly container or freezer bag. The bananas will freeze well for up to 4 to 6 months."
     ]
   },
   "lunch": {
-    "name": "Slow Cooker Beef Stew",
-    "image": "https://img.spoonacular.com/recipes/715446-556x370.jpg",
-    "cookTime": 490,
+    "name": "Figure Friendly Mushroom and Bacon Strata",
+    "image": "https://img.spoonacular.com/recipes/642821-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "1 14.5oz can of Beef Broth",
-      "2 large carrots, chopped",
-      "2 stalks celery, chopped",
-      "1 26oz can Cream of Mushroom Soup",
-      "3 green onions, chopped",
-      "10 new (red)potatoes",
-      "1 small onion chopped",
-      "\u00bd cup Dale's Seasoning",
-      "2 pounds stew meat",
-      "2 cups water"
+      "4 large eggs",
+      "4 large egg whites",
+      "1/2 cup low fat milk",
+      "2 cups bread , stale and cubed",
+      "1/4 cup onion, minced",
+      "1/4 cup red bell (capsicum) peppers, minced",
+      "1/4 cup yellow bell pepper, minced",
+      "1 cup mushroom , sliced",
+      "2 tablespoons basil, chopped",
+      "2 tablespoons bacon bits, use real bacon bits",
+      "1 teaspoon olive oil",
+      "1/2 cup cheese, shredde"
     ],
     "steps": [
-      "To get started, heat your slow cooker to low.",
-      "Pour in the cream of mushroom soup, Dale's seasoning, water, and beef broth and stir until mixed well.",
-      "Add in your stew meat, potatoes, onions, carrots, celery, and green onions. Stir well until covered and cook on low for 8 hours. You can add salt and pepper as desired, but the flavors and the Dale's marry together so well that you probably won\u2019t need them."
+      "Heat non-stick skillet over medium heat.",
+      "Add oil and saute onion and peppers for 5 minutes to soften.",
+      "Add mushrooms and saute another 5 minutes.",
+      "Spray baking dish with cooking spray and add bread cubes. Top with mushroom mixture, basil, and salt and pepper to your taste.",
+      "Sprinkle with bacon bits and cheese.",
+      "Whip eggs and milk together and pour over bread mixture.",
+      "Refrigerate for one hour up to overnight.",
+      "Heat oven to 35",
+      "Bake 20 minutes covered with foil. Uncover and bake another 10 minutes until puffed and lightly browned."
     ]
   },
   "dinner": {
-    "name": "Basil Marinated Grilled Chicken",
-    "image": "https://img.spoonacular.com/recipes/634434-556x370.jpg",
+    "name": "Stuffed Salmon With Tomato-Olive Tapenade",
+    "image": "https://img.spoonacular.com/recipes/662087-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "4 cloves garlic",
-      "2 cups lightly packed basil leaves",
-      "cup extra virgin olive oil, about \u00bd",
-      "1/2 teaspoon salt",
-      "8 boneless chicken breasts, patted dry so the marinade wil"
+      "Brie Cheese, to taste",
+      "Dill weed, to taste",
+      "6 cloves of minced garlic",
+      "Olive oil, to taste",
+      "1 cup olives",
+      "1 onion chopped",
+      "2 salmon filets",
+      "Salt and pepper",
+      "1 cup chopped spinach",
+      "2 large tomatoes"
     ],
     "steps": [
-      "Mince garlic in a food processor, then add basil and process until roughly chopped.",
-      "Drizzle in olive oil until a thin ketchup consistency is achieved.",
-      "Add salt and whirl for 5 seconds to combine.",
-      "Place chicken in a baking dish and pour marinade over chicken, turning pieces to coat evenly. Cover and refrigerate for 4 hours.",
-      "Grill over medium high heat until cooked through, about 8 minutes per side."
+      "Preheat oven to 350F.Pound salmon fillets and rub with olive oil and dill.In bowl, combine chopped spinach, onions, and garlic. Season with salt.",
+      "Spread spinach mixture on salmon fillet. Slice brie and add on top. Carefully roll salmon and tie with string.",
+      "Bake for about 15-18 minutes.Chop olives in food processor.",
+      "Add chopped tomatoes and blend.",
+      "Spread on top of salmon."
     ]
   }
 }
