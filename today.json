@@ -1,74 +1,70 @@
 {
-  "date": "2026-05-07",
+  "date": "2026-05-08",
   "breakfast": {
-    "name": "Cherry Coconut Milk Smoothie",
-    "image": "https://img.spoonacular.com/recipes/794350-556x370.jpg",
+    "name": "Peaches And Cream Oatmeal",
+    "image": "https://img.spoonacular.com/recipes/655186-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 frozen banana, sliced (2/3 cup frozen slices)",
-      "2 cups fresh cherries, pitted",
-      "2/3 cup coconut milk",
-      "1/3 cup almond or hemp milk, or more as needed",
-      "1 teaspoon vanilla"
+      "1/4 cup frozen peaches",
+      "cup quick cooking oats",
+      "1/2 cup non-fat milk",
+      "2 teaspoons low fat cream cheese",
+      "1 teaspoon agave",
+      "1/2 teaspoon cinnamon"
     ],
     "steps": [
-      "Combine all of the ingredients in a blender and process until smooth.",
-      "Add a bit more almond or hemp milk if the mixture is too thick.Tip: To freeze bananas for smoothies, peel the banana and cut into slices.",
-      "Place the slices on a baking sheet lined with parchment paper and freeze. Once frozen, transfer to a freezer-friendly container or freezer bag. The bananas will freeze well for up to 4 to 6 months."
+      "Microwave the peaches for 30 seconds.",
+      "Add oats, milk, cream cheese, agave and cinnamon.  Microwave for 1 minute, stir, and enjoy!"
     ]
   },
   "lunch": {
-    "name": "Figure Friendly Mushroom and Bacon Strata",
-    "image": "https://img.spoonacular.com/recipes/642821-556x370.jpg",
+    "name": "Superbowl Chili",
+    "image": "https://img.spoonacular.com/recipes/662376-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "4 large eggs",
-      "4 large egg whites",
-      "1/2 cup low fat milk",
-      "2 cups bread , stale and cubed",
-      "1/4 cup onion, minced",
-      "1/4 cup red bell (capsicum) peppers, minced",
-      "1/4 cup yellow bell pepper, minced",
-      "1 cup mushroom , sliced",
-      "2 tablespoons basil, chopped",
-      "2 tablespoons bacon bits, use real bacon bits",
-      "1 teaspoon olive oil",
-      "1/2 cup cheese, shredde"
+      "15 ounces cans black beans, drained and rinsed",
+      "28 ounces can diced tomatoes, drained",
+      "2 mediums carrots",
+      "2 teaspoons tablespoons plus 1 chili powder",
+      "2 tablespoons chopped chipotle chile pepper in adobo sauce",
+      "4 teaspoons cumin",
+      "chopped fresh cilantro",
+      "2 tablespoons finely minced garlic",
+      "chopped green onions",
+      "2 teaspoons kosher salt",
+      "3 pounds lean ground beef",
+      "freshly squeezed lime",
+      "6 cups to 7 reduced-sodium beef or chicken stock",
+      "monterey jack cheese",
+      "1/4 cup olive oil",
+      "2 mediums yellow onions",
+      "4 teaspoons dried oregano",
+      "1 1/2 pounds sirloin steak, cut into small chunks",
+      "sour cream"
     ],
     "steps": [
-      "Heat non-stick skillet over medium heat.",
-      "Add oil and saute onion and peppers for 5 minutes to soften.",
-      "Add mushrooms and saute another 5 minutes.",
-      "Spray baking dish with cooking spray and add bread cubes. Top with mushroom mixture, basil, and salt and pepper to your taste.",
-      "Sprinkle with bacon bits and cheese.",
-      "Whip eggs and milk together and pour over bread mixture.",
-      "Refrigerate for one hour up to overnight.",
-      "Heat oven to 35",
-      "Bake 20 minutes covered with foil. Uncover and bake another 10 minutes until puffed and lightly browned."
+      "In a large heavy pot set over high heat, saute ground beef and steak chunks, stirring frequently, until browned, about 8 minutes. With a slotted spoon, remove beef to a plate and pour off the remaining liquid in the pan. (I used a strainer over a large bowl, and put all the meat in it to drain the excess fat off).",
+      "Add olive oil to the same pot that you cooked your meat in and set over medium heat. When hot, add carrots, onions, and garlic and saute, stirring, until softened, about 5 minutes. Return beef to pot, and add chili powder, cumin, oregano, salt, and chopped chipotle chile; stir and cook 1 minute.",
+      "Add tomatoes and broth. Bring to a simmer, reduce heat to a gentle simmer, and cook for 30 minutes more, stirring occasionally. Much of the liquid will cook down during this time.Stir in all but 1/3 cup of black beans and cook 5 minutes more. Mash reserved beans with a fork, and stir into the chili to give it extra body. If chili is too thick, stir in as much as 1 cup additional broth and heat several minutes to warm. Chili can be prepared two days ahead. Cool, cover and refrigerate. Reheat over medium heat, stirring often.Ladle into bowls and garnish with toppings. Enjoy!"
     ]
   },
   "dinner": {
-    "name": "Stuffed Salmon With Tomato-Olive Tapenade",
-    "image": "https://img.spoonacular.com/recipes/662087-556x370.jpg",
+    "name": "Roasted Cabbage Wedge Salad with Yogurt Gorgonzola Dressing",
+    "image": "https://img.spoonacular.com/recipes/716430-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "Brie Cheese, to taste",
-      "Dill weed, to taste",
-      "6 cloves of minced garlic",
-      "Olive oil, to taste",
-      "1 cup olives",
-      "1 onion chopped",
-      "2 salmon filets",
-      "Salt and pepper",
-      "1 cup chopped spinach",
-      "2 large tomatoes"
+      "2 strips bacon (optional)",
+      "1 clove garlic, minced",
+      "2/3c crumbled Gorgonzola* (or other blue cheese)",
+      "1/2 cup chopped grape tomatoes",
+      "1 tsp extra virgin olive oil or grapeseed oil",
+      "1/2 head green cabbage, tough outer leaves removed",
+      "juice of 1/2 lemon",
+      "1 cup plain Greek yogurt",
+      "salt and freshly-ground pepper",
+      "1-2T chopped scallions",
+      "2T chopped scallions"
     ],
-    "steps": [
-      "Preheat oven to 350F.Pound salmon fillets and rub with olive oil and dill.In bowl, combine chopped spinach, onions, and garlic. Season with salt.",
-      "Spread spinach mixture on salmon fillet. Slice brie and add on top. Carefully roll salmon and tie with string.",
-      "Bake for about 15-18 minutes.Chop olives in food processor.",
-      "Add chopped tomatoes and blend.",
-      "Spread on top of salmon."
-    ]
+    "steps": []
   }
 }
