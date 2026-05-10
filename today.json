@@ -1,68 +1,90 @@
 {
-  "date": "2026-05-09",
+  "date": "2026-05-10",
   "breakfast": {
-    "name": "Homemade Muesli Breakfast Cereal",
-    "image": "https://img.spoonacular.com/recipes/647043-556x370.jpg",
-    "cookTime": 90,
+    "name": "Banana Blueberry Pancakes",
+    "image": "https://img.spoonacular.com/recipes/633998-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "1 handful Apple Chunks",
-      "1/4 cup Corn Flakes/Bran Flakes",
-      "1 handful Cashews, Almonds and/or Walnuts",
-      "1 handful Craisins, Raisins, Apricots, Figs",
-      "1 tablespoon Honey",
-      "1 tablespoon Olive oil",
-      "1/4 cup Uncooked quick rolled Oats",
-      "1 teaspoon Sesame seeds",
-      "1 tablespoon Wheat Bran",
-      "1 tablespoon Wheat Germ"
+      "4 whole eggs (or 8 egg yolks if you have a Hystamine or egg white intolerance)",
+      "1/2 cup water",
+      "1/4 cup liquid coconut oil, butter or ghee (melt solid coconut oil in small sauce pan if needed)",
+      "1/3 cup sifted coconut flour + 1 tablespoon",
+      "1 teaspoon baking powder or cream of tartar",
+      "1/2 teaspoon ground cinnamon",
+      "4 mashed bananas (or 3 plantains)",
+      "1 cup frozen organic blueberries"
     ],
     "steps": [
-      "Preheat the oven to 250 degrees F.",
-      "Mix the olive oil and honey in a bowl and warm slightly",
-      "In a oven-proof dish, mix all the other ingredients and pour in the warmed oil-honey mixture.Give it a brisk stir and pop into the oven for 30 minutes, stirring now and then.",
-      "Remove from the oven and cool for an hour."
+      "Beat eggs for 1 minute.",
+      "Add water, oil and flour.",
+      "Whisk together until combined. Allow to sit for 5 minutes so coconut flour can absorb and expand.",
+      "Add baking powder, cinnamon and mashed bananas.",
+      "Whisk. Gently fold in blueberries with spatula.",
+      "Heat oil, butter or a combo of both in skillet. Ladle 1/2 cup batter for each pancake, onto skillet. Cook 5 minutes on one side, over medium to low heat. Flip over to cook other side. Repeat steps until 8 pancakes are achieved.",
+      "Drizzle with maple syrup."
     ]
   },
   "lunch": {
-    "name": "Turkey BLT with Creamy Dijon Mustard",
-    "image": "https://img.spoonacular.com/recipes/663992-556x370.jpg",
+    "name": "Simple Roast Chicken",
+    "image": "https://img.spoonacular.com/recipes/660133-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3 tablespoons dijon mustard",
-      "1 loaf of fresh italian bread",
-      "2 tablespoons of olive oil",
-      "4 romaine heart leaves cut in half",
-      "2 tablespoons salad dressing (i.e. Miracle Whip)",
-      "8 slices of swiss cheese",
-      "2 tomatoes, sliced",
-      "1 12 oz package of turkey bacon (16 slices)",
-      "1 medium vidalia onion, sliced"
+      "1 large chicken (about 1.2kg)",
+      "1/2 stick of butter, softened",
+      "5 cloves of garlic, chopped finely",
+      "Rind of two lemons",
+      "1 teaspoon chilli flakes",
+      "salt and pepper",
+      "1/2 lemon",
+      "4 Yukon Gold potatoes, sliced thickly into rounds",
+      "2 sweet potatoes, sliced into rounds",
+      "pinch of chilli flakes",
+      "olive oil"
     ],
     "steps": [
-      "Preheat oven at 350 degrees.Cook bacon in skillet on stove top.Slice italian bread in to 8 even slices.",
-      "Mix together dijon mustard and salad dressing in a small bowl.",
-      "Spread a thin layer of creamy dijon mustard to one side of each slice of bread.Top one of the slices with 2 pieces of cheese, 2 romaine leaves, 2 slices of tomato, 1 slice of onion and 4 slices of turkey bacon.Top with other half of bread.",
-      "Drizzle the top of the bread with olive oil and place on baking sheet.",
-      "Bake in the oven, turning half way until each side of bread is toasted and cheese is melted (approximately 4-5 minutes per side).Variation- instead of toasting in oven, use a panini maker or toast in a skillet on stove top."
+      "Wash the chicken inside and out and pat dry. Make sure the skin is nice and dry so the skin gets crispy. Season well with salt and pepper inside, out and under the skin.",
+      "Mix the butter with the garlic, chilli and lemon rind. Season a bit with salt and pepper. Stuff the flavoured butter under the skin over the breast, legs and back. Stuff the lemon half into the cavity.",
+      "Pre-heat the oven to 400F. Toss the two kinds of potatoes in the bottom the the baking pan with the chilli, salt and pepper to taste and a generous helping of olive oil.",
+      "Place a rack over the vegetables. Position the chicken breast side up on the rack.",
+      "Bake for the first 15 minutes at 400F. Then drop the temperature and continue to cook for about an hour at 300F.",
+      "Halfway through cooking turn the chicken on its breast. Spoon over some of the juices.",
+      "Later, to check for doneness, pierce the thickest part of the chicken (the thigh). If the juices run clear the chicken is ready, if not continue cooking.",
+      "Serve chicken on a platter on the bed of roasted potatoes."
     ]
   },
   "dinner": {
-    "name": "Easy Chicken, Kielbasa and Shrimp Paella",
-    "image": "https://img.spoonacular.com/recipes/641911-556x370.jpg",
+    "name": "Herbivoracious' White Bean and Kale Soup",
+    "image": "https://img.spoonacular.com/recipes/646738-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 package (about 10 ounces) refrigerated fully-cooked chicken breast strips (about 1 3/4 cups)",
-      "4 cups Swanson\u00ae Chicken Broth or Swanson\u00ae Chicken Stock, heated",
-      "1 teaspoon ground turmeric",
-      "1 cup Pace\u00ae Picante Sauce",
-      "2 cups uncooked regular long-grain white rice",
-      "3/4 pound small frozen peeled, deveined, cooked shrimp, thawed",
-      "1 package (16 ounces) turkey kielbasa, sliced",
-      "1 tablespoon vegetable oil"
+      "1/4 cup extra-virgin olive oil, plus additional for garnish",
+      "1 medium onion, finely diced",
+      "1 whole head garlic, peeled and minced",
+      "1 carrot, finely diced",
+      "1 teaspoon kosher salt",
+      "2 bay leaves",
+      "1 teaspoon minced fresh rosemary leaves",
+      "1 or more of the following: 1 Parmesan rind or 3/4 ounce dried porcini mushrooms or 2 tablespoons vegetable broth powder (gluten-free if needed)",
+      "2 cups dried white beans such as cannellini or navy, rinsed and picked over",
+      "7 cups water",
+      "1 bunch dinosaur (lacinato) kale, stems stripped and discarded, leaves cut into ribbons and thoroughly washed",
+      "Juice of 1 lemon"
     ],
     "steps": [
-      "Heat the oil in a 12-inch skillet over medium heat.",
-      "Add the rice and cook for 30 seconds, stirring constantly. Stir the broth, picante sauce and turmeric in the skillet and heat to a boil. Reduce the heat to low. Cover and cook for 15 minutes.Stir the kielbasa, shrimp and chicken in the skillet. Cover and cook for 5 minutes or until the rice is tender."
+      "PRESSURE COOKER METHOD",
+      "In the pressure cooker base, but without pressure, heat the olive oil over medium-high heat. Saut the onion, garlic, carrot, and 1 teaspoon salt until the onion is translucent, about 4 minutes.",
+      "Add the bay leaves, rosemary, and your choice(s) of the Parmesan rind, dried porcini, or broth powder.",
+      "Add the dry beans and water. Bring up to high pressure and cook for 40 minutes, then allow the pressure to release naturally. Open the lid.",
+      "Remove the bay leaves and Parmesan rind, if using.",
+      "Add the kale and lemon juice and simmer for 10 minutes, until the kale is tender. Taste and adjust the seasoning, then serve, garnished with a generous drizzle of extra-virgin olive oil.",
+      "STOVETOP METHOD",
+      "Cover the beans with several inches of water and soak overnight.",
+      "Drain the beans and place in a large saucepan. Cover with water by at least 2 inches and bring to a boil. Reduce the heat and simmer the beans until tender, about 1 1/2 to 2 hours.",
+      "Drain the beans, reserving the bean broth.",
+      "In a large saucepan, heat the olive oil over medium-high heat. Saut the onion, garlic, carrot, and 1 teaspoon salt until the onion is translucent, about 4 minutes.",
+      "Add 4 cups of the bean broth, the bay leaves, rosemary, and your choice of the Parmesan rind, dried porcini, or broth powder. Bring to a simmer and cook for 30 minutes.",
+      "Remove the bay leaves and Parmesan rind, if using.",
+      "Add the beans, kale, and lemon juice and simmer for 10 minutes, until the kale is tender. Taste and adjust the seasoning, then serve, garnished with a generous drizzle of extra-virgin olive oil."
     ]
   }
 }
