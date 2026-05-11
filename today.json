@@ -1,90 +1,74 @@
 {
-  "date": "2026-05-10",
+  "date": "2026-05-11",
   "breakfast": {
-    "name": "Banana Blueberry Pancakes",
-    "image": "https://img.spoonacular.com/recipes/633998-556x370.jpg",
+    "name": "Bananas Foster French Toast By Mommie Cooks",
+    "image": "https://img.spoonacular.com/recipes/634234-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "4 whole eggs (or 8 egg yolks if you have a Hystamine or egg white intolerance)",
-      "1/2 cup water",
-      "1/4 cup liquid coconut oil, butter or ghee (melt solid coconut oil in small sauce pan if needed)",
-      "1/3 cup sifted coconut flour + 1 tablespoon",
-      "1 teaspoon baking powder or cream of tartar",
-      "1/2 teaspoon ground cinnamon",
-      "4 mashed bananas (or 3 plantains)",
-      "1 cup frozen organic blueberries"
+      "8 bananas",
+      "1/2 cup Brown sugar",
+      "1/2 cup butter",
+      "1 teaspoon cinnamon",
+      "10 Eggs",
+      "1/4 cup Half& Half",
+      "1 loaf Hawaiian Bread (challah works well)",
+      "2 cups heavy cream",
+      "1/4 cup Maple Syrup",
+      "1/2 teaspoon Salt",
+      "1/4 cup Sugar",
+      "1 teaspoon Vanilla"
     ],
     "steps": [
-      "Beat eggs for 1 minute.",
-      "Add water, oil and flour.",
-      "Whisk together until combined. Allow to sit for 5 minutes so coconut flour can absorb and expand.",
-      "Add baking powder, cinnamon and mashed bananas.",
-      "Whisk. Gently fold in blueberries with spatula.",
-      "Heat oil, butter or a combo of both in skillet. Ladle 1/2 cup batter for each pancake, onto skillet. Cook 5 minutes on one side, over medium to low heat. Flip over to cook other side. Repeat steps until 8 pancakes are achieved.",
-      "Drizzle with maple syrup."
+      "Slice up your loaf of bread into 1 inch thick slices.In a separate bowl, whisk together the eggs, half & half and cinnamon.Dip each slice of bread in the egg mixture being sure to coat both sides.Cook up on a griddle for about 2-3 minutes on each side or until cooked through.In a pan on the stove set to medium low heat, melt up the butter and add in the brown sugar.",
+      "Add to the mixture the syrup, cinnamon, salt and vanilla.",
+      "Add in the bananas. Stir to coat bananas completely.",
+      "Remove from heat.To make the whipped cream, whip together your cream, maple syrup and sugar until stiff peaks form.",
+      "Serve over the top of french toast."
     ]
   },
   "lunch": {
-    "name": "Simple Roast Chicken",
-    "image": "https://img.spoonacular.com/recipes/660133-556x370.jpg",
-    "cookTime": 45,
+    "name": "Easy Slow Cooker Chicken Tortilla Soup",
+    "image": "https://img.spoonacular.com/recipes/715392-556x370.jpg",
+    "cookTime": 370,
     "ingredients": [
-      "1 large chicken (about 1.2kg)",
-      "1/2 stick of butter, softened",
-      "5 cloves of garlic, chopped finely",
-      "Rind of two lemons",
-      "1 teaspoon chilli flakes",
-      "salt and pepper",
-      "1/2 lemon",
-      "4 Yukon Gold potatoes, sliced thickly into rounds",
-      "2 sweet potatoes, sliced into rounds",
-      "pinch of chilli flakes",
-      "olive oil"
+      "2 pounds chicken breast",
+      "1 medium onion (finely chopped)",
+      "2 teaspoon chili powder",
+      "28 ounces crushed tomatoes",
+      "24 ounces chicken broth",
+      "15 ounces kernel corn (drained)",
+      "4 ounces green chilis (diced)",
+      "15 ounces black beans (drained)",
+      "1/4 cup cilantro (freshly chopped)"
     ],
     "steps": [
-      "Wash the chicken inside and out and pat dry. Make sure the skin is nice and dry so the skin gets crispy. Season well with salt and pepper inside, out and under the skin.",
-      "Mix the butter with the garlic, chilli and lemon rind. Season a bit with salt and pepper. Stuff the flavoured butter under the skin over the breast, legs and back. Stuff the lemon half into the cavity.",
-      "Pre-heat the oven to 400F. Toss the two kinds of potatoes in the bottom the the baking pan with the chilli, salt and pepper to taste and a generous helping of olive oil.",
-      "Place a rack over the vegetables. Position the chicken breast side up on the rack.",
-      "Bake for the first 15 minutes at 400F. Then drop the temperature and continue to cook for about an hour at 300F.",
-      "Halfway through cooking turn the chicken on its breast. Spoon over some of the juices.",
-      "Later, to check for doneness, pierce the thickest part of the chicken (the thigh). If the juices run clear the chicken is ready, if not continue cooking.",
-      "Serve chicken on a platter on the bed of roasted potatoes."
+      "Add all of your ingredients into the slow cooker and then cook on low for 6 hours.",
+      "Once finished cooking, scoop into serving bowls and serve with tortilla chips, sour cream, cheese, avocado, or any of your favorite toppings."
     ]
   },
   "dinner": {
-    "name": "Herbivoracious' White Bean and Kale Soup",
-    "image": "https://img.spoonacular.com/recipes/646738-556x370.jpg",
+    "name": "Chicken Piccata with Artichokes",
+    "image": "https://img.spoonacular.com/recipes/638249-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1/4 cup extra-virgin olive oil, plus additional for garnish",
-      "1 medium onion, finely diced",
-      "1 whole head garlic, peeled and minced",
-      "1 carrot, finely diced",
-      "1 teaspoon kosher salt",
-      "2 bay leaves",
-      "1 teaspoon minced fresh rosemary leaves",
-      "1 or more of the following: 1 Parmesan rind or 3/4 ounce dried porcini mushrooms or 2 tablespoons vegetable broth powder (gluten-free if needed)",
-      "2 cups dried white beans such as cannellini or navy, rinsed and picked over",
-      "7 cups water",
-      "1 bunch dinosaur (lacinato) kale, stems stripped and discarded, leaves cut into ribbons and thoroughly washed",
-      "Juice of 1 lemon"
+      "1 cup canned artichoke hearts, chopped",
+      "2 Tablespoons Capers",
+      "4 boneless chicken breasts cut in to 1 inch cubes",
+      "4 tablespoons extra virgin olive oil",
+      "2 tablespoons flat leaf parsley",
+      "All-purpose flour for dredging",
+      "1/3 cup lemon juice",
+      "Freshly grated Parmesan cheese",
+      "1 12 oz box of penne rigate, cooked",
+      "1/2 teaspoon pepper",
+      "1 cup reduced sodium chicken broth",
+      "salt"
     ],
     "steps": [
-      "PRESSURE COOKER METHOD",
-      "In the pressure cooker base, but without pressure, heat the olive oil over medium-high heat. Saut the onion, garlic, carrot, and 1 teaspoon salt until the onion is translucent, about 4 minutes.",
-      "Add the bay leaves, rosemary, and your choice(s) of the Parmesan rind, dried porcini, or broth powder.",
-      "Add the dry beans and water. Bring up to high pressure and cook for 40 minutes, then allow the pressure to release naturally. Open the lid.",
-      "Remove the bay leaves and Parmesan rind, if using.",
-      "Add the kale and lemon juice and simmer for 10 minutes, until the kale is tender. Taste and adjust the seasoning, then serve, garnished with a generous drizzle of extra-virgin olive oil.",
-      "STOVETOP METHOD",
-      "Cover the beans with several inches of water and soak overnight.",
-      "Drain the beans and place in a large saucepan. Cover with water by at least 2 inches and bring to a boil. Reduce the heat and simmer the beans until tender, about 1 1/2 to 2 hours.",
-      "Drain the beans, reserving the bean broth.",
-      "In a large saucepan, heat the olive oil over medium-high heat. Saut the onion, garlic, carrot, and 1 teaspoon salt until the onion is translucent, about 4 minutes.",
-      "Add 4 cups of the bean broth, the bay leaves, rosemary, and your choice of the Parmesan rind, dried porcini, or broth powder. Bring to a simmer and cook for 30 minutes.",
-      "Remove the bay leaves and Parmesan rind, if using.",
-      "Add the beans, kale, and lemon juice and simmer for 10 minutes, until the kale is tender. Taste and adjust the seasoning, then serve, garnished with a generous drizzle of extra-virgin olive oil."
+      "In a large bowl combine chicken with salt and pepper.Lightly dredge the chicken.In a large skillet on medium heat pour in extra virgin olive oil.",
+      "Add chicken and cook until brown and juices run clear, about 12 minutes.Stir in chicken broth, lemon juice, capers and artichokes and cook for 3 minutes.Reduce to simmer for 3 minutes.Stir in penne rigate until combined.",
+      "Add in parsley and transfer to serving bowl.",
+      "Sprinkle with parmesan cheese."
     ]
   }
 }
