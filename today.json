@@ -1,74 +1,81 @@
 {
-  "date": "2026-05-11",
+  "date": "2026-05-12",
   "breakfast": {
-    "name": "Bananas Foster French Toast By Mommie Cooks",
-    "image": "https://img.spoonacular.com/recipes/634234-556x370.jpg",
+    "name": "Chocolatey Overnight Oats with Strawberries",
+    "image": "https://img.spoonacular.com/recipes/639303-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "8 bananas",
-      "1/2 cup Brown sugar",
-      "1/2 cup butter",
-      "1 teaspoon cinnamon",
-      "10 Eggs",
-      "1/4 cup Half& Half",
-      "1 loaf Hawaiian Bread (challah works well)",
-      "2 cups heavy cream",
-      "1/4 cup Maple Syrup",
-      "1/2 teaspoon Salt",
-      "1/4 cup Sugar",
-      "1 teaspoon Vanilla"
+      "1 tsp agave nectar (or honey)",
+      "1/3 cup almond milk",
+      "1/2 Tbs chia seeds",
+      "1 Tbs cocoa powder",
+      "1/2 cup non-fat Greek yogurt",
+      "1/3 cup oatmeal",
+      "3 large strawberries, sliced"
     ],
     "steps": [
-      "Slice up your loaf of bread into 1 inch thick slices.In a separate bowl, whisk together the eggs, half & half and cinnamon.Dip each slice of bread in the egg mixture being sure to coat both sides.Cook up on a griddle for about 2-3 minutes on each side or until cooked through.In a pan on the stove set to medium low heat, melt up the butter and add in the brown sugar.",
-      "Add to the mixture the syrup, cinnamon, salt and vanilla.",
-      "Add in the bananas. Stir to coat bananas completely.",
-      "Remove from heat.To make the whipped cream, whip together your cream, maple syrup and sugar until stiff peaks form.",
-      "Serve over the top of french toast."
+      "Mix all the ingredients, except for the strawberries.",
+      "Place a bit of the oatmeal batter into a jar or other airtight container.",
+      "Add slices of strawberries on top.",
+      "Add another layer of oatmeal batter and strawberries. Top with the remaining oatmeal batter.Put it in the refrigerator overnight.Enjoy!"
     ]
   },
   "lunch": {
-    "name": "Easy Slow Cooker Chicken Tortilla Soup",
-    "image": "https://img.spoonacular.com/recipes/715392-556x370.jpg",
-    "cookTime": 370,
+    "name": "A Christmas With Peking Duck",
+    "image": "https://img.spoonacular.com/recipes/631888-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "2 pounds chicken breast",
-      "1 medium onion (finely chopped)",
-      "2 teaspoon chili powder",
-      "28 ounces crushed tomatoes",
-      "24 ounces chicken broth",
-      "15 ounces kernel corn (drained)",
-      "4 ounces green chilis (diced)",
-      "15 ounces black beans (drained)",
-      "1/4 cup cilantro (freshly chopped)"
+      "1 teaspoon light corn syrup",
+      "1 (8 -10 lb.) Duck",
+      "1/4 teaspoon five spice powder",
+      "Hoisin sauce",
+      "1 teaspoon honey",
+      "1 teaspoon rice wine vinegar",
+      "2 teaspoons salt",
+      "Scallions",
+      "1 gallon boiling water",
+      "1/4 teaspoon white pepper"
     ],
     "steps": [
-      "Add all of your ingredients into the slow cooker and then cook on low for 6 hours.",
-      "Once finished cooking, scoop into serving bowls and serve with tortilla chips, sour cream, cheese, avocado, or any of your favorite toppings."
+      "Rinse duck and remove innards.",
+      "Cut skin around neck and remove tail.Hang duck neck-side-up over a large pot. Boil water.",
+      "Pour boiling water over the duck until skin is puffed up.",
+      "Remove boiled water from pot.",
+      "Combine salt, white pepper, five spice powder and 2 tsp of hoison sauce.",
+      "Brush mixture on the outside and inside of the duck to marinate it.",
+      "Let mixture dry - about 2 hours.",
+      "Combine corn syrup, honey, rice vinegar and brush outside of the duck.",
+      "Let duck air dry for 12-24 hours.Preheat oven to 450 degrees. Roast duck for 40 minutes.",
+      "Let meat rest for 15 minutes after cooking.",
+      "Cut the meat into thin slices and enjoy.",
+      "Serve with Bao, Chinese pan cakes add hosin sauce and scallions."
     ]
   },
   "dinner": {
-    "name": "Chicken Piccata with Artichokes",
-    "image": "https://img.spoonacular.com/recipes/638249-556x370.jpg",
+    "name": "Creamy Chicken Orzo Soup",
+    "image": "https://img.spoonacular.com/recipes/640619-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 cup canned artichoke hearts, chopped",
-      "2 Tablespoons Capers",
-      "4 boneless chicken breasts cut in to 1 inch cubes",
-      "4 tablespoons extra virgin olive oil",
-      "2 tablespoons flat leaf parsley",
-      "All-purpose flour for dredging",
-      "1/3 cup lemon juice",
-      "Freshly grated Parmesan cheese",
-      "1 12 oz box of penne rigate, cooked",
-      "1/2 teaspoon pepper",
-      "1 cup reduced sodium chicken broth",
-      "salt"
+      "2 tablespoons olive oil",
+      "1 cup celery, thinly sliced",
+      "1 cup baby carrots, thinly sliced",
+      "1 small onion, chopped",
+      "1 teaspoon kosher salt",
+      "1 teaspoon fresh ground black pepper",
+      "1 12.5 oz can Swanson Premium Chunk Chicken, drained",
+      "2 14.5 oz cans Swanson Chicken broth + 2 cans water",
+      "1/8 teaspoon poultry seasoning",
+      "1 cup Orzo, uncooked",
+      "1 cup cream of chicken condensed soup"
     ],
     "steps": [
-      "In a large bowl combine chicken with salt and pepper.Lightly dredge the chicken.In a large skillet on medium heat pour in extra virgin olive oil.",
-      "Add chicken and cook until brown and juices run clear, about 12 minutes.Stir in chicken broth, lemon juice, capers and artichokes and cook for 3 minutes.Reduce to simmer for 3 minutes.Stir in penne rigate until combined.",
-      "Add in parsley and transfer to serving bowl.",
-      "Sprinkle with parmesan cheese."
+      "In a large pot over medium heat, saute the vegetables in olive oil for about 10 minutes, until vegetables are tender.",
+      "Add the drained can of chicken and stir.",
+      "Season the chicken and vegetables with salt and pepper. Stir.",
+      "Increase the heat to medium-high and add the chicken broth plus 2 cans of warm water and stir.",
+      "Allow the soup to simmer for 15 minutes then add the uncooked pasta and seasoning. Stir.",
+      "Let the soup simmer for 20 minutes, stirring occasionally.",
+      "Add the condensed soup, stir until the broth is creamy and serve."
     ]
   }
 }
