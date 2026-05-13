@@ -1,81 +1,80 @@
 {
-  "date": "2026-05-12",
+  "date": "2026-05-13",
   "breakfast": {
-    "name": "Chocolatey Overnight Oats with Strawberries",
-    "image": "https://img.spoonacular.com/recipes/639303-556x370.jpg",
+    "name": "Peaches And Cream Oatmeal",
+    "image": "https://img.spoonacular.com/recipes/655186-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 tsp agave nectar (or honey)",
-      "1/3 cup almond milk",
-      "1/2 Tbs chia seeds",
-      "1 Tbs cocoa powder",
-      "1/2 cup non-fat Greek yogurt",
-      "1/3 cup oatmeal",
-      "3 large strawberries, sliced"
+      "1/4 cup frozen peaches",
+      "cup quick cooking oats",
+      "1/2 cup non-fat milk",
+      "2 teaspoons low fat cream cheese",
+      "1 teaspoon agave",
+      "1/2 teaspoon cinnamon"
     ],
     "steps": [
-      "Mix all the ingredients, except for the strawberries.",
-      "Place a bit of the oatmeal batter into a jar or other airtight container.",
-      "Add slices of strawberries on top.",
-      "Add another layer of oatmeal batter and strawberries. Top with the remaining oatmeal batter.Put it in the refrigerator overnight.Enjoy!"
+      "Microwave the peaches for 30 seconds.",
+      "Add oats, milk, cream cheese, agave and cinnamon.  Microwave for 1 minute, stir, and enjoy!"
     ]
   },
   "lunch": {
-    "name": "A Christmas With Peking Duck",
-    "image": "https://img.spoonacular.com/recipes/631888-556x370.jpg",
+    "name": "Arroz Con Pollo",
+    "image": "https://img.spoonacular.com/recipes/632749-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 teaspoon light corn syrup",
-      "1 (8 -10 lb.) Duck",
-      "1/4 teaspoon five spice powder",
-      "Hoisin sauce",
-      "1 teaspoon honey",
-      "1 teaspoon rice wine vinegar",
-      "2 teaspoons salt",
-      "Scallions",
-      "1 gallon boiling water",
-      "1/4 teaspoon white pepper"
+      "2 tablespoons of Butter",
+      "3 cloves of Garlic",
+      "3 Chicken Breasts, Cubed",
+      "2 teaspoons of Cumin",
+      "2 teaspoons of Coriander",
+      "5 1/2 teaspoons of Turmeric",
+      "1 Onion, Chopped",
+      "1 Pepper, Chopped",
+      "1 can of Diced Chiles",
+      "1 can of Diced Tomatoes",
+      "4 cups of Chicken Broth",
+      "1 cup of Dried Rice",
+      "1 teaspoon of Chili Powder",
+      "1/2 teaspoon of Salt",
+      "1/2 teaspoon of Onion Powder",
+      "1/2 cup of Shredded Cheese"
     ],
     "steps": [
-      "Rinse duck and remove innards.",
-      "Cut skin around neck and remove tail.Hang duck neck-side-up over a large pot. Boil water.",
-      "Pour boiling water over the duck until skin is puffed up.",
-      "Remove boiled water from pot.",
-      "Combine salt, white pepper, five spice powder and 2 tsp of hoison sauce.",
-      "Brush mixture on the outside and inside of the duck to marinate it.",
-      "Let mixture dry - about 2 hours.",
-      "Combine corn syrup, honey, rice vinegar and brush outside of the duck.",
-      "Let duck air dry for 12-24 hours.Preheat oven to 450 degrees. Roast duck for 40 minutes.",
-      "Let meat rest for 15 minutes after cooking.",
-      "Cut the meat into thin slices and enjoy.",
-      "Serve with Bao, Chinese pan cakes add hosin sauce and scallions."
+      "Start out by heating up a large pan on medium heat and melting your butter.",
+      "Add in your garlic and give it a minute or two to cook up.",
+      "Sprinkle your chicken with about 1 tsp of the cumin, coriander, and turmeric. Throw it in the pan and cook it up.",
+      "Once your chicken is fully cooked, go ahead and add in your diced onion and pepper.",
+      "Cook it all up for about 3 to 4 minutes.",
+      "Add in your chiles and tomatoes.",
+      "Swirl it around once or twice and add in your broth. Now add in your rice.",
+      "Finally, add in the remaining tsp of chili powder, cumin, and coriander, the salt, the remaining 1/2 tsp of turmeric and the onion powder.",
+      "Bring the pot to a boil and then turn down the heat to low and cover. Simmer the mixture for about 20 minutes or until the liquid is absorbed and the rice is cooked through.",
+      "Grab your shredded cheese and spread it across the top of the chicken mixture. Cover for another minute or two and allow your cheese to melt completely."
     ]
   },
   "dinner": {
-    "name": "Creamy Chicken Orzo Soup",
-    "image": "https://img.spoonacular.com/recipes/640619-556x370.jpg",
+    "name": "Quick and Easy Southwestern Corn Chowder",
+    "image": "https://img.spoonacular.com/recipes/657556-556x370.png",
     "cookTime": 45,
     "ingredients": [
-      "2 tablespoons olive oil",
-      "1 cup celery, thinly sliced",
-      "1 cup baby carrots, thinly sliced",
-      "1 small onion, chopped",
-      "1 teaspoon kosher salt",
-      "1 teaspoon fresh ground black pepper",
-      "1 12.5 oz can Swanson Premium Chunk Chicken, drained",
-      "2 14.5 oz cans Swanson Chicken broth + 2 cans water",
-      "1/8 teaspoon poultry seasoning",
-      "1 cup Orzo, uncooked",
-      "1 cup cream of chicken condensed soup"
+      "2 Tb. butter",
+      "1/4 cup cheddar cheese",
+      "1 tsp. chili flakes",
+      "32 oz. fresh yellow corn kernels, (or frozen)",
+      "1/2 cup green bell pepper, small dice",
+      "1/4 cup half and half",
+      "1/2 cup red bell pepper, small dice",
+      "salt and pepper",
+      "2 cups shredded chicken, cooked",
+      "2 large sweet onions, small dice",
+      "4 cups chicken or vegetable stock"
     ],
     "steps": [
-      "In a large pot over medium heat, saute the vegetables in olive oil for about 10 minutes, until vegetables are tender.",
-      "Add the drained can of chicken and stir.",
-      "Season the chicken and vegetables with salt and pepper. Stir.",
-      "Increase the heat to medium-high and add the chicken broth plus 2 cans of warm water and stir.",
-      "Allow the soup to simmer for 15 minutes then add the uncooked pasta and seasoning. Stir.",
-      "Let the soup simmer for 20 minutes, stirring occasionally.",
-      "Add the condensed soup, stir until the broth is creamy and serve."
+      "In a Dutch oven, sweat the onions and peppers with a pinch of salt until onions are translucent.",
+      "Add the chili flakes.",
+      "Add the chicken stock, corn and chicken.Simmer covered for 10 minutes.",
+      "Add the butter, half and half, and cheese, if desired.",
+      "Add salt and pepper to taste."
     ]
   }
 }
