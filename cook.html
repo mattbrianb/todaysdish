@@ -251,6 +251,12 @@ const CANDIDATE_SAMPLE_PER_TIER = 60;
 
 /* Utilities */
 function safeText(v){ return (v === null || v === undefined) ? "" : String(v); }
+function normalizeImageUrl(url) {
+  const u = safeText(url).trim();
+  if (!u) return "";
+  // Force HTTPS to avoid mixed-content blocking on mobile browsers
+  return u.replace(/^http:\/\//i, "https://");
+}
 
 function setStatus(msg){
   document.getElementById("searchStatus").innerText = msg || "";
@@ -415,7 +421,7 @@ function renderCard(recipe, matchedCount, requiredCount){
         '<span class="badge accent">Missing: ' + safeText(recipe.missedIngredientCount) + '</span>' +
       '</div>' +
       '<h2>' + safeText(recipe.name) + '</h2>' +
-      (recipe.image ? '<img src="' + safeText(recipe.image) + '" alt="">' : '') +
+      (normalizeImageUrl(recipe.image) ? '<img src="' + normalizeImageUrl(recipe.image) + '" alt="">' : '')
       '<button class="inline-btn" onclick="toggleDetails(\'' + detailsId + '\')">Show full recipe</button>' +
       '<div class="details" id="' + detailsId + '">' +
         '<hr class="sep">' +
