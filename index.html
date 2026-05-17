@@ -308,6 +308,21 @@ function safeText(v) {
   return (v === null || v === undefined) ? "" : String(v);
 }
 
+function effortLevel(ingredientsCount, stepsCount) {
+  // Simple, human-friendly heuristic
+  if (ingredientsCount <= 6 && stepsCount <= 6) return "Quick";
+  if (ingredientsCount <= 12 && stepsCount <= 10) return "Medium";
+  return "Involved";
+}
+
+function effortBadge(level) {
+  // Keep colors consistent with your existing badge styles
+  // Quick = green, Medium = normal, Involved = accent
+  if (level === "Quick") return '<span class="badge good">Effort: Quick</span>';
+  if (level === "Medium") return '<span class="badge">Effort: Medium</span>';
+  return '<span class="badge accent">Effort: Involved</span>';
+}
+  
 /* ===== TODAY'S DISHES RENDER ===== */
 function renderTodayCard(title, d) {
   const cook = d.cookTime ? (d.cookTime + " min") : "—";
@@ -369,13 +384,11 @@ function toggleDetails(id) {
 
 function renderIdeaCard(r, idx) {
   // Hide cook time badge if missing (common with TheMealDB)
-  const cookBadge = (r.cookTime)
-    ? '<span class="badge good">Cook time: ' + safeText(r.cookTime) + ' min</span>'
-    : '';
-
-  const missed = Array.isArray(r.missedIngredients) ? r.missedIngredients : [];
   const ingredients = Array.isArray(r.ingredients) ? r.ingredients : [];
   const steps = Array.isArray(r.steps) ? r.steps : [];
+  const effort = effortLevel(ingredients.length, steps.length);
+  const effortTag = effortBadge(effort);
+  const missed = Array.isArray(r.missedIngredients) ? r.missedIngredients : [];
   const detailsId = "details-" + idx;
 
   return (
