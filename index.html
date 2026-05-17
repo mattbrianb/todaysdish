@@ -16,6 +16,7 @@
   --border: rgba(0,0,0,0.08);
   --shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
+
 body.dark {
   --bg: #0f1115;
   --card: #171a21;
@@ -26,17 +27,23 @@ body.dark {
   --border: rgba(255,255,255,0.08);
   --shadow: 0 12px 34px rgba(0,0,0,0.35);
 }
+
+/* Helps browsers choose correct native form colours */
+body { color-scheme: light dark; }
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
 }
+
 .container {
   max-width: 1200px;
   padding: 20px;
   margin: auto;
 }
+
 header {
   display: flex;
   justify-content: space-between;
@@ -44,9 +51,12 @@ header {
   gap: 16px;
   margin-bottom: 14px;
 }
+
 h1 { margin: 0; font-size: 28px; }
 .date { color: var(--muted); margin-top: 4px; }
+
 .actions { display: flex; gap: 10px; align-items: center; }
+
 .toggle {
   cursor: pointer;
   padding: 8px 12px;
@@ -55,7 +65,14 @@ h1 { margin: 0; font-size: 28px; }
   border: 1px solid var(--border);
   color: var(--text);
 }
-.tabs { display: flex; gap: 10px; margin: 18px 0 10px; flex-wrap: wrap; }
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin: 18px 0 10px;
+  flex-wrap: wrap;
+}
+
 .tab-btn {
   cursor: pointer;
   padding: 10px 14px;
@@ -64,18 +81,22 @@ h1 { margin: 0; font-size: 28px; }
   background: var(--card);
   color: var(--text);
 }
+
 .tab-btn.active {
   border-color: rgba(217,72,15,0.35);
   box-shadow: 0 10px 20px rgba(217,72,15,0.10);
 }
+
 .section { display: none; }
 .section.active { display: block; }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
   margin-top: 18px;
 }
+
 .card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -83,14 +104,23 @@ h1 { margin: 0; font-size: 28px; }
   padding: 18px;
   box-shadow: var(--shadow);
 }
+
 .card img {
   width: 100%;
   border-radius: 12px;
   margin: 10px 0 12px;
   display: block;
 }
+
 .card h2 { margin: 0 0 8px 0; font-size: 20px; line-height: 1.25; }
-.badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+
+.badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
 .badge {
   font-size: 12px;
   padding: 6px 10px;
@@ -99,9 +129,12 @@ h1 { margin: 0; font-size: 28px; }
   color: var(--muted);
   background: rgba(0,0,0,0.02);
 }
+
 body.dark .badge { background: rgba(255,255,255,0.03); }
+
 .badge.accent { color: var(--accent); border-color: rgba(217,72,15,0.25); }
 .badge.good { color: var(--accent2); border-color: rgba(47,158,68,0.25); }
+
 h3 {
   margin: 14px 0 8px 0;
   font-size: 14px;
@@ -110,11 +143,24 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
+
 ul, ol { margin: 0 0 0 18px; padding: 0; }
 li { margin-bottom: 6px; }
-hr.sep { border: none; border-top: 1px solid var(--border); margin: 14px 0; }
-.footer { text-align: center; color: var(--muted); margin: 26px 0 10px; font-size: 14px; }
 
+hr.sep {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 14px 0;
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  margin: 26px 0 10px;
+  font-size: 14px;
+}
+
+/* Ingredient search UI */
 .search-box {
   background: var(--card);
   border: 1px solid var(--border);
@@ -123,7 +169,14 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 14px 0; }
   box-shadow: var(--shadow);
   margin-top: 16px;
 }
-.search-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+
+.search-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .input {
   flex: 1;
   min-width: 260px;
@@ -134,6 +187,19 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 14px 0; }
   color: var(--text);
   outline: none;
 }
+
+/* Dark mode dropdown readability */
+select.input {
+  background: var(--card);
+  color: var(--text);
+  min-width: 160px;
+}
+
+select.input option {
+  background: var(--card);
+  color: var(--text);
+}
+
 .btn {
   cursor: pointer;
   padding: 12px 14px;
@@ -143,9 +209,12 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 14px 0; }
   color: var(--text);
   font-weight: 600;
 }
+
 .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
 .help { margin-top: 10px; color: var(--muted); font-size: 13px; }
 .small { font-size: 13px; color: var(--muted); }
+
 .details-toggle {
   cursor: pointer;
   margin-top: 10px;
@@ -155,6 +224,7 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 14px 0; }
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
 .details { display: none; margin-top: 10px; }
 .details.open { display: block; }
 </style>
@@ -177,27 +247,31 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 14px 0; }
     <button class="tab-btn" id="tab-ingredients" onclick="showTab('ingredients')">Cook with what I have</button>
   </div>
 
+  <!-- TODAY -->
   <div class="section active" id="section-today">
     <div id="todayGrid" class="grid">Loading today’s dishes…</div>
   </div>
 
+  <!-- INGREDIENT SEARCH -->
   <div class="section" id="section-ingredients">
     <div class="search-box">
       <div class="search-row">
         <input class="input" id="ingredientsInput" placeholder="Enter ingredients (comma separated) e.g. chicken, rice, onion" />
-      
+
         <select class="input" id="mealSelect" style="max-width:220px;">
           <option value="any" selected>Any</option>
           <option value="breakfast">Breakfast</option>
           <option value="lunch">Lunch</option>
           <option value="dinner">Dinner</option>
         </select>
-      
+
         <button class="btn" id="searchBtn" onclick="searchByIngredients()">Search</button>
       </div>
+
       <div class="help">
         Tip: use simple words (e.g. <b>chicken</b>, <b>egg</b>, <b>tomato</b>, <b>rice</b>). Commas are important.
       </div>
+
       <div class="small" id="searchStatus"></div>
     </div>
 
@@ -208,12 +282,9 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 14px 0; }
 </div>
 
 <script>
-/* ===== DEBUG: if JS runs, this changes immediately ===== */
-document.getElementById("date").innerText = "JS is running…";
-
 /* ===== CONFIG ===== */
 const WORKER_BASE_URL = "https://todaysdish-ingredients.mattbrianburnett.workers.dev";
-const MAX_RESULTS = 6;
+const MAX_RESULTS = 10;  // ✅ show 10 options
 
 /* ===== THEME ===== */
 function toggleDark() {
@@ -239,7 +310,7 @@ function safeText(v) {
 
 /* ===== TODAY'S DISHES RENDER ===== */
 function renderTodayCard(title, d) {
-  const cook = d.cookTime ? d.cookTime + " min" : "—";
+  const cook = d.cookTime ? (d.cookTime + " min") : "—";
   const ingredients = Array.isArray(d.ingredients) ? d.ingredients : [];
   const steps = Array.isArray(d.steps) ? d.steps : [];
 
@@ -284,18 +355,24 @@ fetch("today.json")
 function setStatus(msg) {
   document.getElementById("searchStatus").innerText = msg || "";
 }
+
 function setSearching(isSearching) {
   const btn = document.getElementById("searchBtn");
   btn.disabled = isSearching;
   btn.innerText = isSearching ? "Searching…" : "Search";
 }
+
 function toggleDetails(id) {
   const el = document.getElementById(id);
   if (el) el.classList.toggle("open");
 }
 
 function renderIdeaCard(r, idx) {
-  const cook = r.cookTime ? r.cookTime + " min" : "—";
+  // Hide cook time badge if missing (common with TheMealDB)
+  const cookBadge = (r.cookTime)
+    ? '<span class="badge good">Cook time: ' + safeText(r.cookTime) + ' min</span>'
+    : '';
+
   const missed = Array.isArray(r.missedIngredients) ? r.missedIngredients : [];
   const ingredients = Array.isArray(r.ingredients) ? r.ingredients : [];
   const steps = Array.isArray(r.steps) ? r.steps : [];
@@ -304,7 +381,7 @@ function renderIdeaCard(r, idx) {
   return (
     '<div class="card">' +
       '<div class="badges">' +
-        '<span class="badge good">Cook time: ' + safeText(cook) + '</span>' +
+        cookBadge +
         (r.usedIngredientCount !== undefined ? '<span class="badge">Used: ' + safeText(r.usedIngredientCount) + '</span>' : '') +
         (r.missedIngredientCount !== undefined ? '<span class="badge accent">Missing: ' + safeText(r.missedIngredientCount) + '</span>' : '') +
       '</div>' +
@@ -341,12 +418,12 @@ async function searchByIngredients() {
   try {
     const meal = document.getElementById("mealSelect").value;
     const url = WORKER_BASE_URL + "/search?ingredients=" + encodeURIComponent(raw) + "&meal=" + encodeURIComponent(meal);
+
     const resp = await fetch(url);
     const data = await resp.json();
 
     if (!resp.ok) {
       setStatus("Error: " + (data && data.error ? data.error : "Request failed"));
-      setSearching(false);
       return;
     }
 
@@ -354,11 +431,13 @@ async function searchByIngredients() {
 
     if (!results.length) {
       setStatus("No good matches found. Try fewer ingredients or simpler names.");
-      setSearching(false);
       return;
     }
 
-    setStatus("Showing " + results.length + " " + (data.meal || "any") + " ideas for: " + data.ingredients);
+    var statusText = "Showing " + results.length + " " + (data.meal || "any") + " ideas for: " + data.ingredients;
+    if (data.note) statusText += " • " + data.note;
+    setStatus(statusText);
+
     document.getElementById("resultsGrid").innerHTML =
       results.map((r, i) => renderIdeaCard(r, i)).join("");
 
