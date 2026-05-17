@@ -59,7 +59,6 @@ body.dark .badge { background: rgba(255,255,255,0.03); }
 h3 { margin:14px 0 8px 0; font-size:14px; color:var(--muted); font-weight:900; text-transform:uppercase; letter-spacing:0.06em; }
 ul, ol { margin:0 0 0 18px; padding:0; } li { margin-bottom:6px; }
 hr.sep { border:none; border-top:1px solid var(--border); margin:14px 0; }
-
 .footer { text-align:center; color:var(--muted); margin:26px 0 10px; font-size:14px; }
 
 /* Spinner + Toast */
@@ -101,8 +100,19 @@ body.dark .share-icon .bubble { background: rgba(255,255,255,0.03); }
 
 <div class="toast" id="toast">Copied link ✅</div>
 <!-- Share Modal -->
-<div1-1.4-1.2-2.4-2.8-2.7-3.3-.3-.5-1.1-1.7-.6-2.6Z" fill="currentColor"/>
-  <div class="modal-overlay" id="shareOverlay" style="display:none;" onclick="shareOverlayClick(event)">
+<div class="modal-overlay" id="shareOverlay" onclick="shareOverlayClick(event)">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Share">
+    <div class="modal-header">
+      <div class="modal-title">Share</div>
+      <button class="modal-close" onclick="closeShareModal()">✕</button>
+    </div>
+
+    <div class="share-grid">
+      <button class="share-icon" onclick="shareTo('whatsapp')">
+        <div class="bubble" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 2a10 10 0 0 0-8.57 15.14L2 22l5-1.32A10 10 0 1 0 12 2Z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8.7 7.9c.2-.5.4-.6.8-.6h.6c.2 0 .4 0 .6.4l.8 1.9c.1.3.1.5 0 .7l-.4.5c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1.9.8 1.6 1.1 1.9 1.3.3.1.5.1.7-.1l.5-.6c.2-.2.4-.3.7-.2l2 .9c.3.1.5.3.5.5 0 .3-.1 1-.7 1.6-.5.6-1.2.6-1.6.5-.4-.1-1.8-.7-3.4-2.1-1.4-1.2-2.4-2.8-2.7-3.3-.3-.5-1.1-1.7-.6-2.6Z" fill="currentColor"/>
           </svg>
         </div>
         WhatsApp
@@ -180,9 +190,7 @@ body.dark .share-icon .bubble { background: rgba(255,255,255,0.03); }
       <button class="copy-btn" onclick="copyShareLink()">Copy</button>
     </div>
 
-    <div class="modal-note">
-      Instagram & TikTok: link copied — paste it in bio/story/chat.
-    </div>
+    <div class="modal-note">Instagram & TikTok: link copied — paste it in bio/story/chat.</div>
   </div>
 </div>
 
@@ -200,6 +208,7 @@ body.dark .share-icon .bubble { background: rgba(255,255,255,0.03); }
         </svg>
         Share
       </button>
+
       <button class="icon-btn" onclick="toggleDark()" title="Toggle dark mode">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3a7 7 0 1 0 11.5 11.5Z" fill="currentColor"/>
@@ -225,6 +234,7 @@ body.dark .share-icon .bubble { background: rgba(255,255,255,0.03); }
       </select>
       <button class="btn" id="searchBtn" onclick="searchByIngredients()">Search</button>
     </div>
+
     <div class="help">Relevance-first, rotated each search. Category shown. Top 3 avoids repeating back‑to‑back.</div>
     <div class="status" id="searchStatus"></div>
   </div>
@@ -234,69 +244,73 @@ body.dark .share-icon .bubble { background: rgba(255,255,255,0.03); }
 </div>
 
 <script>
-  <div class="modal">
-    <div class="modal-header">
-      <div class="modal-title">Share</div>
-      <button class="modal-close" onclick="closeShareModal()">✕</button>
-    </div>
-
-    <div class="share-grid">
-      <button class="share-icon" onclick="shareTo('whatsapp')">
-        <div class="bubble" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path d="M12 2a10 10 0 0 0-8.57 15.14L2 22l5-1.32A10 10 0 1 0 12 2Z" stroke="currentColor" stroke-width="1.5"/>
-const WORKER_BASE_URL = "https://todaysdish-ingredients.mattbrianburnett.workers.dev";
+  const WORKER_BASE_URL = "https://todaysdish-ingredients.mattbrianburnett.workers.dev";
 const TARGET_RESULTS = 50;
 const CONCURRENCY = 5;
 const CANDIDATE_SAMPLE_PER_TIER = 60;
 
 /* Utilities */
-function safeText(v){ return (v===null||v===undefined) ? "" : String(v); }
-function setStatus(msg){ document.getElementById("searchStatus").innerText = msg || ""; }
-function setSearching(s){ const b=document.getElementById("searchBtn"); b.disabled=s; b.innerText=s?"Searching…":"Search"; }
+function safeText(v){ return (v === null || v === undefined) ? "" : String(v); }
+
+function setStatus(msg){
+  document.getElementById("searchStatus").innerText = msg || "";
+}
+
+function setSearching(s){
+  const b = document.getElementById("searchBtn");
+  b.disabled = s;
+  b.innerText = s ? "Searching…" : "Search";
+}
+
 function showSpinner(show, text){
-  const o=document.getElementById("spinnerOverlay");
-  const t=document.getElementById("spinnerText");
+  const o = document.getElementById("spinnerOverlay");
+  const t = document.getElementById("spinnerText");
   if (text) t.innerText = text;
   o.style.display = show ? "flex" : "none";
 }
+
 function showToast(msg){
-  const t=document.getElementById("toast");
-  t.textContent=msg; t.style.display="block";
-  setTimeout(()=>t.style.display="none",1600);
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.style.display = "block";
+  setTimeout(()=> t.style.display = "none", 1600);
 }
+
 function effortBadge(level){
-  if (level==="Quick") return '<span class="badge good">Effort: Quick</span>';
-  if (level==="Medium") return '<span class="badge">Effort: Medium</span>';
-  if (level==="Involved") return '<span class="badge accent">Effort: Involved</span>';
+  if (level === "Quick") return '<span class="badge good">Effort: Quick</span>';
+  if (level === "Medium") return '<span class="badge">Effort: Medium</span>';
+  if (level === "Involved") return '<span class="badge accent">Effort: Involved</span>';
   return '<span class="badge">Effort: —</span>';
 }
+
 function toggleDetails(id){
-  const el=document.getElementById(id);
+  const el = document.getElementById(id);
   if (el) el.classList.toggle("open");
 }
+
 function missingBucket(m){
-  if (m<=3) return 0;
-  if (m<=6) return 1;
-  if (m<=9) return 2;
+  if (m <= 3) return 0;
+  if (m <= 6) return 1;
+  if (m <= 9) return 2;
   return 3;
 }
 
 /* Crypto shuffle */
 function shuffle(arr){
-  for (let i=arr.length-1;i>0;i--){
-    const a=new Uint32Array(1); crypto.getRandomValues(a);
-    const j=a[0]%(i+1);
-    [arr[i],arr[j]]=[arr[j],arr[i]];
+  for (let i = arr.length - 1; i > 0; i--){
+    const a = new Uint32Array(1);
+    crypto.getRandomValues(a);
+    const j = a[0] % (i + 1);
+    [arr[i], arr[j]] = [arr[j], arr[i]];
   }
   return arr;
 }
 
 async function runPool(items, workerFn, concurrency){
-  let i=0;
-  const workers=new Array(concurrency).fill(0).map(async ()=>{
-    while(i<items.length){
-      const idx=i++;
+  let i = 0;
+  const workers = new Array(concurrency).fill(0).map(async ()=>{
+    while(i < items.length){
+      const idx = i++;
       await workerFn(items[idx], idx);
     }
   });
@@ -304,12 +318,23 @@ async function runPool(items, workerFn, concurrency){
 }
 
 /* Anti-repeat top 3 */
-function makeHistoryKey(raw, diet){ return "todaysdish_lastTop3_"+raw.trim().toLowerCase()+"_"+diet; }
-function loadLastTop3(raw, diet){
-  try{ const v=localStorage.getItem(makeHistoryKey(raw,diet)); return v?JSON.parse(v):[]; }catch{ return []; }
+function makeHistoryKey(raw, diet){
+  return "todaysdish_lastTop3_" + raw.trim().toLowerCase() + "_" + diet;
 }
-function saveLastTop3(raw,diet,ids){
-  try{ localStorage.setItem(makeHistoryKey(raw,diet), JSON.stringify(ids.slice(0,3))); }catch{}
+
+function loadLastTop3(raw, diet){
+  try {
+    const v = localStorage.getItem(makeHistoryKey(raw, diet));
+    return v ? JSON.parse(v) : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveLastTop3(raw, diet, ids){
+  try {
+    localStorage.setItem(makeHistoryKey(raw, diet), JSON.stringify(ids.slice(0, 3)));
+  } catch {}
 }
 
 /* Theme */
@@ -317,94 +342,113 @@ function toggleDark(){
   document.body.classList.toggle("dark");
   localStorage.setItem("dark", document.body.classList.contains("dark"));
 }
-if (localStorage.getItem("dark")==="true") document.body.classList.add("dark");
+if (localStorage.getItem("dark") === "true") document.body.classList.add("dark");
 
 /* Share modal */
 function getShareUrl(){
-  const base=window.location.origin;
-  const dir=window.location.pathname.replace(/\/[^\/]*$/, "/");
-  return base+dir;
+  const base = window.location.origin;
+  const dir = window.location.pathname.replace(/\/[^\/]*$/, "/");
+  return base + dir;
 }
+
 function openShareModal(){
-  const link=getShareUrl();
-  document.getElementById("shareLink").value=link;
-  document.getElementById("shareOverlay").style.display="flex";
+  const link = getShareUrl();
+  document.getElementById("shareLink").value = link;
+  document.getElementById("shareOverlay").style.display = "flex";
 }
-function closeShareModal(){ document.getElementById("shareOverlay").style.display="none"; }
-function shareOverlayClick(e){ if(e.target && e.target.id==="shareOverlay") closeShareModal(); }
+
+function closeShareModal(){
+  document.getElementById("shareOverlay").style.display = "none";
+}
+
+function shareOverlayClick(e){
+  if (e.target && e.target.id === "shareOverlay") closeShareModal();
+}
+
 async function copyShareLink(){
-  const link=document.getElementById("shareLink").value;
-  try{ await navigator.clipboard.writeText(link); showToast("Copied link ✅"); }
-  catch{ window.prompt("Copy this link:", link); }
+  const link = document.getElementById("shareLink").value;
+  try {
+    await navigator.clipboard.writeText(link);
+    showToast("Copied link ✅");
+  } catch {
+    window.prompt("Copy this link:", link);
+  }
 }
+
 function shareTo(platform){
-  const link=document.getElementById("shareLink").value;
-  const text=encodeURIComponent("Today's Dish 🍽️ — Pick today's dish or cook with what you have:");
-  const u=encodeURIComponent(link);
+  const link = document.getElementById("shareLink").value;
+  const text = encodeURIComponent("Today's Dish 🍽️ — Pick today's dish or cook with what you have:");
+  const u = encodeURIComponent(link);
+
+  // Copy first for Instagram/TikTok + general UX
   copyShareLink();
 
-  let target="";
-  if(platform==="whatsapp") target=`https://wa.me/?text=${text}%20${u}`;
-  if(platform==="facebook") target=`https://www.facebook.com/sharer/sharer.php?u=${u}`;
-  if(platform==="x") target=`https://twitter.com/intent/tweet?text=${text}%20${u}`;
-  if(platform==="telegram") target=`https://t.me/share/url?url=${u}&text=${text}`;
-  if(platform==="email") target=`mailto:?subject=Today's%20Dish&body=${text}%0A%0A${u}`;
-  if(platform==="reddit") target=`https://www.reddit.com/submit?url=${u}&title=${text}`;
-  if(platform==="instagram") target="https://www.instagram.com/";
-  if(platform==="tiktok") target="https://www.tiktok.com/";
-  if(target) window.open(target,"_blank","noopener,noreferrer");
+  let target = "";
+  if (platform === "whatsapp") target = `https://wa.me/?text=${text}%20${u}`;
+  if (platform === "facebook") target = `https://www.facebook.com/sharer/sharer.php?u=${u}`;
+  if (platform === "x") target = `https://twitter.com/intent/tweet?text=${text}%20${u}`;
+  if (platform === "telegram") target = `https://t.me/share/url?url=${u}&text=${text}`;
+  if (platform === "email") target = `mailto:?subject=Today's%20Dish&body=${text}%0A%0A${u}`;
+  if (platform === "reddit") target = `https://www.reddit.com/submit?url=${u}&title=${text}`;
+  if (platform === "instagram") target = "https://www.instagram.com/";
+  if (platform === "tiktok") target = "https://www.tiktok.com/";
+
+  if (target) window.open(target, "_blank", "noopener,noreferrer");
 }
 
 /* Render card */
 function renderCard(recipe, matchedCount, requiredCount){
-  const id=safeText(recipe.id);
-  const detailsId="details-"+id;
+  const id = safeText(recipe.id);
+  const detailsId = "details-" + id;
 
-  const missed=Array.isArray(recipe.missedIngredients)?recipe.missedIngredients:[];
-  const ingredients=Array.isArray(recipe.ingredients)?recipe.ingredients:[];
-  const steps=Array.isArray(recipe.steps)?recipe.steps:[];
+  const missed = Array.isArray(recipe.missedIngredients) ? recipe.missedIngredients : [];
+  const ingredients = Array.isArray(recipe.ingredients) ? recipe.ingredients : [];
+  const steps = Array.isArray(recipe.steps) ? recipe.steps : [];
 
   return (
-    '<div class="card">'+
-      '<div class="badges">'+
-        '<span class="badge good">Matched inputs: '+matchedCount+'/'+requiredCount+'</span>'+
-        effortBadge(recipe.effort)+
-        '<span class="badge">Category: '+safeText(recipe.category||"—")+'</span>'+
-        '<span class="badge">Used: '+safeText(recipe.usedIngredientCount)+'</span>'+
-        '<span class="badge accent">Missing: '+safeText(recipe.missedIngredientCount)+'</span>'+
-      '</div>'+
-      '<h2>'+safeText(recipe.name)+'</h2>'+
-      (recipe.image?'<img src="'+safeText(recipe.image)+'" alt="">':'')+
-      '<button class="inline-btn" onclick="toggleDetails(\''+detailsId+'\')">Show full recipe</button>'+
-      '<div class="details" id="'+detailsId+'">'+
-        '<hr class="sep">'+
+    '<div class="card">' +
+      '<div class="badges">' +
+        '<span class="badge good">Matched inputs: ' + matchedCount + '/' + requiredCount + '</span>' +
+        effortBadge(recipe.effort) +
+        '<span class="badge">Category: ' + safeText(recipe.category || "—") + '</span>' +
+        '<span class="badge">Used: ' + safeText(recipe.usedIngredientCount) + '</span>' +
+        '<span class="badge accent">Missing: ' + safeText(recipe.missedIngredientCount) + '</span>' +
+      '</div>' +
+      '<h2>' + safeText(recipe.name) + '</h2>' +
+      (recipe.image ? '<img src="' + safeText(recipe.image) + '" alt="">' : '') +
+      '<button class="inline-btn" onclick="toggleDetails(\'' + detailsId + '\')">Show full recipe</button>' +
+      '<div class="details" id="' + detailsId + '">' +
+        '<hr class="sep">' +
         (missed.length
-          ? '<h3>Missing ingredients</h3><ul>'+missed.map(m=>'<li>'+safeText(m)+'</li>').join('')+'</ul>'
+          ? '<h3>Missing ingredients</h3><ul>' + missed.map(m => '<li>' + safeText(m) + '</li>').join('') + '</ul>'
           : '<div class="small">Looks like you have most of what’s needed.</div>'
-        )+
-        '<h3>Ingredients</h3><ul>'+ingredients.map(i=>'<li>'+safeText(i)+'</li>').join('')+'</ul>'+
-        '<hr class="sep">'+
-        '<h3>Method</h3><ol>'+steps.map(s=>'<li>'+safeText(s)+'</li>').join('')+'</ol>'+
-      '</div>'+
+        ) +
+        '<h3>Ingredients</h3><ul>' + ingredients.map(i => '<li>' + safeText(i) + '</li>').join('') + '</ul>' +
+        '<hr class="sep">' +
+        '<h3>Method</h3><ol>' + steps.map(s => '<li>' + safeText(s) + '</li>').join('') + '</ol>' +
+      '</div>' +
     '</div>'
   );
 }
 
 /* Main search */
 async function searchByIngredients(){
-  const raw=document.getElementById("ingredientsInput").value.trim();
-  const diet=document.getElementById("dietSelect").value;
+  const raw = document.getElementById("ingredientsInput").value.trim();
+  const diet = document.getElementById("dietSelect").value;
 
-  document.getElementById("resultsGrid").innerHTML="";
+  document.getElementById("resultsGrid").innerHTML = "";
   setStatus("");
 
-  if(!raw){ setStatus("Please enter ingredients separated by commas."); return; }
+  if (!raw){
+    setStatus("Please enter ingredients separated by commas.");
+    return;
+  }
 
   setSearching(true);
-  showSpinner(true,"Finding candidates…");
+  showSpinner(true, "Finding candidates…");
 
-  try{
-    const nonce=Date.now().toString()+"-"+Math.random().toString(16).slice(2);
+  try {
+    const nonce = Date.now().toString() + "-" + Math.random().toString(16).slice(2);
 
     const searchUrl = WORKER_BASE_URL
       + "/search?ingredients=" + encodeURIComponent(raw)
@@ -412,46 +456,47 @@ async function searchByIngredients(){
       + "&diet=" + encodeURIComponent(diet)
       + "&nonce=" + encodeURIComponent(nonce);
 
-    const resp = await fetch(searchUrl,{cache:"no-store"});
+    const resp = await fetch(searchUrl, { cache: "no-store" });
     const data = await resp.json();
 
-    if(!resp.ok){
-      setStatus("Error: "+(data && data.error ? data.error : "Request failed"));
+    if (!resp.ok){
+      setStatus("Error: " + (data && data.error ? data.error : "Request failed"));
       return;
     }
 
     let candidates = Array.isArray(data.results) ? data.results : [];
     const requiredCount = data.requiredCount || (raw.split(",").filter(Boolean).length);
 
-    if(!candidates.length){
+    if (!candidates.length){
       setStatus("No matches found. Try different ingredient words.");
       return;
     }
 
     shuffle(candidates);
 
-    // sample per tier to force variety
-    const tiers=new Map();
-    for(const c of candidates){
-      const k=c.matchedCount || 1;
-      if(!tiers.has(k)) tiers.set(k,[]);
+    // Sample per tier for variety
+    const tiers = new Map();
+    for (const c of candidates){
+      const k = c.matchedCount || 1;
+      if (!tiers.has(k)) tiers.set(k, []);
       tiers.get(k).push(c);
     }
-    const tierKeys=Array.from(tiers.keys()).sort((a,b)=>b-a);
-    const sampled=[];
-    for(const k of tierKeys){
-      const arr=tiers.get(k);
+
+    const tierKeys = Array.from(tiers.keys()).sort((a,b)=>b-a);
+    const sampled = [];
+    for (const k of tierKeys){
+      const arr = tiers.get(k);
       shuffle(arr);
-      sampled.push(...arr.slice(0,CANDIDATE_SAMPLE_PER_TIER));
+      sampled.push(...arr.slice(0, CANDIDATE_SAMPLE_PER_TIER));
     }
 
-    showSpinner(true,"Fetching recipe details…");
+    showSpinner(true, "Fetching recipe details…");
     setStatus("Fetching details… (rotating results)");
 
-    const accepted=[];
+    const accepted = [];
 
     await runPool(sampled, async (c)=>{
-      if(accepted.length>=TARGET_RESULTS) return;
+      if (accepted.length >= TARGET_RESULTS) return;
 
       const recipeUrl = WORKER_BASE_URL
         + "/recipe?id=" + encodeURIComponent(c.id)
@@ -459,74 +504,78 @@ async function searchByIngredients(){
         + "&diet=" + encodeURIComponent(diet)
         + "&nonce=" + encodeURIComponent(nonce);
 
-      const r = await fetch(recipeUrl,{cache:"no-store"});
+      const r = await fetch(recipeUrl, { cache: "no-store" });
       const j = await r.json();
-      if(j && j.error) return;
+      if (j && j.error) return;
 
       j._matchedCount = c.matchedCount || 1;
       j._requiredCount = c.requiredCount || requiredCount;
-
       accepted.push(j);
-      showSpinner(true,"Building list ("+accepted.length+"/"+TARGET_RESULTS+")…");
+
+      showSpinner(true, "Building list (" + accepted.length + "/" + TARGET_RESULTS + ")…");
     }, CONCURRENCY);
 
-    if(!accepted.length){
+    if (!accepted.length){
       setStatus("No recipes matched that diet filter. Try Diet: Any.");
       return;
     }
 
-    // bucket by (matchedCount + missingBucket) then shuffle within bucket
-    const buckets=new Map();
-    for(const r of accepted){
-      const key=(r._matchedCount||1)+"|"+missingBucket(r.missedIngredientCount||99);
-      if(!buckets.has(key)) buckets.set(key,[]);
+    // Bucket by (matchedCount + missing bucket) then shuffle within
+    const buckets = new Map();
+    for (const r of accepted){
+      const key = (r._matchedCount || 1) + "|" + missingBucket(r.missedIngredientCount || 99);
+      if (!buckets.has(key)) buckets.set(key, []);
       buckets.get(key).push(r);
     }
-    const keys=Array.from(buckets.keys()).sort((a,b)=>{
-      const [am,ab]=a.split("|").map(Number);
-      const [bm,bb]=b.split("|").map(Number);
-      if(bm!==am) return bm-am;
-      return ab-bb;
+
+    const keys = Array.from(buckets.keys()).sort((a,b)=>{
+      const [am,ab] = a.split("|").map(Number);
+      const [bm,bb] = b.split("|").map(Number);
+      if (bm !== am) return bm - am;
+      return ab - bb;
     });
 
-    let finalList=[];
-    for(const k of keys){
-      const arr=buckets.get(k);
+    let finalList = [];
+    for (const k of keys){
+      const arr = buckets.get(k);
       shuffle(arr);
-      for(const r of arr){
+      for (const r of arr){
         finalList.push(r);
-        if(finalList.length>=TARGET_RESULTS) break;
+        if (finalList.length >= TARGET_RESULTS) break;
       }
-      if(finalList.length>=TARGET_RESULTS) break;
+      if (finalList.length >= TARGET_RESULTS) break;
     }
 
-    // anti-repeat top 3
-    const lastTop3=loadLastTop3(raw,diet).map(String);
-    if(lastTop3.length>=1 && finalList.length>=4){
-      const top3=finalList.slice(0,3);
-      const rest=finalList.slice(3);
-      const newTop=[];
-      const pushed=[];
-      for(const item of top3){
-        if(lastTop3.includes(String(item.id))) pushed.push(item);
+    // Anti-repeat top 3
+    const lastTop3 = loadLastTop3(raw, diet).map(String);
+    if (lastTop3.length >= 1 && finalList.length >= 4){
+      const top3 = finalList.slice(0,3);
+      const rest = finalList.slice(3);
+
+      const newTop = [];
+      const pushed = [];
+
+      for (const item of top3){
+        if (lastTop3.includes(String(item.id))) pushed.push(item);
         else newTop.push(item);
       }
-      while(newTop.length<3 && rest.length) newTop.push(rest.shift());
-      finalList=newTop.concat(rest,pushed);
+
+      while (newTop.length < 3 && rest.length) newTop.push(rest.shift());
+      finalList = newTop.concat(rest, pushed);
     }
-    saveLastTop3(raw,diet, finalList.map(x=>String(x.id)));
+    saveLastTop3(raw, diet, finalList.map(x => String(x.id)));
 
-    let dietLabel="Any";
-    if(diet==="vegan") dietLabel="Vegan only";
-    if(diet==="glutenfree") dietLabel="Gluten-free (best effort)";
-    if(diet==="vegan_glutenfree") dietLabel="Vegan + Gluten-free (best effort)";
+    let dietLabel = "Any";
+    if (diet === "vegan") dietLabel = "Vegan only";
+    if (diet === "glutenfree") dietLabel = "Gluten-free (best effort)";
+    if (diet === "vegan_glutenfree") dietLabel = "Vegan + Gluten-free (best effort)";
 
-    setStatus("Showing "+finalList.length+" ideas (Diet: "+dietLabel+").");
+    setStatus("Showing " + finalList.length + " ideas (Diet: " + dietLabel + ").");
 
     document.getElementById("resultsGrid").innerHTML =
-      finalList.map(r=>renderCard(r, r._matchedCount||1, r._requiredCount||requiredCount)).join("");
+      finalList.map(r => renderCard(r, r._matchedCount || 1, r._requiredCount || requiredCount)).join("");
 
-  } catch(e){
+  } catch (e){
     setStatus("Something went wrong. Please try again.");
     console.log(e);
   } finally {
@@ -535,8 +584,8 @@ async function searchByIngredients(){
   }
 }
 
-document.addEventListener("keydown",(e)=>{
-  if(e.key==="Enter") searchByIngredients();
+document.addEventListener("keydown", (e)=>{
+  if (e.key === "Enter") searchByIngredients();
 });
 </script>
 </body>
