@@ -192,7 +192,7 @@ hr.sep {
 select.input {
   background: var(--card);
   color: var(--text);
-  min-width: 220px;
+  min-width: 260px;
 }
 
 select.input option {
@@ -225,8 +225,26 @@ select.input option {
   text-underline-offset: 3px;
 }
 
-.details { display: none; margin-top: 10px; }
-.details.open { display: block; }
+.details {
+  display: none;
+  margin-top: 10px;
+}
+
+.details.open {
+  display: block;
+}
+
+.inline-btn {
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(217,72,15,0.25);
+  background: rgba(217,72,15,0.10);
+  color: var(--text);
+  font-weight: 600;
+}
 </style>
 </head>
 
@@ -258,8 +276,7 @@ select.input option {
       <div class="search-row">
         <input class="input" id="ingredientsInput" placeholder="Enter ingredients (comma separated) e.g. egg, tomato, bacon" />
 
-        <!-- ✅ Diet dropdown -->
-        <select class="input" id="dietSelect" style="max-width:260px;">
+        <select class="input" id="dietSelect" style="max-width:280px;">
           <option value="any" selected>Diet: Any</option>
           <option value="vegan">Diet: Vegan only</option>
           <option value="glutenfree">Diet: Gluten-free (best effort)</option>
@@ -285,7 +302,13 @@ select.input option {
 <script>
 /* ===== CONFIG ===== */
 const WORKER_BASE_URL = "https://todaysdish-ingredients.mattbrianburnett.workers.dev";
-const DEFAULT_RESULTS = 50; // ✅ default to 50 items
+const DEFAULT_RESULTS = 50;
+
+/* ===== STATE (browser memory cache) ===== */
+let currentSearchIngredients = "";
+let currentSearchDiet = "any";
+const recipeCache = new Map(); // id -> full recipe object
+const recipeLoadState = new Map(); // id -> "loading"|"loaded"
 
 /* ===== THEME ===== */
 function toggleDark() {
@@ -309,16 +332,21 @@ function safeText(v) {
   return (v === null || v === undefined) ? "" : String(v);
 }
 
-function effortLevel(ingredientsCount, stepsCount) {
-  if (ingredientsCount <= 6 && stepsCount <= 6) return "Quick";
-  if (ingredientsCount <= 12 && stepsCount <= 10) return "Medium";
-  return "Involved";
-}
-
 function effortBadge(level) {
   if (level === "Quick") return '<span class="badge good">Effort: Quick</span>';
   if (level === "Medium") return '<span class="badge">Effort: Medium</span>';
-  return '<span class="badge accent">Effort: Involved</span>';
+  if (level === "Involved") return '<span class="badge accent">Effort: Involved</span>';
+  return '<span class="badge">Effort: —</span>';
+}
+
+function setStatus(msg) {
+  document.getElementById("searchStatus").innerText = msg || "";
+}
+
+function setSearching(isSearching) {
+  const btn = document.getElementById("searchBtn");
+  btn.disabled = isSearching;
+  btn.innerText = isSearching ? "Searching…" : "Search";
 }
 
 /* ===== TODAY'S DISHES RENDER ===== */
@@ -344,7 +372,6 @@ function renderTodayCard(title, d) {
   );
 }
 
-/* ===== LOAD TODAY.JSON ===== */
 fetch("today.json")
   .then(r => r.json())
   .then(data => {
@@ -364,55 +391,24 @@ fetch("today.json")
     console.log("today.json error:", e);
   });
 
-/* ===== INGREDIENT SEARCH ===== */
-function setStatus(msg) {
-  document.getElementById("searchStatus").innerText = msg || "";
-}
+/* ===== SEARCH LIST VIEW ===== */
+function renderSearchCard(item, idx) {
+  const id = safeText(item.id);
+  const title = safeText(item.name);
+  const img = safeText(item.image);
+  const hits = (item.hits !== undefined) ? safeText(item.hits) : "0";
 
-function setSearching(isSearching) {
-  const btn = document.getElementById("searchBtn");
-  btn.disabled = isSearching;
-  btn.innerText = isSearching ? "Searching…" : "Search";
-}
-
-function toggleDetails(id) {
-  const el = document.getElementById(id);
-  if (el) el.classList.toggle("open");
-}
-
-function renderIdeaCard(r, idx) {
-  const ingredients = Array.isArray(r.ingredients) ? r.ingredients : [];
-  const steps = Array.isArray(r.steps) ? r.steps : [];
-  const missed = Array.isArray(r.missedIngredients) ? r.missedIngredients : [];
-
-  const eff = r.effort || effortLevel(ingredients.length, steps.length);
-  const effortTag = effortBadge(eff);
-
-  const detailsId = "details-" + idx;
+  const detailsId = "details-" + id;
 
   return (
     '<div class="card">' +
       '<div class="badges">' +
-        effortTag +
-        (r.usedIngredientCount !== undefined ? '<span class="badge">Used: ' + safeText(r.usedIngredientCount) + '</span>' : '') +
-        (r.missedIngredientCount !== undefined ? '<span class="badge accent">Missing: ' + safeText(r.missedIngredientCount) + '</span>' : '') +
+        '<span class="badge good">Matched ingredients: ' + hits + '</span>' +
       '</div>' +
-      '<h2>' + safeText(r.name) + '</h2>' +
-      (r.image ? '<img src="' + r.image + '" alt="">' : '') +
-
-      (missed.length
-        ? '<h3>Missing ingredients</h3><ul>' + missed.map(m => '<li>' + safeText(m) + '</li>').join('') + '</ul>'
-        : '<div class="small">Looks like you have most of what’s needed.</div>'
-      ) +
-
-      '<span class="details-toggle" onclick="toggleDetails(\'' + detailsId + '\')">Show full recipe</span>' +
-
-      '<div class="details" id="' + detailsId + '">' +
-        '<hr class="sep">' +
-        '<h3>Ingredients</h3><ul>' + ingredients.map(i => '<li>' + safeText(i) + '</li>').join('') + '</ul>' +
-        '<hr class="sep">' +
-        '<h3>Method</h3><ol>' + steps.map(s => '<li>' + safeText(s) + '</li>').join('') + '</ol>' +
-      '</div>' +
+      '<h2>' + title + '</h2>' +
+      (img ? '<img src="' + img + '" alt="">' : '') +
+      '<button class="inline-btn" onclick="toggleRecipe(\'' + id + '\')">Show full recipe</button>' +
+      '<div class="details" id="' + detailsId + '"></div>' +
     '</div>'
   );
 }
@@ -428,6 +424,9 @@ async function searchByIngredients() {
     setStatus("Please enter some ingredients, separated by commas.");
     return;
   }
+
+  currentSearchIngredients = raw;
+  currentSearchDiet = diet;
 
   setSearching(true);
   setStatus("Fetching ideas…");
@@ -447,13 +446,11 @@ async function searchByIngredients() {
     }
 
     const results = Array.isArray(data.results) ? data.results : [];
-
     if (!results.length) {
       setStatus("No matches found. Try fewer ingredients or simpler names.");
       return;
     }
 
-    // User-friendly label
     let dietLabel = "Any";
     if (diet === "vegan") dietLabel = "Vegan only";
     if (diet === "glutenfree") dietLabel = "Gluten-free (best effort)";
@@ -461,21 +458,92 @@ async function searchByIngredients() {
 
     setStatus(
       "Showing " + results.length +
-      " ideas (Diet: " + dietLabel + "), ordered by least missing ingredients first."
+      " ideas (Diet: " + dietLabel + "). Click ‘Show full recipe’ to expand."
     );
 
     document.getElementById("resultsGrid").innerHTML =
-      results.map((r, i) => renderIdeaCard(r, i)).join("");
+      results.map((r, i) => renderSearchCard(r, i)).join("");
 
   } catch (e) {
     setStatus("Something went wrong. Please try again.");
-    console.log("ingredient search error:", e);
+    console.log("search error:", e);
   } finally {
     setSearching(false);
   }
 }
 
-// Allow Enter key to trigger search
+/* ===== RECIPE EXPAND (details on demand) ===== */
+function renderRecipeDetails(r) {
+  const ingredients = Array.isArray(r.ingredients) ? r.ingredients : [];
+  const steps = Array.isArray(r.steps) ? r.steps : [];
+  const missed = Array.isArray(r.missedIngredients) ? r.missedIngredients : [];
+
+  return (
+    '<hr class="sep">' +
+    '<div class="badges">' +
+      effortBadge(r.effort) +
+      (r.usedIngredientCount !== undefined ? '<span class="badge">Used: ' + safeText(r.usedIngredientCount) + '</span>' : '') +
+      (r.missedIngredientCount !== undefined ? '<span class="badge accent">Missing: ' + safeText(r.missedIngredientCount) + '</span>' : '') +
+    '</div>' +
+    (missed.length
+      ? '<h3>Missing ingredients</h3><ul>' + missed.map(m => '<li>' + safeText(m) + '</li>').join('') + '</ul>'
+      : '<div class="small">Looks like you have most of what’s needed.</div>'
+    ) +
+    '<h3>Ingredients</h3><ul>' + ingredients.map(i => '<li>' + safeText(i) + '</li>').join('') + '</ul>' +
+    '<hr class="sep">' +
+    '<h3>Method</h3><ol>' + steps.map(s => '<li>' + safeText(s) + '</li>').join('') + '</ol>'
+  );
+}
+
+async function toggleRecipe(id) {
+  const detailsEl = document.getElementById("details-" + id);
+  if (!detailsEl) return;
+
+  // Toggle if already loaded
+  if (recipeCache.has(id)) {
+    detailsEl.classList.toggle("open");
+    if (detailsEl.classList.contains("open")) {
+      detailsEl.innerHTML = renderRecipeDetails(recipeCache.get(id));
+    } else {
+      detailsEl.innerHTML = "";
+    }
+    return;
+  }
+
+  // Prevent double loading
+  if (recipeLoadState.get(id) === "loading") return;
+  recipeLoadState.set(id, "loading");
+
+  detailsEl.classList.add("open");
+  detailsEl.innerHTML = '<div class="small">Loading recipe…</div>';
+
+  try {
+    const url = WORKER_BASE_URL
+      + "/recipe?id=" + encodeURIComponent(id)
+      + "&ingredients=" + encodeURIComponent(currentSearchIngredients)
+      + "&diet=" + encodeURIComponent(currentSearchDiet);
+
+    const resp = await fetch(url);
+    const data = await resp.json();
+
+    // Special case: diet exclusion returns {error:"Excluded by diet filter"} with 200 in our worker
+    if (data && data.error) {
+      detailsEl.innerHTML = '<div class="small">This recipe was excluded by the selected diet filter.</div>';
+      recipeLoadState.set(id, "loaded");
+      return;
+    }
+
+    recipeCache.set(id, data);
+    recipeLoadState.set(id, "loaded");
+    detailsEl.innerHTML = renderRecipeDetails(data);
+
+  } catch (e) {
+    detailsEl.innerHTML = '<div class="small">Failed to load recipe details. Please try again.</div>';
+    console.log("recipe error:", e);
+  }
+}
+
+// Enter key triggers search when on ingredients tab
 document.addEventListener("keydown", (e) => {
   if (e.key === "Enter" && document.getElementById("section-ingredients").classList.contains("active")) {
     searchByIngredients();
