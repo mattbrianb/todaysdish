@@ -259,11 +259,14 @@ function normalizeImageUrl(url) {
 }
 
 function setStatus(msg){
-  document.getElementById("searchStatus").innerText = msg || "";
+  const el = document.getElementById("searchStatus");
+  if (!el) return;
+  el.innerText = msg || "";
 }
 
 function setSearching(s){
   const b = document.getElementById("searchBtn");
+  if (!b) return;
   b.disabled = s;
   b.innerText = s ? "Searching…" : "Search";
 }
@@ -271,6 +274,7 @@ function setSearching(s){
 function showSpinner(show, text){
   const o = document.getElementById("spinnerOverlay");
   const t = document.getElementById("spinnerText");
+  if (!o || !t) return; // <- prevents crash
   if (text) t.innerText = text;
   o.style.display = show ? "flex" : "none";
 }
