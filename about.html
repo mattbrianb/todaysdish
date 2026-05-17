@@ -1,139 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><!DOCTYPE html">
 <head>
 <meta charset="UTF-8">
 <title>About • Today's Dish</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-:root {
-  --bg: #f4f5f7;
-  --card: #ffffff;
-  --text: #222;
-  --muted: #666;
-  --accent: #d9480f;
-  --border: rgba(0,0,0,0.08);
-  --shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
+:root { --bg:#f4f5f7; --card:#fff; --text:#222; --muted:#666; --accent:#d9480f; --border:rgba(0,0,0,0.08); --shadow:0 10px 30px rgba(0,0,0,0.08); }
+body.dark { --bg:#0f1115; --card:#171a21; --text:#f3f4f6; --muted:#a0a6b2; --accent:#ff922b; --border:rgba(255,255,255,0.08); --shadow:0 12px 34px rgba(0,0,0,0.35); }
+body { color-scheme: light dark; margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:var(--bg); color:var(--text); }
+.container { max-width:900px; padding:20px; margin:auto; }
+header { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:14px; }
+h1 { margin:0; font-size:28px; }
+.small { color:var(--muted); font-size:13px; }
+.actions { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+.icon-btn { cursor:pointer; padding:8px 12px; border-radius:999px; background:var(--card); border:1px solid var(--border); color:var(--text); font-weight:600; }
+.nav { display:flex; gap:10px; flex-wrap:wrap; margin:18px 0 16px; }
+.nav a { text-decoration:none; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:var(--card); color:var(--text); }
+.nav a.active { border-color: rgba(217,72,15,0.35); box-shadow:0 10px 20px rgba(217,72,15,0.10); }
+.card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow:var(--shadow); margin-bottom:16px; }
+h2 { margin:0 0 10px; font-size:18px; }
+p { margin:0 0 10px; line-height:1.5; }
+ul { margin:8px 0 0 18px; padding:0; }
+li { margin-bottom:8px; }
+.footer { text-align:center; color:var(--muted); margin:22px 0 10px; font-size:14px; }
 
-body.dark {
-  --bg: #0f1115;
-  --card: #171a21;
-  --text: #f3f4f6;
-  --muted: #a0a6b2;
-  --accent: #ff922b;
-  --border: rgba(255,255,255,0.08);
-  --shadow: 0 12px 34px rgba(0,0,0,0.35);
-}
-
-body { color-scheme: light dark; }
-
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: var(--bg);
+/* Tiny toast */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  background: var(--card);
   color: var(--text);
-}
-
-.container {
-  max-width: 900px;
-  padding: 20px;
-  margin: auto;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 16px;
-  margin-bottom: 14px;
-}
-
-h1 {
-  margin: 0;
-  font-size: 28px;
-}
-
-.actions {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.toggle {
-  cursor: pointer;
-  padding: 8px 12px;
+  border: 1px solid var(--border);
   border-radius: 999px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  color: var(--text);
-}
-
-.nav {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 18px 0 16px;
-}
-
-.nav a {
-  text-decoration: none;
   padding: 10px 14px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: var(--card);
-  color: var(--text);
-}
-
-.nav a.active {
-  border-color: rgba(217,72,15,0.35);
-  box-shadow: 0 10px 20px rgba(217,72,15,0.10);
-}
-
-.card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 18px;
   box-shadow: var(--shadow);
-  margin-bottom: 16px;
-}
-
-h2 {
-  margin: 0 0 10px;
-  font-size: 18px;
-}
-
-p {
-  margin: 0 0 10px;
-  color: var(--text);
-  line-height: 1.5;
-}
-
-.small {
-  color: var(--muted);
+  display: none;
+  z-index: 10000;
   font-size: 13px;
-}
-
-ul {
-  margin: 8px 0 0 18px;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 8px;
-}
-
-.footer {
-  text-align: center;
-  color: var(--muted);
-  margin: 22px 0 10px;
-  font-size: 14px;
 }
 </style>
 </head>
 
 <body>
+<div class="toast" id="toast">Copied link ✅</div>
+
 <div class="container">
   <header>
     <div>
@@ -141,7 +53,8 @@ li {
       <div class="small">A simple daily food trend: eat today’s dish.</div>
     </div>
     <div class="actions">
-      <button class="toggle" onclick="toggleDark()" title="Toggle dark mode">🌙</button>
+      <button class="icon-btn" onclick="shareSite()" title="Share this site">Share</button>
+      <button class="icon-btn" onclick="toggleDark()" title="Toggle dark mode">🌙</button>
     </div>
   </header>
 
@@ -154,10 +67,10 @@ li {
     <h2>What is this?</h2>
     <p>
       Today's Dish is built for one job: <b>remove the “what should we eat?” decision</b>.
-      Every day, the site shows a breakfast, lunch, and dinner idea — and that’s it.
+      Every day the site shows a breakfast, lunch, and dinner idea — and that’s it.
     </p>
     <p>
-      The goal is to make a fun, viral habit where people visit the site, pick today’s dish, and just eat.
+      I want this to become a fun little trend where people visit the site, pick today’s dish, and just eat.
     </p>
   </div>
 
@@ -165,29 +78,29 @@ li {
     <h2>Why I made it</h2>
     <p>
       This started because the daily question “what’s for dinner?” never ends.
-      I got bored of browsing lists of recipes that still don’t help you decide.
-      So I built something that simply decides for you.
+      I got tired of browsing recipe lists that still don’t help you decide…
+      so I built something that decides for you.
     </p>
   </div>
 
   <div class="card">
     <h2>How to use it</h2>
     <ul>
-      <li><b>Step 1:</b> Open the Home page and see today’s dishes.</li>
-      <li><b>Step 2:</b> If you like one, cook it — no second guessing.</li>
-      <li><b>Step 3:</b> If you don’t like today’s picks, use <b>Cook with what I have</b> to find other ideas based on your ingredients.</li>
+      <li><b>Step 1:</b> Open Home and check today’s dishes.</li>
+      <li><b>Step 2:</b> Pick one and cook it — no second guessing.</li>
+      <li><b>Step 3:</b> If you’re not feeling today’s picks, use <b>Cook with what I have</b> for other ideas based on your ingredients.</li>
     </ul>
   </div>
 
   <div class="card">
     <h2>Future plans (optional)</h2>
     <p>
-      Right now, this project is about building a daily habit and making it fun to share.
-      In future, if lots of people use it, I might explore simple ways to support it (e.g., ads, affiliate links, partnerships),
-      but the main goal will always be: <b>come here, get today’s dish, and eat.</b>
+      Right now this is purely about building a daily habit and making it fun to share.
+      If it grows, I might explore simple ways to support it (ads/affiliate links/partnerships),
+      but the main goal stays the same: <b>come here, get today’s dish, and eat.</b>
     </p>
     <p class="small">
-      Dietary filters are labeled “best effort” when the data can’t guarantee a perfect match.
+      Some dietary filters are labeled “best effort” when the data can’t guarantee a perfect match.
     </p>
   </div>
 
@@ -201,6 +114,32 @@ function toggleDark() {
 }
 if (localStorage.getItem("dark") === "true") {
   document.body.classList.add("dark");
+}
+
+function showToast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.style.display = "block";
+  setTimeout(() => { t.style.display = "none"; }, 1600);
+}
+
+async function shareSite() {
+  const shareUrl = window.location.origin + "/todaysdish/";
+  const shareText = "Today's Dish 🍽️\nA site that decides what to eat today. Try it: " + shareUrl;
+
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: "Today's Dish", text: shareText, url: shareUrl });
+      return;
+    } catch (e) {}
+  }
+
+  try {
+    await navigator.clipboard.writeText(shareUrl);
+    showToast("Copied link ✅");
+  } catch (e) {
+    window.prompt("Copy this link:", shareUrl);
+  }
 }
 </script>
 </body>
