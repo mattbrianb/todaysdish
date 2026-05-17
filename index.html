@@ -394,7 +394,7 @@ function renderIdeaCard(r, idx) {
   return (
     '<div class="card">' +
       '<div class="badges">' +
-        cookBadge +
+        effortTag +
         (r.usedIngredientCount !== undefined ? '<span class="badge">Used: ' + safeText(r.usedIngredientCount) + '</span>' : '') +
         (r.missedIngredientCount !== undefined ? '<span class="badge accent">Missing: ' + safeText(r.missedIngredientCount) + '</span>' : '') +
       '</div>' +
