@@ -13,10 +13,20 @@ body { color-scheme: light dark; margin:0; font-family:system-ui,-apple-system,S
 header { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:14px; }
 h1 { margin:0; font-size:28px; }
 .date { color:var(--muted); margin-top:4px; }
-.actions { display:flex; gap:10px; align-items:center; }
-.toggle { cursor:pointer; padding:8px 12px; border-radius:999px; background:var(--card); border:1px solid var(--border); color:var(--text); }
-.tabs { display:flex; gap:10px; margin:18px 0 10px; flex-wrap:wrap; }
-.tab-btn { cursor:pointer; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:var(--card); color:var(--text); }
+.actions { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+
+.icon-btn {
+  cursor:pointer;
+  padding:8px 12px;
+  border-radius:999px;
+  background:var(--card);
+  border:1px solid var(--border);
+  color:var(--text);
+  font-weight:600;
+}
+
+.tabs { display:flex; gap:10px; margin:18px 0 10px; flex-wrap:wrap; align-items:center; }
+.tab-btn { cursor:pointer; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:var(--card); color:var(--text); text-decoration:none; display:inline-block; }
 .tab-btn.active { border-color: rgba(217,72,15,0.35); box-shadow:0 10px 20px rgba(217,72,15,0.10); }
 .section { display:none; } .section.active { display:block; }
 .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(320px,1fr)); gap:20px; margin-top:18px; }
@@ -50,6 +60,23 @@ select.input option { background:var(--card); color:var(--text); }
 .spinner { width:22px; height:22px; border-radius:50%; border:3px solid rgba(0,0,0,0.15); border-top-color:var(--accent); animation:spin 0.9s linear infinite; }
 body.dark .spinner { border:3px solid rgba(255,255,255,0.15); border-top-color:var(--accent); }
 @keyframes spin { to { transform: rotate(360deg); } }
+
+/* Tiny toast for “Copied!” */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 14px;
+  box-shadow: var(--shadow);
+  display: none;
+  z-index: 10000;
+  font-size: 13px;
+}
 </style>
 </head>
 
@@ -61,20 +88,25 @@ body.dark .spinner { border:3px solid rgba(255,255,255,0.15); border-top-color:v
   </div>
 </div>
 
+<div class="toast" id="toast">Copied link ✅</div>
+
 <div class="container">
   <header>
     <div>
       <h1>Today's Dish</h1>
       <div class="date" id="date">Loading date…</div>
     </div>
+
     <div class="actions">
-      <button class="toggle" onclick="toggleDark()" title="Toggle dark mode">🌙</button>
+      <button class="icon-btn" onclick="shareSite()" title="Share this site">Share</button>
+      <button class="icon-btn" onclick="toggleDark()" title="Toggle dark mode">🌙</button>
     </div>
   </header>
 
   <div class="tabs">
     <button class="tab-btn active" id="tab-today" onclick="showTab('today')">Today’s Dishes</button>
     <button class="tab-btn" id="tab-ingredients" onclick="showTab('ingredients')">Cook with what I have</button>
+    <a class="tab-btn" href="./about.html">About</a>
   </div>
 
   <div class="section active" id="section-today">
@@ -85,14 +117,17 @@ body.dark .spinner { border:3px solid rgba(255,255,255,0.15); border-top-color:v
     <div class="search-box">
       <div class="search-row">
         <input class="input" id="ingredientsInput" placeholder="Enter ingredients (comma separated) e.g. chicken" />
+
         <select class="input" id="dietSelect" style="max-width:280px;">
           <option value="any" selected>Diet: Any</option>
           <option value="vegan">Diet: Vegan only</option>
           <option value="glutenfree">Diet: Gluten-free (best effort)</option>
           <option value="vegan_glutenfree">Diet: Vegan + Gluten-free (best effort)</option>
         </select>
+
         <button class="btn" id="searchBtn" onclick="searchByIngredients()">Search</button>
       </div>
+
       <div class="help">
         Relevance first, but results rotate each search. Top 3 also avoids repeating back‑to‑back.
       </div>
@@ -137,6 +172,37 @@ function showSpinner(show, text) {
   const t = document.getElementById("spinnerText");
   if (text) t.innerText = text;
   overlay.style.display = show ? "flex" : "none";
+}
+
+function showToast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.style.display = "block";
+  setTimeout(() => { t.style.display = "none"; }, 1600);
+}
+
+async function shareSite() {
+  const shareUrl = window.location.origin + window.location.pathname;
+  const shareText = "Today's Dish 🍽️\nA site that decides what to eat today. Try it: " + shareUrl;
+
+  // Use native share when available (mobile)
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: "Today's Dish", text: shareText, url: shareUrl });
+      return;
+    } catch (e) {
+      // user cancelled or share failed; fall back to copy
+    }
+  }
+
+  // Copy to clipboard fallback
+  try {
+    await navigator.clipboard.writeText(shareUrl);
+    showToast("Copied link ✅");
+  } catch (e) {
+    // Last resort: prompt
+    window.prompt("Copy this link:", shareUrl);
+  }
 }
 
 function effortBadge(level) {
@@ -216,7 +282,7 @@ function missingBucket(m) {
   return 3;
 }
 
-/* --- Anti-repeat top 3 --- */
+/* Anti-repeat top 3 */
 function makeHistoryKey(raw, diet) {
   return "todaysdish_lastTop3_" + raw.trim().toLowerCase() + "_" + diet;
 }
@@ -227,9 +293,7 @@ function loadLastTop3(raw, diet) {
   } catch { return []; }
 }
 function saveLastTop3(raw, diet, ids) {
-  try {
-    localStorage.setItem(makeHistoryKey(raw, diet), JSON.stringify(ids.slice(0, 3)));
-  } catch {}
+  try { localStorage.setItem(makeHistoryKey(raw, diet), JSON.stringify(ids.slice(0, 3))); } catch {}
 }
 
 function renderCard(recipe, matchedCount, requiredCount) {
@@ -306,10 +370,8 @@ async function searchByIngredients() {
       return;
     }
 
-    // Client shuffle to avoid any stable ordering
     shuffle(candidates);
 
-    // Tier sample to avoid always fetching the same first candidates
     const tiers = new Map();
     for (const c of candidates) {
       const k = c.matchedCount || 1;
@@ -317,6 +379,7 @@ async function searchByIngredients() {
       tiers.get(k).push(c);
     }
     const tierKeys = Array.from(tiers.keys()).sort((a, b) => b - a);
+
     const sampled = [];
     for (const k of tierKeys) {
       const arr = tiers.get(k);
@@ -354,7 +417,6 @@ async function searchByIngredients() {
       return;
     }
 
-    // Bucket by (matchedCount, missingBucket) then shuffle within each bucket
     const buckets = new Map();
     for (const r of accepted) {
       const key = (r._matchedCount || 1) + "|" + missingBucket(r.missedIngredientCount || 99);
@@ -380,7 +442,7 @@ async function searchByIngredients() {
       if (finalList.length >= TARGET_RESULTS) break;
     }
 
-    // ---- Anti-repeat top 3 ----
+    // Anti-repeat top 3
     const lastTop3 = loadLastTop3(raw, diet).map(String);
     if (lastTop3.length >= 1 && finalList.length >= 4) {
       const top3 = finalList.slice(0, 3);
@@ -394,10 +456,7 @@ async function searchByIngredients() {
         else newTop.push(item);
       }
 
-      while (newTop.length < 3 && rest.length) {
-        newTop.push(rest.shift());
-      }
-
+      while (newTop.length < 3 && rest.length) newTop.push(rest.shift());
       finalList = newTop.concat(rest, pushedDown);
     }
 
