@@ -1,5 +1,39 @@
 <!DOCTYPE html>
-:var(--text); outline:none; }<html lang="en">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cook with what I have • Today's Dish</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+:root { --bg:#f4f5f7; --card:#fff; --text:#222; --muted:#666; --accent:#d9480f; --accent2:#2f9e44; --border:rgba(0,0,0,0.08); --shadow:0 10px 30px rgba(0,0,0,0.08); }
+body.dark { --bg:#0f1115; --card:#171a21; --text:#f3f4f6; --muted:#a0a6b2; --accent:#ff922b; --accent2:#51cf66; --border:rgba(255,255,255,0.08); --shadow:0 12px 34px rgba(0,0,0,0.35); }
+body { color-scheme: light dark; margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:var(--bg); color:var(--text); }
+
+.container { max-width:1200px; padding:20px; margin:auto; }
+header { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:14px; }
+h1 { margin:0; font-size:28px; }
+.small { color:var(--muted); font-size:13px; margin-top:4px; }
+
+.actions { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+.icon-btn{
+  cursor:pointer; padding:8px 12px; border-radius:999px;
+  background:var(--card); border:1px solid var(--border); color:var(--text);
+  font-weight:800; display:flex; align-items:center; gap:8px;
+}
+.icon-btn svg{ width:18px; height:18px; display:block; }
+
+.tabs { display:flex; gap:10px; margin:18px 0 10px; flex-wrap:wrap; align-items:center; }
+.tab-btn{
+  cursor:pointer; padding:10px 14px; border-radius:12px;
+  border:1px solid var(--border); background:var(--card); color:var(--text);
+  text-decoration:none; display:inline-block; line-height:1; font-size:14px; font-weight:700;
+}
+.tab-btn.active{ border-color: rgba(217,72,15,0.35); box-shadow:0 10px 20px rgba(217,72,15,0.10); }
+
+.search-box { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:16px; box-shadow:var(--shadow); margin-top:16px; }
+.search-row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+.input { flex:1; min-width:260px; padding:12px; border-radius:12px; border:1px solid var(--border); background:transparent; color:var(--text); outline:none; }
 select.input { background:var(--card); color:var(--text); min-width:260px; }
 select.input option { background:var(--card); color:var(--text); }
 .btn { cursor:pointer; padding:12px 14px; border-radius:12px; border:1px solid rgba(217,72,15,0.25); background:rgba(217,72,15,0.10); color:var(--text); font-weight:800; }
@@ -16,8 +50,10 @@ select.input option { background:var(--card); color:var(--text); }
 body.dark .badge { background: rgba(255,255,255,0.03); }
 .badge.accent { color:var(--accent); border-color:rgba(217,72,15,0.25); }
 .badge.good { color:var(--accent2); border-color:rgba(47,158,68,0.25); }
+
 .details { display:none; margin-top:10px; }
 .details.open { display:block; }
+
 .inline-btn { cursor:pointer; display:inline-block; margin-top:10px; padding:10px 12px; border-radius:12px; border:1px solid rgba(217,72,15,0.25); background:rgba(217,72,15,0.10); color:var(--text); font-weight:800; }
 
 h3 { margin:14px 0 8px 0; font-size:14px; color:var(--muted); font-weight:900; text-transform:uppercase; letter-spacing:0.06em; }
@@ -64,47 +100,88 @@ body.dark .share-icon .bubble { background: rgba(255,255,255,0.03); }
 </div>
 
 <div class="toast" id="toast">Copied link ✅</div>
-
 <!-- Share Modal -->
-<div class="modal-overlay" id="shareOverlay" onclick="shareOverlayClick(event)">
-  <div class="modal">
-    <div class="modal-header">
-      <div class="modal-title">Share</div>
-      <button class="modal-close" onclick="closeShareModal()">✕</button>
-    </div>
+<div1-1.4-1.2-2.4-2.8-2.7-3.3-.3-.5-1.1-1.7-.6-2.6Z" fill="currentColor"/><div class="modal-overlay" id="shareOverlay" onclick="shareOverlayClick(event)">
+          </svg>
+        </div>
+        WhatsApp
+      </button>
 
-    <div class="share-grid">
-      <button class="share-icon" onclick="shareTo('whatsapp')"><div class="bubble">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 0 0-8.57 15.14L2 22l5-1.32A10 10 0 1 0 12 2Z" stroke="currentColor" stroke-width="1.5"/><path d="M8.7 7.9c.2-.5.4-.6.8-.6h.6c.2 0 .4 0 .6.4l.8 1.9c.1.3.1.5 0 .7l-.4.5c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1.9.8 1.6 1.1 1.9 1.3.3.1.5.1.7-.1l.5-.6c.2-.2.4-.3.7-.2l2 .9c.3.1.5.3.5.5 0 .3-.1 1-.7 1.6-.5.6-1.2.6-1.6.5-.4-.1-1.8-.7-3.4-2.1-1.4-1.2-2.4-2.8-2.7-3.3-.3-.5-1.1-1.7-.6-2.6Z" fill="currentColor"/></svg>
-      </div>WhatsApp</button>
-      <button class="share-icon" onclick="shareTo('facebook')"><div class="bubble">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 22v-8h2.6l.4-3h-3V9.1c0-.9.3-1.6 1.6-1.6H17V5a22 22 0 0 0-2.7-.1c-2.7 0-4.6 1.7-4.6 4.8V11H7v3h2.7v8h3.8Z"/></svg>
-      </div>Facebook</button>
-      <button class="share-icon" onclick="shareTo('x')"><div class="bubble">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H21l-7.7 8.8L22 22h-6.8l-5.3-6.9L3.9 22H2l8.3-9.5L2 2h6.9l4.8 6.2L18.9 2Zm-2.4 18h1.9L8.3 3.9H6.2L16.5 20Z"/></svg>
-      </div>X</button>
-      <button class="share-icon" onclick="shareTo('telegram')"><div class="bubble">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.7 4.3c.4-.2.8.2.7.6l-3.2 15.2c-.1.4-.5.6-.9.4l-4.6-3.4-2.2 2.1c-.3.3-.8.2-.9-.2l-1.2-4.2L4.7 12c-.4-.2-.4-.8 0-1l17-6.7ZM9.9 14.3l.9 3.2 1.6-1.5-.8-.6c-.5-.4-.4-1.2.2-1.4l5.5-2.6-6.4 2.9c-.7.3-1.2.9-1 1.9Z"/></svg>
-      </div>Telegram</button>
-      <button class="share-icon" onclick="shareTo('email')"><div class="bubble">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="1.5"/><path d="m4.5 7 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.5"/></svg>
-      </div>Email</button>
-      <button class="share-icon" onclick="shareTo('reddit')"><div class="bubble">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 12.4c.6 0 1 .5 1 1.1 0 .5-.3 1-.8 1.1.1.4.1.7.1 1.1 0 3.1-3.7 5.7-8.3 5.7S3.7 19.8 3.7 16.7c0-.4 0-.7.1-1.1-.5-.2-.8-.6-.8-1.1 0-.6.4-1.1 1-1.1.3 0 .6.1.8.3 1.2-.9 3-1.5 5.1-1.7l.9-4.1c0-.2.2-.4.4-.3l3 .7c.2-.5.7-.9 1.3-.9.7 0 1.4.6 1.4 1.4 0 .7-.6 1.4-1.4 1.4-.5 0-1-.3-1.2-.7l-2.3-.5-.7 3.2c2.2.1 4.1.8 5.4 1.7.2-.2.5-.4.9-.4Zm-11 4.1c.5 0 .9-.4.9-.9s-.4-.9-.9-.9-.9.4-.9.9.4.9.9.9Zm6 0c.5 0 .9-.4.9-.9s-.4-.9-.9-.9-.9.4-.9.9.4.9.9.9Zm-6.1 2.1c1 .8 2.4 1.2 3.9 1.2s2.9-.4 3.9-1.2c.2-.2.2-.5 0-.7-.2-.2-.5-.2-.7 0-.7.6-1.9 1-3.2 1s-2.5-.4-3.2-1c-.2-.2-.5-.2-.7 0-.2.2-.2.5 0 .7Z"/></svg>
-      </div>Reddit</button>
-      <button class="share-icon" onclick="shareTo('instagram')"><div class="bubble">
-        <svg viewBox="0 0 24 24" fill="none"><rect x="6" y="6" width="12" height="12" rx="3" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="16.5" cy="7.5" r="0.9" fill="currentColor"/></svg>
-      </div>Instagram</button>
-      <button class="share-icon" onclick="shareTo('tiktok')"><div class="bubble">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15 3c.6 2.6 2.3 4.4 5 4.7v3c-1.9 0-3.5-.6-5-1.7V16c0 3.3-2.7 6-6 6S3 19.3 3 16s2.7-6 6-6c.6 0 1.1.1 1.6.2v3.3c-.5-.3-1-.5-1.6-.5-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3V3h3Z"/></svg>
-      </div>TikTok</button>
+      <button class="share-icon" onclick="shareTo('facebook')">
+        <div class="bubble" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M13.5 22v-8h2.6l.4-3h-3V9.1c0-.9.3-1.6 1.6-1.6H17V5a22 22 0 0 0-2.7-.1c-2.7 0-4.6 1.7-4.6 4.8V11H7v3h2.7v8h3.8Z"/>
+          </svg>
+        </div>
+        Facebook
+      </button>
+
+      <button class="share-icon" onclick="shareTo('x')">
+        <div class="bubble" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.9 2H21l-7.7 8.8L22 22h-6.8l-5.3-6.9L3.9 22H2l8.3-9.5L2 2h6.9l4.8 6.2L18.9 2Zm-2.4 18h1.9L8.3 3.9H6.2L16.5 20Z"/>
+          </svg>
+        </div>
+        X
+      </button>
+
+      <button class="share-icon" onclick="shareTo('telegram')">
+        <div class="bubble" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21.7 4.3c.4-.2.8.2.7.6l-3.2 15.2c-.1.4-.5.6-.9.4l-4.6-3.4-2.2 2.1c-.3.3-.8.2-.9-.2l-1.2-4.2L4.7 12c-.4-.2-.4-.8 0-1l17-6.7ZM9.9 14.3l.9 3.2 1.6-1.5-.8-.6c-.5-.4-.4-1.2.2-1.4l5.5-2.6-6.4 2.9c-.7.3-1.2.9-1 1.9Z"/>
+          </svg>
+        </div>
+        Telegram
+      </button>
+
+      <button class="share-icon" onclick="shareTo('email')">
+        <div class="bubble" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="m4.5 7 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        Email
+      </button>
+
+      <button class="share-icon" onclick="shareTo('reddit')">
+        <div class="bubble" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 12.4c.6 0 1 .5 1 1.1 0 .5-.3 1-.8 1.1.1.4.1.7.1 1.1 0 3.1-3.7 5.7-8.3 5.7S3.7 19.8 3.7 16.7c0-.4 0-.7.1-1.1-.5-.2-.8-.6-.8-1.1 0-.6.4-1.1 1-1.1.3 0 .6.1.8.3 1.2-.9 3-1.5 5.1-1.7l.9-4.1c0-.2.2-.4.4-.3l3 .7c.2-.5.7-.9 1.3-.9.7 0 1.4.6 1.4 1.4 0 .7-.6 1.4-1.4 1.4-.5 0-1-.3-1.2-.7l-2.3-.5-.7 3.2c2.2.1 4.1.8 5.4 1.7.2-.2.5-.4.9-.4Zm-11 4.1c.5 0 .9-.4.9-.9s-.4-.9-.9-.9-.9.4-.9.9.4.9.9.9Zm6 0c.5 0 .9-.4.9-.9s-.4-.9-.9-.9-.9.4-.9.9.4.9.9.9Zm-6.1 2.1c1 .8 2.4 1.2 3.9 1.2s2.9-.4 3.9-1.2c.2-.2.2-.5 0-.7-.2-.2-.5-.2-.7 0-.7.6-1.9 1-3.2 1s-2.5-.4-3.2-1c-.2-.2-.5-.2-.7 0-.2.2-.2.5 0 .7Z"/>
+          </svg>
+        </div>
+        Reddit
+      </button>
+
+      <button class="share-icon" onclick="shareTo('instagram')">
+        <div class="bubble" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <rect x="6" y="6" width="12" height="12" rx="3" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="16.5" cy="7.5" r="0.9" fill="currentColor"/>
+          </svg>
+        </div>
+        Instagram
+      </button>
+
+      <button class="share-icon" onclick="shareTo('tiktok')">
+        <div class="bubble" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M15 3c.6 2.6 2.3 4.4 5 4.7v3c-1.9 0-3.5-.6-5-1.7V16c0 3.3-2.7 6-6 6S3 19.3 3 16s2.7-6 6-6c.6 0 1.1.1 1.6.2v3.3c-.5-.3-1-.5-1.6-.5-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3V3h3Z"/>
+          </svg>
+        </div>
+        TikTok
+      </button>
     </div>
 
     <div class="copy-row">
       <input class="copy-input" id="shareLink" readonly />
       <button class="copy-btn" onclick="copyShareLink()">Copy</button>
     </div>
-    <div class="modal-note">Instagram & TikTok: link copied — paste it in bio/story/chat.</div>
+
+    <div class="modal-note">
+      Instagram & TikTok: link copied — paste it in bio/story/chat.
+    </div>
   </div>
 </div>
 
@@ -156,11 +233,23 @@ body.dark .share-icon .bubble { background: rgba(255,255,255,0.03); }
 </div>
 
 <script>
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title">Share</div>
+      <button class="modal-close" onclick="closeShareModal()">✕</button>
+    </div>
+
+    <div class="share-grid">
+      <button class="share-icon" onclick="shareTo('whatsapp')">
+        <div class="bubble" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 2a10 10 0 0 0-8.57 15.14L2 22l5-1.32A10 10 0 1 0 12 2Z" stroke="currentColor" stroke-width="1.5"/>
 const WORKER_BASE_URL = "https://todaysdish-ingredients.mattbrianburnett.workers.dev";
 const TARGET_RESULTS = 50;
 const CONCURRENCY = 5;
 const CANDIDATE_SAMPLE_PER_TIER = 60;
 
+/* Utilities */
 function safeText(v){ return (v===null||v===undefined) ? "" : String(v); }
 function setStatus(msg){ document.getElementById("searchStatus").innerText = msg || ""; }
 function setSearching(s){ const b=document.getElementById("searchBtn"); b.disabled=s; b.innerText=s?"Searching…":"Search"; }
@@ -191,6 +280,8 @@ function missingBucket(m){
   if (m<=9) return 2;
   return 3;
 }
+
+/* Crypto shuffle */
 function shuffle(arr){
   for (let i=arr.length-1;i>0;i--){
     const a=new Uint32Array(1); crypto.getRandomValues(a);
@@ -199,6 +290,7 @@ function shuffle(arr){
   }
   return arr;
 }
+
 async function runPool(items, workerFn, concurrency){
   let i=0;
   const workers=new Array(concurrency).fill(0).map(async ()=>{
@@ -209,6 +301,8 @@ async function runPool(items, workerFn, concurrency){
   });
   await Promise.all(workers);
 }
+
+/* Anti-repeat top 3 */
 function makeHistoryKey(raw, diet){ return "todaysdish_lastTop3_"+raw.trim().toLowerCase()+"_"+diet; }
 function loadLastTop3(raw, diet){
   try{ const v=localStorage.getItem(makeHistoryKey(raw,diet)); return v?JSON.parse(v):[]; }catch{ return []; }
@@ -335,6 +429,7 @@ async function searchByIngredients(){
 
     shuffle(candidates);
 
+    // sample per tier to force variety
     const tiers=new Map();
     for(const c of candidates){
       const k=c.matchedCount || 1;
@@ -379,6 +474,7 @@ async function searchByIngredients(){
       return;
     }
 
+    // bucket by (matchedCount + missingBucket) then shuffle within bucket
     const buckets=new Map();
     for(const r of accepted){
       const key=(r._matchedCount||1)+"|"+missingBucket(r.missedIngredientCount||99);
@@ -403,6 +499,7 @@ async function searchByIngredients(){
       if(finalList.length>=TARGET_RESULTS) break;
     }
 
+    // anti-repeat top 3
     const lastTop3=loadLastTop3(raw,diet).map(String);
     if(lastTop3.length>=1 && finalList.length>=4){
       const top3=finalList.slice(0,3);
@@ -443,37 +540,3 @@ document.addEventListener("keydown",(e)=>{
 </script>
 </body>
 </html>
-
-<head>
-<meta charset="UTF-8">
-<title>Cook with what I have • Today's Dish</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-:root { --bg:#f4f5f7; --card:#fff; --text:#222; --muted:#666; --accent:#d9480f; --accent2:#2f9e44; --border:rgba(0,0,0,0.08); --shadow:0 10px 30px rgba(0,0,0,0.08); }
-body.dark { --bg:#0f1115; --card:#171a21; --text:#f3f4f6; --muted:#a0a6b2; --accent:#ff922b; --accent2:#51cf66; --border:rgba(255,255,255,0.08); --shadow:0 12px 34px rgba(0,0,0,0.35); }
-body { color-scheme: light dark; margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:var(--bg); color:var(--text); }
-
-.container { max-width:1200px; padding:20px; margin:auto; }
-header { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:14px; }
-h1 { margin:0; font-size:28px; }
-.small { color:var(--muted); font-size:13px; margin-top:4px; }
-
-.actions { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
-.icon-btn{
-  cursor:pointer; padding:8px 12px; border-radius:999px;
-  background:var(--card); border:1px solid var(--border); color:var(--text);
-  font-weight:800; display:flex; align-items:center; gap:8px;
-}
-.icon-btn svg{ width:18px; height:18px; display:block; }
-
-.tabs { display:flex; gap:10px; margin:18px 0 10px; flex-wrap:wrap; align-items:center; }
-.tab-btn{
-  cursor:pointer; padding:10px 14px; border-radius:12px;
-  border:1px solid var(--border); background:var(--card); color:var(--text);
-  text-decoration:none; display:inline-block; line-height:1; font-size:14px; font-weight:700;
-}
-.tab-btn.active{ border-color: rgba(217,72,15,0.35); box-shadow:0 10px 20px rgba(217,72,15,0.10); }
-
-.search-box { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:16px; box-shadow:var(--shadow); margin-top:16px; }
-.search-row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
