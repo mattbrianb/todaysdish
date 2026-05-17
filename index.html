@@ -185,6 +185,14 @@ hr.sep { border: none; border-top: 1px solid var(--border); margin: 14px 0; }
     <div class="search-box">
       <div class="search-row">
         <input class="input" id="ingredientsInput" placeholder="Enter ingredients (comma separated) e.g. chicken, rice, onion" />
+      
+        <select class="input" id="mealSelect" style="max-width:220px;">
+          <option value="any" selected>Any</option>
+          <option value="breakfast">Breakfast</option>
+          <option value="lunch">Lunch</option>
+          <option value="dinner">Dinner</option>
+        </select>
+      
         <button class="btn" id="searchBtn" onclick="searchByIngredients()">Search</button>
       </div>
       <div class="help">
@@ -331,7 +339,8 @@ async function searchByIngredients() {
   setStatus("Fetching ideas…");
 
   try {
-    const url = WORKER_BASE_URL + "/search?ingredients=" + encodeURIComponent(raw);
+    const meal = document.getElementById("mealSelect").value;
+    const url = WORKER_BASE_URL + "/search?ingredients=" + encodeURIComponent(raw) + "&meal=" + encodeURIComponent(meal);
     const resp = await fetch(url);
     const data = await resp.json();
 
@@ -349,7 +358,7 @@ async function searchByIngredients() {
       return;
     }
 
-    setStatus("Showing " + results.length + " ideas for: " + data.ingredients);
+    setStatus("Showing " + results.length + " " + (data.meal || "any") + " ideas for: " + data.ingredients);
     document.getElementById("resultsGrid").innerHTML =
       results.map((r, i) => renderIdeaCard(r, i)).join("");
 
