@@ -425,6 +425,7 @@ function renderCard(recipe, matchedCount, requiredCount) {
   const steps = Array.isArray(recipe.steps) ? recipe.steps : [];
 
   const imgUrl = normalizeImageUrl(recipe.image);
+  const proxied = imgUrl ? (WORKER_BASE_URL + "/img?u=" + encodeURIComponent(imgUrl)) : "";
 
   return (
     '<div class="card">' +
@@ -436,7 +437,7 @@ function renderCard(recipe, matchedCount, requiredCount) {
         '<span class="badge accent">Missing: ' + safeText(recipe.missedIngredientCount) + '</span>' +
       '</div>' +
       '<h2>' + safeText(recipe.name) + '</h2>' +
-      (imgUrl ? '<img src="' + imgUrl + '" alt="" loading="lazy" referrerpolicy="no-referrer">' : '') +
+      (proxied ? '<img src="' + proxied + '" alt="" loading="lazy">' : '') +
       '<button class="inline-btn" onclick="toggleDetails(\'' + detailsId + '\')">Show full recipe</button>' +
       '<div class="details" id="' + detailsId + '">' +
         '<hr class="sep">' +
