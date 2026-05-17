@@ -6,162 +6,55 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-:root {
-  --bg: #f4f5f7;
-  --card: #ffffff;
-  --text: #222;
-  --muted: #666;
-  --accent: #d9480f;
-  --accent2: #2f9e44;
-  --border: rgba(0,0,0,0.08);
-  --shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-body.dark {
-  --bg: #0f1115;
-  --card: #171a21;
-  --text: #f3f4f6;
-  --muted: #a0a6b2;
-  --accent: #ff922b;
-  --accent2: #51cf66;
-  --border: rgba(255,255,255,0.08);
-  --shadow: 0 12px 34px rgba(0,0,0,0.35);
-}
-body { color-scheme: light dark; }
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-}
-.container { max-width: 1200px; padding: 20px; margin: auto; }
+:root { --bg:#f4f5f7; --card:#fff; --text:#222; --muted:#666; --accent:#d9480f; --accent2:#2f9e44; --border:rgba(0,0,0,0.08); --shadow:0 10px 30px rgba(0,0,0,0.08); }
+body.dark { --bg:#0f1115; --card:#171a21; --text:#f3f4f6; --muted:#a0a6b2; --accent:#ff922b; --accent2:#51cf66; --border:rgba(255,255,255,0.08); --shadow:0 12px 34px rgba(0,0,0,0.35); }
+body { color-scheme: light dark; margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:var(--bg); color:var(--text); }
+.container { max-width:1200px; padding:20px; margin:auto; }
 header { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:14px; }
 h1 { margin:0; font-size:28px; }
 .date { color:var(--muted); margin-top:4px; }
 .actions { display:flex; gap:10px; align-items:center; }
-.toggle {
-  cursor:pointer; padding:8px 12px; border-radius:999px;
-  background:var(--card); border:1px solid var(--border); color:var(--text);
-}
+.toggle { cursor:pointer; padding:8px 12px; border-radius:999px; background:var(--card); border:1px solid var(--border); color:var(--text); }
 .tabs { display:flex; gap:10px; margin:18px 0 10px; flex-wrap:wrap; }
-.tab-btn {
-  cursor:pointer; padding:10px 14px; border-radius:12px;
-  border:1px solid var(--border); background:var(--card); color:var(--text);
-}
+.tab-btn { cursor:pointer; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:var(--card); color:var(--text); }
 .tab-btn.active { border-color: rgba(217,72,15,0.35); box-shadow:0 10px 20px rgba(217,72,15,0.10); }
-.section { display:none; }
-.section.active { display:block; }
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
-  gap:20px;
-  margin-top:18px;
-}
-.card {
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:18px;
-  box-shadow:var(--shadow);
-}
+.section { display:none; } .section.active { display:block; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(320px,1fr)); gap:20px; margin-top:18px; }
+.card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow:var(--shadow); }
 .card img { width:100%; border-radius:12px; margin:10px 0 12px; display:block; }
 .card h2 { margin:0 0 8px 0; font-size:20px; line-height:1.25; }
 .badges { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
-.badge {
-  font-size:12px; padding:6px 10px; border-radius:999px;
-  border:1px solid var(--border); color:var(--muted);
-  background:rgba(0,0,0,0.02);
-}
+.badge { font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid var(--border); color:var(--muted); background:rgba(0,0,0,0.02); }
 body.dark .badge { background: rgba(255,255,255,0.03); }
 .badge.accent { color:var(--accent); border-color:rgba(217,72,15,0.25); }
 .badge.good { color:var(--accent2); border-color:rgba(47,158,68,0.25); }
-h3 {
-  margin:14px 0 8px 0; font-size:14px; color:var(--muted);
-  font-weight:600; text-transform:uppercase; letter-spacing:0.06em;
-}
-ul, ol { margin:0 0 0 18px; padding:0; }
-li { margin-bottom:6px; }
+h3 { margin:14px 0 8px 0; font-size:14px; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:0.06em; }
+ul, ol { margin:0 0 0 18px; padding:0; } li { margin-bottom:6px; }
 hr.sep { border:none; border-top:1px solid var(--border); margin:14px 0; }
 .footer { text-align:center; color:var(--muted); margin:26px 0 10px; font-size:14px; }
 
-.search-box {
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:16px;
-  box-shadow:var(--shadow);
-  margin-top:16px;
-}
+.search-box { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:16px; box-shadow:var(--shadow); margin-top:16px; }
 .search-row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
-.input {
-  flex:1; min-width:260px; padding:12px 12px; border-radius:12px;
-  border:1px solid var(--border); background:transparent; color:var(--text);
-  outline:none;
-}
+.input { flex:1; min-width:260px; padding:12px; border-radius:12px; border:1px solid var(--border); background:transparent; color:var(--text); outline:none; }
 select.input { background:var(--card); color:var(--text); min-width:260px; }
 select.input option { background:var(--card); color:var(--text); }
-
-.btn {
-  cursor:pointer; padding:12px 14px; border-radius:12px;
-  border:1px solid rgba(217,72,15,0.25);
-  background:rgba(217,72,15,0.10);
-  color:var(--text); font-weight:600;
-}
+.btn { cursor:pointer; padding:12px 14px; border-radius:12px; border:1px solid rgba(217,72,15,0.25); background:rgba(217,72,15,0.10); color:var(--text); font-weight:600; }
 .btn:disabled { opacity:0.6; cursor:not-allowed; }
 .help { margin-top:10px; color:var(--muted); font-size:13px; }
 .small { font-size:13px; color:var(--muted); }
+.inline-btn { cursor:pointer; display:inline-block; margin-top:10px; padding:10px 12px; border-radius:12px; border:1px solid rgba(217,72,15,0.25); background:rgba(217,72,15,0.10); color:var(--text); font-weight:600; }
+.details { display:none; margin-top:10px; } .details.open { display:block; }
 
-.inline-btn {
-  cursor:pointer; display:inline-block; margin-top:10px;
-  padding:10px 12px; border-radius:12px;
-  border:1px solid rgba(217,72,15,0.25);
-  background:rgba(217,72,15,0.10);
-  color:var(--text); font-weight:600;
-}
-
-.details { display:none; margin-top:10px; }
-.details.open { display:block; }
-
-/* ✅ Loading spinner overlay */
-.spinner-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.35);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-.spinner-box {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 16px 18px;
-  box-shadow: var(--shadow);
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.spinner {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  border: 3px solid rgba(0,0,0,0.15);
-  border-top-color: var(--accent);
-  animation: spin 0.9s linear infinite;
-}
-body.dark .spinner {
-  border: 3px solid rgba(255,255,255,0.15);
-  border-top-color: var(--accent);
-}
-
+/* Spinner overlay */
+.spinner-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.35); display:none; align-items:center; justify-content:center; z-index:9999; }
+.spinner-box { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:16px 18px; box-shadow:var(--shadow); display:flex; gap:12px; align-items:center; }
+.spinner { width:22px; height:22px; border-radius:50%; border:3px solid rgba(0,0,0,0.15); border-top-color:var(--accent); animation:spin 0.9s linear infinite; }
+body.dark .spinner { border:3px solid rgba(255,255,255,0.15); border-top-color:var(--accent); }
 @keyframes spin { to { transform: rotate(360deg); } }
 </style>
 </head>
 
 <body>
-<!-- ✅ Spinner overlay -->
 <div class="spinner-overlay" id="spinnerOverlay">
   <div class="spinner-box">
     <div class="spinner"></div>
@@ -192,20 +85,18 @@ body.dark .spinner {
   <div class="section" id="section-ingredients">
     <div class="search-box">
       <div class="search-row">
-        <input class="input" id="ingredientsInput" placeholder="Enter ingredients (comma separated) e.g. bread, lettuce, avo" />
-
+        <input class="input" id="ingredientsInput" placeholder="Enter ingredients (comma separated) e.g. beans, pepper" />
         <select class="input" id="dietSelect" style="max-width:280px;">
           <option value="any" selected>Diet: Any</option>
           <option value="vegan">Diet: Vegan only</option>
           <option value="glutenfree">Diet: Gluten-free (best effort)</option>
           <option value="vegan_glutenfree">Diet: Vegan + Gluten-free (best effort)</option>
         </select>
-
         <button class="btn" id="searchBtn" onclick="searchByIngredients()">Search</button>
       </div>
 
       <div class="help">
-        Tip: use simple words. Commas are important. Results will prefer recipes matching more of your ingredients.
+        <b>Strict mode:</b> recipes must contain <b>all</b> listed ingredients (AND). If there are no matches, nothing is shown.
       </div>
 
       <div class="small" id="searchStatus"></div>
@@ -244,9 +135,7 @@ function effortBadge(level) {
   return '<span class="badge">Effort: —</span>';
 }
 
-function setStatus(msg) {
-  document.getElementById("searchStatus").innerText = msg || "";
-}
+function setStatus(msg) { document.getElementById("searchStatus").innerText = msg || ""; }
 
 function setSearching(isSearching) {
   const btn = document.getElementById("searchBtn");
@@ -261,7 +150,7 @@ function showSpinner(show, text) {
   overlay.style.display = show ? "flex" : "none";
 }
 
-/* TODAY JSON */
+/* TODAY JSON (unchanged) */
 function renderTodayCard(title, d) {
   const cook = d.cookTime ? (d.cookTime + " min") : "—";
   const ingredients = Array.isArray(d.ingredients) ? d.ingredients : [];
@@ -303,7 +192,6 @@ function toggleDetails(detailsId) {
   el.classList.toggle("open");
 }
 
-/* Concurrency pool runner */
 async function runPool(items, workerFn, concurrency) {
   let i = 0;
   const workers = new Array(concurrency).fill(0).map(async () => {
@@ -315,14 +203,6 @@ async function runPool(items, workerFn, concurrency) {
   await Promise.all(workers);
 }
 
-/* Compute minimum hits threshold based on input size */
-function minHitsForInputCount(n) {
-  if (n >= 5) return 3;
-  if (n >= 3) return 2;
-  return 1;
-}
-
-/* Render full card (badges shown BEFORE expand) */
 function renderCard(recipe, hits) {
   const id = safeText(recipe.id);
   const title = safeText(recipe.name);
@@ -331,7 +211,6 @@ function renderCard(recipe, hits) {
   const missed = Array.isArray(recipe.missedIngredients) ? recipe.missedIngredients : [];
   const ingredients = Array.isArray(recipe.ingredients) ? recipe.ingredients : [];
   const steps = Array.isArray(recipe.steps) ? recipe.steps : [];
-
   const detailsId = "details-" + id;
 
   return (
@@ -367,19 +246,15 @@ async function searchByIngredients() {
   setStatus("");
 
   if (!raw) {
-    setStatus("Please enter some ingredients, separated by commas.");
+    setStatus("Please enter ingredients separated by commas.");
     return;
   }
 
-  const inputList = raw.split(",").map(s => s.trim()).filter(Boolean);
-  const minHitsStrict = minHitsForInputCount(inputList.length);
-
   setSearching(true);
-  showSpinner(true, "Finding recipes…");
-  setStatus("Fetching candidate meals…");
+  showSpinner(true, "Finding meals that contain ALL ingredients…");
 
   try {
-    // Step 1: Get big candidate list (sorted by hits desc by worker)
+    // Strict search returns only meals that contain ALL listed ingredients
     const searchUrl = WORKER_BASE_URL
       + "/search?ingredients=" + encodeURIComponent(raw)
       + "&number=" + encodeURIComponent(TARGET_RESULTS)
@@ -394,26 +269,19 @@ async function searchByIngredients() {
     }
 
     const candidates = Array.isArray(searchData.results) ? searchData.results : [];
+
     if (!candidates.length) {
-      setStatus("No matches found. Try fewer ingredients or simpler names.");
+      setStatus("No meals found that contain ALL ingredients you listed. Try fewer ingredients.");
       return;
     }
 
-    // Two-pass processing:
-    // Pass 1 = prefer candidates with hits >= minHitsStrict
-    // Pass 2 = relax if we still can't fill 50
-    const pass1 = candidates.filter(c => (c.hits || 0) >= minHitsStrict);
-    const pass2 = candidates.filter(c => (c.hits || 0) < minHitsStrict);
+    setStatus("Found " + candidates.length + " strict matches. Fetching details…");
+    showSpinner(true, "Fetching details (" + candidates.length + ")…");
 
     const accepted = [];
-    function addAccepted(recipe, hits) {
-      recipe._hits = hits || 0;
-      accepted.push(recipe);
-    }
+    const inputCount = searchData.inputCount || (raw.split(",").filter(Boolean).length);
 
-    async function fetchRecipeForCandidate(c) {
-      if (accepted.length >= TARGET_RESULTS) return;
-
+    await runPool(candidates, async (c) => {
       const recipeUrl = WORKER_BASE_URL
         + "/recipe?id=" + encodeURIComponent(c.id)
         + "&ingredients=" + encodeURIComponent(raw)
@@ -421,50 +289,34 @@ async function searchByIngredients() {
 
       const r = await fetch(recipeUrl);
       const j = await r.json();
+      if (j && j.error) return; // excluded by diet filter
 
-      if (j && j.error) return; // excluded by diet / missing / etc.
-      addAccepted(j, c.hits);
+      j._hits = c.hits || inputCount;
+      accepted.push(j);
 
-      setStatus("Found " + accepted.length + " / " + TARGET_RESULTS + " recipes… (preferring matches ≥ " + minHitsStrict + ")");
-      showSpinner(true, "Building your list (" + accepted.length + "/" + TARGET_RESULTS + ")…");
-    }
-
-    setStatus("Filtering & ranking… (preferring matches ≥ " + minHitsStrict + ")");
-    showSpinner(true, "Filtering & ranking…");
-
-    await runPool(pass1, fetchRecipeForCandidate, CONCURRENCY);
-
-    if (accepted.length < TARGET_RESULTS) {
-      // Relax criteria only if needed
-      await runPool(pass2, fetchRecipeForCandidate, CONCURRENCY);
-    }
+      showSpinner(true, "Building cards (" + accepted.length + "/" + candidates.length + ")…");
+    }, CONCURRENCY);
 
     if (!accepted.length) {
-      setStatus("No recipes matched that diet filter. Try Diet: Any or different ingredients.");
+      setStatus("No recipes matched that diet filter. Try Diet: Any.");
       return;
     }
 
-    // Sort: prioritize missing first, then used desc, then hits desc
+    // Sort by least missing first, then used desc
     accepted.sort((a, b) => {
       if (a.missedIngredientCount !== b.missedIngredientCount) return a.missedIngredientCount - b.missedIngredientCount;
-      if (a.usedIngredientCount !== b.usedIngredientCount) return b.usedIngredientCount - a.usedIngredientCount;
-      return (b._hits || 0) - (a._hits || 0);
+      return b.usedIngredientCount - a.usedIngredientCount;
     });
-
-    const finalList = accepted.slice(0, TARGET_RESULTS);
 
     let dietLabel = "Any";
     if (diet === "vegan") dietLabel = "Vegan only";
     if (diet === "glutenfree") dietLabel = "Gluten-free (best effort)";
     if (diet === "vegan_glutenfree") dietLabel = "Vegan + Gluten-free (best effort)";
 
-    setStatus(
-      "Showing " + finalList.length +
-      " ideas (Diet: " + dietLabel + "). Ordered by least missing ingredients first (prefers matches ≥ " + minHitsStrict + ")."
-    );
+    setStatus("Showing " + accepted.length + " strict matches (Diet: " + dietLabel + "). Ordered by least missing ingredients.");
 
     document.getElementById("resultsGrid").innerHTML =
-      finalList.map(r => renderCard(r, r._hits || 0)).join("");
+      accepted.map(r => renderCard(r, r._hits || inputCount)).join("");
 
   } catch (e) {
     setStatus("Something went wrong. Please try again.");
