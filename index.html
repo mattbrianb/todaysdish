@@ -16,7 +16,6 @@
   --border: rgba(0,0,0,0.08);
   --shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
-
 body.dark {
   --bg: #0f1115;
   --card: #171a21;
@@ -27,224 +26,100 @@ body.dark {
   --border: rgba(255,255,255,0.08);
   --shadow: 0 12px 34px rgba(0,0,0,0.35);
 }
-
-/* Helps browsers choose correct native form colours */
 body { color-scheme: light dark; }
-
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
 }
-
-.container {
-  max-width: 1200px;
-  padding: 20px;
-  margin: auto;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 16px;
-  margin-bottom: 14px;
-}
-
-h1 { margin: 0; font-size: 28px; }
-.date { color: var(--muted); margin-top: 4px; }
-
-.actions { display: flex; gap: 10px; align-items: center; }
-
+.container { max-width: 1200px; padding: 20px; margin: auto; }
+header { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:14px; }
+h1 { margin:0; font-size:28px; }
+.date { color:var(--muted); margin-top:4px; }
+.actions { display:flex; gap:10px; align-items:center; }
 .toggle {
-  cursor: pointer;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  color: var(--text);
+  cursor:pointer; padding:8px 12px; border-radius:999px;
+  background:var(--card); border:1px solid var(--border); color:var(--text);
 }
-
-.tabs {
-  display: flex;
-  gap: 10px;
-  margin: 18px 0 10px;
-  flex-wrap: wrap;
-}
-
+.tabs { display:flex; gap:10px; margin:18px 0 10px; flex-wrap:wrap; }
 .tab-btn {
-  cursor: pointer;
-  padding: 10px 14px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: var(--card);
-  color: var(--text);
+  cursor:pointer; padding:10px 14px; border-radius:12px;
+  border:1px solid var(--border); background:var(--card); color:var(--text);
 }
-
-.tab-btn.active {
-  border-color: rgba(217,72,15,0.35);
-  box-shadow: 0 10px 20px rgba(217,72,15,0.10);
-}
-
-.section { display: none; }
-.section.active { display: block; }
-
+.tab-btn.active { border-color: rgba(217,72,15,0.35); box-shadow:0 10px 20px rgba(217,72,15,0.10); }
+.section { display:none; }
+.section.active { display:block; }
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
-  margin-top: 18px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+  gap:20px;
+  margin-top:18px;
 }
-
 .card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 18px;
-  box-shadow: var(--shadow);
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:18px;
+  box-shadow:var(--shadow);
 }
-
-.card img {
-  width: 100%;
-  border-radius: 12px;
-  margin: 10px 0 12px;
-  display: block;
-}
-
-.card h2 { margin: 0 0 8px 0; font-size: 20px; line-height: 1.25; }
-
-.badges {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
-}
-
+.card img { width:100%; border-radius:12px; margin:10px 0 12px; display:block; }
+.card h2 { margin:0 0 8px 0; font-size:20px; line-height:1.25; }
+.badges { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
 .badge {
-  font-size: 12px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  color: var(--muted);
-  background: rgba(0,0,0,0.02);
+  font-size:12px; padding:6px 10px; border-radius:999px;
+  border:1px solid var(--border); color:var(--muted);
+  background:rgba(0,0,0,0.02);
 }
-
 body.dark .badge { background: rgba(255,255,255,0.03); }
-
-.badge.accent { color: var(--accent); border-color: rgba(217,72,15,0.25); }
-.badge.good { color: var(--accent2); border-color: rgba(47,158,68,0.25); }
-
+.badge.accent { color:var(--accent); border-color:rgba(217,72,15,0.25); }
+.badge.good { color:var(--accent2); border-color:rgba(47,158,68,0.25); }
 h3 {
-  margin: 14px 0 8px 0;
-  font-size: 14px;
-  color: var(--muted);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  margin:14px 0 8px 0; font-size:14px; color:var(--muted);
+  font-weight:600; text-transform:uppercase; letter-spacing:0.06em;
 }
+ul, ol { margin:0 0 0 18px; padding:0; }
+li { margin-bottom:6px; }
+hr.sep { border:none; border-top:1px solid var(--border); margin:14px 0; }
+.footer { text-align:center; color:var(--muted); margin:26px 0 10px; font-size:14px; }
 
-ul, ol { margin: 0 0 0 18px; padding: 0; }
-li { margin-bottom: 6px; }
-
-hr.sep {
-  border: none;
-  border-top: 1px solid var(--border);
-  margin: 14px 0;
-}
-
-.footer {
-  text-align: center;
-  color: var(--muted);
-  margin: 26px 0 10px;
-  font-size: 14px;
-}
-
-/* Ingredient search UI */
 .search-box {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: var(--shadow);
-  margin-top: 16px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:16px;
+  box-shadow:var(--shadow);
+  margin-top:16px;
 }
-
-.search-row {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
+.search-row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
 .input {
-  flex: 1;
-  min-width: 260px;
-  padding: 12px 12px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: transparent;
-  color: var(--text);
-  outline: none;
+  flex:1; min-width:260px; padding:12px 12px; border-radius:12px;
+  border:1px solid var(--border); background:transparent; color:var(--text);
+  outline:none;
 }
-
-/* Dropdown readability */
-select.input {
-  background: var(--card);
-  color: var(--text);
-  min-width: 260px;
-}
-
-select.input option {
-  background: var(--card);
-  color: var(--text);
-}
+select.input { background:var(--card); color:var(--text); min-width:260px; }
+select.input option { background:var(--card); color:var(--text); }
 
 .btn {
-  cursor: pointer;
-  padding: 12px 14px;
-  border-radius: 12px;
-  border: 1px solid rgba(217,72,15,0.25);
-  background: rgba(217,72,15,0.10);
-  color: var(--text);
-  font-weight: 600;
+  cursor:pointer; padding:12px 14px; border-radius:12px;
+  border:1px solid rgba(217,72,15,0.25);
+  background:rgba(217,72,15,0.10);
+  color:var(--text); font-weight:600;
 }
-
-.btn:disabled { opacity: 0.6; cursor: not-allowed; }
-
-.help { margin-top: 10px; color: var(--muted); font-size: 13px; }
-.small { font-size: 13px; color: var(--muted); }
-
-.details-toggle {
-  cursor: pointer;
-  margin-top: 10px;
-  display: inline-block;
-  font-size: 13px;
-  color: var(--accent);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.details {
-  display: none;
-  margin-top: 10px;
-}
-
-.details.open {
-  display: block;
-}
+.btn:disabled { opacity:0.6; cursor:not-allowed; }
+.help { margin-top:10px; color:var(--muted); font-size:13px; }
+.small { font-size:13px; color:var(--muted); }
 
 .inline-btn {
-  cursor: pointer;
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid rgba(217,72,15,0.25);
-  background: rgba(217,72,15,0.10);
-  color: var(--text);
-  font-weight: 600;
+  cursor:pointer; display:inline-block; margin-top:10px;
+  padding:10px 12px; border-radius:12px;
+  border:1px solid rgba(217,72,15,0.25);
+  background:rgba(217,72,15,0.10);
+  color:var(--text); font-weight:600;
 }
+
+.details { display:none; margin-top:10px; }
+.details.open { display:block; }
 </style>
 </head>
 
@@ -265,12 +140,10 @@ select.input option {
     <button class="tab-btn" id="tab-ingredients" onclick="showTab('ingredients')">Cook with what I have</button>
   </div>
 
-  <!-- TODAY -->
   <div class="section active" id="section-today">
     <div id="todayGrid" class="grid">Loading today’s dishes…</div>
   </div>
 
-  <!-- INGREDIENT SEARCH -->
   <div class="section" id="section-ingredients">
     <div class="search-box">
       <div class="search-row">
@@ -300,26 +173,19 @@ select.input option {
 </div>
 
 <script>
-/* ===== CONFIG ===== */
 const WORKER_BASE_URL = "https://todaysdish-ingredients.mattbrianburnett.workers.dev";
-const DEFAULT_RESULTS = 50;
+const TARGET_RESULTS = 50;
+const CONCURRENCY = 5; // how many /recipe calls at once
 
-/* ===== STATE (browser memory cache) ===== */
 let currentSearchIngredients = "";
-let currentSearchDiet = "any";
-const recipeCache = new Map(); // id -> full recipe object
-const recipeLoadState = new Map(); // id -> "loading"|"loaded"
+let currentDiet = "any";
 
-/* ===== THEME ===== */
 function toggleDark() {
   document.body.classList.toggle("dark");
   localStorage.setItem("dark", document.body.classList.contains("dark"));
 }
-if (localStorage.getItem("dark") === "true") {
-  document.body.classList.add("dark");
-}
+if (localStorage.getItem("dark") === "true") document.body.classList.add("dark");
 
-/* ===== TABS ===== */
 function showTab(tab) {
   document.getElementById("tab-today").classList.toggle("active", tab === "today");
   document.getElementById("tab-ingredients").classList.toggle("active", tab === "ingredients");
@@ -327,10 +193,7 @@ function showTab(tab) {
   document.getElementById("section-ingredients").classList.toggle("active", tab === "ingredients");
 }
 
-/* ===== HELPERS ===== */
-function safeText(v) {
-  return (v === null || v === undefined) ? "" : String(v);
-}
+function safeText(v) { return (v === null || v === undefined) ? "" : String(v); }
 
 function effortBadge(level) {
   if (level === "Quick") return '<span class="badge good">Effort: Quick</span>';
@@ -349,12 +212,11 @@ function setSearching(isSearching) {
   btn.innerText = isSearching ? "Searching…" : "Search";
 }
 
-/* ===== TODAY'S DISHES RENDER ===== */
+/* TODAY JSON */
 function renderTodayCard(title, d) {
   const cook = d.cookTime ? (d.cookTime + " min") : "—";
   const ingredients = Array.isArray(d.ingredients) ? d.ingredients : [];
   const steps = Array.isArray(d.steps) ? d.steps : [];
-
   return (
     '<div class="card">' +
       '<div class="badges">' +
@@ -375,42 +237,73 @@ function renderTodayCard(title, d) {
 fetch("today.json")
   .then(r => r.json())
   .then(data => {
-    const dt = new Date(data.date);
-    document.getElementById("date").innerText = "For " + dt.toDateString();
-
-    const html =
+    document.getElementById("date").innerText = "For " + (new Date(data.date)).toDateString();
+    document.getElementById("todayGrid").innerHTML =
       renderTodayCard("Breakfast", data.breakfast) +
       renderTodayCard("Lunch", data.lunch) +
       renderTodayCard("Dinner", data.dinner);
-
-    document.getElementById("todayGrid").innerHTML = html;
   })
-  .catch((e) => {
+  .catch(() => {
     document.getElementById("date").innerText = "Unable to load today.json";
     document.getElementById("todayGrid").innerHTML = '<div class="card">Error loading today.json</div>';
-    console.log("today.json error:", e);
   });
 
-/* ===== SEARCH LIST VIEW ===== */
-function renderSearchCard(item, idx) {
-  const id = safeText(item.id);
-  const title = safeText(item.name);
-  const img = safeText(item.image);
-  const hits = (item.hits !== undefined) ? safeText(item.hits) : "0";
+/* Render full card (badges shown BEFORE expand) */
+function renderCard(recipe, hits) {
+  const id = safeText(recipe.id);
+  const title = safeText(recipe.name);
+  const img = safeText(recipe.image);
+
+  const missed = Array.isArray(recipe.missedIngredients) ? recipe.missedIngredients : [];
+  const ingredients = Array.isArray(recipe.ingredients) ? recipe.ingredients : [];
+  const steps = Array.isArray(recipe.steps) ? recipe.steps : [];
 
   const detailsId = "details-" + id;
 
   return (
     '<div class="card">' +
       '<div class="badges">' +
-        '<span class="badge good">Matched ingredients: ' + hits + '</span>' +
+        '<span class="badge good">Matched ingredients: ' + safeText(hits) + '</span>' +
+        effortBadge(recipe.effort) +
+        '<span class="badge">Used: ' + safeText(recipe.usedIngredientCount) + '</span>' +
+        '<span class="badge accent">Missing: ' + safeText(recipe.missedIngredientCount) + '</span>' +
       '</div>' +
       '<h2>' + title + '</h2>' +
       (img ? '<img src="' + img + '" alt="">' : '') +
-      '<button class="inline-btn" onclick="toggleRecipe(\'' + id + '\')">Show full recipe</button>' +
-      '<div class="details" id="' + detailsId + '"></div>' +
+      '<button class="inline-btn" onclick="toggleDetails(\'' + detailsId + '\')">Show full recipe</button>' +
+      '<div class="details" id="' + detailsId + '">' +
+        '<hr class="sep">' +
+        (missed.length
+          ? '<h3>Missing ingredients</h3><ul>' + missed.map(m => '<li>' + safeText(m) + '</li>').join('') + '</ul>'
+          : '<div class="small">Looks like you have most of what’s needed.</div>'
+        ) +
+        '<h3>Ingredients</h3><ul>' + ingredients.map(i => '<li>' + safeText(i) + '</li>').join('') + '</ul>' +
+        '<hr class="sep">' +
+        '<h3>Method</h3><ol>' + steps.map(s => '<li>' + safeText(s) + '</li>').join('') + '</ol>' +
+      '</div>' +
     '</div>'
   );
+}
+
+function toggleDetails(detailsId) {
+  const el = document.getElementById(detailsId);
+  if (!el) return;
+  el.classList.toggle("open");
+}
+
+/* Concurrency pool runner */
+async function runPool(items, workerFn, concurrency) {
+  let i = 0;
+  const results = [];
+  const workers = new Array(concurrency).fill(0).map(async () => {
+    while (i < items.length) {
+      const idx = i++;
+      const r = await workerFn(items[idx], idx);
+      if (r !== null && r !== undefined) results.push(r);
+    }
+  });
+  await Promise.all(workers);
+  return results;
 }
 
 async function searchByIngredients() {
@@ -426,30 +319,77 @@ async function searchByIngredients() {
   }
 
   currentSearchIngredients = raw;
-  currentSearchDiet = diet;
+  currentDiet = diet;
 
   setSearching(true);
-  setStatus("Fetching ideas…");
+  setStatus("Fetching candidate meals…");
 
   try {
-    const url = WORKER_BASE_URL
+    // Step 1: Get big candidate list
+    const searchUrl = WORKER_BASE_URL
       + "/search?ingredients=" + encodeURIComponent(raw)
-      + "&number=" + encodeURIComponent(DEFAULT_RESULTS)
+      + "&number=" + encodeURIComponent(TARGET_RESULTS)
       + "&diet=" + encodeURIComponent(diet);
 
-    const resp = await fetch(url);
-    const data = await resp.json();
+    const searchResp = await fetch(searchUrl);
+    const searchData = await searchResp.json();
 
-    if (!resp.ok) {
-      setStatus("Error: " + (data && data.error ? data.error : "Request failed"));
+    if (!searchResp.ok) {
+      setStatus("Error: " + (searchData && searchData.error ? searchData.error : "Request failed"));
       return;
     }
 
-    const results = Array.isArray(data.results) ? data.results : [];
-    if (!results.length) {
+    const candidates = Array.isArray(searchData.results) ? searchData.results : [];
+    if (!candidates.length) {
       setStatus("No matches found. Try fewer ingredients or simpler names.");
       return;
     }
+
+    setStatus("Filtering & ranking recipes for diet… (this can take a few seconds)");
+
+    // Step 2: Fetch /recipe for candidates until we have 50 valid
+    const accepted = [];
+    const hitsById = new Map();
+    candidates.forEach(c => hitsById.set(String(c.id), c.hits));
+
+    // We will process candidates in order (already sorted by hits desc by the worker)
+    // and keep only those that pass diet filter, stopping once we collect 50.
+    await runPool(candidates, async (c) => {
+      if (accepted.length >= TARGET_RESULTS) return null;
+
+      const recipeUrl = WORKER_BASE_URL
+        + "/recipe?id=" + encodeURIComponent(c.id)
+        + "&ingredients=" + encodeURIComponent(raw)
+        + "&diet=" + encodeURIComponent(diet);
+
+      const r = await fetch(recipeUrl);
+      const j = await r.json();
+
+      if (j && j.error) return null; // excluded by diet or not found
+
+      // attach hits for sorting
+      j._hits = c.hits;
+      accepted.push(j);
+
+      // update progress
+      setStatus("Found " + accepted.length + " / " + TARGET_RESULTS + " recipes…");
+
+      return null;
+    }, CONCURRENCY);
+
+    if (!accepted.length) {
+      setStatus("No recipes matched that diet filter. Try Diet: Any or different ingredients.");
+      return;
+    }
+
+    // Step 3: Sort by least missing first, then used desc, then hits desc
+    accepted.sort((a, b) => {
+      if (a.missedIngredientCount !== b.missedIngredientCount) return a.missedIngredientCount - b.missedIngredientCount;
+      if (a.usedIngredientCount !== b.usedIngredientCount) return b.usedIngredientCount - a.usedIngredientCount;
+      return (b._hits || 0) - (a._hits || 0);
+    });
+
+    const finalList = accepted.slice(0, TARGET_RESULTS);
 
     let dietLabel = "Any";
     if (diet === "vegan") dietLabel = "Vegan only";
@@ -457,12 +397,12 @@ async function searchByIngredients() {
     if (diet === "vegan_glutenfree") dietLabel = "Vegan + Gluten-free (best effort)";
 
     setStatus(
-      "Showing " + results.length +
-      " ideas (Diet: " + dietLabel + "). Click ‘Show full recipe’ to expand."
+      "Showing " + finalList.length +
+      " ideas (Diet: " + dietLabel + "), ordered by least missing ingredients first."
     );
 
     document.getElementById("resultsGrid").innerHTML =
-      results.map((r, i) => renderSearchCard(r, i)).join("");
+      finalList.map(r => renderCard(r, r._hits || 0)).join("");
 
   } catch (e) {
     setStatus("Something went wrong. Please try again.");
@@ -472,78 +412,7 @@ async function searchByIngredients() {
   }
 }
 
-/* ===== RECIPE EXPAND (details on demand) ===== */
-function renderRecipeDetails(r) {
-  const ingredients = Array.isArray(r.ingredients) ? r.ingredients : [];
-  const steps = Array.isArray(r.steps) ? r.steps : [];
-  const missed = Array.isArray(r.missedIngredients) ? r.missedIngredients : [];
-
-  return (
-    '<hr class="sep">' +
-    '<div class="badges">' +
-      effortBadge(r.effort) +
-      (r.usedIngredientCount !== undefined ? '<span class="badge">Used: ' + safeText(r.usedIngredientCount) + '</span>' : '') +
-      (r.missedIngredientCount !== undefined ? '<span class="badge accent">Missing: ' + safeText(r.missedIngredientCount) + '</span>' : '') +
-    '</div>' +
-    (missed.length
-      ? '<h3>Missing ingredients</h3><ul>' + missed.map(m => '<li>' + safeText(m) + '</li>').join('') + '</ul>'
-      : '<div class="small">Looks like you have most of what’s needed.</div>'
-    ) +
-    '<h3>Ingredients</h3><ul>' + ingredients.map(i => '<li>' + safeText(i) + '</li>').join('') + '</ul>' +
-    '<hr class="sep">' +
-    '<h3>Method</h3><ol>' + steps.map(s => '<li>' + safeText(s) + '</li>').join('') + '</ol>'
-  );
-}
-
-async function toggleRecipe(id) {
-  const detailsEl = document.getElementById("details-" + id);
-  if (!detailsEl) return;
-
-  // Toggle if already loaded
-  if (recipeCache.has(id)) {
-    detailsEl.classList.toggle("open");
-    if (detailsEl.classList.contains("open")) {
-      detailsEl.innerHTML = renderRecipeDetails(recipeCache.get(id));
-    } else {
-      detailsEl.innerHTML = "";
-    }
-    return;
-  }
-
-  // Prevent double loading
-  if (recipeLoadState.get(id) === "loading") return;
-  recipeLoadState.set(id, "loading");
-
-  detailsEl.classList.add("open");
-  detailsEl.innerHTML = '<div class="small">Loading recipe…</div>';
-
-  try {
-    const url = WORKER_BASE_URL
-      + "/recipe?id=" + encodeURIComponent(id)
-      + "&ingredients=" + encodeURIComponent(currentSearchIngredients)
-      + "&diet=" + encodeURIComponent(currentSearchDiet);
-
-    const resp = await fetch(url);
-    const data = await resp.json();
-
-    // Special case: diet exclusion returns {error:"Excluded by diet filter"} with 200 in our worker
-    if (data && data.error) {
-      detailsEl.innerHTML = '<div class="small">This recipe was excluded by the selected diet filter.</div>';
-      recipeLoadState.set(id, "loaded");
-      return;
-    }
-
-    recipeCache.set(id, data);
-    recipeLoadState.set(id, "loaded");
-    detailsEl.innerHTML = renderRecipeDetails(data);
-
-  } catch (e) {
-    detailsEl.innerHTML = '<div class="small">Failed to load recipe details. Please try again.</div>';
-    console.log("recipe error:", e);
-  }
-}
-
-// Enter key triggers search when on ingredients tab
+// Enter triggers search when on ingredients tab
 document.addEventListener("keydown", (e) => {
   if (e.key === "Enter" && document.getElementById("section-ingredients").classList.contains("active")) {
     searchByIngredients();
