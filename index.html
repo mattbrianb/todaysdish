@@ -94,7 +94,7 @@ body.dark .spinner { border:3px solid rgba(255,255,255,0.15); border-top-color:v
         <button class="btn" id="searchBtn" onclick="searchByIngredients()">Search</button>
       </div>
       <div class="help">
-        Results are relevance-first but rotate each search (randomized within “missing buckets”).
+        Relevance first, but results rotate each search. Top 3 also avoids repeating back‑to‑back.
       </div>
       <div class="small" id="searchStatus"></div>
     </div>
@@ -109,6 +109,7 @@ body.dark .spinner { border:3px solid rgba(255,255,255,0.15); border-top-color:v
 const WORKER_BASE_URL = "https://todaysdish-ingredients.mattbrianburnett.workers.dev";
 const TARGET_RESULTS = 50;
 const CONCURRENCY = 5;
+const CANDIDATE_SAMPLE_PER_TIER = 60;
 
 function safeText(v) { return (v === null || v === undefined) ? "" : String(v); }
 
@@ -186,7 +187,7 @@ fetch("today.json")
     document.getElementById("todayGrid").innerHTML = '<div class="card">Error loading today.json</div>';
   });
 
-// Strong shuffle using crypto
+// Crypto-based shuffle
 function shuffle(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const a = new Uint32Array(1);
@@ -215,6 +216,22 @@ function missingBucket(m) {
   return 3;
 }
 
+/* --- Anti-repeat top 3 --- */
+function makeHistoryKey(raw, diet) {
+  return "todaysdish_lastTop3_" + raw.trim().toLowerCase() + "_" + diet;
+}
+function loadLastTop3(raw, diet) {
+  try {
+    const v = localStorage.getItem(makeHistoryKey(raw, diet));
+    return v ? JSON.parse(v) : [];
+  } catch { return []; }
+}
+function saveLastTop3(raw, diet, ids) {
+  try {
+    localStorage.setItem(makeHistoryKey(raw, diet), JSON.stringify(ids.slice(0, 3)));
+  } catch {}
+}
+
 function renderCard(recipe, matchedCount, requiredCount) {
   const id = safeText(recipe.id);
   const detailsId = "details-" + id;
@@ -228,6 +245,7 @@ function renderCard(recipe, matchedCount, requiredCount) {
       '<div class="badges">' +
         '<span class="badge good">Matched inputs: ' + matchedCount + '/' + requiredCount + '</span>' +
         effortBadge(recipe.effort) +
+        '<span class="badge">Category: ' + safeText(recipe.category || "—") + '</span>' +
         '<span class="badge">Used: ' + safeText(recipe.usedIngredientCount) + '</span>' +
         '<span class="badge accent">Missing: ' + safeText(recipe.missedIngredientCount) + '</span>' +
       '</div>' +
@@ -288,15 +306,30 @@ async function searchByIngredients() {
       return;
     }
 
-    // Shuffle candidates again client-side to avoid any upstream stability
+    // Client shuffle to avoid any stable ordering
     shuffle(candidates);
 
+    // Tier sample to avoid always fetching the same first candidates
+    const tiers = new Map();
+    for (const c of candidates) {
+      const k = c.matchedCount || 1;
+      if (!tiers.has(k)) tiers.set(k, []);
+      tiers.get(k).push(c);
+    }
+    const tierKeys = Array.from(tiers.keys()).sort((a, b) => b - a);
+    const sampled = [];
+    for (const k of tierKeys) {
+      const arr = tiers.get(k);
+      shuffle(arr);
+      sampled.push(...arr.slice(0, CANDIDATE_SAMPLE_PER_TIER));
+    }
+
     showSpinner(true, "Fetching recipe details…");
-    setStatus("Fetching details… (should rotate each search)");
+    setStatus("Fetching details… (rotating results)");
 
     const accepted = [];
 
-    await runPool(candidates, async (c) => {
+    await runPool(sampled, async (c) => {
       if (accepted.length >= TARGET_RESULTS) return;
 
       const recipeUrl = WORKER_BASE_URL
@@ -312,9 +345,6 @@ async function searchByIngredients() {
       j._matchedCount = c.matchedCount || 1;
       j._requiredCount = c.requiredCount || requiredCount;
 
-      // random tie breaker
-      j._rand = Math.random();
-
       accepted.push(j);
       showSpinner(true, "Building list (" + accepted.length + "/" + TARGET_RESULTS + ")…");
     }, CONCURRENCY);
@@ -324,25 +354,25 @@ async function searchByIngredients() {
       return;
     }
 
-    // Relevance first, then missing bucket, then randomize within bucket
-    const buckets = new Map(); // key = matchedCount + "|" + bucket
+    // Bucket by (matchedCount, missingBucket) then shuffle within each bucket
+    const buckets = new Map();
     for (const r of accepted) {
-      const k = (r._matchedCount || 1) + "|" + missingBucket(r.missedIngredientCount || 99);
-      if (!buckets.has(k)) buckets.set(k, []);
-      buckets.get(k).push(r);
+      const key = (r._matchedCount || 1) + "|" + missingBucket(r.missedIngredientCount || 99);
+      if (!buckets.has(key)) buckets.set(key, []);
+      buckets.get(key).push(r);
     }
 
     const keys = Array.from(buckets.keys()).sort((a, b) => {
       const [am, ab] = a.split("|").map(Number);
       const [bm, bb] = b.split("|").map(Number);
-      if (bm !== am) return bm - am;     // matchedCount desc
-      return ab - bb;                   // missing bucket asc
+      if (bm !== am) return bm - am;
+      return ab - bb;
     });
 
-    const finalList = [];
+    let finalList = [];
     for (const k of keys) {
       const arr = buckets.get(k);
-      shuffle(arr); // ✅ makes top rotate
+      shuffle(arr);
       for (const r of arr) {
         finalList.push(r);
         if (finalList.length >= TARGET_RESULTS) break;
@@ -350,12 +380,35 @@ async function searchByIngredients() {
       if (finalList.length >= TARGET_RESULTS) break;
     }
 
+    // ---- Anti-repeat top 3 ----
+    const lastTop3 = loadLastTop3(raw, diet).map(String);
+    if (lastTop3.length >= 1 && finalList.length >= 4) {
+      const top3 = finalList.slice(0, 3);
+      const rest = finalList.slice(3);
+
+      const newTop = [];
+      const pushedDown = [];
+
+      for (const item of top3) {
+        if (lastTop3.includes(String(item.id))) pushedDown.push(item);
+        else newTop.push(item);
+      }
+
+      while (newTop.length < 3 && rest.length) {
+        newTop.push(rest.shift());
+      }
+
+      finalList = newTop.concat(rest, pushedDown);
+    }
+
+    saveLastTop3(raw, diet, finalList.map(x => String(x.id)));
+
     let dietLabel = "Any";
     if (diet === "vegan") dietLabel = "Vegan only";
     if (diet === "glutenfree") dietLabel = "Gluten-free (best effort)";
     if (diet === "vegan_glutenfree") dietLabel = "Vegan + Gluten-free (best effort)";
 
-    setStatus("Showing " + finalList.length + " ideas (Diet: " + dietLabel + "). Rotated each search.");
+    setStatus("Showing " + finalList.length + " ideas (Diet: " + dietLabel + "). Category shown; top 3 avoids repeating.");
 
     document.getElementById("resultsGrid").innerHTML =
       finalList.map(r => renderCard(r, r._matchedCount || 1, r._requiredCount || requiredCount)).join("");
