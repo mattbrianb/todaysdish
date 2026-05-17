@@ -188,6 +188,18 @@ hr.sep {
   outline: none;
 }
 
+/* Dropdown readability */
+select.input {
+  background: var(--card);
+  color: var(--text);
+  min-width: 220px;
+}
+
+select.input option {
+  background: var(--card);
+  color: var(--text);
+}
+
 .btn {
   cursor: pointer;
   padding: 12px 14px;
@@ -245,6 +257,15 @@ hr.sep {
     <div class="search-box">
       <div class="search-row">
         <input class="input" id="ingredientsInput" placeholder="Enter ingredients (comma separated) e.g. egg, tomato, bacon" />
+
+        <!-- ✅ Diet dropdown -->
+        <select class="input" id="dietSelect" style="max-width:260px;">
+          <option value="any" selected>Diet: Any</option>
+          <option value="vegan">Diet: Vegan only</option>
+          <option value="glutenfree">Diet: Gluten-free (best effort)</option>
+          <option value="vegan_glutenfree">Diet: Vegan + Gluten-free (best effort)</option>
+        </select>
+
         <button class="btn" id="searchBtn" onclick="searchByIngredients()">Search</button>
       </div>
 
@@ -264,7 +285,7 @@ hr.sep {
 <script>
 /* ===== CONFIG ===== */
 const WORKER_BASE_URL = "https://todaysdish-ingredients.mattbrianburnett.workers.dev";
-const DEFAULT_RESULTS = 50; // ✅ show 50 options by default
+const DEFAULT_RESULTS = 50; // ✅ default to 50 items
 
 /* ===== THEME ===== */
 function toggleDark() {
@@ -364,7 +385,6 @@ function renderIdeaCard(r, idx) {
   const steps = Array.isArray(r.steps) ? r.steps : [];
   const missed = Array.isArray(r.missedIngredients) ? r.missedIngredients : [];
 
-  // Prefer worker-provided effort; fall back to local heuristic
   const eff = r.effort || effortLevel(ingredients.length, steps.length);
   const effortTag = effortBadge(eff);
 
@@ -399,6 +419,8 @@ function renderIdeaCard(r, idx) {
 
 async function searchByIngredients() {
   const raw = document.getElementById("ingredientsInput").value.trim();
+  const diet = document.getElementById("dietSelect").value;
+
   document.getElementById("resultsGrid").innerHTML = "";
   setStatus("");
 
@@ -413,7 +435,8 @@ async function searchByIngredients() {
   try {
     const url = WORKER_BASE_URL
       + "/search?ingredients=" + encodeURIComponent(raw)
-      + "&number=" + encodeURIComponent(DEFAULT_RESULTS);
+      + "&number=" + encodeURIComponent(DEFAULT_RESULTS)
+      + "&diet=" + encodeURIComponent(diet);
 
     const resp = await fetch(url);
     const data = await resp.json();
@@ -430,9 +453,15 @@ async function searchByIngredients() {
       return;
     }
 
+    // User-friendly label
+    let dietLabel = "Any";
+    if (diet === "vegan") dietLabel = "Vegan only";
+    if (diet === "glutenfree") dietLabel = "Gluten-free (best effort)";
+    if (diet === "vegan_glutenfree") dietLabel = "Vegan + Gluten-free (best effort)";
+
     setStatus(
       "Showing " + results.length +
-      " ideas, ordered by least missing ingredients first."
+      " ideas (Diet: " + dietLabel + "), ordered by least missing ingredients first."
     );
 
     document.getElementById("resultsGrid").innerHTML =
