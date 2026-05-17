@@ -188,18 +188,6 @@ hr.sep {
   outline: none;
 }
 
-/* Dark mode dropdown readability */
-select.input {
-  background: var(--card);
-  color: var(--text);
-  min-width: 160px;
-}
-
-select.input option {
-  background: var(--card);
-  color: var(--text);
-}
-
 .btn {
   cursor: pointer;
   padding: 12px 14px;
@@ -255,27 +243,13 @@ select.input option {
   <!-- INGREDIENT SEARCH -->
   <div class="section" id="section-ingredients">
     <div class="search-box">
-    <div class="search-row">
-      <input class="input" id="ingredientsInput" placeholder="Enter ingredients (comma separated) e.g. chicken, rice, onion" />
-    
-      <select class="input" id="mealSelect" style="max-width:220px;">
-        <option value="any" selected>Any</option>
-        <option value="breakfast">Breakfast</option>
-        <option value="lunch">Lunch</option>
-        <option value="dinner">Dinner</option>
-      </select>
-    
-      <select class="input" id="styleSelect" style="max-width:220px;">
-        <option value="any" selected>Any style</option>
-        <option value="quick">Quick</option>
-        <option value="main">Main meal</option>
-      </select>
-    
-      <button class="btn" id="searchBtn" onclick="searchByIngredients()">Search</button>
-    </div>
+      <div class="search-row">
+        <input class="input" id="ingredientsInput" placeholder="Enter ingredients (comma separated) e.g. egg, tomato, bacon" />
+        <button class="btn" id="searchBtn" onclick="searchByIngredients()">Search</button>
+      </div>
 
       <div class="help">
-        Tip: use simple words (e.g. <b>chicken</b>, <b>egg</b>, <b>tomato</b>, <b>rice</b>). Commas are important.
+        Tip: use simple words (e.g. <b>egg</b>, <b>tomato</b>, <b>bacon</b>). Commas are important.
       </div>
 
       <div class="small" id="searchStatus"></div>
@@ -290,7 +264,7 @@ select.input option {
 <script>
 /* ===== CONFIG ===== */
 const WORKER_BASE_URL = "https://todaysdish-ingredients.mattbrianburnett.workers.dev";
-const MAX_RESULTS = 10;  // ✅ show 10 options
+const DEFAULT_RESULTS = 50; // ✅ show 50 options by default
 
 /* ===== THEME ===== */
 function toggleDark() {
@@ -315,20 +289,17 @@ function safeText(v) {
 }
 
 function effortLevel(ingredientsCount, stepsCount) {
-  // Simple, human-friendly heuristic
   if (ingredientsCount <= 6 && stepsCount <= 6) return "Quick";
   if (ingredientsCount <= 12 && stepsCount <= 10) return "Medium";
   return "Involved";
 }
 
 function effortBadge(level) {
-  // Keep colors consistent with your existing badge styles
-  // Quick = green, Medium = normal, Involved = accent
   if (level === "Quick") return '<span class="badge good">Effort: Quick</span>';
   if (level === "Medium") return '<span class="badge">Effort: Medium</span>';
   return '<span class="badge accent">Effort: Involved</span>';
 }
-  
+
 /* ===== TODAY'S DISHES RENDER ===== */
 function renderTodayCard(title, d) {
   const cook = d.cookTime ? (d.cookTime + " min") : "—";
@@ -389,12 +360,14 @@ function toggleDetails(id) {
 }
 
 function renderIdeaCard(r, idx) {
-  // Hide cook time badge if missing (common with TheMealDB)
   const ingredients = Array.isArray(r.ingredients) ? r.ingredients : [];
   const steps = Array.isArray(r.steps) ? r.steps : [];
-  const effort = r.effort || effortLevel(ingredients.length, steps.length);
-  const effortTag = effortBadge(effort);
   const missed = Array.isArray(r.missedIngredients) ? r.missedIngredients : [];
+
+  // Prefer worker-provided effort; fall back to local heuristic
+  const eff = r.effort || effortLevel(ingredients.length, steps.length);
+  const effortTag = effortBadge(eff);
+
   const detailsId = "details-" + idx;
 
   return (
@@ -406,11 +379,14 @@ function renderIdeaCard(r, idx) {
       '</div>' +
       '<h2>' + safeText(r.name) + '</h2>' +
       (r.image ? '<img src="' + r.image + '" alt="">' : '') +
+
       (missed.length
         ? '<h3>Missing ingredients</h3><ul>' + missed.map(m => '<li>' + safeText(m) + '</li>').join('') + '</ul>'
         : '<div class="small">Looks like you have most of what’s needed.</div>'
       ) +
+
       '<span class="details-toggle" onclick="toggleDetails(\'' + detailsId + '\')">Show full recipe</span>' +
+
       '<div class="details" id="' + detailsId + '">' +
         '<hr class="sep">' +
         '<h3>Ingredients</h3><ul>' + ingredients.map(i => '<li>' + safeText(i) + '</li>').join('') + '</ul>' +
@@ -435,12 +411,9 @@ async function searchByIngredients() {
   setStatus("Fetching ideas…");
 
   try {
-    const meal = document.getElementById("mealSelect").value;
-    const style = document.getElementById("styleSelect").value;
     const url = WORKER_BASE_URL
       + "/search?ingredients=" + encodeURIComponent(raw)
-      + "&meal=" + encodeURIComponent(meal)
-      + "&style=" + encodeURIComponent(style);
+      + "&number=" + encodeURIComponent(DEFAULT_RESULTS);
 
     const resp = await fetch(url);
     const data = await resp.json();
@@ -450,16 +423,17 @@ async function searchByIngredients() {
       return;
     }
 
-    const results = Array.isArray(data.results) ? data.results.slice(0, MAX_RESULTS) : [];
+    const results = Array.isArray(data.results) ? data.results : [];
 
     if (!results.length) {
-      setStatus("No good matches found. Try fewer ingredients or simpler names.");
+      setStatus("No matches found. Try fewer ingredients or simpler names.");
       return;
     }
 
-    var statusText = "Showing " + results.length + " " + (data.meal || "any") + " ideas for: " + data.ingredients;
-    if (data.note) statusText += " • " + data.note;
-    setStatus(statusText);
+    setStatus(
+      "Showing " + results.length +
+      " ideas, ordered by least missing ingredients first."
+    );
 
     document.getElementById("resultsGrid").innerHTML =
       results.map((r, i) => renderIdeaCard(r, i)).join("");
@@ -472,6 +446,7 @@ async function searchByIngredients() {
   }
 }
 
+// Allow Enter key to trigger search
 document.addEventListener("keydown", (e) => {
   if (e.key === "Enter" && document.getElementById("section-ingredients").classList.contains("active")) {
     searchByIngredients();
