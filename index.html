@@ -93,9 +93,8 @@ body.dark .spinner { border:3px solid rgba(255,255,255,0.15); border-top-color:v
         </select>
         <button class="btn" id="searchBtn" onclick="searchByIngredients()">Search</button>
       </div>
-
       <div class="help">
-        Relevance first, but results rotate each search (shuffles ties + samples candidates).
+        Results are relevance-first but rotate each search (randomized within “missing buckets”).
       </div>
       <div class="small" id="searchStatus"></div>
     </div>
@@ -110,10 +109,6 @@ body.dark .spinner { border:3px solid rgba(255,255,255,0.15); border-top-color:v
 const WORKER_BASE_URL = "https://todaysdish-ingredients.mattbrianburnett.workers.dev";
 const TARGET_RESULTS = 50;
 const CONCURRENCY = 5;
-
-// How many candidates to *consider* per tier before fetching details.
-// Higher = more variety but more /recipe calls.
-const CANDIDATE_SAMPLE_PER_TIER = 60;
 
 function safeText(v) { return (v === null || v === undefined) ? "" : String(v); }
 
@@ -191,6 +186,35 @@ fetch("today.json")
     document.getElementById("todayGrid").innerHTML = '<div class="card">Error loading today.json</div>';
   });
 
+// Strong shuffle using crypto
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const a = new Uint32Array(1);
+    crypto.getRandomValues(a);
+    const j = a[0] % (i + 1);
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+async function runPool(items, workerFn, concurrency) {
+  let i = 0;
+  const workers = new Array(concurrency).fill(0).map(async () => {
+    while (i < items.length) {
+      const idx = i++;
+      await workerFn(items[idx], idx);
+    }
+  });
+  await Promise.all(workers);
+}
+
+function missingBucket(m) {
+  if (m <= 3) return 0;
+  if (m <= 6) return 1;
+  if (m <= 9) return 2;
+  return 3;
+}
+
 function renderCard(recipe, matchedCount, requiredCount) {
   const id = safeText(recipe.id);
   const detailsId = "details-" + id;
@@ -224,28 +248,6 @@ function renderCard(recipe, matchedCount, requiredCount) {
   );
 }
 
-// Fisher–Yates shuffle using browser crypto for real variation each search
-function shuffle(arr) {
-  for (let i = arr.length - 1; i > 0; i--) {
-    const a = new Uint32Array(1);
-    crypto.getRandomValues(a);
-    const j = a[0] % (i + 1);
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-}
-
-async function runPool(items, workerFn, concurrency) {
-  let i = 0;
-  const workers = new Array(concurrency).fill(0).map(async () => {
-    while (i < items.length) {
-      const idx = i++;
-      await workerFn(items[idx], idx);
-    }
-  });
-  await Promise.all(workers);
-}
-
 async function searchByIngredients() {
   const raw = document.getElementById("ingredientsInput").value.trim();
   const diet = document.getElementById("dietSelect").value;
@@ -262,7 +264,6 @@ async function searchByIngredients() {
   showSpinner(true, "Finding candidates…");
 
   try {
-    // cache-buster so even if something caches upstream, each search is different
     const nonce = Date.now().toString() + "-" + Math.random().toString(16).slice(2);
 
     const searchUrl = WORKER_BASE_URL
@@ -279,7 +280,7 @@ async function searchByIngredients() {
       return;
     }
 
-    const candidates = Array.isArray(data.results) ? data.results : [];
+    let candidates = Array.isArray(data.results) ? data.results : [];
     const requiredCount = data.requiredCount || (raw.split(",").filter(Boolean).length);
 
     if (!candidates.length) {
@@ -287,30 +288,15 @@ async function searchByIngredients() {
       return;
     }
 
-    // Group candidates by matchedCount, then shuffle within each tier,
-    // then sample a limited number per tier so different recipes get fetched each time.
-    const tiers = new Map();
-    for (const c of candidates) {
-      const k = c.matchedCount || 1;
-      if (!tiers.has(k)) tiers.set(k, []);
-      tiers.get(k).push(c);
-    }
+    // Shuffle candidates again client-side to avoid any upstream stability
+    shuffle(candidates);
 
-    const tierKeys = Array.from(tiers.keys()).sort((a, b) => b - a);
-    const sampled = [];
-
-    for (const k of tierKeys) {
-      const arr = tiers.get(k);
-      shuffle(arr);
-      sampled.push(...arr.slice(0, CANDIDATE_SAMPLE_PER_TIER));
-    }
-
-    setStatus("Fetching details… (results will rotate each search)");
     showSpinner(true, "Fetching recipe details…");
+    setStatus("Fetching details… (should rotate each search)");
 
     const accepted = [];
 
-    await runPool(sampled, async (c) => {
+    await runPool(candidates, async (c) => {
       if (accepted.length >= TARGET_RESULTS) return;
 
       const recipeUrl = WORKER_BASE_URL
@@ -326,7 +312,7 @@ async function searchByIngredients() {
       j._matchedCount = c.matchedCount || 1;
       j._requiredCount = c.requiredCount || requiredCount;
 
-      // add a random tie breaker
+      // random tie breaker
       j._rand = Math.random();
 
       accepted.push(j);
@@ -338,29 +324,38 @@ async function searchByIngredients() {
       return;
     }
 
-    // Sort relevance first, but randomize ties:
-    // 1) matchedCount desc
-    // 2) missing asc
-    // 3) used desc
-    // 4) random tie-break
-    accepted.sort((a, b) => {
-      if ((b._matchedCount || 0) !== (a._matchedCount || 0)) return (b._matchedCount || 0) - (a._matchedCount || 0);
-      if (a.missedIngredientCount !== b.missedIngredientCount) return a.missedIngredientCount - b.missedIngredientCount;
-      if (a.usedIngredientCount !== b.usedIngredientCount) return b.usedIngredientCount - a.usedIngredientCount;
-      return (b._rand || 0) - (a._rand || 0);
+    // Relevance first, then missing bucket, then randomize within bucket
+    const buckets = new Map(); // key = matchedCount + "|" + bucket
+    for (const r of accepted) {
+      const k = (r._matchedCount || 1) + "|" + missingBucket(r.missedIngredientCount || 99);
+      if (!buckets.has(k)) buckets.set(k, []);
+      buckets.get(k).push(r);
+    }
+
+    const keys = Array.from(buckets.keys()).sort((a, b) => {
+      const [am, ab] = a.split("|").map(Number);
+      const [bm, bb] = b.split("|").map(Number);
+      if (bm !== am) return bm - am;     // matchedCount desc
+      return ab - bb;                   // missing bucket asc
     });
 
-    const finalList = accepted.slice(0, TARGET_RESULTS);
+    const finalList = [];
+    for (const k of keys) {
+      const arr = buckets.get(k);
+      shuffle(arr); // ✅ makes top rotate
+      for (const r of arr) {
+        finalList.push(r);
+        if (finalList.length >= TARGET_RESULTS) break;
+      }
+      if (finalList.length >= TARGET_RESULTS) break;
+    }
 
     let dietLabel = "Any";
     if (diet === "vegan") dietLabel = "Vegan only";
     if (diet === "glutenfree") dietLabel = "Gluten-free (best effort)";
     if (diet === "vegan_glutenfree") dietLabel = "Vegan + Gluten-free (best effort)";
 
-    setStatus(
-      "Showing " + finalList.length +
-      " ideas (Diet: " + dietLabel + "). Relevance first, rotated each search."
-    );
+    setStatus("Showing " + finalList.length + " ideas (Diet: " + dietLabel + "). Rotated each search.");
 
     document.getElementById("resultsGrid").innerHTML =
       finalList.map(r => renderCard(r, r._matchedCount || 1, r._requiredCount || requiredCount)).join("");
