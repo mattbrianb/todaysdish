@@ -26,8 +26,20 @@ h1 { margin:0; font-size:28px; }
 }
 
 .tabs { display:flex; gap:10px; margin:18px 0 10px; flex-wrap:wrap; align-items:center; }
-.tab-btn { cursor:pointer; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:var(--card); color:var(--text); text-decoration:none; display:inline-block; }
+.tab-btn {
+  cursor:pointer;
+  padding:10px 14px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  background:var(--card);
+  color:var(--text);
+  text-decoration:none;
+  display:inline-block;
+  line-height: 1;
+  font-size: 14px;
+}
 .tab-btn.active { border-color: rgba(217,72,15,0.35); box-shadow:0 10px 20px rgba(217,72,15,0.10); }
+
 .section { display:none; } .section.active { display:block; }
 .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(320px,1fr)); gap:20px; margin-top:18px; }
 .card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow:var(--shadow); }
@@ -52,7 +64,6 @@ select.input option { background:var(--card); color:var(--text); }
 .btn:disabled { opacity:0.6; cursor:not-allowed; }
 .help { margin-top:10px; color:var(--muted); font-size:13px; }
 .small { font-size:13px; color:var(--muted); }
-.inline-btn { cursor:pointer; display:inline-block; margin-top:10px; padding:10px 12px; border-radius:12px; border:1px solid rgba(217,72,15,0.25); background:rgba(217,72,15,0.10); color:var(--text); font-weight:600; }
 .details { display:none; margin-top:10px; } .details.open { display:block; }
 
 .spinner-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.35); display:none; align-items:center; justify-content:center; z-index:9999; }
@@ -61,7 +72,7 @@ select.input option { background:var(--card); color:var(--text); }
 body.dark .spinner { border:3px solid rgba(255,255,255,0.15); border-top-color:var(--accent); }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* Tiny toast for “Copied!” */
+/* Toast */
 .toast {
   position: fixed;
   left: 50%;
@@ -77,6 +88,107 @@ body.dark .spinner { border:3px solid rgba(255,255,255,0.15); border-top-color:v
   z-index: 10000;
   font-size: 13px;
 }
+
+/* ===== Share Modal (YouTube-style) ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+}
+
+.modal {
+  width: min(680px, calc(100% - 28px));
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.modal-close {
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  border-radius: 12px;
+  padding: 6px 10px;
+  font-weight: 700;
+}
+
+.share-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.share-chip {
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  border-radius: 14px;
+  padding: 10px 12px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.share-chip:hover {
+  border-color: rgba(217,72,15,0.35);
+  box-shadow: 0 10px 20px rgba(217,72,15,0.08);
+}
+
+.copy-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.copy-input {
+  flex: 1;
+  min-width: 240px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  outline: none;
+}
+
+.copy-btn {
+  cursor: pointer;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(217,72,15,0.25);
+  background: rgba(217,72,15,0.10);
+  color: var(--text);
+  font-weight: 700;
+}
+
+.modal-note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
 </style>
 </head>
 
@@ -90,6 +202,39 @@ body.dark .spinner { border:3px solid rgba(255,255,255,0.15); border-top-color:v
 
 <div class="toast" id="toast">Copied link ✅</div>
 
+<!-- Share Modal -->
+<div class="modal-overlay" id="shareOverlay" onclick="shareOverlayClick(event)">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Share">
+    <div class="modal-header">
+      <div class="modal-title">Share</div>
+      <button class="modal-close" onclick="closeShareModal()">✕</button>
+    </div>
+
+    <div class="share-row">
+      <button class="share-chip" onclick="shareTo('whatsapp')">WhatsApp</button>
+      <button class="share-chip" onclick="shareTo('facebook')">Facebook</button>
+      <button class="share-chip" onclick="shareTo('x')">X</button>
+      <button class="share-chip" onclick="shareTo('telegram')">Telegram</button>
+      <button class="share-chip" onclick="shareTo('email')">Email</button>
+      <button class="share-chip" onclick="shareTo('reddit')">Reddit</button>
+
+      <!-- Instagram/TikTok best-effort: copy link + open app/site -->
+      <button class="share-chip" onclick="shareTo('instagram')">Instagram</button>
+      <button class="share-chip" onclick="shareTo('tiktok')">TikTok</button>
+    </div>
+
+    <div class="copy-row">
+      <input class="copy-input" id="shareLink" readonly />
+      <button class="copy-btn" onclick="copyShareLink()">Copy</button>
+    </div>
+
+    <div class="modal-note">
+      Tip: Instagram & TikTok don’t support a direct “share link” from websites like Facebook/X do.
+      The button will copy the link so you can paste it into your bio, story, or chat.
+    </div>
+  </div>
+</div>
+
 <div class="container">
   <header>
     <div>
@@ -98,7 +243,7 @@ body.dark .spinner { border:3px solid rgba(255,255,255,0.15); border-top-color:v
     </div>
 
     <div class="actions">
-      <button class="icon-btn" onclick="shareSite()" title="Share this site">Share</button>
+      <button class="icon-btn" onclick="openShareModal()" title="Share this site">Share</button>
       <button class="icon-btn" onclick="toggleDark()" title="Toggle dark mode">🌙</button>
     </div>
   </header>
@@ -181,28 +326,60 @@ function showToast(msg) {
   setTimeout(() => { t.style.display = "none"; }, 1600);
 }
 
-async function shareSite() {
-  const shareUrl = window.location.origin + window.location.pathname;
-  const shareText = "Today's Dish 🍽️\nA site that decides what to eat today. Try it: " + shareUrl;
+/* ===== Share modal logic ===== */
+function getShareUrl() {
+  // Use canonical directory URL for GitHub Pages project sites
+  const base = window.location.origin;
+  const path = window.location.pathname.replace(/index\.html$/i, "");
+  return base + path;
+}
 
-  // Use native share when available (mobile)
-  if (navigator.share) {
-    try {
-      await navigator.share({ title: "Today's Dish", text: shareText, url: shareUrl });
-      return;
-    } catch (e) {
-      // user cancelled or share failed; fall back to copy
-    }
-  }
+function openShareModal() {
+  const link = getShareUrl();
+  document.getElementById("shareLink").value = link;
+  document.getElementById("shareOverlay").style.display = "flex";
+}
 
-  // Copy to clipboard fallback
+function closeShareModal() {
+  document.getElementById("shareOverlay").style.display = "none";
+}
+
+function shareOverlayClick(e) {
+  // close if clicking backdrop, not modal content
+  if (e.target && e.target.id === "shareOverlay") closeShareModal();
+}
+
+async function copyShareLink() {
+  const link = document.getElementById("shareLink").value;
   try {
-    await navigator.clipboard.writeText(shareUrl);
+    await navigator.clipboard.writeText(link);
     showToast("Copied link ✅");
   } catch (e) {
-    // Last resort: prompt
-    window.prompt("Copy this link:", shareUrl);
+    window.prompt("Copy this link:", link);
   }
+}
+
+function shareTo(platform) {
+  const link = document.getElementById("shareLink").value;
+  const text = encodeURIComponent("Today's Dish 🍽️ — Pick today's dish or cook with what you have:");
+  const u = encodeURIComponent(link);
+
+  // Always copy first (good UX)
+  copyShareLink();
+
+  let target = "";
+  if (platform === "whatsapp") target = `https://wa.me/?text=${text}%20${u}`;
+  if (platform === "facebook") target = `https://www.facebook.com/sharer/sharer.php?u=${u}`;
+  if (platform === "x") target = `https://twitter.com/intent/tweet?text=${text}%20${u}`;
+  if (platform === "telegram") target = `https://t.me/share/url?url=${u}&text=${text}`;
+  if (platform === "email") target = `mailto:?subject=Today's%20Dish&body=${text}%0A%0A${u}`;
+  if (platform === "reddit") target = `https://www.reddit.com/submit?url=${u}&title=${text}`;
+
+  // Instagram & TikTok: no direct web share intent, so we open the site/app and user pastes
+  if (platform === "instagram") target = "https://www.instagram.com/";
+  if (platform === "tiktok") target = "https://www.tiktok.com/";
+
+  if (target) window.open(target, "_blank", "noopener,noreferrer");
 }
 
 function effortBadge(level) {
@@ -218,6 +395,7 @@ function toggleDetails(detailsId) {
   el.classList.toggle("open");
 }
 
+/* Today.json rendering (same as before) */
 function renderTodayCard(title, d) {
   const cook = d.cookTime ? (d.cookTime + " min") : "—";
   const ingredients = Array.isArray(d.ingredients) ? d.ingredients : [];
@@ -253,7 +431,10 @@ fetch("today.json")
     document.getElementById("todayGrid").innerHTML = '<div class="card">Error loading today.json</div>';
   });
 
-// Crypto-based shuffle
+/* ----- Your existing cook-with-what-I-have logic remains below ----- */
+/* (Keeping the rest of your current working search logic as-is) */
+
+/* Crypto-based shuffle */
 function shuffle(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const a = new Uint32Array(1);
@@ -442,7 +623,6 @@ async function searchByIngredients() {
       if (finalList.length >= TARGET_RESULTS) break;
     }
 
-    // Anti-repeat top 3
     const lastTop3 = loadLastTop3(raw, diet).map(String);
     if (lastTop3.length >= 1 && finalList.length >= 4) {
       const top3 = finalList.slice(0, 3);
