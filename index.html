@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <title>Today's Dish</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <style>
 :root { --bg:#f4f5f7; --card:#fff; --text:#222; --muted:#666; --accent:#d9480f; --accent2:#2f9e44; --border:rgba(0,0,0,0.08); --shadow:0 10px 30px rgba(0,0,0,0.08); }
 body.dark { --bg:#0f1115; --card:#171a21; --text:#f3f4f6; --muted:#a0a6b2; --accent:#ff922b; --accent2:#51cf66; --border:rgba(255,255,255,0.08); --shadow:0 12px 34px rgba(0,0,0,0.35); }
@@ -45,7 +44,6 @@ select.input option { background:var(--card); color:var(--text); }
 .inline-btn { cursor:pointer; display:inline-block; margin-top:10px; padding:10px 12px; border-radius:12px; border:1px solid rgba(217,72,15,0.25); background:rgba(217,72,15,0.10); color:var(--text); font-weight:600; }
 .details { display:none; margin-top:10px; } .details.open { display:block; }
 
-/* Spinner overlay */
 .spinner-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.35); display:none; align-items:center; justify-content:center; z-index:9999; }
 .spinner-box { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:16px 18px; box-shadow:var(--shadow); display:flex; gap:12px; align-items:center; }
 .spinner { width:22px; height:22px; border-radius:50%; border:3px solid rgba(0,0,0,0.15); border-top-color:var(--accent); animation:spin 0.9s linear infinite; }
@@ -53,8 +51,8 @@ body.dark .spinner { border:3px solid rgba(255,255,255,0.15); border-top-color:v
 @keyframes spin { to { transform: rotate(360deg); } }
 </style>
 </head>
-
 <body>
+
 <div class="spinner-overlay" id="spinnerOverlay">
   <div class="spinner-box">
     <div class="spinner"></div>
@@ -85,7 +83,7 @@ body.dark .spinner { border:3px solid rgba(255,255,255,0.15); border-top-color:v
   <div class="section" id="section-ingredients">
     <div class="search-box">
       <div class="search-row">
-        <input class="input" id="ingredientsInput" placeholder="Enter ingredients (comma separated) e.g. beans, pepper" />
+        <input class="input" id="ingredientsInput" placeholder="Enter ingredients (comma separated) e.g. beans, pepper, mushroom" />
         <select class="input" id="dietSelect" style="max-width:280px;">
           <option value="any" selected>Diet: Any</option>
           <option value="vegan">Diet: Vegan only</option>
@@ -94,11 +92,9 @@ body.dark .spinner { border:3px solid rgba(255,255,255,0.15); border-top-color:v
         </select>
         <button class="btn" id="searchBtn" onclick="searchByIngredients()">Search</button>
       </div>
-
       <div class="help">
-        <b>Strict mode:</b> recipes must contain <b>all</b> listed ingredients (AND). If there are no matches, nothing is shown.
+        Smart match: tries to match all inputs; if none exist, it automatically relaxes to “match most”.
       </div>
-
       <div class="small" id="searchStatus"></div>
     </div>
 
@@ -113,6 +109,8 @@ const WORKER_BASE_URL = "https://todaysdish-ingredients.mattbrianburnett.workers
 const TARGET_RESULTS = 50;
 const CONCURRENCY = 5;
 
+function safeText(v) { return (v === null || v === undefined) ? "" : String(v); }
+
 function toggleDark() {
   document.body.classList.toggle("dark");
   localStorage.setItem("dark", document.body.classList.contains("dark"));
@@ -126,7 +124,18 @@ function showTab(tab) {
   document.getElementById("section-ingredients").classList.toggle("active", tab === "ingredients");
 }
 
-function safeText(v) { return (v === null || v === undefined) ? "" : String(v); }
+function setStatus(msg) { document.getElementById("searchStatus").innerText = msg || ""; }
+function setSearching(isSearching) {
+  const btn = document.getElementById("searchBtn");
+  btn.disabled = isSearching;
+  btn.innerText = isSearching ? "Searching…" : "Search";
+}
+function showSpinner(show, text) {
+  const overlay = document.getElementById("spinnerOverlay");
+  const t = document.getElementById("spinnerText");
+  if (text) t.innerText = text;
+  overlay.style.display = show ? "flex" : "none";
+}
 
 function effortBadge(level) {
   if (level === "Quick") return '<span class="badge good">Effort: Quick</span>';
@@ -135,22 +144,24 @@ function effortBadge(level) {
   return '<span class="badge">Effort: —</span>';
 }
 
-function setStatus(msg) { document.getElementById("searchStatus").innerText = msg || ""; }
-
-function setSearching(isSearching) {
-  const btn = document.getElementById("searchBtn");
-  btn.disabled = isSearching;
-  btn.innerText = isSearching ? "Searching…" : "Search";
+function toggleDetails(detailsId) {
+  const el = document.getElementById(detailsId);
+  if (!el) return;
+  el.classList.toggle("open");
 }
 
-function showSpinner(show, text) {
-  const overlay = document.getElementById("spinnerOverlay");
-  const t = document.getElementById("spinnerText");
-  if (text) t.innerText = text;
-  overlay.style.display = show ? "flex" : "none";
+async function runPool(items, workerFn, concurrency) {
+  let i = 0;
+  const workers = new Array(concurrency).fill(0).map(async () => {
+    while (i < items.length) {
+      const idx = i++;
+      await workerFn(items[idx], idx);
+    }
+  });
+  await Promise.all(workers);
 }
 
-/* TODAY JSON (unchanged) */
+/* Today.json */
 function renderTodayCard(title, d) {
   const cook = d.cookTime ? (d.cookTime + " min") : "—";
   const ingredients = Array.isArray(d.ingredients) ? d.ingredients : [];
@@ -171,7 +182,6 @@ function renderTodayCard(title, d) {
     '</div>'
   );
 }
-
 fetch("today.json")
   .then(r => r.json())
   .then(data => {
@@ -186,44 +196,25 @@ fetch("today.json")
     document.getElementById("todayGrid").innerHTML = '<div class="card">Error loading today.json</div>';
   });
 
-function toggleDetails(detailsId) {
-  const el = document.getElementById(detailsId);
-  if (!el) return;
-  el.classList.toggle("open");
-}
-
-async function runPool(items, workerFn, concurrency) {
-  let i = 0;
-  const workers = new Array(concurrency).fill(0).map(async () => {
-    while (i < items.length) {
-      const idx = i++;
-      await workerFn(items[idx], idx);
-    }
-  });
-  await Promise.all(workers);
-}
-
-function renderCard(recipe, hits) {
+function renderCard(recipe, matchedCount, requiredCount) {
   const id = safeText(recipe.id);
-  const title = safeText(recipe.name);
-  const img = safeText(recipe.image);
+  const detailsId = "details-" + id;
 
   const missed = Array.isArray(recipe.missedIngredients) ? recipe.missedIngredients : [];
   const ingredients = Array.isArray(recipe.ingredients) ? recipe.ingredients : [];
   const steps = Array.isArray(recipe.steps) ? recipe.steps : [];
-  const detailsId = "details-" + id;
 
   return (
     '<div class="card">' +
       '<div class="badges">' +
-        '<span class="badge good">Matched ingredients: ' + safeText(hits) + '</span>' +
+        '<span class="badge good">Matched inputs: ' + matchedCount + '/' + requiredCount + '</span>' +
         effortBadge(recipe.effort) +
         '<span class="badge">Used: ' + safeText(recipe.usedIngredientCount) + '</span>' +
         '<span class="badge accent">Missing: ' + safeText(recipe.missedIngredientCount) + '</span>' +
       '</div>' +
-      '<h2>' + title + '</h2>' +
-      (img ? '<img src="' + img + '" alt="">' : '') +
-      '<button class="inline-btn" onclick="toggleDetails(\'' + detailsId + '\')">Show full recipe</button>' +
+      '<h2>' + safeText(recipe.name) + '</h2>' +
+      (recipe.image ? '<img src="' + safeText(recipe.image) + '" alt="">' : '') +
+      '<button class="btn" onclick="toggleDetails(\'' + detailsId + '\')">Show full recipe</button>' +
       '<div class="details" id="' + detailsId + '">' +
         '<hr class="sep">' +
         (missed.length
@@ -251,37 +242,39 @@ async function searchByIngredients() {
   }
 
   setSearching(true);
-  showSpinner(true, "Finding meals that contain ALL ingredients…");
+  showSpinner(true, "Finding best matches…");
 
   try {
-    // Strict search returns only meals that contain ALL listed ingredients
     const searchUrl = WORKER_BASE_URL
       + "/search?ingredients=" + encodeURIComponent(raw)
       + "&number=" + encodeURIComponent(TARGET_RESULTS)
       + "&diet=" + encodeURIComponent(diet);
 
-    const searchResp = await fetch(searchUrl);
-    const searchData = await searchResp.json();
+    const resp = await fetch(searchUrl);
+    const data = await resp.json();
 
-    if (!searchResp.ok) {
-      setStatus("Error: " + (searchData && searchData.error ? searchData.error : "Request failed"));
+    if (!resp.ok) {
+      setStatus("Error: " + (data && data.error ? data.error : "Request failed"));
       return;
     }
 
-    const candidates = Array.isArray(searchData.results) ? searchData.results : [];
+    const candidates = Array.isArray(data.results) ? data.results : [];
+    const requiredCount = data.requiredCount || (raw.split(",").filter(Boolean).length);
+    const strictnessUsed = data.strictnessUsed || 1;
 
     if (!candidates.length) {
-      setStatus("No meals found that contain ALL ingredients you listed. Try fewer ingredients.");
+      setStatus("No matches found. Try different ingredient words (e.g., 'green beans' instead of 'beans').");
       return;
     }
 
-    setStatus("Found " + candidates.length + " strict matches. Fetching details…");
-    showSpinner(true, "Fetching details (" + candidates.length + ")…");
+    setStatus("Found matches (requires ≥ " + strictnessUsed + " of " + requiredCount + " inputs). Fetching details…");
+    showSpinner(true, "Fetching recipe details…");
 
     const accepted = [];
-    const inputCount = searchData.inputCount || (raw.split(",").filter(Boolean).length);
 
     await runPool(candidates, async (c) => {
+      if (accepted.length >= TARGET_RESULTS) return;
+
       const recipeUrl = WORKER_BASE_URL
         + "/recipe?id=" + encodeURIComponent(c.id)
         + "&ingredients=" + encodeURIComponent(raw)
@@ -289,12 +282,13 @@ async function searchByIngredients() {
 
       const r = await fetch(recipeUrl);
       const j = await r.json();
-      if (j && j.error) return; // excluded by diet filter
+      if (j && j.error) return; // excluded by diet
 
-      j._hits = c.hits || inputCount;
+      j._matchedCount = c.matchedCount || requiredCount;
+      j._requiredCount = c.requiredCount || requiredCount;
       accepted.push(j);
 
-      showSpinner(true, "Building cards (" + accepted.length + "/" + candidates.length + ")…");
+      showSpinner(true, "Building cards (" + accepted.length + "/" + Math.min(TARGET_RESULTS, candidates.length) + ")…");
     }, CONCURRENCY);
 
     if (!accepted.length) {
@@ -302,21 +296,26 @@ async function searchByIngredients() {
       return;
     }
 
-    // Sort by least missing first, then used desc
     accepted.sort((a, b) => {
       if (a.missedIngredientCount !== b.missedIngredientCount) return a.missedIngredientCount - b.missedIngredientCount;
-      return b.usedIngredientCount - a.usedIngredientCount;
+      if (a.usedIngredientCount !== b.usedIngredientCount) return b.usedIngredientCount - a.usedIngredientCount;
+      return (b._matchedCount || 0) - (a._matchedCount || 0);
     });
+
+    const finalList = accepted.slice(0, TARGET_RESULTS);
 
     let dietLabel = "Any";
     if (diet === "vegan") dietLabel = "Vegan only";
     if (diet === "glutenfree") dietLabel = "Gluten-free (best effort)";
     if (diet === "vegan_glutenfree") dietLabel = "Vegan + Gluten-free (best effort)";
 
-    setStatus("Showing " + accepted.length + " strict matches (Diet: " + dietLabel + "). Ordered by least missing ingredients.");
+    setStatus(
+      "Showing " + finalList.length +
+      " ideas (Diet: " + dietLabel + "). Ordered by least missing, and matched inputs first."
+    );
 
     document.getElementById("resultsGrid").innerHTML =
-      accepted.map(r => renderCard(r, r._hits || inputCount)).join("");
+      finalList.map(r => renderCard(r, r._matchedCount || requiredCount, r._requiredCount || requiredCount)).join("");
 
   } catch (e) {
     setStatus("Something went wrong. Please try again.");
