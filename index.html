@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Today's Dish</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 :root { --bg:#f4f5f7; --card:#fff; --text:#222; --muted:#666; --accent:#d9480f; --accent2:#2f9e44; --border:rgba(0,0,0,0.08); --shadow:0 10px 30px rgba(0,0,0,0.08); }
 body.dark { --bg:#0f1115; --card:#171a21; --text:#f3f4f6; --muted:#a0a6b2; --accent:#ff922b; --accent2:#51cf66; --border:rgba(255,255,255,0.08); --shadow:0 12px 34px rgba(0,0,0,0.35); }
@@ -51,8 +52,8 @@ body.dark .spinner { border:3px solid rgba(255,255,255,0.15); border-top-color:v
 @keyframes spin { to { transform: rotate(360deg); } }
 </style>
 </head>
-<body>
 
+<body>
 <div class="spinner-overlay" id="spinnerOverlay">
   <div class="spinner-box">
     <div class="spinner"></div>
@@ -83,7 +84,7 @@ body.dark .spinner { border:3px solid rgba(255,255,255,0.15); border-top-color:v
   <div class="section" id="section-ingredients">
     <div class="search-box">
       <div class="search-row">
-        <input class="input" id="ingredientsInput" placeholder="Enter ingredients (comma separated) e.g. beans, pepper, mushroom" />
+        <input class="input" id="ingredientsInput" placeholder="Enter ingredients (comma separated) e.g. chicken" />
         <select class="input" id="dietSelect" style="max-width:280px;">
           <option value="any" selected>Diet: Any</option>
           <option value="vegan">Diet: Vegan only</option>
@@ -92,8 +93,9 @@ body.dark .spinner { border:3px solid rgba(255,255,255,0.15); border-top-color:v
         </select>
         <button class="btn" id="searchBtn" onclick="searchByIngredients()">Search</button>
       </div>
+
       <div class="help">
-        Smart match: tries to match all inputs; if none exist, it automatically relaxes to “match most”.
+        Relevance first, but results rotate each search (shuffles ties + samples candidates).
       </div>
       <div class="small" id="searchStatus"></div>
     </div>
@@ -108,6 +110,10 @@ body.dark .spinner { border:3px solid rgba(255,255,255,0.15); border-top-color:v
 const WORKER_BASE_URL = "https://todaysdish-ingredients.mattbrianburnett.workers.dev";
 const TARGET_RESULTS = 50;
 const CONCURRENCY = 5;
+
+// How many candidates to *consider* per tier before fetching details.
+// Higher = more variety but more /recipe calls.
+const CANDIDATE_SAMPLE_PER_TIER = 60;
 
 function safeText(v) { return (v === null || v === undefined) ? "" : String(v); }
 
@@ -150,18 +156,6 @@ function toggleDetails(detailsId) {
   el.classList.toggle("open");
 }
 
-async function runPool(items, workerFn, concurrency) {
-  let i = 0;
-  const workers = new Array(concurrency).fill(0).map(async () => {
-    while (i < items.length) {
-      const idx = i++;
-      await workerFn(items[idx], idx);
-    }
-  });
-  await Promise.all(workers);
-}
-
-/* Today.json */
 function renderTodayCard(title, d) {
   const cook = d.cookTime ? (d.cookTime + " min") : "—";
   const ingredients = Array.isArray(d.ingredients) ? d.ingredients : [];
@@ -182,6 +176,7 @@ function renderTodayCard(title, d) {
     '</div>'
   );
 }
+
 fetch("today.json")
   .then(r => r.json())
   .then(data => {
@@ -229,6 +224,28 @@ function renderCard(recipe, matchedCount, requiredCount) {
   );
 }
 
+// Fisher–Yates shuffle using browser crypto for real variation each search
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const a = new Uint32Array(1);
+    crypto.getRandomValues(a);
+    const j = a[0] % (i + 1);
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+async function runPool(items, workerFn, concurrency) {
+  let i = 0;
+  const workers = new Array(concurrency).fill(0).map(async () => {
+    while (i < items.length) {
+      const idx = i++;
+      await workerFn(items[idx], idx);
+    }
+  });
+  await Promise.all(workers);
+}
+
 async function searchByIngredients() {
   const raw = document.getElementById("ingredientsInput").value.trim();
   const diet = document.getElementById("dietSelect").value;
@@ -242,15 +259,19 @@ async function searchByIngredients() {
   }
 
   setSearching(true);
-  showSpinner(true, "Finding best matches…");
+  showSpinner(true, "Finding candidates…");
 
   try {
+    // cache-buster so even if something caches upstream, each search is different
+    const nonce = Date.now().toString() + "-" + Math.random().toString(16).slice(2);
+
     const searchUrl = WORKER_BASE_URL
       + "/search?ingredients=" + encodeURIComponent(raw)
       + "&number=" + encodeURIComponent(TARGET_RESULTS)
-      + "&diet=" + encodeURIComponent(diet);
+      + "&diet=" + encodeURIComponent(diet)
+      + "&nonce=" + encodeURIComponent(nonce);
 
-    const resp = await fetch(searchUrl);
+    const resp = await fetch(searchUrl, { cache: "no-store" });
     const data = await resp.json();
 
     if (!resp.ok) {
@@ -260,35 +281,56 @@ async function searchByIngredients() {
 
     const candidates = Array.isArray(data.results) ? data.results : [];
     const requiredCount = data.requiredCount || (raw.split(",").filter(Boolean).length);
-    const strictnessUsed = data.strictnessUsed || 1;
 
     if (!candidates.length) {
-      setStatus("No matches found. Try different ingredient words (e.g., 'green beans' instead of 'beans').");
+      setStatus("No matches found. Try different ingredient words.");
       return;
     }
 
-    setStatus("Found matches (requires ≥ " + strictnessUsed + " of " + requiredCount + " inputs). Fetching details…");
+    // Group candidates by matchedCount, then shuffle within each tier,
+    // then sample a limited number per tier so different recipes get fetched each time.
+    const tiers = new Map();
+    for (const c of candidates) {
+      const k = c.matchedCount || 1;
+      if (!tiers.has(k)) tiers.set(k, []);
+      tiers.get(k).push(c);
+    }
+
+    const tierKeys = Array.from(tiers.keys()).sort((a, b) => b - a);
+    const sampled = [];
+
+    for (const k of tierKeys) {
+      const arr = tiers.get(k);
+      shuffle(arr);
+      sampled.push(...arr.slice(0, CANDIDATE_SAMPLE_PER_TIER));
+    }
+
+    setStatus("Fetching details… (results will rotate each search)");
     showSpinner(true, "Fetching recipe details…");
 
     const accepted = [];
 
-    await runPool(candidates, async (c) => {
+    await runPool(sampled, async (c) => {
       if (accepted.length >= TARGET_RESULTS) return;
 
       const recipeUrl = WORKER_BASE_URL
         + "/recipe?id=" + encodeURIComponent(c.id)
         + "&ingredients=" + encodeURIComponent(raw)
-        + "&diet=" + encodeURIComponent(diet);
+        + "&diet=" + encodeURIComponent(diet)
+        + "&nonce=" + encodeURIComponent(nonce);
 
-      const r = await fetch(recipeUrl);
+      const r = await fetch(recipeUrl, { cache: "no-store" });
       const j = await r.json();
-      if (j && j.error) return; // excluded by diet
+      if (j && j.error) return;
 
-      j._matchedCount = c.matchedCount || requiredCount;
+      j._matchedCount = c.matchedCount || 1;
       j._requiredCount = c.requiredCount || requiredCount;
-      accepted.push(j);
 
-      showSpinner(true, "Building cards (" + accepted.length + "/" + Math.min(TARGET_RESULTS, candidates.length) + ")…");
+      // add a random tie breaker
+      j._rand = Math.random();
+
+      accepted.push(j);
+      showSpinner(true, "Building list (" + accepted.length + "/" + TARGET_RESULTS + ")…");
     }, CONCURRENCY);
 
     if (!accepted.length) {
@@ -296,10 +338,16 @@ async function searchByIngredients() {
       return;
     }
 
+    // Sort relevance first, but randomize ties:
+    // 1) matchedCount desc
+    // 2) missing asc
+    // 3) used desc
+    // 4) random tie-break
     accepted.sort((a, b) => {
+      if ((b._matchedCount || 0) !== (a._matchedCount || 0)) return (b._matchedCount || 0) - (a._matchedCount || 0);
       if (a.missedIngredientCount !== b.missedIngredientCount) return a.missedIngredientCount - b.missedIngredientCount;
       if (a.usedIngredientCount !== b.usedIngredientCount) return b.usedIngredientCount - a.usedIngredientCount;
-      return (b._matchedCount || 0) - (a._matchedCount || 0);
+      return (b._rand || 0) - (a._rand || 0);
     });
 
     const finalList = accepted.slice(0, TARGET_RESULTS);
@@ -311,11 +359,11 @@ async function searchByIngredients() {
 
     setStatus(
       "Showing " + finalList.length +
-      " ideas (Diet: " + dietLabel + "). Ordered by least missing, and matched inputs first."
+      " ideas (Diet: " + dietLabel + "). Relevance first, rotated each search."
     );
 
     document.getElementById("resultsGrid").innerHTML =
-      finalList.map(r => renderCard(r, r._matchedCount || requiredCount, r._requiredCount || requiredCount)).join("");
+      finalList.map(r => renderCard(r, r._matchedCount || 1, r._requiredCount || requiredCount)).join("");
 
   } catch (e) {
     setStatus("Something went wrong. Please try again.");
