@@ -120,10 +120,55 @@ select.input option { background:var(--card); color:var(--text); }
 
 .details { display:none; margin-top:10px; }
 .details.open { display:block; }
+
+/* ✅ Loading spinner overlay */
+.spinner-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.spinner-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: var(--shadow);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.spinner {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 3px solid rgba(0,0,0,0.15);
+  border-top-color: var(--accent);
+  animation: spin 0.9s linear infinite;
+}
+body.dark .spinner {
+  border: 3px solid rgba(255,255,255,0.15);
+  border-top-color: var(--accent);
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
 </style>
 </head>
 
 <body>
+<!-- ✅ Spinner overlay -->
+<div class="spinner-overlay" id="spinnerOverlay">
+  <div class="spinner-box">
+    <div class="spinner"></div>
+    <div class="small" id="spinnerText">Loading…</div>
+  </div>
+</div>
+
 <div class="container">
   <header>
     <div>
@@ -147,7 +192,7 @@ select.input option { background:var(--card); color:var(--text); }
   <div class="section" id="section-ingredients">
     <div class="search-box">
       <div class="search-row">
-        <input class="input" id="ingredientsInput" placeholder="Enter ingredients (comma separated) e.g. egg, tomato, bacon" />
+        <input class="input" id="ingredientsInput" placeholder="Enter ingredients (comma separated) e.g. bread, lettuce, avo" />
 
         <select class="input" id="dietSelect" style="max-width:280px;">
           <option value="any" selected>Diet: Any</option>
@@ -160,7 +205,7 @@ select.input option { background:var(--card); color:var(--text); }
       </div>
 
       <div class="help">
-        Tip: use simple words (e.g. <b>egg</b>, <b>tomato</b>, <b>bacon</b>). Commas are important.
+        Tip: use simple words. Commas are important. Results will prefer recipes matching more of your ingredients.
       </div>
 
       <div class="small" id="searchStatus"></div>
@@ -175,10 +220,7 @@ select.input option { background:var(--card); color:var(--text); }
 <script>
 const WORKER_BASE_URL = "https://todaysdish-ingredients.mattbrianburnett.workers.dev";
 const TARGET_RESULTS = 50;
-const CONCURRENCY = 5; // how many /recipe calls at once
-
-let currentSearchIngredients = "";
-let currentDiet = "any";
+const CONCURRENCY = 5;
 
 function toggleDark() {
   document.body.classList.toggle("dark");
@@ -210,6 +252,13 @@ function setSearching(isSearching) {
   const btn = document.getElementById("searchBtn");
   btn.disabled = isSearching;
   btn.innerText = isSearching ? "Searching…" : "Search";
+}
+
+function showSpinner(show, text) {
+  const overlay = document.getElementById("spinnerOverlay");
+  const t = document.getElementById("spinnerText");
+  if (text) t.innerText = text;
+  overlay.style.display = show ? "flex" : "none";
 }
 
 /* TODAY JSON */
@@ -248,6 +297,31 @@ fetch("today.json")
     document.getElementById("todayGrid").innerHTML = '<div class="card">Error loading today.json</div>';
   });
 
+function toggleDetails(detailsId) {
+  const el = document.getElementById(detailsId);
+  if (!el) return;
+  el.classList.toggle("open");
+}
+
+/* Concurrency pool runner */
+async function runPool(items, workerFn, concurrency) {
+  let i = 0;
+  const workers = new Array(concurrency).fill(0).map(async () => {
+    while (i < items.length) {
+      const idx = i++;
+      await workerFn(items[idx], idx);
+    }
+  });
+  await Promise.all(workers);
+}
+
+/* Compute minimum hits threshold based on input size */
+function minHitsForInputCount(n) {
+  if (n >= 5) return 3;
+  if (n >= 3) return 2;
+  return 1;
+}
+
 /* Render full card (badges shown BEFORE expand) */
 function renderCard(recipe, hits) {
   const id = safeText(recipe.id);
@@ -285,27 +359,6 @@ function renderCard(recipe, hits) {
   );
 }
 
-function toggleDetails(detailsId) {
-  const el = document.getElementById(detailsId);
-  if (!el) return;
-  el.classList.toggle("open");
-}
-
-/* Concurrency pool runner */
-async function runPool(items, workerFn, concurrency) {
-  let i = 0;
-  const results = [];
-  const workers = new Array(concurrency).fill(0).map(async () => {
-    while (i < items.length) {
-      const idx = i++;
-      const r = await workerFn(items[idx], idx);
-      if (r !== null && r !== undefined) results.push(r);
-    }
-  });
-  await Promise.all(workers);
-  return results;
-}
-
 async function searchByIngredients() {
   const raw = document.getElementById("ingredientsInput").value.trim();
   const diet = document.getElementById("dietSelect").value;
@@ -318,14 +371,15 @@ async function searchByIngredients() {
     return;
   }
 
-  currentSearchIngredients = raw;
-  currentDiet = diet;
+  const inputList = raw.split(",").map(s => s.trim()).filter(Boolean);
+  const minHitsStrict = minHitsForInputCount(inputList.length);
 
   setSearching(true);
+  showSpinner(true, "Finding recipes…");
   setStatus("Fetching candidate meals…");
 
   try {
-    // Step 1: Get big candidate list
+    // Step 1: Get big candidate list (sorted by hits desc by worker)
     const searchUrl = WORKER_BASE_URL
       + "/search?ingredients=" + encodeURIComponent(raw)
       + "&number=" + encodeURIComponent(TARGET_RESULTS)
@@ -345,17 +399,20 @@ async function searchByIngredients() {
       return;
     }
 
-    setStatus("Filtering & ranking recipes for diet… (this can take a few seconds)");
+    // Two-pass processing:
+    // Pass 1 = prefer candidates with hits >= minHitsStrict
+    // Pass 2 = relax if we still can't fill 50
+    const pass1 = candidates.filter(c => (c.hits || 0) >= minHitsStrict);
+    const pass2 = candidates.filter(c => (c.hits || 0) < minHitsStrict);
 
-    // Step 2: Fetch /recipe for candidates until we have 50 valid
     const accepted = [];
-    const hitsById = new Map();
-    candidates.forEach(c => hitsById.set(String(c.id), c.hits));
+    function addAccepted(recipe, hits) {
+      recipe._hits = hits || 0;
+      accepted.push(recipe);
+    }
 
-    // We will process candidates in order (already sorted by hits desc by the worker)
-    // and keep only those that pass diet filter, stopping once we collect 50.
-    await runPool(candidates, async (c) => {
-      if (accepted.length >= TARGET_RESULTS) return null;
+    async function fetchRecipeForCandidate(c) {
+      if (accepted.length >= TARGET_RESULTS) return;
 
       const recipeUrl = WORKER_BASE_URL
         + "/recipe?id=" + encodeURIComponent(c.id)
@@ -365,24 +422,29 @@ async function searchByIngredients() {
       const r = await fetch(recipeUrl);
       const j = await r.json();
 
-      if (j && j.error) return null; // excluded by diet or not found
+      if (j && j.error) return; // excluded by diet / missing / etc.
+      addAccepted(j, c.hits);
 
-      // attach hits for sorting
-      j._hits = c.hits;
-      accepted.push(j);
+      setStatus("Found " + accepted.length + " / " + TARGET_RESULTS + " recipes… (preferring matches ≥ " + minHitsStrict + ")");
+      showSpinner(true, "Building your list (" + accepted.length + "/" + TARGET_RESULTS + ")…");
+    }
 
-      // update progress
-      setStatus("Found " + accepted.length + " / " + TARGET_RESULTS + " recipes…");
+    setStatus("Filtering & ranking… (preferring matches ≥ " + minHitsStrict + ")");
+    showSpinner(true, "Filtering & ranking…");
 
-      return null;
-    }, CONCURRENCY);
+    await runPool(pass1, fetchRecipeForCandidate, CONCURRENCY);
+
+    if (accepted.length < TARGET_RESULTS) {
+      // Relax criteria only if needed
+      await runPool(pass2, fetchRecipeForCandidate, CONCURRENCY);
+    }
 
     if (!accepted.length) {
       setStatus("No recipes matched that diet filter. Try Diet: Any or different ingredients.");
       return;
     }
 
-    // Step 3: Sort by least missing first, then used desc, then hits desc
+    // Sort: prioritize missing first, then used desc, then hits desc
     accepted.sort((a, b) => {
       if (a.missedIngredientCount !== b.missedIngredientCount) return a.missedIngredientCount - b.missedIngredientCount;
       if (a.usedIngredientCount !== b.usedIngredientCount) return b.usedIngredientCount - a.usedIngredientCount;
@@ -398,7 +460,7 @@ async function searchByIngredients() {
 
     setStatus(
       "Showing " + finalList.length +
-      " ideas (Diet: " + dietLabel + "), ordered by least missing ingredients first."
+      " ideas (Diet: " + dietLabel + "). Ordered by least missing ingredients first (prefers matches ≥ " + minHitsStrict + ")."
     );
 
     document.getElementById("resultsGrid").innerHTML =
@@ -408,11 +470,11 @@ async function searchByIngredients() {
     setStatus("Something went wrong. Please try again.");
     console.log("search error:", e);
   } finally {
+    showSpinner(false);
     setSearching(false);
   }
 }
 
-// Enter triggers search when on ingredients tab
 document.addEventListener("keydown", (e) => {
   if (e.key === "Enter" && document.getElementById("section-ingredients").classList.contains("active")) {
     searchByIngredients();
