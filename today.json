@@ -1,82 +1,74 @@
 {
-  "date": "2026-05-19",
+  "date": "2026-05-20",
   "breakfast": {
-    "name": "Chocolate Chip Coconut Muffins",
-    "image": "https://img.spoonacular.com/recipes/638917-556x370.jpg",
+    "name": "Blueberry Banana Pancakes",
+    "image": "https://img.spoonacular.com/recipes/635418-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1/2 cup coconut butter",
-      "2 large eggs",
-      "1 cup almond milk (or any other vegan milk)",
-      "1 1/2 tsp pure vanilla extract",
-      "2 cups all-purpose flour(or use a healthy gluten-free flour; Unfortunately this was the only type of flour I had)",
-      "2/3 cups sucanat",
-      "1 tbsp baking powder",
-      "1/2 tsp sea salt",
-      "1 cup dark chocolate chips",
-      "1/3 cup coconut flakes"
+      "1/2 teaspoon baking soda",
+      "\u00bd cups Banana, Mashed, Divided",
+      "Fresh blueberries",
+      "\u00bd cups Egg Whites",
+      "\u00bd cups Greek Yogurt, Plain",
+      "1 teaspoon salt",
+      "3/4 cup sugar",
+      "1 teaspoon vanilla extract",
+      "\u00bd cups Whole Wheat Pastry Flour"
     ],
     "steps": [
-      "Go to my blog for the full instructions: http://gourmandelle.com/chocolate-chip-coconut-muffins/"
+      "Mix greek yogurt, 1/4 cup banana, egg whites & vanilla extract into a small bowl",
+      "In a separate bowl combine flour, baking soda, sugar, & salt",
+      "Combine and whisk till evenly mixed",
+      "Fold in 1/2 cup blueberries",
+      "Place 1/4-cup batter onto non-stick skillet and cook till bubbles start appearing through the top of the pancake and then flip. NOTE: Cook on medium heat and I flattened out my batter with the spatula to cook more evenly.About 1-2 minutes on each side",
+      "For the blueberry sauce:In a sauce pan, add remaining banana and blueberries and stir until thick, mashing blueberries, about 5-7 minutes.",
+      "Pour over top of pancakes.Note: I used frozen blueberries for sauce and fresh for pancakes.Makes  8 pancakes total  serving size 2Calorie per serving (4 pancakes total)  231, Fat: .08, Cholesterol: 0, Sodium: 391, Potassium: 304, Carbs: 42, Fiber: 6.6, Sugar: 12, Protein: 14.3"
     ]
   },
   "lunch": {
-    "name": "Crispy Buttermilk Fried Chicken",
-    "image": "https://img.spoonacular.com/recipes/640803-556x370.jpg",
+    "name": "Easy Chicken Tandoori",
+    "image": "https://img.spoonacular.com/recipes/641904-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
       "2 pounds chicken",
-      "3/4 cup flour",
-      "2 teaspoons salt",
-      "1 teaspoon paprika",
-      "1 teaspoon pepper",
-      "1 cup buttermilk",
-      "Vegetable oil (enough to cover chicken), about 1 quart"
+      "2 cups tikka tandoori paste*",
+      "coriander leaves",
+      "1 cup greek yogurt",
+      "Onions",
+      "Fresh tomatoes"
     ],
     "steps": [
-      "Mix flour, salt, paprika and pepper. Dip chicken in buttermilk and then into flour mixture. Cook chicken in oil, starting on medium-high heat, then, when chicken is browned, reduce heat to medium and cook an additional 30 to 35 minutes until chicken is done (approx 150-155 degrees F internal), turning occasionally."
+      "Mix the tandoori paste and yogurt well. Marinate the chicken pieces well for about 30 minutes",
+      "Place the chicken pieces along with the marinate into a baking pan and bake until golden brown and then turn over  until chicken is done. Keep turning the chicken pieces a few times while baking.",
+      "Serve with in a bed of rice. Then lay the chicken fillets on the rice and put a bit of greek yogurt"
     ]
   },
   "dinner": {
-    "name": "Vegetable Coconut Sambar",
-    "image": "https://img.spoonacular.com/recipes/716097-556x370.jpg",
+    "name": "Rigatoni With Sweet Sausages In Creamy Tomato Sauce",
+    "image": "https://img.spoonacular.com/recipes/658357-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1/2 teaspoon asafetida",
-      "1 teaspoon brown mustard seeds",
-      "4 to 6 fresh red cayenne peppers, seeded and chopped",
-      "2 tablespoons chana dal, rinsed",
-      "2 tablespoons coconut oil",
-      "3 tablespoons coriander seeds",
-      "1 teaspoon cumin seeds",
-      "1 teaspoon cumin seeds",
-      "small handful of dried curry leaves",
-      "1 drumstick, sliced",
-      "1 small eggplant, diced",
-      "1/2 teaspoon fenugreek seeds",
-      "1/2 teaspoon fenugreek seeds",
-      "handful of fresh chopped cilantro",
-      "1 small potato, peeled and diced",
-      "2 red bell peppers, seeded and chopped",
-      "1 dried whole red chili, broken into bits",
-      "sea salt to taste",
-      "2 teaspoons sesame or other oil",
-      "3 to 4 shallots, minced",
-      "1/4 cup tamarind pulp",
-      "2/3 cup toor dal, rinsed",
-      "1/2 teaspoon turmeric",
-      "5 tablespoons unsweetened dried shredded coconut",
-      "1/4 cup water",
-      "1 1/2 cups hot water",
-      "2 1/2 cups water"
+      "4 sweet sausages",
+      "1 leek, well rinsed and sliced on the bias",
+      "1 tablespoon fresh sage, finely chopped",
+      "2 garlic cloves, finely chopped",
+      "1/2 medium onion, finely chopped",
+      "1 can (28 oz) crushed tomatoes",
+      "1 pound rigatoni",
+      "1 cup 2% milk",
+      "1/2 teaspoon dried thyme",
+      "1/4 teaspoon cayenne pepper",
+      "1 tablespoon butter",
+      "3 tablespoons extra virgin olive oil",
+      "2 teaspoons sugar",
+      "Salt& pepper"
     ],
     "steps": [
-      "To make the paste, heat the oil in frying pan over medium heat. When hot, add the fenugreek seeds, cayenne peppers, asafetida, cumin seeds, coriander seeds and chana dal. Stir and fry for a few minutes until the seeds have darkened a few shades.",
-      "Remove from heat and transfer the mixture to a food processor or blender along with the coconut and 1/4 cup water. Blend into a paste, adding just a bit more water if necessary. Set aside.In a medium saucepan, combine the toor dal and 2 1/2 cups water. Bring to a boil, cover, reduce the heat to medium-low, and simmer gently for 1 hour until the dal is very soft. Stir occasionally. Do not drain.Meanwhile, soak the tamarind pulp in 1 1/2 cups hot water for 30 minutes. Strain the tamarind liquid into a bowl, squeezing out as much liquid from the pulp as possible. Discard the pulp and set the liquid aside.",
-      "Heat the coconut oil in a large saucepan over medium heat. When hot, add the mustard seeds, cumin seeds, fenugreek seeds, chili and curry leaves. Stir for 30 to 60 seconds until the mustard seeds turn grey and begin to splutter and pop.",
-      "Add the shallot and stir for another 2 minutes.",
-      "Add the vegetables, tamarind juice and salt to taste. Cover and simmer for 10 minutes until the vegetables are tender. Stir in the cooked toor dal and the paste and simmer for another 5 minutes.",
-      "Add 1/4 to 1/2 cup water if the sambar is too dry. Stir in the fresh cilantro or use as a garnish."
+      "Bring a large pot of salted water to boil.",
+      "Chop the onions, garlic, and set aside. Chop the leek (cut in 1/2 lengthwise first & make sure to rinse very well!!) and set aside (separate from the onions & garlic). Chop the sage & set aside separately as well.",
+      "To easily remove the casings, lightly slice each sausage lengthwise. Peel off with your fingers. In a large pan over medium/high heat, cook the sausages until they are a nice golden brown. While cooking, break apart the mixture until it looks like ground meat.",
+      "Take the meat out of the pan and save it in a bowl.",
+      "Add 2 tbsp olive oil and add the sage to the pan. Cook for a minute, add the leeks & cayenne pepper. Cook for 2 to 3 minutes and put the meat back in the pan. When the leek is cooked, turn off the heat and keep in the mixture in the pan."
     ]
   }
 }
