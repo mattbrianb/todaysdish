@@ -1,86 +1,61 @@
 {
-  "date": "2026-05-21",
+  "date": "2026-05-22",
   "breakfast": {
-    "name": "Baked Eggs and Bacon Cream In Spinach Fettuccine Nests",
-    "image": "https://img.spoonacular.com/recipes/633594-556x370.jpg",
+    "name": "Classic scones",
+    "image": "https://img.spoonacular.com/recipes/639637-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3 slices bacon",
-      "1/2 stick butter",
-      "1/4 pound Parmigiano-Reggiano",
-      "1/2 cup heavy cream",
-      "2 fresh eggs",
-      "2 large/ 4 small nests of spinach fettuccine",
-      "salt and pepper",
-      "scallions (for garnish)"
+      "3/4 cup milk",
+      "2 cups self raising flour",
+      "strawberry jam and cream, for serving",
+      "50g unsalted butter, softened"
     ],
     "steps": [
-      "I begin with my bacon (Ive never had bacon this fresh before, from an entirely organic source so close to home that my husband is literally feeding next seasons pork belly), which I chop and try out to nice crispy cubelets.  Now the rest of the meal will take less than 25 minutes: 10 minutes to boil the pasta, make the sauce, and assemble the dish (and, if youre like me, some sub-urb biscuits), and 15 minutes to bake it (while you make  a quick salad).  So be ready.",
-      "I melt my butter in my wok over high heat.  I throw my pasta nests into the salted boiling water on the back burner.",
-      "When my butter is melted and just begging to tan, I add my heavy cream and blend well.  I bring this to a simmer for a moment.",
-      "Then I add 3/4 of my cheese, which Ive shredded. (The rest I will thinly shave for a final garnish.)",
-      "I blend this well, bringing it to a low simmer to thicken, until it forms a smooth sauce.  I also add some salt and pepper.  (Crushed red pepper flakes, nutmeg, paprika, maybe even a dash of curry powder would work nicely here, too.)",
-      "Finally, I add 3/4 of my cooked bacon, and blend well with the sauce, until the flavors are beautifully infused.",
-      "Its  been 10 minutes, and my 11 minute pasta is just slightly undercooked (I know, cuz I bit off a snippet)  perfect!  Using tongs and a meshed spoon, I transfer my pasta to the waiting bacon cream, and toss well.  I add a tablespoon, maybe, of the pasta water, too, just to keep the sauce wet enough to bake later.",
-      "Using my tongs, I spin 1/2 of the pasta and sauce into each of two medium (10oz) ceramic ramekins, which Ive brushed down with melted butter.  I sprinkle most of the rest of my bacon (reserving a few chunks for a final flourish) on top.",
-      "The piece of resistance: a whole, cracked, raw egg, dropped into a wee basket I left in the middle of my pasta and sauce nests.  I manage to keep the yolk whole only in one, but the other I rather hold together by virtue of a cleverly placed noodle and some dribbled sauce.  I place these into a 350 oven to bake for 15 minutes, or until the whites have set, but the yolk is still glossy and runny.",
-      "After coring the best bits out of a loaf of bread destined for nothing (since my husband purchased a fresher loaf of preferred pan this afternoon) with a properly sized wine-glass rim, I brushed each disk with melted butter, and layered them with some of my sprinkled cheese into 4 cups of a buttered muffin tin, and then I stuck them in my oven along with my pasta nests to brown.  I consider these my sub-urb Wonderbread biscuits: quick, easy, and yummy, leaving fodder for crotons (or compost).  I also threw together a quick salad of baby greens, sliced onion, strips of roasted red peppers, black olives, EVOO, and salt and pepper.  Not that dinner needed these accoutrement  my simmering, saucy noodle nests of runny yolk baked eggs, bac"
+      "Using fingertips, rub butter into flour until mixture resembles fine breadcrumbs.Make a well in the centre of the dry ingredients and add milk, stirring with a metal spatula or butter knife until mixture comes away from the sides of the bowl. If mixture is dry, add a little extra milk.Turn mixture onto a lightly floured bench and bring the dough together until a rough ball of dough is formed. Do not over-knead. Pat dough to 2 cm thickness. With a clean knife, quarter the dough or use a round cutter to cut rounds.Arrange scones onto a baking paper lined tray and bake at 220C for 12-15 minutes until golden and they sound hollow when lightly tapped on the base.",
+      "Serve scones straight from the oven with jam and cream."
     ]
   },
   "lunch": {
-    "name": "Seared Pork Chops with Mango Salsa",
-    "image": "https://img.spoonacular.com/recipes/659674-556x370.jpg",
+    "name": "Curried Butternut Squash Soup",
+    "image": "https://img.spoonacular.com/recipes/641059-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 Green Bell Pepper De-seeded and cubed",
-      "black Pepper",
-      "2 teaspoons Cayenne powder",
-      "Cilantro",
-      "2 tablespoons Cumin",
-      "1 tablespoon Garlic Powder",
-      "1 Lime juiced",
-      "1 Mango Peeled and cubed",
-      "2 tablespoons Mustard powder",
-      "1/2 Large Onion peeled and diced",
-      "1 tablespoon Onion Powder",
-      "4 6 oz pork chops",
-      "salt",
-      "6 Scallions scallions thin sliced",
-      "1 Tomato seeded and cubed",
-      "2 tablespoons Vegetable Oil"
+      "1 cup apple juice",
+      "2 apples, peeled, cored and chopped",
+      "3 lbs. butternut squash",
+      "3 cups chicken stock",
+      "2 1/2 teaspoons hot curry powder",
+      "1/2 teaspoon salt",
+      "2 tablespoons unsalted butter, softened (may want to add more)",
+      "2 cups finely chopped yellow onions"
     ],
     "steps": [
-      "In a bowl thoroughly mix dry rub ingredients (cumin, mustard powder, cayenne, garlic powder, onion powder, 1 tablespoon salt, 2 teaspoons black pepper).Dust and massage dry rub into pork chops, rest in fridge for about 10min",
-      "Prep mango, bell pepper, onion, scallions, tomato, and cilantro set aside.",
-      "Heat pan w/ oil to med high, sear pork chops. 2-3 minutes on each side.",
-      "Let pork chops rest 5-8 minutes before serving.Take salsa bowl, add juice of a whole lime, add salt and pepper to taste.",
-      "Mix thoroughly",
-      "Place pork chop on plate and top with mango salsa."
+      "Melt butter in pot.",
+      "Add onions and curry powder and cook, covered, over low heat until onions are tender, about 25 minutes. Meanwhile, peel the squash, scrap out seeds and cut squash into pieces. When onions are tender, add the stock, squash, and chopped apples. Bring to a boil, reduce heat and simmer partially covered until squash and apples are very tender, about 25 minutes.",
+      "Pour soup through a strainer, reserve liquid. Put solids in food processor or a blender with a little liquid and process until smooth. Return puree to the pot, add apple juice and additional cooking liquid until soup is of desired consistency. Season to taste and garnish with shredded apple and a dollop of crme frache."
     ]
   },
   "dinner": {
-    "name": "Shrimp and Asparagus Foil Packs with Garlic Lemon Butter Sauce",
-    "image": "https://img.spoonacular.com/recipes/997285-556x370.jpg",
+    "name": "Crab Salad in Avocado Boats",
+    "image": "https://img.spoonacular.com/recipes/640311-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 lb medium thickness asparagus woody ends trimmed",
-      "6 Tbsp butter diced into small cubes",
-      "3 Tbsp dry white wine or chicken broth",
-      "2 Tbsp chopped fresh parsley",
-      "4 tsp minced garlic",
-      "1 1/2 Tbsp fresh lemon juice",
-      "2 tsp lemon zest",
-      "Salt and freshly ground black pepper",
-      "1 1/2 lbs large (21/25) shrimp peeled and deveined*"
+      "1/3 cup finely chopped red onion",
+      "3 tablespoons mayonnaise",
+      "1/2 teaspoon Thai style hot sauce such as Sriracha",
+      "2 tablespoons chopped fresh cilantro",
+      "3 teaspoons fresh lime juice",
+      "1/2 teaspoon ground cumin",
+      "1/2 teaspoon lime zest",
+      "8 ounces lump crab meat",
+      "1 ripe large avocado, halved and pitted"
     ],
     "steps": [
-      "Preheat a grill to medium-high heat (about 400 - 425 degrees).",
-      "Cut 4 sheets of 14 by 12-inch heavy duty aluminum foil then lay each piece separately on countertop.",
-      "Divide shrimp among packets near center then place asparagus to one side of the shrimp (going the long direction of the foil).",
-      "Pour 1/2 Tbsp white wine over each.",
-      "Sprinkle over garlic (1 tsp per packet) and lemon zest then season with salt and pepper. Divide butter pieces evenly among packets layering them over the shrimp and asparagus. Wrap packets in and crimp edges together then wrap ends up (don't wrap too tight - keep a little extra space inside for heat to circulate).",
-      "Grill, sealed side upward, until shrimp has cooked through, about 9 - 10 minutes. Carefully unwrap then drizzle with lemon juice (or just serve with lemon wedges for spritzing) and sprinkle with parsley.",
-      "Recipe source: Cooking Classy"
+      "Stir red onion, mayonnaise, hot sauce, cilantro, 2 teaspoons lime juice, cumin and lime zest in medium bowl to blend.",
+      "Mix in crab meat. Season salad with salt and pepper.",
+      "Brush each avocado with the remaining 1 teaspoon lime juice to prevent avocado from browning.",
+      "Mound crab salad on each avocado half.",
+      "Serve salad with lime wedges."
     ]
   }
 }
