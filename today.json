@@ -1,61 +1,84 @@
 {
-  "date": "2026-05-22",
+  "date": "2026-05-23",
   "breakfast": {
-    "name": "Classic scones",
-    "image": "https://img.spoonacular.com/recipes/639637-556x370.jpg",
+    "name": "Blueberry Banana Pancakes",
+    "image": "https://img.spoonacular.com/recipes/635418-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3/4 cup milk",
-      "2 cups self raising flour",
-      "strawberry jam and cream, for serving",
-      "50g unsalted butter, softened"
+      "1/2 teaspoon baking soda",
+      "\u00bd cups Banana, Mashed, Divided",
+      "Fresh blueberries",
+      "\u00bd cups Egg Whites",
+      "\u00bd cups Greek Yogurt, Plain",
+      "1 teaspoon salt",
+      "3/4 cup sugar",
+      "1 teaspoon vanilla extract",
+      "\u00bd cups Whole Wheat Pastry Flour"
     ],
     "steps": [
-      "Using fingertips, rub butter into flour until mixture resembles fine breadcrumbs.Make a well in the centre of the dry ingredients and add milk, stirring with a metal spatula or butter knife until mixture comes away from the sides of the bowl. If mixture is dry, add a little extra milk.Turn mixture onto a lightly floured bench and bring the dough together until a rough ball of dough is formed. Do not over-knead. Pat dough to 2 cm thickness. With a clean knife, quarter the dough or use a round cutter to cut rounds.Arrange scones onto a baking paper lined tray and bake at 220C for 12-15 minutes until golden and they sound hollow when lightly tapped on the base.",
-      "Serve scones straight from the oven with jam and cream."
+      "Mix greek yogurt, 1/4 cup banana, egg whites & vanilla extract into a small bowl",
+      "In a separate bowl combine flour, baking soda, sugar, & salt",
+      "Combine and whisk till evenly mixed",
+      "Fold in 1/2 cup blueberries",
+      "Place 1/4-cup batter onto non-stick skillet and cook till bubbles start appearing through the top of the pancake and then flip. NOTE: Cook on medium heat and I flattened out my batter with the spatula to cook more evenly.About 1-2 minutes on each side",
+      "For the blueberry sauce:In a sauce pan, add remaining banana and blueberries and stir until thick, mashing blueberries, about 5-7 minutes.",
+      "Pour over top of pancakes.Note: I used frozen blueberries for sauce and fresh for pancakes.Makes  8 pancakes total  serving size 2Calorie per serving (4 pancakes total)  231, Fat: .08, Cholesterol: 0, Sodium: 391, Potassium: 304, Carbs: 42, Fiber: 6.6, Sugar: 12, Protein: 14.3"
     ]
   },
   "lunch": {
-    "name": "Curried Butternut Squash Soup",
-    "image": "https://img.spoonacular.com/recipes/641059-556x370.jpg",
+    "name": "Apple Roasted Pork Loin",
+    "image": "https://img.spoonacular.com/recipes/632590-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 cup apple juice",
-      "2 apples, peeled, cored and chopped",
-      "3 lbs. butternut squash",
-      "3 cups chicken stock",
-      "2 1/2 teaspoons hot curry powder",
-      "1/2 teaspoon salt",
-      "2 tablespoons unsalted butter, softened (may want to add more)",
-      "2 cups finely chopped yellow onions"
+      "3 pounds pork loin",
+      "3 large Granny Smith apples, peeled and cored",
+      "3 tablespoons olive oil",
+      "2 cloves minced garlic",
+      "1/2 cup honey",
+      "1/4 cup apple cider vinegar",
+      "1/2 teaspoon pepper",
+      "1/4 teaspoon sea salt",
+      "1 teaspoon Chinese five spice powder",
+      "1/2 teaspoon freshly grated nutmeg"
     ],
     "steps": [
-      "Melt butter in pot.",
-      "Add onions and curry powder and cook, covered, over low heat until onions are tender, about 25 minutes. Meanwhile, peel the squash, scrap out seeds and cut squash into pieces. When onions are tender, add the stock, squash, and chopped apples. Bring to a boil, reduce heat and simmer partially covered until squash and apples are very tender, about 25 minutes.",
-      "Pour soup through a strainer, reserve liquid. Put solids in food processor or a blender with a little liquid and process until smooth. Return puree to the pot, add apple juice and additional cooking liquid until soup is of desired consistency. Season to taste and garnish with shredded apple and a dollop of crme frache."
+      "Apple Roasted Pork Loin",
+      "Apples and pork is a pretty traditional combination and I couldn't count the number of ways I've put the two together in the past but this one is a little different. The Granny Smith apples are diced quite small and then cooked in a reduction of honey, apple cider vinegar and spices. Granny Smiths are good to use because they won't break down into apple sauce during the cooking. The cooked apples are then used as a top crust and glaze for the roast pork. Some garlic roast potatoes and steamed veggies completed a wonderful family meal. Here's your Sunday supper!Lb pork loin or rib roast",
+      "Season the pork with salt and pepper and open roast on a rack in a roasting pan at 375 degrees F for about a half hour.Meanwhile dice very small, (about a 1/4 inch dice)Large Granny Smith apples, peeled and cored",
+      "In a large saute pan over medium heat add:Tbsp olive oil",
+      "Cloves minced garlic",
+      "Cook for a minute or two to soften but not brown the garlic.",
+      "Add:Cup honey",
+      "Cup apple cider vinegar",
+      "Tsp pepper",
+      "Tsp sea salt",
+      "Teaspoon Chinese five spice powder",
+      "Tsp freshly grated nutmeg",
+      "Bring the mixture to a boil and simmer until the volume is reduced by about half. Increase the heat to mediun-high.",
+      "Add the diced apple and cook, stirring occasionally until most of the liquid has reduced off.After half an hour in the oven, take the roast out and spoon the apples all over the top. Return the roast to the oven, reduce the heat to 350 degrees F and cook uncovered until the internal temperature reaches 170 degrees F on a meat thermomether inserted into the center of the roast. Allow the pork to rest for about 15 minutes before carving and serving."
     ]
   },
   "dinner": {
-    "name": "Crab Salad in Avocado Boats",
-    "image": "https://img.spoonacular.com/recipes/640311-556x370.jpg",
-    "cookTime": 45,
+    "name": "How to Make The Ultimate Slow Cooker Potato Soup",
+    "image": "https://img.spoonacular.com/recipes/1064362-556x370.jpg",
+    "cookTime": 255,
     "ingredients": [
-      "1/3 cup finely chopped red onion",
-      "3 tablespoons mayonnaise",
-      "1/2 teaspoon Thai style hot sauce such as Sriracha",
-      "2 tablespoons chopped fresh cilantro",
-      "3 teaspoons fresh lime juice",
-      "1/2 teaspoon ground cumin",
-      "1/2 teaspoon lime zest",
-      "8 ounces lump crab meat",
-      "1 ripe large avocado, halved and pitted"
+      "bacon",
+      "6 medium baking potatoes cubed",
+      "1 tbsp black pepper",
+      "cheese",
+      "8 slices bacon cooked and crumbled",
+      "3 tbsp flour",
+      "green onion tops",
+      "1 cup half and half",
+      "1 medium onion diced",
+      "sour cream",
+      "2 cups chicken or vegetable stock"
     ],
     "steps": [
-      "Stir red onion, mayonnaise, hot sauce, cilantro, 2 teaspoons lime juice, cumin and lime zest in medium bowl to blend.",
-      "Mix in crab meat. Season salad with salt and pepper.",
-      "Brush each avocado with the remaining 1 teaspoon lime juice to prevent avocado from browning.",
-      "Mound crab salad on each avocado half.",
-      "Serve salad with lime wedges."
+      "Coat the cubed potatoes with flour and place in the slow cooker.",
+      "Add diced onion, bacon, and sprinkle pepper over the potatoes.",
+      "Pour chicken or vegetable stock over the potatoes and cook on high for 3 and 1/2 hours. Use a potato masher to slightly mash the cooked potatoes and add half and half.  Cook an additional 30 minutes. Scoop soup into bowls and add toppings of your choice."
     ]
   }
 }
