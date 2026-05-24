@@ -1,84 +1,68 @@
 {
-  "date": "2026-05-23",
+  "date": "2026-05-24",
   "breakfast": {
-    "name": "Blueberry Banana Pancakes",
-    "image": "https://img.spoonacular.com/recipes/635418-556x370.jpg",
+    "name": "Oatmeal Pancake (Yummy & Heart Healthy)",
+    "image": "https://img.spoonacular.com/recipes/653472-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1/2 teaspoon baking soda",
-      "\u00bd cups Banana, Mashed, Divided",
-      "Fresh blueberries",
-      "\u00bd cups Egg Whites",
-      "\u00bd cups Greek Yogurt, Plain",
-      "1 teaspoon salt",
-      "3/4 cup sugar",
-      "1 teaspoon vanilla extract",
-      "\u00bd cups Whole Wheat Pastry Flour"
+      "1 tablespoon Agave",
+      "1/2 cup whole wheat multi-purpose flour",
+      "1 tsp Baking powder",
+      "\u00bd cup Blueberries",
+      "\u00bd cup Egg whites",
+      "\u00bd cup Fat-free milk",
+      "1 cup Rolled or old style or Irish oats",
+      "maple syrup"
     ],
     "steps": [
-      "Mix greek yogurt, 1/4 cup banana, egg whites & vanilla extract into a small bowl",
-      "In a separate bowl combine flour, baking soda, sugar, & salt",
-      "Combine and whisk till evenly mixed",
-      "Fold in 1/2 cup blueberries",
-      "Place 1/4-cup batter onto non-stick skillet and cook till bubbles start appearing through the top of the pancake and then flip. NOTE: Cook on medium heat and I flattened out my batter with the spatula to cook more evenly.About 1-2 minutes on each side",
-      "For the blueberry sauce:In a sauce pan, add remaining banana and blueberries and stir until thick, mashing blueberries, about 5-7 minutes.",
-      "Pour over top of pancakes.Note: I used frozen blueberries for sauce and fresh for pancakes.Makes  8 pancakes total  serving size 2Calorie per serving (4 pancakes total)  231, Fat: .08, Cholesterol: 0, Sodium: 391, Potassium: 304, Carbs: 42, Fiber: 6.6, Sugar: 12, Protein: 14.3"
+      "Add oats to the milk and soak it for 3-4 hours or overnight in refrigerator.",
+      "Add egg white, wheat flour, baking powder, agave (or sugar) and blend in processor / coffee grinder.Bring a non-stick pan to medium heat and pour 5 to 7 spoons of the mix (non-stick greasing stuff or oil is not really needed for pancakes).Turn it over in 1 to 2 minutes and take out once it becomes puffy and golden color.Enjoy with 100% maple syrup."
     ]
   },
   "lunch": {
-    "name": "Apple Roasted Pork Loin",
-    "image": "https://img.spoonacular.com/recipes/632590-556x370.jpg",
+    "name": "Pasta With Wild Mushrooms, Peas and Bacon",
+    "image": "https://img.spoonacular.com/recipes/654965-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3 pounds pork loin",
-      "3 large Granny Smith apples, peeled and cored",
-      "3 tablespoons olive oil",
-      "2 cloves minced garlic",
-      "1/2 cup honey",
-      "1/4 cup apple cider vinegar",
-      "1/2 teaspoon pepper",
-      "1/4 teaspoon sea salt",
-      "1 teaspoon Chinese five spice powder",
-      "1/2 teaspoon freshly grated nutmeg"
+      "10 ounces whole wheat fettuccine",
+      "1 cup of mixed wild mushrooms, cleaned, with stems trimmed to your liking",
+      "cup of fresh, shelled English peas",
+      "2 inches slices of good quality bacon, cut up into 1 cubes",
+      "3 tablespoons of olive oil",
+      "salt and pepper, to taste",
+      "1 large shallot, chopped finely",
+      "Parmeggiano Reggiano, to taste",
+      "2 tablespoons of fresh parsley, chopped finely",
+      "2 cloves of garlic, minced"
     ],
     "steps": [
-      "Apple Roasted Pork Loin",
-      "Apples and pork is a pretty traditional combination and I couldn't count the number of ways I've put the two together in the past but this one is a little different. The Granny Smith apples are diced quite small and then cooked in a reduction of honey, apple cider vinegar and spices. Granny Smiths are good to use because they won't break down into apple sauce during the cooking. The cooked apples are then used as a top crust and glaze for the roast pork. Some garlic roast potatoes and steamed veggies completed a wonderful family meal. Here's your Sunday supper!Lb pork loin or rib roast",
-      "Season the pork with salt and pepper and open roast on a rack in a roasting pan at 375 degrees F for about a half hour.Meanwhile dice very small, (about a 1/4 inch dice)Large Granny Smith apples, peeled and cored",
-      "In a large saute pan over medium heat add:Tbsp olive oil",
-      "Cloves minced garlic",
-      "Cook for a minute or two to soften but not brown the garlic.",
-      "Add:Cup honey",
-      "Cup apple cider vinegar",
-      "Tsp pepper",
-      "Tsp sea salt",
-      "Teaspoon Chinese five spice powder",
-      "Tsp freshly grated nutmeg",
-      "Bring the mixture to a boil and simmer until the volume is reduced by about half. Increase the heat to mediun-high.",
-      "Add the diced apple and cook, stirring occasionally until most of the liquid has reduced off.After half an hour in the oven, take the roast out and spoon the apples all over the top. Return the roast to the oven, reduce the heat to 350 degrees F and cook uncovered until the internal temperature reaches 170 degrees F on a meat thermomether inserted into the center of the roast. Allow the pork to rest for about 15 minutes before carving and serving."
+      "Heat 2 tablespoons of olive oil in a non-stick saute pan over medium heat.",
+      "Add in the chopped shallot, garlic and bacon, cooking until the shallot softens and then bacon begins to crisp up nicely.",
+      "Toss in the mushrooms (make sure you've sliced any large ones), sauteing everything together for another 5-6 minutes, or until the mushrooms reach your desired consistency (tender, but not falling apart).",
+      "Meanwhile, cook the pasta until it is al dente. I prefer to use a nice whole wheat fettuccine for this recipe as it pairs well with the nuttiness of the mushrooms. Once the pasta is cooked, drain it and set aside.",
+      "Add the peas and parsley to the skillet, season with salt and pepper and cook for just a minute or two before tossing in the pasta and mixing well, coating the pasta with the oils and fat.",
+      "Remove the skillet from the heat and put the pasta into a large serving bowl. Shave a generous amount of Parmeggiano Reggiano over the dish, tossing to combine.",
+      "Serve with additional cheese and salt and fresh pepper, to your liking."
     ]
   },
   "dinner": {
-    "name": "How to Make The Ultimate Slow Cooker Potato Soup",
-    "image": "https://img.spoonacular.com/recipes/1064362-556x370.jpg",
-    "cookTime": 255,
+    "name": "Cheese Pork Chops",
+    "image": "https://img.spoonacular.com/recipes/637569-556x370.jpg",
+    "cookTime": 30,
     "ingredients": [
-      "bacon",
-      "6 medium baking potatoes cubed",
-      "1 tbsp black pepper",
-      "cheese",
-      "8 slices bacon cooked and crumbled",
-      "3 tbsp flour",
-      "green onion tops",
-      "1 cup half and half",
-      "1 medium onion diced",
-      "sour cream",
-      "2 cups chicken or vegetable stock"
+      "2 tablespoons Dijon mustard",
+      "\u00bd cup gruyere cheese, shredded",
+      "\u00bd cup heavy cream",
+      "1 teaspoon Olive oil",
+      "4 pork chops",
+      "Salt and pepper",
+      "1 tablespoon unsalted butter"
     ],
     "steps": [
-      "Coat the cubed potatoes with flour and place in the slow cooker.",
-      "Add diced onion, bacon, and sprinkle pepper over the potatoes.",
-      "Pour chicken or vegetable stock over the potatoes and cook on high for 3 and 1/2 hours. Use a potato masher to slightly mash the cooked potatoes and add half and half.  Cook an additional 30 minutes. Scoop soup into bowls and add toppings of your choice."
+      "In a heavy bottom skillet melt the butter with the olive oil. Saut` the pork chops over medium high 3 minutes on each sided. Lower the heat to medium and cook for another 5 to 6 minutes for side.Salt and pepper to taste.Meanwhile turn on the broil.",
+      "Mix together in a bowl the heavy cream, mustard and the cheese.",
+      "Remove the chops from the stove and place them in a oven proof dish.",
+      "Spread the cheese-cream mixture over the chops and broil for about 5 minutes."
     ]
   }
 }
