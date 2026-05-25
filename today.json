@@ -1,68 +1,96 @@
 {
-  "date": "2026-05-24",
+  "date": "2026-05-25",
   "breakfast": {
-    "name": "Oatmeal Pancake (Yummy & Heart Healthy)",
-    "image": "https://img.spoonacular.com/recipes/653472-556x370.jpg",
+    "name": "Banana & Cream Cheese Stuffed French Toast",
+    "image": "https://img.spoonacular.com/recipes/633971-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 tablespoon Agave",
-      "1/2 cup whole wheat multi-purpose flour",
-      "1 tsp Baking powder",
-      "\u00bd cup Blueberries",
-      "\u00bd cup Egg whites",
-      "\u00bd cup Fat-free milk",
-      "1 cup Rolled or old style or Irish oats",
-      "maple syrup"
+      "5 1/2 teaspoons baking powder",
+      "2 ripe but firm bananas, sliced thin",
+      "1/2 cup butter or margarine - (\u00bc lb)",
+      "4 t. canola (or vegetable) oil",
+      "1/2 t. cinnamon",
+      "8 ounces cream cheese",
+      "3 eggs",
+      "10 1/2 cups all-purpose flour",
+      "dash of fresh ground nutmeg",
+      "1 T. honey",
+      "1/2 t. lemon juice",
+      "maple syrup, for serving",
+      "1 c. milk",
+      "1/2 teaspoon salt",
+      "8 slices of good quality white sandwich bread"
     ],
     "steps": [
-      "Add oats to the milk and soak it for 3-4 hours or overnight in refrigerator.",
-      "Add egg white, wheat flour, baking powder, agave (or sugar) and blend in processor / coffee grinder.Bring a non-stick pan to medium heat and pour 5 to 7 spoons of the mix (non-stick greasing stuff or oil is not really needed for pancakes).Turn it over in 1 to 2 minutes and take out once it becomes puffy and golden color.Enjoy with 100% maple syrup."
+      "In a small bowl combine the softened cream cheese, honey, cinnamon, nutmeg and lemon juice, set aside while preparing the batter.",
+      "Whisk together all of the batter ingredients until thoroughly mixed. (This is a breeze if you use a blender.)",
+      "Pour the batter into a wide, shallow dish (like a pie plate).",
+      "Spread the filling mixture equally over 1 side of each slice of bread, divide the sliced bananas between 4 slices of the bread, top with the remaining 4 slices, press lightly.Melt 2 t. butter and 2 t. oil in a 12 inch nonstick skillet over medium heat until the butter foams and then subsides. Working with one sandwich at a time dip both sides in the batter and let the excess drip away, add to the hot pan, repeat with a second sandwich. Cook until golden brown on the first side, around 3-5 minutes, flip and repeat on the second side. Repeat this process with the remaining, oil, butter and sandwiches. To serve, cut into triangles and serve with maple syrup."
     ]
   },
   "lunch": {
-    "name": "Pasta With Wild Mushrooms, Peas and Bacon",
-    "image": "https://img.spoonacular.com/recipes/654965-556x370.jpg",
+    "name": "Game Day Jerk Wings",
+    "image": "https://img.spoonacular.com/recipes/644149-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "10 ounces whole wheat fettuccine",
-      "1 cup of mixed wild mushrooms, cleaned, with stems trimmed to your liking",
-      "cup of fresh, shelled English peas",
-      "2 inches slices of good quality bacon, cut up into 1 cubes",
-      "3 tablespoons of olive oil",
-      "salt and pepper, to taste",
-      "1 large shallot, chopped finely",
-      "Parmeggiano Reggiano, to taste",
-      "2 tablespoons of fresh parsley, chopped finely",
-      "2 cloves of garlic, minced"
+      "60 jumbo chicken wings split with wing tips removed",
+      "1/4 cup pasilla chile powder",
+      "1/4 cup kosher salt",
+      "1 tablespoon ground black pepper",
+      "2 tablespoons ground cayenne pepper",
+      "2 tablespoons jamaican ground allspice",
+      "1 bottle Pickapeppa Sauce (available at most supermarkets)",
+      "3 tablespoons of unsalted butter",
+      "3 tablespoons honey",
+      "5 or more dashes Tabasco sauce (depending how hot you like it!)",
+      "1 tablespoon red pepper flakes",
+      "carrot sticks and celery sticks",
+      "Blue Cheese Dressing"
     ],
     "steps": [
-      "Heat 2 tablespoons of olive oil in a non-stick saute pan over medium heat.",
-      "Add in the chopped shallot, garlic and bacon, cooking until the shallot softens and then bacon begins to crisp up nicely.",
-      "Toss in the mushrooms (make sure you've sliced any large ones), sauteing everything together for another 5-6 minutes, or until the mushrooms reach your desired consistency (tender, but not falling apart).",
-      "Meanwhile, cook the pasta until it is al dente. I prefer to use a nice whole wheat fettuccine for this recipe as it pairs well with the nuttiness of the mushrooms. Once the pasta is cooked, drain it and set aside.",
-      "Add the peas and parsley to the skillet, season with salt and pepper and cook for just a minute or two before tossing in the pasta and mixing well, coating the pasta with the oils and fat.",
-      "Remove the skillet from the heat and put the pasta into a large serving bowl. Shave a generous amount of Parmeggiano Reggiano over the dish, tossing to combine.",
-      "Serve with additional cheese and salt and fresh pepper, to your liking."
+      "Split wings apart into 2 sections and slash a slit in the flat part of the wing for quicker cooking.",
+      "Combine chile powder, salt, black pepper, cayenne, and allspice in a bowl and sprinkle liberally over the wings (you don't need to use all of it).  Refrigerate for at least 1 hour.",
+      "Combine Pickapeppa sauce, butter, honey, Tabasco, and pepper flakes in a medium saucepan over low heat until it is well incorporated.",
+      "Let wings come to room temperature.",
+      "Prepare grill for medium high direct heat. Grill dry rubbed wings for 20-25 mins, constantly turning the wings with tongs to maintain good grill marks without over-charing the wings. Take the biggest wing after 20 mins and take a bite out of it, and if the juices run clear, they are done.",
+      "Place wings in a large bowl and toss with the jerk sauce.",
+      "Serve with blue cheese dressing and carrots."
     ]
   },
   "dinner": {
-    "name": "Cheese Pork Chops",
-    "image": "https://img.spoonacular.com/recipes/637569-556x370.jpg",
-    "cookTime": 30,
+    "name": "Cornmeal-Crusted Catfish with Cajun Seasoning and Spicy Tartar Sauce",
+    "image": "https://img.spoonacular.com/recipes/640166-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "2 tablespoons Dijon mustard",
-      "\u00bd cup gruyere cheese, shredded",
-      "\u00bd cup heavy cream",
-      "1 teaspoon Olive oil",
-      "4 pork chops",
-      "Salt and pepper",
-      "1 tablespoon unsalted butter"
+      "1 large egg",
+      "1 tbsp milk",
+      "1/3 cup yellow cornmeal",
+      "1 tsp chile powder",
+      "1/2 tsp cayenne powder",
+      "1/2 tsp hot smoked paprika",
+      "1/2 tsp granulated garlic",
+      "4 5-oz. skinless catfish filets",
+      "3 tbsp olive oil",
+      "sea salt",
+      "freshly ground black pepper",
+      "3/4 cup light mayonnaise",
+      "2 tbsp finely chopped dill pickle",
+      "1 tbsp finely chopped jalapeno chile",
+      "1 tbsp finely chopped scallion (white and green parts)",
+      "1 tsp dill pickle juice",
+      "1 tsp fresh lemon juice"
     ],
     "steps": [
-      "In a heavy bottom skillet melt the butter with the olive oil. Saut` the pork chops over medium high 3 minutes on each sided. Lower the heat to medium and cook for another 5 to 6 minutes for side.Salt and pepper to taste.Meanwhile turn on the broil.",
-      "Mix together in a bowl the heavy cream, mustard and the cheese.",
-      "Remove the chops from the stove and place them in a oven proof dish.",
-      "Spread the cheese-cream mixture over the chops and broil for about 5 minutes."
+      "Whisk the egg and milk in a medium bowl.",
+      "Combine the cornmeal, chile powder, cayenne powder, paprika, and garlic in a large zip-top bag.",
+      "Dip each catfish filet in the egg mixture.",
+      "Let excess egg drip off and place the filets in the bag with the cornmeal mixture. Zip the top and shake the bag until all pieces are well coated.",
+      "Remove the filets and lay side by side on a plate (do not overlap).",
+      "Place in the refrigerator for 30 minutes. (Refrigeration helps keep the crust adhered during cooking.)",
+      "While the fish chills, make the sauce.",
+      "Whisk the first 6 ingredients (through lemon juice) in a small bowl. Season with salt and pepper and set aside.",
+      "Heat a large, nonstick skillet over medium heat and add the olive oil. When the oil is hot (but not smoking), season the catfish filets with salt and pepper and add to the skillet. Fry until crispy on the outside and tender on the inside, 3-4 minutes per side, depending on thickness.",
+      "Divide the fish among 4 plates and top each with a dollop of tartar sauce or pass the sauce at the table."
     ]
   }
 }
