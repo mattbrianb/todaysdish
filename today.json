@@ -1,72 +1,82 @@
 {
-  "date": "2026-05-26",
+  "date": "2026-05-27",
   "breakfast": {
-    "name": "French Toast Croissants with Strawberries",
-    "image": "https://img.spoonacular.com/recipes/643405-556x370.jpg",
-    "cookTime": 20,
+    "name": "Lemon Quick Bread",
+    "image": "https://img.spoonacular.com/recipes/649755-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "1/4 cup butter",
-      "1/2 cup butter or margarine softened",
-      "4 plain croissants split",
-      "2 eggs slightly beaten",
-      "1/3 cup milk",
-      "1 teaspoon orange peel grated",
-      "1/4 cup powdered sugar",
-      "fresh sliced strawberries"
+      "1 cup Greek Non Fat Plain Yogurt",
+      "2 tsp. baking powder",
+      "1/2 tsp. baking soda",
+      "2 eggs or egg substitute",
+      "1/2 cup plus 1 tbsp. granulated sugar",
+      "1/4 tsp. lemon extract",
+      "1 cup fresh lemon juice, about 12 lemons",
+      "2 teaspoon lemon peel, grated (about 2 lemons)",
+      "1/4 teaspoon salt",
+      "1/2 pound sugar",
+      "1 tsp vanilla extract",
+      "1 cup whole wheat pastry flour"
     ],
     "steps": [
-      "In small mixer bowl beat together all orange butter ingredients at medium speed, scraping bowl often, until light and fluffy (1 to 2 minutes); set aside.In pie pan stir together milk, eggs and 1 teaspoon orange peel.In 10 inch skillet or griddle melt 2 tablespoons butter over medium heat.Dip 4 croissant halves into egg mixture, turning to coat both sides.",
-      "Place croissant halves, cut side down, in skillet. Cook, turning once, until golden brown (3 to 4 minutes on each side).",
-      "Remove to serving platter; keep warm.Repeat with remaining 2 tablespoons butter and 4 croissant halves. Dust croissant halves with powdered sugar; serve with orange butter."
+      "Preheat oven to 350Beat yogurt, sugar, eggs, vanilla and lemon extract until blended",
+      "Stir together flour, lemon peel, baking powder, baking soda and salt.",
+      "Add to yogurt mixture,mix just until blended. Spoon batter into a greased and floured 9- x 5-inch loaf pan or 3 mini loafs.",
+      "Bake for 50 minutes to 1 hour for 1 large loaf or 30  35 minutes for 3 mini loafs, or until a toothpick inserted into center comes out clean, shielding with aluminum foil after 50 minutes to prevent excessive browning.To make glaze:In a small sauce pan add sugar and lemon juice, stir until dissolved and clear. While the cake is still warm, pour the lemon-sugar mixture over the cake and allow it to soak in (a pastry brush works great for this, as does using a toothpick to make tiny holes that draw the syrup in better).Cool in pan on a wire rack 10 minutes; remove from pan to wire rack. Then eat!!!!Calories per slice:  111,  Fat:  .02,  Cholesterol:  0,  Sodium:  137,  Potassium:  32, Carbs:  23,  Fiber:  1.3,  Sugar:  10.3,  Protein:  3.9"
     ]
   },
   "lunch": {
-    "name": "Pulled Pork Nachos",
-    "image": "https://img.spoonacular.com/recipes/1039293-556x370.jpg",
-    "cookTime": 490,
+    "name": "Easy Pork Chops on Stuffing",
+    "image": "https://img.spoonacular.com/recipes/642113-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "1 bag nacho chips",
-      "1 cup pico de gallo",
-      "4 tbsp pork rub",
-      "1 2lb pork shoulder",
-      "1/2 cup shredded cheese",
-      "2 tbsp sour cream",
-      "2 cups vegetable broth"
+      "3 tablespoons butter",
+      "2 ribs celery finely diced",
+      "1 cup chicken broth (more or less)",
+      "2 tablespoons chopped fresh parsley",
+      "1/2 medium onion finely diced",
+      "pepper",
+      "6 pork chops",
+      "salt",
+      "8 slices stale white bread"
     ],
     "steps": [
-      "Clean the pork and pat dry.",
-      "Add the pork rub to the shoulder and season all over.",
-      "Place the pork shoulder into the crock pot and set the temperature to low.",
-      "Add in the vegetable broth and cook on low for 8-10 hours.",
-      "Remove from slow cooker and shred the pork. Top the nachos with the shredded pork, pico de gallo, shredded cheese, and sour cream if desired."
+      "Early in the day (or the night before) cut the bread into  inch cubes and leave out to air dry.",
+      "Place in a large mixing bowl.",
+      "Heat 2 tablespoons of the butter over medium heat in a saute pan and saute the celery till almost tender.",
+      "Add the onions and continue to cook over medium heat until translucent.",
+      "Remove from the heat and add half of the chicken broth to the mixture.",
+      "Add the chopped parsley to the bread cubes and toss to distribute evenly.",
+      "Pour the celery/onion mixture over all and gently toss, adding additional broth to moisten the bread. Use caution to not break up the bread cubes. The cubes should be almost moistened through, but not soaking wet.Butter a shallow baking dish with half of the remaining butter and place the stuffing in the middle. Dot the top of the stuffing with any remaining butter. Cover with aluminum foil and bake for 20 minutes in a preheated 350 degree oven.In the meantime, pat the chops dry with a paper towel and season on both sides with salt and pepper. With a sharp knife, cut 2-3 slices through the fat edge on each chop to prevent curling while chops are cooking.  Preheat a non-stick saut pan over medium high heat and quickly sear on each side until lightly browned. The chops will still be nearly raw in the center.",
+      "Remove the foil from the precooked stuffing and place the chops in a single layer over the stuffing. Return to the oven and roast for aprox 15-25 minutes, uncovered (depending on the thickness of your chops).  The chops should be cooked until the no longer dark pink inside, but still moist and juicy, but not overcooked.",
+      "Remove from the oven and serve."
     ]
   },
   "dinner": {
-    "name": "Asian Chicken and Broccoli With Chili Garlic Sauce",
-    "image": "https://img.spoonacular.com/recipes/632812-556x370.jpg",
-    "cookTime": 45,
+    "name": "Instant Pot Chicken Taco Soup",
+    "image": "https://img.spoonacular.com/recipes/982382-556x370.jpg",
+    "cookTime": 25,
     "ingredients": [
-      "1 tablespoon sesame oil",
-      "4 cups broccoli florets",
-      "2 cups chicken breast, cooked and chopped",
-      "1/4 cup low sodium chicken broth",
-      "tablespoons rice vinegar",
-      "1 tablespoon Mirin",
-      "1/2 cup water",
-      "1/2 teaspoon chili garlic sauce",
-      "1 tablespoon fish sauce",
-      "1 teaspoon soy sauce",
-      "1/2 tablespoon cornstarch",
-      "1 cup green onion, sliced",
-      "2 cups brown basmati rice, cooked"
+      "\u00bd pound boneless/skinless chicken breasts",
+      "1 10 oz can of black beans",
+      "1 10 oz can of corn",
+      "1 4oz can chopped green chilis",
+      "1 28oz can diced tomatoes",
+      "2 tsp chili powder",
+      "\u00bc cup dried cilantro",
+      "1 medium green bell pepper finely chopped",
+      "\u00bc cup chopped green onion",
+      "1 tbsp olive oil",
+      "1 onion finely chopped",
+      "1 cup water"
     ],
     "steps": [
-      "Combine rice vinegar, Mirin, water, chili garlic sauce, fish sauce, soy sauce and cornstarch in a bowl.",
-      "Preheat a large skillet over medium-high heat and spray with cooking spray.",
-      "Add sesame oil and stir fry broccoli for 3  4 minutes until crisp-tender.",
-      "Add 1/4 cup chicken broth if needed to keep from burning.",
-      "Add cooked chicken and sauce. Cook another 3  4 minutes until sauce thickens and chicken is heated through.",
-      "Serve with basmati rice."
+      "Press the",
+      "Saute button on the Instant Pot and heat oil.",
+      "Add onion and bell pepper and saute until translucent.",
+      "Add tomatoes including juice and add water. Make sure to scrape all of the bits from the sides and bottom of the Instant Pot as you are stirring.",
+      "Add chicken, chili powder, corn, black beans, green onions, green chilis, and  cup of cilantro. Lock lid. Press the manual or pressure cook button and set time for 15 minutes. When time is up, do a quick release until the valve drops and then unlock the lid. Shred the chicken using two forks and then let the soup simmer for 5 minutes.",
+      "Serve the soup into bowls and then top with your favorite toppings such as sour cream, cheese, avocado, etc."
     ]
   }
 }
