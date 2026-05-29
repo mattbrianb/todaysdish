@@ -1,69 +1,82 @@
 {
-  "date": "2026-05-28",
+  "date": "2026-05-29",
   "breakfast": {
-    "name": "Peanut Butter And Chocolate Oatmeal",
-    "image": "https://img.spoonacular.com/recipes/655219-556x370.jpg",
+    "name": "Baked Eggs and Bacon Cream In Spinach Fettuccine Nests",
+    "image": "https://img.spoonacular.com/recipes/633594-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "cup quick cooking oats",
-      "1 teaspoon unsweetened cocoa",
-      "1 teaspoon agave",
-      "1 tablespoon organic crunchy peanut butter",
-      "1/2 cup non-fat milk"
+      "3 slices bacon",
+      "1/2 stick butter",
+      "1/4 pound Parmigiano-Reggiano",
+      "1/2 cup heavy cream",
+      "2 fresh eggs",
+      "2 large/ 4 small nests of spinach fettuccine",
+      "salt and pepper",
+      "scallions (for garnish)"
     ],
     "steps": [
-      "Microwave all ingredients in a small bowl or mug for 1 minute, stir and enjoy!",
-      "Serve with crushed peanuts or almonds for some extra crunch!"
+      "I begin with my bacon (Ive never had bacon this fresh before, from an entirely organic source so close to home that my husband is literally feeding next seasons pork belly), which I chop and try out to nice crispy cubelets.  Now the rest of the meal will take less than 25 minutes: 10 minutes to boil the pasta, make the sauce, and assemble the dish (and, if youre like me, some sub-urb biscuits), and 15 minutes to bake it (while you make  a quick salad).  So be ready.",
+      "I melt my butter in my wok over high heat.  I throw my pasta nests into the salted boiling water on the back burner.",
+      "When my butter is melted and just begging to tan, I add my heavy cream and blend well.  I bring this to a simmer for a moment.",
+      "Then I add 3/4 of my cheese, which Ive shredded. (The rest I will thinly shave for a final garnish.)",
+      "I blend this well, bringing it to a low simmer to thicken, until it forms a smooth sauce.  I also add some salt and pepper.  (Crushed red pepper flakes, nutmeg, paprika, maybe even a dash of curry powder would work nicely here, too.)",
+      "Finally, I add 3/4 of my cooked bacon, and blend well with the sauce, until the flavors are beautifully infused.",
+      "Its  been 10 minutes, and my 11 minute pasta is just slightly undercooked (I know, cuz I bit off a snippet)  perfect!  Using tongs and a meshed spoon, I transfer my pasta to the waiting bacon cream, and toss well.  I add a tablespoon, maybe, of the pasta water, too, just to keep the sauce wet enough to bake later.",
+      "Using my tongs, I spin 1/2 of the pasta and sauce into each of two medium (10oz) ceramic ramekins, which Ive brushed down with melted butter.  I sprinkle most of the rest of my bacon (reserving a few chunks for a final flourish) on top.",
+      "The piece of resistance: a whole, cracked, raw egg, dropped into a wee basket I left in the middle of my pasta and sauce nests.  I manage to keep the yolk whole only in one, but the other I rather hold together by virtue of a cleverly placed noodle and some dribbled sauce.  I place these into a 350 oven to bake for 15 minutes, or until the whites have set, but the yolk is still glossy and runny.",
+      "After coring the best bits out of a loaf of bread destined for nothing (since my husband purchased a fresher loaf of preferred pan this afternoon) with a properly sized wine-glass rim, I brushed each disk with melted butter, and layered them with some of my sprinkled cheese into 4 cups of a buttered muffin tin, and then I stuck them in my oven along with my pasta nests to brown.  I consider these my sub-urb Wonderbread biscuits: quick, easy, and yummy, leaving fodder for crotons (or compost).  I also threw together a quick salad of baby greens, sliced onion, strips of roasted red peppers, black olives, EVOO, and salt and pepper.  Not that dinner needed these accoutrement  my simmering, saucy noodle nests of runny yolk baked eggs, bac"
     ]
   },
   "lunch": {
-    "name": "Pulled Pork Nachos",
-    "image": "https://img.spoonacular.com/recipes/1039293-556x370.jpg",
-    "cookTime": 490,
+    "name": "Pumpkin gnocchi with basil and Parmesan",
+    "image": "https://img.spoonacular.com/recipes/657312-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "1 bag nacho chips",
-      "1 cup pico de gallo",
-      "4 tbsp pork rub",
-      "1 2lb pork shoulder",
-      "1/2 cup shredded cheese",
-      "2 tbsp sour cream",
-      "2 cups vegetable broth"
+      "1kg pumpkin, baked and cooled",
+      "2 whole eggs",
+      "\u00bd tsp sea salt",
+      "\u00bc tsp pepper",
+      "Fresh basil leaves, chopped",
+      "250g wheat flour",
+      "250g corn flour",
+      "Olive oil",
+      "Prmesan or Grana Padano cheese, grated",
+      "Fresh basil leaves for garnish"
     ],
     "steps": [
-      "Clean the pork and pat dry.",
-      "Add the pork rub to the shoulder and season all over.",
-      "Place the pork shoulder into the crock pot and set the temperature to low.",
-      "Add in the vegetable broth and cook on low for 8-10 hours.",
-      "Remove from slow cooker and shred the pork. Top the nachos with the shredded pork, pico de gallo, shredded cheese, and sour cream if desired."
+      "Separate the meat and chop the pumpkin into a puree.",
+      "Add eggs, stir.",
+      "Add salt, pepper and chopped basil.",
+      "Add flour and knead a soft dough. If the dough is too sticky, add more flour - the amount depends on the water content of the pumpkin.",
+      "Divide the dough into equal rolls 3 cm thick and about 20 cm long.",
+      "Divide and cut each roll into a 2 cm long pieces.",
+      "Cook the gnocchi in a large pot in plenty of salted water. Gnocchi are cooked when they rise to the surface.",
+      "Remove them from the pot with a slotted spoon.",
+      "Pour hot olive oil over gnocchi or simply saut them in hot oil.",
+      "Serve sprinkled with cheese and fresh basil."
     ]
   },
   "dinner": {
-    "name": "Chicken Piccata With Angel Hair Pasta",
-    "image": "https://img.spoonacular.com/recipes/638248-556x370.jpg",
+    "name": "Easy Garlic Roast Leg Of Lamb With Rosemary and Parsley",
+    "image": "https://img.spoonacular.com/recipes/641973-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1/2 cup All Purpose Flour",
-      "1/3 pound Angel Hair Pasta",
-      "1 boneless Chicken Breast",
-      "2 Tablespoons Capers",
-      "1 cup Chicken Broth",
-      "2 tablespoons Fresh Basil, chiffonade",
-      "2 Garlic Cloves, finely diced",
-      "Kosher Salt and Black Pepper",
-      "1 teaspoon Lemon Zest, freshly grated",
-      "2 lemons",
-      "3 tablespoons Olive Oil",
-      "1/4 teaspoon Red Chili Flakes",
-      "1/2 cup Roma Tomatoes, diced",
-      "1 Tablespoon Unsalted Butter"
+      "1 bone-in leg of lamb (about 8 lbs)",
+      "5 garlic cloves, sliced",
+      "Extra virgin olive oil",
+      "1 large bunch flat leaf Italian parsley, finely chopped (about 1 cup)",
+      "1 sprig of fresh rosemary, finely chopped (about 1 tablespoon)",
+      "1 tablespoon kosher salt",
+      "Freshly-ground black pepper as needed"
     ],
     "steps": [
-      "Place  cup of flour in a shallow dish. Using a sharp knife, slice chicken breast in half.",
-      "Place a piece of wax paper on top of each piece of chicken and pound with a kitchen mallet until it is about  inch thin. Season the chicken well with salt and pepper.  Take the chicken and roll it into the flour, using your fingers to assist in adhering it to the meat. Carefully shake off excess flour. Repeat with second piece of chicken.In a large skillet, heat 2 tablespoons olive oil over medium heat. Slide chicken into the skillet and saute on each side until it becomes golden brown, about 3-4 minutes each side. Once chicken is done, transfer to a clean plate and tent with a sheet of aluminum foil.Begin boiling the pasta.Using the same skillet, add remaining olive oil and saute garlic until it becomes aromatic but not browned.",
-      "Add chili flakes, capers, lemon juice, lemon slices, zest, and chicken broth. Use a wooden spoon to scrape off the tasty brown bits from the bottom of the skillet. Raise the temperature to medium high heat and allow the liquid to reduce by almost half. While the liquid is reducing, use a fork to mash together remaining 1 tablespoon of flour and butter in a small bowl.",
-      "Whisk it into the reducing liquid and allow to cook for 1-2 minutes. Be sure to whisk out any lumps of flour. Check for seasonings and adjust with salt/pepper accordingly.",
-      "Drain the cooked pasta. Toss the pasta in the lemon caper sauce, tomatoes, and basil, reserving a few spoonfuls of sauce. Check for seasonings and adjust with salt/pepper accordingly. Plate pasta and top each with a piece of chicken. Spoon extra lemon caper sauce over the chicken and pasta.",
-      "Serve immediately."
+      "With the tip of a small sharp knife, poke holes in the leg of lamb about 1 1/2-inch deep. Into each hole, stuff one slice of garlic.",
+      "Rub the leg of lamb all over with olive oil, parsley and rosemary. Season well with Kosher salt and black pepper.",
+      "Heat oven to 425 degrees.",
+      "Place lamb in a roasting pan; roast 30 minutes. Reduce heat to 325 degrees, and baste the leg with any juices that have accumulated in the pan. Cook about 2 hours (total cooking time is about 20 minutes per pound), until an instant-read thermometer registers 130 degrees (medium) in the thickest part.",
+      "Remove roast from oven and allow to rest 15 minutes.",
+      "Transfer roast to a cutting board and let rest for 10 minutes.",
+      "Carve in thin slices, parallel to the bone and serve."
     ]
   }
 }
