@@ -1,95 +1,69 @@
 {
-  "date": "2026-05-31",
+  "date": "2026-06-01",
   "breakfast": {
-    "name": "Zucchini & Basil Frittata",
-    "image": "https://img.spoonacular.com/recipes/665691-556x370.jpg",
+    "name": "Tropical Breakfast Quinoa",
+    "image": "https://img.spoonacular.com/recipes/663853-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "12 leaves basil, chopped",
-      "1/2 cup cheddar cheese",
-      "3 eggs",
-      "1 tablespoon grapeseed oil",
-      "4 green onions",
-      "3/4 teaspoon salt",
-      "400g zucchini, grated"
+      "1 cup cooked quinoa",
+      "1/2 cup light coconut milk",
+      "3 tablespoons crushed pineapple",
+      "1/4 teaspoon cinnamon",
+      "1 teaspoon maple syrup",
+      "2 tablespoons toasted coconut",
+      "5 pecans",
+      "1/2 cup sliced strawberries",
+      "1 teaspoon balsamic vinegar"
     ],
     "steps": [
-      "Shred the zucchini with a box grater or a food processor.",
-      "Place shredded zucchini in a colander with a large bowl underneath.",
-      "Sprinkle with a little salt and allow some water to seep out of the zucchini, about 20 minutes. You can squeeze some of the water out with your hands if you're in a hurry. This part can be completed ahead of time and the shredded zucchini can stay in your refrigerator overnight if you would like to do this recipe in stages.In a large mixing bowl, add shredded zucchini, green onion, basil, cheddar cheese, and salt.  Stir to combine. Crack the eggs in a separate bowl and beat them.",
-      "Pour the egg mixture into the bowl with the veggies and stir to combine all ingredients. Preheat your oven to 350 degrees F.  In a 10 inch cast iron skillet, heat 1 to 2 tablespoons grape seed oil (or olive oil).",
-      "Spread the oil around, making sure the sides are nicely oiled as well.",
-      "Heat to medium then add the egg/zucchini mixture, and make sure the mixture is evenly distributed.    Cook until the egg begins to cook to the sides of the skillet, about 3 to 5 minutes. Use a pot holder to place skillet in the oven.",
-      "Bake 12 to 15 minutes until the center tests clean."
+      "In a medium size pot combine cooked quinoa, coconut milk, crushed pineapple, cinnamon and maple syrup; stir to combine. Bring to a boil and reduce heat. Cook for 5 minutes, stirring occasionally.",
+      "Top quinoa mixture with toasted coconut, pecans, sliced strawberries and balsamic vinegar."
     ]
   },
   "lunch": {
-    "name": "Creamy Curry Cheese and Macaroni With Langostino Tails and Black Truffle Oil",
-    "image": "https://img.spoonacular.com/recipes/640633-556x370.jpg",
+    "name": "Fried Asparagus",
+    "image": "https://img.spoonacular.com/recipes/643660-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "12 ounces Trader Joe's frozen langostino tails",
-      "4 oz fontina cheese",
-      "4 oz cheddar cheese",
-      "heavy cream",
-      "2 tablespoons butter, divided",
-      "1 white onion, \u00bd diced, \u00bd thinly sliced",
-      "flour",
-      "nutmeg",
-      "chili curry powder",
-      "2 cups uncooked fusili pasta",
-      "1/2 cup panko bread crumbs",
-      "fresh grated parmesan cheese",
-      "fresh arugula",
-      "an excellent EVOO",
-      "a high quality white balsamic vinegar",
-      "sea salt",
-      "cracked black pepper",
-      "black truffle oil, for garnish"
+      "1 bunch Asparagus",
+      "1/2 cup all purpose flour",
+      "2 eggs",
+      "1/2 teaspoon salt",
+      "1/8 teaspoon pepper",
+      "1 1/2 teaspoons parsley",
+      "1/2 cup grating cheese",
+      "3/4 cup breadcrumbs",
+      "vegetable oil for frying"
     ],
     "steps": [
-      "Trader Joes came through: their 12 oz bag of frozen langostino tails are an excellent alternative to lobster, but more indulgent than shrimp.  Id also use crawfish tails; or Maine shrimp, since theyre so tiny and sweet, and so unlike their bigger, brinier, ubiquitous tiger cousins.  See how sweet and pink and plump they are?  I defrost them, rinse them, then drain them over a screen set over a bowl, to separate all the liquids from the meat.",
-      "Since I only have one suitable pan (my Ikeawok), I start with my breadcrumbs, which I can set aside for use later.  I melt a tablespoon of butter of medium high heat until just turning brown",
-      "I throw my panko breadcrumbs, about 1/2 a cup, into my hot butter, and toss in my wok",
-      "Until all the crumbs are uniformly toasted.  I remove them from the pan, setting them aside on some parchment paper, where I flavor them with salt and pepper, until I need them later.",
-      "Along with fontina cheese, I have a nice mild Wisconsin cheddar.  I shred about 4 packed ounces of each onto a plate.",
-      "OK, I shred about 6 oz of each; Clayton is on the prowl, and he pinches when (he thinks) Im not looking.",
-      "Along with grated nutmeg, simple salt and pepper, and a dash of chili curry powder, these are the spice components of my sauce.  To me, the best macaroni and cheeses are the simple ones: firm pasta, flavorful cheesy sauce, and a crisp crust.  The addition of too many flavors and veggies just mucks up perfection.",
-      "But the addition of  1/2 a white onion, nicely minced, is a must  shallot would do nicely, too, or garlic.  In this case, we went simple",
-      "And sweated and softened the minced onion (about 1/2 cup) in a tablespoon of sizzling (but not browned) melted butter.",
-      "After a moment, I add a tablespoon of flour to the sizzling butter, and stir well to make a roux.",
-      "Finally, I add my cream, and bring this to a simmer to thicken.  See how the butter-sauteed onions float to the top?  They will be tender little bursts of flavor on the tongue later in the meal.  Stir well, and thicken over medium heat.  My pasta is cooking on the back burner, and will be ready in a few minutes.",
-      "Meanwhile, I throw my cheese into the sauce, and",
-      "I briskly whisk over medium heat to melt and blend.",
-      "I add my just slightly undercooked pasta to my cheese sauce, and blend well.  I then add my drained langostino tails, mixing well, and simmering until heated through.",
-      "Finally, I spoon my sauce, seafood, and noodles into buttered 8oz ramekins.  I sprinkle a healthy portion of my breadcrumbs over the top of each dish, then place in a 350 oven to bake through for 15-20 minutes.",
-      "For the last five minutes, I put a cookie sheet, lined with parchment paper, and mounded with fresh shredded parmesan cheese, into the oven to make some cheesy croutons for a simple, snappy, arugula, onion, salted kumato tomato, EVOO, and white balsamic vinegar salad to serve on the side.",
-      "Right before service, I dribble some black truffle oil, a delicious gift given to my by my close friend and superpartner, Tom, over the top of my bubbling baked crispy topped macaroni and cheese.  My salad is fresh and light and sharp, topped with a wafery salty savory parmesan cracker, the perfect compliment to my rich, fragrant, slightly hot and wonderfully spiced creamy macaroni and cheese, studded as it is with sweet, briny mouthfuls of tender langostino tails, and topped with just the right buttered toast texture.  Clayton and I dig in with abandon: our noses fill with the umame aroma of melting cheese, our mouths with the gooey heat of pasta cream, and our brains fire synapses hard-wired to supreme excitement and titilla"
+      "Bring a medium saucepan with lightly salted water to a boil. Prepare an ice bath (place several cubes with cold water in a bowl).",
+      "Place the asparagus into the boiling water for 2 to 4 minutes depending on the thickness of the stalks (they should just be pliable but not fully cooked).",
+      "Remove immediately to the ice bath; when cool, remove to a dish and set aside. Or, you can cook them in the steaming bags for 2 minutes and 30 seconds.",
+      "In a small dish (square if possible) beat the eggs, salt, pepper, parsley, and grating cheese together. On your counter or work surface, lay out two paper dishes or wax paper sheets and place the bowl with the egg mixture between them.",
+      "Fill the first dish with flour and the second with breadcrumbs. Dip the cooled asparagus into the flour, then the egg mixture and finally into the plain breadcrumbs.",
+      "Layer the breaded asparagus on a platter lined with waxed paper, and place waxed paper between the layers of asparagus.",
+      "Heat a large frying pan with about 1-inch of oil in it. When the oil is hot, fry the asparagus until golden brown.",
+      "Drain on paper towels.",
+      "Place on a serving platter.",
+      "Serve immediately, or you can serve them at room temperature as well."
     ]
   },
   "dinner": {
-    "name": "Easy Eggplant Parmesan",
-    "image": "https://img.spoonacular.com/recipes/641962-556x370.jpg",
+    "name": "Bombay Potatoes",
+    "image": "https://img.spoonacular.com/recipes/635642-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3 tablespoons olive oil",
-      "1 onion, chopped",
-      "1 garlic clove, minced",
-      "1/2 jar pasta sauce",
-      "1 1/2 pounds eggplant, sliced",
-      "2 cups bag of Italian Style Cheese",
-      "1 cup basil leaves, chopped"
+      "2 tablespoons brown mustard seeds",
+      "2 1/2 tablespoons cooking oil",
+      "coriander leaf for garnishing",
+      "3 large potatoes",
+      "1/2 teaspoon salt",
+      "1 teaspoon turmeric powder"
     ],
     "steps": [
-      "Put the eggplant on a baking sheet and brush with olive oil.",
-      "Place under the broiler until soft.",
-      "Remove and allow to cool.",
-      "Meanwhile, heat the sauce in a small saucepan.",
-      "Heat the remaining oil and cook the onion for 5 minutes. Then add the garlic and cook for an additional minute.",
-      "Add the onion and garlic to the sauce.",
-      "Arrange the eggplant across the bottom of a 8 x 6 baking dish and then scatter cheese on top. Repeat layers until you run out of eggplant. Finish off with sauce, basil and remaining cheese.",
-      "Bake for 40 minutes and 37",
-      "Optional: If you prefer you can fry the eggplant in a bit of olive oil. Then, soak up oil on a paper towel."
+      "Peel the potatoes and dice into bite sized pieces. fill a deep pan with water and boil the potatoes with a pinch of salt until they have cooked throughout.When the potatoes are done rinse under cold water, making sure the potatoes do not break.In a non-stick frying pan, heat up the oil. Once the oil is hot, (not so hot that a blue haze appears), add the mustard seeds and cover with a lid.Lower the gas to the medium setting. The seeds will soon start to pop; lower the heat and add the chili and turmeric power and stir. Ensure the powder mixture and seeds do not burn!",
+      "Add the potatoes to the pungent oil and stir slowly for a minute until the potatoes are covered in the seeds and they turn a light yellow due to the turmeric.",
+      "Remove from the heat and garnish with coriander."
     ]
   }
 }
