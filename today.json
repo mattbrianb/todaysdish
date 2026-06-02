@@ -1,69 +1,93 @@
 {
-  "date": "2026-06-01",
+  "date": "2026-06-02",
   "breakfast": {
-    "name": "Tropical Breakfast Quinoa",
-    "image": "https://img.spoonacular.com/recipes/663853-556x370.jpg",
+    "name": "Savory Cheese Dill Scones",
+    "image": "https://img.spoonacular.com/recipes/659463-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 cup cooked quinoa",
-      "1/2 cup light coconut milk",
-      "3 tablespoons crushed pineapple",
-      "1/4 teaspoon cinnamon",
-      "1 teaspoon maple syrup",
-      "2 tablespoons toasted coconut",
-      "5 pecans",
-      "1/2 cup sliced strawberries",
-      "1 teaspoon balsamic vinegar"
+      "3/4 teaspoon baking powder",
+      "1/2 teaspoon and a pinch of baking soda",
+      "1/2 teaspoon freshly ground black pepper",
+      "1/2 cup (or 1 stick) and 3 tablespoons cold butter, sliced",
+      "1 cup buttermilk",
+      "1/2 cup coarsely grated Cheddar cheese",
+      "1/2 cup cottage cheese",
+      "1 tablespoon chopped fresh dill",
+      "1 large shallot, chopped",
+      "1 tablespoon sugar",
+      "2 1/4 cups unbleached all-purpose flour",
+      "1/2 cup whole wheat flour"
     ],
     "steps": [
-      "In a medium size pot combine cooked quinoa, coconut milk, crushed pineapple, cinnamon and maple syrup; stir to combine. Bring to a boil and reduce heat. Cook for 5 minutes, stirring occasionally.",
-      "Top quinoa mixture with toasted coconut, pecans, sliced strawberries and balsamic vinegar."
+      "Preheat oven to 375F with the rack in middle position.Make the Scone"
     ]
   },
   "lunch": {
-    "name": "Fried Asparagus",
-    "image": "https://img.spoonacular.com/recipes/643660-556x370.jpg",
+    "name": "French Onion Marsala Soup",
+    "image": "https://img.spoonacular.com/recipes/643362-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 bunch Asparagus",
-      "1/2 cup all purpose flour",
-      "2 eggs",
-      "1/2 teaspoon salt",
-      "1/8 teaspoon pepper",
-      "1 1/2 teaspoons parsley",
-      "1/2 cup grating cheese",
-      "3/4 cup breadcrumbs",
-      "vegetable oil for frying"
+      "1/4 cup butter",
+      "2 tablespoons olive oil",
+      "4 cups onions, sliced",
+      "3 (14 oz) cans beef broth",
+      "1/2 cup marsala wine",
+      "1 teaspoon dried thyme",
+      "salt and pepper to taste",
+      "2 heaping tbsp sugar",
+      "2 bags Texas Toast croutons",
+      "8 slices provolone cheese",
+      "2 slices Swiss cheese, diced",
+      "1/4 cup grated Parmesan cheese"
     ],
     "steps": [
-      "Bring a medium saucepan with lightly salted water to a boil. Prepare an ice bath (place several cubes with cold water in a bowl).",
-      "Place the asparagus into the boiling water for 2 to 4 minutes depending on the thickness of the stalks (they should just be pliable but not fully cooked).",
-      "Remove immediately to the ice bath; when cool, remove to a dish and set aside. Or, you can cook them in the steaming bags for 2 minutes and 30 seconds.",
-      "In a small dish (square if possible) beat the eggs, salt, pepper, parsley, and grating cheese together. On your counter or work surface, lay out two paper dishes or wax paper sheets and place the bowl with the egg mixture between them.",
-      "Fill the first dish with flour and the second with breadcrumbs. Dip the cooled asparagus into the flour, then the egg mixture and finally into the plain breadcrumbs.",
-      "Layer the breaded asparagus on a platter lined with waxed paper, and place waxed paper between the layers of asparagus.",
-      "Heat a large frying pan with about 1-inch of oil in it. When the oil is hot, fry the asparagus until golden brown.",
-      "Drain on paper towels.",
-      "Place on a serving platter.",
-      "Serve immediately, or you can serve them at room temperature as well."
+      "Melt butter with olive oil in a large pot over medium heat.",
+      "Add onions and stir continually until translucent.",
+      "Add beef broth, marsala and thyme. Simmer for 30 minutes.",
+      "Add sugar and season with salt and pepper. Be careful not to over salt!",
+      "Ladle soup into oven-safe bowls and place a handful of croutons in each.",
+      "Sprinkle parmesan and swiss cheese and layer 2 slices of provolone on top.",
+      "Place bowls on cookie sheet and broil in the preheated oven until cheese bubbles and browns."
     ]
   },
   "dinner": {
-    "name": "Bombay Potatoes",
-    "image": "https://img.spoonacular.com/recipes/635642-556x370.jpg",
+    "name": "17 Bean White Chicken Chili",
+    "image": "https://img.spoonacular.com/recipes/631843-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 tablespoons brown mustard seeds",
-      "2 1/2 tablespoons cooking oil",
-      "coriander leaf for garnishing",
-      "3 large potatoes",
-      "1/2 teaspoon salt",
-      "1 teaspoon turmeric powder"
+      "1 pound Assorted Dry Beans, Cooked According to Package Directions",
+      "5 cups Chicken Broth",
+      "3 Chicken Breasts",
+      "3 tablespoons Cornstarch",
+      "3 tablespoons Cold Water",
+      "1 cup Corn",
+      "1 Bell Pepper, Chopped",
+      "1/2 Large Onion, Chopped",
+      "2 cloves Garlic, Minced",
+      "1 can Diced Green Chiles",
+      "1 Tomato, Chopped",
+      "1/2 Lime, Squeezed",
+      "1 tablespoon Cumin",
+      "1 tablespoon Chili Powder",
+      "1 teaspoon Oregano",
+      "1/4 teaspoon Crushed Red Pepper",
+      "1/4 teaspoon Pepper",
+      "1 Small Bunch Cilantro, Chopped",
+      "Salt to Taste",
+      "1 teaspoon Corriander",
+      "1 teaspoon Corriander"
     ],
     "steps": [
-      "Peel the potatoes and dice into bite sized pieces. fill a deep pan with water and boil the potatoes with a pinch of salt until they have cooked throughout.When the potatoes are done rinse under cold water, making sure the potatoes do not break.In a non-stick frying pan, heat up the oil. Once the oil is hot, (not so hot that a blue haze appears), add the mustard seeds and cover with a lid.Lower the gas to the medium setting. The seeds will soon start to pop; lower the heat and add the chili and turmeric power and stir. Ensure the powder mixture and seeds do not burn!",
-      "Add the potatoes to the pungent oil and stir slowly for a minute until the potatoes are covered in the seeds and they turn a light yellow due to the turmeric.",
-      "Remove from the heat and garnish with coriander."
+      "Cook your beans according to package directions.",
+      "Add the broth to a large pot and bring to a boil.",
+      "Add in the chicken and cook through.",
+      "Shred chicken and set aside.",
+      "Mix together the water and cornstarch.",
+      "Add to broth and boil for a minute until slightly thickened.",
+      "Add the chicken back into the broth along with the corn, bell pepper, onion, garlic, chiles, tomato, and lime.",
+      "Add in the spices; the cumin, chile powder, oregano, coriander, crushed pepper, and pepper.",
+      "Add the cooked beans into the chili along with the cilantro.",
+      "Salt to taste and let simmer on low heat covered until ready to eat."
     ]
   }
 }
