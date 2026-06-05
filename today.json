@@ -1,78 +1,84 @@
 {
-  "date": "2026-06-04",
+  "date": "2026-06-05",
   "breakfast": {
-    "name": "Apple Pie Smoothie",
-    "image": "https://img.spoonacular.com/recipes/632575-556x370.jpg",
-    "cookTime": 5,
+    "name": "Chive and dill muffins",
+    "image": "https://img.spoonacular.com/recipes/638775-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "1 tablespoon unsalted almond butter",
-      "1 tablespoon apple sauce",
-      "1/2 cup vanilla fat free yogurt",
-      "1 tablespoon 7 grain granola",
-      "1/4 teaspoon Ground cinnamon",
-      "1 teaspoon honey",
-      "ice cubes",
-      "1 teaspoon Maple syrup",
-      "1/2 cup milk",
-      "1 red delicious apple, cut into pieces"
+      "1 cup all purpose flour",
+      "1 cup yellow cornmeal",
+      "1 Tbs sugar",
+      "2 tsp baking powder",
+      "1 tsp salt",
+      "\u00bd tsp baking soda",
+      "\u00bd tsp cayenne pepper",
+      "\u00bc cup fresh chives and dill, chopped",
+      "1 \u00bd cups plain yogurt",
+      "2 large eggs",
+      "3 Tbs butter, melted"
     ],
     "steps": [
-      "Combine all ingredients in a blender and pulse until smooth.",
-      "Serve immediately."
+      "Whisk flour, cornmeal, sugar, baking powder, salt, baking soda, and cayenne pepper in medium bowl. Stir in chives and dill.",
+      "Whisk yogurt, eggs, and melted butter in another medium bowl.",
+      "Add yogurt mixture to dry ingredients and stir just until blended.",
+      "Divide batter among greased (or silicone) muffin cups, using about 1/3 cup batter for each standard muffin cup.",
+      "Bake at 220C for 20 minutes or until muffins are puffed and golden (trick with a toothpick).",
+      "Let muffins cool in muffin cups, then remove from the cups and serve warm."
     ]
   },
   "lunch": {
-    "name": "Dragon Salad - Couscous Summer Salad",
-    "image": "https://img.spoonacular.com/recipes/641631-556x370.jpg",
-    "cookTime": 90,
+    "name": "Chimichurri Skirt Steak with Grilled Asparagus",
+    "image": "https://img.spoonacular.com/recipes/638626-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "1/2 teaspoon black pepper",
-      "2 pints red grape or cherry tomatoes",
-      "2 3/4 cups chicken broth (vegetable broth would be fine too)",
-      "1/4 cup Extra Virgin Olive Oil",
-      "1/3 pound feta cheese",
-      "1/4 cup torn or chopped fresh flat leaf parsley",
-      "1/4 cup fresh mint",
-      "3 large garlic cloves, unpeeled",
-      "juice of 2 lemons",
-      "1/2 cup Kalamata olives",
-      "1 teaspoon salt (for sauce)",
-      "1/4 cup warm water",
-      "2 1/4 cups couscous (regular or whole wheat)"
+      "1 pound green or white asparagus, woody ends snapped off & discarded",
+      "1/2 teaspoon chili pepper flakes",
+      "1 cup flat leaf parsley, lightly packed & rough chopped",
+      "\u00bc cup fresh mint leaves",
+      "3 to 5 garlic cloves, rough chopped",
+      "4 garlic cloves, peeled",
+      "Kosher salt",
+      "3 tablespoons lemon juice",
+      "1/4 cup of extra-virgin olive oil",
+      "\u00bc cup fresh oregano leaves",
+      "1 teaspoon freshly ground pepper",
+      "Freshly cracked black pepper",
+      "2 tablespoons Red wine vinegar",
+      "2 tablespoons shallot, chopped",
+      "2 skirt steaks"
     ],
     "steps": [
-      "Preheat oven to 250 degrees Farenheit",
-      "Halve tomatoes through stem ends ( from top to bottom, not across the middle) and arrange, cut side up, in one layer in a large, shallow baking pan.",
-      "Add garlic to pan and roast in the middle of the oven until tomatoes are slightly shriveled around the edges, about 1 hour.Cool in pan on rack for 30 minutes, or until no longer hot.While tomatoes are roasting, bring the broth to a boil in a 3 qt. saucepan. Stir in couscous, let simmer in pan for about two minutes.Cover pan and remove from heat, let stand for 5-10 minutes (or, if you're using boxed couscous, just follow the cooking directions on the package).When couscous has cooled, run your (clean!) hands through it to break up any clumps.When garlic is cool enough to handle, peel it the garlic and using a small knife chop the garlic very finely.",
-      "Mix the garlic with the olive oil, warm water and the juice of one lemon in a small bowl or liquid measuring cup and whisk until combined.It's best to get this as well mixed as possible, for which I broke out my Mexican molcajete grinding bowl. But a blender or food processor would work just as well."
+      "Place all chimichurri sauce ingredients except for the olive oil in a food processor &amp; pulse until well chopped. While the food processor is going, slowly pour the olive oil into the mixture until blended.  Reserve half of the sauce to serve on the side with the meal.Season skirt steaks with salt &amp; pepper on bother sides.  Spoon the remaining chimichurri sauce over the steaks &amp; let marinate for 30 minutes up to overnight.Pre-heat the grill to 350 to 400 F.In a plastic resealable bag, add asparagus, olive oil, garlic, salt &amp; pepper.  Shake to coat &amp; place in a grill basket.",
+      "Place the steak &amp; grill basket of asparagus directly over a hot grill.  Gently toss the asparagus for even grilling &amp; baste with garlic, olive oil mixture  10 minutes.Grill the skirt steak to desired temperature  5 to 8 minutes per side.",
+      "Remove from grill &amp; let steak rest for 10 minutes before slice long strips.  Spoon reserved chimichurri sauce over steak &amp; serve with asparagus on the side."
     ]
   },
   "dinner": {
-    "name": "Pasta With Chicken and Broccoli",
-    "image": "https://img.spoonacular.com/recipes/654901-556x370.jpg",
+    "name": "Asian Chicken and Broccoli With Chili Garlic Sauce",
+    "image": "https://img.spoonacular.com/recipes/632812-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1/4 cup olive oil",
-      "1/2 pound boneless chicken breasts cut in \u00bd in strips",
-      "1 pinch red pepper flakes",
-      "1/2 pound bow tie pasta or small lasagna noodles, (cooked)",
-      "2 garlic cloves, minced",
-      "1 1/2 cups broccoli florets",
-      "1 teaspoon dried basil leaves",
-      "1/4 cup white wine",
-      "3/4 cup chicken broth",
-      "Grated parmesan cheese"
+      "1 tablespoon sesame oil",
+      "4 cups broccoli florets",
+      "2 cups chicken breast, cooked and chopped",
+      "1/4 cup low sodium chicken broth",
+      "tablespoons rice vinegar",
+      "1 tablespoon Mirin",
+      "1/2 cup water",
+      "1/2 teaspoon chili garlic sauce",
+      "1 tablespoon fish sauce",
+      "1 teaspoon soy sauce",
+      "1/2 tablespoon cornstarch",
+      "1 cup green onion, sliced",
+      "2 cups brown basmati rice, cooked"
     ],
     "steps": [
-      "In a large skillet, heat oil over medium heat.",
-      "Sautee garlic for about one minute, stirring constantly. DO NOT BURN.",
-      "Add the chicken and cook until well done.",
-      "Add the broccoli and cook until crisp but tender.",
-      "Add basil; red pepper; salt and pepper to taste; wine and chicken broth. cook for about 5 minutes.",
-      "Add the cooked and drained pasta to the skillet and toss to combine.",
-      "Heat for 1 to 2 minutes",
-      "Serve.",
-      "Top with grated Parmesan cheese if desired."
+      "Combine rice vinegar, Mirin, water, chili garlic sauce, fish sauce, soy sauce and cornstarch in a bowl.",
+      "Preheat a large skillet over medium-high heat and spray with cooking spray.",
+      "Add sesame oil and stir fry broccoli for 3  4 minutes until crisp-tender.",
+      "Add 1/4 cup chicken broth if needed to keep from burning.",
+      "Add cooked chicken and sauce. Cook another 3  4 minutes until sauce thickens and chicken is heated through.",
+      "Serve with basmati rice."
     ]
   }
 }
