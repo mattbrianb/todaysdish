@@ -1,84 +1,67 @@
 {
-  "date": "2026-06-05",
+  "date": "2026-06-06",
   "breakfast": {
-    "name": "Chive and dill muffins",
-    "image": "https://img.spoonacular.com/recipes/638775-556x370.jpg",
-    "cookTime": 45,
+    "name": "Apple Pie Smoothie",
+    "image": "https://img.spoonacular.com/recipes/632575-556x370.jpg",
+    "cookTime": 5,
     "ingredients": [
-      "1 cup all purpose flour",
-      "1 cup yellow cornmeal",
-      "1 Tbs sugar",
-      "2 tsp baking powder",
-      "1 tsp salt",
-      "\u00bd tsp baking soda",
-      "\u00bd tsp cayenne pepper",
-      "\u00bc cup fresh chives and dill, chopped",
-      "1 \u00bd cups plain yogurt",
-      "2 large eggs",
-      "3 Tbs butter, melted"
+      "1 tablespoon unsalted almond butter",
+      "1 tablespoon apple sauce",
+      "1/2 cup vanilla fat free yogurt",
+      "1 tablespoon 7 grain granola",
+      "1/4 teaspoon Ground cinnamon",
+      "1 teaspoon honey",
+      "ice cubes",
+      "1 teaspoon Maple syrup",
+      "1/2 cup milk",
+      "1 red delicious apple, cut into pieces"
     ],
     "steps": [
-      "Whisk flour, cornmeal, sugar, baking powder, salt, baking soda, and cayenne pepper in medium bowl. Stir in chives and dill.",
-      "Whisk yogurt, eggs, and melted butter in another medium bowl.",
-      "Add yogurt mixture to dry ingredients and stir just until blended.",
-      "Divide batter among greased (or silicone) muffin cups, using about 1/3 cup batter for each standard muffin cup.",
-      "Bake at 220C for 20 minutes or until muffins are puffed and golden (trick with a toothpick).",
-      "Let muffins cool in muffin cups, then remove from the cups and serve warm."
+      "Combine all ingredients in a blender and pulse until smooth.",
+      "Serve immediately."
     ]
   },
   "lunch": {
-    "name": "Chimichurri Skirt Steak with Grilled Asparagus",
-    "image": "https://img.spoonacular.com/recipes/638626-556x370.jpg",
+    "name": "Buttermilk Skillet Fried Chicken",
+    "image": "https://img.spoonacular.com/recipes/636574-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 pound green or white asparagus, woody ends snapped off & discarded",
-      "1/2 teaspoon chili pepper flakes",
-      "1 cup flat leaf parsley, lightly packed & rough chopped",
-      "\u00bc cup fresh mint leaves",
-      "3 to 5 garlic cloves, rough chopped",
-      "4 garlic cloves, peeled",
-      "Kosher salt",
-      "3 tablespoons lemon juice",
-      "1/4 cup of extra-virgin olive oil",
-      "\u00bc cup fresh oregano leaves",
-      "1 teaspoon freshly ground pepper",
-      "Freshly cracked black pepper",
-      "2 tablespoons Red wine vinegar",
-      "2 tablespoons shallot, chopped",
-      "2 skirt steaks"
+      "2 cups buttermilk",
+      "3-4 pounds of chicken pieces : drumsticks, tights and breast",
+      "1 tablespoon cornstarch",
+      "1 Egg",
+      "1 tablespoon paprika",
+      "1 tablespoon pepper",
+      "1/4 c. plain flour",
+      "1/2 teaspoon salt",
+      "Vegetable oil for frying"
     ],
     "steps": [
-      "Place all chimichurri sauce ingredients except for the olive oil in a food processor &amp; pulse until well chopped. While the food processor is going, slowly pour the olive oil into the mixture until blended.  Reserve half of the sauce to serve on the side with the meal.Season skirt steaks with salt &amp; pepper on bother sides.  Spoon the remaining chimichurri sauce over the steaks &amp; let marinate for 30 minutes up to overnight.Pre-heat the grill to 350 to 400 F.In a plastic resealable bag, add asparagus, olive oil, garlic, salt &amp; pepper.  Shake to coat &amp; place in a grill basket.",
-      "Place the steak &amp; grill basket of asparagus directly over a hot grill.  Gently toss the asparagus for even grilling &amp; baste with garlic, olive oil mixture  10 minutes.Grill the skirt steak to desired temperature  5 to 8 minutes per side.",
-      "Remove from grill &amp; let steak rest for 10 minutes before slice long strips.  Spoon reserved chimichurri sauce over steak &amp; serve with asparagus on the side."
+      "Clean all the chicken pieces well, remove skin if desired. Using 1 tablespoon salt and  tablespoon pepper, season the chicken well all over.In a medium bowl whisk the buttermilk, egg and  cup of water.In a large glass baking pan mix together: flour,1 tablespoon salt,  tablespoon pepper, paprika and cornstarch.",
+      "Mix well.Dip chicken in buttermilk then on flour mixture.  shaking off any excess flour.In a large heavy bottom skillet heat the oil to a depth of . When oil is hot but not burning add the chicken to the skillet making sure that it is not crowding the pan. Fry chicken turning with thongs so it brown evenly. About 10 to 13 minutes.When the chicken is done place on a paper plate and serve immediately."
     ]
   },
   "dinner": {
-    "name": "Asian Chicken and Broccoli With Chili Garlic Sauce",
-    "image": "https://img.spoonacular.com/recipes/632812-556x370.jpg",
+    "name": "Marinated Flat Iron Steak",
+    "image": "https://img.spoonacular.com/recipes/651034-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 tablespoon sesame oil",
-      "4 cups broccoli florets",
-      "2 cups chicken breast, cooked and chopped",
-      "1/4 cup low sodium chicken broth",
-      "tablespoons rice vinegar",
-      "1 tablespoon Mirin",
-      "1/2 cup water",
-      "1/2 teaspoon chili garlic sauce",
-      "1 tablespoon fish sauce",
-      "1 teaspoon soy sauce",
-      "1/2 tablespoon cornstarch",
-      "1 cup green onion, sliced",
-      "2 cups brown basmati rice, cooked"
+      "3 tablespoons Balsamic vinegar",
+      "1 tablespoon Dijon mustard",
+      "1 2 lb Flat Iron Steak",
+      "2 garlic cloves chopped",
+      "Grated Ginger",
+      "Fresh herbs: rosemary, sage, marjoram, thyme, chives ( anything in hand)",
+      "Grated zest of 1 lemon",
+      "2 lemons juiced",
+      "1 tablespoon mayonnaise",
+      "1/2 cup Olive oil",
+      "to taste salt and pepper"
     ],
     "steps": [
-      "Combine rice vinegar, Mirin, water, chili garlic sauce, fish sauce, soy sauce and cornstarch in a bowl.",
-      "Preheat a large skillet over medium-high heat and spray with cooking spray.",
-      "Add sesame oil and stir fry broccoli for 3  4 minutes until crisp-tender.",
-      "Add 1/4 cup chicken broth if needed to keep from burning.",
-      "Add cooked chicken and sauce. Cook another 3  4 minutes until sauce thickens and chicken is heated through.",
-      "Serve with basmati rice."
+      "Cut the flat iron steak lengthwise to form two equal strips.",
+      "Place all the above ingredients in a large baking pan, or Ziploc bag.",
+      "Add the meat to it and place in the refrigerator for an hour or more.Start the BBQ . When temperature reaches high, add the steaks. Cover and cook for 3 minutes.Turn the steaks and cook the other side for another 3 minutes, or to required doneness."
     ]
   }
 }
