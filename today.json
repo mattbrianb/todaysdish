@@ -1,67 +1,84 @@
 {
-  "date": "2026-06-06",
+  "date": "2026-06-07",
   "breakfast": {
-    "name": "Apple Pie Smoothie",
-    "image": "https://img.spoonacular.com/recipes/632575-556x370.jpg",
-    "cookTime": 5,
+    "name": "Skinny Green Monster Smoothie",
+    "image": "https://img.spoonacular.com/recipes/660227-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "1 tablespoon unsalted almond butter",
-      "1 tablespoon apple sauce",
-      "1/2 cup vanilla fat free yogurt",
-      "1 tablespoon 7 grain granola",
-      "1/4 teaspoon Ground cinnamon",
-      "1 teaspoon honey",
-      "ice cubes",
-      "1 teaspoon Maple syrup",
-      "1/2 cup milk",
-      "1 red delicious apple, cut into pieces"
+      "1 small frozen ripe banana, peeled",
+      "2 cups baby spinach",
+      "1 tbsp Peanut Butter",
+      "3/4 cup unsweetened vanilla almond milk",
+      "1/2 cup plain fat-free Greek yogurt"
     ],
     "steps": [
-      "Combine all ingredients in a blender and pulse until smooth.",
-      "Serve immediately."
+      "Place all ingredients in a blender and blend until smooth."
     ]
   },
   "lunch": {
-    "name": "Buttermilk Skillet Fried Chicken",
-    "image": "https://img.spoonacular.com/recipes/636574-556x370.jpg",
+    "name": "Japanese Fried Rice",
+    "image": "https://img.spoonacular.com/recipes/648474-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 cups buttermilk",
-      "3-4 pounds of chicken pieces : drumsticks, tights and breast",
-      "1 tablespoon cornstarch",
-      "1 Egg",
-      "1 tablespoon paprika",
-      "1 tablespoon pepper",
-      "1/4 c. plain flour",
-      "1/2 teaspoon salt",
-      "Vegetable oil for frying"
+      "1 cup frozen green peas (thawed)",
+      "3 cups cooked Japanese rice",
+      "1 small carrot, finely chopped",
+      "2 garlic cloves, finely chopped",
+      "1/4 pound boneless chicken breast, cut into small cubes",
+      "2 tablespoons neutral oil (canola, grapeseed)",
+      "1 tablespoon tonkatsu sauce (vegetable and fruit sauce. I use Bull-Dog)",
+      "2 tablespoons soy sauce",
+      "1/4 teaspoon freshly ground black pepper",
+      "1/4 teaspoon kosher salt",
+      "2 eggs"
     ],
     "steps": [
-      "Clean all the chicken pieces well, remove skin if desired. Using 1 tablespoon salt and  tablespoon pepper, season the chicken well all over.In a medium bowl whisk the buttermilk, egg and  cup of water.In a large glass baking pan mix together: flour,1 tablespoon salt,  tablespoon pepper, paprika and cornstarch.",
-      "Mix well.Dip chicken in buttermilk then on flour mixture.  shaking off any excess flour.In a large heavy bottom skillet heat the oil to a depth of . When oil is hot but not burning add the chicken to the skillet making sure that it is not crowding the pan. Fry chicken turning with thongs so it brown evenly. About 10 to 13 minutes.When the chicken is done place on a paper plate and serve immediately."
+      "In a pan over medium heat, add oil, garlic and cook for a minute.",
+      "Add chopped carrots and cook for 2 minutes.",
+      "Add chicken and cook for 2-3 minutes, until the chicken is cooked through.",
+      "Add rice and peas and mix well.",
+      "Add soy sauce, tonkatsu sauce, black pepper and salt, and mix well. Push the rice to one side and break the eggs on the clear side. Slowly scramble the eggs and incorporate with the rice.",
+      "Serve!"
     ]
   },
   "dinner": {
-    "name": "Marinated Flat Iron Steak",
-    "image": "https://img.spoonacular.com/recipes/651034-556x370.jpg",
+    "name": "Coffee-Infused Bbq Baby Back Ribs",
+    "image": "https://img.spoonacular.com/recipes/639893-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3 tablespoons Balsamic vinegar",
-      "1 tablespoon Dijon mustard",
-      "1 2 lb Flat Iron Steak",
-      "2 garlic cloves chopped",
-      "Grated Ginger",
-      "Fresh herbs: rosemary, sage, marjoram, thyme, chives ( anything in hand)",
-      "Grated zest of 1 lemon",
-      "2 lemons juiced",
-      "1 tablespoon mayonnaise",
-      "1/2 cup Olive oil",
-      "to taste salt and pepper"
+      "4 teaspoons chile powder",
+      "2 teaspoons dried thyme",
+      "2 teaspoons ground cumin",
+      "2 teaspoons garlic powder",
+      "2 teaspoons salt",
+      "1 teaspoon pepper",
+      "1/2 teaspoon cayenne",
+      "2 rack baby back ribs",
+      "1 teaspoon liquid smoke",
+      "1 Tb. oil",
+      "3 cloves garlic, minced",
+      "3/4 cup cider vinegar",
+      "1/2 cup soy sauce",
+      "28 ounces can tomato puree",
+      "3 Tb. molasses",
+      "1 cup brown sugar",
+      "2 teaspoons instant coffee granules",
+      "2 teaspoons cumin",
+      "2 Tb. Dijon mustard",
+      "2 teaspoons paprika"
     ],
     "steps": [
-      "Cut the flat iron steak lengthwise to form two equal strips.",
-      "Place all the above ingredients in a large baking pan, or Ziploc bag.",
-      "Add the meat to it and place in the refrigerator for an hour or more.Start the BBQ . When temperature reaches high, add the steaks. Cover and cook for 3 minutes.Turn the steaks and cook the other side for another 3 minutes, or to required doneness."
+      "Preheat the oven to *35",
+      "Mix the first seven ingredients in a small bowl.",
+      "Cut each rack in several pieces and rub the spices over all the rib sections. You can leave the ribs whole if you like the way they look better--I just think they are easier to handle on the grill in smaller pieces!",
+      "Pour 4 cups of water and 1 tsp. of liquid smoke in a roasting pan.",
+      "Place the ribs in the pan, top up. Tightly cover the pan with foil and bake for 2 hours.",
+      "Remove from the oven and rest until ready to grill. Meanwhile, add 1 Tb. oil to a sauce pan over medium heat.",
+      "Add the garlic and saut for 1-2 minutes. Then add the rest of the ingredients for the BBQ sauce to the sauce pan. Simmer for at least 30 minutes, stirring occasionally.",
+      "Heat a grill over medium-low heat.",
+      "Brush the ribs completely with BBQ sauce.",
+      "Place them on the grill and cook for 20 minutes, turning and brushing every 5 minutes until the desired bark has developed.",
+      "It's fun to make your own BBQ sauce. But in a pinch, buy a bottled variety you like and simmer for a few minutes with the coffee granules!"
     ]
   }
 }
