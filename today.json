@@ -1,84 +1,77 @@
 {
-  "date": "2026-06-07",
+  "date": "2026-06-08",
   "breakfast": {
-    "name": "Skinny Green Monster Smoothie",
-    "image": "https://img.spoonacular.com/recipes/660227-556x370.jpg",
-    "cookTime": 45,
+    "name": "Protein Strawberry Smoothie",
+    "image": "https://img.spoonacular.com/recipes/644044-556x370.jpg",
+    "cookTime": 5,
     "ingredients": [
-      "1 small frozen ripe banana, peeled",
-      "2 cups baby spinach",
-      "1 tbsp Peanut Butter",
-      "3/4 cup unsweetened vanilla almond milk",
-      "1/2 cup plain fat-free Greek yogurt"
+      "1/2 cup almond milk",
+      "1/2 medium ripe banana",
+      "1 1/2 cups fat free Greek yogurt",
+      "2 teaspoons honey",
+      "1 cup crushed ice",
+      "2 cups fresh or frozen strawberries"
     ],
     "steps": [
-      "Place all ingredients in a blender and blend until smooth."
+      "Combine ingredients and blend!"
     ]
   },
   "lunch": {
-    "name": "Japanese Fried Rice",
-    "image": "https://img.spoonacular.com/recipes/648474-556x370.jpg",
-    "cookTime": 45,
+    "name": "Excellent No Fail and Easy Keto Zucchini Lasagna",
+    "image": "https://img.spoonacular.com/recipes/1046983-556x370.jpg",
+    "cookTime": 60,
     "ingredients": [
-      "1 cup frozen green peas (thawed)",
-      "3 cups cooked Japanese rice",
-      "1 small carrot, finely chopped",
-      "2 garlic cloves, finely chopped",
-      "1/4 pound boneless chicken breast, cut into small cubes",
-      "2 tablespoons neutral oil (canola, grapeseed)",
-      "1 tablespoon tonkatsu sauce (vegetable and fruit sauce. I use Bull-Dog)",
-      "2 tablespoons soy sauce",
-      "1/4 teaspoon freshly ground black pepper",
-      "1/4 teaspoon kosher salt",
-      "2 eggs"
+      "1/4 cup basil",
+      "1 bell pepper chopped",
+      "1 1/2 pounds lean ground turkey",
+      "12 ounces mozzarella cheese",
+      "1 onion chopped",
+      "1/4 cup shredded parmesan",
+      "1/4 cup parsley",
+      "1 teaspoon red pepper",
+      "15 ounces ricotta cheese",
+      "1 teaspoon sugar",
+      "28 ounces tomato sauce",
+      "1 teaspoon white pepper",
+      "4 large zucchini"
     ],
     "steps": [
-      "In a pan over medium heat, add oil, garlic and cook for a minute.",
-      "Add chopped carrots and cook for 2 minutes.",
-      "Add chicken and cook for 2-3 minutes, until the chicken is cooked through.",
-      "Add rice and peas and mix well.",
-      "Add soy sauce, tonkatsu sauce, black pepper and salt, and mix well. Push the rice to one side and break the eggs on the clear side. Slowly scramble the eggs and incorporate with the rice.",
-      "Serve!"
+      "Preheat the oven to 375F. Slice the zucchini lengthwise and lay it flat on a cookie sheet.",
+      "Bake in the oven for 15 minutes. This is very important in order to bake out most of the liquid.",
+      "In a medium saucepan, saut the onion and bell pepper.",
+      "Add in the ground turkey and cook thoroughly.",
+      "Mix in the tomato sauce and seasonings. Turn the heat to low and allow it to simmer for 5 minutes.",
+      "In a separate bowl, mix together the ingredients for your cheese mixture and set aside. In a 9 x 13 baking dish, layer the bottom with zucchini noodles.",
+      "Spread the cheese mixture over the zucchini and add a layer of meat sauce. Repeat these steps to create the layers for your zucchini lasagna. Top with mozzarella cheese and cover the baking dish with foil.",
+      "Bake the zucchini lasagna in the oven for 30 minutes.",
+      "Remove the foil and then cook an additional 10 minutes.",
+      "Remove from the oven and allow to cool for 5 minutes before serving."
     ]
   },
   "dinner": {
-    "name": "Coffee-Infused Bbq Baby Back Ribs",
-    "image": "https://img.spoonacular.com/recipes/639893-556x370.jpg",
+    "name": "Seared Scallops With Wilted Greens",
+    "image": "https://img.spoonacular.com/recipes/659679-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "4 teaspoons chile powder",
-      "2 teaspoons dried thyme",
-      "2 teaspoons ground cumin",
-      "2 teaspoons garlic powder",
-      "2 teaspoons salt",
-      "1 teaspoon pepper",
-      "1/2 teaspoon cayenne",
-      "2 rack baby back ribs",
-      "1 teaspoon liquid smoke",
-      "1 Tb. oil",
+      "1 tablespoon butter",
       "3 cloves garlic, minced",
-      "3/4 cup cider vinegar",
-      "1/2 cup soy sauce",
-      "28 ounces can tomato puree",
-      "3 Tb. molasses",
-      "1 cup brown sugar",
-      "2 teaspoons instant coffee granules",
-      "2 teaspoons cumin",
-      "2 Tb. Dijon mustard",
-      "2 teaspoons paprika"
+      "2 bunchs of kale (chard, beet greens\u2026)",
+      "1 tablespoon extra-virgin olive oil",
+      "1 tablespoon Red wine vinegar",
+      "Salt and pepper",
+      "16 large sea scallops",
+      "2 shallots, sliced thin",
+      "1 tablespoon soy sauce",
+      "3 slices of thick-cut bacon cut into pieces"
     ],
     "steps": [
-      "Preheat the oven to *35",
-      "Mix the first seven ingredients in a small bowl.",
-      "Cut each rack in several pieces and rub the spices over all the rib sections. You can leave the ribs whole if you like the way they look better--I just think they are easier to handle on the grill in smaller pieces!",
-      "Pour 4 cups of water and 1 tsp. of liquid smoke in a roasting pan.",
-      "Place the ribs in the pan, top up. Tightly cover the pan with foil and bake for 2 hours.",
-      "Remove from the oven and rest until ready to grill. Meanwhile, add 1 Tb. oil to a sauce pan over medium heat.",
-      "Add the garlic and saut for 1-2 minutes. Then add the rest of the ingredients for the BBQ sauce to the sauce pan. Simmer for at least 30 minutes, stirring occasionally.",
-      "Heat a grill over medium-low heat.",
-      "Brush the ribs completely with BBQ sauce.",
-      "Place them on the grill and cook for 20 minutes, turning and brushing every 5 minutes until the desired bark has developed.",
-      "It's fun to make your own BBQ sauce. But in a pinch, buy a bottled variety you like and simmer for a few minutes with the coffee granules!"
+      "Slice the kale stems into thin pieces and the leaves into larger strips.",
+      "Heat a large, deep pan to medium-high.",
+      "Add the bacon a cook 3-4 minutes.  Then add the shallots and cook until soft3 more minutes.Next add the garlic, and kale STEMS.Cook another 4-5 minutes before adding the leaves.  Toss until wilted over the heat.",
+      "Add the soy sauce, vinegar, then salt and pepper to taste.  Keep warm.",
+      "Heat an iron skillet to high.  Dry the scallops thoroughly, then salt and pepper.",
+      "Add the oil to the pan and swirl around.  When it starts to smoke, quickly add the scallops.Cook on high for about 1-2 minutes.Flip the scallops and add the butter.  Spoon the butter over the scallops as they cook another 1-2 minutes.",
+      "Serve over warm greens."
     ]
   }
 }
