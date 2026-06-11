@@ -1,82 +1,81 @@
 {
-  "date": "2026-06-10",
+  "date": "2026-06-11",
   "breakfast": {
-    "name": "Crepes Suzette",
-    "image": "https://img.spoonacular.com/recipes/640767-556x370.jpg",
+    "name": "Sterling Cooper Blini with Caviar",
+    "image": "https://img.spoonacular.com/recipes/661602-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "4 tablespoons butter",
-      "3 large eggs",
-      "1 1/2 cups all-purpose flour",
-      "1/4 cup freshly squeezed lemon juice",
-      "1/2 tablespoon lemon zest",
-      "3/4 cup cold milk",
-      "pinch of salt",
-      "1 tablespoon sugar",
-      "1/2 cup unsalted butter",
-      "3/4 cup cold water",
-      "1/4 cup white sugar"
+      "1/2 teaspoon baking powder",
+      "1/2 cup butter",
+      "Caviar, for topping",
+      "1 egg",
+      "1/2 cup sifted all-purpose flour",
+      "\u00be cup milk",
+      "3 tablespoons sour cream, plus additional for topping blini",
+      "1/2 teaspoon sugar"
     ],
     "steps": [
-      "Combine all liquid ingredients in a blender.",
-      "Add the dry ingredients and 1/4 cup melted butter; mix on high.",
-      "Let batter rest for 30 minutes.",
-      "Heat a nonstick 10 inch skillet over medium high heat.",
-      "Brush bottom and sides of pan with a bit of melted butter.Ladle 1/2 cup batter into skillet and swirl to coat bottom evenly. Cook until lightly browned, about 1-2 minutes. Using a spatula or your fingers, flip the crepe and cook the other side until lightly browned, about 30 seconds to 1 minute.",
-      "Transfer crepes to a platter.",
-      "Layer crepes over each other with parchment paper in between.If necessary, add more butter to the pan. Repeat with the rest of the batter.FOR THE SAUCE: Melt 1/4 cup butter in a skillet over LOW fire.",
-      "Add the sugar and allow to melt. Be patient. Make sure that the heat is at its lowest.",
-      "Add the lemon juice and mix well.",
-      "Add the lemon zest.",
-      "Add the crepes, 3-4 at a time and allow to cook in the sauce for 1 minute.",
-      "Remove from the pan. Arrange on a plate and pour the sauce over the crepes and serve warm.Makes 8 crepes. Serving size is 2 crepes."
+      "In a large bowl, sift the flour and baking powder together.",
+      "Add the milk, sugar and 2 tablespoons sour cream. Beat the egg until frothy, add to batter and stir well.",
+      "Let batter stand for 20 minutes.Melt butter on a griddle or large skillet.  Fry small (2-3 inch) pancakes in very hot butter.",
+      "Drain on paper towels. Top each blini with sour cream and caviar before serving."
     ]
   },
   "lunch": {
-    "name": "Pasta with Peas and Italian Sausage",
-    "image": "https://img.spoonacular.com/recipes/654935-556x370.jpg",
+    "name": "Bacon Wrapped Tofu Tacos",
+    "image": "https://img.spoonacular.com/recipes/633352-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 tablespoons butter",
-      "1 kilo or 32 oz, passed tomatoes, the best fresh tomatoes you can find or canned",
-      "1 box Farfalle pasta",
-      "Sweet Italian sausage cut in 1-1 \u00bd inch chunks",
-      "1 tablespoon olive oil",
-      "1 cup of frozen peas",
-      "Salt and pepper",
-      "Pomi strained tomato sauce (26 oz.)"
+      "1 12 oz package firm tofu, drained",
+      "1 package flour tortillas, taco or fajita size",
+      "8 oz package cream cheese, softened",
+      "3 fresh jalapeno peppers, de-seeded and diced small",
+      "2 cups monterey jack cheese, shredded",
+      "1 pound bacon, cooked",
+      "1 cup chicken broth",
+      "Olive oil, just have the bottle on hand",
+      "1 teaspoon cumin",
+      "1 teaspoon chili powder",
+      "1 teaspoon paprika",
+      "2 garlic cloves, minced"
     ],
     "steps": [
-      "Cook the pasta following the package directions. Meanwhile in a very large skillet over medium heat add the olive oil and add the sausages. Saut` the sausage meat until slightly brown all over, add the frozen peas and the tomatoes. Season to taste with salt and pepper. Lower the heat to medium and cook for another 10 to 15 minutes.",
-      "Drain the pasta and return it to the pan, add the butter and the tomatoes with sausage.",
-      "Mix well and server hot."
+      "In a small bowl combine the cumin, chili powder, paprika, 1 minced clove of garlic and 2 tbsp of olive oil.  Slice the tofu very thin, about 1/2 inch per slice, then rub each slice with the spice mixture.  Set aside.",
+      "Heat about 1 tbsp olive oil over medium high heat in a large pan.",
+      "Add the tofu, a few slices at a time, watching carefully.  Flip after about 1-2 minutes.  Cook until done  I let mine cook about 2-3 minutes per side.   Half each piece, wrap with bacon, then set aside and cover with aluminum foil.",
+      "Do NOT wash the pan out  now put it back on the stove, reduce heat to medium and add the remaining minced garlic clove, 1 tbsp olive oil and diced jalapeno.",
+      "Saute until the peppers are almost getting a little bit brown and everything is fragrant.",
+      "Add the cream cheese, 1/2 cup cheese and chicken broth.",
+      "Whisk and bring to a slight boil; reducing the heat if you have to, preventing it from scorching. Once its combined and a sauce consistency, salt and pepper to your taste and pour into a separate bowl; cover.",
+      "Bring the heat back up to medium-high, and add another tablespoon of olive oil to the pan.  When hot add one tortilla at a time, turning after about 15-20 seconds to the other side.  Your end result will be tortillas slightly brown around the edges and a little bubbly in the middle.",
+      "Set aside and cover.",
+      "To serve, stuff a tortilla with bacon-wrapped tofu, and drizzle the jalapeno creme on top and some Monterey jack."
     ]
   },
   "dinner": {
-    "name": "Garam Masala Pork Chops with Mint Yogurt and Spiced Couscous",
-    "image": "https://img.spoonacular.com/recipes/644167-556x370.jpg",
+    "name": "Avocado-Mango Salad With Grilled Shrimp",
+    "image": "https://img.spoonacular.com/recipes/633171-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 tablespoon Cayenne pepper, ground",
-      "1 1/3 cup chicken broth",
-      "2/3 cup couscous",
-      "10 fresh mint leaves",
-      "4 tbsp. garam masala spices*",
-      "1 tsp. ground cumin",
-      "4 6-oz. lean pork loin chops",
-      "1 lemon",
-      "2 tablespoons olive oil",
-      "4 tsp. raisins",
-      "Salt to taste",
-      "2 tsp. sesame seeds",
-      "1/2 cup Greek style yogurt"
+      "2 pounds large shrimp, shelled and deveined",
+      "2 Hass avocados, pitted, peeled & cubed",
+      "1 mango, peeled and diced",
+      "Lime wedges, for serving",
+      "1 mango, peeled and finely diced (1 1/2 cups)",
+      "1/4 cup red wine vinegar",
+      "2 tablespoons fresh lime juice",
+      "1 tablespoon fresh ginger, grated",
+      "2 tablespoons sugar",
+      "1 teaspoon Dijon mustard",
+      "1/2 cup canola oil",
+      "1 tablespoon chopped cilantro",
+      "1/2 teaspoon finely grated lime zest",
+      "1 Scotch bonnet or habanero chile, seeded & diced",
+      "1/4 cup thinly sliced red onion",
+      "Salt and freshly ground black pepper"
     ],
     "steps": [
-      "Chops:Trim pork chops of excess fat. Rub garam masala into chops (both sides).",
-      "Place on a plate, cover and refrigerate for 6-8 hours, to allow flavors to penetrate.Chop the mint and stir into the yogurt and refrigerate for the same period as the pork chops.Preheat broiler. Spray broiler rack with nonstick cooking spray. Broil chops for about 5 minutes each side. Alternately, grill chops over direct heat until well marked on both sides, move to indirect heat, cover loosely in foil, and cook until internal temp reaches 145F.",
-      "Remove from heat and allow to rest 3 minutes.",
-      "Serve with mint yogurt.Note: *Garam Masala is available in specialty stores and many larger grocery stores.Spiced Couscous:In a medium saucepan bring the broth, raisins, olive oil, cumin, cayenne and salt to a boil. Stir in the couscous, bring back to a boil, cover and remove from the heat. Set aside for 5 minutes.Juice the lemon and stir into the couscous with the sesame seeds.",
-      "Serve."
+      "Preheat gas grill to high."
     ]
   }
 }
