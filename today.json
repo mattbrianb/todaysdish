@@ -1,81 +1,62 @@
 {
-  "date": "2026-06-11",
+  "date": "2026-06-12",
   "breakfast": {
-    "name": "Sterling Cooper Blini with Caviar",
-    "image": "https://img.spoonacular.com/recipes/661602-556x370.jpg",
-    "cookTime": 45,
+    "name": "Four-Berry Blast Fruit Smoothie",
+    "image": "https://img.spoonacular.com/recipes/643241-556x370.jpg",
+    "cookTime": 10,
     "ingredients": [
-      "1/2 teaspoon baking powder",
-      "1/2 cup butter",
-      "Caviar, for topping",
-      "1 egg",
-      "1/2 cup sifted all-purpose flour",
-      "\u00be cup milk",
-      "3 tablespoons sour cream, plus additional for topping blini",
-      "1/2 teaspoon sugar"
+      "1/2 cup frozen blackberries",
+      "1/2 cup frozen blueberries",
+      "2 tablespoons lemonade concentrate",
+      "1/2 cup frozen unsweetened raspberries",
+      "1/2 cup frozen unsweetened strawberries",
+      "1 tablespoon sugar",
+      "1/2 teaspoon vanilla extract",
+      "5 1/2 cups whole milk (do not use skim)"
     ],
     "steps": [
-      "In a large bowl, sift the flour and baking powder together.",
-      "Add the milk, sugar and 2 tablespoons sour cream. Beat the egg until frothy, add to batter and stir well.",
-      "Let batter stand for 20 minutes.Melt butter on a griddle or large skillet.  Fry small (2-3 inch) pancakes in very hot butter.",
-      "Drain on paper towels. Top each blini with sour cream and caviar before serving."
+      "Place first five items into a blender and pulse a few times.",
+      "Add the next berry and pulse 2-3 times. Repeat until all berries have been added, then blend on high until smooth."
     ]
   },
   "lunch": {
-    "name": "Bacon Wrapped Tofu Tacos",
-    "image": "https://img.spoonacular.com/recipes/633352-556x370.jpg",
+    "name": "Easy Gift Lasagna",
+    "image": "https://img.spoonacular.com/recipes/641974-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 12 oz package firm tofu, drained",
-      "1 package flour tortillas, taco or fajita size",
-      "8 oz package cream cheese, softened",
-      "3 fresh jalapeno peppers, de-seeded and diced small",
-      "2 cups monterey jack cheese, shredded",
-      "1 pound bacon, cooked",
-      "1 cup chicken broth",
-      "Olive oil, just have the bottle on hand",
-      "1 teaspoon cumin",
-      "1 teaspoon chili powder",
-      "1 teaspoon paprika",
-      "2 garlic cloves, minced"
+      "9 Lasagna noodles \u2013 cooked according to package instructions",
+      "2 Tbsp. olive oil",
+      "1 cup fresh grated Parmesan cheese",
+      "1 small container Ricotta Cheese",
+      "4 cups shredded Mozzarella Cheese",
+      "1 batch of \u201cBest Ever Spaghetti Sauce\u201d"
     ],
     "steps": [
-      "In a small bowl combine the cumin, chili powder, paprika, 1 minced clove of garlic and 2 tbsp of olive oil.  Slice the tofu very thin, about 1/2 inch per slice, then rub each slice with the spice mixture.  Set aside.",
-      "Heat about 1 tbsp olive oil over medium high heat in a large pan.",
-      "Add the tofu, a few slices at a time, watching carefully.  Flip after about 1-2 minutes.  Cook until done  I let mine cook about 2-3 minutes per side.   Half each piece, wrap with bacon, then set aside and cover with aluminum foil.",
-      "Do NOT wash the pan out  now put it back on the stove, reduce heat to medium and add the remaining minced garlic clove, 1 tbsp olive oil and diced jalapeno.",
-      "Saute until the peppers are almost getting a little bit brown and everything is fragrant.",
-      "Add the cream cheese, 1/2 cup cheese and chicken broth.",
-      "Whisk and bring to a slight boil; reducing the heat if you have to, preventing it from scorching. Once its combined and a sauce consistency, salt and pepper to your taste and pour into a separate bowl; cover.",
-      "Bring the heat back up to medium-high, and add another tablespoon of olive oil to the pan.  When hot add one tortilla at a time, turning after about 15-20 seconds to the other side.  Your end result will be tortillas slightly brown around the edges and a little bubbly in the middle.",
-      "Set aside and cover.",
-      "To serve, stuff a tortilla with bacon-wrapped tofu, and drizzle the jalapeno creme on top and some Monterey jack."
+      "Prepare Sauce according to instructions and set aside.Prepare Lasagna noodles according to package instructions be sure to salt the water. After drained, toss with olive oil to help prevent sticking",
+      "Cut Lasagna noodles to the required length to fit in the pan. Save the smaller pieces as you may need to piece them together while making the lasagna.Set your containers out in a row in front of you. Coat the bottom of each pan with one large spoonful of sauce. Then begin to layer noodles, Spoonfulls of ricotta cheese that are sufficient to coat the noodles, several spoonfuls of sauce to make a layer over the ricotta, shredded mozzarella to cover the sauce then repeat starting with the noodles again. Should make 2-3 layers depending on depth of pan. End with layer of Mozzarella cheese and sprinkle the parmesan over the top.Cover with the included top and label with a sharpie marker  name of dish, instructions for preparation and date of preparation. Use by date."
     ]
   },
   "dinner": {
-    "name": "Avocado-Mango Salad With Grilled Shrimp",
-    "image": "https://img.spoonacular.com/recipes/633171-556x370.jpg",
+    "name": "Chicken Parmesan Patty- Eat As A Burger OR On Pasta",
+    "image": "https://img.spoonacular.com/recipes/801377-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 pounds large shrimp, shelled and deveined",
-      "2 Hass avocados, pitted, peeled & cubed",
-      "1 mango, peeled and diced",
-      "Lime wedges, for serving",
-      "1 mango, peeled and finely diced (1 1/2 cups)",
-      "1/4 cup red wine vinegar",
-      "2 tablespoons fresh lime juice",
-      "1 tablespoon fresh ginger, grated",
-      "2 tablespoons sugar",
-      "1 teaspoon Dijon mustard",
-      "1/2 cup canola oil",
-      "1 tablespoon chopped cilantro",
-      "1/2 teaspoon finely grated lime zest",
-      "1 Scotch bonnet or habanero chile, seeded & diced",
-      "1/4 cup thinly sliced red onion",
-      "Salt and freshly ground black pepper"
+      "1/2 + 1 cup whole wheat bread crumbs",
+      "1 egg",
+      "12 slices fresh mozzarella",
+      "1 teaspoon minced garlic",
+      "1lb ground chicken",
+      "Olive oil",
+      "1 small onion, chopped",
+      "1 teaspoon pepper",
+      "1 teaspoon sea salt",
+      "1 teaspon Italian blend seasoning (or equal parts thyme, oregano, basil)"
     ],
     "steps": [
-      "Preheat gas grill to high."
+      "Preheat oven to 400",
+      "Combine groundchicken, egg, 1/2 cup bread crumbs, seasonings and half of the chopped onion in a bowl. Shape into 6-8 patties.Coat in more bread crumbs.",
+      "Place on sheet pan.",
+      "Drizzle with Olive oil."
     ]
   }
 }
