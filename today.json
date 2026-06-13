@@ -1,62 +1,71 @@
 {
-  "date": "2026-06-12",
+  "date": "2026-06-13",
   "breakfast": {
-    "name": "Four-Berry Blast Fruit Smoothie",
-    "image": "https://img.spoonacular.com/recipes/643241-556x370.jpg",
-    "cookTime": 10,
+    "name": "Pumpkin French Toast",
+    "image": "https://img.spoonacular.com/recipes/657306-556x370.jpg",
+    "cookTime": 20,
     "ingredients": [
-      "1/2 cup frozen blackberries",
-      "1/2 cup frozen blueberries",
-      "2 tablespoons lemonade concentrate",
-      "1/2 cup frozen unsweetened raspberries",
-      "1/2 cup frozen unsweetened strawberries",
-      "1 tablespoon sugar",
-      "1/2 teaspoon vanilla extract",
-      "5 1/2 cups whole milk (do not use skim)"
+      "12 Slices of Bread",
+      "4 Tbs. - Brown Sugar",
+      "1 teaspoon - Cinnamon",
+      "4 Eggs",
+      "maple syrup",
+      "1/2 cup - Milk",
+      "1/4 teaspoon - Nutmeg",
+      "1/4 teaspoon - Pumpkin Pie Spice",
+      "1/2 cup - Pumpkin Puree",
+      "1/2 teaspoon - Vanilla"
     ],
     "steps": [
-      "Place first five items into a blender and pulse a few times.",
-      "Add the next berry and pulse 2-3 times. Repeat until all berries have been added, then blend on high until smooth."
+      "Mix the eggs, milk, pumpkin, vanilla, brown sugar and spices into a dish for dipping. Dip the bread into the egg mixture until evenly coated on both sides, cooks on a grill heated to 350 degrees for about 2-3 minutes per side or until golden brown.",
+      "Serve hot with butter and maple syrup or as we did with pumpkin butter."
     ]
   },
   "lunch": {
-    "name": "Easy Gift Lasagna",
-    "image": "https://img.spoonacular.com/recipes/641974-556x370.jpg",
+    "name": "Chicken Cordon Bleu",
+    "image": "https://img.spoonacular.com/recipes/638035-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "9 Lasagna noodles \u2013 cooked according to package instructions",
-      "2 Tbsp. olive oil",
-      "1 cup fresh grated Parmesan cheese",
-      "1 small container Ricotta Cheese",
-      "4 cups shredded Mozzarella Cheese",
-      "1 batch of \u201cBest Ever Spaghetti Sauce\u201d"
+      "6 slices deli ham",
+      "2 eggs",
+      "1/4 cup flour",
+      "2 teaspoons fresh thyme leaves",
+      "kosher salt and freshly ground black pepper",
+      "1 teaspoon olive oil",
+      "1 cup panko bread crumbs",
+      "6 boneless, skinless chicken breasts",
+      "12 slices Gruyere or Swiss cheese",
+      "2 tsps water"
     ],
     "steps": [
-      "Prepare Sauce according to instructions and set aside.Prepare Lasagna noodles according to package instructions be sure to salt the water. After drained, toss with olive oil to help prevent sticking",
-      "Cut Lasagna noodles to the required length to fit in the pan. Save the smaller pieces as you may need to piece them together while making the lasagna.Set your containers out in a row in front of you. Coat the bottom of each pan with one large spoonful of sauce. Then begin to layer noodles, Spoonfulls of ricotta cheese that are sufficient to coat the noodles, several spoonfuls of sauce to make a layer over the ricotta, shredded mozzarella to cover the sauce then repeat starting with the noodles again. Should make 2-3 layers depending on depth of pan. End with layer of Mozzarella cheese and sprinkle the parmesan over the top.Cover with the included top and label with a sharpie marker  name of dish, instructions for preparation and date of preparation. Use by date."
+      "Preheat oven to 350 degrees F.Butterfly the chicken breasts by slicing half lengthwise but not cutting all the way through.",
+      "Lay the halved breasts between 2 pieces of plastic wrap. Using the flat side of a meat mallet, gently pound the chicken to 1/4-inch thickness, taking care to not tear or create holes in the meat.",
+      "Lay 2 slices of cheese on each breast, followed by 2 slices of ham, and 2 more of cheese; leaving a 1/2-inch margin on all sides to help seal the roll. Tuck in the sides of the breast and roll up tight like a jellyroll. Squeeze the log gently to seal.Season the flour with salt and pepper; spread out on waxed paper or in a flat dish.",
+      "Mix the breadcrumbs with thyme, kosher salt, pepper, and oil. The oil will help the crust brown. Beat together the eggs and water, the mixture should be fluid. Lightly dust the chicken with flour, then dip in the egg mixture. Gently coat in the bread crumbs.Carefully transfer the roulades to a baking pan and bake for 20 minutes until browned and cooked through.",
+      "Serve whole or cut into pinwheels."
     ]
   },
   "dinner": {
-    "name": "Chicken Parmesan Patty- Eat As A Burger OR On Pasta",
-    "image": "https://img.spoonacular.com/recipes/801377-556x370.jpg",
+    "name": "Glazed pork chops",
+    "image": "https://img.spoonacular.com/recipes/644761-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1/2 + 1 cup whole wheat bread crumbs",
-      "1 egg",
-      "12 slices fresh mozzarella",
-      "1 teaspoon minced garlic",
-      "1lb ground chicken",
-      "Olive oil",
-      "1 small onion, chopped",
-      "1 teaspoon pepper",
-      "1 teaspoon sea salt",
-      "1 teaspon Italian blend seasoning (or equal parts thyme, oregano, basil)"
+      "1 Tbs balsamic vinegar",
+      "\u00bc tsp black pepper, cracked",
+      "1/2 cup butter, melted",
+      "\u00bd tsp cornstarch",
+      "2 garlic cloves, minced",
+      "Fresh chives or green onions, sliced, for garnish",
+      "2 tablespoons honey",
+      "4 boneless pork chops, trimmed",
+      "1/4 cup soy sauce"
     ],
     "steps": [
-      "Preheat oven to 400",
-      "Combine groundchicken, egg, 1/2 cup bread crumbs, seasonings and half of the chopped onion in a bowl. Shape into 6-8 patties.Coat in more bread crumbs.",
-      "Place on sheet pan.",
-      "Drizzle with Olive oil."
+      "Press one side of each chop into the black pepper.",
+      "Heat nonstick grill skillet until hot.",
+      "Add pork chops, pepper side down, and cook about 4 minutes or until browned.Reduce heat to medium, turn pork chops and cook 6-8 minutes longer.When done, take the skillet from the heat, cover the pork chops and set aside.Meanwhile, mix honey, soy sauce, balsamic vinegar and cornstarch until smooth.",
+      "Add the cracked pepper, stir.Melt the butter in a small pan, add garlic and cook for 30 seconds, stirring.Stir honey mixture into pan, let it boil, cook for 1 minute, stirring.Spoon sauce over pork chops, sprinkle with fresh chives or green onions.",
+      "Serve with polenta and green salad."
     ]
   }
 }
