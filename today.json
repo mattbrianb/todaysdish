@@ -1,89 +1,75 @@
 {
-  "date": "2026-06-14",
+  "date": "2026-06-15",
   "breakfast": {
-    "name": "Boysenberry Pancakes",
-    "image": "https://img.spoonacular.com/recipes/635769-556x370.jpg",
+    "name": "Whole Wheat Blueberry Muffins",
+    "image": "https://img.spoonacular.com/recipes/665273-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 teaspoon Baking powder",
-      "teaspoon Baking soda",
-      "1 cup Fresh Boysenberries",
-      "1 Egg",
-      "cup All-purpose flour",
-      "Boysenberry jam, optional",
-      "1 tablespoon Margarine, melted and cooled",
-      "cup Nonfat plain yogurt",
-      "cup Skim milk",
-      "1 cup Sugar",
-      "Confectioner's sugar, optional"
+      "1 1/2 teaspoon baking powder",
+      "1 teaspoon baking soda",
+      "2 very ripe large bananas",
+      "7 ounces fresh blueberries",
+      "1 cup melted butter",
+      "1 1/4 cup buttermilk",
+      "1 large egg, lightly beaten",
+      "1/2 cup light brown sugar",
+      "1 teaspoon raw sugar",
+      "pinch of fine sea salt",
+      "2 cups whole wheat flour"
     ],
     "steps": [
-      "Enjoy these.",
-      "Whisk together flour, sugar, baking powder and baking soda; set aside. In large bowl, whisk together yogurt, egg, margarine and milk. Stir flour mixture into liquid mixture until jus combined. Fold in Boysenberries.",
-      "Heat a griddle coated with nonstick cooking spray over medium-heat. Drop batter by 1/4 cupfuls onto griddle; cook for 1 minute or until bubbles form on top of pancakes. Turn and cook 1 minute more. If desired, dust with confectioner's sugar and serve with jam.Serving Size: 1/4 recipeNOTES : Most people have eaten blueberry pancakes before but are pleasantly surprised by this version for Boysenberries. It's my favorite."
+      "Preheat oven to 350 degrees an line a muffin tin with paper or silicon cups.Peel bananas and mash them in a bowl. Set aside.In a large bowl, combine flour, baking powder, baking soda, salt and light brown sugar. Make a well in the center an add buttermilk, beaten egg, olive oil (or butter) and bananas.",
+      "Combine until just mixed. Do not overmix!",
+      "Add in blueberries and give a couple of stirs.Spoon batter into muffin cups until full and then sprinkle the tops with raw sugar.",
+      "Bake for 20 - 25 minutes until golden brown.",
+      "Let cool a few minutes in the pan and then transfer to a wire rack to cool completely."
     ]
   },
   "lunch": {
-    "name": "Classic French Onion Soup",
-    "image": "https://img.spoonacular.com/recipes/639597-556x370.jpg",
+    "name": "Pork Chops with Garlic Cream",
+    "image": "https://img.spoonacular.com/recipes/656752-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "\u00bc cup salted butter",
-      "4-6 yellow onions, finely sliced",
-      "\u00bc Tsp. flour",
-      "\u00bd cup sherry",
-      "5 cups beef broth",
-      "3 sprigs fresh thyme",
-      "3 sprigs fresh parsley",
-      "1 bay leaf",
-      "salt and pepper to taste",
-      "4 slices of a crusty French baguette",
-      "1 cup gruyere cheese, shredded"
+      "2 tablespoon butter",
+      "1/3 cup buttermilk",
+      "1/3 cup dry white wine",
+      "3 sprigs Fresh thyme",
+      "1 cup heavy cream",
+      "pepper",
+      "900 grams pork chops",
+      "salt",
+      "1 medium shallot, minced",
+      "2 tablespoon vegetable oil",
+      "12 large garlic cloves, all about the same size, and peeled but left whole"
     ],
     "steps": [
-      "Preheat oven to 400",
-      "In a large Dutch oven, melt butter over medium heat.",
-      "Add onions to the pot and sprinkle with flour. Reduce heat to medium low and cook for 45 minutes stirring occasionally. If the onions are cooking too quickly, reduce heat.",
-      "When the onions are tender and golden in colour, de-glaze the pan with sherry.",
-      "Pour beef broth into the pot and bring to a boil over medium heat.",
-      "Add herbs, salt and pepper to taste.",
-      "Reduce heat and simmer for 15 minutes.",
-      "Spray a cookie sheet with cooking spray. Butter slices of French bread and bake in the oven for 5-10 minutes until very dry. Set aside.",
-      "Remove herb stalks and bay leaf.",
-      "Ladle soup portions into four oven safe ramekins. Top with crusty French bread and sprinkle with cheese.",
-      "Place ramekins on a cookie sheet and bake uncovered at 400 for 5-10 minutes until cheese is bubbling. Broil for one minute more to brown the top.",
-      "Serve warm.",
-      "Serves 4"
+      "In a small sauce pan melt the butter over medium-low heat and cook the shallots until softened, about 5 minutes.",
+      "Add the wine, thyme and a generous  teaspoon salt. Raise the heat to medium and simmer until the liquid is reduced to 2 tablespoons. Stir in the heavy cream and the buttermilk and all the garlic cloves.Return to a bare simmer and cook, stirring occasionally, until the garlic is completely tender, 40 to 45 minutes.",
+      "Transfer the garlic mixture to a blender and puree until very smooth, about 1 minute. Return the garlic sauce to the saucepan. It should be thick enough to cover the back of a wooden spoon but easy to pour. Set aside covered to keep warm.Preheat oven to 375.Salt and pepper generously the pork chops. In a large skillet over medium high heat add the oil. When hot add the chops and sear them on each side. 2minutes each sides.",
+      "Remove from the stove and place in the hot oven. Cook for 3 minutes at 375 then lower the heat to 300 for another 5 minutes. The chops need to be springy to the touch and golden brown on the outside."
     ]
   },
   "dinner": {
-    "name": "Beef Lo Mein Noodles",
-    "image": "https://img.spoonacular.com/recipes/634629-556x370.jpg",
-    "cookTime": 45,
+    "name": "Curry and Sage Roast Chicken",
+    "image": "https://img.spoonacular.com/recipes/641110-556x370.jpg",
+    "cookTime": 60,
     "ingredients": [
-      "8 ounces dried Chinese egg noodles or soba (buckwheat) noodles",
-      "3/4 pound flank steak, trimmed of any fat and cut into thin strips",
-      "1 tablespoon oyster sauce",
-      "1/2 cup chicken stock",
-      "2 tablespoons soy sauce",
-      "2 teaspoons sesame oil",
-      "3 tablespoons vegetable oil",
-      "2 teaspoons garlic, minced",
-      "2 teaspoon ginger, minced",
-      "1/4 cup green onions, chopped"
+      "teaspoon of curry",
+      "small bunch of fresh sage \u2013 chopped",
+      "3 cloves garlic \u2013 crushed & chopped",
+      "3 tablespoons of honey",
+      "juice of 1/2 lemon",
+      "juice of 1/2 orange",
+      "3 tablespoons olive oil",
+      "dashes of black pepper",
+      "dashes of turmeric",
+      "1 whole chicken"
     ],
     "steps": [
-      "Drop noodles into a large quantity of boiling water and cook 3-5 minutes, until barely tender to the bite.",
-      "Drain, rinse with cold water and reserve.",
-      "Combine the beef and oyster sauce in a bowl; stir to coat.",
-      "Let stand for 10 minutes.",
-      "In another bowl, combine the chicken broth, soy sauce and sesame oil. Set aside.",
-      "Heat a wok over high heat. When hot, add the vegetable oil, swirling to coat the sides.",
-      "Add the garlic, ginger, and green onions and cook, stirring until fragrant, about 30 seconds.",
-      "Add the beef and cook, stirring constantly, about 1 minute.",
-      "Add the sauce and noodles.",
-      "Gently toss until heated through and sauce has thickened.",
-      "Serve immediately."
+      "Preheat Oven 350 degrees:Clean chicken inside and out and pat dry.",
+      "Combine olive oil, lemon juice, orange juice, garlic, honey, sage, curry, black pepper and turmeric in a small bowl and mix well.Rub chicken down with this mixture and stuff some of the garlic and sage under the skin of the chicken.",
+      "Place in a baking pan and bake according to the size of your chicken.",
+      "Let the skin become golden and beautiful."
     ]
   }
 }
