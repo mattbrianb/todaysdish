@@ -1,83 +1,66 @@
 {
-  "date": "2026-06-20",
+  "date": "2026-06-21",
   "breakfast": {
-    "name": "Pear and Walnut Coffee Cake",
-    "image": "https://img.spoonacular.com/recipes/655406-556x370.jpg",
+    "name": "Hatch Chile Cornbread Muffins",
+    "image": "https://img.spoonacular.com/recipes/646340-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3/4 teaspoon baking powder",
+      "3/4 cup milk",
+      "8 oz can cream-style corn",
+      "melted butter",
+      "2 fresh eggs, beaten (thank you Peeps!)",
+      "1 1/2 cups white, yellow or blue cornmeal",
+      "1 teaspoon baking powder",
       "1/2 teaspoon baking soda",
-      "1/4 cup brown sugar",
-      "3/4 cup brown sugar",
-      "2 tablespoons unsalted butter, diced",
-      "2 large eggs",
-      "1 3/4 cups flour, plus extra for the pan",
-      "2 tablespoons flour",
-      "1/2 teaspoon ground allspice",
-      "1/4 teaspoon ground cardamom",
-      "1/2 teaspoon ground cinnamon",
-      "1/2 teaspoon ground ginger",
-      "Juice of 1/2 lemon",
-      "1/2 teaspoon kosher salt",
-      "Zest of 2 lemons, minced",
-      "3 pears, peeled and diced",
-      "1 cup sour cream",
-      "1/2 cup unsalted butter, room temp, plus extra for the pan",
-      "1 teaspoon vanilla extract",
-      "1 cup walnuts, chopped and toasted",
-      "2 tablespoons wheat germ"
+      "1 teaspoon salt",
+      "1 teaspoon sugar",
+      "1 1/2 cups mixed shredded cheddar cheese and Monterrey Jack cheese",
+      "5 fresh green chiles, roasted, peeled, seeded, deveined and chopped OR 4- oz. can"
     ],
     "steps": [
-      "Start topping by putting brown sugar, spices, flour, wheat germ, nuts and butter in a food processor. Blend down until crumbly. Cover and place in fridge to keep cold.Grease a 10 springform pan with butter, then lightly dust with flour and tap out the excess. Set aside. Toss pears with lemon juice and set aside.With an electric mixer, beat butter, sugar and lemon zest for cake batter until fluffy, approximately 3-5 minutes.",
-      "Add eggs and vanilla and mix until combined.In a separate bowl, whisk together flour, baking soda, baking powder and salt. Starting with sour cream, alternately add to cake batter along with dry ingredients until just combined.",
-      "Pour cake batter into the prepared pan. Top pears and sprinkle crumble topping over the fruit.",
-      "Bake in a preheated oven at 350 degrees for 40-50 minutes or until a tester comes out clean.",
-      "Remove from oven and cool in pan for at least 20-25 minutes before serving."
+      "Preheat oven to 400 degrees.  Line 18 muffin cups with paper liners or grease and flour each cup.",
+      "In a medium-size bowl, stir together milk, corn, butter and eggs.",
+      "In a large bowl, whisk together cornmeal, baking powder, baking soda, salt and sugar.",
+      "Add mixture from medium-size bowl to dry ingredients and mix just until combined.  Do not overmix.",
+      "Spoon a large spoonful of batter into each cup, filling about 1/3 of each cup, and top with a little cheese mixture and green chile, dividing evenly and reserving a little for sprinkling on top.  Top with batter and reserved cheese and green chile.  Each cup should be about two-thirds full.",
+      "Bake 25 to 30 minutes, or until muffins are golden and a wooden pick inserted in the center comes out clean."
     ]
   },
   "lunch": {
-    "name": "Penne Pasta with Broccoli and Cheese",
-    "image": "https://img.spoonacular.com/recipes/655575-556x370.jpg",
+    "name": "Easy Ginger Beef Broccoli",
+    "image": "https://img.spoonacular.com/recipes/641975-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "8 oz of penne pasta (I used Trader Joe's High Fiber Pasta)",
-      "4 cups of water",
-      "1 cup low sodium chicken broth",
-      "5 cups broccoli florets (I used frozen)",
-      "1/2 Tbsp. basil leaves",
-      "1/4 tsp. ground pepper",
-      "2 cloves garlic, minced",
-      "8 tsp. Parmesan cheese"
+      "4 cups broccoli, chopped",
+      "1 10.5-ounce can beef or chicken broth",
+      "1/4 cup flour",
+      "1/4 teaspoon fresh ginger, minced",
+      "1 clove garlic, minced",
+      "1 pound boneless round steak, cut into bite size strips",
+      "2 tablespoons soy sauce",
+      "2 tablespoons sugar"
     ],
     "steps": [
-      "In a large pot add water and bring to a boil.",
-      "Add pasta and cook until done, about 6 minutes.",
-      "Meanwhile, heat the broth, basil, black pepper, garlic and broccoli in a large skillet over medium heat bring to a boil. Reduce the heat to low. Cover and cook until the broccoli is tender-crisp.",
-      "Add the pasta to the broccoli mixture and toss to coat.",
-      "Add cheese to the pasta mixture",
-      "Serve and enjoy!",
-      "Makes 4 servings, about 2 cups or so",
-      "Calories per serving:  235,  Fat:  2.",
-      "Cholesterol:  5,  Sodium:  138,  Carbs:  40.3,  Fiber:  8.5,  Sugar:  3.3,  Protein:  12"
+      "In a small bowl, combine flour, broth, sugar, and soy sauce. Stir until sugar and flour are dissolved.In a large skillet or wok over high heat, cook and stir beef 2 to 4 minutes, or until browned. Stir in broth mixture, ginger, garlic, and broccoli. Bring to a boil, then reduce heat. Simmer 5 to 10 minutes, or until sauce thickens.Excellent served over rice."
     ]
   },
   "dinner": {
-    "name": "Ginger Soy Chicken",
-    "image": "https://img.spoonacular.com/recipes/644643-556x370.jpg",
+    "name": "Pasta With Chickpeas and Kale",
+    "image": "https://img.spoonacular.com/recipes/654905-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3 tablespoons of Butter",
-      "3 cloves of Garlic",
-      "5 1/2 inches Piece of Ginger, Chopped",
-      "1 Lime, Juiced",
-      "1/4 cup soy sauce",
-      "1/2 teaspoon Sugar",
-      "1/8 cup of Teriyaki",
-      "1 whole Chicken",
-      "1 tablespoon of Worcestershire"
+      "1 Dried hot pepper (opt)",
+      "2 cups Cooked chickpeas, drained",
+      "1 tablespoon Garlic, minced",
+      "1 pound Kale or other greens, washed and trimmed",
+      "1 tablespoon Olive oil",
+      "4 tablespoons Parsley, minced",
+      "Salt and pepper to taste",
+      "1 pound Ziti, elbow macaroni, twists or bowties"
     ],
     "steps": [
-      "Cut the butter into six pieces and place it under the skin of the chicken.In a baking dish mix up the soy, teriyaki, worcestershire, sugar, garlic, lime and ginger.Stuff the lime halves into the cavity of the bird and cover it with the delicious soy mixture.Cover the bird and place it into an oven preheated to 350 degrees for 1 hour.After the hour is up, remove the cover, baste the bird and then turn the temperature up to 375 degrees. Cook it for an additional 45 minutes or until the internal temperature reads 165 degrees.If the top is getting to dark , you can place a piece of aluminum foil lightly over the top (don't seal it, just lay it over the top)."
+      "Set a large pot of water to boil, and add salt.",
+      "Cut the kale stems into 2-3 inch pieces; chop the leaves coarsely and set aside. Boil the stems until they are nearly tender; then, add the greens. Cook until kale is quite tender but stillbright green. Scoop it out with a slotted spoon, place in a bowl of ice water, and keep pot boiling. When the kale cools, squeeze out excess water, gather it into a mass and chop rather finely. Meanwhile, place olive oil in a large skillet over veWarm the garlic mixture over medium heat, and add the cooked pasta, the chickpeas and the chopped kale.Toss well, taste for seasoning, garnish with parsley and serve immediately."
     ]
   }
 }
