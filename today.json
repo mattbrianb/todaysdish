@@ -1,84 +1,81 @@
 {
-  "date": "2026-06-22",
+  "date": "2026-06-23",
   "breakfast": {
-    "name": "Hotcakes",
-    "image": "https://img.spoonacular.com/recipes/647555-556x370.jpg",
+    "name": "Make Ahead Quiche",
+    "image": "https://img.spoonacular.com/recipes/650650-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 tablespoons Baking powder",
-      "1 large Egg",
-      "4 cups All-purpose flour",
-      "2 cups Milk",
-      "1 tablespoon sugar",
-      "8 tablespoons Unsalted butter -- melted",
-      "2 teaspoons Vanilla extract",
-      "1/2 teaspoon Yellow food coloring"
+      "1 (9 inch) unbaked pie crust",
+      "1 cup shredded cheddar cheese",
+      "1 cup shredded Monterrey Jack cheese",
+      "1 tablespoon flour",
+      "1/2 cup cooked ham, diced",
+      "4 eggs",
+      "1 cup half and half",
+      "2 green onions, chopped",
+      "1/4 teaspoon salt",
+      "1/4 teaspoon ground dry mustard",
+      "Dash of pepper"
     ],
     "steps": [
-      "Stir the flour, sugar, and baking powder in a large bowl until mixed.In another bowl, beat the milk, melted butter, egg, vanilla, and food coloring until blended.",
-      "Pour the wet ingredients into the dry ingredients and beat until just blended (it's better to leave a few lumps than to overmix and make tough hotcakes). The hotcakes will be lighter if you let this batter stand at room temperature for about 30 minutes, or refrigerate it up to 1 day.",
-      "Heat a griddle or large heavy pan (cast iron is perfect) over medium heat. The griddle is hot enough when a drop of water skitters quickly across the surface.",
-      "Brush the griddle with a little melted butter.",
-      "Pour about 1/3 cup of batter for each hotcake, leaving a little space between the hotcakes to make it easy to turn them. Cook them until golden brown underneath (lift a corner to peek) and bubbles start to pop on the topsides. Flip the hotcakes carefully and cook them until the undersides are golden brown. Repeat with the rest of the batter.",
-      "Serve hot with butter and maple syrup."
+      "In a medium bowl, toss the flour with the grated cheese.  Evenly spread the cheese over the bottom of the pie crust.  Top the cheese with the diced ham.  In a medium bowl, whisk together eggs, half and half, salt, pepper and dry mustard.  Stir in the green onions.",
+      "Pour the egg mixture over the ham and cheese.",
+      "Cover the unbaked quiche with plastic wrap, then with foil, sealing the edges well.",
+      "Place the prepared quiche in the freezer.  When ready to bake, preheat the oven to 400 degrees.  Do not thaw the quiche!",
+      "Remove the foil and plastic wrap.",
+      "Place the foil around the edges of the crust to prevent burning.",
+      "Place the frozen quiche in the oven and bake for about 1 hour, or until the filling is set and the crust is golden brown.",
+      "To cook the quiche immediately (without freezing first), preheat the oven to 350 degrees and bake for 45 minutes to 1 hour."
     ]
   },
   "lunch": {
-    "name": "Cuban Flank Steak With Avocado and Tomato Salad",
-    "image": "https://img.spoonacular.com/recipes/640990-556x370.jpg",
+    "name": "Alouette Chicken Paprika",
+    "image": "https://img.spoonacular.com/recipes/632244-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "cup \u00bc olive oil",
-      "cup \u00bc fresh lime juice",
-      "2 tbs orange juice",
-      "4 garlic cloves",
-      "2 tbs water",
-      "teaspoon \u00bd cumin",
-      "teaspoon \u00bd salt",
-      "teaspoon \u00bd black pepper",
-      "teaspoon \u00bd dried oregano",
-      "Hand full of fresh cilantro",
-      "1 flank steak",
-      "1 avocado, chopped",
-      "1 tomato, chopped",
-      "4 tbs finely chopped red onion"
+      "1 tablespoon butter",
+      "4 boneless chicken breasts halves",
+      "2 teaspoons garlic powder",
+      "1 package (6.5 oz.) Alouette Garlic & Herbs Spreadable Cheese",
+      "1 tablespoon milk",
+      "8 teaspoons paprika"
     ],
     "steps": [
-      "Place all of the Mojo Sauce ingredients in a small food processor, or blender.  I have a Bullet which I love and is perfect for making the mojo sauce.",
-      "Place the flank steak in a zip lock bag or shallow dish.",
-      "Add the sauce; l let marinate in refrigerator for 2 hour to overnight.",
-      "Remove the flank steak from the marinade; place remaining marinade in saucepan.",
-      "Let steak stand at room temperature for 30 minutes.",
-      "Grill the flank steak to your desired doneness.  As you can see from the picture, we like ours on the rare side.",
-      "Let the cooked steak stand for 10 minutes before thinly slicing across the grain.",
-      "Bring the marinade in the saucepan to a boil.",
-      "Let it cook for several minutes; it will begin to thicken.",
-      "Place the avocado, tomato and onion into a bowl.",
-      "Add the heated mojo sauce to the salad.",
-      "Serve on the side of the steak, or on top.  Your preference."
+      "Coat chicken with a mixture of 6 tsp. of paprika and all of the garlic powder.Saut chicken in butter over medium heat about 5 minutes on each side.Cover and simmer 15 minutes on low heat.",
+      "Remove chicken from skillet, reserving liquid.",
+      "Combine milk, Alouette",
+      "Spreadable Cheese and remaining paprika in a small mixing bowl.",
+      "Pour Alouette Garlic & Herbs",
+      "Spreadable Cheese mixture into skillet, stirring well with reserved liquid.To serve, pour sauce over chicken. Use remaining sauce over rice, pasta or potatoes."
     ]
   },
   "dinner": {
-    "name": "Crab Salad in Avocado Boats",
-    "image": "https://img.spoonacular.com/recipes/640311-556x370.jpg",
+    "name": "Game Day Jerk Wings",
+    "image": "https://img.spoonacular.com/recipes/644149-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1/3 cup finely chopped red onion",
-      "3 tablespoons mayonnaise",
-      "1/2 teaspoon Thai style hot sauce such as Sriracha",
-      "2 tablespoons chopped fresh cilantro",
-      "3 teaspoons fresh lime juice",
-      "1/2 teaspoon ground cumin",
-      "1/2 teaspoon lime zest",
-      "8 ounces lump crab meat",
-      "1 ripe large avocado, halved and pitted"
+      "60 jumbo chicken wings split with wing tips removed",
+      "1/4 cup pasilla chile powder",
+      "1/4 cup kosher salt",
+      "1 tablespoon ground black pepper",
+      "2 tablespoons ground cayenne pepper",
+      "2 tablespoons jamaican ground allspice",
+      "1 bottle Pickapeppa Sauce (available at most supermarkets)",
+      "3 tablespoons of unsalted butter",
+      "3 tablespoons honey",
+      "5 or more dashes Tabasco sauce (depending how hot you like it!)",
+      "1 tablespoon red pepper flakes",
+      "carrot sticks and celery sticks",
+      "Blue Cheese Dressing"
     ],
     "steps": [
-      "Stir red onion, mayonnaise, hot sauce, cilantro, 2 teaspoons lime juice, cumin and lime zest in medium bowl to blend.",
-      "Mix in crab meat. Season salad with salt and pepper.",
-      "Brush each avocado with the remaining 1 teaspoon lime juice to prevent avocado from browning.",
-      "Mound crab salad on each avocado half.",
-      "Serve salad with lime wedges."
+      "Split wings apart into 2 sections and slash a slit in the flat part of the wing for quicker cooking.",
+      "Combine chile powder, salt, black pepper, cayenne, and allspice in a bowl and sprinkle liberally over the wings (you don't need to use all of it).  Refrigerate for at least 1 hour.",
+      "Combine Pickapeppa sauce, butter, honey, Tabasco, and pepper flakes in a medium saucepan over low heat until it is well incorporated.",
+      "Let wings come to room temperature.",
+      "Prepare grill for medium high direct heat. Grill dry rubbed wings for 20-25 mins, constantly turning the wings with tongs to maintain good grill marks without over-charing the wings. Take the biggest wing after 20 mins and take a bite out of it, and if the juices run clear, they are done.",
+      "Place wings in a large bowl and toss with the jerk sauce.",
+      "Serve with blue cheese dressing and carrots."
     ]
   }
 }
