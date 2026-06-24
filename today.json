@@ -1,81 +1,82 @@
 {
-  "date": "2026-06-23",
+  "date": "2026-06-24",
   "breakfast": {
-    "name": "Make Ahead Quiche",
-    "image": "https://img.spoonacular.com/recipes/650650-556x370.jpg",
+    "name": "Gluten-Free Chocolate-Pecan Quickbread",
+    "image": "https://img.spoonacular.com/recipes/644878-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 (9 inch) unbaked pie crust",
-      "1 cup shredded cheddar cheese",
-      "1 cup shredded Monterrey Jack cheese",
-      "1 tablespoon flour",
-      "1/2 cup cooked ham, diced",
-      "4 eggs",
-      "1 cup half and half",
-      "2 green onions, chopped",
-      "1/4 teaspoon salt",
-      "1/4 teaspoon ground dry mustard",
-      "Dash of pepper"
+      "4 tablespoons butter, melted",
+      "2 cups all-purpose gluten-free flour",
+      "1/4 cup sugar",
+      "1/4 cup brown sugar",
+      "3/4 teaspoon baking soda",
+      "1/2 teaspoon salt",
+      "1 cup semi-sweet chocolate chips",
+      "1/2 cup chopped pecans",
+      "2 eggs, beaten",
+      "1 cup unsweetened applesauce",
+      "1/2 cup vanilla-honey Greek yogurt",
+      "1/4 teaspoon pure vanilla extract"
     ],
     "steps": [
-      "In a medium bowl, toss the flour with the grated cheese.  Evenly spread the cheese over the bottom of the pie crust.  Top the cheese with the diced ham.  In a medium bowl, whisk together eggs, half and half, salt, pepper and dry mustard.  Stir in the green onions.",
-      "Pour the egg mixture over the ham and cheese.",
-      "Cover the unbaked quiche with plastic wrap, then with foil, sealing the edges well.",
-      "Place the prepared quiche in the freezer.  When ready to bake, preheat the oven to 400 degrees.  Do not thaw the quiche!",
-      "Remove the foil and plastic wrap.",
-      "Place the foil around the edges of the crust to prevent burning.",
-      "Place the frozen quiche in the oven and bake for about 1 hour, or until the filling is set and the crust is golden brown.",
-      "To cook the quiche immediately (without freezing first), preheat the oven to 350 degrees and bake for 45 minutes to 1 hour."
+      "Preheat oven to 350 degrees Fahrenheit.",
+      "Butter a 5\"x9\" loaf pan.",
+      "Heat the butter until just melted and set aside to cool.",
+      "In a large bowl, combine the flour, sugars, baking soda and salt.",
+      "Stir in the chocolate chips and pecans.",
+      "In a separate bowl, combine the eggs, applesauce, yogurt, vanilla and melted butter.",
+      "Pour the wet mixture into the bowl of dry ingredients and stir until just combined, making certain not to over-mix.",
+      "Pour the batter into the loaf pan.",
+      "Bake for 1 hour or until a toothpick inserted into the center comes out clean.",
+      "Allow to cool for 10 minutes before removing from pan and transferring to a wire rack."
     ]
   },
   "lunch": {
-    "name": "Alouette Chicken Paprika",
-    "image": "https://img.spoonacular.com/recipes/632244-556x370.jpg",
+    "name": "Basil Marinated Grilled Chicken",
+    "image": "https://img.spoonacular.com/recipes/634434-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 tablespoon butter",
-      "4 boneless chicken breasts halves",
-      "2 teaspoons garlic powder",
-      "1 package (6.5 oz.) Alouette Garlic & Herbs Spreadable Cheese",
-      "1 tablespoon milk",
-      "8 teaspoons paprika"
+      "4 cloves garlic",
+      "2 cups lightly packed basil leaves",
+      "cup extra virgin olive oil, about \u00bd",
+      "1/2 teaspoon salt",
+      "8 boneless chicken breasts, patted dry so the marinade wil"
     ],
     "steps": [
-      "Coat chicken with a mixture of 6 tsp. of paprika and all of the garlic powder.Saut chicken in butter over medium heat about 5 minutes on each side.Cover and simmer 15 minutes on low heat.",
-      "Remove chicken from skillet, reserving liquid.",
-      "Combine milk, Alouette",
-      "Spreadable Cheese and remaining paprika in a small mixing bowl.",
-      "Pour Alouette Garlic & Herbs",
-      "Spreadable Cheese mixture into skillet, stirring well with reserved liquid.To serve, pour sauce over chicken. Use remaining sauce over rice, pasta or potatoes."
+      "Mince garlic in a food processor, then add basil and process until roughly chopped.",
+      "Drizzle in olive oil until a thin ketchup consistency is achieved.",
+      "Add salt and whirl for 5 seconds to combine.",
+      "Place chicken in a baking dish and pour marinade over chicken, turning pieces to coat evenly. Cover and refrigerate for 4 hours.",
+      "Grill over medium high heat until cooked through, about 8 minutes per side."
     ]
   },
   "dinner": {
-    "name": "Game Day Jerk Wings",
-    "image": "https://img.spoonacular.com/recipes/644149-556x370.jpg",
+    "name": "Linguine and Clams In Garlic White Wine Sauce",
+    "image": "https://img.spoonacular.com/recipes/650122-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "60 jumbo chicken wings split with wing tips removed",
-      "1/4 cup pasilla chile powder",
-      "1/4 cup kosher salt",
-      "1 tablespoon ground black pepper",
-      "2 tablespoons ground cayenne pepper",
-      "2 tablespoons jamaican ground allspice",
-      "1 bottle Pickapeppa Sauce (available at most supermarkets)",
-      "3 tablespoons of unsalted butter",
-      "3 tablespoons honey",
-      "5 or more dashes Tabasco sauce (depending how hot you like it!)",
-      "1 tablespoon red pepper flakes",
-      "carrot sticks and celery sticks",
-      "Blue Cheese Dressing"
+      "10 cloves garlic, smashed",
+      "5 dozens little neck clams, scrubbed under cold running water",
+      "2 cups white wine",
+      "2 pinchs large of crushed red pepper flakes",
+      "1 pound linguine",
+      "2 tablespoons unsalted butter",
+      "2 tablespoons chopped Italian parsley, plus additional for garnish",
+      "2 tablespoons chopped fresh oregano leaves, plus additional for garnish",
+      "1 cup finely grated Parmigiano-Reggiano, optioinal",
+      "Kosher salt (I did not need any)"
     ],
     "steps": [
-      "Split wings apart into 2 sections and slash a slit in the flat part of the wing for quicker cooking.",
-      "Combine chile powder, salt, black pepper, cayenne, and allspice in a bowl and sprinkle liberally over the wings (you don't need to use all of it).  Refrigerate for at least 1 hour.",
-      "Combine Pickapeppa sauce, butter, honey, Tabasco, and pepper flakes in a medium saucepan over low heat until it is well incorporated.",
-      "Let wings come to room temperature.",
-      "Prepare grill for medium high direct heat. Grill dry rubbed wings for 20-25 mins, constantly turning the wings with tongs to maintain good grill marks without over-charing the wings. Take the biggest wing after 20 mins and take a bite out of it, and if the juices run clear, they are done.",
-      "Place wings in a large bowl and toss with the jerk sauce.",
-      "Serve with blue cheese dressing and carrots."
+      "Coat a large saute pan (I used a 6 quart stock pot, as she does on the show) with olive oil and add 5 garlic cloves and a pinch of red pepper flakes. Bring pan to medium high heat and cook until garlic becomes golden brown. (Meg note: I happen to love garlic and flipped the smashed garlic over to brown on the other side, wanting to get as much garlic flavor as I could.) When garlic is golden brown and very aromatic, remove it and discard (it has fulfilled its garlic destiny). Put 3 1/2 dozen clams in the pan and add the wine. Cover the pan a bring to a boil over medium heat. Cover and cook until the clams open up, about 10 minutes. Using a slotted spoon, remove the clams from the pan and set aside.",
+      "Pour the cooking liquid into a measuring cup and set aside.",
+      "Bring a large pot of water to a boil over medium heat. (Meg note: I usually salt my pasta water, but the cooking liquid was on the salty side so I skipped, figuring it is easier to add the salt in later than take it out.)",
+      "Mince remaining smashed garlic cloves. Coat same saute pan again with olive oil and add garlic and another pinch of red pepper flakes. Bring pan to medium-high heat and cook garlic for a minute or two (dont let it get brown).",
+      "Add the remaining raw clams and reserved clam cooking liquid to the pan. When adding the liquid, be sure to check for sand and grit in the bottom, you may lose the last couple of tablespoons of juice but that is better than sand in your pasta! (Meg note: even though I followed the directions, next time I might strain the juice through a paper towel lined sieve to make sure all of the sand and grit is out, before adding it back into the pan.) Cover and cook until the clams open.",
+      "While clams are cooking, drop the linguine into the salted boiling water and cook until the pasta is very al dente  maybe a minute or so less than the box directs.",
+      "Remove the cooked clams in their shells from the pan and keep warm.",
+      "Add the butter and cooked clams that have been removed from their shells back to the pan. Bring the liquid to a boil and toss in the cooked pasta and the herbs. Cook the pasta together with the sauce until the sauce clings to the pasta. Turn off the heat and toss in the grated parmigian-reggiano, if using. Stir vigorously to combine.",
+      "Divide the pasta into serving dishes and garnish with clams that are still in their shells and some chopped herbs.",
+      "Note: Purchase shellfish thats sold in mesh bags. If you buy clams or mussels that are in plastic bags, you may be getting dead shellfish. The plastic makes them suffocate."
     ]
   }
 }
