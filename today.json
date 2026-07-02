@@ -1,70 +1,59 @@
 {
-  "date": "2026-07-01",
+  "date": "2026-07-02",
   "breakfast": {
-    "name": "Simple Protein Pancakes",
-    "image": "https://img.spoonacular.com/recipes/1021260-556x370.jpg",
-    "cookTime": 20,
+    "name": "Apple Pie Smoothie",
+    "image": "https://img.spoonacular.com/recipes/632575-556x370.jpg",
+    "cookTime": 5,
     "ingredients": [
-      "2 tbsp almond milk",
-      "1 tsp baking powder",
-      "1 banana",
-      "2 eggs",
-      "1/2 cup Greek yogurt",
-      "1 cup quick oats",
-      "1/3 cup Premier Protein",
-      "1 tsp vanilla extract"
+      "1 tablespoon unsalted almond butter",
+      "1 tablespoon apple sauce",
+      "1/2 cup vanilla fat free yogurt",
+      "1 tablespoon 7 grain granola",
+      "1/4 teaspoon Ground cinnamon",
+      "1 teaspoon honey",
+      "ice cubes",
+      "1 teaspoon Maple syrup",
+      "1/2 cup milk",
+      "1 red delicious apple, cut into pieces"
     ],
     "steps": [
-      "Grab all of your ingredients and the Premier Protein powder and place them into a blender. Set the blender for a one minute blend to get all of the ingredients mixed well together.Once everything is blended well, set aside and allow the protein powder pancakes mixture thicken.",
-      "Heat the skillet, and make sure to let the skillet get very hot before pouring the batter.Once the skillet is hot, start pouring small sized pancakes. Don't flip the pancakes until the batter has started forming small bubbles on the edges, and the edges start to turn a light golden brown. This should take approximately 2 minutes.Flip the pancakes over and allow them to cook thoroughly on the other side.After all of the pancakes are finished, top with your favorite toppings and a little maple syrup."
+      "Combine all ingredients in a blender and pulse until smooth.",
+      "Serve immediately."
     ]
   },
   "lunch": {
-    "name": "Pittata - Pizza Frittata",
-    "image": "https://img.spoonacular.com/recipes/622598-556x370.jpg",
-    "cookTime": 30,
+    "name": "How to Make the Best Crock Pot Roast",
+    "image": "https://img.spoonacular.com/recipes/1050445-556x370.jpg",
+    "cookTime": 490,
     "ingredients": [
-      "8 eggs",
-      "fresh basil",
-      "1/2 cup milk",
-      "freshly grated Parmesan cheese",
-      "pepperoni",
-      "1/4 cup shredded mozzarella cheese"
+      "1 cup beef broth or water",
+      "1/4 cup pepperoncini pepper juice",
+      "6 pepperoncini peppers",
+      "3 pound pot roast cut",
+      "2 tablespoons ranch seasoning"
     ],
     "steps": [
-      "Pre-heat oven to ~450\u00b0F (230\u00b0C), top heat only.",
-      "On the stove, heat cooking fat in a large oven-safe skillet over medium heat.",
-      "Beat the eggs with the milk (again milk is optional), salt, pepper, and any herbs or spices desired.",
-      "Add any desired add-ins (other than cheese) to the skillet. For the pittata, we didn't use anything, but this is when you would add your cooked vegetables or raw vegetables that don't require much cooking (e.g. bell pepper).",
-      "Pour in the egg mixture and tilt the skillet to ensure it evenly surrounds any add-ins. Now distribute the shredded cheese and pepperoni slices (if using).",
-      "Allow the eggs to cook on the stove until the edges of the eggs are set. The center will still be a bit jiggly. Now is a good time to top with Parmesan cheese (be generous!)",
-      "Transfer the pan to the hot oven and bake until the eggs are puffed and browned with a firm center.",
-      "Remove from oven and let cool for a couple minutes before cutting into wedges."
+      "Place the pot roast in a crock pot and sprinkle on the seasoning.",
+      "Add the peppers and juice, then the broth.",
+      "Secure the lid and cook on high for 2.5-3 hours or on low for 5-6 hours, until the pot roast shreds easily with two forks."
     ]
   },
   "dinner": {
-    "name": "Cheesy Turkey Meatballs",
-    "image": "https://img.spoonacular.com/recipes/637690-556x370.jpg",
+    "name": "Bbq Pork Steak",
+    "image": "https://img.spoonacular.com/recipes/634509-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 cup BBQ Sauce",
-      "3/4 cup toasted breadcrumbs",
-      "1 Carrot, Shredded",
-      "1 Egg",
-      "1 clove garlic",
-      "1 pound of Ground Turkey",
-      "1 cup milk",
-      "1 cup onion, finely diced",
-      "1/4 teaspoon Pepper",
-      "salt to taste",
-      "1/2 cup of Shredded Cheddar",
-      "1 teaspoon of Worcestershire"
+      "3 tablespoons butter, divided",
+      "White corn syrup, to taste",
+      "1 (18 oz.) reg. flavor Open Bit",
+      "1 (8 oz.) bottle Italian dressing",
+      "1 env. meat marinade",
+      "1/2 onion, finely chopped",
+      "6 pork chops",
+      "1 teaspoon Worcestershire"
     ],
     "steps": [
-      "Add together in a large bowl your turkey, breadcrumbs, egg, salt, Worcestershire, milk, carrot, onion, cheese, garlic and pepper.",
-      "Mix it together well.  I actually use my hands to mix it together (after a good washing of course).  Its just easier and youre going to need to get dirty anyway to make the meatballs.  Once youve mixed it up good, grab small handfuls of your meat mixture, roll them into balls.",
-      "Heat up about a tablespoon of oil in a large skillet on medium high heat.  When the oil is heated up, drop your balls into the pan.Cook for about 5 to 10 minutes, flipping to all sides, until they are cooked through.  Once they are cooked up, drain any leftover oil and add in your bbq sauce.",
-      "Heat and serve."
+      "Marinate pork steak for 24 hours in meat marinate mix and Italian dressing."
     ]
   }
 }
