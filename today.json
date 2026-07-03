@@ -1,59 +1,84 @@
 {
-  "date": "2026-07-02",
+  "date": "2026-07-03",
   "breakfast": {
-    "name": "Apple Pie Smoothie",
-    "image": "https://img.spoonacular.com/recipes/632575-556x370.jpg",
-    "cookTime": 5,
+    "name": "Gluten Free Almond Blueberry Coffee Cake",
+    "image": "https://img.spoonacular.com/recipes/729532-556x370.jpg",
+    "cookTime": 60,
     "ingredients": [
-      "1 tablespoon unsalted almond butter",
-      "1 tablespoon apple sauce",
-      "1/2 cup vanilla fat free yogurt",
-      "1 tablespoon 7 grain granola",
-      "1/4 teaspoon Ground cinnamon",
-      "1 teaspoon honey",
-      "ice cubes",
-      "1 teaspoon Maple syrup",
-      "1/2 cup milk",
-      "1 red delicious apple, cut into pieces"
+      "3 tablespoons sliced almonds",
+      "3 teaspoons baking powder (without wheat starch)",
+      "1\u00bd cup frozen blueberries",
+      "\u00bc cup canola oil",
+      "1 large egg",
+      "2 cups gluten free all-purpose flour + 1 tablespoon",
+      "\u00bd cup granulated sugar",
+      "\u00bd teaspoon fine sea salt",
+      "3 tablespoons raw turbinado sugar",
+      "\u00bd cup vanilla yogurt",
+      "\u00bd cup whole milk",
+      "1 teaspoon xanthan gum"
     ],
     "steps": [
-      "Combine all ingredients in a blender and pulse until smooth.",
-      "Serve immediately."
+      "Preheat your oven to 375 degrees F and spray a 9\" springform pan with a nonstick spray. Set aside.In a large bowl, whisk together the egg, whole milk, vanilla yogurt and canola oil. Set aside.In a separate medium bowl, whisk together 2 cups of the flour, granulated sugar, baking powder, xantham gum and fine sea salt.",
+      "Add the dry ingredients to the wet and mix to combine until just moistened. Do not overmix.In a small bowl, combine 1 cup of the blueberries with the remaining 1 tablespoon flour. Fold the blueberries into the batter very gently until dispersed evenly. It is OK if they bleed just a little bit.",
+      "Pour the batter into the prepared pan and flatten and even out with a spatula. Top with the remaining blueberries.In a small bowl toss the turbinado sugar and almonds together.",
+      "Sprinkle on top of the cake.",
+      "Transfer the cake to the oven ad bake for 30-35 minutes or until a toothpick comes out with just a few crumbs.",
+      "Remove from heat and let cool in the pan for 15 minutes. Release the sides and transfer the cake to a wire rack to cool the rest of the way.Enjoy immediately or cover with plastic wrap and eat within 2 days."
     ]
   },
   "lunch": {
-    "name": "How to Make the Best Crock Pot Roast",
-    "image": "https://img.spoonacular.com/recipes/1050445-556x370.jpg",
-    "cookTime": 490,
+    "name": "Easy and Delicious Taco Soup",
+    "image": "https://img.spoonacular.com/recipes/641815-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "1 cup beef broth or water",
-      "1/4 cup pepperoncini pepper juice",
-      "6 pepperoncini peppers",
-      "3 pound pot roast cut",
-      "2 tablespoons ranch seasoning"
+      "1 pound Ground Turkey, cooked and drained",
+      "1/2 Onion, chopped",
+      "1 can (15 oz) Pinto Beans with liquid",
+      "1 can (15 oz) Kidney Beans with liquid",
+      "1 can (15 oz) regular Corn with liquid",
+      "1 can (8 oz) Tomato Sauce",
+      "1 can (15 oz) diced Tomatoes",
+      "1 can (4 oz) Green Chiles",
+      "1 can (2 oz) sliced Olives with liquid",
+      "1 package Taco Seasoning (check label for gluten free)",
+      "1/4 teaspoon Cayenne Pepper",
+      "fresh Cilantro, chopped",
+      "grated Cheese (Optional for dairy free)",
+      "Tortilla Chips",
+      "Sour Cream (Tofutti \"Better than sour cream\" for dairy free)"
     ],
     "steps": [
-      "Place the pot roast in a crock pot and sprinkle on the seasoning.",
-      "Add the peppers and juice, then the broth.",
-      "Secure the lid and cook on high for 2.5-3 hours or on low for 5-6 hours, until the pot roast shreds easily with two forks."
+      "Combine all ingredients, except cilantro, cheese, chips and sour cream in a large pot.",
+      "Heat to a full boil.",
+      "Reduce heat and simmer for 30 minutes.",
+      "To serve: Top with cilantro, cheese, chips and sour cream."
     ]
   },
   "dinner": {
-    "name": "Bbq Pork Steak",
-    "image": "https://img.spoonacular.com/recipes/634509-556x370.jpg",
+    "name": "My Chicken Korma",
+    "image": "https://img.spoonacular.com/recipes/652834-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3 tablespoons butter, divided",
-      "White corn syrup, to taste",
-      "1 (18 oz.) reg. flavor Open Bit",
-      "1 (8 oz.) bottle Italian dressing",
-      "1 env. meat marinade",
-      "1/2 onion, finely chopped",
-      "6 pork chops",
-      "1 teaspoon Worcestershire"
+      "250 g of Chicken Breast",
+      "1 cup coconut milk",
+      "1/2 teaspoon of coriander powder",
+      "1/2 teaspoon of cumin powder",
+      "2 teaspoons of Ginger/Garlic Paste",
+      "2 teaspoons of ground almond",
+      "1 tablespoon of Oil",
+      "\u00bd teaspoon of poppy seeds",
+      "3 -4 raisins",
+      "1 teaspoon salt"
     ],
     "steps": [
-      "Marinate pork steak for 24 hours in meat marinate mix and Italian dressing."
+      "Cut the chicken breasts into small pieces.",
+      "Heat Oil in a pan.",
+      "Add the ginger/garlic paste to the oil and fry it for about 3 mins at a low heat. Then add cumin, coriander, almond and poppy seeds. Fry the masala for about 3-4 mins at a low heat.",
+      "Add the chicken pieces to the masala and continue to fry for another 5 mins at a low heat, stirring carefully and folding the masala from across the pan.",
+      "Add the coconut milk, stir the chicken pieces and ensure they are covered with coconut milk.",
+      "Add salt to taste and the raisins.Cover the pan and let the chicken cook with occasional stirring.",
+      "Serve with basmati rice."
     ]
   }
 }
