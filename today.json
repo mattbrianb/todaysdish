@@ -1,73 +1,82 @@
 {
-  "date": "2026-07-05",
+  "date": "2026-07-06",
   "breakfast": {
-    "name": "Peanut Butter and Jelly Smoothie",
-    "image": "https://img.spoonacular.com/recipes/655235-556x370.jpg",
+    "name": "Bananas Foster French Toast By Mommie Cooks",
+    "image": "https://img.spoonacular.com/recipes/634234-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 cup almond milk or other non-dairy milk (see my almond milk recipe)",
-      "2 bananas, smashed (I used frozen)",
-      "1/2 cup peanut butter",
-      "\u00bd cup strawberries (about 3 strawberries) or 1 Tbsp strawberry jam"
+      "8 bananas",
+      "1/2 cup Brown sugar",
+      "1/2 cup butter",
+      "1 teaspoon cinnamon",
+      "10 Eggs",
+      "1/4 cup Half& Half",
+      "1 loaf Hawaiian Bread (challah works well)",
+      "2 cups heavy cream",
+      "1/4 cup Maple Syrup",
+      "1/2 teaspoon Salt",
+      "1/4 cup Sugar",
+      "1 teaspoon Vanilla"
     ],
     "steps": [
-      "Place ingredients in a high speed blender like Blendtec for super smooth texture, blend on high.If using a regular blender put milk and strawberries in then blend.Next, add banana pieces and peanut butter, process until smooth.",
-      "Garnish with crushed peanuts and serve."
+      "Slice up your loaf of bread into 1 inch thick slices.In a separate bowl, whisk together the eggs, half & half and cinnamon.Dip each slice of bread in the egg mixture being sure to coat both sides.Cook up on a griddle for about 2-3 minutes on each side or until cooked through.In a pan on the stove set to medium low heat, melt up the butter and add in the brown sugar.",
+      "Add to the mixture the syrup, cinnamon, salt and vanilla.",
+      "Add in the bananas. Stir to coat bananas completely.",
+      "Remove from heat.To make the whipped cream, whip together your cream, maple syrup and sugar until stiff peaks form.",
+      "Serve over the top of french toast."
     ]
   },
   "lunch": {
-    "name": "Linguine and Clams In Garlic White Wine Sauce",
-    "image": "https://img.spoonacular.com/recipes/650122-556x370.jpg",
+    "name": "Fresh and Simple Swai Ceviche",
+    "image": "https://img.spoonacular.com/recipes/643428-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "10 cloves garlic, smashed",
-      "5 dozens little neck clams, scrubbed under cold running water",
-      "2 cups white wine",
-      "2 pinchs large of crushed red pepper flakes",
-      "1 pound linguine",
-      "2 tablespoons unsalted butter",
-      "2 tablespoons chopped Italian parsley, plus additional for garnish",
-      "2 tablespoons chopped fresh oregano leaves, plus additional for garnish",
-      "1 cup finely grated Parmigiano-Reggiano, optioinal",
-      "Kosher salt (I did not need any)"
+      "1 avocado, diced",
+      "1/4 teaspoon chile-garlic paste",
+      "1 Tb. chopped cilantro",
+      "3 Swai fillets, diced (about 1 lb.)",
+      "2 limes, juiced",
+      "Olive oil",
+      "Salt and pepper",
+      "1 cup shallot, diced (or \u00bc red onion)",
+      "1 medium tomato, seeded and finely chopped"
     ],
     "steps": [
-      "Coat a large saute pan (I used a 6 quart stock pot, as she does on the show) with olive oil and add 5 garlic cloves and a pinch of red pepper flakes. Bring pan to medium high heat and cook until garlic becomes golden brown. (Meg note: I happen to love garlic and flipped the smashed garlic over to brown on the other side, wanting to get as much garlic flavor as I could.) When garlic is golden brown and very aromatic, remove it and discard (it has fulfilled its garlic destiny). Put 3 1/2 dozen clams in the pan and add the wine. Cover the pan a bring to a boil over medium heat. Cover and cook until the clams open up, about 10 minutes. Using a slotted spoon, remove the clams from the pan and set aside.",
-      "Pour the cooking liquid into a measuring cup and set aside.",
-      "Bring a large pot of water to a boil over medium heat. (Meg note: I usually salt my pasta water, but the cooking liquid was on the salty side so I skipped, figuring it is easier to add the salt in later than take it out.)",
-      "Mince remaining smashed garlic cloves. Coat same saute pan again with olive oil and add garlic and another pinch of red pepper flakes. Bring pan to medium-high heat and cook garlic for a minute or two (dont let it get brown).",
-      "Add the remaining raw clams and reserved clam cooking liquid to the pan. When adding the liquid, be sure to check for sand and grit in the bottom, you may lose the last couple of tablespoons of juice but that is better than sand in your pasta! (Meg note: even though I followed the directions, next time I might strain the juice through a paper towel lined sieve to make sure all of the sand and grit is out, before adding it back into the pan.) Cover and cook until the clams open.",
-      "While clams are cooking, drop the linguine into the salted boiling water and cook until the pasta is very al dente  maybe a minute or so less than the box directs.",
-      "Remove the cooked clams in their shells from the pan and keep warm.",
-      "Add the butter and cooked clams that have been removed from their shells back to the pan. Bring the liquid to a boil and toss in the cooked pasta and the herbs. Cook the pasta together with the sauce until the sauce clings to the pasta. Turn off the heat and toss in the grated parmigian-reggiano, if using. Stir vigorously to combine.",
-      "Divide the pasta into serving dishes and garnish with clams that are still in their shells and some chopped herbs.",
-      "Note: Purchase shellfish thats sold in mesh bags. If you buy clams or mussels that are in plastic bags, you may be getting dead shellfish. The plastic makes them suffocate."
+      "Place the diced fish into  of the lime juice and refrigerate for at least 3 hours. Strain when ready to proceed.",
+      "Mix the veggies with the remaining lime juice.Stir in the fish and cilantro.",
+      "Drizzle with olive oil and add the chile-garlic sauce. Gently toss.Salt and pepper to taste.",
+      "Serve with tortilla chips or a salad."
     ]
   },
   "dinner": {
-    "name": "Flank Steak with Mushroom Sauce",
-    "image": "https://img.spoonacular.com/recipes/631750-556x370.jpg",
+    "name": "Chicken Stew For The Soul",
+    "image": "https://img.spoonacular.com/recipes/638343-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 packets Swanson\u00ae Flavor Concentrated Beef Broth",
-      "2 tablespoons butter",
-      "1 flank steak",
-      "1 tablespoon chopped fresh rosemary leaves",
-      "4 cloves garlic, minced",
-      "8 ounces mushrooms, sliced (about 3 cups)",
-      "2 tablespoons olive oil",
-      "1 shallot, diced",
-      "1/4 cup water"
+      "5 cardamoms",
+      "1 kg chicken",
+      "1 cinnamon stick broken",
+      "1 cup coconut milk",
+      "1 sprig curry leaves",
+      "fresh coriander",
+      "1/2 teaspoon garam masala",
+      "3 teaspoons ginger garlic paste",
+      "1 teaspoon ginger-garlic paste",
+      "2 green chillies",
+      "1 teaspoon ground red chilli",
+      "1 teaspoon ground coriander",
+      "1 teaspoon ground tumeric",
+      "juice of 1 lemon",
+      "1 large onion",
+      "2 potatoes",
+      "salt to taste"
     ],
     "steps": [
-      "Heat 1 tablespoon oil in a 10-inch skillet over medium heat.",
-      "Add the beef and cook until well browned on both sides and until desired doneness, about 10 minutes for medium-rare.",
-      "Remove the beef from the skillet.",
-      "Heat 1 tablespoon butter and the remaining oil in the skillet.",
-      "Add the mushrooms and cook for 5 minutes or until tender, stirring occasionally.",
-      "Add the shallot, garlic and rosemary and cook and stir for 30 seconds.   Stir in the concentrated broth, water and remaining butter and cook until the butter is melted.",
-      "Cut the beef diagonally against the grain into thin slices.",
-      "Serve the mushroom mixture with the beef."
+      "Slice the onions, slit the chillies, cube the potatoes and keep aside.",
+      "Heat oil in a heavy bottomed pan or pressure cooker, splutter mustard seeds.",
+      "Add the whole spices and stir till you begin to get the aroma of the spices.",
+      "Add sliced onions,curry leaves and green chillies and saute.Stir in the ground coriander and add the marinaded chicken. Stir so that the chicken is covered well in the sauteed mixture.Cover and let it cook. When it is half done add the cubed potatoes.When the chicken is almost done add the garam masala,salt and coconut milk and stir.When done put off the heat and garnish with chopped fresh coriander.Have I forgotten the most important ingredient? Stir it with lots of love for the family and friends who will partake of the meal.",
+      "Serve hot chicken stew with freshly made appams."
     ]
   }
 }
