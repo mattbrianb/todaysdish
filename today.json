@@ -1,82 +1,80 @@
 {
-  "date": "2026-07-06",
+  "date": "2026-07-07",
   "breakfast": {
-    "name": "Bananas Foster French Toast By Mommie Cooks",
-    "image": "https://img.spoonacular.com/recipes/634234-556x370.jpg",
+    "name": "Havarti and Asparagus Quiche",
+    "image": "https://img.spoonacular.com/recipes/646348-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "8 bananas",
-      "1/2 cup Brown sugar",
-      "1/2 cup butter",
-      "1 teaspoon cinnamon",
-      "10 Eggs",
-      "1/4 cup Half& Half",
-      "1 loaf Hawaiian Bread (challah works well)",
-      "2 cups heavy cream",
-      "1/4 cup Maple Syrup",
+      "8 stalks asparagus",
+      "1 cup cream",
+      "2 Eggs",
+      "1 1/4 cups Flour",
+      "1/2 pound Havarti with Dill Cheese (approximately \u00bd lb.)",
       "1/2 teaspoon Salt",
-      "1/4 cup Sugar",
-      "1 teaspoon Vanilla"
+      "1 cup Sugar",
+      "3/4 cup cold, unsalted butter cut into small cubes",
+      "2 quarts (8 c.) water"
     ],
     "steps": [
-      "Slice up your loaf of bread into 1 inch thick slices.In a separate bowl, whisk together the eggs, half & half and cinnamon.Dip each slice of bread in the egg mixture being sure to coat both sides.Cook up on a griddle for about 2-3 minutes on each side or until cooked through.In a pan on the stove set to medium low heat, melt up the butter and add in the brown sugar.",
-      "Add to the mixture the syrup, cinnamon, salt and vanilla.",
-      "Add in the bananas. Stir to coat bananas completely.",
-      "Remove from heat.To make the whipped cream, whip together your cream, maple syrup and sugar until stiff peaks form.",
-      "Serve over the top of french toast."
+      "In the bowl of a food processor, combine flour, salt, and sugar.",
+      "Add butter and pulse until the mixture resembles the size of small peas.",
+      "Add the first 5 tablespoons of water, one at a time.Check consistency - if the mixture holds together when pinched, the crust is perfect  dont add any more water.If, however, the crust still crumbles apart and wont stay together when pinched, that means it wont stay together while rolling either; go ahead and add the last tablespoon of water one teaspoon at a time, rechecking the consistency between each teaspoon.The exact amount of water you need will depend on the amount of humidity in the air and therefore in the flour.Once finished, turn the dough out onto a piece of plastic wrap.Form the dough into a disk, and refrigerate 30 minutes before rolling it out.You want that flour to relax and the butter to be nice and cold  that will ensure you have a nice flaky crust.Meanwhile, boil a pot of water large enough to fit the stalks of asparagus.Trim the ends of your asparagus making sure they will fit nicely into your quiche pan, arranged like the spokes in a bicycle wheel with the ends touching in the middle.",
+      "Place in boiling water, and blanch for 2-3 minutes.",
+      "Remove from boiling water and place in an ice bath to stop the cooking and keep the color nice and vibrant green.Set aside.Preheat oven to 350 degrees.On a lightly floured surface, roll the dough out into a circle a few inches larger than your quiche or pie pan.Fold the dough back up over the rolling pin if needed, to gently lift the crust into the dish.Once the dough is neatly into the pan, make sure it is smoothly tucked into the corners.Trim excess crust from the edges leaving about a 1 border.Fold the excess dough under itself, making sure not to fold it over the edge of the pan, to ensure a nice even border.Crimp the dough between your fingers to make little pinches.Poke a few fork holes in it to allow the steam to escape, this will prevent a soggy bottom crust.Blind bake the crust for 5 minutes.This will prevent all of the custard from getting absorbed into the crust making it soggy.",
+      "Remove crust from oven and sprinkle with Havarti with Dill cheese.  Set aside.Increase oven temperature to 375 degrees.In a large bowl, combine eggs, heavy cream, and milk and whisk thoroughly.",
+      "Pour egg mixture gently over the cheese mixture.",
+      "Place asparagus stalks, tips pointing outwards into a spoke pattern like on a bicycle wheel, making sure the ends come together in the middle.",
+      "Bake 40 minutes.Check to make sure the crust isnt getting too brown.If it is, loosely drape a piece of foil over the top, making sure you dont lay it on the actual custard mixture in the middle.",
+      "Bake 10-12 minutes longer.To test doneness, slide a butter knife under the edge of one of the asparagus stalks.The knife should come out clean.It should be moist  after all the quiche is moist, but it should be free of egg mixture.If not, put it back in the oven with your tent foil on top for 3-4 more minutes."
     ]
   },
   "lunch": {
-    "name": "Fresh and Simple Swai Ceviche",
-    "image": "https://img.spoonacular.com/recipes/643428-556x370.jpg",
-    "cookTime": 45,
+    "name": "Easy Slow Cooker Whole Chicken With Rosemary",
+    "image": "https://img.spoonacular.com/recipes/1062882-556x370.jpg",
+    "cookTime": 430,
     "ingredients": [
-      "1 avocado, diced",
-      "1/4 teaspoon chile-garlic paste",
-      "1 Tb. chopped cilantro",
-      "3 Swai fillets, diced (about 1 lb.)",
-      "2 limes, juiced",
-      "Olive oil",
-      "Salt and pepper",
-      "1 cup shallot, diced (or \u00bc red onion)",
-      "1 medium tomato, seeded and finely chopped"
+      "1 4.5lb chicken",
+      "1 tbsp olive oil extra virgin",
+      "2 large lemons quartered",
+      "1 medium onion halved",
+      "1 tsp paprika",
+      "1 tsp pepper",
+      "1 bunch rosemary halved",
+      "1 tsp salt",
+      "2 tbsp butter unsalted",
+      "1/2 cup water"
     ],
     "steps": [
-      "Place the diced fish into  of the lime juice and refrigerate for at least 3 hours. Strain when ready to proceed.",
-      "Mix the veggies with the remaining lime juice.Stir in the fish and cilantro.",
-      "Drizzle with olive oil and add the chile-garlic sauce. Gently toss.Salt and pepper to taste.",
-      "Serve with tortilla chips or a salad."
+      "Combine all seasonings in a small bowl, reserving half of the rosemary. Baste the chicken with unsalted butter and olive oil and then cover with seasonings.",
+      "Add half of the onion, lemons, and rosemary to the inner cavity of the chicken.",
+      "Roll up three small lemon-sized balls of foil and place in the bottom of the slow cooker.",
+      "Place half of lemons and onion with water into the bottom of the slow cooker.",
+      "Add remaining rosemary to the top of the chicken.Cover and cook on low for 7-8 hours, or high for 4-5 hours."
     ]
   },
   "dinner": {
-    "name": "Chicken Stew For The Soul",
-    "image": "https://img.spoonacular.com/recipes/638343-556x370.jpg",
+    "name": "Baked Crusty Chicken",
+    "image": "https://img.spoonacular.com/recipes/633569-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "5 cardamoms",
-      "1 kg chicken",
-      "1 cinnamon stick broken",
-      "1 cup coconut milk",
-      "1 sprig curry leaves",
-      "fresh coriander",
-      "1/2 teaspoon garam masala",
-      "3 teaspoons ginger garlic paste",
-      "1 teaspoon ginger-garlic paste",
-      "2 green chillies",
-      "1 teaspoon ground red chilli",
-      "1 teaspoon ground coriander",
-      "1 teaspoon ground tumeric",
-      "juice of 1 lemon",
-      "1 large onion",
-      "2 potatoes",
-      "salt to taste"
+      "1/2 cup Dried bread crumbs",
+      "2 tablespoons butter or margarine divided",
+      "1 Chicken, cut into pieces",
+      "1 teaspoon Dried basil",
+      "1/4 cup plus 1 tablespoon flour divided",
+      "1 tablespoon Fresh parsley, chopped",
+      "1/4 teaspoon Ground black pepper",
+      "1 Lemon juice of",
+      "1/2 teaspoon Paprika",
+      "1/2 teaspoon salt",
+      "1/2 teaspoon vegetable oil"
     ],
     "steps": [
-      "Slice the onions, slit the chillies, cube the potatoes and keep aside.",
-      "Heat oil in a heavy bottomed pan or pressure cooker, splutter mustard seeds.",
-      "Add the whole spices and stir till you begin to get the aroma of the spices.",
-      "Add sliced onions,curry leaves and green chillies and saute.Stir in the ground coriander and add the marinaded chicken. Stir so that the chicken is covered well in the sauteed mixture.Cover and let it cook. When it is half done add the cubed potatoes.When the chicken is almost done add the garam masala,salt and coconut milk and stir.When done put off the heat and garnish with chopped fresh coriander.Have I forgotten the most important ingredient? Stir it with lots of love for the family and friends who will partake of the meal.",
-      "Serve hot chicken stew with freshly made appams."
+      "Heat oven to 35",
+      "Combine bread crumbs, flour, parsley, basil, salt, paprika and pepper in small brown paper bag; seal and shake to mix.",
+      "Combine lemon juice, butter and oil in large bowl.",
+      "Add the chicken, turning the pieces to coat. Working with a few pieces at a time, shake the chicken in crumb mixture in the bag to coat evenly; place the pieces on 15x10x1\" baking pan.",
+      "Bake in 350 oven for 45 minutes or until the chicken meat is no longer pink near the bone. Increase the oven NOTES : For a quick sauce, combine equal parts mustard and horseradish; serve chicken with buttered noodles tossed with pepper and zucchini strips."
     ]
   }
 }
