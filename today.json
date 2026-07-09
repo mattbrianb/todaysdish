@@ -1,67 +1,82 @@
 {
-  "date": "2026-07-08",
+  "date": "2026-07-09",
   "breakfast": {
-    "name": "Mini Ham Omelets",
-    "image": "https://img.spoonacular.com/recipes/636769-556x370.jpg",
-    "cookTime": 25,
+    "name": "Wholesome Spelt Waffles",
+    "image": "https://img.spoonacular.com/recipes/665307-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "6 cherry tomatoes",
+      "2 cups spelt flour",
+      "1 tablespoon baking powder",
+      "1/4 teaspoon salt",
       "2 eggs",
-      "1 tablespoon milk",
-      "2 small onions",
-      "1 tablespoon grated Parmesan cheese",
-      "pepper",
-      "6 slices prosciutto"
+      "1 cup milk",
+      "3/4 cup seltzer water",
+      "1/4 cup oil"
     ],
     "steps": [
-      "Wash, chop the spring onions and check.In a mixing bowl with a whisk the eggs with the grated Parmesan.",
-      "Add chopped onions, milk and a sprinkling of pepper.Lining six cavities of a mold silicone muffin with slices of ham and fill with a couple of tablespoons of dough.Enter a washed and dried tomatoes in the center of each cake and bake in a preheated oven at 180C for 12-15 minutes."
+      "Preheat your waffle iron.",
+      "Mix the dry ingredients on a large bowl. Then whisk in all the wet ingredientuntil smooth.",
+      "Scoop the batter onto the waffle iron and close. Cook for 2-5 minutes, then repeat.",
+      "Make 12-  4 inch waffles."
     ]
   },
   "lunch": {
-    "name": "Best Baked Macaroni and Cheese",
-    "image": "https://img.spoonacular.com/recipes/634873-556x370.jpg",
+    "name": "Japanese Mabo Tofu With Eggplant",
+    "image": "https://img.spoonacular.com/recipes/648479-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1/4 teaspoon freshly ground black pepper",
-      "1/4 teaspoon cayenne pepper",
-      "1 pound elbow macaroni",
-      "1/2 cup all-purpose flour",
-      "2 cups (about 8 ounces) grated Gruyere",
-      "2 teaspoons kosher salt",
-      "1/4 teaspoon freshly grated nutmeg",
-      "8 tablespoons (1 stick) unsalted butter, plus more for dish",
-      "6 slices white bread",
-      "4 1/2 cups (about 18 ounces) grated white cheddar cheese",
-      "5 1/2 cups whole milk"
+      "Japanese rice",
+      "1 Chinese eggplant (smaller than regular eggplant)",
+      "1 medium size onion, finely chopped",
+      "1 tablespoon fresh ginger, finely chopped",
+      "2 garlic cloves, finely chopped",
+      "3/4 pound ground beef (or pork)",
+      "4 spring onions, finely chopped",
+      "2 tablespoons neutral oil (canola, grapeseed)",
+      "1 tablespoon sesame oil",
+      "6 tablespoons soy sauce",
+      "2 tablespoons cooking sake",
+      "1 1/2 teaspoons sugar",
+      "2 tablespoons water",
+      "1 tablespoon to-ban-jan (Korean red chili paste)"
     ],
     "steps": [
-      "Heat the oven to 375 degrees. Butter a 3-quart casserole dish; set aside.",
-      "Place bread pieces in a medium bowl. In a small saucepan over medium heat, melt 2 tablespoons butter.",
-      "Pour butter into the bowl with bread, and toss. Set the breadcrumbs aside. In a medium saucepan set over medium heat, heat milk. Melt remaining 6 tablespoons butter in a high-sided skillet over medium heat. When butter bubbles, add flour. Cook, stirring, 1 minute.Slowly pour hot milk into flour-butter mixture while whisking. Continue cooking, whisking constantly, until the mixture bubbles and becomes thick.",
-      "Remove the pan from the heat. Stir in salt, nutmeg, black pepper, cayenne pepper, 3 cups cheddar, and 1 1/2 cups Gruyere. Set cheese sauce aside.Fill a large saucepan with water. Bring to a boil.",
-      "Add macaroni; cook 2 to 3 fewer minutes than manufacturers directions, until outside of pasta is cooked and inside is underdone. (Different brands of macaroni cook at different rates; be sure to read the instructions.)",
-      "Transfer the macaroni to a colander, rinse under cold running water, and drain well. Stir macaroni into the reserved cheese sauce.",
-      "Pour the mixture into the prepared casserole dish.",
-      "Sprinkle remaining 1 1/2 cups cheddar and 1/2 cup Gruyere; scatter breadcrumbs over the top.",
-      "Bake until browned on top, about 30 minutes.",
-      "Transfer dish to a wire rack to cool for 5 minutes; serve."
+      "Cook rice according to directions on package (I like to use Nishiki rice).",
+      "Slice eggplant lengthwise into 4 strips. Slice horizontally into quarters. Set aside.",
+      "In a pan over medium/high heat, add 2 tbsp oil, garlic, ginger, onions and half of the spring onions. Cook for 3 to 4 minutes, until onions are translucent.",
+      "Add ground beef and season with a bit of salt & pepper. When the meat is cooked, add to-ban-jan and stir.",
+      "Add sesame oil and eggplant and cook for 5 to 7 minutes, until the strips are soft and cooked through.",
+      "Add tofu and delicately break it up while mixing it in.",
+      "Add sake, sugar, water, 4 tbsp soy sauce, stir and cook for a couple of minutes.",
+      "Add the remaining 2 tbsp soy sauce and spring onions, stir and turn the heat off.",
+      "Serve over rice."
     ]
   },
   "dinner": {
-    "name": "Chicken-Tortilla Chip Soup",
-    "image": "https://img.spoonacular.com/recipes/638488-556x370.jpg",
-    "cookTime": 45,
+    "name": "Ethiopian Lentil Curry",
+    "image": "https://img.spoonacular.com/recipes/642468-556x370.jpg",
+    "cookTime": 75,
     "ingredients": [
-      "5 cups water",
-      "4 chicken breasts",
-      "2 bouillon cubes (chicken)",
-      "2 carrots, diced",
-      "1/2 cup diced cilantro (coriander)",
-      "1 teaspoon Lawry's seasoned salt"
+      "1 tablespoon amchar masala",
+      "1 cup brown lentils",
+      "1 can crushed tomatoes",
+      "1 cauliflower head, cut into bite size pieces",
+      "2 garlic cloves, minced",
+      "1 onion, diced",
+      "2 cups frozen peas",
+      "1/4 cup plain yogurt (optional)",
+      "2 tablespoons masala molida, also known as berbere",
+      "1 can tomato paste",
+      "2 tablespoons vegetable oil"
     ],
     "steps": [
-      "Boil all of the above for 30-40 minutes. On serving, add corn chips, Monterey Jack cheese and slices of avocado."
+      "In a large pot heat oil over medium heat.",
+      "Add onions and saut until translucent.",
+      "Add minced garlic and continue to saut for another minute.",
+      "Combine cauliflower, peas and lentils in the pot, sprinkle with amchar massala and massala molida and saut for 5 minutes.",
+      "Pour crushed tomatoes and tomato paste into the pot and stir to combine.",
+      "Add about two cups of water and bring curry to a boil.Reduce heat, cover, and simmer on low until lentils are tender; about an hour.",
+      "Mix in plain yogurt and serve immediately."
     ]
   }
 }
