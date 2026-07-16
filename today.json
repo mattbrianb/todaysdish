@@ -1,83 +1,77 @@
 {
-  "date": "2026-07-15",
+  "date": "2026-07-16",
   "breakfast": {
-    "name": "Homemade Banana Bread",
-    "image": "https://img.spoonacular.com/recipes/1098347-556x370.jpg",
-    "cookTime": 75,
+    "name": "Breakfast Biscuits and Gravy",
+    "image": "https://img.spoonacular.com/recipes/636026-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "3 very ripe bananas",
-      "1 1/2 cups flour",
-      "3/4 cup granulated sugar",
-      "1/3 cup melted butter",
-      "1 egg",
-      "1 teaspoon vanilla",
-      "1 teaspoon baking soda",
-      "1/4 teaspoon salt",
-      "1/3 cup chopped walnuts"
+      "2 teaspoons Baking powder",
+      "1/2 cup butter",
+      "3 tablespoons All-purpose flour",
+      "2 teaspoons Fresh sage leaves",
+      "1/4 teaspoon Ground allspice",
+      "1/2 teaspoon Paprika",
+      "1 1/2 pounds Pork sausage",
+      "1 1/2 teaspoons salt",
+      "Salt and freshly ground black pepper",
+      "1 3/4 cups Unbleached all-purpose flour",
+      "Unsalted butter, or as needed",
+      "4 cups whole milk",
+      "cup Plain yogurt"
     ],
     "steps": [
-      "Preheat oven to 350 degrees.Beat together butter, sugar, vanilla, egg.",
-      "Add bananas.With a potato masher or a fork, mash in banana and mix well.",
-      "Add flour, baking soda, and salt.Stir until everything is combined.",
-      "Add nuts and stir again.Spray a loaf pan with non-stick cooking spray.",
-      "Pour mixture into loaf pan.Cook for 55-65 minutes or until an inserted tooth pick comes out clean."
+      "Preheat the oven to 425F. Cover a baking sheet with a piece of parchment paper.",
+      "Make the biscuits: sift the flour, baking powder, and salt together into a large bowl. Using two knives or a pastry blender, cut in the butter until the texture rangers from cornmeal to the size of small peas. (These two steps can be done quickly in a food processor.) Using a fork, gradually mix in the yogurt, then the milk, until the dough is quite soft and somewhat sticky. Work quickly without overworking the dough. Turn it out onto a lightly floured surface and knead it briefly, just long enough to get it to hold together.",
+      "Roll it out so it is about 1 1/4 inches thick, and cut it into 2 i",
+      "While the biscuits are baking, prepare the sausages: place all the sausage ingredients in a large bowl and mix thoroughly, using your fingers.To test the seasoning, fry a tiny patty and taste; adjust if necessary.",
+      "Place the patties in a large heavy or nonstick skillet over medium-high heat, and cook until they are crisp and brown on the outside and cooked through inside, about 8 minutes per side.",
+      "Transfer the sausage patties to a warmed platter and keep warm."
     ]
   },
   "lunch": {
-    "name": "Bacon Wrapped Tofu Tacos",
-    "image": "https://img.spoonacular.com/recipes/633352-556x370.jpg",
-    "cookTime": 45,
+    "name": "Ethiopian Lentil Curry",
+    "image": "https://img.spoonacular.com/recipes/642468-556x370.jpg",
+    "cookTime": 75,
     "ingredients": [
-      "1 12 oz package firm tofu, drained",
-      "1 package flour tortillas, taco or fajita size",
-      "8 oz package cream cheese, softened",
-      "3 fresh jalapeno peppers, de-seeded and diced small",
-      "2 cups monterey jack cheese, shredded",
-      "1 pound bacon, cooked",
-      "1 cup chicken broth",
-      "Olive oil, just have the bottle on hand",
-      "1 teaspoon cumin",
-      "1 teaspoon chili powder",
-      "1 teaspoon paprika",
-      "2 garlic cloves, minced"
+      "1 tablespoon amchar masala",
+      "1 cup brown lentils",
+      "1 can crushed tomatoes",
+      "1 cauliflower head, cut into bite size pieces",
+      "2 garlic cloves, minced",
+      "1 onion, diced",
+      "2 cups frozen peas",
+      "1/4 cup plain yogurt (optional)",
+      "2 tablespoons masala molida, also known as berbere",
+      "1 can tomato paste",
+      "2 tablespoons vegetable oil"
     ],
     "steps": [
-      "In a small bowl combine the cumin, chili powder, paprika, 1 minced clove of garlic and 2 tbsp of olive oil.  Slice the tofu very thin, about 1/2 inch per slice, then rub each slice with the spice mixture.  Set aside.",
-      "Heat about 1 tbsp olive oil over medium high heat in a large pan.",
-      "Add the tofu, a few slices at a time, watching carefully.  Flip after about 1-2 minutes.  Cook until done  I let mine cook about 2-3 minutes per side.   Half each piece, wrap with bacon, then set aside and cover with aluminum foil.",
-      "Do NOT wash the pan out  now put it back on the stove, reduce heat to medium and add the remaining minced garlic clove, 1 tbsp olive oil and diced jalapeno.",
-      "Saute until the peppers are almost getting a little bit brown and everything is fragrant.",
-      "Add the cream cheese, 1/2 cup cheese and chicken broth.",
-      "Whisk and bring to a slight boil; reducing the heat if you have to, preventing it from scorching. Once its combined and a sauce consistency, salt and pepper to your taste and pour into a separate bowl; cover.",
-      "Bring the heat back up to medium-high, and add another tablespoon of olive oil to the pan.  When hot add one tortilla at a time, turning after about 15-20 seconds to the other side.  Your end result will be tortillas slightly brown around the edges and a little bubbly in the middle.",
-      "Set aside and cover.",
-      "To serve, stuff a tortilla with bacon-wrapped tofu, and drizzle the jalapeno creme on top and some Monterey jack."
+      "In a large pot heat oil over medium heat.",
+      "Add onions and saut until translucent.",
+      "Add minced garlic and continue to saut for another minute.",
+      "Combine cauliflower, peas and lentils in the pot, sprinkle with amchar massala and massala molida and saut for 5 minutes.",
+      "Pour crushed tomatoes and tomato paste into the pot and stir to combine.",
+      "Add about two cups of water and bring curry to a boil.Reduce heat, cover, and simmer on low until lentils are tender; about an hour.",
+      "Mix in plain yogurt and serve immediately."
     ]
   },
   "dinner": {
-    "name": "Grilled Ham and Cheese French Toast For A Quick Weeknight Dinner",
-    "image": "https://img.spoonacular.com/recipes/645732-556x370.jpg",
-    "cookTime": 45,
+    "name": "Slow Cooker Spicy Hot Wings",
+    "image": "https://img.spoonacular.com/recipes/715419-556x370.jpg",
+    "cookTime": 14,
     "ingredients": [
-      "1/2 cup buttermilk",
-      "2 egg whites or 1 large egg",
-      "1/4 cup spicy brown mustard or Dijon mustard",
-      "8 slices Oroweat healthfull nutty grain or hearty wheat bread",
-      "4 slices (1 oz each) reduced-fat Havarti, Swiss or Jarlsberg cheese",
-      "8 ounces sliced lean ham or turkey ham",
-      "3 deli style dill pickles, each sliced lengthwise into thin slices",
-      "2 tablespoons reduced-fat butter or Smart Balance Heart Right Light"
+      "\u00bd cup brown sugar",
+      "1 tsp cayenne pepper",
+      "2 - 4 pounds regular chicken wings",
+      "1 Tbsp crushed garlic",
+      "\u00bd cup Louisiana Hot sauce"
     ],
     "steps": [
-      "Preheat oven to 350 degrees.",
-      "In a shallow bowl or pie plate, whisk together buttermilk and egg whites. Set aside.",
-      "Spread mustard on one side of each slice of bread.  Top 4 slices with 1 slice of cheese.  Arrange ham on top of cheese.",
-      "Add to each 3-4 thin slices of pickle. Top with remaining bread slices, mustard side down.",
-      "Melt 1 tablespoon reduced-fat butter in a large nonstick pan over medium heat.  Dip 2 sandwiches into buttermilk mixture; carefully flip and dip other side.  Dont soak the sandwiches in this mixture. Just lightly dip and remove sandwiches, allowing excess buttermilk mixture to drip back into dish.",
-      "Add sandwiches to pan; cover and cook 3-5 minutes.  Uncover, flip sandwiches, press top down with a spatula, cover and cook for 2-3 minutes until golden and cheese is melted.",
-      "Remove sandwiches, place on a baking sheet and keep warm in oven.",
-      "Repeat steps 4 and 5 with remaining 2 sandwiches.",
-      "Slice each sandwich in half and serve with a fork and knife."
+      "Yes, these are called SPICY hot wings for a reason. I like adding the brown sugar to give them a little sweeter taste, but it is by far a delicious spicy recipe more than anything.To get started, mix the brown sugar, crushed garlic, hot sauce, and cayenne pepper into a medium mixing bowl.",
+      "Mix well and then set aside.Take the cooking spray and spray the entire inside portion of the slow cooker AND also the wings. (Spraying the wings before you grill, bake, or cook chicken keeps the flavor and makes them super juicy. TRUST ME.)Take the wings and add them into the mixing bowl with your spices and toss to get a good even coat over the wings.",
+      "Place in the slow cooker on low for 4 hours. After 4hours, remove carefully and place on a prepared cookie sheet.",
+      "Place in the oven under broiler setting for 4-6 minutes, allowing the wings to get a little crisp.",
+      "Serve immediately with a little blue cheese dressing and celery."
     ]
   }
 }
