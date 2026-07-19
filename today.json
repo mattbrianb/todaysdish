@@ -1,77 +1,82 @@
 {
-  "date": "2026-07-18",
+  "date": "2026-07-19",
   "breakfast": {
-    "name": "Beet Greens and Poached Eggs",
-    "image": "https://img.spoonacular.com/recipes/634781-556x370.jpg",
+    "name": "Egg and Dairy Free Pancakes",
+    "image": "https://img.spoonacular.com/recipes/642178-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 large eggs",
-      "1 tablespoon vinegar",
-      "water",
-      "1 tablespoon coconut oil",
-      "1/2 cup leek, thinly sliced",
-      "4 cups baby beet greens, rough chopped with baby beets finely sliced",
-      "2 cloves garlic, minced",
-      "1/4 slice lemon, juiced",
-      "2 tablespoons Parmesan cheese, shredded"
+      "1/2 c. all-purpose flour",
+      "1/2 c. whole wheat flour",
+      "1 tbsp sugar",
+      "1 tsp baking powder",
+      "1/4 tsp baking soda",
+      "1/4 tsp salt",
+      "1 tbsp ground flaxseed (sometimes called flaxseed meal)",
+      "1 c. almond milk",
+      "2 tbsp cooking oil"
     ],
     "steps": [
-      "Heat a small skillet over medium low heat with 2 of water until small bubble start to rise.",
-      "Add a pinch of salt and vinegar. Gently crack eggs into the water, slowly sliding them into the water. Cover and allow to simmer for 8 10 minutes until white is set and yolks are still runny. For this dish you want a runny yolk.",
-      "Heat a large nonstick skillet over medium heat with coconut oil.",
-      "Add leeks and sliced beets. Cook for 5 8 minutes until beets and leeks are tender.",
-      "Add garlic and chopped baby beet greens. Cook for two minutes stirring often, then remove from heat and continue to stir until beet greens lightly wilt.",
-      "Add a splash of lemon juice.",
-      "Split greens among two plates and top each plate with a poached egg and a tablespoon of Parmesan cheese."
+      "In a small bowl, mix together ground flaxseed with 3 tbsp water.",
+      "Let stand for 2-3 minutes before using.",
+      "In another bowl, mix together flours, sugar, baking powder, baking soda and salt.",
+      "Add almond milk and cooking oil to flaxseed, then pour into the flour.",
+      "Mix well until there are few lumps left.",
+      "Heat a skillet over medium heat.",
+      "Add 1/4 c.of batter to the pan. Cook for 2-3 minutes until bubbles form on top. Flip and cook for 2 minutes on the other side.",
+      "Remove from pan and repeat until batter has been used up.",
+      "Serve with maple syrup or your favorite jam."
     ]
   },
   "lunch": {
-    "name": "Farro & Leek Soup",
-    "image": "https://img.spoonacular.com/recipes/642597-556x370.jpg",
+    "name": "Lamb Burgers With Tzatziki Sauce",
+    "image": "https://img.spoonacular.com/recipes/649195-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2-3 glugs or tablespoons olive oil",
-      "2 leeks, white parts only, sliced finely",
-      "1 cup or 150 gr farro",
-      "1 stalk of celery, finely diced",
-      "1 carrot, finely diced",
-      "1 onion, finely diced",
-      "1 liter meat stock (vegetable or chicken stock is OK, however meat stock adds richer flavor) **Please do not use bullion cubes for this! There are only 3 ingredients & they should be of the highest quality possible.",
-      "herbs - I use 1 sprig of thyme & a bay leaf",
-      "2 tablespoons Parmesan cheese, freshly grated",
-      "salt & pepper"
+      "1 cucumber, seeded and diced",
+      "1 egg",
+      "2 tablespoons extra virgin olive oil",
+      "1/4 cup chopped flat leaf parsley",
+      "1 handful of minced fresh dill",
+      "12 Cloves garlic, peeled and cut in ha",
+      "1 pint Greek yogurt",
+      "1 pound ground lamb",
+      "4 hamburger buns",
+      "juice of 2 lemons",
+      "Kosher salt & pepper to taste"
     ],
     "steps": [
-      "In a heavy bottomed pot, heat olive oil on med/low heat.",
-      "Add in the vegetables and sweat until translucent and soft WITHOUT browning. If the vegetables stick to the pan, lower the heat & add a spoonful of water.",
-      "Then toss in the farro, toasting with the vegetables for 1-2 minutes.",
-      "Add in the herbs & stock. Season with salt & pepper.",
-      "Then Bring up to a low simmer and continue to simmer for 30-40 minutes until the farro is tender.",
-      "You can control the consistency of the soup: to make it more 'stewy'  hold back a little stock, and the contrary if you like it 'soupy,' add a bit more stock.",
-      "Drizzle with extra virgin olive oil, sprinkle of Parmesan cheese and serve with toasty bread."
+      "For the lamb burger, mix 1 pound ground lamb, 1 egg, 1 splash of extra virgin olive oil, the juice of 1 lemon, 1/4 cup chopped flat leaf parsley, and 6 cloves of chopped garlic. Season with kosher salt &amp; pepper to taste and let sit for  to 1 hour.Grill burgers to your liking.For the tzatziki sauce, mix together 1 pint Greek yogurt, 1 diced cucumber, juice of 1 lemon, 1 tablespoon extra virgin olive oil, 6 garlic cloves (add garlic bit by bit until you have the level of garlic you like), 1 handful minced fresh dill, and kosher salt and fresh cracked pepper to taste. Refrigerate overnight to let the flavors intensify.",
+      "Serve the grilled burgers on toasted buns and add a dollop of the sauce on top."
     ]
   },
   "dinner": {
-    "name": "Grilled Chuck Burgers with Extra Sharp Cheddar and Lemon Garlic Aioli",
-    "image": "https://img.spoonacular.com/recipes/645680-556x370.jpg",
+    "name": "Chicken Sausage, White Bean and Cabbage Soup",
+    "image": "https://img.spoonacular.com/recipes/638315-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "arugula, for topping",
-      "8 \u00bd inch slices of a good extra-sharp cheddar cheese",
-      "1 garlic clove, minced",
-      "1 pound ground chuck (enough for 4 burger patties)",
-      "1 teaspoon fresh lemon juice",
-      "\u00bc cup mayonnaise",
-      "2 tablespoons olive oil",
-      "1/8 cup chopped parsley",
-      "pepper",
-      "1 red onion, cut into \u00bc -inch circular slices",
-      "salt",
-      "4 honey wheat buns or Kaiser rolls",
-      "2 teaspoons Worcestershire sauce"
+      "1 tablespoon olive oil",
+      "1 medium white onion, small dice (about 2 cups chopped)",
+      "2 carrots, peeled and diced",
+      "1/2 teaspoon salt",
+      "1/4 teaspoon black pepper",
+      "1 clove garlic, minced",
+      "1/4 teaspoon crushed red pepper flakes",
+      "1 pound mild Italian chicken sausage",
+      "5 cups low sodium chicken or vegetable stock",
+      "15 oz can white beans, drained and rinsed",
+      "1/2 head green cabbage"
     ],
     "steps": [
-      "To prep the burgers:  In a medium bowl, toss in the ground meat, 1/2 teaspoon salt, 1/2 teaspoon pepper, and Worcestershire sauce."
+      "In a large pot, heat oil over medium heat.",
+      "Saute onions until tender, about 8 minutes.",
+      "Add carrots and continue cooking for another 5 minutes.",
+      "Season with salt, pepper, garlic and red pepper flakes; cook for another minute.",
+      "Remove sausage from casing and break into small chunks in the pot.",
+      "Toss with vegetables to brown meat, cooking for another 8-10 minutes.",
+      "Pour in stock, enough to cover everything; bring to a simmer.",
+      "Add white beans and cabbage, stirring to combine.",
+      "Simmer, covered, until cabbage is wilted but not mushy, about 10 minutes.",
+      "Generally the sausage will contain enough salt for the soup, but check seasoning and add more salt or pepper if needed."
     ]
   }
 }
