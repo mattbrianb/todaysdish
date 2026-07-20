@@ -1,82 +1,77 @@
 {
-  "date": "2026-07-19",
+  "date": "2026-07-20",
   "breakfast": {
-    "name": "Egg and Dairy Free Pancakes",
-    "image": "https://img.spoonacular.com/recipes/642178-556x370.jpg",
-    "cookTime": 45,
+    "name": "Apple Pie Smoothie",
+    "image": "https://img.spoonacular.com/recipes/632575-556x370.jpg",
+    "cookTime": 5,
     "ingredients": [
-      "1/2 c. all-purpose flour",
-      "1/2 c. whole wheat flour",
-      "1 tbsp sugar",
-      "1 tsp baking powder",
-      "1/4 tsp baking soda",
-      "1/4 tsp salt",
-      "1 tbsp ground flaxseed (sometimes called flaxseed meal)",
-      "1 c. almond milk",
-      "2 tbsp cooking oil"
+      "1 tablespoon unsalted almond butter",
+      "1 tablespoon apple sauce",
+      "1/2 cup vanilla fat free yogurt",
+      "1 tablespoon 7 grain granola",
+      "1/4 teaspoon Ground cinnamon",
+      "1 teaspoon honey",
+      "ice cubes",
+      "1 teaspoon Maple syrup",
+      "1/2 cup milk",
+      "1 red delicious apple, cut into pieces"
     ],
     "steps": [
-      "In a small bowl, mix together ground flaxseed with 3 tbsp water.",
-      "Let stand for 2-3 minutes before using.",
-      "In another bowl, mix together flours, sugar, baking powder, baking soda and salt.",
-      "Add almond milk and cooking oil to flaxseed, then pour into the flour.",
-      "Mix well until there are few lumps left.",
-      "Heat a skillet over medium heat.",
-      "Add 1/4 c.of batter to the pan. Cook for 2-3 minutes until bubbles form on top. Flip and cook for 2 minutes on the other side.",
-      "Remove from pan and repeat until batter has been used up.",
-      "Serve with maple syrup or your favorite jam."
+      "Combine all ingredients in a blender and pulse until smooth.",
+      "Serve immediately."
     ]
   },
   "lunch": {
-    "name": "Lamb Burgers With Tzatziki Sauce",
-    "image": "https://img.spoonacular.com/recipes/649195-556x370.jpg",
+    "name": "Seared Pork Chops with Mango Salsa",
+    "image": "https://img.spoonacular.com/recipes/659674-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 cucumber, seeded and diced",
-      "1 egg",
-      "2 tablespoons extra virgin olive oil",
-      "1/4 cup chopped flat leaf parsley",
-      "1 handful of minced fresh dill",
-      "12 Cloves garlic, peeled and cut in ha",
-      "1 pint Greek yogurt",
-      "1 pound ground lamb",
-      "4 hamburger buns",
-      "juice of 2 lemons",
-      "Kosher salt & pepper to taste"
+      "1 Green Bell Pepper De-seeded and cubed",
+      "black Pepper",
+      "2 teaspoons Cayenne powder",
+      "Cilantro",
+      "2 tablespoons Cumin",
+      "1 tablespoon Garlic Powder",
+      "1 Lime juiced",
+      "1 Mango Peeled and cubed",
+      "2 tablespoons Mustard powder",
+      "1/2 Large Onion peeled and diced",
+      "1 tablespoon Onion Powder",
+      "4 6 oz pork chops",
+      "salt",
+      "6 Scallions scallions thin sliced",
+      "1 Tomato seeded and cubed",
+      "2 tablespoons Vegetable Oil"
     ],
     "steps": [
-      "For the lamb burger, mix 1 pound ground lamb, 1 egg, 1 splash of extra virgin olive oil, the juice of 1 lemon, 1/4 cup chopped flat leaf parsley, and 6 cloves of chopped garlic. Season with kosher salt &amp; pepper to taste and let sit for  to 1 hour.Grill burgers to your liking.For the tzatziki sauce, mix together 1 pint Greek yogurt, 1 diced cucumber, juice of 1 lemon, 1 tablespoon extra virgin olive oil, 6 garlic cloves (add garlic bit by bit until you have the level of garlic you like), 1 handful minced fresh dill, and kosher salt and fresh cracked pepper to taste. Refrigerate overnight to let the flavors intensify.",
-      "Serve the grilled burgers on toasted buns and add a dollop of the sauce on top."
+      "In a bowl thoroughly mix dry rub ingredients (cumin, mustard powder, cayenne, garlic powder, onion powder, 1 tablespoon salt, 2 teaspoons black pepper).Dust and massage dry rub into pork chops, rest in fridge for about 10min",
+      "Prep mango, bell pepper, onion, scallions, tomato, and cilantro set aside.",
+      "Heat pan w/ oil to med high, sear pork chops. 2-3 minutes on each side.",
+      "Let pork chops rest 5-8 minutes before serving.Take salsa bowl, add juice of a whole lime, add salt and pepper to taste.",
+      "Mix thoroughly",
+      "Place pork chop on plate and top with mango salsa."
     ]
   },
   "dinner": {
-    "name": "Chicken Sausage, White Bean and Cabbage Soup",
-    "image": "https://img.spoonacular.com/recipes/638315-556x370.jpg",
+    "name": "German Goulash",
+    "image": "https://img.spoonacular.com/recipes/644476-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 tablespoon olive oil",
-      "1 medium white onion, small dice (about 2 cups chopped)",
-      "2 carrots, peeled and diced",
-      "1/2 teaspoon salt",
-      "1/4 teaspoon black pepper",
-      "1 clove garlic, minced",
-      "1/4 teaspoon crushed red pepper flakes",
-      "1 pound mild Italian chicken sausage",
-      "5 cups low sodium chicken or vegetable stock",
-      "15 oz can white beans, drained and rinsed",
-      "1/2 head green cabbage"
+      "2 1/2 lb.s top round beef roast",
+      "1 large onion, sliced",
+      "3 tbsp.s oil",
+      "4 c.s water, to cover meat",
+      "8 oz.s tomato sauce",
+      "2 beef bouillon cubes",
+      "3 tbsp.s paprika",
+      "1/2 tsp. ground pepper",
+      "2 tbsp.s flour"
     ],
     "steps": [
-      "In a large pot, heat oil over medium heat.",
-      "Saute onions until tender, about 8 minutes.",
-      "Add carrots and continue cooking for another 5 minutes.",
-      "Season with salt, pepper, garlic and red pepper flakes; cook for another minute.",
-      "Remove sausage from casing and break into small chunks in the pot.",
-      "Toss with vegetables to brown meat, cooking for another 8-10 minutes.",
-      "Pour in stock, enough to cover everything; bring to a simmer.",
-      "Add white beans and cabbage, stirring to combine.",
-      "Simmer, covered, until cabbage is wilted but not mushy, about 10 minutes.",
-      "Generally the sausage will contain enough salt for the soup, but check seasoning and add more salt or pepper if needed."
+      "Cut roast in 1 inch cubes. In Dutch oven, brown meat, and onions in oil.",
+      "Add water, bouillon cubes, flour, tomato sauce, paprika, and pepper. Simmer low for 2 hours, until meat is tender.",
+      "Serve over egg noodles.",
+      "This dish cooks up very well in a crock pot."
     ]
   }
 }
