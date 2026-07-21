@@ -1,77 +1,83 @@
 {
-  "date": "2026-07-20",
+  "date": "2026-07-21",
   "breakfast": {
-    "name": "Apple Pie Smoothie",
-    "image": "https://img.spoonacular.com/recipes/632575-556x370.jpg",
-    "cookTime": 5,
+    "name": "Blueberry Muffins With Streusel Topping",
+    "image": "https://img.spoonacular.com/recipes/635501-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "1 tablespoon unsalted almond butter",
-      "1 tablespoon apple sauce",
-      "1/2 cup vanilla fat free yogurt",
-      "1 tablespoon 7 grain granola",
-      "1/4 teaspoon Ground cinnamon",
-      "1 teaspoon honey",
-      "ice cubes",
-      "1 teaspoon Maple syrup",
-      "1/2 cup milk",
-      "1 red delicious apple, cut into pieces"
+      "1 cup Fresh blueberries",
+      "1/4 cup Firmly packed brown sugar",
+      "1 tablespoon Butter",
+      "1/4 cup Canola oil",
+      "1 Egg, beaten",
+      "3/4 cup Milk",
+      "2 cups Self-rising flour",
+      "2 tablespoons Self-rising flour",
+      "cups Sugar"
     ],
     "steps": [
-      "Combine all ingredients in a blender and pulse until smooth.",
-      "Serve immediately."
+      "Combine flour and sugar in a bowl, mixing well. Reserve 2 tablespoons mixture, and set aside.",
+      "Combine egg, milk, and oil; stir well.",
+      "Add to dry ingredients, stirring just until moistened.",
+      "Combine blueberries and reserved flour mixture, tossing gently to coat.Fold blueberries into batter.",
+      "Pour into greased muffin pans, filling 3/4 full.",
+      "Combine brown sugar, flour and butter; mix until crumbly.",
+      "Sprinkle over batter.",
+      "Bake at 400 degrees for 15 to 18 minutes or until browned."
     ]
   },
   "lunch": {
-    "name": "Seared Pork Chops with Mango Salsa",
-    "image": "https://img.spoonacular.com/recipes/659674-556x370.jpg",
+    "name": "Curried Chicken Salad With Red Grapes and Walnuts",
+    "image": "https://img.spoonacular.com/recipes/641071-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 Green Bell Pepper De-seeded and cubed",
-      "black Pepper",
-      "2 teaspoons Cayenne powder",
-      "Cilantro",
-      "2 tablespoons Cumin",
-      "1 tablespoon Garlic Powder",
-      "1 Lime juiced",
-      "1 Mango Peeled and cubed",
-      "2 tablespoons Mustard powder",
-      "1/2 Large Onion peeled and diced",
-      "1 tablespoon Onion Powder",
-      "4 6 oz pork chops",
-      "salt",
-      "6 Scallions scallions thin sliced",
-      "1 Tomato seeded and cubed",
-      "2 tablespoons Vegetable Oil"
+      "1 tablespoon red wine or champagne vinegar",
+      "4 chicken breasts, skinned",
+      "1 teaspoon curry",
+      "1/4 cup light mayo",
+      "4 cups mixed greens",
+      "1 tablespoon olive oil",
+      "1/2 teaspoon pepper",
+      "1/4 cup non fat plain yogurt",
+      "1/2 cup red grapes, halved",
+      "2 teaspoons salt",
+      "1/2 cup walnuts, coarsely chopped"
     ],
     "steps": [
-      "In a bowl thoroughly mix dry rub ingredients (cumin, mustard powder, cayenne, garlic powder, onion powder, 1 tablespoon salt, 2 teaspoons black pepper).Dust and massage dry rub into pork chops, rest in fridge for about 10min",
-      "Prep mango, bell pepper, onion, scallions, tomato, and cilantro set aside.",
-      "Heat pan w/ oil to med high, sear pork chops. 2-3 minutes on each side.",
-      "Let pork chops rest 5-8 minutes before serving.Take salsa bowl, add juice of a whole lime, add salt and pepper to taste.",
-      "Mix thoroughly",
-      "Place pork chop on plate and top with mango salsa."
+      "If not using leftover chicken, season your chicken breasts with salt and pepper and place on a hot grill, cooking about 5 minutes on each side.Chop into 1/2 inch chunks, or shred.In a medium bowl, whisk mayo, yogurt, curry, salt and pepper.Reserve half of mayo mixture and set aside.",
+      "Add chicken, grapes, and walnuts to medium bowl and toss to coat.",
+      "Add 1 Tbls. mayo mixture, oil, and vinegar to a large bowl and whisk to combine.",
+      "Add greens and toss to coat.Divide greens among four plates and top each with equal servings of chicken mixture.Reserve leftover mayo mixture in an air tight container. It will keep in the fridge for several weeks."
     ]
   },
   "dinner": {
-    "name": "German Goulash",
-    "image": "https://img.spoonacular.com/recipes/644476-556x370.jpg",
+    "name": "Whole Wheat No-Yeast Pizza with Roasted Garlic, Sweet Potatoes, and Onions",
+    "image": "https://img.spoonacular.com/recipes/665294-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 1/2 lb.s top round beef roast",
-      "1 large onion, sliced",
-      "3 tbsp.s oil",
-      "4 c.s water, to cover meat",
-      "8 oz.s tomato sauce",
-      "2 beef bouillon cubes",
-      "3 tbsp.s paprika",
-      "1/2 tsp. ground pepper",
-      "2 tbsp.s flour"
+      "1 tablespoon baking powder",
+      "Bulb of garlic",
+      "1 Tablespoon olive oil",
+      "1 red onion, cubed",
+      "1 roasted bulb of garlic",
+      "1 tsp rosemary",
+      "1/2 teaspoon salt",
+      "1 cup shredded mozzarella",
+      "1/2 cup skim milk",
+      "2 medium sweet potatoes, peeled and cubed",
+      "1 tsp thyme",
+      "4 cups of water",
+      "1 cup whole wheat flour",
+      "Piece of foil",
+      "Piece of foil"
     ],
     "steps": [
-      "Cut roast in 1 inch cubes. In Dutch oven, brown meat, and onions in oil.",
-      "Add water, bouillon cubes, flour, tomato sauce, paprika, and pepper. Simmer low for 2 hours, until meat is tender.",
-      "Serve over egg noodles.",
-      "This dish cooks up very well in a crock pot."
+      "Roasted Garlic Instructions:Preheat oven to 400 degrees F.",
+      "Cut the top off the bulb of garlic, exposing the cloves.",
+      "Place the garlic on a sheet of foil large enough to wrap it up.",
+      "Drizzle olive oil over top of garlic bulb and sprinkle with salt.Tightly wrap the garlic in the foil.",
+      "Place foil in the oven and cook for 45 minutes.",
+      "Remove and unwrap garlic. Turn upside down and squeeze the cloves out of the garlic skin"
     ]
   }
 }
