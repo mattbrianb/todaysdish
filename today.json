@@ -1,83 +1,74 @@
 {
-  "date": "2026-07-21",
+  "date": "2026-07-22",
   "breakfast": {
-    "name": "Blueberry Muffins With Streusel Topping",
-    "image": "https://img.spoonacular.com/recipes/635501-556x370.jpg",
+    "name": "Zucchini Quiche Appetizers",
+    "image": "https://img.spoonacular.com/recipes/665778-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 cup Fresh blueberries",
-      "1/4 cup Firmly packed brown sugar",
-      "1 tablespoon Butter",
-      "1/4 cup Canola oil",
-      "1 Egg, beaten",
-      "3/4 cup Milk",
-      "2 cups Self-rising flour",
-      "2 tablespoons Self-rising flour",
-      "cups Sugar"
+      "3 cups zucchini, grated",
+      "1 cup Bisquick",
+      "1/2 cup finely chopped onion",
+      "1/2 cup grated Parmesan Cheese",
+      "2 tablespoons fresh Italian Parsley",
+      "1 teaspoon salt",
+      "1/2 teaspoon oregano",
+      "1/2 teaspoon basil",
+      "Pepper to taste",
+      "1 garlic clove, minced",
+      "1/2 cup vegetable or canola oil",
+      "4 large eggs, slightly beaten"
     ],
     "steps": [
-      "Combine flour and sugar in a bowl, mixing well. Reserve 2 tablespoons mixture, and set aside.",
-      "Combine egg, milk, and oil; stir well.",
-      "Add to dry ingredients, stirring just until moistened.",
-      "Combine blueberries and reserved flour mixture, tossing gently to coat.Fold blueberries into batter.",
-      "Pour into greased muffin pans, filling 3/4 full.",
-      "Combine brown sugar, flour and butter; mix until crumbly.",
-      "Sprinkle over batter.",
-      "Bake at 400 degrees for 15 to 18 minutes or until browned."
+      "Preheat oven to 350 degrees F.",
+      "Grease bottom and sides of rectangular pan 13 x 9 x",
+      "Stir together all ingredients; spread in pan.",
+      "Bake about 40 minutes or until golden brown.",
+      "Cut into 2\" squares.",
+      "Cut squares diagonally in half into triangles."
     ]
   },
   "lunch": {
-    "name": "Curried Chicken Salad With Red Grapes and Walnuts",
-    "image": "https://img.spoonacular.com/recipes/641071-556x370.jpg",
+    "name": "Baked Crusty Chicken",
+    "image": "https://img.spoonacular.com/recipes/633569-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 tablespoon red wine or champagne vinegar",
-      "4 chicken breasts, skinned",
-      "1 teaspoon curry",
-      "1/4 cup light mayo",
-      "4 cups mixed greens",
-      "1 tablespoon olive oil",
-      "1/2 teaspoon pepper",
-      "1/4 cup non fat plain yogurt",
-      "1/2 cup red grapes, halved",
-      "2 teaspoons salt",
-      "1/2 cup walnuts, coarsely chopped"
+      "1/2 cup Dried bread crumbs",
+      "2 tablespoons butter or margarine divided",
+      "1 Chicken, cut into pieces",
+      "1 teaspoon Dried basil",
+      "1/4 cup plus 1 tablespoon flour divided",
+      "1 tablespoon Fresh parsley, chopped",
+      "1/4 teaspoon Ground black pepper",
+      "1 Lemon juice of",
+      "1/2 teaspoon Paprika",
+      "1/2 teaspoon salt",
+      "1/2 teaspoon vegetable oil"
     ],
     "steps": [
-      "If not using leftover chicken, season your chicken breasts with salt and pepper and place on a hot grill, cooking about 5 minutes on each side.Chop into 1/2 inch chunks, or shred.In a medium bowl, whisk mayo, yogurt, curry, salt and pepper.Reserve half of mayo mixture and set aside.",
-      "Add chicken, grapes, and walnuts to medium bowl and toss to coat.",
-      "Add 1 Tbls. mayo mixture, oil, and vinegar to a large bowl and whisk to combine.",
-      "Add greens and toss to coat.Divide greens among four plates and top each with equal servings of chicken mixture.Reserve leftover mayo mixture in an air tight container. It will keep in the fridge for several weeks."
+      "Heat oven to 35",
+      "Combine bread crumbs, flour, parsley, basil, salt, paprika and pepper in small brown paper bag; seal and shake to mix.",
+      "Combine lemon juice, butter and oil in large bowl.",
+      "Add the chicken, turning the pieces to coat. Working with a few pieces at a time, shake the chicken in crumb mixture in the bag to coat evenly; place the pieces on 15x10x1\" baking pan.",
+      "Bake in 350 oven for 45 minutes or until the chicken meat is no longer pink near the bone. Increase the oven NOTES : For a quick sauce, combine equal parts mustard and horseradish; serve chicken with buttered noodles tossed with pepper and zucchini strips."
     ]
   },
   "dinner": {
-    "name": "Whole Wheat No-Yeast Pizza with Roasted Garlic, Sweet Potatoes, and Onions",
-    "image": "https://img.spoonacular.com/recipes/665294-556x370.jpg",
+    "name": "Chicken and Mango Skewer",
+    "image": "https://img.spoonacular.com/recipes/716330-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 tablespoon baking powder",
-      "Bulb of garlic",
-      "1 Tablespoon olive oil",
-      "1 red onion, cubed",
-      "1 roasted bulb of garlic",
-      "1 tsp rosemary",
-      "1/2 teaspoon salt",
-      "1 cup shredded mozzarella",
-      "1/2 cup skim milk",
-      "2 medium sweet potatoes, peeled and cubed",
-      "1 tsp thyme",
-      "4 cups of water",
-      "1 cup whole wheat flour",
-      "Piece of foil",
-      "Piece of foil"
+      "1/4 pound of Skinless Chicken Breast",
+      "1 chicken stock cube",
+      "2 medium Mangos (Or canned mango slices)",
+      "1 tablespoon Dry pepper (Chili flakes)",
+      "1.5 Tablespoon Suya seasoning mix",
+      "1 cooking spoon of vegetable oil"
     ],
     "steps": [
-      "Roasted Garlic Instructions:Preheat oven to 400 degrees F.",
-      "Cut the top off the bulb of garlic, exposing the cloves.",
-      "Place the garlic on a sheet of foil large enough to wrap it up.",
-      "Drizzle olive oil over top of garlic bulb and sprinkle with salt.Tightly wrap the garlic in the foil.",
-      "Place foil in the oven and cook for 45 minutes.",
-      "Remove and unwrap garlic. Turn upside down and squeeze the cloves out of the garlic skin"
+      "Chop chicken breast into cubes and place on sticks. Set fire to your grill or oven.",
+      "Place the chicken breast on the grill to heat up a little",
+      "Mix all your seasoning in a bowl with your vegetable oil.With a brush, smear the mix on the chicken breast on both sides.Flip occasionally as it browns till its cooked. Stack your mangoes after the chicken is done but if your mangoes are firm, you can grill them as well.",
+      "Serve on its own as an appetizer or with rice."
     ]
   }
 }
