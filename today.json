@@ -1,70 +1,89 @@
 {
-  "date": "2026-07-24",
+  "date": "2026-07-25",
   "breakfast": {
-    "name": "Banana & Cream Cheese Stuffed French Toast",
-    "image": "https://img.spoonacular.com/recipes/633971-556x370.jpg",
+    "name": "Peanut Butter and Apple Oatmeal Breakfast Bars",
+    "image": "https://img.spoonacular.com/recipes/655212-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "5 1/2 teaspoons baking powder",
-      "2 ripe but firm bananas, sliced thin",
-      "1/2 cup butter or margarine - (\u00bc lb)",
-      "4 t. canola (or vegetable) oil",
-      "1/2 t. cinnamon",
-      "8 ounces cream cheese",
-      "3 eggs",
-      "10 1/2 cups all-purpose flour",
-      "dash of fresh ground nutmeg",
-      "1 T. honey",
-      "1/2 t. lemon juice",
-      "maple syrup, for serving",
-      "1 c. milk",
-      "1/2 teaspoon salt",
-      "8 slices of good quality white sandwich bread"
+      "2 cups Quaker oats",
+      "1/4 cup smooth peanut butter",
+      "1 tbsp butter",
+      "2 tbsp vegetable oil",
+      "1 cup whole wheat flour",
+      "2 tbsp honey",
+      "1/3 cup brown sugar",
+      "1 tbsp vanilla extract",
+      "1 tbsp cinnamon",
+      "1 apple, peeled and diced"
     ],
     "steps": [
-      "In a small bowl combine the softened cream cheese, honey, cinnamon, nutmeg and lemon juice, set aside while preparing the batter.",
-      "Whisk together all of the batter ingredients until thoroughly mixed. (This is a breeze if you use a blender.)",
-      "Pour the batter into a wide, shallow dish (like a pie plate).",
-      "Spread the filling mixture equally over 1 side of each slice of bread, divide the sliced bananas between 4 slices of the bread, top with the remaining 4 slices, press lightly.Melt 2 t. butter and 2 t. oil in a 12 inch nonstick skillet over medium heat until the butter foams and then subsides. Working with one sandwich at a time dip both sides in the batter and let the excess drip away, add to the hot pan, repeat with a second sandwich. Cook until golden brown on the first side, around 3-5 minutes, flip and repeat on the second side. Repeat this process with the remaining, oil, butter and sandwiches. To serve, cut into triangles and serve with maple syrup."
+      "Preheat oven to 350 degrees F.",
+      "Grease an 11x7 inch baking pan. If you don't have one, you can use an 8x8, 9x9, or if neceessary an 11x1",
+      "Place peanut butter and butter in a microwave safe dish.",
+      "Heat in the microwave for 30-45 seconds or until butter is melted. Stir together.",
+      "Place all ingredients, except fruit, into a bowl. Using an electric beater or Kitchen",
+      "Aid mixer, beat ingredients together for approximately 1 minutes.",
+      "Peel a whole apple and thinly chop into pinky nail size pieces.",
+      "Stir the apples into the oatmeal mixture.",
+      "Pour the mixture into greased pan and press entire mixture down firmly with your fingers.",
+      "Place pan into the oven and cook for 25 minutes or until edges are golden brown. If you are using an 11x13 pan, it will take a bit less time because the mixture will be much thinner.",
+      "Let cool for 10 minutes before slicing into strips.",
+      "Let the remaining bars cool entirely before you place in tupperware or wrap them in foil."
     ]
   },
   "lunch": {
-    "name": "Glazed pork chops",
-    "image": "https://img.spoonacular.com/recipes/644761-556x370.jpg",
+    "name": "Easy Slow Cooker Artichoke Garlic Chicken",
+    "image": "https://img.spoonacular.com/recipes/642093-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 Tbs balsamic vinegar",
-      "\u00bc tsp black pepper, cracked",
-      "1/2 cup butter, melted",
-      "\u00bd tsp cornstarch",
-      "2 garlic cloves, minced",
-      "Fresh chives or green onions, sliced, for garnish",
-      "2 tablespoons honey",
-      "4 boneless pork chops, trimmed",
-      "1/4 cup soy sauce"
+      "1 Red Bell Pepper- diced",
+      "1 Medium Onion- Cut into wedges",
+      "6 Garlic Cloves, Peeled and smashed",
+      "1 tsp. Fresh Rosemary- minced",
+      "1 tsp. Quick Cooking Tapioca",
+      "\u00bd tsp. Lemon Zest",
+      "\u00bc Cup Low Sodium Fat-Free Chicken Broth",
+      "1 \u00bdLbs. Boneless, Skinless Chicken Thighs (I used 4-and had no left overs)",
+      "1 14 oz Can Cut Artichoke Hearts- Drained",
+      "1 tsp. Fresh Lemon Juice",
+      "Salt & Pepper to taste",
+      "2 servings Rigatoni Pasta"
     ],
     "steps": [
-      "Press one side of each chop into the black pepper.",
-      "Heat nonstick grill skillet until hot.",
-      "Add pork chops, pepper side down, and cook about 4 minutes or until browned.Reduce heat to medium, turn pork chops and cook 6-8 minutes longer.When done, take the skillet from the heat, cover the pork chops and set aside.Meanwhile, mix honey, soy sauce, balsamic vinegar and cornstarch until smooth.",
-      "Add the cracked pepper, stir.Melt the butter in a small pan, add garlic and cook for 30 seconds, stirring.Stir honey mixture into pan, let it boil, cook for 1 minute, stirring.Spoon sauce over pork chops, sprinkle with fresh chives or green onions.",
-      "Serve with polenta and green salad."
+      "Chop, mince and dice all veggies & spices.",
+      "Combine bell pepper, onion, garlic, tapioca, rosemary, lemon zest, artichokes, chicken thighs, salt and pepper in crockpot.",
+      "Pour broth and lemon juice over mixture.",
+      "Cover and cook on low for 5 hours- You really dont need to check on this but every once and a while maybe give it a little stir.",
+      "Once chicken is cooked through, cook pasta.",
+      "Serve over pasta top with fresh shaved parmesan",
+      "ENJOY!!!"
     ]
   },
   "dinner": {
-    "name": "Grilled Peach Melba with Vanilla Bean Frozen Yogurt",
-    "image": "https://img.spoonacular.com/recipes/716421-556x370.jpg",
+    "name": "Baked Ratatouille",
+    "image": "https://img.spoonacular.com/recipes/633754-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "coconut oil for grilling",
-      "1/4 cup honey",
-      "2 T honey",
-      "2 large peaches, quartered",
-      "3 cups plain Greek yogurt",
-      "1 1/2 cups raspberries (fresh or frozen)",
-      "2 tsp 100% raspberry fruit spread",
-      "1 vanilla bean"
+      "1 large eggplant unpeeled, diced",
+      "4 ounces diced feta cheese (optional)",
+      "1/2 cup chopped fresh basil",
+      "5 garlic cloves chopped",
+      "2 green bell peppers diced",
+      "3 tablespoons Olive Oil",
+      "1 onion cut 1\" pieces",
+      "2 tablespoons red wine vinegar",
+      "2 large tomatoes chopped",
+      "1 large zucchini cut 1/2\" pieces"
     ],
-    "steps": []
+    "steps": [
+      "Heat oil in a heavy, large Dutch oven over medium heat.",
+      "Add garlic; stir 1 minute.",
+      "Add eggplant, green bell peppers, tomatoes, onion, zucchini and basil.",
+      "Saute for 5 minutes. Cover and simmer until all vegetables are tender, stirring occasionally, about 25 minutes.Uncover pot and simmer until juice thickens, stirring occasionally, about 10 minutes.",
+      "Mix in vinegar; season to taste with salt and pepper.Preheat oven to 350 degrees.",
+      "Spread in 9-inch pie dish.",
+      "Sprinkle with cheese, if desired.",
+      "Bake until heated through, about 20 minutes.This recipe yields about 3 cups."
+    ]
   }
 }
