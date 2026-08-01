@@ -1,76 +1,74 @@
 {
-  "date": "2026-07-31",
+  "date": "2026-08-01",
   "breakfast": {
-    "name": "Dad\u2019s Breakfast Polenta",
-    "image": "https://img.spoonacular.com/recipes/641185-556x370.jpg",
+    "name": "Cranberry-Ginger Oatmeal With Toasted Hazelnuts",
+    "image": "https://img.spoonacular.com/recipes/640443-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3 cups chicken stock",
-      "1 cup polenta",
-      "4 pieces of bacon, diced",
-      "1/2 green bell pepper",
-      "5 green onions, sliced",
-      "4 pieces of turkey sausage",
-      "1/4 cup feta",
-      "Salt",
-      "Pepper"
+      "1 cinnamon stick",
+      "1/2 cup fresh cranberries",
+      "1 inch piece of fresh, peeled ginger root",
+      "1/4 cup hazelnuts, crushed",
+      "1/4 teaspoon nutmeg",
+      "1/2 cup rolled oats",
+      "1 teaspoon Salt",
+      "1 1/4 cups water"
     ],
     "steps": [
-      "Prepare polenta according to package directions. (Be sure to season with some salt and pepper as well!)",
-      "Meanwhile, cut bacon into small pieces and brown in a skillet with 1 tablespoon olive oil, on medium-high heat, until brown and crispy.",
-      "Remove the bacon and reserve for later.",
-      "Depending on your preference, you can either clean the pan and use 1 tablespoon olive oil, or you can cook the remaining veggies with a tablespoon of the bacon fat.)",
-      "Add turkey sausage and bell pepper and saut until sausage is browned and cooked through.",
-      "Add green onions, bacon, salt and pepper and saut for 5 more minutes.",
-      "Add polenta to the meat and vegetables and stir to combine. Slowly stir in feta.",
-      "Serve warm."
+      "Add water, cranberries, ginger, and spices to a medium saucepan. Bring to a boil over medium-high heat. When the cranberries begin to burst, lower the heat to medium-low and add the oats, stirring occasionally until the desired consistency is reached, about 5-7 minutes. When oatmeal is cooked, remove the ginger and cinnamon stick and add salt.Meanwhile, heat a small skillet over medium-low heat and add hazelnuts. Toast in the pan until you can smell the hazelnuts, as this means they are releasing their oils. Turn off heat and add hazelnuts to the oatmeal."
     ]
   },
   "lunch": {
-    "name": "Marinated Flat Iron Steak",
-    "image": "https://img.spoonacular.com/recipes/651034-556x370.jpg",
-    "cookTime": 45,
+    "name": "Korean Sweet n Sour Chicken",
+    "image": "https://img.spoonacular.com/recipes/638369-556x370.jpg",
+    "cookTime": 30,
     "ingredients": [
-      "3 tablespoons Balsamic vinegar",
-      "1 tablespoon Dijon mustard",
-      "1 2 lb Flat Iron Steak",
-      "2 garlic cloves chopped",
-      "Grated Ginger",
-      "Fresh herbs: rosemary, sage, marjoram, thyme, chives ( anything in hand)",
-      "Grated zest of 1 lemon",
-      "2 lemons juiced",
-      "1 tablespoon mayonnaise",
-      "1/2 cup Olive oil",
-      "to taste salt and pepper"
+      "\u20222 carrots, cut into thin pieces",
+      "2 lbs boneless chicken breasts, cut into strips",
+      "\u20223 tbsp cider vinegar",
+      "\u20222 tbsp corn starch (+ 2 tbsp water mixed together)",
+      "\u20222 tbsp cornstarch",
+      "\u20221 cup edamame",
+      "\u20221 beaten egg",
+      "\u2022\u00bd cup flour",
+      "\u20221 medium size onion, cut into strips",
+      "\u20221/4 cup pineapple juice (optional if available)",
+      "\u20222 tbsp soy sauce",
+      "\u20223 tbsp sugar",
+      "Vegetable Oil",
+      "\u20221 cup of water"
     ],
     "steps": [
-      "Cut the flat iron steak lengthwise to form two equal strips.",
-      "Place all the above ingredients in a large baking pan, or Ziploc bag.",
-      "Add the meat to it and place in the refrigerator for an hour or more.Start the BBQ . When temperature reaches high, add the steaks. Cover and cook for 3 minutes.Turn the steaks and cook the other side for another 3 minutes, or to required doneness."
+      "Cut the chicken into thin strips, about 1 or 2-inch pieces.",
+      "Add soy sauce to the chicken for a short marination; mix well and set aside.",
+      "Cut the vegetables into large bite-sized pieces. Set aside until the sauce is ready and thickened.Make batter by mixing the flour, cornstarch, water and beaten egg.",
+      "Add more flour until a thick consistency is reached. Dip the marinated chicken strips into the batter.Bring vegetable oil to medium high heat. Deep fry each of the strips for about 3, 4 min for each batch or until browned and cooked through. When finished, place on paper towel-lined dish to remove excess oil. Once the first round of frying is done, heat the oil and re-fry the batch for the 2nd time to make it really crispy (optional).To make the sauce bring the following ingredients in a saucepan: one cup of water along 3 tbsp vinegar, 3 tbsp sugar, and 2 tbsp of soy sauce. Bring to a rapid boil and then add the mixture of cornstarch and water.",
+      "Add desired vegetables and let simmer for about 5 minutes or until it thickens.On a large plate, add the fried chicken strips, then pour over the sauce/vegetable mixture and serve while warm."
     ]
   },
   "dinner": {
-    "name": "Blue Cheese Burgers",
-    "image": "https://img.spoonacular.com/recipes/635350-556x370.jpg",
+    "name": "Chicken Pasta With Anchovy Rosemary Sauce",
+    "image": "https://img.spoonacular.com/recipes/638245-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3/4 tsp kosher salt",
-      "1 pound(s) ground sirloin",
-      "1/2 pound ground Sirloin",
-      "1/4 cup dry bread Crumbs",
-      "1/2 cup steak sauce",
-      "1 large egg",
-      "1/2 tsp ground black pepper",
-      "4 hamburger buns",
-      "4 ounces sliced blue cheese"
+      "2 ounces anchovies, in oil",
+      "1 boneless Chicken Breast",
+      "4 tablespoons fresh rosemary",
+      "1 large clove garlic, peeled and roughly chopped",
+      "Juice of 1/2 lemon",
+      "Kosher salt",
+      "3 tablespoons Olive Oil",
+      "1 tablespoon poultry seasoning",
+      "1/2 teaspoon red pepper flakes",
+      "1/2 pound spaghetti"
     ],
     "steps": [
-      "In a bowl, add chuck, sirloin, bread crumbs, steak sauce, eggs, salt, and pepper, and mix gently with fork.",
-      "Form 4 patties out of this mixture.",
-      "Cook the hamburgers patties on each side, then cover with aluminium foil.",
-      "Cut the sides of the bun, then grill in a stove-top grill until toasted.",
-      "Place patties and a slice of blue cheese in each bun.",
-      "Serve hot."
+      "Place garlic, anchovies (with their oil), rosemary and lemon juice in a food processor.  Blend until fairly smooth.",
+      "Add lemon juice followed by olive oil and continue to blend until smooth.  Cover and set aside.Season chicken with red pepper flakes, poultry seasoning and a pinch of kosher salt.  Set aside.Start a pot of water boiling for the pasta.",
+      "Add a pinch of salt.  Once boiling, cook pasta to desired doneness, approximately 6-9 minutes for al dente.As pasta cooks, drizzle a bit of olive oil in a wide pan.  When hot, add the chicken and cook until no longer pink inside, approximately 5-7 minutes.",
+      "Drain pasta and drop the noodles directly into the pan with the chicken.",
+      "Add anchovy sauce and toss to coat.",
+      "Sprinkle with fresh parsley if desired."
     ]
   }
 }
