@@ -1,61 +1,77 @@
 {
-  "date": "2026-08-10",
+  "date": "2026-08-11",
   "breakfast": {
-    "name": "Yogurt Parfait",
-    "image": "https://img.spoonacular.com/recipes/796873-556x370.jpg",
-    "cookTime": 15,
+    "name": "Gluten Free Cinnamon Apple Muffins",
+    "image": "https://img.spoonacular.com/recipes/644810-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "1 cup of cereal or granola",
-      "1 cup of fresh fruit",
-      "Fresh mint",
-      "2 tablespoons of honey",
-      "2 cups of plain non fat yogurt"
+      "1 box Betty Crocker's gluten free yellow cake mix",
+      "3 eggs",
+      "1/2 cup water",
+      "1 tablespoon cinnamon",
+      "1 teaspoon nutmeg",
+      "1/4 teaspoon ground cloves",
+      "1/2 teaspoon lemon juice",
+      "3 granny smith apples",
+      "2 tablespoons agave nectar or honey"
     ],
     "steps": [
-      "Add the honey to the plain yoghurt and mix well.In a clean tall glass cup, layer 1/2 cup of yoghurt at the bottom and allow to settle.Then place 1/4 cup fruits followed by 1/4 cup granola etc.Alternate the layers of fruits and  granola/cereal etc with yoghurt until the glass is filled.",
-      "Garnish with fresh herb leaves. Repeat the process for the second glass cup.",
-      "Serve parfaits immediately to keep granola or cereal crunchy."
+      "Preheat oven to to 350 degrees.",
+      "Core, peel, and chop the apples into small pieces",
+      "In a medium bowl, combine the apples, cinnamon, nutmeg, cloves, lemon juice, and agave.",
+      "In a large bowl, add the yellow cake mix, eggs, water, and apples.  Now stir, stir, stir until very well combined.",
+      "Line a muffin tin with baking cups and fill each cup with batter.",
+      "Bake 18-23 minutes."
     ]
   },
   "lunch": {
-    "name": "Slow Cooker Ranch Chicken",
-    "image": "https://img.spoonacular.com/recipes/1165783-556x370.jpg",
-    "cookTime": 185,
+    "name": "Cranberry and Orange Juice Spareribs",
+    "image": "https://img.spoonacular.com/recipes/640349-556x370.jpg",
+    "cookTime": 210,
     "ingredients": [
-      "2 chicken breasts large",
-      "8 oz cream cheese",
-      "2 cups chicken broth",
-      "3 tbsp ranch seasoning"
+      "1 tsp. black pepper",
+      "\u00bd cup cranberry juice",
+      "1 tsp. curry powder",
+      "1 tsp. garlic powder",
+      "1 tsp. ground cumin",
+      "\u00bc cup ketchup",
+      "\u00bd cup orange juice",
+      "1 tsp. salt",
+      "\u00bc cup soy sauce",
+      "4 lbs. spare ribs",
+      "\u00bc cup vinegar (any kind)",
+      "\u00bc cup water"
     ],
     "steps": [
-      "Add two cups of chicken broth to the bottom of the slow cooker.",
-      "Place chicken breasts in the bottom of the Crock Pot.",
-      "Cook on high for 3 hours.",
-      "Remove chicken breasts and shred.",
-      "Place back into the slow cooker.",
-      "Add cream cheese and mix until creamy."
+      "Combine all of the ingredients for the marinade in a bowl and stir.",
+      "Place ribs in the marinade and refrigerate for at least one hour or more or up to overnight.Preheat oven to 325 degrees F.",
+      "Place the ribs in a roasting pan with the marinade.",
+      "Bake uncovered for 2 \u2013 2 \u00bd hours or until the ribs are fall off the bone tender. Allow the marinade to evaporate in the cooking process.",
+      "Let the ribs cool slightly; then separate the ribs with a cooking scissor and plate."
     ]
   },
   "dinner": {
-    "name": "Rice and Peas with Coconut Curry Mackerel",
-    "image": "https://img.spoonacular.com/recipes/716364-556x370.jpg",
+    "name": "Stuffed Salmon With Tomato-Olive Tapenade",
+    "image": "https://img.spoonacular.com/recipes/662087-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 cups of coconut milk",
-      "1 tablespoon of corn starch",
-      "2 tablespoons of curry powder",
-      "1 clove of garlic (chopped)",
-      "Seasoning cubes",
-      "1 medium piece of Mackerel (chopped in 4 pieces)",
-      "1/2 bulb of onion",
-      "1/2 cup of red kidney beans",
-      "1 cup of Rice",
-      "3 scotch bonnet peppers"
+      "Brie Cheese, to taste",
+      "Dill weed, to taste",
+      "6 cloves of minced garlic",
+      "Olive oil, to taste",
+      "1 cup olives",
+      "1 onion chopped",
+      "2 salmon filets",
+      "Salt and pepper",
+      "1 cup chopped spinach",
+      "2 large tomatoes"
     ],
     "steps": [
-      "Pour 1 cup of coconut milk in a pot with 1 seasoning cube and allow to boil for a minute.",
-      "Pour in your rice and peas in the boiling coconut milk and pour 2 cups of water and leave to boil till the rice and peas are soft on low heat.In a separate pot, season and bring the mackerel to boil in the rest of the coconut milk, curry powder and some water.Toss in the chopped onion, scotch bonnet peppers and garlic and allow to simmer on medium heat.Once the fish is cooked, add the corn starch to thicken the sauce and allow to simmer for 4 minutes on low heat.",
-      "Serve with the rice and peas"
+      "Preheat oven to 350F.Pound salmon fillets and rub with olive oil and dill.In bowl, combine chopped spinach, onions, and garlic. Season with salt.",
+      "Spread spinach mixture on salmon fillet. Slice brie and add on top. Carefully roll salmon and tie with string.",
+      "Bake for about 15-18 minutes.Chop olives in food processor.",
+      "Add chopped tomatoes and blend.",
+      "Spread on top of salmon."
     ]
   }
 }
