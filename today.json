@@ -1,63 +1,80 @@
 {
-  "date": "2026-08-13",
+  "date": "2026-08-14",
   "breakfast": {
-    "name": "Peach Carrot Coconut Vegan Pancake",
-    "image": "https://img.spoonacular.com/recipes/716269-556x370.jpg",
+    "name": "Gluten Free Blueberry Muffins",
+    "image": "https://img.spoonacular.com/recipes/644800-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1/2 cup of almond milk",
-      "1 teaspoon of baking powder",
-      "1/4 cup of grated carrots",
-      "1 tablespoon of shredded coconut",
-      "3/4 tablespoon of non-dairy butter (vegan butter)",
-      "1 tablespoon of maple syrup",
-      "1/4 cup of chopped peaches",
-      "1 tablespoon of organic sugar",
-      "1/2 teaspoon of vanilla extract",
-      "1/2 cup of whole wheat flour"
+      "2 teaspoons baking powder",
+      "1 1/2 cups Driscoll's Blueberries",
+      "2 large eggs",
+      "2 cups gluten-free all-purpose flour",
+      "2 teaspoons grated lemon zest",
+      "1/2 teaspoon salt",
+      "3/4 cup sugar",
+      "1/2 cup (1 stick) unsalted butter, melted and cooled",
+      "1 teaspoon vanilla extract",
+      "1/2 cup whole milk",
+      "1 teaspoon xanthan gum"
     ],
     "steps": [
-      "In a medium bowl, pour in your flour, sugar, baking powder, shredded coconut and mix with a spatula.",
-      "Pour in your milk, vanilla extract, and butter and mix in. Try to beat the batter to incorporate some air for just one minute. Stir in the grated carrots and allow the mixture to rest.",
-      "Heat up your pan (preferably non-stick) and grease with a bit of non-dairy butter. Scoop a bit of the mix into the pan and allow to brown on one side. Carefully flip it over and use your frying spatula to flatten the mix so it can brown on the other side.",
-      "Serve with some shredded coconuts, carrots and maple syrup."
+      "Preheat oven to 375F. Lightly butter or grease a 12-cup muffin pan or line with paper liners.Stir together flour, sugar, baking powder, xanthan gum and salt in a medium bowl until blended.",
+      "Whisk together butter, milk, eggs, lemon zest and vanilla in a large bowl until combined. Stir in flour mixture until partially moistened. Fold in blueberries until evenly mixed. Batter will be thick, do not over stir.Divide batter evenly between muffin cups, filling each about three-fourths full.",
+      "Bake 10 minutes. Rotate pan and continue to bake about 10 minutes longer or until muffins are golden brown and toothpick inserted in center comes out clean. Cool in pan 3 minutes.",
+      "Serve warm or remove to wire rack to cool completely."
     ]
   },
   "lunch": {
-    "name": "Strawberry and Chocolate Chip Panini",
-    "image": "https://img.spoonacular.com/recipes/661741-556x370.jpg",
+    "name": "Fried Asparagus",
+    "image": "https://img.spoonacular.com/recipes/643660-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "Sliced strawberries",
-      "Chocolate chips- handful",
-      "2 slices of sourdough bread",
-      "Olive oil and brush"
+      "1 bunch Asparagus",
+      "1/2 cup all purpose flour",
+      "2 eggs",
+      "1/2 teaspoon salt",
+      "1/8 teaspoon pepper",
+      "1 1/2 teaspoons parsley",
+      "1/2 cup grating cheese",
+      "3/4 cup breadcrumbs",
+      "vegetable oil for frying"
     ],
     "steps": [
-      "Open up the slices of sourdough bread",
-      "Brush it wit some olive oil on either side",
-      "Add a layer of strawberries and chocolate chips",
-      "Put it in the panini press!",
-      "Serve it hot with a side of fresh cut berries!"
+      "Bring a medium saucepan with lightly salted water to a boil. Prepare an ice bath (place several cubes with cold water in a bowl).",
+      "Place the asparagus into the boiling water for 2 to 4 minutes depending on the thickness of the stalks (they should just be pliable but not fully cooked).",
+      "Remove immediately to the ice bath; when cool, remove to a dish and set aside. Or, you can cook them in the steaming bags for 2 minutes and 30 seconds.",
+      "In a small dish (square if possible) beat the eggs, salt, pepper, parsley, and grating cheese together. On your counter or work surface, lay out two paper dishes or wax paper sheets and place the bowl with the egg mixture between them.",
+      "Fill the first dish with flour and the second with breadcrumbs. Dip the cooled asparagus into the flour, then the egg mixture and finally into the plain breadcrumbs.",
+      "Layer the breaded asparagus on a platter lined with waxed paper, and place waxed paper between the layers of asparagus.",
+      "Heat a large frying pan with about 1-inch of oil in it. When the oil is hot, fry the asparagus until golden brown.",
+      "Drain on paper towels.",
+      "Place on a serving platter.",
+      "Serve immediately, or you can serve them at room temperature as well."
     ]
   },
   "dinner": {
-    "name": "Ginger Soy Chicken",
-    "image": "https://img.spoonacular.com/recipes/644643-556x370.jpg",
+    "name": "Falafel Burgers",
+    "image": "https://img.spoonacular.com/recipes/642540-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3 tablespoons of Butter",
-      "3 cloves of Garlic",
-      "5 1/2 inches Piece of Ginger, Chopped",
-      "1 Lime, Juiced",
-      "1/4 cup soy sauce",
-      "1/2 teaspoon Sugar",
-      "1/8 cup of Teriyaki",
-      "1 whole Chicken",
-      "1 tablespoon of Worcestershire"
+      "2 cans garbanzo beans (chickpeas), drained and rinsed",
+      "1 tablespoon chili powder",
+      "1 tablespoon coriander",
+      "1 tablespoon cumin",
+      "4 tablespoons flour",
+      "1 large handful parsley, chopped",
+      "2 cloves garlic, grated or finely chopped",
+      "2 Zest and juice of lemons",
+      "4 pita pockets",
+      "1 small red onion, chopped",
+      "Salt and pepper, to taste",
+      "1/2 cup tahini",
+      "1 1/2 teaspoons turmeric",
+      "1/4 cup vegetable oil",
+      "3 tablespoons water"
     ],
     "steps": [
-      "Cut the butter into six pieces and place it under the skin of the chicken.In a baking dish mix up the soy, teriyaki, worcestershire, sugar, garlic, lime and ginger.Stuff the lime halves into the cavity of the bird and cover it with the delicious soy mixture.Cover the bird and place it into an oven preheated to 350 degrees for 1 hour.After the hour is up, remove the cover, baste the bird and then turn the temperature up to 375 degrees. Cook it for an additional 45 minutes or until the internal temperature reads 165 degrees.If the top is getting to dark , you can place a piece of aluminum foil lightly over the top (don't seal it, just lay it over the top)."
+      "Combine the chickpeas, onion, garlic, parsley, flour, spices, and salt, and pulse until the mixture is well combined. Form the mixture into 4 large patties."
     ]
   }
 }
