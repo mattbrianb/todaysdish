@@ -1,80 +1,81 @@
 {
-  "date": "2026-08-14",
+  "date": "2026-08-15",
   "breakfast": {
-    "name": "Gluten Free Blueberry Muffins",
-    "image": "https://img.spoonacular.com/recipes/644800-556x370.jpg",
+    "name": "Peanut Butter Banana French Toast",
+    "image": "https://img.spoonacular.com/recipes/655239-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 teaspoons baking powder",
-      "1 1/2 cups Driscoll's Blueberries",
-      "2 large eggs",
-      "2 cups gluten-free all-purpose flour",
-      "2 teaspoons grated lemon zest",
-      "1/2 teaspoon salt",
-      "3/4 cup sugar",
-      "1/2 cup (1 stick) unsalted butter, melted and cooled",
-      "1 teaspoon vanilla extract",
-      "1/2 cup whole milk",
-      "1 teaspoon xanthan gum"
+      "2 slices bread",
+      "Peanut Butter, 2 Tablespoons",
+      "Half of Banana, sliced in rounds or length wise",
+      "1 whole egg, whisked",
+      "1/8 cup orange juice",
+      "pinch of ground nutmeg",
+      "pinch of ground cinnamon",
+      "pinch of cayenne"
     ],
     "steps": [
-      "Preheat oven to 375F. Lightly butter or grease a 12-cup muffin pan or line with paper liners.Stir together flour, sugar, baking powder, xanthan gum and salt in a medium bowl until blended.",
-      "Whisk together butter, milk, eggs, lemon zest and vanilla in a large bowl until combined. Stir in flour mixture until partially moistened. Fold in blueberries until evenly mixed. Batter will be thick, do not over stir.Divide batter evenly between muffin cups, filling each about three-fourths full.",
-      "Bake 10 minutes. Rotate pan and continue to bake about 10 minutes longer or until muffins are golden brown and toothpick inserted in center comes out clean. Cool in pan 3 minutes.",
-      "Serve warm or remove to wire rack to cool completely."
+      "Prepare a Peanut Butter and Banana Sandwich",
+      "Mix whisked egg, orange juice, nutmeg and cinnamon and cayenne in a bowl",
+      "Heat a skillet and place One (",
+      "Tablespoon in same",
+      "Dip Sandwich in egg mixture coating both sides",
+      "Cook in skillet for one minute on each side",
+      "Ladle with syrup, sprinkle with confectioners sugar and garnish with more bananas"
     ]
   },
   "lunch": {
-    "name": "Fried Asparagus",
-    "image": "https://img.spoonacular.com/recipes/643660-556x370.jpg",
+    "name": "Bridget Jones's Shepherd's Pie",
+    "image": "https://img.spoonacular.com/recipes/636096-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 bunch Asparagus",
-      "1/2 cup all purpose flour",
-      "2 eggs",
-      "1/2 teaspoon salt",
-      "1/8 teaspoon pepper",
-      "1 1/2 teaspoons parsley",
-      "1/2 cup grating cheese",
-      "3/4 cup breadcrumbs",
-      "vegetable oil for frying"
+      "2 onions, finely chopped",
+      "2 tablespoons olive oil",
+      "600 grams minced lamb",
+      "2 tablespoons plain flour",
+      "thyme",
+      "rosemary",
+      "1 small tin chopped tomatoes",
+      "100 milliliters chicken, beef or lamb stock",
+      "salt and freshly ground black pepper",
+      "700 grams potatoes",
+      "55 milliliters milk",
+      "75 grams butter",
+      "1 free-range egg yolk"
     ],
     "steps": [
-      "Bring a medium saucepan with lightly salted water to a boil. Prepare an ice bath (place several cubes with cold water in a bowl).",
-      "Place the asparagus into the boiling water for 2 to 4 minutes depending on the thickness of the stalks (they should just be pliable but not fully cooked).",
-      "Remove immediately to the ice bath; when cool, remove to a dish and set aside. Or, you can cook them in the steaming bags for 2 minutes and 30 seconds.",
-      "In a small dish (square if possible) beat the eggs, salt, pepper, parsley, and grating cheese together. On your counter or work surface, lay out two paper dishes or wax paper sheets and place the bowl with the egg mixture between them.",
-      "Fill the first dish with flour and the second with breadcrumbs. Dip the cooled asparagus into the flour, then the egg mixture and finally into the plain breadcrumbs.",
-      "Layer the breaded asparagus on a platter lined with waxed paper, and place waxed paper between the layers of asparagus.",
-      "Heat a large frying pan with about 1-inch of oil in it. When the oil is hot, fry the asparagus until golden brown.",
-      "Drain on paper towels.",
-      "Place on a serving platter.",
-      "Serve immediately, or you can serve them at room temperature as well."
+      "Preheat the oven to 180 C.",
+      "In a large frying pan, heat a little olive oil and fry the chopped onion and garlic.",
+      "Add the mince, stirring, until browned all over.",
+      "While the meat is frying, break up any lumps with the back of the spoon.",
+      "Add the flour (this helps to thicken the juices) and stir.",
+      "Mix well and add the thyme and the rosemary and stir.",
+      "Add the chopped tomatoes and pour the stock mixture.",
+      "Add a pinch of salt and freshly ground black pepper and let it simmer for about 5 minutes.",
+      "For the mash, boil the potatoes, then drain them in a sieve and place into a clean bowl.",
+      "Add the milk, butter and egg yolk, and mash together.",
+      "Season with salt and freshly ground black pepper.",
+      "Pour the meat into an ovenproof dish and spread the mash on top, smooth over and mark with a spatula.",
+      "Put the dish into the oven and cook until the surface is bubbling and golden-brown."
     ]
   },
   "dinner": {
-    "name": "Falafel Burgers",
-    "image": "https://img.spoonacular.com/recipes/642540-556x370.jpg",
-    "cookTime": 45,
+    "name": "Slow Cooker Baked Potato Soup",
+    "image": "https://img.spoonacular.com/recipes/715385-556x370.jpg",
+    "cookTime": 540,
     "ingredients": [
-      "2 cans garbanzo beans (chickpeas), drained and rinsed",
-      "1 tablespoon chili powder",
-      "1 tablespoon coriander",
-      "1 tablespoon cumin",
-      "4 tablespoons flour",
-      "1 large handful parsley, chopped",
-      "2 cloves garlic, grated or finely chopped",
-      "2 Zest and juice of lemons",
-      "4 pita pockets",
-      "1 small red onion, chopped",
-      "Salt and pepper, to taste",
-      "1/2 cup tahini",
-      "1 1/2 teaspoons turmeric",
-      "1/4 cup vegetable oil",
-      "3 tablespoons water"
+      "3 Tbsp All purpose flour",
+      "1/2 cup bacon bits",
+      "4 large baking potatoes (cut and cubed)",
+      "2 chicken bouillom cubes",
+      "green onion tops",
+      "1 Tbsp ground black pepper",
+      "1 cup of half-and-half",
+      "1 medium red onion (chopped)",
+      "shredded cheddar cheese",
+      "sour cream",
+      "3 cups water"
     ],
-    "steps": [
-      "Combine the chickpeas, onion, garlic, parsley, flour, spices, and salt, and pulse until the mixture is well combined. Form the mixture into 4 large patties."
-    ]
+    "steps": []
   }
 }
