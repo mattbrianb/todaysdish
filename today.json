@@ -1,75 +1,85 @@
 {
-  "date": "2026-08-17",
+  "date": "2026-08-18",
   "breakfast": {
-    "name": "Black Bean Garlic Shrimp Scramble",
-    "image": "https://img.spoonacular.com/recipes/635067-556x370.jpg",
-    "cookTime": 45,
+    "name": "Lemon Poppy Seed Muffins",
+    "image": "https://img.spoonacular.com/recipes/1003210-556x370.jpg",
+    "cookTime": 20,
     "ingredients": [
-      "12 pieces Large Raw Shrimp, peeled",
-      "4 Large Eggs",
-      "1/2 cup Frozen Peas & Carrots, thawed in microwave",
-      "pieces Sliced Mushrooms",
-      "2 tablespoons Black Bean Garlic Sauce",
-      "1 wedge Lime, cut into 4",
-      "2 tablespoons Canola Oil",
-      "1 tablespoon Pure Sesame Oil",
-      "2 tablespoons Fried Garlic"
+      "4 large eggs",
+      "1 3.4oz. box lemon instant pudding mix",
+      "1 box lemon cake mix",
+      "2 Tbsp. poppy seeds",
+      "\u00bc cup vegetable oil",
+      "1 cup boiling water"
     ],
     "steps": [
-      "In a large bowl, whisk the eggs then mix in the shrimp, peas & carrots and mushrooms.",
-      "In a medium-heated large skillet, add the canola oil and stir in the egg mixture. Use a spatula to scramble the eggs for about 4-5 minutes or until the eggs and shrimp are fully cooked. Do not overcook! Halfway through, stir in the black bean garlic sauce until evenly incorporated. Turn off heat and drizzle in the sesame oil.",
-      "Seve on a bowl of hot jasmine rice, give it a good squeeze of lime juice and garnish with fried garlic and a lime wedge."
+      "Preheat oven to 350 and line 2 muffin tins with cupcake wrappers.",
+      "In a large bowl, combine all of the ingredients, except water, and mix well.",
+      "Slowly add the bowling water into the mixture, and mix as you add it.",
+      "Pour the batter into the muffin pan and fill the liners  way full.",
+      "Bake for 15-17 minutes or until the muffins are a light golden brown on top."
     ]
   },
   "lunch": {
-    "name": "Ancho Chipotle Chili",
-    "image": "https://img.spoonacular.com/recipes/610281-556x370.jpg",
-    "cookTime": 75,
+    "name": "Butternut Squash Risotto With Pancetta and Sage Oil",
+    "image": "https://img.spoonacular.com/recipes/636601-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "1 dried ancho chile",
-      "5 g vegetable bouillon powder",
-      "1 tsp cumin",
-      "1 dried chipotle chile",
-      "fresh cilantro",
-      "400 grams ground beef",
-      "6 large mushrooms, chopped",
-      "1 onion, chopped",
-      "2 tsp dried oregano",
-      "1 red bell pepper, chopped",
-      "salt and pepper",
-      "500 grams tomato sauce",
-      "500 ml hot water"
+      "4 tablespoons olive oil",
+      "5 sage leaves",
+      "3 tablespoons butter",
+      "2 large shallots, finely diced",
+      "3 pieces of pancetta, diced",
+      "2 cups Arborio rice",
+      "1 cup dry white wine",
+      "1 package (32 oz) vegetable stock",
+      "1 cup Parmesan cheese",
+      "1 1/2 cups butternut squash puree"
     ],
     "steps": [
-      "Slice open the dried ancho and chipotle chili and remove the seeds/pith.",
-      "Place the dried chili peppers in a warm skillet (medium heat) and press them flat with a spatula to toast them for a few seconds per side until fragrant (be careful not to burn them!). Be sure to wear gloves or wash your hands directly after handling the chili peppers.",
-      "Remove the dried chili and put them in a bowl or sauce pan.",
-      "Pour 250 ml boiling water over it and leave it to soak for at least 15 minutes.",
-      "In a large pot, saute the chopped bell pepper, onion, and mushrooms over medium heat.",
-      "Meanwhile, fry the beef in a hot skillet until crispy.",
-      "While the beef is frying, blend the chili peppers you've been soaking with the soaking liquid.",
-      "Add the beef to the large pot filled with the sauteed vegetables.",
-      "Add the tomato sauce and blended chili peppers to the pot. If it is not enough liquid, add beef or vegetable broth (the other 250 ml water and 5 grams bouillon powder, unless you have \"real\" broth on hand) until everything is covered.",
-      "Season with salt, pepper, cumin, and oregano to taste.",
-      "Simmer for about 45 minutes or until thick enough.",
-      "Serve with fresh cilantro."
+      "Warm stock in small saucepan, keep warm.",
+      "In small saut pan warm olive oil with sage leaves until fragrant.  Be careful not to burn leaves.  Cook 5-6 minutes and let cool.",
+      "In a medium saucepan melt butter over medium heat.",
+      "Add shallots and pancetta.  Saut until  shallots are translucent.",
+      "Add rice and stir until coated in butter.",
+      "Add wine and cook 2-3 minutes.",
+      "Slowly begin adding in stock, 1-2 ladles at a time.  Allow rice to absorb liquid before adding another ladle-full..   Continue to cook until rice is al dente (has a little bite).",
+      "Add parmesan and squash puree and mix until smooth and creamy.",
+      "Top with a drizzle of sage oil."
     ]
   },
   "dinner": {
-    "name": "Lemon Pilaf Chicken",
-    "image": "https://img.spoonacular.com/recipes/649733-556x370.jpg",
+    "name": "Chili-Garlic Stir Fry",
+    "image": "https://img.spoonacular.com/recipes/638586-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 cups broccoli flowerets",
-      "1 1/2 cups cooked chicken chopped",
-      "3 tablespoons fresh lemon juice",
-      "1 teaspoon grated lemon peel",
-      "1 tablespoon olive oil",
-      "1 pkt Near East Rice Pilaf see note"
+      "2 teaspoons sesame oil, divided",
+      "12 ounces boneless, skinless chicken breast, cubed",
+      "4 large stalks bok choy, chopped (stalk and leaf divided)",
+      "8 ounces snow peas",
+      "3 mediums carrots, peeled and chopped",
+      "1 yellow pepper, sliced",
+      "1 orange pepper, sliced",
+      "3 mediums green onions, white and green parts, chopped",
+      "Sauce",
+      "3/4 cup low sodium chicken broth",
+      "2 tablespoons cooking sherry",
+      "2 teaspoons cornstarch",
+      "2 tablespoons Sriracha or other chili-garlic sauce",
+      "6 cloves garlic, minced",
+      "1 teaspoon sesame oil",
+      "Stir fry",
+      "Stir fry"
     ],
     "steps": [
-      "In large skillet bring 2 cups water, olive oil, lemon juice and spice sack to a boil. Stir in chicken and rice pilaf. Reduce heat and simmer for 10 minutes.",
-      "Add broccoli and grated lemon peel. Simmer for 8 to 10 minutes, or until all water is absorbed.NOTES : For a colorful twist, substitute Near East Chicken Flavor Pilaf."
+      "I a wok or large skillet, heat 1 teaspoon sesame oil over medium-high heat.",
+      "Add chicken and saute until cooked through. Set aside and cover.",
+      "In the same pan, heat 1 teaspoon sesame oil over medium-high heat.",
+      "Add bok choy stalks (not the leaves), carrots and snow peas and saute until just tender. Set aside and cover.",
+      "Meanwhile, in a medium bowl, combine broth, sherry, cornstarch and Sriracha.",
+      "Heat final teaspoon sesame oil over medium high heat and add garlic.",
+      "Saute until fragrant, 30 seconds to 1 minute.",
+      "Add sauce and bring to a boil. Stir until it thickens then add chicken, veggies, bok choy leaves and green onion. Stir until all are coated and heated through."
     ]
   }
 }
