@@ -1,85 +1,75 @@
 {
-  "date": "2026-08-18",
+  "date": "2026-08-19",
   "breakfast": {
-    "name": "Lemon Poppy Seed Muffins",
-    "image": "https://img.spoonacular.com/recipes/1003210-556x370.jpg",
-    "cookTime": 20,
+    "name": "Nutella Stuffed French Toast",
+    "image": "https://img.spoonacular.com/recipes/653371-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "4 large eggs",
-      "1 3.4oz. box lemon instant pudding mix",
-      "1 box lemon cake mix",
-      "2 Tbsp. poppy seeds",
-      "\u00bc cup vegetable oil",
-      "1 cup boiling water"
+      "2 eggs",
+      "1/4 cup milk (I used 2%fat milk)",
+      "1 Tbsp sugar",
+      "1/2 tsp cinnamon powder",
+      "4 large slices of stale bread, thickness - 3/4 to 1 inch each",
+      "2 Tbsp nutella",
+      "Butter for cooking",
+      "Powdered sugar for sprinkling - 1Tbsp"
     ],
     "steps": [
-      "Preheat oven to 350 and line 2 muffin tins with cupcake wrappers.",
-      "In a large bowl, combine all of the ingredients, except water, and mix well.",
-      "Slowly add the bowling water into the mixture, and mix as you add it.",
-      "Pour the batter into the muffin pan and fill the liners  way full.",
-      "Bake for 15-17 minutes or until the muffins are a light golden brown on top."
+      "n a deep large bowl, mix eggs, milk, sugar and cinnamon. Stir it using a fork and keep aside. Now coat nutella on one side of 2 toasts and then close both the toasts together by sandwiching the nutella sides in between. Soak the nutella stuffed toast in the egg mix and push it using a knife so it gets coated properly.",
+      "Let it sit for 3-5 mins and then flip and let the other side gets coated too same way. Soak the sides as well. Once ready, cook it on a preheated pan with butter for around 5 minutes on each side until nicely browned but not burnt.",
+      "Sprinkle some powdered sugar and serve with black coffee. Repeat for the next one in the same way."
     ]
   },
   "lunch": {
-    "name": "Butternut Squash Risotto With Pancetta and Sage Oil",
-    "image": "https://img.spoonacular.com/recipes/636601-556x370.jpg",
+    "name": "Spicy Korean Bbq Pork",
+    "image": "https://img.spoonacular.com/recipes/661117-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "4 tablespoons olive oil",
-      "5 sage leaves",
-      "3 tablespoons butter",
-      "2 large shallots, finely diced",
-      "3 pieces of pancetta, diced",
-      "2 cups Arborio rice",
-      "1 cup dry white wine",
-      "1 package (32 oz) vegetable stock",
-      "1 cup Parmesan cheese",
-      "1 1/2 cups butternut squash puree"
+      "2 pounds boneless pork loin",
+      "1/4 cup brown sugar",
+      "3 teaspoons chili garlic sauce",
+      "2 teaspoons fresh ginger, minced",
+      "6 garlic cloves, minced",
+      "rice vinegar",
+      "2 teaspoons sesame oil",
+      "1/4 cup soy sauce"
     ],
     "steps": [
-      "Warm stock in small saucepan, keep warm.",
-      "In small saut pan warm olive oil with sage leaves until fragrant.  Be careful not to burn leaves.  Cook 5-6 minutes and let cool.",
-      "In a medium saucepan melt butter over medium heat.",
-      "Add shallots and pancetta.  Saut until  shallots are translucent.",
-      "Add rice and stir until coated in butter.",
-      "Add wine and cook 2-3 minutes.",
-      "Slowly begin adding in stock, 1-2 ladles at a time.  Allow rice to absorb liquid before adding another ladle-full..   Continue to cook until rice is al dente (has a little bite).",
-      "Add parmesan and squash puree and mix until smooth and creamy.",
-      "Top with a drizzle of sage oil."
+      "Mix the marinade ingredients (brown sugar, soy sauce, ginger, sesame oil, chili garlic sauce, and ginger).",
+      "Pour over your sliced pork.Marinate no less then 4 hours; overnight is recommended.Preheat your grill to high.",
+      "Place pork on grill and grill each side 3 minutes or until cooked through.If you want a sauce to pour over your meat, boil your leftover marinade in a sauce pan for a few minutes until it boils down and thickens. You can then add rice vinegar to taste to thin it and decrease the sweetness.",
+      "Pour sauce over meat."
     ]
   },
   "dinner": {
-    "name": "Chili-Garlic Stir Fry",
-    "image": "https://img.spoonacular.com/recipes/638586-556x370.jpg",
+    "name": "Old Fashioned Mac and Cheese",
+    "image": "https://img.spoonacular.com/recipes/653593-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 teaspoons sesame oil, divided",
-      "12 ounces boneless, skinless chicken breast, cubed",
-      "4 large stalks bok choy, chopped (stalk and leaf divided)",
-      "8 ounces snow peas",
-      "3 mediums carrots, peeled and chopped",
-      "1 yellow pepper, sliced",
-      "1 orange pepper, sliced",
-      "3 mediums green onions, white and green parts, chopped",
-      "Sauce",
-      "3/4 cup low sodium chicken broth",
-      "2 tablespoons cooking sherry",
-      "2 teaspoons cornstarch",
-      "2 tablespoons Sriracha or other chili-garlic sauce",
-      "6 cloves garlic, minced",
-      "1 teaspoon sesame oil",
-      "Stir fry",
-      "Stir fry"
+      "1 16 ounce box of Elbow Macaroni",
+      "1 16 ounce block of Medium Cheddar Cheese",
+      "3 cups milk",
+      "1 stick of unsalted butter",
+      "6 tablespoons flour",
+      "1 teaspoon salt",
+      "1/2 teaspoon pepper",
+      "1/2 cup seasoned bread crumbs"
     ],
     "steps": [
-      "I a wok or large skillet, heat 1 teaspoon sesame oil over medium-high heat.",
-      "Add chicken and saute until cooked through. Set aside and cover.",
-      "In the same pan, heat 1 teaspoon sesame oil over medium-high heat.",
-      "Add bok choy stalks (not the leaves), carrots and snow peas and saute until just tender. Set aside and cover.",
-      "Meanwhile, in a medium bowl, combine broth, sherry, cornstarch and Sriracha.",
-      "Heat final teaspoon sesame oil over medium high heat and add garlic.",
-      "Saute until fragrant, 30 seconds to 1 minute.",
-      "Add sauce and bring to a boil. Stir until it thickens then add chicken, veggies, bok choy leaves and green onion. Stir until all are coated and heated through."
+      "Grate the cheese and set aside.",
+      "Cook macaroni as per manufacturers directions.",
+      "Melt 6 tbs butter in a medium sauce pan over medium low heat.",
+      "Slowly sprinkle flour over the melted butter and whisk into a thick paste, about 3 minutes.",
+      "Slowly pour one cup of milk into the flour and butter, whisking to break up any lumps.",
+      "Add salt and pepper and mix.",
+      "Add remaining milk, continue to whisk. Turn heat up to medium.",
+      "Cook sauce, whisking to prevent scorching for about five minutes or until thickened.",
+      "When pasta is done cooking drain well and set aside.",
+      "Melt the remaining two tablespoons of butter and stir into the bread crumbs.",
+      "Assemble the macaroni and cheese by layering the sauce, cheese and macaroni in a baking dish or individual oven safe bowls.",
+      "Top with breadcrumbs and bake at 400 for 20 minutes, until the cheese is melted and the macaroni and cheese is bubbling.",
+      "Cool about 10 minutes before serving. Makes about 6-8 servings.",
+      "This recipe may be divided in half if you need smaller portions."
     ]
   }
 }
