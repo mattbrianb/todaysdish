@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-20",
+  "date": "2026-08-21",
   "breakfast": {
     "name": "Yoghurt Chicken and Garlic Potatoes",
     "image": "https://img.spoonacular.com/recipes/716356-556x370.jpg",
@@ -26,49 +26,61 @@
     ]
   },
   "lunch": {
-    "name": "Coconut-Almond Crusted Tilapia",
-    "image": "https://img.spoonacular.com/recipes/639836-556x370.jpg",
+    "name": "Cajun Seafood and Andouille Sausage Gumbo",
+    "image": "https://img.spoonacular.com/recipes/636736-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "4 tilapia fillets (or any other firm, white fish, such as cod",
-      "1 lemon, sliced in half",
-      "1/4 cup coconut milk",
-      "1/2 cup almond meal, ground almonds, or almond flour",
-      "1/2 cup finely shredded unsweetened coconut",
-      "1/4 teaspoon salt",
-      "1/8 teaspoon black pepper",
-      "1/2 teaspoon ground ginger",
-      "1/2 teaspoon dried mint",
-      "oil for frying (coconut oil is recommended)"
+      "9 oz andouille sausage, cut into \u00bd inch rounds",
+      "2 bay leaves, left whole",
+      "\u00bd t white pepper",
+      "1 Tablespoon Black Pepper",
+      "1 Tablespoon Cayenne Pepper",
+      "3 stalks celery, cut into 1 inch pieces",
+      "3 C fish stock or clam juice",
+      "2 C white rice, cooked, washed and drained",
+      "\u00bd # canned or fresh crab meat",
+      "1 Tablespoon Dried Thyme",
+      "3 large cloves of garlic, chopped",
+      "1 jalapeno pepper, seeded",
+      "1 red or orange Bell pepper, chopped coarse",
+      "1 Tablespoon Dried Oregano",
+      "1 10 oz jar of oysters or 8-10 oysters with their juices",
+      "\u00bd C peanut oil",
+      "1 pound shrimp",
+      "\u00bd C white flour"
     ],
     "steps": [
-      "Pat and dry fish fillets.",
-      "Sprinkle both sides with a pinch or two of salt and pepper. Squirt juice from 1/2 of the lemon and drizzle the coconut milk over top. Turn to ensure everything is coated well.",
-      "Let them sit at room temperature for 15 minutes to marinate.",
-      "Meanwhile prepare the breading by combining the almond meal, shredded coconut, salt, pepper, ginger and mint in a shallow bowl.",
-      "Cover the bottom of a large skillet with oil and bring to medium heat.",
-      "Lay fillets carefully in the skillet and cook, flipping fish halfway through cooking, until both sides are golden brown and fish flakes easily with a fork. Three to five minutes per side for thin fillets, longer if they're thicker.",
-      "Transfer to a stack of paper towels to drain and cool slightly.",
-      "Serve with Tropical Sweets & Reds Mash."
+      "In a small bowl, combine the seasoning ingredients and set aside.",
+      "In a medium bowl, combine the onions, peppers and celeryand set aside.",
+      "In a lightly oiled 5  quart Dutch oven, brown the sausage rounds over medium high heat and set aside.",
+      "Add the  C oil and when it starts to smoke, slowly combine the flour and cook while whisking until the roux reaches a dark reddish brown color.",
+      "Immediately add half of the vegetables and stir in for 1 minute. Then add the remaining vegetables, mix thoroughly and cook for 2 more minutes.",
+      "Add the seasoning mix, stir in well and cook 2 more minutes or so. Then add the garlic, stir in and cook for another minute.",
+      "Add the fish stock or clam juice and, mix well, bring to a boil and reduce to a simmer; then simmer this for about 30 minutes covered.",
+      "Add the reserved browned sausage rounds, the crab, shrimps and oysters with their liquid and cook over medium heat for about 10 minutes stirring occasionally."
     ]
   },
   "dinner": {
-    "name": "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs",
-    "image": "https://img.spoonacular.com/recipes/716429-556x370.jpg",
+    "name": "Pork chops with apples and onions",
+    "image": "https://img.spoonacular.com/recipes/656738-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 tbsp butter",
-      "about 2 cups frozen cauliflower florets, thawed, cut into bite-sized pieces",
-      "2 tbsp grated cheese (I used romano)",
-      "1-2 tbsp extra virgin olive oil",
-      "5-6 cloves garlic",
-      "6-8 ounces pasta (I used linguine)",
-      "couple of pinches red pepper flakes, optional",
-      "salt and pepper, to taste",
-      "3 scallions, chopped, white and green parts separated",
-      "2-3 tbsp white wine",
-      "1/4 cup whole wheat bread crumbs (I used panko)"
+      "4 pork chops (loin or shoulder, bone-in)",
+      "Salt and ground black pepper",
+      "1 Tbs olive oil or sunflower oil",
+      "2 Tbs unsalted butter",
+      "1 large white onion, sliced",
+      "3 cups apples (2 to 3 apples), cored and sliced",
+      "1 cup white wine"
     ],
-    "steps": []
+    "steps": [
+      "Season the chops with salt and pepper on both sides. Saut the pork chops in hot oil for 5 minutes on each side until browned.",
+      "Transfer the chops to a warm plate.",
+      "Swirl the butter into the pan, and add the onion and apples. Saut until the onion slices are lightly caramelized and the apples have begun to soften, about 8 minutes.",
+      "Stir in the wine or other liquid. Return chops to the pan.",
+      "Cook until the pork is tender, about 15 more minutes (depending on the size of the chops), turning halfway through and covering the chops with the apple mixture.",
+      "Serve the chops over rice or mashed potatoes with a large spoonful of the apple-onion mixture over the top.",
+      "Easy suggestion: replace the onion with leeks or add a sliced potato. You can deglaze the pan with beer, cider, chicken broth, or even water."
+    ]
   }
 }
