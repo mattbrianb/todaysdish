@@ -1,83 +1,71 @@
 {
-  "date": "2026-08-22",
+  "date": "2026-08-23",
   "breakfast": {
-    "name": "Broccoli Oatmeal Breakfast Casserole",
-    "image": "https://img.spoonacular.com/recipes/636199-556x370.jpg",
+    "name": "Carrot Oat Muffins",
+    "image": "https://img.spoonacular.com/recipes/637210-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 tsp baking powder",
-      "1 \u00bd cups broccoli florets",
-      "\u00bd tsp cayenne pepper",
-      "4 large eggs",
-      "3 tbsp. low fat milk",
-      "2 cups dry quick oats",
-      "1 tbsp. olive oil",
-      "\u00be tsp salt"
+      "1/4 cup of agave nectar, I use raw and organic",
+      "1 cup of organic applesauce",
+      "3 teaspoons of baking powder",
+      "1 teaspoon baking soda",
+      "3 cups of shredded carrots",
+      "1 teaspoon organic cinnamon",
+      "3 organic eggs",
+      "2 teaspoons of chopped ginger",
+      "1/2 teaspoon salt",
+      "1 teaspoon of organic vanilla extract",
+      "2 cups of organic whole oat flour"
     ],
     "steps": [
-      "Preheat the oven at 350 degree Fahrenheit. Prepare 8 inch square baking dish with cooking spray.Grind the broccoli separately in a food processor and combine it with all the dry ingredients in a mixing bowl.In another bowl combine all the wet ingredients.",
-      "Pour the wet ingredients into the dry ingredients and mix well.Spoon the batter into the baking dish and put it in the oven.",
-      "Bake it for 25-30 minutes or until the fork comes out clean.",
-      "Cut into desired size and serve hot."
+      "Combine all dry ingredients in a bowl",
+      "Combine all wet ingredients in a bowl except carrots and ginger and mix well.Gently add dry ingredients to wet ingredients and mix until just blended.  Be careful not to over-mix because this will result in hard muffins.Once the wet and dry ingredients are blended, gently fold in carrots and ginger until spread throughout.Spray muffin tins with nonstick cooking spray and add mixture to 2/3 of the cup.",
+      "Bake at 350F for 20 minutes until golden brown on top.",
+      "Let cool in tins for 2-3 minutes before transferring to a cooling rack."
     ]
   },
   "lunch": {
-    "name": "Italian Meatloaf with Hard Boiled Eggs",
-    "image": "https://img.spoonacular.com/recipes/648176-556x370.jpg",
+    "name": "Avocado Chicken Salad",
+    "image": "https://img.spoonacular.com/recipes/633132-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "6 slices bacon, chopped",
-      "Freshly ground black pepper",
-      "1/4 cup Butter or margarine",
-      "2 carrots, finely chopped",
-      "2 stalks celery, finely sliced",
-      "1 sprig fresh rosemary",
-      "10 fresh sage leaves",
-      "3 cloves garlic, crushed",
-      "1 1/2 pounds ground beef",
-      "1 pound ground pork",
-      "1 pound ground veal",
-      "2 tablespoons olive oil",
-      "2\u00bd teaspoons sea salt",
-      "200 g (7 oz) white bread, crusts removed, soaked in a bit of milk",
-      "1 large white onion, finely chopped",
-      "6 hard boiled eggs, peeled and left whole",
-      "7 ounces vin santo or Marsala"
+      "2 Avocados",
+      "10g Cherry tomatoes, cut to half or quarter",
+      "50ml Extra virgin olive oil",
+      "2-3 Limes or add to taste",
+      "Mayonnaise",
+      "a dash of black pepper",
+      "100g Mixed salad, roughly shredded",
+      "150-200g boneless skinless Chicken breast"
     ],
     "steps": [
-      "Preheat the oven to 425F.",
-      "Heat butter and olive oil in a saucepan and saute the onion, garlic, celery, carrots and herbs until lightly golden.",
-      "Add the vin santo or Marsala and bring to a boil. Boil for about 2 minutes, then remove from heat.",
-      "Place the meats, salt and pepper in a large bowl and mix together, then add the vegetables. Squeeze the bread of excess milk and break it into the mixture.",
-      "Add the 2 raw eggs. Using your hands, combine mixture well.Line a large rectangular terrine, casserole, or loaf pan (about 14 inches long) with foil and brush with oil.",
-      "Place half of the meat mixture in the pan and press down evenly. Arrange the hard boiled eggs in a line down the center, then cover with the remaining meat mixture. Press the mixture down well.",
-      "Bake the loaf on the bottom shelf of the oven for about 50 minutes; it should be lightly browned on top. Turn onto a serving dish. It is delicious served hot or cold."
+      "Season chicken breast with a little salt and pepper then place in a pot of boiling water until cooked. Leave to cool and cut into cubes, set aside.",
+      "Cut avocados into cubes.",
+      "Place mixed salad in a large bowl and add olive oil and lime juice, toss well and divide mixed salad into two serving bowls.",
+      "Place avocados, chicken meat and cherry tomatoes evenly on top of salad.",
+      "Drizzle mayonaise  and a dash of black pepper over salad and serve."
     ]
   },
   "dinner": {
-    "name": "Green Beans with Pearl Onions and Salmon",
-    "image": "https://img.spoonacular.com/recipes/645418-556x370.jpg",
-    "cookTime": 45,
+    "name": "How to Make the Cheesiest Bowtie Mac and Cheese",
+    "image": "https://img.spoonacular.com/recipes/715595-556x370.jpg",
+    "cookTime": 35,
     "ingredients": [
-      "1 pound frozen green beans",
-      "1 cup frozen pearl onions",
-      "1 teaspoon olive oil",
-      "2 tablespoon unsalted butter + \u00bd teaspoon",
-      "\u00bc cup chicken stock, sodium free",
-      "1 teaspoon brown sugar",
-      "Slavosalt seasoning \u2013 or salt and pepper",
-      "Salmon steaks, skinless"
+      "1 package of Bowtie pasta cook as directed",
+      "1 cup Extra Sharp Cheddar cheese",
+      "1 cup Extra Sharp White Cheddar cheese",
+      "1 tsp salt and pepper",
+      "1/4 cup sour cream",
+      "1/4 cup unsalted butter room temperature",
+      "Fresh Parsley for garnish"
     ],
     "steps": [
-      "In a large pot add some water the frozen beans and frozen pearl onions. Cover and cook over medium heat until they are tender.",
-      "Drain and set aside.",
-      "In a large skillet over medium high heat melt 1 tablespoon of butter and the olive oil.",
-      "Add the green beans and pearl onions and saut for 1 minute.",
-      "Add the chicken stock and cook for another minute until the stock is evaporated.",
-      "Add 1 tablespoon of butter and the brown sugar; lower the heat to low and mix gently until slightly caramelized.",
-      "Remove from the heat and keep warm.",
-      "Return the skillet back to medium high heat and melt the remaining  teaspoon of butter in the center, add the salmon over and season with Slavosalt generously. Cook for 3-5 minutes until a golden crust is formed. Turn and cook for another 3 minutes.",
-      "Place the green beans with pearl onions on the plate and top with the salmon."
+      "Heat your oven to 350 degrees Fahrenheit, and then cook your pasta as directed.",
+      "Drain.",
+      "Shred the cheese.",
+      "Add cooked noodles, cheese, sour cream, salt and pepper, and butter to a medium mixing bowl and stir until combined.",
+      "Add to a 9 x 13 prepared casserole dish, top with extra cheese if desired, and bake for 20 minutes.",
+      "Remove from oven and serve hot."
     ]
   }
 }
