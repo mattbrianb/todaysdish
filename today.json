@@ -1,71 +1,86 @@
 {
-  "date": "2026-08-23",
+  "date": "2026-08-24",
   "breakfast": {
-    "name": "Carrot Oat Muffins",
-    "image": "https://img.spoonacular.com/recipes/637210-556x370.jpg",
+    "name": "Smoked Salmon Eggs Benedict With Lemon Dill Hollandaise",
+    "image": "https://img.spoonacular.com/recipes/660368-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1/4 cup of agave nectar, I use raw and organic",
-      "1 cup of organic applesauce",
-      "3 teaspoons of baking powder",
-      "1 teaspoon baking soda",
-      "3 cups of shredded carrots",
-      "1 teaspoon organic cinnamon",
-      "3 organic eggs",
-      "2 teaspoons of chopped ginger",
-      "1/2 teaspoon salt",
-      "1 teaspoon of organic vanilla extract",
-      "2 cups of organic whole oat flour"
+      "1 cup baby arugula",
+      "1 cup baby spinach",
+      "2 tablespoons butter",
+      "3 large egg yolks",
+      "4 eggs, poached",
+      "1 tablespoon fresh dill or 1 tsp. dried",
+      "1 lemon",
+      "2 slices thick multigrain bread",
+      "Salt and pepper to taste",
+      "8 ounces smoked salmon",
+      "2 tablespoons water",
+      "1 tsp. Worcestershire sauce"
     ],
     "steps": [
-      "Combine all dry ingredients in a bowl",
-      "Combine all wet ingredients in a bowl except carrots and ginger and mix well.Gently add dry ingredients to wet ingredients and mix until just blended.  Be careful not to over-mix because this will result in hard muffins.Once the wet and dry ingredients are blended, gently fold in carrots and ginger until spread throughout.Spray muffin tins with nonstick cooking spray and add mixture to 2/3 of the cup.",
-      "Bake at 350F for 20 minutes until golden brown on top.",
-      "Let cool in tins for 2-3 minutes before transferring to a cooling rack."
+      "Make Lemon Dill Hollandaise:Fill a medium saucepan about halfway with water, and bring to a gentle simmer over medium heat.",
+      "Put the egg yolks and water in a heatproof bowl, season with a pinch of dill (if using dried), salt, and pepper.",
+      "Whisk the ingredients together and then place the bowl on top of the saucepan. Keep stirring the egg mixture for about 5 minutes or until it begins to thicken. Make sure you dont scramble your eggs! Once the eggs are thickened, take the bowl off the water and set aside.Poach the eggs:Fill a medium saucepan with water, add a splash of white vinegar (optional, but this helps hold the whites together which results in nicely shaped eggs) and bring to a gentle simmer. You want tiny bubbles only, not a rolling boil. Gently add eggs to water and poach until deisred doneness.Meanwhile, toast bread.",
+      "Place toast on plates and top with arugula, spinach and salmon.",
+      "Place eggs on top of salmon and spoon hollandaise over the top.",
+      "Garnish with dill, salt and freshly cracked black pepper and serve."
     ]
   },
   "lunch": {
-    "name": "Avocado Chicken Salad",
-    "image": "https://img.spoonacular.com/recipes/633132-556x370.jpg",
+    "name": "Chinese Chicken Salad With Chipotle Dressing",
+    "image": "https://img.spoonacular.com/recipes/638642-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 Avocados",
-      "10g Cherry tomatoes, cut to half or quarter",
-      "50ml Extra virgin olive oil",
-      "2-3 Limes or add to taste",
-      "Mayonnaise",
-      "a dash of black pepper",
-      "100g Mixed salad, roughly shredded",
-      "150-200g boneless skinless Chicken breast"
+      "Pea-mond Dressing",
+      "1/4 cup rice wine vinegar",
+      "1 tablespoon smooth peanut butter",
+      "1 tablespoon smooth almond butter",
+      "1 tablespoon chopped fresh ginger",
+      "2 teaspoons adobo chipotle pepper juice",
+      "1 teaspoon adobo chipotle pepper puree",
+      "1 tablespoon soy sauce",
+      "2 tablespoons honey",
+      "2 teaspoons toasted sesame oil",
+      "1/2 cup canola oil",
+      "Salt and freshly ground pepper",
+      "Salad",
+      "1/2 head Napa cabbage, shredded",
+      "1/2 head romaine lettuce, shredded",
+      "2 carrots, shredded",
+      "1/4 pound snow peas, julienned",
+      "1/4 cup coarsely chopped fresh cilantro leaves",
+      "1/4 cup thinly sliced green onion",
+      "2 cups shredded rotisserie chicken",
+      "1/2 cup chopped roasted peanuts",
+      "1/4 cup chopped fresh mint leaves",
+      "Chili oil, optional",
+      "lime halves, for garnish"
     ],
     "steps": [
-      "Season chicken breast with a little salt and pepper then place in a pot of boiling water until cooked. Leave to cool and cut into cubes, set aside.",
-      "Cut avocados into cubes.",
-      "Place mixed salad in a large bowl and add olive oil and lime juice, toss well and divide mixed salad into two serving bowls.",
-      "Place avocados, chicken meat and cherry tomatoes evenly on top of salad.",
-      "Drizzle mayonaise  and a dash of black pepper over salad and serve."
+      "Whisk together the vinegar, peanut & almond butters, ginger, chipotle pepper puree, soy sauce, honey, sesame oil, and canola oil in a medium bowl. Season with salt and pepper, to taste."
     ]
   },
   "dinner": {
-    "name": "How to Make the Cheesiest Bowtie Mac and Cheese",
-    "image": "https://img.spoonacular.com/recipes/715595-556x370.jpg",
-    "cookTime": 35,
+    "name": "Lemon White Wine Chicken over Linguini",
+    "image": "https://img.spoonacular.com/recipes/649817-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "1 package of Bowtie pasta cook as directed",
-      "1 cup Extra Sharp Cheddar cheese",
-      "1 cup Extra Sharp White Cheddar cheese",
-      "1 tsp salt and pepper",
-      "1/4 cup sour cream",
-      "1/4 cup unsalted butter room temperature",
-      "Fresh Parsley for garnish"
+      "1 lb thin sliced chicken breasts",
+      "3/4 cup chicken broth",
+      "fresh parsley",
+      "juice of 1 1/2 lemons",
+      "al dente whole grain linguini",
+      "olive oil",
+      "grated pecorino cheese",
+      "1 shallot, sliced",
+      "1 cup white wine"
     ],
     "steps": [
-      "Heat your oven to 350 degrees Fahrenheit, and then cook your pasta as directed.",
-      "Drain.",
-      "Shred the cheese.",
-      "Add cooked noodles, cheese, sour cream, salt and pepper, and butter to a medium mixing bowl and stir until combined.",
-      "Add to a 9 x 13 prepared casserole dish, top with extra cheese if desired, and bake for 20 minutes.",
-      "Remove from oven and serve hot."
+      "In a dish add about 1/2 cup whole wheat bread crumbs, a little salt and pepper. Coat the chicken lightly and place to the side.In a large saute pan, over medium high heat, add in just enough oil to coat the bottom of the pan. Brown the chicken on both sides. It should brown quickly so you don't over cook the chicken. Cook in batches then set the chicken aside.Once all the chicken is cooked and set aside you can start making the sauce. To the pan add another small drizzle of olive oil and add the sliced shallot. Cook until softened. Carefully add in the wine and allow to simmer for 5 minutes.",
+      "Add in the broth, lemon juice and chicken. Simmer on low for 10 minutes.",
+      "Add in some chopped fresh parsley, taste for salt and pepper.",
+      "Serve over the al dente linguini and top with grated pecorino cheese."
     ]
   }
 }
