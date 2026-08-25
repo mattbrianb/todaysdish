@@ -1,86 +1,77 @@
 {
-  "date": "2026-08-24",
+  "date": "2026-08-25",
   "breakfast": {
-    "name": "Smoked Salmon Eggs Benedict With Lemon Dill Hollandaise",
-    "image": "https://img.spoonacular.com/recipes/660368-556x370.jpg",
+    "name": "Sweet Potatoes Muffins",
+    "image": "https://img.spoonacular.com/recipes/662610-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 cup baby arugula",
-      "1 cup baby spinach",
-      "2 tablespoons butter",
-      "3 large egg yolks",
-      "4 eggs, poached",
-      "1 tablespoon fresh dill or 1 tsp. dried",
-      "1 lemon",
-      "2 slices thick multigrain bread",
-      "Salt and pepper to taste",
-      "8 ounces smoked salmon",
-      "2 tablespoons water",
-      "1 tsp. Worcestershire sauce"
+      "- 2 tsp Baking Powder",
+      "1 cup chocolate chips",
+      "\u00bd teaspoon cinnamon",
+      "1 egg",
+      "1 cup Flour",
+      "1/3 cup oil",
+      "\u00bd cup orange juice",
+      "1 teaspoon salt",
+      "- 1/4 c. Sugar",
+      "Sanding sugar for decoration",
+      "16 ounces \u2013 2 medium sweet potatoes or yams- cooked in the oven until soft"
     ],
     "steps": [
-      "Make Lemon Dill Hollandaise:Fill a medium saucepan about halfway with water, and bring to a gentle simmer over medium heat.",
-      "Put the egg yolks and water in a heatproof bowl, season with a pinch of dill (if using dried), salt, and pepper.",
-      "Whisk the ingredients together and then place the bowl on top of the saucepan. Keep stirring the egg mixture for about 5 minutes or until it begins to thicken. Make sure you dont scramble your eggs! Once the eggs are thickened, take the bowl off the water and set aside.Poach the eggs:Fill a medium saucepan with water, add a splash of white vinegar (optional, but this helps hold the whites together which results in nicely shaped eggs) and bring to a gentle simmer. You want tiny bubbles only, not a rolling boil. Gently add eggs to water and poach until deisred doneness.Meanwhile, toast bread.",
-      "Place toast on plates and top with arugula, spinach and salmon.",
-      "Place eggs on top of salmon and spoon hollandaise over the top.",
-      "Garnish with dill, salt and freshly cracked black pepper and serve."
+      "Cook in the oven the sweet potatoes until soft.",
+      "Remove from the oven and peel them.",
+      "Place the meat into a dish, smash to reduce to a no chunk pulp and let it cool.Keep the oven at 40",
+      "Mix all the flour, baking powder, salt, sugar, cinnamon and chocolate chips if using.",
+      "Add to the dry ingredients the orange juice, sweet potatoes, egg and oil and mix well.",
+      "Place muffins cups in muffins pan and pour muffins mix up to cup high.",
+      "Sprinkle sanding sugar and bake in the oven for 15 to 20 minutes, or until the toothpick comes out clean.",
+      "Serve at room temperature."
     ]
   },
   "lunch": {
-    "name": "Chinese Chicken Salad With Chipotle Dressing",
-    "image": "https://img.spoonacular.com/recipes/638642-556x370.jpg",
-    "cookTime": 45,
+    "name": "Slow Cooker Beef Stew",
+    "image": "https://img.spoonacular.com/recipes/715446-556x370.jpg",
+    "cookTime": 490,
     "ingredients": [
-      "Pea-mond Dressing",
-      "1/4 cup rice wine vinegar",
-      "1 tablespoon smooth peanut butter",
-      "1 tablespoon smooth almond butter",
-      "1 tablespoon chopped fresh ginger",
-      "2 teaspoons adobo chipotle pepper juice",
-      "1 teaspoon adobo chipotle pepper puree",
-      "1 tablespoon soy sauce",
-      "2 tablespoons honey",
-      "2 teaspoons toasted sesame oil",
-      "1/2 cup canola oil",
-      "Salt and freshly ground pepper",
-      "Salad",
-      "1/2 head Napa cabbage, shredded",
-      "1/2 head romaine lettuce, shredded",
-      "2 carrots, shredded",
-      "1/4 pound snow peas, julienned",
-      "1/4 cup coarsely chopped fresh cilantro leaves",
-      "1/4 cup thinly sliced green onion",
-      "2 cups shredded rotisserie chicken",
-      "1/2 cup chopped roasted peanuts",
-      "1/4 cup chopped fresh mint leaves",
-      "Chili oil, optional",
-      "lime halves, for garnish"
+      "1 14.5oz can of Beef Broth",
+      "2 large carrots, chopped",
+      "2 stalks celery, chopped",
+      "1 26oz can Cream of Mushroom Soup",
+      "3 green onions, chopped",
+      "10 new (red)potatoes",
+      "1 small onion chopped",
+      "\u00bd cup Dale's Seasoning",
+      "2 pounds stew meat",
+      "2 cups water"
     ],
     "steps": [
-      "Whisk together the vinegar, peanut & almond butters, ginger, chipotle pepper puree, soy sauce, honey, sesame oil, and canola oil in a medium bowl. Season with salt and pepper, to taste."
+      "To get started, heat your slow cooker to low.",
+      "Pour in the cream of mushroom soup, Dale's seasoning, water, and beef broth and stir until mixed well.",
+      "Add in your stew meat, potatoes, onions, carrots, celery, and green onions. Stir well until covered and cook on low for 8 hours. You can add salt and pepper as desired, but the flavors and the Dale's marry together so well that you probably won\u2019t need them."
     ]
   },
   "dinner": {
-    "name": "Lemon White Wine Chicken over Linguini",
-    "image": "https://img.spoonacular.com/recipes/649817-556x370.jpg",
+    "name": "Chicken with White Wine Tarragon Cream Sauce",
+    "image": "https://img.spoonacular.com/recipes/638455-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 lb thin sliced chicken breasts",
-      "3/4 cup chicken broth",
-      "fresh parsley",
-      "juice of 1 1/2 lemons",
-      "al dente whole grain linguini",
-      "olive oil",
-      "grated pecorino cheese",
-      "1 shallot, sliced",
-      "1 cup white wine"
+      "2 tbsp.s butter",
+      "1 pkg. fresh mushrooms, sliced",
+      "1 large onion, sliced",
+      "Fresh garlic, to taste (dash)",
+      "6 skinless, boneless chicken breasts",
+      "3 tbsp white wine",
+      "Dash of Worcestershire sauce",
+      "3 c sour cream",
+      "Dash of tarragon"
     ],
     "steps": [
-      "In a dish add about 1/2 cup whole wheat bread crumbs, a little salt and pepper. Coat the chicken lightly and place to the side.In a large saute pan, over medium high heat, add in just enough oil to coat the bottom of the pan. Brown the chicken on both sides. It should brown quickly so you don't over cook the chicken. Cook in batches then set the chicken aside.Once all the chicken is cooked and set aside you can start making the sauce. To the pan add another small drizzle of olive oil and add the sliced shallot. Cook until softened. Carefully add in the wine and allow to simmer for 5 minutes.",
-      "Add in the broth, lemon juice and chicken. Simmer on low for 10 minutes.",
-      "Add in some chopped fresh parsley, taste for salt and pepper.",
-      "Serve over the al dente linguini and top with grated pecorino cheese."
+      "In large skillet saute onions, mushrooms, and garlic until lightly brown; add chicken breast and cook on medium high for 10 minutes or until chicken is done.",
+      "Remove chicken and place on a platter.",
+      "Add white wine and cook until alcohol has burned off, about 2 minutes.",
+      "Add Worchestershire sauce and sour cream and stir until combined.",
+      "Pour sauce over chicken, sprinkle with tarragon and serve.",
+      "Excellent with biscuits, pasta or rice."
     ]
   }
 }
