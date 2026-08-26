@@ -1,77 +1,63 @@
 {
-  "date": "2026-08-25",
+  "date": "2026-08-26",
   "breakfast": {
-    "name": "Sweet Potatoes Muffins",
-    "image": "https://img.spoonacular.com/recipes/662610-556x370.jpg",
+    "name": "Overnight Steel Cut Oatmeal",
+    "image": "https://img.spoonacular.com/recipes/654274-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "- 2 tsp Baking Powder",
-      "1 cup chocolate chips",
-      "\u00bd teaspoon cinnamon",
-      "1 egg",
-      "1 cup Flour",
-      "1/3 cup oil",
-      "\u00bd cup orange juice",
-      "1 teaspoon salt",
-      "- 1/4 c. Sugar",
-      "Sanding sugar for decoration",
-      "16 ounces \u2013 2 medium sweet potatoes or yams- cooked in the oven until soft"
+      "2 cups dry steel cut oats",
+      "8 cups water",
+      "3/4 cup dried fruit",
+      "2 tablespoons butter"
     ],
     "steps": [
-      "Cook in the oven the sweet potatoes until soft.",
-      "Remove from the oven and peel them.",
-      "Place the meat into a dish, smash to reduce to a no chunk pulp and let it cool.Keep the oven at 40",
-      "Mix all the flour, baking powder, salt, sugar, cinnamon and chocolate chips if using.",
-      "Add to the dry ingredients the orange juice, sweet potatoes, egg and oil and mix well.",
-      "Place muffins cups in muffins pan and pour muffins mix up to cup high.",
-      "Sprinkle sanding sugar and bake in the oven for 15 to 20 minutes, or until the toothpick comes out clean.",
-      "Serve at room temperature."
+      "Stir all ingredients together in a slow cooker. Cover and cook on low for 8 hours overnight. In the morning, stir well and add milk, spices, or additional toppings to your liking."
     ]
   },
   "lunch": {
-    "name": "Slow Cooker Beef Stew",
-    "image": "https://img.spoonacular.com/recipes/715446-556x370.jpg",
-    "cookTime": 490,
+    "name": "Mexican Casserole",
+    "image": "https://img.spoonacular.com/recipes/715438-556x370.jpg",
+    "cookTime": 65,
     "ingredients": [
-      "1 14.5oz can of Beef Broth",
-      "2 large carrots, chopped",
-      "2 stalks celery, chopped",
-      "1 26oz can Cream of Mushroom Soup",
-      "3 green onions, chopped",
-      "10 new (red)potatoes",
-      "1 small onion chopped",
-      "\u00bd cup Dale's Seasoning",
-      "2 pounds stew meat",
-      "2 cups water"
+      "4 boneless chicken breasts",
+      "2 cups shredded Monterrey Jack",
+      "1 (10oz) cream of chicken soup",
+      "1 (10oz) cream of mushroom soup",
+      "1 onion, finely chopped",
+      "1 cup uncooked rice",
+      "1 cup salsa",
+      "2 cups shredded Cheddar Cheese"
     ],
     "steps": [
-      "To get started, heat your slow cooker to low.",
-      "Pour in the cream of mushroom soup, Dale's seasoning, water, and beef broth and stir until mixed well.",
-      "Add in your stew meat, potatoes, onions, carrots, celery, and green onions. Stir well until covered and cook on low for 8 hours. You can add salt and pepper as desired, but the flavors and the Dale's marry together so well that you probably won\u2019t need them."
+      "Take a large pot and ring water to a boil. When finished, place you chicken breasts in to boil for 20 minutes or until cooked. Take a smaller pan and cook rice as directed. Allow both rice and chicken time to cool when once fully cooked.",
+      "Heat over to 350 degrees. Take cooled chicken breasts and shred, or cut into bite size pieces.",
+      "Add into a large mixing bowl. Stir in cooked rice, 2 cups of Monterrey Jack cheese, and 1 cup of Cheddar. Stir in both soups, chopped onion, and salsa.Take a 9 x 13 baking dish and coat with non stick spray.",
+      "Place mixture into the 9 x 13 dish and cover with the remaining cup of cheddar cheese.",
+      "Bake for 40 minutes. Allow to cool before serving."
     ]
   },
   "dinner": {
-    "name": "Chicken with White Wine Tarragon Cream Sauce",
-    "image": "https://img.spoonacular.com/recipes/638455-556x370.jpg",
+    "name": "Chicken Cordon Bleu",
+    "image": "https://img.spoonacular.com/recipes/638035-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 tbsp.s butter",
-      "1 pkg. fresh mushrooms, sliced",
-      "1 large onion, sliced",
-      "Fresh garlic, to taste (dash)",
-      "6 skinless, boneless chicken breasts",
-      "3 tbsp white wine",
-      "Dash of Worcestershire sauce",
-      "3 c sour cream",
-      "Dash of tarragon"
+      "6 slices deli ham",
+      "2 eggs",
+      "1/4 cup flour",
+      "2 teaspoons fresh thyme leaves",
+      "kosher salt and freshly ground black pepper",
+      "1 teaspoon olive oil",
+      "1 cup panko bread crumbs",
+      "6 boneless, skinless chicken breasts",
+      "12 slices Gruyere or Swiss cheese",
+      "2 tsps water"
     ],
     "steps": [
-      "In large skillet saute onions, mushrooms, and garlic until lightly brown; add chicken breast and cook on medium high for 10 minutes or until chicken is done.",
-      "Remove chicken and place on a platter.",
-      "Add white wine and cook until alcohol has burned off, about 2 minutes.",
-      "Add Worchestershire sauce and sour cream and stir until combined.",
-      "Pour sauce over chicken, sprinkle with tarragon and serve.",
-      "Excellent with biscuits, pasta or rice."
+      "Preheat oven to 350 degrees F.Butterfly the chicken breasts by slicing half lengthwise but not cutting all the way through.",
+      "Lay the halved breasts between 2 pieces of plastic wrap. Using the flat side of a meat mallet, gently pound the chicken to 1/4-inch thickness, taking care to not tear or create holes in the meat.",
+      "Lay 2 slices of cheese on each breast, followed by 2 slices of ham, and 2 more of cheese; leaving a 1/2-inch margin on all sides to help seal the roll. Tuck in the sides of the breast and roll up tight like a jellyroll. Squeeze the log gently to seal.Season the flour with salt and pepper; spread out on waxed paper or in a flat dish.",
+      "Mix the breadcrumbs with thyme, kosher salt, pepper, and oil. The oil will help the crust brown. Beat together the eggs and water, the mixture should be fluid. Lightly dust the chicken with flour, then dip in the egg mixture. Gently coat in the bread crumbs.Carefully transfer the roulades to a baking pan and bake for 20 minutes until browned and cooked through.",
+      "Serve whole or cut into pinwheels."
     ]
   }
 }
