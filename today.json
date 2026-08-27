@@ -1,63 +1,78 @@
 {
-  "date": "2026-08-26",
+  "date": "2026-08-27",
   "breakfast": {
-    "name": "Overnight Steel Cut Oatmeal",
-    "image": "https://img.spoonacular.com/recipes/654274-556x370.jpg",
+    "name": "Finger Foods: Frittata Muffins",
+    "image": "https://img.spoonacular.com/recipes/716432-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 cups dry steel cut oats",
-      "8 cups water",
-      "3/4 cup dried fruit",
-      "2 tablespoons butter"
+      "3/4 cup chopped, cooked broccoli",
+      "2 T chopped chives",
+      "1 + 2 T cream or whole milk",
+      "6 eggs",
+      "1/3 cup minced orange pepper",
+      "salt and pepper",
+      "1/2 cup shredded cheddar cheese",
+      "1/3 cup seeded, chopped tomato"
     ],
-    "steps": [
-      "Stir all ingredients together in a slow cooker. Cover and cook on low for 8 hours overnight. In the morning, stir well and add milk, spices, or additional toppings to your liking."
-    ]
+    "steps": []
   },
   "lunch": {
-    "name": "Mexican Casserole",
-    "image": "https://img.spoonacular.com/recipes/715438-556x370.jpg",
-    "cookTime": 65,
+    "name": "Light Greek Lemon Chicken Orzo Soup",
+    "image": "https://img.spoonacular.com/recipes/1098350-556x370.jpg",
+    "cookTime": 30,
     "ingredients": [
-      "4 boneless chicken breasts",
-      "2 cups shredded Monterrey Jack",
-      "1 (10oz) cream of chicken soup",
-      "1 (10oz) cream of mushroom soup",
-      "1 onion, finely chopped",
-      "1 cup uncooked rice",
-      "1 cup salsa",
-      "2 cups shredded Cheddar Cheese"
+      "3 cooked chicken breasts",
+      "2 32 oz. boxes of chicken broth",
+      "3 carrots, peeled and diced",
+      "3 celery stalks, diced",
+      "3-4 sprigs fresh thyme",
+      "1 teaspoon extra virgin olive oil",
+      "2 cups orzo pasta",
+      "1 Tbs ground thyme",
+      "1 Tbs salt",
+      "1 Tbs pepper",
+      "1 large lemon"
     ],
     "steps": [
-      "Take a large pot and ring water to a boil. When finished, place you chicken breasts in to boil for 20 minutes or until cooked. Take a smaller pan and cook rice as directed. Allow both rice and chicken time to cool when once fully cooked.",
-      "Heat over to 350 degrees. Take cooled chicken breasts and shred, or cut into bite size pieces.",
-      "Add into a large mixing bowl. Stir in cooked rice, 2 cups of Monterrey Jack cheese, and 1 cup of Cheddar. Stir in both soups, chopped onion, and salsa.Take a 9 x 13 baking dish and coat with non stick spray.",
-      "Place mixture into the 9 x 13 dish and cover with the remaining cup of cheddar cheese.",
-      "Bake for 40 minutes. Allow to cool before serving."
+      "In a large soup pot, heat olive oil on medium high.",
+      "Add carrots and celery and cook for 5 minutes on medium.",
+      "Add chicken broth.",
+      "Add ground thyme, salt and pepper.",
+      "Add cooked, diced chicken breasts and fresh thyme.Bring to boil.",
+      "Add orzo and cook for 7-10 minutes until pasta is cooked.",
+      "Add the lemon zest and juice from 1 large lemon.",
+      "Serve with a slice of lemon."
     ]
   },
   "dinner": {
-    "name": "Chicken Cordon Bleu",
-    "image": "https://img.spoonacular.com/recipes/638035-556x370.jpg",
+    "name": "Superbowl Chili",
+    "image": "https://img.spoonacular.com/recipes/662376-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "6 slices deli ham",
-      "2 eggs",
-      "1/4 cup flour",
-      "2 teaspoons fresh thyme leaves",
-      "kosher salt and freshly ground black pepper",
-      "1 teaspoon olive oil",
-      "1 cup panko bread crumbs",
-      "6 boneless, skinless chicken breasts",
-      "12 slices Gruyere or Swiss cheese",
-      "2 tsps water"
+      "15 ounces cans black beans, drained and rinsed",
+      "28 ounces can diced tomatoes, drained",
+      "2 mediums carrots",
+      "2 teaspoons tablespoons plus 1 chili powder",
+      "2 tablespoons chopped chipotle chile pepper in adobo sauce",
+      "4 teaspoons cumin",
+      "chopped fresh cilantro",
+      "2 tablespoons finely minced garlic",
+      "chopped green onions",
+      "2 teaspoons kosher salt",
+      "3 pounds lean ground beef",
+      "freshly squeezed lime",
+      "6 cups to 7 reduced-sodium beef or chicken stock",
+      "monterey jack cheese",
+      "1/4 cup olive oil",
+      "2 mediums yellow onions",
+      "4 teaspoons dried oregano",
+      "1 1/2 pounds sirloin steak, cut into small chunks",
+      "sour cream"
     ],
     "steps": [
-      "Preheat oven to 350 degrees F.Butterfly the chicken breasts by slicing half lengthwise but not cutting all the way through.",
-      "Lay the halved breasts between 2 pieces of plastic wrap. Using the flat side of a meat mallet, gently pound the chicken to 1/4-inch thickness, taking care to not tear or create holes in the meat.",
-      "Lay 2 slices of cheese on each breast, followed by 2 slices of ham, and 2 more of cheese; leaving a 1/2-inch margin on all sides to help seal the roll. Tuck in the sides of the breast and roll up tight like a jellyroll. Squeeze the log gently to seal.Season the flour with salt and pepper; spread out on waxed paper or in a flat dish.",
-      "Mix the breadcrumbs with thyme, kosher salt, pepper, and oil. The oil will help the crust brown. Beat together the eggs and water, the mixture should be fluid. Lightly dust the chicken with flour, then dip in the egg mixture. Gently coat in the bread crumbs.Carefully transfer the roulades to a baking pan and bake for 20 minutes until browned and cooked through.",
-      "Serve whole or cut into pinwheels."
+      "In a large heavy pot set over high heat, saute ground beef and steak chunks, stirring frequently, until browned, about 8 minutes. With a slotted spoon, remove beef to a plate and pour off the remaining liquid in the pan. (I used a strainer over a large bowl, and put all the meat in it to drain the excess fat off).",
+      "Add olive oil to the same pot that you cooked your meat in and set over medium heat. When hot, add carrots, onions, and garlic and saute, stirring, until softened, about 5 minutes. Return beef to pot, and add chili powder, cumin, oregano, salt, and chopped chipotle chile; stir and cook 1 minute.",
+      "Add tomatoes and broth. Bring to a simmer, reduce heat to a gentle simmer, and cook for 30 minutes more, stirring occasionally. Much of the liquid will cook down during this time.Stir in all but 1/3 cup of black beans and cook 5 minutes more. Mash reserved beans with a fork, and stir into the chili to give it extra body. If chili is too thick, stir in as much as 1 cup additional broth and heat several minutes to warm. Chili can be prepared two days ahead. Cool, cover and refrigerate. Reheat over medium heat, stirring often.Ladle into bowls and garnish with toppings. Enjoy!"
     ]
   }
 }
