@@ -1,75 +1,85 @@
 {
-  "date": "2026-08-29",
+  "date": "2026-08-30",
   "breakfast": {
-    "name": "Oatmeal Pancake (Yummy & Heart Healthy)",
-    "image": "https://img.spoonacular.com/recipes/653472-556x370.jpg",
+    "name": "Coconut Bliss Smoothie",
+    "image": "https://img.spoonacular.com/recipes/639728-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 tablespoon Agave",
-      "1/2 cup whole wheat multi-purpose flour",
-      "1 tsp Baking powder",
-      "\u00bd cup Blueberries",
-      "\u00bd cup Egg whites",
-      "\u00bd cup Fat-free milk",
-      "1 cup Rolled or old style or Irish oats",
-      "maple syrup"
+      "Coconut Bliss Smoothie",
+      "2 Frozen Bananas",
+      "1 whole Mango",
+      "1 1/2 cups of Coconut Milk",
+      "3/4 of Pear Puree (or mango puree)",
+      "2 tablespoons of Shredded Coconut (unsweetened)",
+      "2 tablespoons of Chia Seeds"
     ],
     "steps": [
-      "Add oats to the milk and soak it for 3-4 hours or overnight in refrigerator.",
-      "Add egg white, wheat flour, baking powder, agave (or sugar) and blend in processor / coffee grinder.Bring a non-stick pan to medium heat and pour 5 to 7 spoons of the mix (non-stick greasing stuff or oil is not really needed for pancakes).Turn it over in 1 to 2 minutes and take out once it becomes puffy and golden color.Enjoy with 100% maple syrup."
+      "Blend until smooth!",
+      "Serve and Enjoy"
     ]
   },
   "lunch": {
-    "name": "Spicy Salad with Kidney Beans, Cheddar, and Nuts",
-    "image": "https://img.spoonacular.com/recipes/157344-556x370.jpg",
-    "cookTime": 10,
+    "name": "Chicken Verde Enchilada Casserole",
+    "image": "https://img.spoonacular.com/recipes/638409-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "15 grams almonds",
-      "1/2 avocado",
-      "5 ml balsamic vinegar",
-      "1/4 cup (30 grams) cheddar cheese",
-      "1/2 cup (113 grams) cooked kidney beans",
-      "150 grams mixed greens",
-      "10 ml olive oil",
-      "15 grams roasted salted cashews",
-      "2-3 sundried tomatoes",
-      "2 dashes (or more if you like it hot!) Tabasco"
+      "4 Large Boneless Skinless Chicken Breasts",
+      "Lawry's Garlic Salt and Pepper, to taste",
+      "2 tablespoons Olive Oil",
+      "6 ounces Shredded Cheddar Cheese",
+      "6 ounces Shredded Mozzarella Cheese",
+      "19 ounces La Victoria Chile Verde Enchilada Sauce",
+      "12 Corn Tortillas",
+      "Sour Cream",
+      "Guacamole",
+      "Tomatoes, chopped",
+      "Green Onions, chopped"
     ],
     "steps": [
-      "Rinse and drain the kidney beans, cut the sundried tomatoes, and tear the slice of cheese into small pieces.",
-      "Put the mixed greens in a bowl and top with kidney beans, sundried tomatoes, cheddar cheese, and nuts.",
-      "Mix together the olive oil, balsamic vinegar, and hot sauce in a small bowl.",
-      "Pour the dressing over the salad.",
-      "Fast, easy, and healthy-- one of my favorite lunches!"
+      "Preheat oven to 350 degrees.",
+      "In a large skillet, heat olive oil.",
+      "Sprinkle both sides of chicken breasts with seasoning to taste.",
+      "Brown chicken in olive oil.  Cook 10 minutes. (chicken will cook more later)",
+      "Cut/Shred cooked chicken into small pieces, set aside in small bowl.",
+      "Combine shredded cheeses into a small bowl, set aside.",
+      "Empty enchilada sauce into large bowl, set aside.",
+      "Wrap tortillas in a moist paper towel and microwave for 1 minute to steam.",
+      "Dip one warm corn tortilla into the enchilada sauce, coat both sides.",
+      "Cover the bottom of a 13 x 9 baking dish with dipped tortillas (approx 4).",
+      "Layer in the shredded/diced chicken on top of the tortillas.",
+      "Layer in the cheeses on top of the chicken.",
+      "Repeat layering dipped tortillas, chicken and cheese until baking dish is full.",
+      "Finish with a layer of dipped tortillas topped with a layer of cheese.",
+      "Bake at 350 degrees for 30-40 minutes or until cheese is melted.",
+      "Top with your choice of sour cream, guacamole, diced tomatoes and/or chopped green onions."
     ]
   },
   "dinner": {
-    "name": "Crisp Winter Salad with Maple Gorgonzola Dressing",
-    "image": "https://img.spoonacular.com/recipes/640798-556x370.jpg",
+    "name": "Crispy Southern Fried Chicken",
+    "image": "https://img.spoonacular.com/recipes/640843-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "\u00bd cup peeled, julienned broccoli stems (1 inch long)",
-      "1 cup julienned celery (1 inch long)",
-      "2 tablespoons cider vinegar",
-      "2 teaspoons Dijon mustard",
-      "8 ounces gorgonzola cheese, crumbled and partially chunky",
-      "1 cup peeled, julienned jicama (1 inch long)",
-      "1 teaspoon kosher salt",
-      "1 cup sour cream, low-fat or non-fat",
-      "2 tablespoons maple syrup, grade B preferred",
-      "Olive oil",
-      "1 cup julienned radishes (about 1 small bag or 10 radishes)",
-      "1 cup julienned apple (about 2 apples, red and green)",
-      "2 cups thinly sliced romaine lettuce",
-      "2 cups julienned savoy cabbage",
-      "1 cup toasted chopped walnuts, optional",
-      "1 teaspoon freshly ground white pepper"
+      "1.2kg / 2.6 lb. chicken legs and thighs. This weight usually gives me 4 legs and 4 thighs.",
+      "500ml / 1 pt. buttermilk",
+      "1 x tsp salt",
+      "150gr / 5 oz. plain flour",
+      "\u00bd tsp salt",
+      "2 x tsps of spicy smoked paprika powder (you can also use the mild version, but I like spice)",
+      "2 x tsps dried thyme",
+      "1 x tsp freshly ground black pepper",
+      "Vegetable oil to fry the chicken (I like to use rapeseed oil or sunflower oil)"
     ],
     "steps": [
-      "In a large bowl, toss the salad ingredients.In a medium bowl, whisk the sour cream, oil, vinegar, mustard, maple syrup, salt, and pepper until smooth.",
-      "Add the cheese and mix with a fork to combine without mashing the cheese. There should be visible chunks in the dressing.",
-      "Add the walnuts to the salad, then add the dressing and toss to combine.",
-      "Serve."
+      "Pour the buttermilk into a tray or bowl add one teaspoon of salt, mix through and place the chicken pieces into the buttermilk. Depending on the size and shape of your bowl you may need a little bit more buttermilk in order that the chicken is covered. Cover with some cling film and place in the fridge for up to 8 hours.",
+      "Remove before frying to give enough time to bring the meat up to room temperature.",
+      "In a dish or bowl combine the flour, half teaspoon of salt, smoked paprika, thyme and pepper.",
+      "Combine with your fingers or a fork.",
+      "Remove the chicken from the buttermilk marinade and dispose of the marinade. Shake off most of the drips and then dredge the chicken in your flour mix making sure each piece is covered completely.",
+      "Heat about 1.5cm / 0.5 in. of oil in a heavy bottomed wide pan. While this is heating up you can get a wire rack ready to drain the chicken. I do this by placing kitchen paper over the rack.",
+      "The oil temperature should be about 170C / 340F for frying. I dont check with a thermometer but by putting a piece of bread in the oil and it is ready when it fizzes and turns brown quickly. The time the oil takes to heat up will depend on the thickness of the metal of your pan, your stove top and the quantity of oil you have used.",
+      "You will probably have to cook in batches so as not to over load the pan. I start with the thighs which need a little bit more time than the legs.",
+      "Place each one carefully in the pan and fry, covered, on a good strong simmer for anywhere between 8 to 12 minutes on each side. The heat needs to be high enough to give you a nice brown colour and a crisp finish.",
+      "Remove and set on the rack to drain. Then do the same with the legs, giving them a couple of minutes less than the thighs."
     ]
   }
 }
