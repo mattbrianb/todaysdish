@@ -1,85 +1,74 @@
 {
-  "date": "2026-08-30",
+  "date": "2026-08-31",
   "breakfast": {
-    "name": "Coconut Bliss Smoothie",
-    "image": "https://img.spoonacular.com/recipes/639728-556x370.jpg",
+    "name": "Peanut Butter and Apple Oatmeal Breakfast Bars",
+    "image": "https://img.spoonacular.com/recipes/655212-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "Coconut Bliss Smoothie",
-      "2 Frozen Bananas",
-      "1 whole Mango",
-      "1 1/2 cups of Coconut Milk",
-      "3/4 of Pear Puree (or mango puree)",
-      "2 tablespoons of Shredded Coconut (unsweetened)",
-      "2 tablespoons of Chia Seeds"
+      "2 cups Quaker oats",
+      "1/4 cup smooth peanut butter",
+      "1 tbsp butter",
+      "2 tbsp vegetable oil",
+      "1 cup whole wheat flour",
+      "2 tbsp honey",
+      "1/3 cup brown sugar",
+      "1 tbsp vanilla extract",
+      "1 tbsp cinnamon",
+      "1 apple, peeled and diced"
     ],
     "steps": [
-      "Blend until smooth!",
-      "Serve and Enjoy"
+      "Preheat oven to 350 degrees F.",
+      "Grease an 11x7 inch baking pan. If you don't have one, you can use an 8x8, 9x9, or if neceessary an 11x1",
+      "Place peanut butter and butter in a microwave safe dish.",
+      "Heat in the microwave for 30-45 seconds or until butter is melted. Stir together.",
+      "Place all ingredients, except fruit, into a bowl. Using an electric beater or Kitchen",
+      "Aid mixer, beat ingredients together for approximately 1 minutes.",
+      "Peel a whole apple and thinly chop into pinky nail size pieces.",
+      "Stir the apples into the oatmeal mixture.",
+      "Pour the mixture into greased pan and press entire mixture down firmly with your fingers.",
+      "Place pan into the oven and cook for 25 minutes or until edges are golden brown. If you are using an 11x13 pan, it will take a bit less time because the mixture will be much thinner.",
+      "Let cool for 10 minutes before slicing into strips.",
+      "Let the remaining bars cool entirely before you place in tupperware or wrap them in foil."
     ]
   },
   "lunch": {
-    "name": "Chicken Verde Enchilada Casserole",
-    "image": "https://img.spoonacular.com/recipes/638409-556x370.jpg",
+    "name": "Venison Stew",
+    "image": "https://img.spoonacular.com/recipes/664786-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "4 Large Boneless Skinless Chicken Breasts",
-      "Lawry's Garlic Salt and Pepper, to taste",
-      "2 tablespoons Olive Oil",
-      "6 ounces Shredded Cheddar Cheese",
-      "6 ounces Shredded Mozzarella Cheese",
-      "19 ounces La Victoria Chile Verde Enchilada Sauce",
-      "12 Corn Tortillas",
-      "Sour Cream",
-      "Guacamole",
-      "Tomatoes, chopped",
-      "Green Onions, chopped"
+      "2 pounds venison stew meat, cut in cubes",
+      "Spices: onion salt, 8 cups water 4 pieces large potatoes 1 piece large onion 4 pieces carrots or baby carrots 4 stalks celery 1 can mushrooms 1 piece green pepper 1 cup flour and 3 tbsp 2 tablespoons beef bouillon",
+      "8 cups water",
+      "4 pieces large potatoes",
+      "1 piece large onion",
+      "4 pieces carrots or baby carrots",
+      "4 stalks celery",
+      "1 can mushrooms",
+      "1 piece green pepper",
+      "1 cup flour and 3 tbsp",
+      "2 tablespoons beef bouillon"
     ],
     "steps": [
-      "Preheat oven to 350 degrees.",
-      "In a large skillet, heat olive oil.",
-      "Sprinkle both sides of chicken breasts with seasoning to taste.",
-      "Brown chicken in olive oil.  Cook 10 minutes. (chicken will cook more later)",
-      "Cut/Shred cooked chicken into small pieces, set aside in small bowl.",
-      "Combine shredded cheeses into a small bowl, set aside.",
-      "Empty enchilada sauce into large bowl, set aside.",
-      "Wrap tortillas in a moist paper towel and microwave for 1 minute to steam.",
-      "Dip one warm corn tortilla into the enchilada sauce, coat both sides.",
-      "Cover the bottom of a 13 x 9 baking dish with dipped tortillas (approx 4).",
-      "Layer in the shredded/diced chicken on top of the tortillas.",
-      "Layer in the cheeses on top of the chicken.",
-      "Repeat layering dipped tortillas, chicken and cheese until baking dish is full.",
-      "Finish with a layer of dipped tortillas topped with a layer of cheese.",
-      "Bake at 350 degrees for 30-40 minutes or until cheese is melted.",
-      "Top with your choice of sour cream, guacamole, diced tomatoes and/or chopped green onions."
+      "Cut all ingredients into 1 inch pieces. Dredge venison with flour and spices. Brown venison in hot vegetable oil. Boil and simmer venison 2 hours with beef bouillon and water.",
+      "Add remaining ingredients and simmer for 1/2 hour.",
+      "Mix 3 tablespoons flour and 1 cup cold water and add to stew to thicken."
     ]
   },
   "dinner": {
-    "name": "Crispy Southern Fried Chicken",
-    "image": "https://img.spoonacular.com/recipes/640843-556x370.jpg",
+    "name": "Watermelon Feta and Mint Salad",
+    "image": "https://img.spoonacular.com/recipes/665012-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1.2kg / 2.6 lb. chicken legs and thighs. This weight usually gives me 4 legs and 4 thighs.",
-      "500ml / 1 pt. buttermilk",
-      "1 x tsp salt",
-      "150gr / 5 oz. plain flour",
-      "\u00bd tsp salt",
-      "2 x tsps of spicy smoked paprika powder (you can also use the mild version, but I like spice)",
-      "2 x tsps dried thyme",
-      "1 x tsp freshly ground black pepper",
-      "Vegetable oil to fry the chicken (I like to use rapeseed oil or sunflower oil)"
+      "1 seedless watermelon, sweet and delicious",
+      "3 ounces (or more depending on what you like) feta cheese, a nice creamy one",
+      "1 cup of fresh mint",
+      "1/4 cup olive oil",
+      "1/4 cup balsamic vinegar-very good quality",
+      "black pepper if you like pepper"
     ],
     "steps": [
-      "Pour the buttermilk into a tray or bowl add one teaspoon of salt, mix through and place the chicken pieces into the buttermilk. Depending on the size and shape of your bowl you may need a little bit more buttermilk in order that the chicken is covered. Cover with some cling film and place in the fridge for up to 8 hours.",
-      "Remove before frying to give enough time to bring the meat up to room temperature.",
-      "In a dish or bowl combine the flour, half teaspoon of salt, smoked paprika, thyme and pepper.",
-      "Combine with your fingers or a fork.",
-      "Remove the chicken from the buttermilk marinade and dispose of the marinade. Shake off most of the drips and then dredge the chicken in your flour mix making sure each piece is covered completely.",
-      "Heat about 1.5cm / 0.5 in. of oil in a heavy bottomed wide pan. While this is heating up you can get a wire rack ready to drain the chicken. I do this by placing kitchen paper over the rack.",
-      "The oil temperature should be about 170C / 340F for frying. I dont check with a thermometer but by putting a piece of bread in the oil and it is ready when it fizzes and turns brown quickly. The time the oil takes to heat up will depend on the thickness of the metal of your pan, your stove top and the quantity of oil you have used.",
-      "You will probably have to cook in batches so as not to over load the pan. I start with the thighs which need a little bit more time than the legs.",
-      "Place each one carefully in the pan and fry, covered, on a good strong simmer for anywhere between 8 to 12 minutes on each side. The heat needs to be high enough to give you a nice brown colour and a crisp finish.",
-      "Remove and set on the rack to drain. Then do the same with the legs, giving them a couple of minutes less than the thighs."
+      "Cut watermelon in half and remove watermelon from rind.  You can either spoon it out like a mad man, carefully remove it and cut it into squares, or scoop it all out with a melon baller-which is what I did.  I liked the look of all those succelent balls of watermelon.",
+      "So, scoop out your watermelon and put it in a bowl-I used the leftover water melon rind for my bowl, and youre going to add your dressing, which is so simple, soooo easy."
     ]
   }
 }
