@@ -1,74 +1,76 @@
 {
-  "date": "2026-08-31",
+  "date": "2026-09-02",
   "breakfast": {
-    "name": "Peanut Butter and Apple Oatmeal Breakfast Bars",
-    "image": "https://img.spoonacular.com/recipes/655212-556x370.jpg",
+    "name": "Whole Grain Pumpkin Bread",
+    "image": "https://img.spoonacular.com/recipes/665257-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 cups Quaker oats",
-      "1/4 cup smooth peanut butter",
-      "1 tbsp butter",
-      "2 tbsp vegetable oil",
-      "1 cup whole wheat flour",
-      "2 tbsp honey",
-      "1/3 cup brown sugar",
-      "1 tbsp vanilla extract",
-      "1 tbsp cinnamon",
-      "1 apple, peeled and diced"
+      "2 teaspoons baking soda",
+      "1 1/2 cups firmly packed light brown sugar",
+      "16 ounces can pumpkin (Libby's)",
+      "2 teaspoons cinnamon",
+      "2 eggs, well beaten",
+      "2 cups flour",
+      "1 teaspoon ground cloves",
+      "1/2 cup molasses",
+      "1 teaspoon nutmeg",
+      "cup oat bran",
+      "1 cup oil or butter",
+      "1/4 cup pecans, finely chopped",
+      "1/2 teaspoon salt",
+      "cup wheat bran",
+      "cup wheat germ",
+      "1/2 cup whole wheat flour"
     ],
     "steps": [
-      "Preheat oven to 350 degrees F.",
-      "Grease an 11x7 inch baking pan. If you don't have one, you can use an 8x8, 9x9, or if neceessary an 11x1",
-      "Place peanut butter and butter in a microwave safe dish.",
-      "Heat in the microwave for 30-45 seconds or until butter is melted. Stir together.",
-      "Place all ingredients, except fruit, into a bowl. Using an electric beater or Kitchen",
-      "Aid mixer, beat ingredients together for approximately 1 minutes.",
-      "Peel a whole apple and thinly chop into pinky nail size pieces.",
-      "Stir the apples into the oatmeal mixture.",
-      "Pour the mixture into greased pan and press entire mixture down firmly with your fingers.",
-      "Place pan into the oven and cook for 25 minutes or until edges are golden brown. If you are using an 11x13 pan, it will take a bit less time because the mixture will be much thinner.",
-      "Let cool for 10 minutes before slicing into strips.",
-      "Let the remaining bars cool entirely before you place in tupperware or wrap them in foil."
+      "Preheat oven to 375 degrees. Grease 2 loaf pans. Beat oil, brown sugar and molasses until well blended. Blend in egg and pumpkin. Stir flours, brans, wheat germ, soda, cinnamon, cloves, nutmeg and salt into mixture just until moistened. Fold in nuts. Fill pans and bake about 1 hour, until pick comes out clean. Cool on rack. Better if served the day after cooking."
     ]
   },
   "lunch": {
-    "name": "Venison Stew",
-    "image": "https://img.spoonacular.com/recipes/664786-556x370.jpg",
+    "name": "Easy Ginger Beef Broccoli",
+    "image": "https://img.spoonacular.com/recipes/641975-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 pounds venison stew meat, cut in cubes",
-      "Spices: onion salt, 8 cups water 4 pieces large potatoes 1 piece large onion 4 pieces carrots or baby carrots 4 stalks celery 1 can mushrooms 1 piece green pepper 1 cup flour and 3 tbsp 2 tablespoons beef bouillon",
-      "8 cups water",
-      "4 pieces large potatoes",
-      "1 piece large onion",
-      "4 pieces carrots or baby carrots",
-      "4 stalks celery",
-      "1 can mushrooms",
-      "1 piece green pepper",
-      "1 cup flour and 3 tbsp",
-      "2 tablespoons beef bouillon"
+      "4 cups broccoli, chopped",
+      "1 10.5-ounce can beef or chicken broth",
+      "1/4 cup flour",
+      "1/4 teaspoon fresh ginger, minced",
+      "1 clove garlic, minced",
+      "1 pound boneless round steak, cut into bite size strips",
+      "2 tablespoons soy sauce",
+      "2 tablespoons sugar"
     ],
     "steps": [
-      "Cut all ingredients into 1 inch pieces. Dredge venison with flour and spices. Brown venison in hot vegetable oil. Boil and simmer venison 2 hours with beef bouillon and water.",
-      "Add remaining ingredients and simmer for 1/2 hour.",
-      "Mix 3 tablespoons flour and 1 cup cold water and add to stew to thicken."
+      "In a small bowl, combine flour, broth, sugar, and soy sauce. Stir until sugar and flour are dissolved.In a large skillet or wok over high heat, cook and stir beef 2 to 4 minutes, or until browned. Stir in broth mixture, ginger, garlic, and broccoli. Bring to a boil, then reduce heat. Simmer 5 to 10 minutes, or until sauce thickens.Excellent served over rice."
     ]
   },
   "dinner": {
-    "name": "Watermelon Feta and Mint Salad",
-    "image": "https://img.spoonacular.com/recipes/665012-556x370.jpg",
+    "name": "How To Make Fried Chicken Without Frying",
+    "image": "https://img.spoonacular.com/recipes/647577-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 seedless watermelon, sweet and delicious",
-      "3 ounces (or more depending on what you like) feta cheese, a nice creamy one",
-      "1 cup of fresh mint",
-      "1/4 cup olive oil",
-      "1/4 cup balsamic vinegar-very good quality",
-      "black pepper if you like pepper"
+      "4 chicken thighs",
+      "2 Tbsp of extra virgin olive oil",
+      "rosemary",
+      "sage",
+      "tarragon",
+      "salt",
+      "pepper",
+      "6 Tbsp of bread crumbs",
+      "2 Tbsp of honey",
+      "2 Tbsp of vinegar"
     ],
     "steps": [
-      "Cut watermelon in half and remove watermelon from rind.  You can either spoon it out like a mad man, carefully remove it and cut it into squares, or scoop it all out with a melon baller-which is what I did.  I liked the look of all those succelent balls of watermelon.",
-      "So, scoop out your watermelon and put it in a bowl-I used the leftover water melon rind for my bowl, and youre going to add your dressing, which is so simple, soooo easy."
+      "Preheat the oven to 200C/400F.",
+      "Wash and dry the chicken thighs.",
+      "Mince the herbs.",
+      "In a bowl put the extra virgin olive oil, the minced herbs, salt and pepper.",
+      "Put the chicken inside the bowl and gently massage the chicken with the oil and herbs mixture.",
+      "Pass each thigh on the breadcrumbs and put on an oven tray covered with parchment paper.",
+      "Cook until well done, from 50 minutes to one hour, depending on your oven and the weight of the chicken pieces.",
+      "At half cooking time, turn each piece to the other side.",
+      "Prepare a sauce mixing the honey and vinegar.",
+      "Five minutes before taking the chicken out of the oven, brush each piece with the sauce."
     ]
   }
 }
