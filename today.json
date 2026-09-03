@@ -1,76 +1,73 @@
 {
-  "date": "2026-09-02",
+  "date": "2026-09-03",
   "breakfast": {
-    "name": "Whole Grain Pumpkin Bread",
-    "image": "https://img.spoonacular.com/recipes/665257-556x370.jpg",
+    "name": "Spinach & Ham Quiche",
+    "image": "https://img.spoonacular.com/recipes/661249-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 teaspoons baking soda",
-      "1 1/2 cups firmly packed light brown sugar",
-      "16 ounces can pumpkin (Libby's)",
-      "2 teaspoons cinnamon",
-      "2 eggs, well beaten",
-      "2 cups flour",
-      "1 teaspoon ground cloves",
-      "1/2 cup molasses",
-      "1 teaspoon nutmeg",
-      "cup oat bran",
-      "1 cup oil or butter",
-      "1/4 cup pecans, finely chopped",
-      "1/2 teaspoon salt",
-      "cup wheat bran",
-      "cup wheat germ",
-      "1/2 cup whole wheat flour"
+      "100 grams Cold butter",
+      "50 grams Cheddar cheese- grated",
+      "2 Large eggs",
+      "125 grams Chicken or Picnic Ham (shredded)",
+      "5 tablespoons Ice water",
+      "80 milliliters milk",
+      "dash of white pepper",
+      "200 grams Plain flour",
+      "1/8 teaspoon salt",
+      "1/2 tablespoon Shallots (sliced)",
+      "125 grams Spinach (wash& drain well, shredded)",
+      "80 milliliters Whipping cream"
     ],
     "steps": [
-      "Preheat oven to 375 degrees. Grease 2 loaf pans. Beat oil, brown sugar and molasses until well blended. Blend in egg and pumpkin. Stir flours, brans, wheat germ, soda, cinnamon, cloves, nutmeg and salt into mixture just until moistened. Fold in nuts. Fill pans and bake about 1 hour, until pick comes out clean. Cool on rack. Better if served the day after cooking."
+      "With little oil, fry shallot till fragrant and golden brown.",
+      "Add ham fry for a while and add spinach and fry till spinach cooked, dish up and set aside.Measure whipping cream and milk together in measuring cup (you can omit whipping cream and use all 160ml milk) add eggs, lightly beaten and pinch of salt, mix well.",
+      "Spread ham spinach and cheddar cheese evenly over the bottom of the prepared tart pan, add a dash of pepper then gently pour egg mixture over it.",
+      "Bake at preheated 180C for 40 mins and serve hot or warm."
     ]
   },
   "lunch": {
-    "name": "Easy Ginger Beef Broccoli",
-    "image": "https://img.spoonacular.com/recipes/641975-556x370.jpg",
+    "name": "Easy Chicken with White Wine Sauce",
+    "image": "https://img.spoonacular.com/recipes/641912-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "4 cups broccoli, chopped",
-      "1 10.5-ounce can beef or chicken broth",
-      "1/4 cup flour",
-      "1/4 teaspoon fresh ginger, minced",
-      "1 clove garlic, minced",
-      "1 pound boneless round steak, cut into bite size strips",
-      "2 tablespoons soy sauce",
-      "2 tablespoons sugar"
+      "2 packets Swanson\u00ae Flavor Concentrated Chicken Broth",
+      "1 cup dry white wine",
+      "1 tablespoon chopped fresh thyme leaves",
+      "1 tablespoon olive oil",
+      "1 shallot, minced",
+      "1 1/4 pounds skinless, boneless chicken breast halves"
     ],
     "steps": [
-      "In a small bowl, combine flour, broth, sugar, and soy sauce. Stir until sugar and flour are dissolved.In a large skillet or wok over high heat, cook and stir beef 2 to 4 minutes, or until browned. Stir in broth mixture, ginger, garlic, and broccoli. Bring to a boil, then reduce heat. Simmer 5 to 10 minutes, or until sauce thickens.Excellent served over rice."
+      "Heat the oil in a 10-inch skillet over medium heat.",
+      "Add the chicken and cook for 10 minutes or until well browned on both sides.",
+      "Remove the chicken from the skillet.",
+      "Add the shallot and thyme to the skillet and cook and stir for 30 seconds.  Stir in the wine and cook for 2 minutes or until the mixture is reduced by half.  Stir in the concentrated broth.  Return the chicken to the skillet.  Cook for 5 minutes or until the chicken is cooked through."
     ]
   },
   "dinner": {
-    "name": "How To Make Fried Chicken Without Frying",
-    "image": "https://img.spoonacular.com/recipes/647577-556x370.jpg",
+    "name": "Chiquetaille: Cod Fish Salad",
+    "image": "https://img.spoonacular.com/recipes/638772-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "4 chicken thighs",
-      "2 Tbsp of extra virgin olive oil",
-      "rosemary",
-      "sage",
-      "tarragon",
-      "salt",
-      "pepper",
-      "6 Tbsp of bread crumbs",
-      "2 Tbsp of honey",
-      "2 Tbsp of vinegar"
+      "1 pound of salted cod",
+      "1 large onion, finely chopped",
+      "2 large shallots, finely chopped",
+      "5 large cloves of garlic, finely chopped",
+      "2 carrots, very thinly sliced",
+      "1 1/2 cups of young green beans, cut in half, vertically",
+      "1/2 green bell pepper, thinly sliced",
+      "1/2 yellow or red bell pepper, thinly sliced",
+      "1 green jalapeno with seeds or 2 scotch bonnets, thinly sl",
+      "1/2 cup vinegar",
+      "1 cup olive oil",
+      "4 whole cloves",
+      "Salt and pepper"
     ],
     "steps": [
-      "Preheat the oven to 200C/400F.",
-      "Wash and dry the chicken thighs.",
-      "Mince the herbs.",
-      "In a bowl put the extra virgin olive oil, the minced herbs, salt and pepper.",
-      "Put the chicken inside the bowl and gently massage the chicken with the oil and herbs mixture.",
-      "Pass each thigh on the breadcrumbs and put on an oven tray covered with parchment paper.",
-      "Cook until well done, from 50 minutes to one hour, depending on your oven and the weight of the chicken pieces.",
-      "At half cooking time, turn each piece to the other side.",
-      "Prepare a sauce mixing the honey and vinegar.",
-      "Five minutes before taking the chicken out of the oven, brush each piece with the sauce."
+      "Soak the cod in cold water in the refrigerator for 24 hours, changing the water 3 times.  In a large pot, bring to boil enough water to cover the fish and boil for about 20 minutes.",
+      "Drain in a vegetable strainer and when cool, remove skin, bones and any unsightly fish parts.   Shred by hand.",
+      "Mix the shredded fish with the vegetables, olive oil, cloves, salt, pepper and vinegar.   Refrigerate for at least 4 days.",
+      "Serve spread on baguette slices for cocktails or as a salad with lettuce, tomatoes and hard boiled eggs."
     ]
   }
 }
