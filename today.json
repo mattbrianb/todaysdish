@@ -1,73 +1,90 @@
 {
-  "date": "2026-09-03",
+  "date": "2026-09-04",
   "breakfast": {
-    "name": "Spinach & Ham Quiche",
-    "image": "https://img.spoonacular.com/recipes/661249-556x370.jpg",
+    "name": "Gluten Free Blueberry Muffins",
+    "image": "https://img.spoonacular.com/recipes/644800-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "100 grams Cold butter",
-      "50 grams Cheddar cheese- grated",
-      "2 Large eggs",
-      "125 grams Chicken or Picnic Ham (shredded)",
-      "5 tablespoons Ice water",
-      "80 milliliters milk",
-      "dash of white pepper",
-      "200 grams Plain flour",
-      "1/8 teaspoon salt",
-      "1/2 tablespoon Shallots (sliced)",
-      "125 grams Spinach (wash& drain well, shredded)",
-      "80 milliliters Whipping cream"
+      "2 teaspoons baking powder",
+      "1 1/2 cups Driscoll's Blueberries",
+      "2 large eggs",
+      "2 cups gluten-free all-purpose flour",
+      "2 teaspoons grated lemon zest",
+      "1/2 teaspoon salt",
+      "3/4 cup sugar",
+      "1/2 cup (1 stick) unsalted butter, melted and cooled",
+      "1 teaspoon vanilla extract",
+      "1/2 cup whole milk",
+      "1 teaspoon xanthan gum"
     ],
     "steps": [
-      "With little oil, fry shallot till fragrant and golden brown.",
-      "Add ham fry for a while and add spinach and fry till spinach cooked, dish up and set aside.Measure whipping cream and milk together in measuring cup (you can omit whipping cream and use all 160ml milk) add eggs, lightly beaten and pinch of salt, mix well.",
-      "Spread ham spinach and cheddar cheese evenly over the bottom of the prepared tart pan, add a dash of pepper then gently pour egg mixture over it.",
-      "Bake at preheated 180C for 40 mins and serve hot or warm."
+      "Preheat oven to 375F. Lightly butter or grease a 12-cup muffin pan or line with paper liners.Stir together flour, sugar, baking powder, xanthan gum and salt in a medium bowl until blended.",
+      "Whisk together butter, milk, eggs, lemon zest and vanilla in a large bowl until combined. Stir in flour mixture until partially moistened. Fold in blueberries until evenly mixed. Batter will be thick, do not over stir.Divide batter evenly between muffin cups, filling each about three-fourths full.",
+      "Bake 10 minutes. Rotate pan and continue to bake about 10 minutes longer or until muffins are golden brown and toothpick inserted in center comes out clean. Cool in pan 3 minutes.",
+      "Serve warm or remove to wire rack to cool completely."
     ]
   },
   "lunch": {
-    "name": "Easy Chicken with White Wine Sauce",
-    "image": "https://img.spoonacular.com/recipes/641912-556x370.jpg",
+    "name": "Chicken Farfalle with Low-Fat Alfredo Sauce",
+    "image": "https://img.spoonacular.com/recipes/638088-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 packets Swanson\u00ae Flavor Concentrated Chicken Broth",
-      "1 cup dry white wine",
-      "1 tablespoon chopped fresh thyme leaves",
-      "1 tablespoon olive oil",
-      "1 shallot, minced",
-      "1 1/4 pounds skinless, boneless chicken breast halves"
+      "Black pepper to taste",
+      "\u2013 1 1/2 Tbs. butter",
+      "1 pound Boneless Chicken Breasts",
+      "\u2013 1 lb. farfalle pasta",
+      "Flour",
+      "1 tablespoon garlic powder",
+      "\u2013 1 lemon, juiced",
+      "2 teaspoons Parmesan Cheese",
+      "Salt to taste",
+      "\u2013 1 1/2 cups, skim milk",
+      "\u2013 1/3 cup white wine"
     ],
     "steps": [
-      "Heat the oil in a 10-inch skillet over medium heat.",
-      "Add the chicken and cook for 10 minutes or until well browned on both sides.",
-      "Remove the chicken from the skillet.",
-      "Add the shallot and thyme to the skillet and cook and stir for 30 seconds.  Stir in the wine and cook for 2 minutes or until the mixture is reduced by half.  Stir in the concentrated broth.  Return the chicken to the skillet.  Cook for 5 minutes or until the chicken is cooked through."
+      "Cook chicken breasts (I sauteed mine with a little olive oil and salt and pepper) and set aside. Cook pasta while cooking the chicken and set aside.",
+      "In a sauce pan, melt butter.",
+      "Add flour and stir in with butter, cook for 1 minute.",
+      "Whisk in milk, salt and pepper, garlic powder, lemon juice, and wine. Bring to a boil, constantly whisking. Reduce the heat and simmer for about 5 more minutes. Sauce should thicken.",
+      "In a large saute pan, add pasta, chicken, and any other desired additions.",
+      "Heat pan on medium heat.",
+      "Add alfredo sauce and toss with pasta.",
+      "Sprinkle with Parmesan cheese and additional salt and pepper (if needed) and serve!Notes: This recipe made more sauce than I really needed, but I liked having extra. This way, you can add as much sauce as you prefer!"
     ]
   },
   "dinner": {
-    "name": "Chiquetaille: Cod Fish Salad",
-    "image": "https://img.spoonacular.com/recipes/638772-556x370.jpg",
+    "name": "Cajun Seafood and Andouille Sausage Gumbo",
+    "image": "https://img.spoonacular.com/recipes/636736-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 pound of salted cod",
-      "1 large onion, finely chopped",
-      "2 large shallots, finely chopped",
-      "5 large cloves of garlic, finely chopped",
-      "2 carrots, very thinly sliced",
-      "1 1/2 cups of young green beans, cut in half, vertically",
-      "1/2 green bell pepper, thinly sliced",
-      "1/2 yellow or red bell pepper, thinly sliced",
-      "1 green jalapeno with seeds or 2 scotch bonnets, thinly sl",
-      "1/2 cup vinegar",
-      "1 cup olive oil",
-      "4 whole cloves",
-      "Salt and pepper"
+      "9 oz andouille sausage, cut into \u00bd inch rounds",
+      "2 bay leaves, left whole",
+      "\u00bd t white pepper",
+      "1 Tablespoon Black Pepper",
+      "1 Tablespoon Cayenne Pepper",
+      "3 stalks celery, cut into 1 inch pieces",
+      "3 C fish stock or clam juice",
+      "2 C white rice, cooked, washed and drained",
+      "\u00bd # canned or fresh crab meat",
+      "1 Tablespoon Dried Thyme",
+      "3 large cloves of garlic, chopped",
+      "1 jalapeno pepper, seeded",
+      "1 red or orange Bell pepper, chopped coarse",
+      "1 Tablespoon Dried Oregano",
+      "1 10 oz jar of oysters or 8-10 oysters with their juices",
+      "\u00bd C peanut oil",
+      "1 pound shrimp",
+      "\u00bd C white flour"
     ],
     "steps": [
-      "Soak the cod in cold water in the refrigerator for 24 hours, changing the water 3 times.  In a large pot, bring to boil enough water to cover the fish and boil for about 20 minutes.",
-      "Drain in a vegetable strainer and when cool, remove skin, bones and any unsightly fish parts.   Shred by hand.",
-      "Mix the shredded fish with the vegetables, olive oil, cloves, salt, pepper and vinegar.   Refrigerate for at least 4 days.",
-      "Serve spread on baguette slices for cocktails or as a salad with lettuce, tomatoes and hard boiled eggs."
+      "In a small bowl, combine the seasoning ingredients and set aside.",
+      "In a medium bowl, combine the onions, peppers and celeryand set aside.",
+      "In a lightly oiled 5  quart Dutch oven, brown the sausage rounds over medium high heat and set aside.",
+      "Add the  C oil and when it starts to smoke, slowly combine the flour and cook while whisking until the roux reaches a dark reddish brown color.",
+      "Immediately add half of the vegetables and stir in for 1 minute. Then add the remaining vegetables, mix thoroughly and cook for 2 more minutes.",
+      "Add the seasoning mix, stir in well and cook 2 more minutes or so. Then add the garlic, stir in and cook for another minute.",
+      "Add the fish stock or clam juice and, mix well, bring to a boil and reduce to a simmer; then simmer this for about 30 minutes covered.",
+      "Add the reserved browned sausage rounds, the crab, shrimps and oysters with their liquid and cook over medium heat for about 10 minutes stirring occasionally."
     ]
   }
 }
