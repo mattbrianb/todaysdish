@@ -1,93 +1,64 @@
 {
-  "date": "2026-09-05",
+  "date": "2026-09-06",
   "breakfast": {
-    "name": "White Chocolate Macadamia Banana Bread",
-    "image": "https://img.spoonacular.com/recipes/665182-556x370.jpg",
-    "cookTime": 45,
+    "name": "Sun Dried Tomato and Herb Baked Eggs",
+    "image": "https://img.spoonacular.com/recipes/662276-556x370.jpg",
+    "cookTime": 25,
     "ingredients": [
-      "1 cup granulated sugar",
-      "1/4 cup butter, softened",
-      "1 2/3 cups mashed ripe banana (about 3 bananas)",
-      "1/4 cup 2% milk",
-      "4 ounces low fat cream cheese",
-      "2 large eggs",
-      "2 cups all purpose flour",
-      "1 teaspoon baking soda",
-      "1/2 teaspoon kosher salt",
-      "3/4 cup chopped salted macadamia nuts",
-      "3/4 cup white chocolate chips"
+      "2 eggs",
+      "\u00bd Tsp. fresh basil",
+      "\u00bd Tsp. fresh parsley",
+      "1 Tsp. olive oil",
+      "1 Tbsp. sundried tomatoes"
     ],
     "steps": [
-      "Preheat oven to 350 degrees.",
-      "In the bowl of an electric mixer, combine the sugar and butter beating at medium speed until fluffy. On low-speed, add the banana, milk, cream cheese and eggs mixing until combined.",
-      "In a small bowl, whisk together the flour, baking soda and salt. Keeping the mixer on low-speed and slowly add the dry ingredients to the wet ingredients. Beat just until blended.",
-      "Add the nuts and chocolate chips and stir briefly.",
-      "Pour the batter into a 95 inch metal loaf pan coated with cooking spray and bake at 350 degrees for 1 hour or until a toothpick inserted into the center comes out clean. Cool in pan for 10 minutes on a wire rack.",
-      "Remove from pan and cool on rack."
+      "Preheat oven to 350 F.Cover the inside of one ramekin or oven safe dish with olive oil.Line the bottom of the dish with sundried tomatoes and break two eggs on top.",
+      "Sprinkle with fresh herbs.",
+      "Bake uncovered for 15-20 minutes until egg whites are firm.",
+      "Serve immediately."
     ]
   },
   "lunch": {
-    "name": "Spinach and Gorgonzola Stuffed Flank Steak",
-    "image": "https://img.spoonacular.com/recipes/661259-556x370.jpg",
+    "name": "Pierogi Casserole",
+    "image": "https://img.spoonacular.com/recipes/715563-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 1 \u00bd to 2 pounds flank steak trimmed",
-      "3 tablespoon olive oil",
-      "1 shallot finely chopped",
-      "\u00bd pound spinach, washed, stemmed and chopped",
-      "\u00be cup fresh bread crumbs",
-      "\u00bc pound Gorgonzola or other blue cheese, crumbled",
-      "Salt and pepper"
+      "4 tbsp. butter + more for mixing",
+      "\u00bd cup milk+ more for mixing",
+      "2 large onions, sliced",
+      "salt and pepper to taste",
+      "1\u00bd cups sharp cheddar cheese, shredded",
+      "1 lb. white potatoes, peeled, cubed and then boiled until tender",
+      "1 lb. extra wide egg noodles"
     ],
     "steps": [
-      "Preheat oven to 37",
-      "Butterfly the steak by using a long sharp knife holding it parallel to the work surface, cut through the long side of the steak, stopping about  inch from the opposite side. If the steak is already thin, just pound it with a mallet to  inch thick.",
-      "In a large skillet over medium heat add 1 tablespoon olive oil and saut` the shallots until soft, 2 minutes.",
-      "Add the spinach and cook until just wilted, about 2 to 3 minutes.",
-      "Transfer to a colander.",
-      "When cool enough to handle, squeeze out all the moisture from the spinach and transfer to a medium bowl. Stir in the bread crumbs and cheese. Season with salt and pepper.",
-      "Place the steak on a sheet of plastic wrap. Smear the spinach mixture evenly over the steak, leaving about 1 inch border along the side edge. Beginning with the side near you and using the plastic wrap as an aid, rollup the steak, gently pressing on the filling.",
-      "Tie the rolled steak with twine at 2-3 inch interval.",
-      "Season the outside with salt and pepper.",
-      "Heat the remaining 2 tablespoons olive oil in a large ovenproof skillet over medium high heat. Sear the roast on all sided, about 2 minutes per side.",
-      "Place in the oven and roast for 20 to 25 minutes.",
-      "Transfer to a cutting board, tend with aluminum foil and allow resting for 10 minutes.",
-      "To serve, remove the twine from the roast and cut into  inch to 1 inch thick slices."
+      "Preheat oven to 375 degrees. Spray a large 2 large casserole dish with cooking spray.Three separate items need cooked. You can cook them all at once to avoid having one sit aside for too long.(Prepare your potatoes and set aside) Meanwhile, boil your noodles but reduce cooking time by 4 minutes to avoid overcooking.",
+      "Drain and set aside. Prepare your onions by cooking in the 4 tbsp. of butter over medium heat until tender.",
+      "Add milk, 1 cup of cheese, salt and pepper, and onion mixture to your potatoes. Mash using a large wooden spoon or a hand held potato masher. Mash until soft, but some chunks remain. You don't want a completely smooth texture.",
+      "Add in your noodles and toss to coat. Taste for seasoning and add more if necessary. If mixture seems dry, add more milk and butter until the entire mixture is lightly coated.",
+      "Place in casserole dish.",
+      "Sprinkle with the remaining \u00bd cup of cheese.",
+      "Bake in your preheated oven for 25 minutes or until cheese starts to bubble.",
+      "Serve immediately and enjoy!"
     ]
   },
   "dinner": {
-    "name": "Bridget Jones's Shepherd's Pie",
-    "image": "https://img.spoonacular.com/recipes/636096-556x370.jpg",
-    "cookTime": 45,
+    "name": "Coconut and Whole Wheat Chicken Tenders",
+    "image": "https://img.spoonacular.com/recipes/639722-556x370.jpg",
+    "cookTime": 30,
     "ingredients": [
-      "2 onions, finely chopped",
-      "2 tablespoons olive oil",
-      "600 grams minced lamb",
-      "2 tablespoons plain flour",
-      "thyme",
-      "rosemary",
-      "1 small tin chopped tomatoes",
-      "100 milliliters chicken, beef or lamb stock",
-      "salt and freshly ground black pepper",
-      "700 grams potatoes",
-      "55 milliliters milk",
-      "75 grams butter",
-      "1 free-range egg yolk"
+      "1 1 pound package of chicken tenders",
+      "2 egg whites",
+      "1/2 cup of unsweetened coconut",
+      "1/2 cup of whole wheat bread crumbs"
     ],
     "steps": [
-      "Preheat the oven to 180 C.",
-      "In a large frying pan, heat a little olive oil and fry the chopped onion and garlic.",
-      "Add the mince, stirring, until browned all over.",
-      "While the meat is frying, break up any lumps with the back of the spoon.",
-      "Add the flour (this helps to thicken the juices) and stir.",
-      "Mix well and add the thyme and the rosemary and stir.",
-      "Add the chopped tomatoes and pour the stock mixture.",
-      "Add a pinch of salt and freshly ground black pepper and let it simmer for about 5 minutes.",
-      "For the mash, boil the potatoes, then drain them in a sieve and place into a clean bowl.",
-      "Add the milk, butter and egg yolk, and mash together.",
-      "Season with salt and freshly ground black pepper.",
-      "Pour the meat into an ovenproof dish and spread the mash on top, smooth over and mark with a spatula.",
-      "Put the dish into the oven and cook until the surface is bubbling and golden-brown."
+      "Pre",
+      "Heat the oven to 350 degrees",
+      "Dip chicken tenders in egg whites",
+      "Mix together the whole wheat crumbs and unsweetened coconut",
+      "Roll eggy chicken in the breadcrumbs/coconut mixture",
+      "Place on a cookie sheet in bake for 20 minutes"
     ]
   }
 }
