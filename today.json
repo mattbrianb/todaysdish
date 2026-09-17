@@ -1,73 +1,85 @@
 {
-  "date": "2026-09-16",
+  "date": "2026-09-17",
   "breakfast": {
-    "name": "Classic Eggs Benedict",
-    "image": "https://img.spoonacular.com/recipes/639594-556x370.jpg",
+    "name": "Blueberry Banana Pancakes",
+    "image": "https://img.spoonacular.com/recipes/635418-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 package Knorr Hollandaise Sauce, prepared according to package directions (or see notes in About section for a homemade version)",
-      "4 Slices Canadian Bacon or ham",
-      "2 English Muffins",
-      "1/2 teaspoon white vinegar (optional)",
-      "4 Eggs"
+      "1/2 teaspoon baking soda",
+      "\u00bd cups Banana, Mashed, Divided",
+      "Fresh blueberries",
+      "\u00bd cups Egg Whites",
+      "\u00bd cups Greek Yogurt, Plain",
+      "1 teaspoon salt",
+      "3/4 cup sugar",
+      "1 teaspoon vanilla extract",
+      "\u00bd cups Whole Wheat Pastry Flour"
     ],
     "steps": [
-      "Prepare Knorr Hollandaise Sauce according to package instructions.",
-      "Brown Canadian Bacon in a frying pan and toast English muffins. While bacon is cooking, poach the eggs.",
-      "Fill a medium sized sauce pan half way with water.",
-      "Add 1/2 teaspoon of white vinegar (this is optional but the vinegar helps hold the egg together). Bring to a gentle boil and carefully add eggs (1-2 at a time works best). Poach eggs for 2-3 minutes or until yolk has set to your preference.",
-      "Remove eggs one at a time with a slotted spoon.",
-      "Layer ingredients as follows: English muffin, Canadian Bacon, Eggs, Hollandaise Sauce."
+      "Mix greek yogurt, 1/4 cup banana, egg whites & vanilla extract into a small bowl",
+      "In a separate bowl combine flour, baking soda, sugar, & salt",
+      "Combine and whisk till evenly mixed",
+      "Fold in 1/2 cup blueberries",
+      "Place 1/4-cup batter onto non-stick skillet and cook till bubbles start appearing through the top of the pancake and then flip. NOTE: Cook on medium heat and I flattened out my batter with the spatula to cook more evenly.About 1-2 minutes on each side",
+      "For the blueberry sauce:In a sauce pan, add remaining banana and blueberries and stir until thick, mashing blueberries, about 5-7 minutes.",
+      "Pour over top of pancakes.Note: I used frozen blueberries for sauce and fresh for pancakes.Makes  8 pancakes total  serving size 2Calorie per serving (4 pancakes total)  231, Fat: .08, Cholesterol: 0, Sodium: 391, Potassium: 304, Carbs: 42, Fiber: 6.6, Sugar: 12, Protein: 14.3"
     ]
   },
   "lunch": {
-    "name": "Farfalle with Shrimps, Tomatoes Basil Sauce",
-    "image": "https://img.spoonacular.com/recipes/642594-556x370.jpg",
+    "name": "Falafel Burgers",
+    "image": "https://img.spoonacular.com/recipes/642540-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 tablespoons butter",
-      "1 pound of Farfalle pasta by Barilla",
-      "24 medium fresh basil leaves",
-      "Salt and fresh ground black pepper",
-      "1 pound fresh medium size shrimps, cleaned and deveined",
-      "1/4 cup tomatoes"
+      "2 cans garbanzo beans (chickpeas), drained and rinsed",
+      "1 tablespoon chili powder",
+      "1 tablespoon coriander",
+      "1 tablespoon cumin",
+      "4 tablespoons flour",
+      "1 large handful parsley, chopped",
+      "2 cloves garlic, grated or finely chopped",
+      "2 Zest and juice of lemons",
+      "4 pita pockets",
+      "1 small red onion, chopped",
+      "Salt and pepper, to taste",
+      "1/2 cup tahini",
+      "1 1/2 teaspoons turmeric",
+      "1/4 cup vegetable oil",
+      "3 tablespoons water"
     ],
     "steps": [
-      "Bring a large pot of salted water to a boil and cook the pasta to al dente.Meanwhile in a large frying pan, melt the butter and add the tomatoes. Saut over medium high heat for about 1 minute.",
-      "Add the cleaned shrimps and cook until light pink.",
-      "Add salt and pepper to taste.",
-      "Add the basil and stir lightly.When the pasta is ready add it to the large skillet with the tomatoes and shrimps.",
-      "Add the butter and mix well.",
-      "Serve immediately nice and hot."
+      "Combine the chickpeas, onion, garlic, parsley, flour, spices, and salt, and pulse until the mixture is well combined. Form the mixture into 4 large patties."
     ]
   },
   "dinner": {
-    "name": "Linguine and Clams In Garlic White Wine Sauce",
-    "image": "https://img.spoonacular.com/recipes/650122-556x370.jpg",
+    "name": "Saffron Chicken Tikka",
+    "image": "https://img.spoonacular.com/recipes/658967-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "10 cloves garlic, smashed",
-      "5 dozens little neck clams, scrubbed under cold running water",
-      "2 cups white wine",
-      "2 pinchs large of crushed red pepper flakes",
-      "1 pound linguine",
-      "2 tablespoons unsalted butter",
-      "2 tablespoons chopped Italian parsley, plus additional for garnish",
-      "2 tablespoons chopped fresh oregano leaves, plus additional for garnish",
-      "1 cup finely grated Parmigiano-Reggiano, optioinal",
-      "Kosher salt (I did not need any)"
+      "350 grams Chicken Breasts (cubed approx. in 1 inch pieces)",
+      "\u00bd inch cinnamon stick",
+      "1 black cardamom seeds (I used only half the amount of its seeds)",
+      "2 green cardamom seeds",
+      "5 cloves",
+      "2-3 green chillies",
+      "\u00bd tsp garlic paste",
+      "\u00bd tsp ginger paste",
+      "8-10 white pepper corns",
+      "A pinch of saffron",
+      "2 tsp milk",
+      "Salt to taste",
+      "9-10 skewers",
+      "9-10 skewers"
     ],
     "steps": [
-      "Coat a large saute pan (I used a 6 quart stock pot, as she does on the show) with olive oil and add 5 garlic cloves and a pinch of red pepper flakes. Bring pan to medium high heat and cook until garlic becomes golden brown. (Meg note: I happen to love garlic and flipped the smashed garlic over to brown on the other side, wanting to get as much garlic flavor as I could.) When garlic is golden brown and very aromatic, remove it and discard (it has fulfilled its garlic destiny). Put 3 1/2 dozen clams in the pan and add the wine. Cover the pan a bring to a boil over medium heat. Cover and cook until the clams open up, about 10 minutes. Using a slotted spoon, remove the clams from the pan and set aside.",
-      "Pour the cooking liquid into a measuring cup and set aside.",
-      "Bring a large pot of water to a boil over medium heat. (Meg note: I usually salt my pasta water, but the cooking liquid was on the salty side so I skipped, figuring it is easier to add the salt in later than take it out.)",
-      "Mince remaining smashed garlic cloves. Coat same saute pan again with olive oil and add garlic and another pinch of red pepper flakes. Bring pan to medium-high heat and cook garlic for a minute or two (dont let it get brown).",
-      "Add the remaining raw clams and reserved clam cooking liquid to the pan. When adding the liquid, be sure to check for sand and grit in the bottom, you may lose the last couple of tablespoons of juice but that is better than sand in your pasta! (Meg note: even though I followed the directions, next time I might strain the juice through a paper towel lined sieve to make sure all of the sand and grit is out, before adding it back into the pan.) Cover and cook until the clams open.",
-      "While clams are cooking, drop the linguine into the salted boiling water and cook until the pasta is very al dente  maybe a minute or so less than the box directs.",
-      "Remove the cooked clams in their shells from the pan and keep warm.",
-      "Add the butter and cooked clams that have been removed from their shells back to the pan. Bring the liquid to a boil and toss in the cooked pasta and the herbs. Cook the pasta together with the sauce until the sauce clings to the pasta. Turn off the heat and toss in the grated parmigian-reggiano, if using. Stir vigorously to combine.",
-      "Divide the pasta into serving dishes and garnish with clams that are still in their shells and some chopped herbs.",
-      "Note: Purchase shellfish thats sold in mesh bags. If you buy clams or mussels that are in plastic bags, you may be getting dead shellfish. The plastic makes them suffocate."
+      "Soak saffron in warm milk for 15 to 20 minutes.",
+      "In the meantime, dry roast the cinnamon stick, black cardamom seeds, green cardamom seeds, pepper corns and cloves. Pound them to a powder (not very fine).",
+      "In a mortar and pestle grind the green chillies to a paste. (Using a pinch of coarse salt will help)",
+      "Mix all the ingredients together and your marinade is ready.",
+      "Ensure that you pat dry the chicken cubes.",
+      "Transfer the chicken in a bowl",
+      "Add the marinade to the chicken cubes and mix it well so that all pieces are well coated.",
+      "Cover the bowl with a cling film and put it in the refrigerator.",
+      "Leave the chicken to marinate over-night. (I marinated for almost 18 hours and the result was moist and tender chicken tikkas)"
     ]
   }
 }
