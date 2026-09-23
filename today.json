@@ -1,68 +1,69 @@
 {
-  "date": "2026-09-22",
+  "date": "2026-09-23",
   "breakfast": {
-    "name": "Jumbo Blueberry Muffins",
-    "image": "https://img.spoonacular.com/recipes/648647-556x370.jpg",
+    "name": "Butternut Squash Frittata",
+    "image": "https://img.spoonacular.com/recipes/636589-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "4 t. baking powder",
-      "1 1/2 c. fresh blueberries",
-      "1 1/2 cups butter melted",
-      "1 c. buttermilk",
-      "2 Eggs",
-      "1 cup Sifted flour",
-      "1 c. (7 oz.) granulated sugar",
-      "1 1/2 t. fresh grated lemon zest",
-      "1/2 teaspoon Salt",
-      "1 1/2 t. vanilla extract",
-      "4 T. vegetable oil"
+      "1 large butternut squash, peeled, seeded, thinly sliced (with a mandoline)",
+      "1/2 oz goat cheese",
+      "1/2 cup liquid egg substitute",
+      "2 tbsp. non-fat milk",
+      "Pepper to taste"
     ],
     "steps": [
-      "Preheat oven to 425 degrees f. Spray a 6-cup large-sized muffin tin lightly with cooking spray, set aside.In a small bowl combine the lemon zest and 1/3 c. sugar, using a fork, mix thoroughly.In a large bowl combine flour, baking powder and salt. In a medium bowl, combine 1 c. sugar and eggs, whisking vigorously for about 45 seconds, until the mixture is thick and homogeneous. Slowly add in melted butter and oil. Then whisk in buttermilk and vanilla.",
-      "Add the liquid ingredients and the blueberries to the dry ingredients, folding until just mixed, taking care to not over mix. Scoop batter into the muffin tins and sprinkle the tops with the lemon-sugar.",
-      "Bake the muffins at 425 degrees f. for 5 minutes then reduce the heat to 375 degrees f. and continue baking for about 25 minutes (rotating the pan halfway through the bake time to ensure even baking), until a toothpick inserted near the center of the muffins comes out clean with only a few crumbs attached.",
-      "Let the muffins cool for about 5 minutes in the pan before removing them to a wire rack to cool."
+      "Preheat oven to 350Spray a 10 oz oven safe dish with cooking spray",
+      "Add your butternut squash",
+      "In a measuring cup add your eggs and milk.",
+      "Mix until combined.",
+      "Pour over butternut squash.",
+      "Sprinkle with pepper and top with cheese.",
+      "Bake in oven for 30-35 minutes, until middle is slightly firm",
+      "Let it cool for a few minutes"
     ]
   },
   "lunch": {
-    "name": "How to Make the Cheesiest Bowtie Mac and Cheese",
-    "image": "https://img.spoonacular.com/recipes/715595-556x370.jpg",
-    "cookTime": 35,
+    "name": "Creamy Mushroom Soup ~ with a \u201cKick\u201d",
+    "image": "https://img.spoonacular.com/recipes/640663-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "1 package of Bowtie pasta cook as directed",
-      "1 cup Extra Sharp Cheddar cheese",
-      "1 cup Extra Sharp White Cheddar cheese",
-      "1 tsp salt and pepper",
-      "1/4 cup sour cream",
-      "1/4 cup unsalted butter room temperature",
-      "Fresh Parsley for garnish"
+      "1/4 pound bacon \u2013 cut into pieces",
+      "1 quart of button mushrooms \u2013 sliced",
+      "Cilantro \u2013 chopped- for garnish",
+      "1 large clove of garlic, minced",
+      "1/2 Juice of lime",
+      "1 long hot pepper \u2013 chopped with seeds",
+      "3 cups of milk",
+      "Olive oil for drizzling",
+      "1 cup of potato buds",
+      "Shredded cheddar cheese \u2013 for garnish",
+      "1/2 sweet onion \u2013 chopped",
+      "1 cup tablespoon of Vegeta bouillon \u2013 (or your favorite bouillon) plus 6 of water"
     ],
     "steps": [
-      "Heat your oven to 350 degrees Fahrenheit, and then cook your pasta as directed.",
-      "Drain.",
-      "Shred the cheese.",
-      "Add cooked noodles, cheese, sour cream, salt and pepper, and butter to a medium mixing bowl and stir until combined.",
-      "Add to a 9 x 13 prepared casserole dish, top with extra cheese if desired, and bake for 20 minutes.",
-      "Remove from oven and serve hot."
+      "Heat a large saucepot with a drizzle of olive oil.",
+      "Place the garlic, long hot pepper, onion and mushrooms in the pot to saut until the onion is clear.Prepare the bacon on a heated griddle and let the bacon get nice and crispy. When the bacon is done set it aside.",
+      "Add the tablespoon of bouillon and the cups of water to the pot and simmer.",
+      "Add the cup of potato buds, stir and continue to simmer on low.",
+      "Add the cups of milk and simmer on low for a few more minutes.When the soup is ready to be served add the lime juice and stir. Top the soup with the bacon bits, cilantro and cheddar cheese."
     ]
   },
   "dinner": {
-    "name": "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs",
-    "image": "https://img.spoonacular.com/recipes/716429-556x370.jpg",
+    "name": "Lemon, Garlic and Thyme Roast Chicken \u2013 Quick and Easy Method",
+    "image": "https://img.spoonacular.com/recipes/649827-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 tbsp butter",
-      "about 2 cups frozen cauliflower florets, thawed, cut into bite-sized pieces",
-      "2 tbsp grated cheese (I used romano)",
-      "1-2 tbsp extra virgin olive oil",
-      "5-6 cloves garlic",
-      "6-8 ounces pasta (I used linguine)",
-      "couple of pinches red pepper flakes, optional",
-      "salt and pepper, to taste",
-      "3 scallions, chopped, white and green parts separated",
-      "2-3 tbsp white wine",
-      "1/4 cup whole wheat bread crumbs (I used panko)"
+      "knob of butter",
+      "1 lemon (juiced and zested)",
+      "olive oil",
+      "6 roasted garlic pieces",
+      "salt and pepper",
+      "1 bunch of thyme",
+      "1 kilogram whole chicken"
     ],
-    "steps": []
+    "steps": [
+      "Heat your oven to 220 C (only for 10 minutes, before turning it down to 180 C)Take lemon zest,roasted garlic, butter and 1/2 the bunch of thyme and fill the underside of the chicken skin. This way all your flavours are seeping into your meat.Pat chicken dry with paper towel, rub the chicken all over with a 2tsp of salt, pepper and olive oil. Not only are you further flavouring the chicken, but the chicken skin will be crispier when roasted.Put chicken on to a roasting pan, pour lemon juice around it. Put lemon skins and remaining thyme underneath the chicken.Roast for 10 minutes on 220C, then lower the heat to 180 C and cook for a further 25- 35 mins depending on how large the chicken is.You can check if your chicken is ready by inserting a skewer/ fork into the thickest part ( thigh). If the juices run clear, your chicken is ready. If its still is pink, leave it in for a couple more minutes.Take chicken out, keep warm and rest the chicken while you make the sauce.Sauce on the side: Deglaze the roasting pan with a little white wine and chicken stock, bring to a simmer.",
+      "Add a cornflour mixture (water and cornflour) till you are happy with the consistency of the sauce. Season to tasteYUM, its all the lemony, buttery, garlicky thyme goodness"
+    ]
   }
 }
