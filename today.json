@@ -1,69 +1,82 @@
 {
-  "date": "2026-09-23",
+  "date": "2026-09-24",
   "breakfast": {
-    "name": "Butternut Squash Frittata",
-    "image": "https://img.spoonacular.com/recipes/636589-556x370.jpg",
+    "name": "Sweet Potatoes Muffins",
+    "image": "https://img.spoonacular.com/recipes/662610-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 large butternut squash, peeled, seeded, thinly sliced (with a mandoline)",
-      "1/2 oz goat cheese",
-      "1/2 cup liquid egg substitute",
-      "2 tbsp. non-fat milk",
-      "Pepper to taste"
+      "- 2 tsp Baking Powder",
+      "1 cup chocolate chips",
+      "\u00bd teaspoon cinnamon",
+      "1 egg",
+      "1 cup Flour",
+      "1/3 cup oil",
+      "\u00bd cup orange juice",
+      "1 teaspoon salt",
+      "- 1/4 c. Sugar",
+      "Sanding sugar for decoration",
+      "16 ounces \u2013 2 medium sweet potatoes or yams- cooked in the oven until soft"
     ],
     "steps": [
-      "Preheat oven to 350Spray a 10 oz oven safe dish with cooking spray",
-      "Add your butternut squash",
-      "In a measuring cup add your eggs and milk.",
-      "Mix until combined.",
-      "Pour over butternut squash.",
-      "Sprinkle with pepper and top with cheese.",
-      "Bake in oven for 30-35 minutes, until middle is slightly firm",
-      "Let it cool for a few minutes"
+      "Cook in the oven the sweet potatoes until soft.",
+      "Remove from the oven and peel them.",
+      "Place the meat into a dish, smash to reduce to a no chunk pulp and let it cool.Keep the oven at 40",
+      "Mix all the flour, baking powder, salt, sugar, cinnamon and chocolate chips if using.",
+      "Add to the dry ingredients the orange juice, sweet potatoes, egg and oil and mix well.",
+      "Place muffins cups in muffins pan and pour muffins mix up to cup high.",
+      "Sprinkle sanding sugar and bake in the oven for 15 to 20 minutes, or until the toothpick comes out clean.",
+      "Serve at room temperature."
     ]
   },
   "lunch": {
-    "name": "Creamy Mushroom Soup ~ with a \u201cKick\u201d",
-    "image": "https://img.spoonacular.com/recipes/640663-556x370.jpg",
+    "name": "Ginger Chicken Stir-Fry",
+    "image": "https://img.spoonacular.com/recipes/644571-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1/4 pound bacon \u2013 cut into pieces",
-      "1 quart of button mushrooms \u2013 sliced",
-      "Cilantro \u2013 chopped- for garnish",
-      "1 large clove of garlic, minced",
-      "1/2 Juice of lime",
-      "1 long hot pepper \u2013 chopped with seeds",
-      "3 cups of milk",
-      "Olive oil for drizzling",
-      "1 cup of potato buds",
-      "Shredded cheddar cheese \u2013 for garnish",
-      "1/2 sweet onion \u2013 chopped",
-      "1 cup tablespoon of Vegeta bouillon \u2013 (or your favorite bouillon) plus 6 of water"
+      "16 ounces Broccoli/cauliflower/carrots (frozen packaged mixture)*",
+      "1 pound Chicken breasts (skinned and boned) cut into 1-\u00bd inch pieces",
+      "cup White wine OR chicken broth",
+      "3 cups Hot cooked brown rice",
+      "1 tablespoon Cornstarch",
+      "2 teaspoon ground ginger",
+      "1 medium Onion, cut into 8 wedges",
+      "1/4 cup Teriyaki sauce",
+      "3/4 cup canola or vegetable oil",
+      "3 cups water"
     ],
     "steps": [
-      "Heat a large saucepot with a drizzle of olive oil.",
-      "Place the garlic, long hot pepper, onion and mushrooms in the pot to saut until the onion is clear.Prepare the bacon on a heated griddle and let the bacon get nice and crispy. When the bacon is done set it aside.",
-      "Add the tablespoon of bouillon and the cups of water to the pot and simmer.",
-      "Add the cup of potato buds, stir and continue to simmer on low.",
-      "Add the cups of milk and simmer on low for a few more minutes.When the soup is ready to be served add the lime juice and stir. Top the soup with the bacon bits, cilantro and cheddar cheese."
+      "In shallow baking dish, combine teriyaki sauce and water; add chicken pieces, coating well. Cover and refrigerate two hours.",
+      "Drain marinade from chicken pieces. In large skillet or wok, heat oil; stir-fry chicken and onion until chicken is slightly browned. Stir in vegetables, ginger, and wine. Cover; simmer 4 to 5 minutes, or until vegetables are tender crisp. In small bowl, combine cornstarch and water until smooth.Gradually add to skillet, stirring constantly, until thickened.",
+      "Serve over hot rice.*Or use 1 package (16 ounces) frozen vegetable mixture of your choice.NOTE: Optional ingredients are omitted from the nutritional calculations.When ingredient options appear in a recipe, the first ingredient choice is used for calculation."
     ]
   },
   "dinner": {
-    "name": "Lemon, Garlic and Thyme Roast Chicken \u2013 Quick and Easy Method",
-    "image": "https://img.spoonacular.com/recipes/649827-556x370.jpg",
+    "name": "Nachos Grande",
+    "image": "https://img.spoonacular.com/recipes/652919-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "knob of butter",
-      "1 lemon (juiced and zested)",
-      "olive oil",
-      "6 roasted garlic pieces",
-      "salt and pepper",
-      "1 bunch of thyme",
-      "1 kilogram whole chicken"
+      "400 grams can tomatoes",
+      "1 1/2 cups Grated Cheddar Cheese",
+      "1/2 teaspoon Chili Powder",
+      "2 tablespoons Corn Oil",
+      "3 Garlic Cloves, crushed",
+      "1/2 Green Pepper, chopped",
+      "1 Fresh Green Chili, chopped",
+      "1/4 teaspoon Ground Cumin",
+      "1 Onion, finely chopped",
+      "1 teaspoon paprika",
+      "Paprika to garnish",
+      "1 can Refried Beans (13 oz.)",
+      "2 cups Tortilla Chips",
+      "5 tablespoons Water"
     ],
     "steps": [
-      "Heat your oven to 220 C (only for 10 minutes, before turning it down to 180 C)Take lemon zest,roasted garlic, butter and 1/2 the bunch of thyme and fill the underside of the chicken skin. This way all your flavours are seeping into your meat.Pat chicken dry with paper towel, rub the chicken all over with a 2tsp of salt, pepper and olive oil. Not only are you further flavouring the chicken, but the chicken skin will be crispier when roasted.Put chicken on to a roasting pan, pour lemon juice around it. Put lemon skins and remaining thyme underneath the chicken.Roast for 10 minutes on 220C, then lower the heat to 180 C and cook for a further 25- 35 mins depending on how large the chicken is.You can check if your chicken is ready by inserting a skewer/ fork into the thickest part ( thigh). If the juices run clear, your chicken is ready. If its still is pink, leave it in for a couple more minutes.Take chicken out, keep warm and rest the chicken while you make the sauce.Sauce on the side: Deglaze the roasting pan with a little white wine and chicken stock, bring to a simmer.",
-      "Add a cornflour mixture (water and cornflour) till you are happy with the consistency of the sauce. Season to tasteYUM, its all the lemony, buttery, garlicky thyme goodness"
+      "Heat oil in a skillet, add the onion, green pepper, and garlic, and cook gently, stirring occasionally, for 5 minutes or until soft but not browned.",
+      "Add the tomatoes and chili and cook over medium heat for 5 minutes, or until most of the liquid has evaporated.Stir in the chili powder and paprika and cook for 3 minutes, then add the refried beans, breaking them up with a fork.",
+      "Add the measured water and cook, stirring occasionally, for 8-10 minutes, until the mixture thickens.Spoon the beans into the middle of a baking dish, arrange the tortilla chips around the edge and sprinkle with cumin.",
+      "Sprinkle the cheese over the beans and tortilla chips.",
+      "Bake at 400 degrees for 15-20 minutes, until the cheese has melted.",
+      "Sprinkle the paprika for garnish in a lattice pattern on top and serve immediately."
     ]
   }
 }
