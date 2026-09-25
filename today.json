@@ -1,82 +1,83 @@
 {
-  "date": "2026-09-24",
+  "date": "2026-09-25",
   "breakfast": {
-    "name": "Sweet Potatoes Muffins",
-    "image": "https://img.spoonacular.com/recipes/662610-556x370.jpg",
+    "name": "Nutella Stuffed French Toast",
+    "image": "https://img.spoonacular.com/recipes/653371-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "- 2 tsp Baking Powder",
-      "1 cup chocolate chips",
-      "\u00bd teaspoon cinnamon",
-      "1 egg",
-      "1 cup Flour",
-      "1/3 cup oil",
-      "\u00bd cup orange juice",
-      "1 teaspoon salt",
-      "- 1/4 c. Sugar",
-      "Sanding sugar for decoration",
-      "16 ounces \u2013 2 medium sweet potatoes or yams- cooked in the oven until soft"
+      "2 eggs",
+      "1/4 cup milk (I used 2%fat milk)",
+      "1 Tbsp sugar",
+      "1/2 tsp cinnamon powder",
+      "4 large slices of stale bread, thickness - 3/4 to 1 inch each",
+      "2 Tbsp nutella",
+      "Butter for cooking",
+      "Powdered sugar for sprinkling - 1Tbsp"
     ],
     "steps": [
-      "Cook in the oven the sweet potatoes until soft.",
-      "Remove from the oven and peel them.",
-      "Place the meat into a dish, smash to reduce to a no chunk pulp and let it cool.Keep the oven at 40",
-      "Mix all the flour, baking powder, salt, sugar, cinnamon and chocolate chips if using.",
-      "Add to the dry ingredients the orange juice, sweet potatoes, egg and oil and mix well.",
-      "Place muffins cups in muffins pan and pour muffins mix up to cup high.",
-      "Sprinkle sanding sugar and bake in the oven for 15 to 20 minutes, or until the toothpick comes out clean.",
-      "Serve at room temperature."
+      "n a deep large bowl, mix eggs, milk, sugar and cinnamon. Stir it using a fork and keep aside. Now coat nutella on one side of 2 toasts and then close both the toasts together by sandwiching the nutella sides in between. Soak the nutella stuffed toast in the egg mix and push it using a knife so it gets coated properly.",
+      "Let it sit for 3-5 mins and then flip and let the other side gets coated too same way. Soak the sides as well. Once ready, cook it on a preheated pan with butter for around 5 minutes on each side until nicely browned but not burnt.",
+      "Sprinkle some powdered sugar and serve with black coffee. Repeat for the next one in the same way."
     ]
   },
   "lunch": {
-    "name": "Ginger Chicken Stir-Fry",
-    "image": "https://img.spoonacular.com/recipes/644571-556x370.jpg",
-    "cookTime": 45,
+    "name": "Quinoa Salad with Barberries & Nuts",
+    "image": "https://img.spoonacular.com/recipes/1098387-556x370.jpg",
+    "cookTime": 30,
     "ingredients": [
-      "16 ounces Broccoli/cauliflower/carrots (frozen packaged mixture)*",
-      "1 pound Chicken breasts (skinned and boned) cut into 1-\u00bd inch pieces",
-      "cup White wine OR chicken broth",
-      "3 cups Hot cooked brown rice",
-      "1 tablespoon Cornstarch",
-      "2 teaspoon ground ginger",
-      "1 medium Onion, cut into 8 wedges",
-      "1/4 cup Teriyaki sauce",
-      "3/4 cup canola or vegetable oil",
-      "3 cups water"
+      "300g quinoa",
+      "1 1/2 liters boiling water",
+      "1 tsp salt",
+      "2 tbsp olive oil (not extra-virgin, it will overpower other flavours)",
+      "50g barberries",
+      "4 tbsp slivered almonds",
+      "2 tbsp slivered pistachios",
+      "30g chopped coriander, chopped",
+      "A few sprigs of mint, chopped"
     ],
     "steps": [
-      "In shallow baking dish, combine teriyaki sauce and water; add chicken pieces, coating well. Cover and refrigerate two hours.",
-      "Drain marinade from chicken pieces. In large skillet or wok, heat oil; stir-fry chicken and onion until chicken is slightly browned. Stir in vegetables, ginger, and wine. Cover; simmer 4 to 5 minutes, or until vegetables are tender crisp. In small bowl, combine cornstarch and water until smooth.Gradually add to skillet, stirring constantly, until thickened.",
-      "Serve over hot rice.*Or use 1 package (16 ounces) frozen vegetable mixture of your choice.NOTE: Optional ingredients are omitted from the nutritional calculations.When ingredient options appear in a recipe, the first ingredient choice is used for calculation."
+      "Put the quinoa in a sieve and rinse under running water.",
+      "Drain.",
+      "Pour the boiling water over quinoa in a medium saucepan.",
+      "Add salt, stir well and cook over medium-low heat until quinoa is cooked through but still has a bite in the center.",
+      "Drain in a sieve.Pick over the barberries, rinse in a sieve and dry on kitchen paper.While the quinoa is cooking, heat 1 tablespoon of oil in a saucepan over medium heat and lightly toast the almond slivers.",
+      "Add the slivered pistachios, then the rest of the oil and the rinsed barberries. Cook briefly until the barberries are shiny and a little puffed.Save a tablespoon of the barberry and nut mix and a tablespoon of the chopped herbs for garnishing the finished dish.",
+      "Mix all of the remaining nut and barberry mix, herbs and quinoa. Return to the pot and place on low heat. Cover with a lid and cook for ten minutes or until completely heated through and steam is rising. Turn into a serving dish and fluff with a fork.",
+      "Add a little extra olive oil and a twist of black pepper if you wish.",
+      "Sprinkle the quinoa with the rest of the berry-nut mix and chopped herbs and serve on its own as a main dish or as a side dish."
     ]
   },
   "dinner": {
-    "name": "Nachos Grande",
-    "image": "https://img.spoonacular.com/recipes/652919-556x370.jpg",
+    "name": "Classic French Onion Soup",
+    "image": "https://img.spoonacular.com/recipes/639597-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "400 grams can tomatoes",
-      "1 1/2 cups Grated Cheddar Cheese",
-      "1/2 teaspoon Chili Powder",
-      "2 tablespoons Corn Oil",
-      "3 Garlic Cloves, crushed",
-      "1/2 Green Pepper, chopped",
-      "1 Fresh Green Chili, chopped",
-      "1/4 teaspoon Ground Cumin",
-      "1 Onion, finely chopped",
-      "1 teaspoon paprika",
-      "Paprika to garnish",
-      "1 can Refried Beans (13 oz.)",
-      "2 cups Tortilla Chips",
-      "5 tablespoons Water"
+      "\u00bc cup salted butter",
+      "4-6 yellow onions, finely sliced",
+      "\u00bc Tsp. flour",
+      "\u00bd cup sherry",
+      "5 cups beef broth",
+      "3 sprigs fresh thyme",
+      "3 sprigs fresh parsley",
+      "1 bay leaf",
+      "salt and pepper to taste",
+      "4 slices of a crusty French baguette",
+      "1 cup gruyere cheese, shredded"
     ],
     "steps": [
-      "Heat oil in a skillet, add the onion, green pepper, and garlic, and cook gently, stirring occasionally, for 5 minutes or until soft but not browned.",
-      "Add the tomatoes and chili and cook over medium heat for 5 minutes, or until most of the liquid has evaporated.Stir in the chili powder and paprika and cook for 3 minutes, then add the refried beans, breaking them up with a fork.",
-      "Add the measured water and cook, stirring occasionally, for 8-10 minutes, until the mixture thickens.Spoon the beans into the middle of a baking dish, arrange the tortilla chips around the edge and sprinkle with cumin.",
-      "Sprinkle the cheese over the beans and tortilla chips.",
-      "Bake at 400 degrees for 15-20 minutes, until the cheese has melted.",
-      "Sprinkle the paprika for garnish in a lattice pattern on top and serve immediately."
+      "Preheat oven to 400",
+      "In a large Dutch oven, melt butter over medium heat.",
+      "Add onions to the pot and sprinkle with flour. Reduce heat to medium low and cook for 45 minutes stirring occasionally. If the onions are cooking too quickly, reduce heat.",
+      "When the onions are tender and golden in colour, de-glaze the pan with sherry.",
+      "Pour beef broth into the pot and bring to a boil over medium heat.",
+      "Add herbs, salt and pepper to taste.",
+      "Reduce heat and simmer for 15 minutes.",
+      "Spray a cookie sheet with cooking spray. Butter slices of French bread and bake in the oven for 5-10 minutes until very dry. Set aside.",
+      "Remove herb stalks and bay leaf.",
+      "Ladle soup portions into four oven safe ramekins. Top with crusty French bread and sprinkle with cheese.",
+      "Place ramekins on a cookie sheet and bake uncovered at 400 for 5-10 minutes until cheese is bubbling. Broil for one minute more to brown the top.",
+      "Serve warm.",
+      "Serves 4"
     ]
   }
 }
