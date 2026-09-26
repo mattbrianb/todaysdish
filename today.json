@@ -1,83 +1,71 @@
 {
-  "date": "2026-09-25",
+  "date": "2026-09-26",
   "breakfast": {
-    "name": "Nutella Stuffed French Toast",
-    "image": "https://img.spoonacular.com/recipes/653371-556x370.jpg",
-    "cookTime": 45,
+    "name": "Lemon Poppy Seed Muffins",
+    "image": "https://img.spoonacular.com/recipes/1003210-556x370.jpg",
+    "cookTime": 20,
     "ingredients": [
-      "2 eggs",
-      "1/4 cup milk (I used 2%fat milk)",
-      "1 Tbsp sugar",
-      "1/2 tsp cinnamon powder",
-      "4 large slices of stale bread, thickness - 3/4 to 1 inch each",
-      "2 Tbsp nutella",
-      "Butter for cooking",
-      "Powdered sugar for sprinkling - 1Tbsp"
+      "4 large eggs",
+      "1 3.4oz. box lemon instant pudding mix",
+      "1 box lemon cake mix",
+      "2 Tbsp. poppy seeds",
+      "\u00bc cup vegetable oil",
+      "1 cup boiling water"
     ],
     "steps": [
-      "n a deep large bowl, mix eggs, milk, sugar and cinnamon. Stir it using a fork and keep aside. Now coat nutella on one side of 2 toasts and then close both the toasts together by sandwiching the nutella sides in between. Soak the nutella stuffed toast in the egg mix and push it using a knife so it gets coated properly.",
-      "Let it sit for 3-5 mins and then flip and let the other side gets coated too same way. Soak the sides as well. Once ready, cook it on a preheated pan with butter for around 5 minutes on each side until nicely browned but not burnt.",
-      "Sprinkle some powdered sugar and serve with black coffee. Repeat for the next one in the same way."
+      "Preheat oven to 350 and line 2 muffin tins with cupcake wrappers.",
+      "In a large bowl, combine all of the ingredients, except water, and mix well.",
+      "Slowly add the bowling water into the mixture, and mix as you add it.",
+      "Pour the batter into the muffin pan and fill the liners  way full.",
+      "Bake for 15-17 minutes or until the muffins are a light golden brown on top."
     ]
   },
   "lunch": {
-    "name": "Quinoa Salad with Barberries & Nuts",
-    "image": "https://img.spoonacular.com/recipes/1098387-556x370.jpg",
-    "cookTime": 30,
+    "name": "Greek Inspired Spring Omelet",
+    "image": "https://img.spoonacular.com/recipes/645315-556x370.jpg",
+    "cookTime": 20,
     "ingredients": [
-      "300g quinoa",
-      "1 1/2 liters boiling water",
-      "1 tsp salt",
-      "2 tbsp olive oil (not extra-virgin, it will overpower other flavours)",
-      "50g barberries",
-      "4 tbsp slivered almonds",
-      "2 tbsp slivered pistachios",
-      "30g chopped coriander, chopped",
-      "A few sprigs of mint, chopped"
+      "3 Asparagus spears",
+      "1/3 cup egg whites",
+      "1 Tbsp. Feta cheese, crumbled",
+      "green onions, diced",
+      "salt and pepper to taste",
+      "1 Tbsp. tzatziki",
+      "4 cherry tomatoes (red, yellow or a mix), diced"
     ],
     "steps": [
-      "Put the quinoa in a sieve and rinse under running water.",
-      "Drain.",
-      "Pour the boiling water over quinoa in a medium saucepan.",
-      "Add salt, stir well and cook over medium-low heat until quinoa is cooked through but still has a bite in the center.",
-      "Drain in a sieve.Pick over the barberries, rinse in a sieve and dry on kitchen paper.While the quinoa is cooking, heat 1 tablespoon of oil in a saucepan over medium heat and lightly toast the almond slivers.",
-      "Add the slivered pistachios, then the rest of the oil and the rinsed barberries. Cook briefly until the barberries are shiny and a little puffed.Save a tablespoon of the barberry and nut mix and a tablespoon of the chopped herbs for garnishing the finished dish.",
-      "Mix all of the remaining nut and barberry mix, herbs and quinoa. Return to the pot and place on low heat. Cover with a lid and cook for ten minutes or until completely heated through and steam is rising. Turn into a serving dish and fluff with a fork.",
-      "Add a little extra olive oil and a twist of black pepper if you wish.",
-      "Sprinkle the quinoa with the rest of the berry-nut mix and chopped herbs and serve on its own as a main dish or as a side dish."
+      "In a medium skillet saute asparagus until tender, about 7 minutes. Set aside.In a small bowl combine egg whites and tzatziki; stir to combine.Spray non stick skillet with cooking spray and bring to medium heat.",
+      "Pour in egg white and allow it to spread over the skillet surface. Cook until egg turns white; about 2 minutes.Slide omelette onto a plate and place asparagus, tomatoes, green onions and feta in the middle. Fold the omelette into thirds to cover the fillings.",
+      "Serve hot with additional tzatziki. Salt and pepper to taste."
     ]
   },
   "dinner": {
-    "name": "Classic French Onion Soup",
-    "image": "https://img.spoonacular.com/recipes/639597-556x370.jpg",
+    "name": "Pumpkin gnocchi with basil and Parmesan",
+    "image": "https://img.spoonacular.com/recipes/657312-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "\u00bc cup salted butter",
-      "4-6 yellow onions, finely sliced",
-      "\u00bc Tsp. flour",
-      "\u00bd cup sherry",
-      "5 cups beef broth",
-      "3 sprigs fresh thyme",
-      "3 sprigs fresh parsley",
-      "1 bay leaf",
-      "salt and pepper to taste",
-      "4 slices of a crusty French baguette",
-      "1 cup gruyere cheese, shredded"
+      "1kg pumpkin, baked and cooled",
+      "2 whole eggs",
+      "\u00bd tsp sea salt",
+      "\u00bc tsp pepper",
+      "Fresh basil leaves, chopped",
+      "250g wheat flour",
+      "250g corn flour",
+      "Olive oil",
+      "Prmesan or Grana Padano cheese, grated",
+      "Fresh basil leaves for garnish"
     ],
     "steps": [
-      "Preheat oven to 400",
-      "In a large Dutch oven, melt butter over medium heat.",
-      "Add onions to the pot and sprinkle with flour. Reduce heat to medium low and cook for 45 minutes stirring occasionally. If the onions are cooking too quickly, reduce heat.",
-      "When the onions are tender and golden in colour, de-glaze the pan with sherry.",
-      "Pour beef broth into the pot and bring to a boil over medium heat.",
-      "Add herbs, salt and pepper to taste.",
-      "Reduce heat and simmer for 15 minutes.",
-      "Spray a cookie sheet with cooking spray. Butter slices of French bread and bake in the oven for 5-10 minutes until very dry. Set aside.",
-      "Remove herb stalks and bay leaf.",
-      "Ladle soup portions into four oven safe ramekins. Top with crusty French bread and sprinkle with cheese.",
-      "Place ramekins on a cookie sheet and bake uncovered at 400 for 5-10 minutes until cheese is bubbling. Broil for one minute more to brown the top.",
-      "Serve warm.",
-      "Serves 4"
+      "Separate the meat and chop the pumpkin into a puree.",
+      "Add eggs, stir.",
+      "Add salt, pepper and chopped basil.",
+      "Add flour and knead a soft dough. If the dough is too sticky, add more flour - the amount depends on the water content of the pumpkin.",
+      "Divide the dough into equal rolls 3 cm thick and about 20 cm long.",
+      "Divide and cut each roll into a 2 cm long pieces.",
+      "Cook the gnocchi in a large pot in plenty of salted water. Gnocchi are cooked when they rise to the surface.",
+      "Remove them from the pot with a slotted spoon.",
+      "Pour hot olive oil over gnocchi or simply saut them in hot oil.",
+      "Serve sprinkled with cheese and fresh basil."
     ]
   }
 }
