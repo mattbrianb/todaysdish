@@ -1,88 +1,75 @@
 {
-  "date": "2026-10-03",
+  "date": "2026-10-04",
   "breakfast": {
-    "name": "Apple, Cherry, Pear and Almond Breakfast Muffins",
-    "image": "https://img.spoonacular.com/recipes/632614-556x370.jpg",
+    "name": "Carrot Oat Muffins",
+    "image": "https://img.spoonacular.com/recipes/637210-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 1/4 cup sef-rising flour",
-      "1/2 cup almond meal",
-      "1 1/2 teaspoon baking powder",
-      "1/4 teaspoon baking soda",
-      "1 1/2 teaspoon cinnamon",
-      "1/4 teaspoon nutmeg",
-      "1/4 teaspoon salt",
-      "1/2 cup + 2 tablespoons unsalted butter, room temperature",
-      "1/2 cup granulated sugar",
-      "2 large eggs, room temperature",
-      "3/4 cup sour cream or plain yogurt (I used light sour cream)",
-      "2 teaspoon vanilla extract or DAVE's vanilla and coffee syrup",
-      "zest from 1/2 lemon (1 tablespoon)",
-      "1 apple, peeled, cored, cut into 1/4\u2033 dice",
-      "1/2 cup dried cherries",
-      "1 pear, peeled, cored,cut into 1/4\u2033 dice",
-      "2 tablespoon light brown sugar",
-      "1/4 cup sliced blanched almonds"
+      "1/4 cup of agave nectar, I use raw and organic",
+      "1 cup of organic applesauce",
+      "3 teaspoons of baking powder",
+      "1 teaspoon baking soda",
+      "3 cups of shredded carrots",
+      "1 teaspoon organic cinnamon",
+      "3 organic eggs",
+      "2 teaspoons of chopped ginger",
+      "1/2 teaspoon salt",
+      "1 teaspoon of organic vanilla extract",
+      "2 cups of organic whole oat flour"
     ],
     "steps": [
-      "Preheat oven to 350 degrees",
-      "Line 12 cup muffin tin with liners and spray with baking spray.  Line a tray with almond slices and sit in oven for 4-5 minutes until almonds are just starting to toast, but not brown.",
-      "Remove pan and let cool.",
-      "Place flour, almond meal, baking powder, baking soda, cinnamon, nutmeg, and salt in a bowl and mix well to combine.  Set aside",
-      "In a mixer beat 1/2 cup of the butter and sugar until creamed.",
-      "Add one egg at a time until mixed.  Scrape down sides of mixer and add sour cream, zest and vanilla blend.",
-      "Add flour ingredients and mix until just blended (do not over-mix)",
-      "Remove bowl from mixer and by hand add apple and cherries, mixing.",
-      "Spoon mixture into each cup filling about 2/3 of the way.",
-      "In a small bowl combine, pear, brown sugar, 2 tablespoons of butter and almonds and combine.",
-      "Place on top of each muffin.",
-      "Bake for 25-30 minutes or until the center of a muffin comes out clean."
+      "Combine all dry ingredients in a bowl",
+      "Combine all wet ingredients in a bowl except carrots and ginger and mix well.Gently add dry ingredients to wet ingredients and mix until just blended.  Be careful not to over-mix because this will result in hard muffins.Once the wet and dry ingredients are blended, gently fold in carrots and ginger until spread throughout.Spray muffin tins with nonstick cooking spray and add mixture to 2/3 of the cup.",
+      "Bake at 350F for 20 minutes until golden brown on top.",
+      "Let cool in tins for 2-3 minutes before transferring to a cooling rack."
     ]
   },
   "lunch": {
-    "name": "Fall Farro Salad with Pomegranate, Walnut & Truffles",
-    "image": "https://img.spoonacular.com/recipes/642556-556x370.jpg",
-    "cookTime": 75,
+    "name": "Grilled Ginger Miso Chicken",
+    "image": "https://img.spoonacular.com/recipes/645722-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "1/3 cup extra virgin olive oil",
-      "8 ounces (250 gr) farro or spelt",
-      "parmesan shaved into ribbons",
-      "1 pomegranate",
-      "1 small head of radicchio sliced thinly",
-      "salt and pepper",
-      "1 truffle mushroom",
-      "2-3 tablespoons (30ml) vinegar",
-      "4 ounces (100gr) toasted walnuts"
+      "1 tablespoon five-spice powder (optional)",
+      "1 garlic clove minced",
+      "1 tablespoon ginger root, minced",
+      "2 sliced green onions",
+      "2 tablespoons light soy sauce (usukuchi shoyu)",
+      "2 tablespoons mirin",
+      "2 tablespoons light miso",
+      "2 tablespoons sake",
+      "8 boned chicken thighs skin intact"
     ],
     "steps": [
-      "In plenty of cold water boil farro until al dente (cooked but with a bite) - about 20-35 minutes. Feel free to add some vegetable scraps if available (unused piece of carrot, onion, celery, etc.)"
+      "Blend soy sauce, sake, mirin, miso, green onions, ginger root and garlic in a rectangular baking dish. Coat chicken with mixture. Marinate 1 hour or refrigerate overnight, turning several times.Preheat a hibachi, portable tabletop grill or charcoal grill. Shake marinade off chicken; pat dry.",
+      "Place skin-down on hot grill. Grill 4 to 5 minutes. Turn chicken; grill second side 4 to 5 minutes or until golden brown and done inside. When chicken is done, sprinkle with sesame seeds and spice mixture.This recipe yields 4 servings.Comments: Miso marinade adds a rich flavor to this country-style grilled chicken. Thigh meat stays moist and tender, but boned chicken breasts are delicious, too. The chicken can be sauteed in a skillet."
     ]
   },
   "dinner": {
-    "name": "Easy Pork Chops on Stuffing",
-    "image": "https://img.spoonacular.com/recipes/642113-556x370.jpg",
+    "name": "Mexican Chicken Lettuce Wraps",
+    "image": "https://img.spoonacular.com/recipes/651585-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3 tablespoons butter",
-      "2 ribs celery finely diced",
-      "1 cup chicken broth (more or less)",
-      "2 tablespoons chopped fresh parsley",
-      "1/2 medium onion finely diced",
-      "pepper",
-      "6 pork chops",
-      "salt",
-      "8 slices stale white bread"
+      "3 cups cubed chicken breast",
+      "1 tablespoon lime juice",
+      "1/2 teaspoon ground cumin",
+      "1/2 teaspoon ground chile powder",
+      "1/2 teaspoon seasoned salt",
+      "1/4 teaspoon garlic powder",
+      "3 tablespoons Olive oil",
+      "1 can (15 ounces) black beans, rinsed and drained",
+      "1 medium tomato, seeded and finely chopped",
+      "1/4 cup finely chopped onion",
+      "1/4 cup finely chopped sweet red pepper",
+      "1 medium ripe avocado, peeled and finely chopped",
+      "12 Bibb or Boston lettuce leaves"
     ],
     "steps": [
-      "Early in the day (or the night before) cut the bread into  inch cubes and leave out to air dry.",
-      "Place in a large mixing bowl.",
-      "Heat 2 tablespoons of the butter over medium heat in a saute pan and saute the celery till almost tender.",
-      "Add the onions and continue to cook over medium heat until translucent.",
-      "Remove from the heat and add half of the chicken broth to the mixture.",
-      "Add the chopped parsley to the bread cubes and toss to distribute evenly.",
-      "Pour the celery/onion mixture over all and gently toss, adding additional broth to moisten the bread. Use caution to not break up the bread cubes. The cubes should be almost moistened through, but not soaking wet.Butter a shallow baking dish with half of the remaining butter and place the stuffing in the middle. Dot the top of the stuffing with any remaining butter. Cover with aluminum foil and bake for 20 minutes in a preheated 350 degree oven.In the meantime, pat the chops dry with a paper towel and season on both sides with salt and pepper. With a sharp knife, cut 2-3 slices through the fat edge on each chop to prevent curling while chops are cooking.  Preheat a non-stick saut pan over medium high heat and quickly sear on each side until lightly browned. The chops will still be nearly raw in the center.",
-      "Remove the foil from the precooked stuffing and place the chops in a single layer over the stuffing. Return to the oven and roast for aprox 15-25 minutes, uncovered (depending on the thickness of your chops).  The chops should be cooked until the no longer dark pink inside, but still moist and juicy, but not overcooked.",
-      "Remove from the oven and serve."
+      "Marinate chicken with lime, cumin, chile powder, seasoned salt, garlic powder and olive oil for 30 minutes.",
+      "Cook chicken in a skillet over medium heat.",
+      "In a separate bowl add beans, red pepper, tomato, and onion.",
+      "Add to chicken to the bowl and stir ingredients together.  Adjust seasoning if needed.",
+      "When ready to serve cut avocado into thin slices.",
+      "Fill each lettuce cup with mixture and  top with avocado slice."
     ]
   }
 }
