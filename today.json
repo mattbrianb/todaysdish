@@ -1,75 +1,91 @@
 {
-  "date": "2026-10-04",
+  "date": "2026-10-05",
   "breakfast": {
-    "name": "Carrot Oat Muffins",
-    "image": "https://img.spoonacular.com/recipes/637210-556x370.jpg",
+    "name": "Jumbo Blueberry Muffins",
+    "image": "https://img.spoonacular.com/recipes/648647-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1/4 cup of agave nectar, I use raw and organic",
-      "1 cup of organic applesauce",
-      "3 teaspoons of baking powder",
-      "1 teaspoon baking soda",
-      "3 cups of shredded carrots",
-      "1 teaspoon organic cinnamon",
-      "3 organic eggs",
-      "2 teaspoons of chopped ginger",
-      "1/2 teaspoon salt",
-      "1 teaspoon of organic vanilla extract",
-      "2 cups of organic whole oat flour"
+      "4 t. baking powder",
+      "1 1/2 c. fresh blueberries",
+      "1 1/2 cups butter melted",
+      "1 c. buttermilk",
+      "2 Eggs",
+      "1 cup Sifted flour",
+      "1 c. (7 oz.) granulated sugar",
+      "1 1/2 t. fresh grated lemon zest",
+      "1/2 teaspoon Salt",
+      "1 1/2 t. vanilla extract",
+      "4 T. vegetable oil"
     ],
     "steps": [
-      "Combine all dry ingredients in a bowl",
-      "Combine all wet ingredients in a bowl except carrots and ginger and mix well.Gently add dry ingredients to wet ingredients and mix until just blended.  Be careful not to over-mix because this will result in hard muffins.Once the wet and dry ingredients are blended, gently fold in carrots and ginger until spread throughout.Spray muffin tins with nonstick cooking spray and add mixture to 2/3 of the cup.",
-      "Bake at 350F for 20 minutes until golden brown on top.",
-      "Let cool in tins for 2-3 minutes before transferring to a cooling rack."
+      "Preheat oven to 425 degrees f. Spray a 6-cup large-sized muffin tin lightly with cooking spray, set aside.In a small bowl combine the lemon zest and 1/3 c. sugar, using a fork, mix thoroughly.In a large bowl combine flour, baking powder and salt. In a medium bowl, combine 1 c. sugar and eggs, whisking vigorously for about 45 seconds, until the mixture is thick and homogeneous. Slowly add in melted butter and oil. Then whisk in buttermilk and vanilla.",
+      "Add the liquid ingredients and the blueberries to the dry ingredients, folding until just mixed, taking care to not over mix. Scoop batter into the muffin tins and sprinkle the tops with the lemon-sugar.",
+      "Bake the muffins at 425 degrees f. for 5 minutes then reduce the heat to 375 degrees f. and continue baking for about 25 minutes (rotating the pan halfway through the bake time to ensure even baking), until a toothpick inserted near the center of the muffins comes out clean with only a few crumbs attached.",
+      "Let the muffins cool for about 5 minutes in the pan before removing them to a wire rack to cool."
     ]
   },
   "lunch": {
-    "name": "Grilled Ginger Miso Chicken",
-    "image": "https://img.spoonacular.com/recipes/645722-556x370.jpg",
+    "name": "Peri Peri Chicken and Savoury Rice",
+    "image": "https://img.spoonacular.com/recipes/716296-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 tablespoon five-spice powder (optional)",
-      "1 garlic clove minced",
-      "1 tablespoon ginger root, minced",
-      "2 sliced green onions",
-      "2 tablespoons light soy sauce (usukuchi shoyu)",
-      "2 tablespoons mirin",
-      "2 tablespoons light miso",
-      "2 tablespoons sake",
-      "8 boned chicken thighs skin intact"
+      "1 Bell Pepper",
+      "5 Bird's eye Chilli Pepper",
+      "1 teaspoon black pepper",
+      "8 Chicken Pieces",
+      "\u00bd teaspoon red chilli powder",
+      "5 cloves of garlic",
+      "1/2 inch of Ginger",
+      "1 Seasoning Cube",
+      "1 Small sized Lemon (tablespoon all the juice out)",
+      "1/2 bulb of onion",
+      "1 tablespoon oregano",
+      "2 tablespoon paprika",
+      "\u00bc teaspoon Red food colouring",
+      "2 teaspoon salt",
+      "1 Scotch Bonnet Pepper (Ata Rodo)",
+      "\u00bd cup Vegetable Oil",
+      "4 tablespoon dark vinegar"
     ],
     "steps": [
-      "Blend soy sauce, sake, mirin, miso, green onions, ginger root and garlic in a rectangular baking dish. Coat chicken with mixture. Marinate 1 hour or refrigerate overnight, turning several times.Preheat a hibachi, portable tabletop grill or charcoal grill. Shake marinade off chicken; pat dry.",
-      "Place skin-down on hot grill. Grill 4 to 5 minutes. Turn chicken; grill second side 4 to 5 minutes or until golden brown and done inside. When chicken is done, sprinkle with sesame seeds and spice mixture.This recipe yields 4 servings.Comments: Miso marinade adds a rich flavor to this country-style grilled chicken. Thigh meat stays moist and tender, but boned chicken breasts are delicious, too. The chicken can be sauteed in a skillet."
+      "Wash the Chicken and set aside.Blend all the Ingredients together and pour as needed on the chicken. Rub it into the chicken and allow to marinate for about 3-5 hours.If you have a grill, heat up the grill and and place chicken on to cook. If you don\u2019t and you are using an oven, set the oven to grill/broil at first and let the chicken brown on both sides then reset the oven to bake at 370 F and bake the chicken till cooked.If there is left over sauce from the blend, heat it up with a little water and serve with the peri peri chicken. Savoury Rice",
+      "Ingredients2 cups of Rice1/2 bulb of Onion1/4 pound of Cabbage1 cup of chopped carrots1 egg1 cup of melted butter",
+      "Chicken Seasoning1 teaspoon of currya pinch of thyme Wash and Parboil the Rice for 10 minutes.",
+      "Heat the butter in a pot and pour in the chopped onions, carrots and cabbage and stir in.Break the egg into the veggie mix and stir in.",
+      "Add your seasoning and pour in the parboiled rice.",
+      "Pour in 1 cup of water and cook on medium heat till the rice is soft. Stir and serve with the chicken."
     ]
   },
   "dinner": {
-    "name": "Mexican Chicken Lettuce Wraps",
-    "image": "https://img.spoonacular.com/recipes/651585-556x370.jpg",
+    "name": "Fire-Breathing Dragon Pasta",
+    "image": "https://img.spoonacular.com/recipes/642895-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3 cups cubed chicken breast",
-      "1 tablespoon lime juice",
-      "1/2 teaspoon ground cumin",
-      "1/2 teaspoon ground chile powder",
-      "1/2 teaspoon seasoned salt",
-      "1/4 teaspoon garlic powder",
-      "3 tablespoons Olive oil",
-      "1 can (15 ounces) black beans, rinsed and drained",
-      "1 medium tomato, seeded and finely chopped",
-      "1/4 cup finely chopped onion",
-      "1/4 cup finely chopped sweet red pepper",
-      "1 medium ripe avocado, peeled and finely chopped",
-      "12 Bibb or Boston lettuce leaves"
+      "1 Yellow Onion, diced",
+      "Olive oil, for sauting",
+      "Salt and Pepper to taste",
+      "6 cloves Garlic, minced",
+      "3 tablespoons Chipotles in Adobo Sauce, seeds removed, chopped + 1 of",
+      "1 pound boneless, skinless, Chicken Breasts, cut into large cubes",
+      "2 teaspoons Italian Seasoning",
+      "3 cups good Tomato Sauce",
+      "1 teaspoon Red Pepper flakes",
+      "1/2 pound medium Shrimp, cleaned with tails off",
+      "1 cup Whole Milk or Heavy Cream",
+      "1 cup Sour Cream",
+      "1 pound Pasta like spaghetti or penne",
+      "4 dried Red Chile Peppers",
+      "Parmesan, fresh grated, for serving"
     ],
     "steps": [
-      "Marinate chicken with lime, cumin, chile powder, seasoned salt, garlic powder and olive oil for 30 minutes.",
-      "Cook chicken in a skillet over medium heat.",
-      "In a separate bowl add beans, red pepper, tomato, and onion.",
-      "Add to chicken to the bowl and stir ingredients together.  Adjust seasoning if needed.",
-      "When ready to serve cut avocado into thin slices.",
-      "Fill each lettuce cup with mixture and  top with avocado slice."
+      "Saute onion in two tablespoons Olive oil in a large, deep-sided skillet or a medium sized saucepan until tender and translucent, season with salt and pepper.",
+      "Add garlic and saute until fragrant.",
+      "Add the chipotles, chicken pieces, and Italian seasonings. Season with more salt and pepper.",
+      "Saute over medium heat turning chicken to sear on all sides.",
+      "Add the tomato sauce and red pepper flakes. Bring up to a simmer and continue to simmer for ten minutes or until chicken is cooked through. In the meantime cook the pasta to al dente according to package directions and add the dried chiles to the cooking water with the spaghetti.",
+      "Stir in the shrimp and milk. Slowly add in the sour cream while stirring. Bring to a slow simmer. Simmer until shrimp begin to curl.",
+      "Remove from heat.",
+      "Serve over pasta(remove the chiles when draining) with fresh Parmesan cheese."
     ]
   }
 }
