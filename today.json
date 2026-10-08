@@ -1,71 +1,80 @@
 {
-  "date": "2026-10-07",
+  "date": "2026-10-08",
   "breakfast": {
-    "name": "Jalapeno Cheese Quick Bread",
-    "image": "https://img.spoonacular.com/recipes/648339-556x370.jpg",
-    "cookTime": 45,
+    "name": "Greek Inspired Spring Omelet",
+    "image": "https://img.spoonacular.com/recipes/645315-556x370.jpg",
+    "cookTime": 20,
     "ingredients": [
-      "3/4 cup unbleached all purpose flour",
-      "3/4 cup whole-wheat flour",
-      "1 tbsp baking powder",
-      "1/2 tsp. salt",
-      "1 tbsp light olive oil",
-      "1 egg, lightly beaten",
-      "3/4 cup non-fat milk",
-      "1 cup light cheddar cheese (I used a light Mexican blend)",
-      "1/4 cups pickled jalapenos, drained, diced"
+      "3 Asparagus spears",
+      "1/3 cup egg whites",
+      "1 Tbsp. Feta cheese, crumbled",
+      "green onions, diced",
+      "salt and pepper to taste",
+      "1 Tbsp. tzatziki",
+      "4 cherry tomatoes (red, yellow or a mix), diced"
     ],
     "steps": [
-      "Heat oven to 350",
-      "Lightly grease loaf pan, 9x5x3 or two mini muffin pans with cooking spray.",
-      "Stir together flour, cheese, baking powder, and salt in medium bowl.",
-      "Add olive oil, egg and milk, stir till combined. Fold in jalapenos.",
-      "Pour into pan",
-      "Bake 30 to 45 minutes or until golden brown and toothpick inserted in center comes out clean. Cool 5 minutes; run knife around edges of pan to loosen.",
-      "Remove from pan to wire rack. Cool 30 minutes before slicing, if you can wait that long, I didnt."
+      "In a medium skillet saute asparagus until tender, about 7 minutes. Set aside.In a small bowl combine egg whites and tzatziki; stir to combine.Spray non stick skillet with cooking spray and bring to medium heat.",
+      "Pour in egg white and allow it to spread over the skillet surface. Cook until egg turns white; about 2 minutes.Slide omelette onto a plate and place asparagus, tomatoes, green onions and feta in the middle. Fold the omelette into thirds to cover the fillings.",
+      "Serve hot with additional tzatziki. Salt and pepper to taste."
     ]
   },
   "lunch": {
-    "name": "Creamy Polenta with Egg, Arrabiata & Bacon",
-    "image": "https://img.spoonacular.com/recipes/640676-556x370.jpg",
+    "name": "Turbo Chicken",
+    "image": "https://img.spoonacular.com/recipes/663971-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "8 slices of thick cut bacon",
-      "2 oz. cream cheese",
-      "4 eggs",
-      "fresh parsley for garnish",
-      "4 oz. goat cheese",
-      "1 tablespoon olive oil",
-      "1 cup polenta",
-      "salt & black pepper"
+      "1 cup tablespoon of all purpose flour dissolve in 1 of water",
+      "Sauce of the Chicken from the turbo broiler",
+      "3 pounds chicken, deboned",
+      "Gravy",
+      "Pepper to taste",
+      "of Salt",
+      "1/4 cup of Soy sauce",
+      "1 whole Chicken",
+      "9 pieces of Calamansi (Calamondin)",
+      "9 pieces of Calamansi (Calamondin)"
     ],
     "steps": [
-      "Preheat the oven to 425 degrees F.Bring 4 cups of water to a boil in a medium saucepan. Slowly whisk in the polenta, whisking continuously until there are no lumps and it begins to thicken slightly. Reduce the heat to medium-low and allow the polenta to simmer for 30 minutes, stirring occasionally to keep it from overcooking.When the polenta has thickened and become tender, stir in the goat cheese and cream cheese. Stir until the cheese are melted and fully incorporated into the polenta.",
-      "Add salt and pepper to taste.Meanwhile, place the bacon on a parchment-lined baking sheet and place in the preheated oven on the middle rack. Roast for 15-18 minutes or until the bacon is golden and crisp. When it is done, remove it from the oven and place the bacon strips on a paper towel-lined plate. Set aside.In a small saucepan or in the microwave, heat the marinara sauce until just simmering. Keep warm until you are ready to assemble your bowls.In a large non-stick skillet, heat the 1 T olive oil over medium heat. If your pan is large enough, add the four eggs and allow them to cook until the whites are opaque but still a bit runny on the top. Put a lid over the pan and turn off the heat. Allow the eggs to continue cooking under the lid until the whites are set but the yolk is still runny. If your pan is small, fry the eggs in batches.To assemble the bowls, spoon even amounts of polenta in each bowl. Top with a spoonful of the arrabiata, 1 egg and 2 slices of bacon.",
-      "Garnish with chopped thyme or parsley leaves.",
-      "Serve immediately."
+      "Give the chicken a good rubdown with it, taking care to massage it inside and out. Marinade the Chicken with Soy sauce, salt and Calamondin for 10-20 minutes each side.",
+      "Place a small baking pan at the bottom of the turbo broiler, this will be used to catch the drippings (don't throw this after the chicken is cooked! You can use it to make gravy, or see the explanation below).",
+      "Place the chicken in a turbo broiler with the temperature of 250 degrees for 30 minutes.Turn over the chicken and cook it for another 10 minutes.It should be nicely crisp and golden brown after 40 minutes.Gravy",
+      "Sauce from the chicken, place it in a small pan (low fire)",
+      "Put the dissolve flour (using water)Stir continuously until it's mixed well",
+      "Add salt, pepper and calamondin to taste."
     ]
   },
   "dinner": {
-    "name": "Flank Steak with Herbed Salsa",
-    "image": "https://img.spoonacular.com/recipes/643061-556x370.jpg",
+    "name": "Bibimbab (Korean Rice w Vegetables & Beef)",
+    "image": "https://img.spoonacular.com/recipes/634965-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 cup cilantro, finely chopped",
-      "Extra virgin olive oil",
-      "1 1 pound flank steak",
-      "3 garlic clove, minced",
-      "\u00bd large jalapeno, seeded and minced ( whole 1 if brave)",
-      "1/2 Lemon, juice of",
-      "Juice of large \u00bd lime",
-      "Salt and pepper",
-      "4 scallions, white only finely chopped",
-      "2 medium tomatoes, finely chopped"
+      "\u20222 carrots, cut into thin matchsticks",
+      "\u20224 cups cooked white rice",
+      "6 eggs",
+      "\u20221 English cucumber, cut into thin matchsticks (mixed with gochugaru)",
+      "\u20221 garlic clove, minced",
+      "\u2022sprinkle gochugaru (red chili flakes; garnish)",
+      "\u20224 tbsp gochujang (Korean red pepper paste; Sriracha sauce okay too)",
+      "1 tablespoon olive oil",
+      "\u20224 tsp sesame oil",
+      "\u20221 tsp sesame seeds (garnish)",
+      "\u20221 tbsp soy sauce",
+      "\u20221 bunch fresh spinach (or pre-packaged spinach)",
+      "\u20221 lb sandwich steaks, thin cut (any thin cut will work though)"
     ],
     "steps": [
-      "Preheat a grill pan or light a grill.In a medium bowl, combine the tomatoes with the scallions, cilantro, Jalapeno, garlic and lemon  lime juice. Season the salsa with salt and freshly ground pepper.Season with salt and pepper the flank steak.Using a grill pan brush a shadow of oil on the bottom of it.",
-      "Place the pan over high heat and when hot add the flank steak. Cook until nicely charred outside and medium rare inside. About 3 minutes per side.",
-      "Transfer the steak to a carving board and let rest for 5 minutes.Thinly slice the steak across the grain and serve with the herbed salsa."
+      "Cook rice according to package directions.",
+      "Cut vegetables into matchstick pieces and set aside for sauteing.3.In a large non-stick pan/skillet, bring 2 cups water to a boil.",
+      "Add spinach and cook, stirring constantly until wilted; drain. When cool enough to handle, squeeze spinach dry into a ball.4.Wipe out skillet; heat 1 tsp olive oil over medium-high.",
+      "Add carrots and cook until soft, 3 minutes.",
+      "Add garlic and cook until fragrant or semi-browned, 1 minute.",
+      "Add cucumber slices mixed with gochugaru (red pepper flakes).",
+      "Combine spinach and soy sauce; set aside until serving.",
+      "Add thinly sliced beef to non-stick pan and heat until browned. Wipe down with napkin.",
+      "Heat 1 tsp olive oil in non-stick pan over medium-high.",
+      "Add eggs and cook until whites are set and yolks are still runny, about 5 minutes.7.Divide rice among four bowls; top with vegetables and eggs.",
+      "Drizzle each with sesame oil, sprinkle with sesame seeds. Top with gochujang (red pepper paste) or Sriracha sauce as substitute.*Bibimbab and its main ingredients (usually rice and vegetables) can be chosen at one's preference. This is the main reason why bibimbab is so appealing; it suits vegetarians, dieters, health-conscience eaters, and even meat-lovers, who are more than welcome to add beef to their liking. For us, since we usually have rice available to eat at all times, we simply slice up any available vegetables or lettuce leaf varieties in the fridge for an \"instant\" and very satisfying bibimbab meal. So feel free to deviate from the original recipe!"
     ]
   }
 }
