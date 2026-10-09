@@ -1,80 +1,69 @@
 {
-  "date": "2026-10-08",
+  "date": "2026-10-09",
   "breakfast": {
-    "name": "Greek Inspired Spring Omelet",
-    "image": "https://img.spoonacular.com/recipes/645315-556x370.jpg",
-    "cookTime": 20,
+    "name": "Homemade Banana Bread",
+    "image": "https://img.spoonacular.com/recipes/1098347-556x370.jpg",
+    "cookTime": 75,
     "ingredients": [
-      "3 Asparagus spears",
-      "1/3 cup egg whites",
-      "1 Tbsp. Feta cheese, crumbled",
-      "green onions, diced",
-      "salt and pepper to taste",
-      "1 Tbsp. tzatziki",
-      "4 cherry tomatoes (red, yellow or a mix), diced"
+      "3 very ripe bananas",
+      "1 1/2 cups flour",
+      "3/4 cup granulated sugar",
+      "1/3 cup melted butter",
+      "1 egg",
+      "1 teaspoon vanilla",
+      "1 teaspoon baking soda",
+      "1/4 teaspoon salt",
+      "1/3 cup chopped walnuts"
     ],
     "steps": [
-      "In a medium skillet saute asparagus until tender, about 7 minutes. Set aside.In a small bowl combine egg whites and tzatziki; stir to combine.Spray non stick skillet with cooking spray and bring to medium heat.",
-      "Pour in egg white and allow it to spread over the skillet surface. Cook until egg turns white; about 2 minutes.Slide omelette onto a plate and place asparagus, tomatoes, green onions and feta in the middle. Fold the omelette into thirds to cover the fillings.",
-      "Serve hot with additional tzatziki. Salt and pepper to taste."
+      "Preheat oven to 350 degrees.Beat together butter, sugar, vanilla, egg.",
+      "Add bananas.With a potato masher or a fork, mash in banana and mix well.",
+      "Add flour, baking soda, and salt.Stir until everything is combined.",
+      "Add nuts and stir again.Spray a loaf pan with non-stick cooking spray.",
+      "Pour mixture into loaf pan.Cook for 55-65 minutes or until an inserted tooth pick comes out clean."
     ]
   },
   "lunch": {
-    "name": "Turbo Chicken",
-    "image": "https://img.spoonacular.com/recipes/663971-556x370.jpg",
+    "name": "Spicy Salmon Patties",
+    "image": "https://img.spoonacular.com/recipes/661186-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 cup tablespoon of all purpose flour dissolve in 1 of water",
-      "Sauce of the Chicken from the turbo broiler",
-      "3 pounds chicken, deboned",
-      "Gravy",
-      "Pepper to taste",
-      "of Salt",
-      "1/4 cup of Soy sauce",
-      "1 whole Chicken",
-      "9 pieces of Calamansi (Calamondin)",
-      "9 pieces of Calamansi (Calamondin)"
+      "16 oz pink salmon",
+      "2 eggs",
+      "1/4 cup fresh or dried parsley flakes",
+      "2 tbsp scallions",
+      "1/4 cup italian bread crumbs",
+      "Juice from 1/2 of lemon",
+      "Red pepper flakes to taste",
+      "2 tbsp mayonnaise",
+      "1 tbsp lemon juice"
     ],
     "steps": [
-      "Give the chicken a good rubdown with it, taking care to massage it inside and out. Marinade the Chicken with Soy sauce, salt and Calamondin for 10-20 minutes each side.",
-      "Place a small baking pan at the bottom of the turbo broiler, this will be used to catch the drippings (don't throw this after the chicken is cooked! You can use it to make gravy, or see the explanation below).",
-      "Place the chicken in a turbo broiler with the temperature of 250 degrees for 30 minutes.Turn over the chicken and cook it for another 10 minutes.It should be nicely crisp and golden brown after 40 minutes.Gravy",
-      "Sauce from the chicken, place it in a small pan (low fire)",
-      "Put the dissolve flour (using water)Stir continuously until it's mixed well",
-      "Add salt, pepper and calamondin to taste."
+      "Prep salmon: remove skin; crush bones with thumb and index finger leaving them in for added calcium.",
+      "Knead together salmon with eggs, parsley, scallions, bread crumbs, lemon juice and red pepper flakes.",
+      "Cook in a lightly-oiled cast-iron pan over medium heat until golden brown.",
+      "Serve warm, with sauce."
     ]
   },
   "dinner": {
-    "name": "Bibimbab (Korean Rice w Vegetables & Beef)",
-    "image": "https://img.spoonacular.com/recipes/634965-556x370.jpg",
+    "name": "Spare Ribs",
+    "image": "https://img.spoonacular.com/recipes/660884-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "\u20222 carrots, cut into thin matchsticks",
-      "\u20224 cups cooked white rice",
-      "6 eggs",
-      "\u20221 English cucumber, cut into thin matchsticks (mixed with gochugaru)",
-      "\u20221 garlic clove, minced",
-      "\u2022sprinkle gochugaru (red chili flakes; garnish)",
-      "\u20224 tbsp gochujang (Korean red pepper paste; Sriracha sauce okay too)",
-      "1 tablespoon olive oil",
-      "\u20224 tsp sesame oil",
-      "\u20221 tsp sesame seeds (garnish)",
-      "\u20221 tbsp soy sauce",
-      "\u20221 bunch fresh spinach (or pre-packaged spinach)",
-      "\u20221 lb sandwich steaks, thin cut (any thin cut will work though)"
+      "2 tablespoons oil",
+      "3 tablespoons clear honey",
+      "1 piece fresh ginger root - (\u00bd\") finely chopped",
+      "2 tablespoons dark soy sauce",
+      "2 tablespoons hoisin sauce",
+      "1 teaspoon five-spice powder",
+      "2 garlic cloves crushed",
+      "2 pounds spare ribs"
     ],
     "steps": [
-      "Cook rice according to package directions.",
-      "Cut vegetables into matchstick pieces and set aside for sauteing.3.In a large non-stick pan/skillet, bring 2 cups water to a boil.",
-      "Add spinach and cook, stirring constantly until wilted; drain. When cool enough to handle, squeeze spinach dry into a ball.4.Wipe out skillet; heat 1 tsp olive oil over medium-high.",
-      "Add carrots and cook until soft, 3 minutes.",
-      "Add garlic and cook until fragrant or semi-browned, 1 minute.",
-      "Add cucumber slices mixed with gochugaru (red pepper flakes).",
-      "Combine spinach and soy sauce; set aside until serving.",
-      "Add thinly sliced beef to non-stick pan and heat until browned. Wipe down with napkin.",
-      "Heat 1 tsp olive oil in non-stick pan over medium-high.",
-      "Add eggs and cook until whites are set and yolks are still runny, about 5 minutes.7.Divide rice among four bowls; top with vegetables and eggs.",
-      "Drizzle each with sesame oil, sprinkle with sesame seeds. Top with gochujang (red pepper paste) or Sriracha sauce as substitute.*Bibimbab and its main ingredients (usually rice and vegetables) can be chosen at one's preference. This is the main reason why bibimbab is so appealing; it suits vegetarians, dieters, health-conscience eaters, and even meat-lovers, who are more than welcome to add beef to their liking. For us, since we usually have rice available to eat at all times, we simply slice up any available vegetables or lettuce leaf varieties in the fridge for an \"instant\" and very satisfying bibimbab meal. So feel free to deviate from the original recipe!"
+      "Preheat oven 400 degrees.",
+      "Combine all the ingredients, except the spare ribs, in a jug and mix well.",
+      "Pour over the ribs and leave to marinate for as long as possible, ideally overnight.",
+      "Place the ribs on a rack in a roasting pan. Cook in a preheated oven at 400 degrees for about 45 minutes, turning the ribs over half way through the cooking time. Allow to cool and serve cold."
     ]
   }
 }
