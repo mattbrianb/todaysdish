@@ -1,73 +1,80 @@
 {
-  "date": "2026-10-10",
+  "date": "2026-10-11",
   "breakfast": {
-    "name": "Strawberry Shortcake Pancakes",
-    "image": "https://img.spoonacular.com/recipes/661886-556x370.jpg",
+    "name": "Peanut Butter Banana French Toast",
+    "image": "https://img.spoonacular.com/recipes/655239-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3/4 cup 0% Greek Yogurt",
-      "1/2 cup Egg Whites",
-      "1/2 cup Whole-Wheat Flour",
-      "1/2 tsp Baking Soda",
-      "1 tsp Almond Extract",
-      "1/2 tsp Sugar",
-      "Dash of Salt",
-      "1/3 cup Freeze Dried Strawberries",
-      "1 cup Strawberries \u2013 frozen or fresh (I used frozen)",
-      "1 tsp. sugar",
-      "2 Tbsp. Fat Free Whip Cream (optional)"
+      "2 slices bread",
+      "Peanut Butter, 2 Tablespoons",
+      "Half of Banana, sliced in rounds or length wise",
+      "1 whole egg, whisked",
+      "1/8 cup orange juice",
+      "pinch of ground nutmeg",
+      "pinch of ground cinnamon",
+      "pinch of cayenne"
     ],
     "steps": [
-      "Mix Greek Yogurt, Egg Whites & Almond Extract into a small bowl",
-      "In a separate bowl combine Flour, Baking Soda, Sugar, & Salt",
-      "Combine and whisk till evenly mixed",
-      "Fold in Dried Strawberries",
-      "In a sauce pan or small pot add frozen or fresh strawberries and 1tsp. sugar and cook until thawed and juicy about 5-7 minutes, stirring occasionally.",
-      "Spray Skillet with cooking spray and place 1/4-cup batter onto skillet and cook till bubbles start appearing through the top of the pancake and then flip. NOTE: Cook on medium heat and I flattened out my batter with the spatula to cook more evenly.",
-      "About 1-2 minutes on each side",
-      "Top with strawberry Sauce and Maple Syrup, and add a dollop of fat free whip cream.",
-      "Makes 2 servings, 8 pancakes total, 4 pancakes each."
+      "Prepare a Peanut Butter and Banana Sandwich",
+      "Mix whisked egg, orange juice, nutmeg and cinnamon and cayenne in a bowl",
+      "Heat a skillet and place One (",
+      "Tablespoon in same",
+      "Dip Sandwich in egg mixture coating both sides",
+      "Cook in skillet for one minute on each side",
+      "Ladle with syrup, sprinkle with confectioners sugar and garnish with more bananas"
     ]
   },
   "lunch": {
-    "name": "Penne with Sausage, Tomatoes and Potatoes",
-    "image": "https://img.spoonacular.com/recipes/655601-556x370.jpg",
+    "name": "Japanese Fried Rice",
+    "image": "https://img.spoonacular.com/recipes/648474-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1/2 pound butter",
-      "1 can (15- ounce) whole tomatoes, drained, roughly chopped",
-      "4 sweet Italian sausages cut in chunks",
-      "3 tablespoons olive oil",
-      "1 pound penne pasta",
-      "2 small potatoes, peeled and cut into medium size cubes",
-      "1/2 teaspoon salt"
+      "1 cup frozen green peas (thawed)",
+      "3 cups cooked Japanese rice",
+      "1 small carrot, finely chopped",
+      "2 garlic cloves, finely chopped",
+      "1/4 pound boneless chicken breast, cut into small cubes",
+      "2 tablespoons neutral oil (canola, grapeseed)",
+      "1 tablespoon tonkatsu sauce (vegetable and fruit sauce. I use Bull-Dog)",
+      "2 tablespoons soy sauce",
+      "1/4 teaspoon freshly ground black pepper",
+      "1/4 teaspoon kosher salt",
+      "2 eggs"
     ],
     "steps": [
-      "In a large pot add the potatoes and salted water. Bring the water to a boiling and cook the penne pasta until they are al dente.Meanwhile in a large deep skillet heat 1 tablespoon of the olive oil until warm, but not smoking.",
-      "Add the sausage to the skillet. Cook on medium high heat until nicely browned and cooked through. About 5 minutes.",
-      "Add the tomatoes and cook over medium low heat.",
-      "Add the pasta and potatoes to the skillet and add the butter and cook stirring until the pasta is well coated.",
-      "Transfer to bowls and serve right the way."
+      "In a pan over medium heat, add oil, garlic and cook for a minute.",
+      "Add chopped carrots and cook for 2 minutes.",
+      "Add chicken and cook for 2-3 minutes, until the chicken is cooked through.",
+      "Add rice and peas and mix well.",
+      "Add soy sauce, tonkatsu sauce, black pepper and salt, and mix well. Push the rice to one side and break the eggs on the clear side. Slowly scramble the eggs and incorporate with the rice.",
+      "Serve!"
     ]
   },
   "dinner": {
-    "name": "Buttermilk Skillet Fried Chicken",
-    "image": "https://img.spoonacular.com/recipes/636574-556x370.jpg",
+    "name": "Creamy Mushrooms Over Soba Noodles (Vegan)",
+    "image": "https://img.spoonacular.com/recipes/640666-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 cups buttermilk",
-      "3-4 pounds of chicken pieces : drumsticks, tights and breast",
-      "1 tablespoon cornstarch",
-      "1 Egg",
-      "1 tablespoon paprika",
-      "1 tablespoon pepper",
-      "1/4 c. plain flour",
-      "1/2 teaspoon salt",
-      "Vegetable oil for frying"
+      "1 tablespoon all purpose flour",
+      "chicken stock or white wine",
+      "cremini; but your choice)",
+      "1 teaspoon minced fresh thyme (or 1 Tbs fresh parsley)",
+      "2 cloves garlic, minced",
+      "Juice of 1/2 lemon (I cheated, used bottled, was fine)",
+      "Salt & Pepper to taste",
+      "12 ounces soba noodles",
+      "2 tablespoons Earth Balance buttery spread",
+      "1 1/4 cups unsweetened soy milk",
+      "12 ounces of mushrooms (I used a combo of white &"
     ],
     "steps": [
-      "Clean all the chicken pieces well, remove skin if desired. Using 1 tablespoon salt and  tablespoon pepper, season the chicken well all over.In a medium bowl whisk the buttermilk, egg and  cup of water.In a large glass baking pan mix together: flour,1 tablespoon salt,  tablespoon pepper, paprika and cornstarch.",
-      "Mix well.Dip chicken in buttermilk then on flour mixture.  shaking off any excess flour.In a large heavy bottom skillet heat the oil to a depth of . When oil is hot but not burning add the chicken to the skillet making sure that it is not crowding the pan. Fry chicken turning with thongs so it brown evenly. About 10 to 13 minutes.When the chicken is done place on a paper plate and serve immediately."
+      "Melt 1 tbs of the Earth Balance in a saute pan.",
+      "Add mushrooms & garlic stirring until the mushrooms are dark and reduced.Set the mushrooms aside.In the same pan, melt the second tbs of Earth Balance and stir in the flour.  Cook stirring for about a minute, making a roux to thicken your sauce.  Slowly add the soy milk, stirring until it is smooth and thickened.",
+      "Add the mushrooms, lemon juice, thyme, salt, & pepper",
+      "Add a 1/4 cup of white wine.And cook until reduced and sauce has a pleasant consistency",
+      "Divide the cooked soba noodles into bowls",
+      "Ladle the sauce over soba noodles.",
+      "Garnish with sprigs of fresh thyme if you like.Enjoy!"
     ]
   }
 }
