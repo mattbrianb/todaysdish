@@ -1,78 +1,66 @@
 {
-  "date": "2026-10-13",
+  "date": "2026-10-14",
   "breakfast": {
-    "name": "Blueberry Banana Pancakes",
-    "image": "https://img.spoonacular.com/recipes/635418-556x370.jpg",
+    "name": "Whole Wheat Blueberry Muffins",
+    "image": "https://img.spoonacular.com/recipes/665273-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1/2 teaspoon baking soda",
-      "\u00bd cups Banana, Mashed, Divided",
-      "Fresh blueberries",
-      "\u00bd cups Egg Whites",
-      "\u00bd cups Greek Yogurt, Plain",
-      "1 teaspoon salt",
-      "3/4 cup sugar",
-      "1 teaspoon vanilla extract",
-      "\u00bd cups Whole Wheat Pastry Flour"
+      "1 1/2 teaspoon baking powder",
+      "1 teaspoon baking soda",
+      "2 very ripe large bananas",
+      "7 ounces fresh blueberries",
+      "1 cup melted butter",
+      "1 1/4 cup buttermilk",
+      "1 large egg, lightly beaten",
+      "1/2 cup light brown sugar",
+      "1 teaspoon raw sugar",
+      "pinch of fine sea salt",
+      "2 cups whole wheat flour"
     ],
     "steps": [
-      "Mix greek yogurt, 1/4 cup banana, egg whites & vanilla extract into a small bowl",
-      "In a separate bowl combine flour, baking soda, sugar, & salt",
-      "Combine and whisk till evenly mixed",
-      "Fold in 1/2 cup blueberries",
-      "Place 1/4-cup batter onto non-stick skillet and cook till bubbles start appearing through the top of the pancake and then flip. NOTE: Cook on medium heat and I flattened out my batter with the spatula to cook more evenly.About 1-2 minutes on each side",
-      "For the blueberry sauce:In a sauce pan, add remaining banana and blueberries and stir until thick, mashing blueberries, about 5-7 minutes.",
-      "Pour over top of pancakes.Note: I used frozen blueberries for sauce and fresh for pancakes.Makes  8 pancakes total  serving size 2Calorie per serving (4 pancakes total)  231, Fat: .08, Cholesterol: 0, Sodium: 391, Potassium: 304, Carbs: 42, Fiber: 6.6, Sugar: 12, Protein: 14.3"
+      "Preheat oven to 350 degrees an line a muffin tin with paper or silicon cups.Peel bananas and mash them in a bowl. Set aside.In a large bowl, combine flour, baking powder, baking soda, salt and light brown sugar. Make a well in the center an add buttermilk, beaten egg, olive oil (or butter) and bananas.",
+      "Combine until just mixed. Do not overmix!",
+      "Add in blueberries and give a couple of stirs.Spoon batter into muffin cups until full and then sprinkle the tops with raw sugar.",
+      "Bake for 20 - 25 minutes until golden brown.",
+      "Let cool a few minutes in the pan and then transfer to a wire rack to cool completely."
     ]
   },
   "lunch": {
-    "name": "Butternut Squash Risotto With Pancetta and Sage Oil",
-    "image": "https://img.spoonacular.com/recipes/636601-556x370.jpg",
-    "cookTime": 45,
+    "name": "Easy Instant Pot Beef Tips and Rice",
+    "image": "https://img.spoonacular.com/recipes/1000566-556x370.jpg",
+    "cookTime": 30,
     "ingredients": [
-      "4 tablespoons olive oil",
-      "5 sage leaves",
-      "3 tablespoons butter",
-      "2 large shallots, finely diced",
-      "3 pieces of pancetta, diced",
-      "2 cups Arborio rice",
-      "1 cup dry white wine",
-      "1 package (32 oz) vegetable stock",
-      "1 cup Parmesan cheese",
-      "1 1/2 cups butternut squash puree"
+      "2 pounds of sirloin beef tips",
+      "1 large can (or 2 small cans) cream of mushroom soup",
+      "1 tbsp garlic powder",
+      "1/3 cup of Dale's Seasoning Sauce (or 1/3 cup of Worcestershire and 1 tsp black pepper)",
+      "1 tsp olive oil",
+      "\u00bd medium onion finely chopped",
+      "\u00bd cup water"
     ],
     "steps": [
-      "Warm stock in small saucepan, keep warm.",
-      "In small saut pan warm olive oil with sage leaves until fragrant.  Be careful not to burn leaves.  Cook 5-6 minutes and let cool.",
-      "In a medium saucepan melt butter over medium heat.",
-      "Add shallots and pancetta.  Saut until  shallots are translucent.",
-      "Add rice and stir until coated in butter.",
-      "Add wine and cook 2-3 minutes.",
-      "Slowly begin adding in stock, 1-2 ladles at a time.  Allow rice to absorb liquid before adding another ladle-full..   Continue to cook until rice is al dente (has a little bite).",
-      "Add parmesan and squash puree and mix until smooth and creamy.",
-      "Top with a drizzle of sage oil."
+      "Set Instant Pot to the saute setting. Once warm, add olive oil, beef tips, and onion. Stir and saut for 5 minutes or until meat starts to brown.",
+      "Add water, Dales, and cream of mushroom soup, and garlic powder. Stir to mix well, and then cover with lid.",
+      "Cook on Manual Setting on High Pressure for 25 minutes. It will take a few minutes to come to pressure.",
+      "Once done, allow to naturally release for 20 minutes.",
+      "Serve over rice (or sub noodles or mashed potatoes) and serve with french bread to sop up the gravy."
     ]
   },
   "dinner": {
-    "name": "Sweet Mustard BBQ Pork Chops",
-    "image": "https://img.spoonacular.com/recipes/662535-556x370.jpg",
+    "name": "Almond Horns",
+    "image": "https://img.spoonacular.com/recipes/632140-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "4 bone-in pork chops",
-      "1/4 cup dijon mustard",
-      "2 cloves garlic, crushed",
-      "3 teaspoons coarsely ground black pepper",
-      "1/2 cup honey",
-      "1/4 cup lemon juice",
-      "1/4 cup soy sauce"
+      "3 tablespoons almond extract",
+      "8 cups Finely chopped blanched almonds",
+      "6 Egg whites",
+      "1 1/2 cups sugar"
     ],
     "steps": [
-      "Combine honey, Dijon mustard, lemon juice, soy sauce, and garlic in a bowl. Stir until sugar dissolves.",
-      "Place pork chops in large resealable plastic container or bag.",
-      "Pour marinade over pork chops; seal bag/container. Refrigerate for at least 4 hours (preferably overnight), shaking container or turning bag occasionally.Prepare barbecue (medium-high heat).",
-      "Sprinkle pork chops with fresh cracked pepper.Grill pork chops until instant-read thermometer inserted into center of chops registers 145 F to 150 F, about 5-7 minutes per side, brushing with leftover marinade and moving chops to cooler part of rack if burning.",
-      "Transfer chops to platter; cover with foil, and let stand 5 minutes.",
-      "Serve."
+      "(*) To blanch almonds, dip almonds into boiling water for 1 minute.",
+      "Remove the brown skin covering. Dry in a 200 F oven for 30-45 minutes, stirring occasionally. Use a food processor to chop them to the finest size possible. (A 2-pound bag of almonds is what you'll need for this recipe).Preheat oven to 300 F.",
+      "Combine all of the ingredients thoroughly. Form into desired shapes and sizes (we usually form them into crescents) and bake on greased and floured cookie sheets.",
+      "Bake for 20-30 minutes depending on thickness of cookie. (In my oven, it takes about 24 minutes).NOTES :This recipe is a double recipe. These are one of my favorite cookies-I just LOVE almonds!"
     ]
   }
 }
