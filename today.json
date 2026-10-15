@@ -1,66 +1,72 @@
 {
-  "date": "2026-10-14",
+  "date": "2026-10-15",
   "breakfast": {
-    "name": "Whole Wheat Blueberry Muffins",
-    "image": "https://img.spoonacular.com/recipes/665273-556x370.jpg",
+    "name": "Coconut Bliss Smoothie",
+    "image": "https://img.spoonacular.com/recipes/639728-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 1/2 teaspoon baking powder",
-      "1 teaspoon baking soda",
-      "2 very ripe large bananas",
-      "7 ounces fresh blueberries",
-      "1 cup melted butter",
-      "1 1/4 cup buttermilk",
-      "1 large egg, lightly beaten",
-      "1/2 cup light brown sugar",
-      "1 teaspoon raw sugar",
-      "pinch of fine sea salt",
-      "2 cups whole wheat flour"
+      "Coconut Bliss Smoothie",
+      "2 Frozen Bananas",
+      "1 whole Mango",
+      "1 1/2 cups of Coconut Milk",
+      "3/4 of Pear Puree (or mango puree)",
+      "2 tablespoons of Shredded Coconut (unsweetened)",
+      "2 tablespoons of Chia Seeds"
     ],
     "steps": [
-      "Preheat oven to 350 degrees an line a muffin tin with paper or silicon cups.Peel bananas and mash them in a bowl. Set aside.In a large bowl, combine flour, baking powder, baking soda, salt and light brown sugar. Make a well in the center an add buttermilk, beaten egg, olive oil (or butter) and bananas.",
-      "Combine until just mixed. Do not overmix!",
-      "Add in blueberries and give a couple of stirs.Spoon batter into muffin cups until full and then sprinkle the tops with raw sugar.",
-      "Bake for 20 - 25 minutes until golden brown.",
-      "Let cool a few minutes in the pan and then transfer to a wire rack to cool completely."
+      "Blend until smooth!",
+      "Serve and Enjoy"
     ]
   },
   "lunch": {
-    "name": "Easy Instant Pot Beef Tips and Rice",
-    "image": "https://img.spoonacular.com/recipes/1000566-556x370.jpg",
-    "cookTime": 30,
+    "name": "Italian Tomato and Mozzarella Caprese",
+    "image": "https://img.spoonacular.com/recipes/648275-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "2 pounds of sirloin beef tips",
-      "1 large can (or 2 small cans) cream of mushroom soup",
-      "1 tbsp garlic powder",
-      "1/3 cup of Dale's Seasoning Sauce (or 1/3 cup of Worcestershire and 1 tsp black pepper)",
-      "1 tsp olive oil",
-      "\u00bd medium onion finely chopped",
-      "\u00bd cup water"
+      "1 ounce x fluid balsamic vinegar",
+      "Freshly-ground black pepper to taste",
+      "1/4 cup fresh basil leaves - (packed)",
+      "Sea salt or kosher salt to taste",
+      "1/4 cup Olive oil",
+      "Sprinkle of dry oregano leaves",
+      "12 ounces fresh whole-milk mozzarella",
+      "1 pound vine-ripened tomatoes sliced \u00bc\" thick"
     ],
     "steps": [
-      "Set Instant Pot to the saute setting. Once warm, add olive oil, beef tips, and onion. Stir and saut for 5 minutes or until meat starts to brown.",
-      "Add water, Dales, and cream of mushroom soup, and garlic powder. Stir to mix well, and then cover with lid.",
-      "Cook on Manual Setting on High Pressure for 25 minutes. It will take a few minutes to come to pressure.",
-      "Once done, allow to naturally release for 20 minutes.",
-      "Serve over rice (or sub noodles or mashed potatoes) and serve with french bread to sop up the gravy."
+      "On a large platter, arrange sliced tomatoes and drizzle with balsamic vinegar.",
+      "Place one basil leaf on top of each tomato slice.Slice mozzarella and place on top of basil leaves.",
+      "Sprinkle oregano, salt and black pepper on cheese and drizzle with the olive oil.This recipe yields 4 servings."
     ]
   },
   "dinner": {
-    "name": "Almond Horns",
-    "image": "https://img.spoonacular.com/recipes/632140-556x370.jpg",
+    "name": "Korean Extra Crispy Fried Chicken w Sweet Spicy Glaze",
+    "image": "https://img.spoonacular.com/recipes/649049-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3 tablespoons almond extract",
-      "8 cups Finely chopped blanched almonds",
-      "6 Egg whites",
-      "1 1/2 cups sugar"
+      "24 chicken wings, cut into 3 pieces and tips discarded",
+      "canola oil, for frying (peanut oil if available)",
+      "2 cloves garlic (or garlic powder)",
+      "1 cup soy sauce",
+      "3, 4 Thai chili peppers, deseeded and finely minced",
+      "2 tbsp ketchup",
+      "1, 2 tbsp rice vinegar (or cider vinegar)",
+      "3 tbsp brown sugar",
+      "1 tsp sesame oil",
+      "1 tbsp honey",
+      "2 cups cornstarch (1 cup coating, 1 cup for batter)",
+      "1 cup water",
+      "1/2 tsp salt and pepper",
+      "sesame seeds (garnish)"
     ],
     "steps": [
-      "(*) To blanch almonds, dip almonds into boiling water for 1 minute.",
-      "Remove the brown skin covering. Dry in a 200 F oven for 30-45 minutes, stirring occasionally. Use a food processor to chop them to the finest size possible. (A 2-pound bag of almonds is what you'll need for this recipe).Preheat oven to 300 F.",
-      "Combine all of the ingredients thoroughly. Form into desired shapes and sizes (we usually form them into crescents) and bake on greased and floured cookie sheets.",
-      "Bake for 20-30 minutes depending on thickness of cookie. (In my oven, it takes about 24 minutes).NOTES :This recipe is a double recipe. These are one of my favorite cookies-I just LOVE almonds!"
+      "Cut and discard the end tip of each chicken wing. cut remaining pieces in half at the joint to create 2 pieces. Rinse pieces under cold water and set to dry for at least 10 minutes. In a heavy pot such as a dutch oven, pour in canola or peanut oil to a depth of 3 inches.",
+      "Heat over medium-high for about 15 minutes or until ready for frying.",
+      "In the meantime, combine sauce ingredients of soy, vinegar, sugar, honey, ketchup, sesame oil, Thai chili peppers, and the seasoning in a small sauce pan. Boil until sauce slightly thickens and then set at low heat. Adjust the spiciness/sweetness of the sauce by adding more minced red peppers and/or sugar, continuously tasting for desired result.",
+      "In a large mixing bowl, mix 1 cup cornstarch and salt and pepper. Individually coat each chicken wing pieces with the cornstarch and set aside.",
+      "In another bowl, whisk the remaining cornstarch and water together to make a runny, liquidy batter.",
+      "Add each chicken wing one at a time and coat well. Shake off excess batter and fry the chicken in batches for about 10~13 minutes, or until golden brown, then drain on paper towels. Do not overcrowd the pan when frying each batch.",
+      "Flavor the wings with a brush or by tossing them all together in a mixing bowl.",
+      "Transfer to a serving plate and garnish with sesame seeds. Enjoy and eat while hot!"
     ]
   }
 }
