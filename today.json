@@ -1,72 +1,71 @@
 {
-  "date": "2026-10-15",
+  "date": "2026-10-16",
   "breakfast": {
-    "name": "Coconut Bliss Smoothie",
-    "image": "https://img.spoonacular.com/recipes/639728-556x370.jpg",
+    "name": "Jalapeno Cheese Quick Bread",
+    "image": "https://img.spoonacular.com/recipes/648339-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "Coconut Bliss Smoothie",
-      "2 Frozen Bananas",
-      "1 whole Mango",
-      "1 1/2 cups of Coconut Milk",
-      "3/4 of Pear Puree (or mango puree)",
-      "2 tablespoons of Shredded Coconut (unsweetened)",
-      "2 tablespoons of Chia Seeds"
+      "3/4 cup unbleached all purpose flour",
+      "3/4 cup whole-wheat flour",
+      "1 tbsp baking powder",
+      "1/2 tsp. salt",
+      "1 tbsp light olive oil",
+      "1 egg, lightly beaten",
+      "3/4 cup non-fat milk",
+      "1 cup light cheddar cheese (I used a light Mexican blend)",
+      "1/4 cups pickled jalapenos, drained, diced"
     ],
     "steps": [
-      "Blend until smooth!",
-      "Serve and Enjoy"
+      "Heat oven to 350",
+      "Lightly grease loaf pan, 9x5x3 or two mini muffin pans with cooking spray.",
+      "Stir together flour, cheese, baking powder, and salt in medium bowl.",
+      "Add olive oil, egg and milk, stir till combined. Fold in jalapenos.",
+      "Pour into pan",
+      "Bake 30 to 45 minutes or until golden brown and toothpick inserted in center comes out clean. Cool 5 minutes; run knife around edges of pan to loosen.",
+      "Remove from pan to wire rack. Cool 30 minutes before slicing, if you can wait that long, I didnt."
     ]
   },
   "lunch": {
-    "name": "Italian Tomato and Mozzarella Caprese",
-    "image": "https://img.spoonacular.com/recipes/648275-556x370.jpg",
+    "name": "Asian Broiled Fish",
+    "image": "https://img.spoonacular.com/recipes/632807-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 ounce x fluid balsamic vinegar",
-      "Freshly-ground black pepper to taste",
-      "1/4 cup fresh basil leaves - (packed)",
-      "Sea salt or kosher salt to taste",
-      "1/4 cup Olive oil",
-      "Sprinkle of dry oregano leaves",
-      "12 ounces fresh whole-milk mozzarella",
-      "1 pound vine-ripened tomatoes sliced \u00bc\" thick"
+      "2 fish filets such as cod or",
+      "1 tablespoon dry Sherry",
+      "1 garlic cloves - (to 2) minced",
+      "1/2 teaspoon Grated Ginger Root",
+      "2 tablespoons minced green onion",
+      "2 teaspoons sesame oil",
+      "1/2 teaspoon soy sauce",
+      "1 teaspoon Sugar"
     ],
     "steps": [
-      "On a large platter, arrange sliced tomatoes and drizzle with balsamic vinegar.",
-      "Place one basil leaf on top of each tomato slice.Slice mozzarella and place on top of basil leaves.",
-      "Sprinkle oregano, salt and black pepper on cheese and drizzle with the olive oil.This recipe yields 4 servings."
+      "Combine soy sauce, sesame oil, green onion, garlic, ginger, Sherry and sugar in small bowl."
     ]
   },
   "dinner": {
-    "name": "Korean Extra Crispy Fried Chicken w Sweet Spicy Glaze",
-    "image": "https://img.spoonacular.com/recipes/649049-556x370.jpg",
+    "name": "The Best Chicken Salad Sandwich",
+    "image": "https://img.spoonacular.com/recipes/663219-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "24 chicken wings, cut into 3 pieces and tips discarded",
-      "canola oil, for frying (peanut oil if available)",
-      "2 cloves garlic (or garlic powder)",
-      "1 cup soy sauce",
-      "3, 4 Thai chili peppers, deseeded and finely minced",
-      "2 tbsp ketchup",
-      "1, 2 tbsp rice vinegar (or cider vinegar)",
-      "3 tbsp brown sugar",
-      "1 tsp sesame oil",
-      "1 tbsp honey",
-      "2 cups cornstarch (1 cup coating, 1 cup for batter)",
-      "1 cup water",
-      "1/2 tsp salt and pepper",
-      "sesame seeds (garnish)"
+      "3 cooked chicken breasts, chopped",
+      "1 stalk celery, chopped- about \u00be cup",
+      "2 green onions, chopped",
+      "1/2 cup seedless grapes, halved",
+      "3/4 cup dried cranberries",
+      "1/2 cup toasted almonds",
+      "3/4 cup mayonnaise",
+      "1 tablespoon celery seeds",
+      "1 teaspoon each: paprika and salt",
+      "Coarsely ground black pepper, to taste",
+      "french bread"
     ],
     "steps": [
-      "Cut and discard the end tip of each chicken wing. cut remaining pieces in half at the joint to create 2 pieces. Rinse pieces under cold water and set to dry for at least 10 minutes. In a heavy pot such as a dutch oven, pour in canola or peanut oil to a depth of 3 inches.",
-      "Heat over medium-high for about 15 minutes or until ready for frying.",
-      "In the meantime, combine sauce ingredients of soy, vinegar, sugar, honey, ketchup, sesame oil, Thai chili peppers, and the seasoning in a small sauce pan. Boil until sauce slightly thickens and then set at low heat. Adjust the spiciness/sweetness of the sauce by adding more minced red peppers and/or sugar, continuously tasting for desired result.",
-      "In a large mixing bowl, mix 1 cup cornstarch and salt and pepper. Individually coat each chicken wing pieces with the cornstarch and set aside.",
-      "In another bowl, whisk the remaining cornstarch and water together to make a runny, liquidy batter.",
-      "Add each chicken wing one at a time and coat well. Shake off excess batter and fry the chicken in batches for about 10~13 minutes, or until golden brown, then drain on paper towels. Do not overcrowd the pan when frying each batch.",
-      "Flavor the wings with a brush or by tossing them all together in a mixing bowl.",
-      "Transfer to a serving plate and garnish with sesame seeds. Enjoy and eat while hot!"
+      "Cut chicken into bite sized pieces.",
+      "Chop up grapes, celery, and onion.",
+      "Toast slivered almonds on the broil setting in the oven.  Watch them like a hawk--I have burned more almonds, coconut, pecans than I can count.",
+      "Throw this all together with the chicken.",
+      "Add salad dressing, celery seed, paprika and pepper to taste."
     ]
   }
 }
