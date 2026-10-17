@@ -1,71 +1,88 @@
 {
-  "date": "2026-10-16",
+  "date": "2026-10-17",
   "breakfast": {
-    "name": "Jalapeno Cheese Quick Bread",
-    "image": "https://img.spoonacular.com/recipes/648339-556x370.jpg",
+    "name": "Blueberry Banana Pancakes",
+    "image": "https://img.spoonacular.com/recipes/635418-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3/4 cup unbleached all purpose flour",
-      "3/4 cup whole-wheat flour",
-      "1 tbsp baking powder",
-      "1/2 tsp. salt",
-      "1 tbsp light olive oil",
-      "1 egg, lightly beaten",
-      "3/4 cup non-fat milk",
-      "1 cup light cheddar cheese (I used a light Mexican blend)",
-      "1/4 cups pickled jalapenos, drained, diced"
+      "1/2 teaspoon baking soda",
+      "\u00bd cups Banana, Mashed, Divided",
+      "Fresh blueberries",
+      "\u00bd cups Egg Whites",
+      "\u00bd cups Greek Yogurt, Plain",
+      "1 teaspoon salt",
+      "3/4 cup sugar",
+      "1 teaspoon vanilla extract",
+      "\u00bd cups Whole Wheat Pastry Flour"
     ],
     "steps": [
-      "Heat oven to 350",
-      "Lightly grease loaf pan, 9x5x3 or two mini muffin pans with cooking spray.",
-      "Stir together flour, cheese, baking powder, and salt in medium bowl.",
-      "Add olive oil, egg and milk, stir till combined. Fold in jalapenos.",
-      "Pour into pan",
-      "Bake 30 to 45 minutes or until golden brown and toothpick inserted in center comes out clean. Cool 5 minutes; run knife around edges of pan to loosen.",
-      "Remove from pan to wire rack. Cool 30 minutes before slicing, if you can wait that long, I didnt."
+      "Mix greek yogurt, 1/4 cup banana, egg whites & vanilla extract into a small bowl",
+      "In a separate bowl combine flour, baking soda, sugar, & salt",
+      "Combine and whisk till evenly mixed",
+      "Fold in 1/2 cup blueberries",
+      "Place 1/4-cup batter onto non-stick skillet and cook till bubbles start appearing through the top of the pancake and then flip. NOTE: Cook on medium heat and I flattened out my batter with the spatula to cook more evenly.About 1-2 minutes on each side",
+      "For the blueberry sauce:In a sauce pan, add remaining banana and blueberries and stir until thick, mashing blueberries, about 5-7 minutes.",
+      "Pour over top of pancakes.Note: I used frozen blueberries for sauce and fresh for pancakes.Makes  8 pancakes total  serving size 2Calorie per serving (4 pancakes total)  231, Fat: .08, Cholesterol: 0, Sodium: 391, Potassium: 304, Carbs: 42, Fiber: 6.6, Sugar: 12, Protein: 14.3"
     ]
   },
   "lunch": {
-    "name": "Asian Broiled Fish",
-    "image": "https://img.spoonacular.com/recipes/632807-556x370.jpg",
+    "name": "Apple Cheddar Turkey Burgers With Chipotle Yogurt Sauce",
+    "image": "https://img.spoonacular.com/recipes/632502-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 fish filets such as cod or",
-      "1 tablespoon dry Sherry",
-      "1 garlic cloves - (to 2) minced",
-      "1/2 teaspoon Grated Ginger Root",
-      "2 tablespoons minced green onion",
-      "2 teaspoons sesame oil",
-      "1/2 teaspoon soy sauce",
-      "1 teaspoon Sugar"
+      "1 whole apple, diced",
+      "1/2 cup bread crumbs",
+      "1 pound ground turkey (give or take 3 ounces depending on package weight)",
+      "1-2 tablespoons chipotle hot sauce (or your favorite hot sauce or salsa)",
+      "1/4 onion, finely chopped",
+      "1 cup plain yogurt",
+      "Salt and Pepper to taste",
+      "1 cup sharp cheddar cheese, grated",
+      "Garnish with diced green onions"
     ],
     "steps": [
-      "Combine soy sauce, sesame oil, green onion, garlic, ginger, Sherry and sugar in small bowl."
+      "Mix burger ingredients in a bowl and shape into 4-6 patties. Grill (or pan fry) for 2 minutes each side or until juices run clear.",
+      "Serve with a dollop of chipotle yogurt sauce."
     ]
   },
   "dinner": {
-    "name": "The Best Chicken Salad Sandwich",
-    "image": "https://img.spoonacular.com/recipes/663219-556x370.jpg",
+    "name": "Chipotle Cheese Stuffed Black Bean Burgers with Avocado Creme",
+    "image": "https://img.spoonacular.com/recipes/638744-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3 cooked chicken breasts, chopped",
-      "1 stalk celery, chopped- about \u00be cup",
-      "2 green onions, chopped",
-      "1/2 cup seedless grapes, halved",
-      "3/4 cup dried cranberries",
-      "1/2 cup toasted almonds",
-      "3/4 cup mayonnaise",
-      "1 tablespoon celery seeds",
-      "1 teaspoon each: paprika and salt",
-      "Coarsely ground black pepper, to taste",
-      "french bread"
+      "15oz can black beans, rinsed and drained",
+      "1/2 small yellow onion, diced",
+      "2-3 large mushrooms, diced",
+      "1 egg, beaten",
+      "1/2 cup panko bread crumbs",
+      "1 tsp cumin",
+      "1/2 tsp chipotle chili powder (adjust according to how spicy you like it)",
+      "salt/pepper, to taste",
+      "olive oil, for saute (I like Devo Olive Oil's Chipotle or Wild Mushroom and Sage flavors)",
+      "Approx 4 tbsp softened cream cheese spread, chipotle flavor if available",
+      "hamburger buns, toasted",
+      "4 slices of cheese, optional",
+      "burgers toppings like lettuce, kale, or spinach leaves and sliced tomato",
+      "1 ripe avocado, peeled, pitted, and cut into wedges",
+      "1/4 cup sour cream (start with 2 tbsp then add until you get the consistency you like)",
+      "1 tbsp lime juice",
+      "sea salt, to taste"
     ],
     "steps": [
-      "Cut chicken into bite sized pieces.",
-      "Chop up grapes, celery, and onion.",
-      "Toast slivered almonds on the broil setting in the oven.  Watch them like a hawk--I have burned more almonds, coconut, pecans than I can count.",
-      "Throw this all together with the chicken.",
-      "Add salad dressing, celery seed, paprika and pepper to taste."
+      "Add a swirl of olive oil to a skillet and add diced mushrooms and onions.",
+      "Saute until softened then season with salt and pepper.",
+      "Add drained black beans to a medium bowl and press and mash with a fork.",
+      "Mix in mushrooms and onions then add egg and bread crumbs.",
+      "Finally mix in cumin and chipotle chili powder.",
+      "Roll and form into burger patties (sliders or full size).",
+      "Form a indent in the center of each burger",
+      "Add a spoonful of cream cheese spread to the indent in the burgers and then form the burger over the cream cheese.",
+      "Heat a skillet over medium heat, add a swirl of olive oil.",
+      "Add 2 burgers at a time and sear on each side until cooked and browned, about 4 minutes each side.",
+      "If you want to add sliced cheese on top, add now and cover skillet to steam and melt cheese.",
+      "Remove to a plate, then cook remaining patties.",
+      "For the avocado creme, combine all ingredients in a food processor or blender, and mix until smooth. Taste and add more sour cream or lime juice if needed.",
+      "To plate, add each hot cooked burger to an open toasted bun. Top with lettuce and tomato (optional) and a hearty scoop of avocado creme and then top with bun."
     ]
   }
 }
