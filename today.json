@@ -1,82 +1,77 @@
 {
-  "date": "2026-10-18",
+  "date": "2026-10-19",
   "breakfast": {
-    "name": "Strawberry Banana Stuffed Pancakes",
-    "image": "https://img.spoonacular.com/recipes/661758-556x370.jpg",
-    "cookTime": 30,
+    "name": "Sweet Potato Hashbrown Breakfast Bake",
+    "image": "https://img.spoonacular.com/recipes/662581-556x370.jpg",
+    "cookTime": 70,
     "ingredients": [
-      "\u00bd teaspoons Baking Soda",
-      "1/2 cup Ripe Banana, Mashed",
-      "2 whole Egg Whites",
-      "1/3 cups Non-Fat Greek Yogurt",
-      "Salt",
-      "10 whole Strawberries, Fresh, Diced",
-      "1 1/2 teaspoons Sugar",
-      "\u00bd teaspoons Vanilla Extract",
-      "1/3 cups Whole Wheat Pastry Flour"
+      "4 eggs",
+      "4 cloves garlic, minced",
+      "\u00bc Cup green onions, chopped",
+      "Kosher salt and fresh ground pepper",
+      "4 tablespoons of Olive Oil",
+      "1 red bell pepper, chopped",
+      "\u00bd red onion, chopped",
+      "\u00bc Cup shredded sharp cheddar cheese (like an English Cheddar)",
+      "2 sweet potatoes, peeled and chopped into 1-inch cubes"
     ],
     "steps": [
-      "Mix together the Greek yogurt, 1/4 cup banana, egg whites, and vanilla extract into a small bowl.In a separate bowl combine flour, baking soda, 1/2 teaspoon sugar, and salt.",
-      "Combine both bowls and whisk until evenly mixed.Fold in 5 fresh, chopped strawberries."
+      "Preheat oven to 35",
+      "Peel and chop sweet potatoes into 1 inch cubes.",
+      "Spread peeled/cubed sweet potatoes out over a half sheet rimmed baking sheet. Coat with 2 tbs of olive oil and sprinkle of salt and pepper.",
+      "Bake for 30-35 minutes until fork tender and browned.Meanwhile, heat 2 tbs olive oil in a large skillet over medium-high heat.",
+      "Add the red onions, bell peppers, green onions and garlic and saute until tender and lightly golden  about 5-6 minutes. Season with salt and pepper to taste.Portion out sweet potato hashbrown cubes between ramekins. Make a nest indentation in the top of each ramekin filled with hashbrowns.",
+      "Sprinkle grated sharp cheddar over the top of each ramekin. Crack an egg over each nested out spot.",
+      "Bake at 425 for 5-6 minutes. If the hashbrowns have been refrigerated, bake until each yolk is set and white has turned white!"
     ]
   },
   "lunch": {
-    "name": "Salmon Frittata",
-    "image": "https://img.spoonacular.com/recipes/659081-556x370.jpg",
+    "name": "Lemon, Garlic and Thyme Roast Chicken \u2013 Quick and Easy Method",
+    "image": "https://img.spoonacular.com/recipes/649827-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 cans canned salmon",
-      "1/4 teaspoon Cayenne pepper",
-      "1 teaspoon Dried basil",
-      "12 Eggs, beaten",
-      "10 ounces Frozen chopped spinach thawed and drained",
-      "1 pint Nonfat cottage cheese",
-      "2 cups Shredded Swiss cheese"
+      "knob of butter",
+      "1 lemon (juiced and zested)",
+      "olive oil",
+      "6 roasted garlic pieces",
+      "salt and pepper",
+      "1 bunch of thyme",
+      "1 kilogram whole chicken"
     ],
     "steps": [
-      "Drain and flake salmon. Spray 9 x 13-inch baking pan with non-stick vegetable coating.",
-      "Combine flaked salmon with remaining ingredients and pour into prepared baking pan.",
-      "Bake at 375 F for 30 minutes, or until frittata is set."
+      "Heat your oven to 220 C (only for 10 minutes, before turning it down to 180 C)Take lemon zest,roasted garlic, butter and 1/2 the bunch of thyme and fill the underside of the chicken skin. This way all your flavours are seeping into your meat.Pat chicken dry with paper towel, rub the chicken all over with a 2tsp of salt, pepper and olive oil. Not only are you further flavouring the chicken, but the chicken skin will be crispier when roasted.Put chicken on to a roasting pan, pour lemon juice around it. Put lemon skins and remaining thyme underneath the chicken.Roast for 10 minutes on 220C, then lower the heat to 180 C and cook for a further 25- 35 mins depending on how large the chicken is.You can check if your chicken is ready by inserting a skewer/ fork into the thickest part ( thigh). If the juices run clear, your chicken is ready. If its still is pink, leave it in for a couple more minutes.Take chicken out, keep warm and rest the chicken while you make the sauce.Sauce on the side: Deglaze the roasting pan with a little white wine and chicken stock, bring to a simmer.",
+      "Add a cornflour mixture (water and cornflour) till you are happy with the consistency of the sauce. Season to tasteYUM, its all the lemony, buttery, garlicky thyme goodness"
     ]
   },
   "dinner": {
-    "name": "Stuffed Pork Tenderloin with Marsala-Port Sauce",
-    "image": "https://img.spoonacular.com/recipes/662075-556x370.jpg",
+    "name": "Cheese Tortellini With Shrimp In Tomato Cream Sauce",
+    "image": "https://img.spoonacular.com/recipes/637593-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 shallot finely sliced",
-      "\u00bd yellow onion, finely diced",
-      "4 -5 mushrooms, stem removed, thinly sliced",
-      "\u00bd cup dried apricots",
-      "1 tablespoons raisins",
-      "2 tablespoons dried cranberries",
-      "2 tablespoons flat leaves parsley",
-      "1 large pork tenderloin",
-      "\u00bd cup Marsala",
-      "\u00bd cup Port",
-      "1 tablespoon butter",
-      "2 tablespoons heavy cream",
-      "\u00bd teaspoon Olive oil",
-      "Salt and pepper"
+      "14 ounces can Italian diced tomatoes, do not drain",
+      "1 bag frozen cheese tortellini",
+      "1 chicken bullion cube, crushed",
+      "2 teaspoons chopped fresh parsley",
+      "4 teaspoons of fresh or dried thyme",
+      "2 large garlic cloves, minced",
+      "1 1/2 cups heavy cream or half and half (both are equally good)",
+      "4 Tbs. olive oil",
+      "Freshly-grated Parmesan cheese for garnish",
+      "Salt and freshly grounded pepper to taste",
+      "1/2 pound large fresh or frozen shrimp (thawed, peeled and tails removed)"
     ],
     "steps": [
-      "Preheat the oven to 450 .",
-      "In large skillet, over medium heat warm the olive oil.",
-      "Add the onions, shallots and mushrooms. Cook until the onions are translucent.",
-      "Remove from the heat.",
-      "In a small food processor add the dried apricots, raisins, dried cranberries, parsley and the onion mushrooms mixture.  Pulse for a few times until everything is minced and well combined.",
-      "Cut the tenderloin in half crosswise. Butterfly each sections making sure not to go completely thru the meat.",
-      "Salt and pepper generously each section.",
-      "Spread the onion mushroom mixture over on side.",
-      "Place the other half of the meat  over the mixture and seal the sides with toothpicks. Season generously with salt and pepper on each side.",
-      "In the same pan that the onions were cooked, heat  teaspoon of olive oil and add the pork tenderloin. Sear each side for about 3-5 minutes.",
-      "Place in the hot over and cook for another 20 to 30  minutes, or until no juices are running off the pork tenderloin.",
-      "Remove from the oven, transfer the meat on a dish and cover with aluminum foil.",
-      "Pour off any fat from the pan, or bits of meat that may have fallen from the pork.",
-      "Add the marsala and port wine. Bring to a boil and with a spatula scrape up any browned bits on the bottom of the pan.",
-      "Add any pan juices from the tenderloin and continue cooking until the sauce is reduced to  cup.",
-      "Remove from the heat and add the butter and cream. Swirl around to ensure butter is melted.",
-      "Remove the toothpicks and cut the pork tenderloin crosswise. Arrange on a plate and pour the sauce over it, or alongside."
+      "Thaw frozen shrimp according to package directions if using frozen, and then peel, devein and rinse shrimp in a colander.While shrimp are draining, fill a medium size saucepan with cold water and cook tortellini according to package directions.  Do NOT overcook your tortellini, no more than 2-3 mins once tortellini are added to boiling water.",
+      "Drain pasta and set aside.Using the same saucepan combine diced tomatoes, crushed bullion, parsley and thyme and bring to a low simmer.While tomatoes are simmering bring a large skillet to medium heat and add olive oil.",
+      "Heat olive oil and add minced garlic, cooking just until slightly opaque (approx. 1 min).",
+      "Add garlic and olive oil to tomatoes, stir.  Taking a fork crush tomatoes, breaking up the pieces until you have a chunky sauce.",
+      "Add cream to skillet that you used for garlic and bring to a low simmer.",
+      "Add tomato sauce, Parmesan cheese and salt and pepper to taste to cream and bring to slow simmer",
+      "Add cream to skillet that you used for garlic and bring to a slow simmer.",
+      "Add tomato sauce, Parmesan cheese and salt and pepper to taste to cream and bring back up to a slow simmer.Reduce heat on cream sauce to low to keep warm and continue to stir occasionally.At this point you can butterfly your shrimp, which helps to make the amount of shrimp seem more substantial, but this is not a necessary step.To butterfly your shrimp, place on cutting board and with a very sharp knife, open up shrimp along the back but not cutting all the way through.",
+      "Add shrimp to cream sauce and cover, allowing shrimp to cook for approximately 4-5 minutes.",
+      "Add tortellini to pan coating  with cream sauce and seasoning if necessary with additional salt and pepper.",
+      "Remove from heat.Plate and top with a sprinkle of shredded parmesan cheese."
     ]
   }
 }
