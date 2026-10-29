@@ -17,6 +17,7 @@
   /* Motion tokens */
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
   color-scheme: light;
 }
 body.dark {
@@ -361,6 +362,22 @@ hr.sep { border: none; border-top: 1px dashed var(--border); margin: 14px 0; }
 }
 .share-dot svg { width: 26px; height: 26px; display: block; }
 .share-logo { width: 52px; height: 52px; display: block; }
+
+/* Hover (mouse only): the circle lifts on a transition so it retargets cleanly when the
+   pointer leaves; the mark gives one small wiggle. Separate translate/scale/rotate
+   properties so the wiggle doesn't cancel the lift. */
+.share-dot, .share-logo { transition: translate 200ms var(--ease-out), scale 200ms var(--ease-out); }
+@media (hover: hover) and (pointer: fine) {
+  .share-icon:hover .share-dot, .share-icon:hover .share-logo { translate: 0 -3px; scale: 1.06; }
+  .share-icon:hover .share-dot svg, .share-icon:hover .share-logo { animation: share-wiggle 400ms var(--ease-in-out); }
+}
+@keyframes share-wiggle {
+  0% { rotate: 0deg; }
+  25% { rotate: -10deg; }
+  50% { rotate: 8deg; }
+  75% { rotate: -4deg; }
+  100% { rotate: 0deg; }
+}
 /* Black marks (X, TikTok) need an edge to separate them from the dark sheet */
 body.dark .share-dot { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18); }
 .copy-row { display: flex; gap: 10px; }
@@ -395,6 +412,8 @@ body.dark .share-dot { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18); }
   .overlay.open .sheet { opacity: 1; }
   .share-icon, .overlay.open .share-icon { transform: none; transition: opacity 200ms ease; transition-delay: 0s; }
   .toast, .toast.show { transform: translate(-50%, 0); }
+  .share-icon:hover .share-dot, .share-icon:hover .share-logo { translate: none; scale: none; }
+  .share-icon:hover .share-dot svg, .share-icon:hover .share-logo { animation: none; }
   .tile img { transition: none; }
   .tile:hover img { transform: none; }
 }
