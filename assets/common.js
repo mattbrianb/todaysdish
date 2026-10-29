@@ -12,9 +12,9 @@ function showToast(msg) {
   const t = document.getElementById("toast");
   if (!t) return;
   t.textContent = msg;
-  t.style.display = "block";
+  t.classList.add("show");
   clearTimeout(showToast._timer);
-  showToast._timer = setTimeout(() => { t.style.display = "none"; }, 1600);
+  showToast._timer = setTimeout(() => { t.classList.remove("show"); }, 1600);
 }
 
 /* Overlays (share sheet, recipe sheet) */

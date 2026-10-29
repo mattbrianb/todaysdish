@@ -110,7 +110,9 @@ function renderBoard(data) {
     const img = el("img");
     img.src = d.image;
     img.alt = "";
-    tile.append(img, el("span", "tile-label", [label, cookTime(d)].filter(Boolean).join(" · ")), el("span", "tile-hint", "See recipe"));
+    tile.append(img, el("span", "tile-label", label));
+    if (cookTime(d)) tile.append(el("span", "tile-time", cookTime(d)));
+    tile.append(el("span", "tile-hint", "See recipe"));
     tiles.append(tile);
   }
   board.append(el("div", "board-foot", "No substitutions"));
