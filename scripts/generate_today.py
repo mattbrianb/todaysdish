@@ -1,4 +1,5 @@
 import os
+import random
 import requests
 import json
 from datetime import datetime, timedelta, timezone
@@ -68,6 +69,10 @@ def to_dish(recipe):
     }
 
 
+def meal_label(tags):
+    return ", ".join(tags) if isinstance(tags, (list, tuple)) else tags
+
+
 def get_recipe_with_image(tags, last_served, used_today, attempts=4):
     """Pick a recipe not served in the last NO_REPEAT_DAYS (by name or id).
 
@@ -75,12 +80,15 @@ def get_recipe_with_image(tags, last_served, used_today, attempts=4):
     rather than failing the day.
     """
     fallback, fallback_date = None, None
+    # Several tags widen the pool: start at a random one and rotate through them
+    tag_options = tags if isinstance(tags, (list, tuple)) else [tags]
+    start = random.randrange(len(tag_options))
 
-    for _ in range(attempts):
+    for attempt in range(attempts):
         params = {
             "apiKey": API_KEY,
             "number": 10,
-            "tags": tags
+            "tags": tag_options[(start + attempt) % len(tag_options)]
         }
 
         response = requests.get(BASE_URL, params=params, timeout=30)
@@ -102,10 +110,10 @@ def get_recipe_with_image(tags, last_served, used_today, attempts=4):
                 fallback, fallback_date = recipe, served_on
 
     if fallback is not None:
-        print(f"[{tags}] no fresh recipe found, repeating one last served {fallback_date}")
+        print(f"[{meal_label(tags)}] no fresh recipe found, repeating one last served {fallback_date}")
         return to_dish(fallback)
 
-    raise RuntimeError(f"No valid recipe with image found for tags: {tags}")
+    raise RuntimeError(f"No valid recipe with image found for tags: {meal_label(tags)}")
 
 
 def main():
@@ -135,7 +143,8 @@ def main():
 
     used_today = set()
     result = {"date": str(today)}
-    for meal, tags in (("breakfast", "breakfast"), ("lunch", "main course"), ("dinner", "dinner")):
+    # Spoonacular files many morning recipes under "brunch" or "morning meal" rather than "breakfast"
+    for meal, tags in (("breakfast", ["breakfast", "brunch", "morning meal"]), ("lunch", "main course"), ("dinner", "dinner")):
         dish = get_recipe_with_image(tags, last_served, used_today)
         result[meal] = dish
         used_today |= {name_key(dish["name"]), str(dish["id"])}

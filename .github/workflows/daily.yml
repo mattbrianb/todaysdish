@@ -24,7 +24,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests pillow
 
       - name: Generate today's dishes
         env:
@@ -33,10 +33,15 @@ jobs:
           FORCE: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
         run: python scripts/generate_today.py
 
+      - name: Draw today's share card
+        env:
+          FORCE: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
+        run: python scripts/make_share_card.py
+
       - name: Commit updated today.json
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add today.json history.json
+          git add today.json history.json og.jpg share
           git commit -m "Update today's dishes" || echo "No changes"
           git push
