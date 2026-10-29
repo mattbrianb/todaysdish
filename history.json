@@ -1,0 +1,2749 @@
+{
+  "served": [
+    {
+      "date": "2026-04-29",
+      "meal": "breakfast",
+      "name": "Whole Wheat Blueberry Muffins"
+    },
+    {
+      "date": "2026-04-29",
+      "meal": "lunch",
+      "name": "Turkey BLT with Creamy Dijon Mustard"
+    },
+    {
+      "date": "2026-04-29",
+      "meal": "dinner",
+      "name": "Instant Pot Chili Mac"
+    },
+    {
+      "date": "2026-04-30",
+      "meal": "breakfast",
+      "name": "Overnight Steel Cut Oatmeal"
+    },
+    {
+      "date": "2026-04-30",
+      "meal": "lunch",
+      "name": "3 Cheese Ravioli"
+    },
+    {
+      "date": "2026-04-30",
+      "meal": "dinner",
+      "name": "Farro & Leek Soup"
+    },
+    {
+      "date": "2026-05-01",
+      "meal": "breakfast",
+      "name": "Caramelized cranberries coconut pancakes"
+    },
+    {
+      "date": "2026-05-01",
+      "meal": "lunch",
+      "name": "Pasta With Chicken and Broccoli"
+    },
+    {
+      "date": "2026-05-01",
+      "meal": "dinner",
+      "name": "Bridget Jones's Shepherd's Pie"
+    },
+    {
+      "date": "2026-05-02",
+      "meal": "breakfast",
+      "name": "Cinnamon Mocha Quick Bread"
+    },
+    {
+      "date": "2026-05-02",
+      "meal": "lunch",
+      "name": "Spicy Korean Bbq Pork"
+    },
+    {
+      "date": "2026-05-02",
+      "meal": "dinner",
+      "name": "Amazing Chicken Burgers"
+    },
+    {
+      "date": "2026-05-03",
+      "meal": "breakfast",
+      "name": "Strawberry Shortcake w. Mini Strawberry PopTarts"
+    },
+    {
+      "date": "2026-05-03",
+      "meal": "lunch",
+      "name": "Easy Vegetable Beef Soup"
+    },
+    {
+      "date": "2026-05-03",
+      "meal": "dinner",
+      "name": "Ancho Chipotle Chili"
+    },
+    {
+      "date": "2026-05-04",
+      "meal": "breakfast",
+      "name": "Spicy Coconut French Toast"
+    },
+    {
+      "date": "2026-05-04",
+      "meal": "lunch",
+      "name": "Pumpkin Ravioli With Browned Butter Sage Sauce"
+    },
+    {
+      "date": "2026-05-04",
+      "meal": "dinner",
+      "name": "Salmon Confit with Lemongrass Sauce"
+    },
+    {
+      "date": "2026-05-05",
+      "meal": "breakfast",
+      "name": "Cheesy Potato Corn Scones"
+    },
+    {
+      "date": "2026-05-05",
+      "meal": "lunch",
+      "name": "Seared Scallops With Wilted Greens"
+    },
+    {
+      "date": "2026-05-05",
+      "meal": "dinner",
+      "name": "Fettuccine With Bacon Mushroom and Peas"
+    },
+    {
+      "date": "2026-05-06",
+      "meal": "breakfast",
+      "name": "Chive and dill muffins"
+    },
+    {
+      "date": "2026-05-06",
+      "meal": "lunch",
+      "name": "Slow Cooker Beef Stew"
+    },
+    {
+      "date": "2026-05-06",
+      "meal": "dinner",
+      "name": "Basil Marinated Grilled Chicken"
+    },
+    {
+      "date": "2026-05-07",
+      "meal": "breakfast",
+      "name": "Cherry Coconut Milk Smoothie"
+    },
+    {
+      "date": "2026-05-07",
+      "meal": "lunch",
+      "name": "Figure Friendly Mushroom and Bacon Strata"
+    },
+    {
+      "date": "2026-05-07",
+      "meal": "dinner",
+      "name": "Stuffed Salmon With Tomato-Olive Tapenade"
+    },
+    {
+      "date": "2026-05-08",
+      "meal": "breakfast",
+      "name": "Peaches And Cream Oatmeal"
+    },
+    {
+      "date": "2026-05-08",
+      "meal": "lunch",
+      "name": "Superbowl Chili"
+    },
+    {
+      "date": "2026-05-08",
+      "meal": "dinner",
+      "name": "Roasted Cabbage Wedge Salad with Yogurt Gorgonzola Dressing"
+    },
+    {
+      "date": "2026-05-09",
+      "meal": "breakfast",
+      "name": "Homemade Muesli Breakfast Cereal"
+    },
+    {
+      "date": "2026-05-09",
+      "meal": "lunch",
+      "name": "Turkey BLT with Creamy Dijon Mustard"
+    },
+    {
+      "date": "2026-05-09",
+      "meal": "dinner",
+      "name": "Easy Chicken, Kielbasa and Shrimp Paella"
+    },
+    {
+      "date": "2026-05-10",
+      "meal": "breakfast",
+      "name": "Banana Blueberry Pancakes"
+    },
+    {
+      "date": "2026-05-10",
+      "meal": "lunch",
+      "name": "Simple Roast Chicken"
+    },
+    {
+      "date": "2026-05-10",
+      "meal": "dinner",
+      "name": "Herbivoracious' White Bean and Kale Soup"
+    },
+    {
+      "date": "2026-05-11",
+      "meal": "breakfast",
+      "name": "Bananas Foster French Toast By Mommie Cooks"
+    },
+    {
+      "date": "2026-05-11",
+      "meal": "lunch",
+      "name": "Easy Slow Cooker Chicken Tortilla Soup"
+    },
+    {
+      "date": "2026-05-11",
+      "meal": "dinner",
+      "name": "Chicken Piccata with Artichokes"
+    },
+    {
+      "date": "2026-05-12",
+      "meal": "breakfast",
+      "name": "Chocolatey Overnight Oats with Strawberries"
+    },
+    {
+      "date": "2026-05-12",
+      "meal": "lunch",
+      "name": "A Christmas With Peking Duck"
+    },
+    {
+      "date": "2026-05-12",
+      "meal": "dinner",
+      "name": "Creamy Chicken Orzo Soup"
+    },
+    {
+      "date": "2026-05-13",
+      "meal": "breakfast",
+      "name": "Peaches And Cream Oatmeal"
+    },
+    {
+      "date": "2026-05-13",
+      "meal": "lunch",
+      "name": "Arroz Con Pollo"
+    },
+    {
+      "date": "2026-05-13",
+      "meal": "dinner",
+      "name": "Quick and Easy Southwestern Corn Chowder"
+    },
+    {
+      "date": "2026-05-14",
+      "meal": "breakfast",
+      "name": "Havarti and Asparagus Quiche"
+    },
+    {
+      "date": "2026-05-14",
+      "meal": "lunch",
+      "name": "Brussels Sprout Carbonara with Fettuccini"
+    },
+    {
+      "date": "2026-05-14",
+      "meal": "dinner",
+      "name": "Lemony Greek Lentil Soup"
+    },
+    {
+      "date": "2026-05-15",
+      "meal": "breakfast",
+      "name": "Breakfast Biscuits and Gravy"
+    },
+    {
+      "date": "2026-05-15",
+      "meal": "lunch",
+      "name": "Saucy Shredded Barbecue Chicken"
+    },
+    {
+      "date": "2026-05-15",
+      "meal": "dinner",
+      "name": "Mummy Meatballs with Spaghetti"
+    },
+    {
+      "date": "2026-05-16",
+      "meal": "breakfast",
+      "name": "Moist Vegan Spelt Bran Muffins"
+    },
+    {
+      "date": "2026-05-16",
+      "meal": "lunch",
+      "name": "Turkish Chicken Salad with Home-made Cacik Yogurt Sauce"
+    },
+    {
+      "date": "2026-05-16",
+      "meal": "dinner",
+      "name": "Cheesy Chicken Enchilada Quinoa Casserole"
+    },
+    {
+      "date": "2026-05-17",
+      "meal": "breakfast",
+      "name": "Caprese Quick Bread"
+    },
+    {
+      "date": "2026-05-17",
+      "meal": "lunch",
+      "name": "Lemon, Garlic and Thyme Roast Chicken – Quick and Easy Method"
+    },
+    {
+      "date": "2026-05-17",
+      "meal": "dinner",
+      "name": "Chipotle Cheese Stuffed Black Bean Burgers with Avocado Creme"
+    },
+    {
+      "date": "2026-05-18",
+      "meal": "breakfast",
+      "name": "Whole Wheat Blueberry Muffins"
+    },
+    {
+      "date": "2026-05-18",
+      "meal": "lunch",
+      "name": "Spicy Salad with Kidney Beans, Cheddar, and Nuts"
+    },
+    {
+      "date": "2026-05-18",
+      "meal": "dinner",
+      "name": "Baked Macaroni and Cheese"
+    },
+    {
+      "date": "2026-05-19",
+      "meal": "breakfast",
+      "name": "Chocolate Chip Coconut Muffins"
+    },
+    {
+      "date": "2026-05-19",
+      "meal": "lunch",
+      "name": "Crispy Buttermilk Fried Chicken"
+    },
+    {
+      "date": "2026-05-19",
+      "meal": "dinner",
+      "name": "Vegetable Coconut Sambar"
+    },
+    {
+      "date": "2026-05-20",
+      "meal": "breakfast",
+      "name": "Blueberry Banana Pancakes"
+    },
+    {
+      "date": "2026-05-20",
+      "meal": "lunch",
+      "name": "Easy Chicken Tandoori"
+    },
+    {
+      "date": "2026-05-20",
+      "meal": "dinner",
+      "name": "Rigatoni With Sweet Sausages In Creamy Tomato Sauce"
+    },
+    {
+      "date": "2026-05-21",
+      "meal": "breakfast",
+      "name": "Baked Eggs and Bacon Cream In Spinach Fettuccine Nests"
+    },
+    {
+      "date": "2026-05-21",
+      "meal": "lunch",
+      "name": "Seared Pork Chops with Mango Salsa"
+    },
+    {
+      "date": "2026-05-21",
+      "meal": "dinner",
+      "name": "Shrimp and Asparagus Foil Packs with Garlic Lemon Butter Sauce"
+    },
+    {
+      "date": "2026-05-22",
+      "meal": "breakfast",
+      "name": "Classic scones"
+    },
+    {
+      "date": "2026-05-22",
+      "meal": "lunch",
+      "name": "Curried Butternut Squash Soup"
+    },
+    {
+      "date": "2026-05-22",
+      "meal": "dinner",
+      "name": "Crab Salad in Avocado Boats"
+    },
+    {
+      "date": "2026-05-23",
+      "meal": "breakfast",
+      "name": "Blueberry Banana Pancakes"
+    },
+    {
+      "date": "2026-05-23",
+      "meal": "lunch",
+      "name": "Apple Roasted Pork Loin"
+    },
+    {
+      "date": "2026-05-23",
+      "meal": "dinner",
+      "name": "How to Make The Ultimate Slow Cooker Potato Soup"
+    },
+    {
+      "date": "2026-05-24",
+      "meal": "breakfast",
+      "name": "Oatmeal Pancake (Yummy & Heart Healthy)"
+    },
+    {
+      "date": "2026-05-24",
+      "meal": "lunch",
+      "name": "Pasta With Wild Mushrooms, Peas and Bacon"
+    },
+    {
+      "date": "2026-05-24",
+      "meal": "dinner",
+      "name": "Cheese Pork Chops"
+    },
+    {
+      "date": "2026-05-25",
+      "meal": "breakfast",
+      "name": "Banana & Cream Cheese Stuffed French Toast"
+    },
+    {
+      "date": "2026-05-25",
+      "meal": "lunch",
+      "name": "Game Day Jerk Wings"
+    },
+    {
+      "date": "2026-05-25",
+      "meal": "dinner",
+      "name": "Cornmeal-Crusted Catfish with Cajun Seasoning and Spicy Tartar Sauce"
+    },
+    {
+      "date": "2026-05-26",
+      "meal": "breakfast",
+      "name": "French Toast Croissants with Strawberries"
+    },
+    {
+      "date": "2026-05-26",
+      "meal": "lunch",
+      "name": "Pulled Pork Nachos"
+    },
+    {
+      "date": "2026-05-26",
+      "meal": "dinner",
+      "name": "Asian Chicken and Broccoli With Chili Garlic Sauce"
+    },
+    {
+      "date": "2026-05-27",
+      "meal": "breakfast",
+      "name": "Lemon Quick Bread"
+    },
+    {
+      "date": "2026-05-27",
+      "meal": "lunch",
+      "name": "Easy Pork Chops on Stuffing"
+    },
+    {
+      "date": "2026-05-27",
+      "meal": "dinner",
+      "name": "Instant Pot Chicken Taco Soup"
+    },
+    {
+      "date": "2026-05-28",
+      "meal": "breakfast",
+      "name": "Peanut Butter And Chocolate Oatmeal"
+    },
+    {
+      "date": "2026-05-28",
+      "meal": "lunch",
+      "name": "Pulled Pork Nachos"
+    },
+    {
+      "date": "2026-05-28",
+      "meal": "dinner",
+      "name": "Chicken Piccata With Angel Hair Pasta"
+    },
+    {
+      "date": "2026-05-29",
+      "meal": "breakfast",
+      "name": "Baked Eggs and Bacon Cream In Spinach Fettuccine Nests"
+    },
+    {
+      "date": "2026-05-29",
+      "meal": "lunch",
+      "name": "Pumpkin gnocchi with basil and Parmesan"
+    },
+    {
+      "date": "2026-05-29",
+      "meal": "dinner",
+      "name": "Easy Garlic Roast Leg Of Lamb With Rosemary and Parsley"
+    },
+    {
+      "date": "2026-05-30",
+      "meal": "breakfast",
+      "name": "Curious George's Gluten-Free Banana Nut Bread"
+    },
+    {
+      "date": "2026-05-30",
+      "meal": "lunch",
+      "name": "Easy Chicken with White Wine Sauce"
+    },
+    {
+      "date": "2026-05-30",
+      "meal": "dinner",
+      "name": "Popcorn Chicken"
+    },
+    {
+      "date": "2026-05-31",
+      "meal": "breakfast",
+      "name": "Zucchini & Basil Frittata"
+    },
+    {
+      "date": "2026-05-31",
+      "meal": "lunch",
+      "name": "Creamy Curry Cheese and Macaroni With Langostino Tails and Black Truffle Oil"
+    },
+    {
+      "date": "2026-05-31",
+      "meal": "dinner",
+      "name": "Easy Eggplant Parmesan"
+    },
+    {
+      "date": "2026-06-01",
+      "meal": "breakfast",
+      "name": "Tropical Breakfast Quinoa"
+    },
+    {
+      "date": "2026-06-01",
+      "meal": "lunch",
+      "name": "Fried Asparagus"
+    },
+    {
+      "date": "2026-06-01",
+      "meal": "dinner",
+      "name": "Bombay Potatoes"
+    },
+    {
+      "date": "2026-06-02",
+      "meal": "breakfast",
+      "name": "Savory Cheese Dill Scones"
+    },
+    {
+      "date": "2026-06-02",
+      "meal": "lunch",
+      "name": "French Onion Marsala Soup"
+    },
+    {
+      "date": "2026-06-02",
+      "meal": "dinner",
+      "name": "17 Bean White Chicken Chili"
+    },
+    {
+      "date": "2026-06-03",
+      "meal": "breakfast",
+      "name": "Breakfast: Waffles"
+    },
+    {
+      "date": "2026-06-03",
+      "meal": "lunch",
+      "name": "Spinach, Tomato & Onion Couscous"
+    },
+    {
+      "date": "2026-06-03",
+      "meal": "dinner",
+      "name": "Gluten Free Fruit Stuffed Turkey Breast with Hibiscus Sauce"
+    },
+    {
+      "date": "2026-06-04",
+      "meal": "breakfast",
+      "name": "Apple Pie Smoothie"
+    },
+    {
+      "date": "2026-06-04",
+      "meal": "lunch",
+      "name": "Dragon Salad - Couscous Summer Salad"
+    },
+    {
+      "date": "2026-06-04",
+      "meal": "dinner",
+      "name": "Pasta With Chicken and Broccoli"
+    },
+    {
+      "date": "2026-06-05",
+      "meal": "breakfast",
+      "name": "Chive and dill muffins"
+    },
+    {
+      "date": "2026-06-05",
+      "meal": "lunch",
+      "name": "Chimichurri Skirt Steak with Grilled Asparagus"
+    },
+    {
+      "date": "2026-06-05",
+      "meal": "dinner",
+      "name": "Asian Chicken and Broccoli With Chili Garlic Sauce"
+    },
+    {
+      "date": "2026-06-06",
+      "meal": "breakfast",
+      "name": "Apple Pie Smoothie"
+    },
+    {
+      "date": "2026-06-06",
+      "meal": "lunch",
+      "name": "Buttermilk Skillet Fried Chicken"
+    },
+    {
+      "date": "2026-06-06",
+      "meal": "dinner",
+      "name": "Marinated Flat Iron Steak"
+    },
+    {
+      "date": "2026-06-07",
+      "meal": "breakfast",
+      "name": "Skinny Green Monster Smoothie"
+    },
+    {
+      "date": "2026-06-07",
+      "meal": "lunch",
+      "name": "Japanese Fried Rice"
+    },
+    {
+      "date": "2026-06-07",
+      "meal": "dinner",
+      "name": "Coffee-Infused Bbq Baby Back Ribs"
+    },
+    {
+      "date": "2026-06-08",
+      "meal": "breakfast",
+      "name": "Protein Strawberry Smoothie"
+    },
+    {
+      "date": "2026-06-08",
+      "meal": "lunch",
+      "name": "Excellent No Fail and Easy Keto Zucchini Lasagna"
+    },
+    {
+      "date": "2026-06-08",
+      "meal": "dinner",
+      "name": "Seared Scallops With Wilted Greens"
+    },
+    {
+      "date": "2026-06-09",
+      "meal": "breakfast",
+      "name": "Cherry Coconut Milk Smoothie"
+    },
+    {
+      "date": "2026-06-09",
+      "meal": "lunch",
+      "name": "Chicken and Vegetarian Tamales With Red Mole Sauce"
+    },
+    {
+      "date": "2026-06-09",
+      "meal": "dinner",
+      "name": "Beef, Poblano & Cheese Tamales"
+    },
+    {
+      "date": "2026-06-10",
+      "meal": "breakfast",
+      "name": "Crepes Suzette"
+    },
+    {
+      "date": "2026-06-10",
+      "meal": "lunch",
+      "name": "Pasta with Peas and Italian Sausage"
+    },
+    {
+      "date": "2026-06-10",
+      "meal": "dinner",
+      "name": "Garam Masala Pork Chops with Mint Yogurt and Spiced Couscous"
+    },
+    {
+      "date": "2026-06-11",
+      "meal": "breakfast",
+      "name": "Sterling Cooper Blini with Caviar"
+    },
+    {
+      "date": "2026-06-11",
+      "meal": "lunch",
+      "name": "Bacon Wrapped Tofu Tacos"
+    },
+    {
+      "date": "2026-06-11",
+      "meal": "dinner",
+      "name": "Avocado-Mango Salad With Grilled Shrimp"
+    },
+    {
+      "date": "2026-06-12",
+      "meal": "breakfast",
+      "name": "Four-Berry Blast Fruit Smoothie"
+    },
+    {
+      "date": "2026-06-12",
+      "meal": "lunch",
+      "name": "Easy Gift Lasagna"
+    },
+    {
+      "date": "2026-06-12",
+      "meal": "dinner",
+      "name": "Chicken Parmesan Patty- Eat As A Burger OR On Pasta"
+    },
+    {
+      "date": "2026-06-13",
+      "meal": "breakfast",
+      "name": "Pumpkin French Toast"
+    },
+    {
+      "date": "2026-06-13",
+      "meal": "lunch",
+      "name": "Chicken Cordon Bleu"
+    },
+    {
+      "date": "2026-06-13",
+      "meal": "dinner",
+      "name": "Glazed pork chops"
+    },
+    {
+      "date": "2026-06-14",
+      "meal": "breakfast",
+      "name": "Boysenberry Pancakes"
+    },
+    {
+      "date": "2026-06-14",
+      "meal": "lunch",
+      "name": "Classic French Onion Soup"
+    },
+    {
+      "date": "2026-06-14",
+      "meal": "dinner",
+      "name": "Beef Lo Mein Noodles"
+    },
+    {
+      "date": "2026-06-15",
+      "meal": "breakfast",
+      "name": "Whole Wheat Blueberry Muffins"
+    },
+    {
+      "date": "2026-06-15",
+      "meal": "lunch",
+      "name": "Pork Chops with Garlic Cream"
+    },
+    {
+      "date": "2026-06-15",
+      "meal": "dinner",
+      "name": "Curry and Sage Roast Chicken"
+    },
+    {
+      "date": "2026-06-16",
+      "meal": "breakfast",
+      "name": "Tropical Breakfast Quinoa"
+    },
+    {
+      "date": "2026-06-16",
+      "meal": "lunch",
+      "name": "Pork Chops with Garlic Cream"
+    },
+    {
+      "date": "2026-06-16",
+      "meal": "dinner",
+      "name": "Artisan Farfalle Pasta With Smoked Salmon and Cream Sauce"
+    },
+    {
+      "date": "2026-06-17",
+      "meal": "breakfast",
+      "name": "Mini Ham Omelets"
+    },
+    {
+      "date": "2026-06-17",
+      "meal": "lunch",
+      "name": "Pappa Al Pomodoro"
+    },
+    {
+      "date": "2026-06-17",
+      "meal": "dinner",
+      "name": "Braised Smoky Pork With Fresh Pappardelle"
+    },
+    {
+      "date": "2026-06-18",
+      "meal": "breakfast",
+      "name": "Doughnuts"
+    },
+    {
+      "date": "2026-06-18",
+      "meal": "lunch",
+      "name": "Braised Bean Curds"
+    },
+    {
+      "date": "2026-06-18",
+      "meal": "dinner",
+      "name": "Three Meat Stromboli"
+    },
+    {
+      "date": "2026-06-19",
+      "meal": "breakfast",
+      "name": "Whole Wheat Blueberry Muffins"
+    },
+    {
+      "date": "2026-06-19",
+      "meal": "lunch",
+      "name": "Spinach & Toasted Pumpkin Seed Pesto Pasta"
+    },
+    {
+      "date": "2026-06-19",
+      "meal": "dinner",
+      "name": "Seared Wild Sea Scallops With Garbanzo Beans and Barley"
+    },
+    {
+      "date": "2026-06-20",
+      "meal": "breakfast",
+      "name": "Pear and Walnut Coffee Cake"
+    },
+    {
+      "date": "2026-06-20",
+      "meal": "lunch",
+      "name": "Penne Pasta with Broccoli and Cheese"
+    },
+    {
+      "date": "2026-06-20",
+      "meal": "dinner",
+      "name": "Ginger Soy Chicken"
+    },
+    {
+      "date": "2026-06-21",
+      "meal": "breakfast",
+      "name": "Hatch Chile Cornbread Muffins"
+    },
+    {
+      "date": "2026-06-21",
+      "meal": "lunch",
+      "name": "Easy Ginger Beef Broccoli"
+    },
+    {
+      "date": "2026-06-21",
+      "meal": "dinner",
+      "name": "Pasta With Chickpeas and Kale"
+    },
+    {
+      "date": "2026-06-22",
+      "meal": "breakfast",
+      "name": "Hotcakes"
+    },
+    {
+      "date": "2026-06-22",
+      "meal": "lunch",
+      "name": "Cuban Flank Steak With Avocado and Tomato Salad"
+    },
+    {
+      "date": "2026-06-22",
+      "meal": "dinner",
+      "name": "Crab Salad in Avocado Boats"
+    },
+    {
+      "date": "2026-06-23",
+      "meal": "breakfast",
+      "name": "Make Ahead Quiche"
+    },
+    {
+      "date": "2026-06-23",
+      "meal": "lunch",
+      "name": "Alouette Chicken Paprika"
+    },
+    {
+      "date": "2026-06-23",
+      "meal": "dinner",
+      "name": "Game Day Jerk Wings"
+    },
+    {
+      "date": "2026-06-24",
+      "meal": "breakfast",
+      "name": "Gluten-Free Chocolate-Pecan Quickbread"
+    },
+    {
+      "date": "2026-06-24",
+      "meal": "lunch",
+      "name": "Basil Marinated Grilled Chicken"
+    },
+    {
+      "date": "2026-06-24",
+      "meal": "dinner",
+      "name": "Linguine and Clams In Garlic White Wine Sauce"
+    },
+    {
+      "date": "2026-06-25",
+      "meal": "breakfast",
+      "name": "Cinnamon Rolls by Bing"
+    },
+    {
+      "date": "2026-06-25",
+      "meal": "lunch",
+      "name": "Baked Ziti Or Rigatoni"
+    },
+    {
+      "date": "2026-06-25",
+      "meal": "dinner",
+      "name": "Korean Extra Crispy Fried Chicken w Sweet Spicy Glaze"
+    },
+    {
+      "date": "2026-06-26",
+      "meal": "breakfast",
+      "name": "Baked Eggs and Bacon Cream In Spinach Fettuccine Nests"
+    },
+    {
+      "date": "2026-06-26",
+      "meal": "lunch",
+      "name": "Thai Street Vendor Salmon Skewers"
+    },
+    {
+      "date": "2026-06-26",
+      "meal": "dinner",
+      "name": "BBQ Beef Brisket"
+    },
+    {
+      "date": "2026-06-27",
+      "meal": "breakfast",
+      "name": "Sweet Florida Orange Breakfast Bread"
+    },
+    {
+      "date": "2026-06-27",
+      "meal": "lunch",
+      "name": "Pierogi Casserole"
+    },
+    {
+      "date": "2026-06-27",
+      "meal": "dinner",
+      "name": "Classic Macaroni and Cheese"
+    },
+    {
+      "date": "2026-06-28",
+      "meal": "breakfast",
+      "name": "Banana Smoothie Boost"
+    },
+    {
+      "date": "2026-06-28",
+      "meal": "lunch",
+      "name": "Rack of Lamb With Parsley"
+    },
+    {
+      "date": "2026-06-28",
+      "meal": "dinner",
+      "name": "Asparagus and Asiago Frittata"
+    },
+    {
+      "date": "2026-06-29",
+      "meal": "breakfast",
+      "name": "Protein Packed Carrot Muffins"
+    },
+    {
+      "date": "2026-06-29",
+      "meal": "lunch",
+      "name": "Vegetable Coconut Sambar"
+    },
+    {
+      "date": "2026-06-29",
+      "meal": "dinner",
+      "name": "Dak Bulgogi - Korean BBQ Chicken"
+    },
+    {
+      "date": "2026-06-30",
+      "meal": "breakfast",
+      "name": "Strawberry Banana Stuffed Pancakes"
+    },
+    {
+      "date": "2026-06-30",
+      "meal": "lunch",
+      "name": "Chinese Chicken Salad With Chipotle Dressing"
+    },
+    {
+      "date": "2026-06-30",
+      "meal": "dinner",
+      "name": "Blackened Cajun Chicken"
+    },
+    {
+      "date": "2026-07-01",
+      "meal": "breakfast",
+      "name": "Simple Protein Pancakes"
+    },
+    {
+      "date": "2026-07-01",
+      "meal": "lunch",
+      "name": "Pittata - Pizza Frittata"
+    },
+    {
+      "date": "2026-07-01",
+      "meal": "dinner",
+      "name": "Cheesy Turkey Meatballs"
+    },
+    {
+      "date": "2026-07-02",
+      "meal": "breakfast",
+      "name": "Apple Pie Smoothie"
+    },
+    {
+      "date": "2026-07-02",
+      "meal": "lunch",
+      "name": "How to Make the Best Crock Pot Roast"
+    },
+    {
+      "date": "2026-07-02",
+      "meal": "dinner",
+      "name": "Bbq Pork Steak"
+    },
+    {
+      "date": "2026-07-03",
+      "meal": "breakfast",
+      "name": "Gluten Free Almond Blueberry Coffee Cake"
+    },
+    {
+      "date": "2026-07-03",
+      "meal": "lunch",
+      "name": "Easy and Delicious Taco Soup"
+    },
+    {
+      "date": "2026-07-03",
+      "meal": "dinner",
+      "name": "My Chicken Korma"
+    },
+    {
+      "date": "2026-07-04",
+      "meal": "breakfast",
+      "name": "Rosemary Rum Raisin Soda Bread with Pecans"
+    },
+    {
+      "date": "2026-07-04",
+      "meal": "lunch",
+      "name": "Easy Beef Bourguignon"
+    },
+    {
+      "date": "2026-07-04",
+      "meal": "dinner",
+      "name": "Chinese Chicken Salad With Chipotle Dressing"
+    },
+    {
+      "date": "2026-07-05",
+      "meal": "breakfast",
+      "name": "Peanut Butter and Jelly Smoothie"
+    },
+    {
+      "date": "2026-07-05",
+      "meal": "lunch",
+      "name": "Linguine and Clams In Garlic White Wine Sauce"
+    },
+    {
+      "date": "2026-07-05",
+      "meal": "dinner",
+      "name": "Flank Steak with Mushroom Sauce"
+    },
+    {
+      "date": "2026-07-06",
+      "meal": "breakfast",
+      "name": "Bananas Foster French Toast By Mommie Cooks"
+    },
+    {
+      "date": "2026-07-06",
+      "meal": "lunch",
+      "name": "Fresh and Simple Swai Ceviche"
+    },
+    {
+      "date": "2026-07-06",
+      "meal": "dinner",
+      "name": "Chicken Stew For The Soul"
+    },
+    {
+      "date": "2026-07-07",
+      "meal": "breakfast",
+      "name": "Havarti and Asparagus Quiche"
+    },
+    {
+      "date": "2026-07-07",
+      "meal": "lunch",
+      "name": "Easy Slow Cooker Whole Chicken With Rosemary"
+    },
+    {
+      "date": "2026-07-07",
+      "meal": "dinner",
+      "name": "Baked Crusty Chicken"
+    },
+    {
+      "date": "2026-07-08",
+      "meal": "breakfast",
+      "name": "Mini Ham Omelets"
+    },
+    {
+      "date": "2026-07-08",
+      "meal": "lunch",
+      "name": "Best Baked Macaroni and Cheese"
+    },
+    {
+      "date": "2026-07-08",
+      "meal": "dinner",
+      "name": "Chicken-Tortilla Chip Soup"
+    },
+    {
+      "date": "2026-07-09",
+      "meal": "breakfast",
+      "name": "Wholesome Spelt Waffles"
+    },
+    {
+      "date": "2026-07-09",
+      "meal": "lunch",
+      "name": "Japanese Mabo Tofu With Eggplant"
+    },
+    {
+      "date": "2026-07-09",
+      "meal": "dinner",
+      "name": "Ethiopian Lentil Curry"
+    },
+    {
+      "date": "2026-07-10",
+      "meal": "breakfast",
+      "name": "Coconut Flour Pancakes with Blueberry Honey Compote"
+    },
+    {
+      "date": "2026-07-10",
+      "meal": "lunch",
+      "name": "Superbowl Chili"
+    },
+    {
+      "date": "2026-07-10",
+      "meal": "dinner",
+      "name": "Potatoes Smothered with Egg Sauce (Cariucho)"
+    },
+    {
+      "date": "2026-07-11",
+      "meal": "breakfast",
+      "name": "Easy Homemade Apple Fritters"
+    },
+    {
+      "date": "2026-07-11",
+      "meal": "lunch",
+      "name": "Salmon Confit with Lemongrass Sauce"
+    },
+    {
+      "date": "2026-07-11",
+      "meal": "dinner",
+      "name": "Roast Chicken with Apples and Rosemary"
+    },
+    {
+      "date": "2026-07-12",
+      "meal": "breakfast",
+      "name": "Wild Blueberry Lemon Muffins"
+    },
+    {
+      "date": "2026-07-12",
+      "meal": "lunch",
+      "name": "Chicken Sausage, White Bean and Cabbage Soup"
+    },
+    {
+      "date": "2026-07-12",
+      "meal": "dinner",
+      "name": "Creamy Potato Leek Soup"
+    },
+    {
+      "date": "2026-07-13",
+      "meal": "breakfast",
+      "name": "Dad’s Breakfast Polenta"
+    },
+    {
+      "date": "2026-07-13",
+      "meal": "lunch",
+      "name": "Amazing Chicken Burgers"
+    },
+    {
+      "date": "2026-07-13",
+      "meal": "dinner",
+      "name": "Mahi-Mahi With Lemon Caper Sauce"
+    },
+    {
+      "date": "2026-07-14",
+      "meal": "breakfast",
+      "name": "Curious George's Gluten-Free Banana Nut Bread"
+    },
+    {
+      "date": "2026-07-14",
+      "meal": "lunch",
+      "name": "Spinach & Toasted Pumpkin Seed Pesto Pasta"
+    },
+    {
+      "date": "2026-07-14",
+      "meal": "dinner",
+      "name": "Cod with tomatoes, olives and polenta"
+    },
+    {
+      "date": "2026-07-15",
+      "meal": "breakfast",
+      "name": "Homemade Banana Bread"
+    },
+    {
+      "date": "2026-07-15",
+      "meal": "lunch",
+      "name": "Bacon Wrapped Tofu Tacos"
+    },
+    {
+      "date": "2026-07-15",
+      "meal": "dinner",
+      "name": "Grilled Ham and Cheese French Toast For A Quick Weeknight Dinner"
+    },
+    {
+      "date": "2026-07-16",
+      "meal": "breakfast",
+      "name": "Breakfast Biscuits and Gravy"
+    },
+    {
+      "date": "2026-07-16",
+      "meal": "lunch",
+      "name": "Ethiopian Lentil Curry"
+    },
+    {
+      "date": "2026-07-16",
+      "meal": "dinner",
+      "name": "Slow Cooker Spicy Hot Wings"
+    },
+    {
+      "date": "2026-07-17",
+      "meal": "breakfast",
+      "name": "Chicken Porridge"
+    },
+    {
+      "date": "2026-07-17",
+      "meal": "lunch",
+      "name": "Authentic Jamaican Curry Chicken"
+    },
+    {
+      "date": "2026-07-17",
+      "meal": "dinner",
+      "name": "Chicken Arrozcaldo"
+    },
+    {
+      "date": "2026-07-18",
+      "meal": "breakfast",
+      "name": "Beet Greens and Poached Eggs"
+    },
+    {
+      "date": "2026-07-18",
+      "meal": "lunch",
+      "name": "Farro & Leek Soup"
+    },
+    {
+      "date": "2026-07-18",
+      "meal": "dinner",
+      "name": "Grilled Chuck Burgers with Extra Sharp Cheddar and Lemon Garlic Aioli"
+    },
+    {
+      "date": "2026-07-19",
+      "meal": "breakfast",
+      "name": "Egg and Dairy Free Pancakes"
+    },
+    {
+      "date": "2026-07-19",
+      "meal": "lunch",
+      "name": "Lamb Burgers With Tzatziki Sauce"
+    },
+    {
+      "date": "2026-07-19",
+      "meal": "dinner",
+      "name": "Chicken Sausage, White Bean and Cabbage Soup"
+    },
+    {
+      "date": "2026-07-20",
+      "meal": "breakfast",
+      "name": "Apple Pie Smoothie"
+    },
+    {
+      "date": "2026-07-20",
+      "meal": "lunch",
+      "name": "Seared Pork Chops with Mango Salsa"
+    },
+    {
+      "date": "2026-07-20",
+      "meal": "dinner",
+      "name": "German Goulash"
+    },
+    {
+      "date": "2026-07-21",
+      "meal": "breakfast",
+      "name": "Blueberry Muffins With Streusel Topping"
+    },
+    {
+      "date": "2026-07-21",
+      "meal": "lunch",
+      "name": "Curried Chicken Salad With Red Grapes and Walnuts"
+    },
+    {
+      "date": "2026-07-21",
+      "meal": "dinner",
+      "name": "Whole Wheat No-Yeast Pizza with Roasted Garlic, Sweet Potatoes, and Onions"
+    },
+    {
+      "date": "2026-07-22",
+      "meal": "breakfast",
+      "name": "Zucchini Quiche Appetizers"
+    },
+    {
+      "date": "2026-07-22",
+      "meal": "lunch",
+      "name": "Baked Crusty Chicken"
+    },
+    {
+      "date": "2026-07-22",
+      "meal": "dinner",
+      "name": "Chicken and Mango Skewer"
+    },
+    {
+      "date": "2026-07-23",
+      "meal": "breakfast",
+      "name": "Sweet Florida Orange Breakfast Bread"
+    },
+    {
+      "date": "2026-07-23",
+      "meal": "lunch",
+      "name": "Classic French Onion Soup"
+    },
+    {
+      "date": "2026-07-23",
+      "meal": "dinner",
+      "name": "Salmon Quinoa Risotto"
+    },
+    {
+      "date": "2026-07-24",
+      "meal": "breakfast",
+      "name": "Banana & Cream Cheese Stuffed French Toast"
+    },
+    {
+      "date": "2026-07-24",
+      "meal": "lunch",
+      "name": "Glazed pork chops"
+    },
+    {
+      "date": "2026-07-24",
+      "meal": "dinner",
+      "name": "Grilled Peach Melba with Vanilla Bean Frozen Yogurt"
+    },
+    {
+      "date": "2026-07-25",
+      "meal": "breakfast",
+      "name": "Peanut Butter and Apple Oatmeal Breakfast Bars"
+    },
+    {
+      "date": "2026-07-25",
+      "meal": "lunch",
+      "name": "Easy Slow Cooker Artichoke Garlic Chicken"
+    },
+    {
+      "date": "2026-07-25",
+      "meal": "dinner",
+      "name": "Baked Ratatouille"
+    },
+    {
+      "date": "2026-07-26",
+      "meal": "breakfast",
+      "name": "Protein Packed Carrot Muffins"
+    },
+    {
+      "date": "2026-07-26",
+      "meal": "lunch",
+      "name": "Layered Baked Eggplant Parmesan"
+    },
+    {
+      "date": "2026-07-26",
+      "meal": "dinner",
+      "name": "Butternut Squash, Arugula and Goat Cheese Quinoa"
+    },
+    {
+      "date": "2026-07-27",
+      "meal": "breakfast",
+      "name": "Beet Greens and Poached Eggs"
+    },
+    {
+      "date": "2026-07-27",
+      "meal": "lunch",
+      "name": "How Sweet It Is Sweet Potato Lasagne"
+    },
+    {
+      "date": "2026-07-27",
+      "meal": "dinner",
+      "name": "Stuffed Pork Tenderloin with Marsala-Port Sauce"
+    },
+    {
+      "date": "2026-07-28",
+      "meal": "breakfast",
+      "name": "Gluten Free Almond Blueberry Coffee Cake"
+    },
+    {
+      "date": "2026-07-28",
+      "meal": "lunch",
+      "name": "Cabbage and sausages in beer"
+    },
+    {
+      "date": "2026-07-28",
+      "meal": "dinner",
+      "name": "Classic Boeuf Bourguignon"
+    },
+    {
+      "date": "2026-07-29",
+      "meal": "breakfast",
+      "name": "Whole Wheat Blueberry Muffins"
+    },
+    {
+      "date": "2026-07-29",
+      "meal": "lunch",
+      "name": "Chicken Farfalle with Low-Fat Alfredo Sauce"
+    },
+    {
+      "date": "2026-07-29",
+      "meal": "dinner",
+      "name": "How to Make an Amazing Chicken Salad with Apples and Celery"
+    },
+    {
+      "date": "2026-07-30",
+      "meal": "breakfast",
+      "name": "Simple Whole Wheat Crepes"
+    },
+    {
+      "date": "2026-07-30",
+      "meal": "lunch",
+      "name": "Pasta With Butternut Parmesan Sauce @ Dw Magazine.Com"
+    },
+    {
+      "date": "2026-07-30",
+      "meal": "dinner",
+      "name": "Chicken Noodle Casserole Dish"
+    },
+    {
+      "date": "2026-07-31",
+      "meal": "breakfast",
+      "name": "Dad’s Breakfast Polenta"
+    },
+    {
+      "date": "2026-07-31",
+      "meal": "lunch",
+      "name": "Marinated Flat Iron Steak"
+    },
+    {
+      "date": "2026-07-31",
+      "meal": "dinner",
+      "name": "Blue Cheese Burgers"
+    },
+    {
+      "date": "2026-08-01",
+      "meal": "breakfast",
+      "name": "Cranberry-Ginger Oatmeal With Toasted Hazelnuts"
+    },
+    {
+      "date": "2026-08-01",
+      "meal": "lunch",
+      "name": "Korean Sweet n Sour Chicken"
+    },
+    {
+      "date": "2026-08-01",
+      "meal": "dinner",
+      "name": "Chicken Pasta With Anchovy Rosemary Sauce"
+    },
+    {
+      "date": "2026-08-02",
+      "meal": "breakfast",
+      "name": "Yoghurt Chicken and Garlic Potatoes"
+    },
+    {
+      "date": "2026-08-02",
+      "meal": "lunch",
+      "name": "Moosewood Lentil Soup"
+    },
+    {
+      "date": "2026-08-02",
+      "meal": "dinner",
+      "name": "Chicken Ranch Burgers"
+    },
+    {
+      "date": "2026-08-03",
+      "meal": "breakfast",
+      "name": "Whole Grain Pumpkin Bread"
+    },
+    {
+      "date": "2026-08-03",
+      "meal": "lunch",
+      "name": "Shrimp & Orzo"
+    },
+    {
+      "date": "2026-08-03",
+      "meal": "dinner",
+      "name": "Beer Can Chicken, Country Style Vegetables with Roasted Garlic"
+    },
+    {
+      "date": "2026-08-04",
+      "meal": "breakfast",
+      "name": "Turkey Sausage, Chard & Sweet Potato Breakfast Scramble"
+    },
+    {
+      "date": "2026-08-04",
+      "meal": "lunch",
+      "name": "Broccoli Cheddar Soup, A Panera Bread Co. Copycat"
+    },
+    {
+      "date": "2026-08-04",
+      "meal": "dinner",
+      "name": "Sun-dried Tomato & Artichoke Tuna Casserole"
+    },
+    {
+      "date": "2026-08-05",
+      "meal": "breakfast",
+      "name": "Fresh Herb Omelette"
+    },
+    {
+      "date": "2026-08-05",
+      "meal": "lunch",
+      "name": "Easy Eclairs"
+    },
+    {
+      "date": "2026-08-05",
+      "meal": "dinner",
+      "name": "Slow Cooker Chicken Taco Soup"
+    },
+    {
+      "date": "2026-08-06",
+      "meal": "breakfast",
+      "name": "Carrot Cake Pancakes"
+    },
+    {
+      "date": "2026-08-06",
+      "meal": "lunch",
+      "name": "Mushroom and Parmesan Brown Rice Risotto"
+    },
+    {
+      "date": "2026-08-06",
+      "meal": "dinner",
+      "name": "Turkey Pot Pie With Cornbread Crust"
+    },
+    {
+      "date": "2026-08-07",
+      "meal": "breakfast",
+      "name": "Vegan Donuts"
+    },
+    {
+      "date": "2026-08-07",
+      "meal": "lunch",
+      "name": "Knockwurst with sauerkraut"
+    },
+    {
+      "date": "2026-08-07",
+      "meal": "dinner",
+      "name": "Moroccan Chicken Tagine"
+    },
+    {
+      "date": "2026-08-08",
+      "meal": "breakfast",
+      "name": "Banana & Oreo Muffin"
+    },
+    {
+      "date": "2026-08-08",
+      "meal": "lunch",
+      "name": "Summer Veggie Bake"
+    },
+    {
+      "date": "2026-08-08",
+      "meal": "dinner",
+      "name": "Arroz Con Pollo"
+    },
+    {
+      "date": "2026-08-09",
+      "meal": "breakfast",
+      "name": "Crab Cakes Eggs Benedict"
+    },
+    {
+      "date": "2026-08-09",
+      "meal": "lunch",
+      "name": "Chicken Cordon Bleu"
+    },
+    {
+      "date": "2026-08-09",
+      "meal": "dinner",
+      "name": "Lemon Chickpea & Tomato Stew"
+    },
+    {
+      "date": "2026-08-10",
+      "meal": "breakfast",
+      "name": "Yogurt Parfait"
+    },
+    {
+      "date": "2026-08-10",
+      "meal": "lunch",
+      "name": "Slow Cooker Ranch Chicken"
+    },
+    {
+      "date": "2026-08-10",
+      "meal": "dinner",
+      "name": "Rice and Peas with Coconut Curry Mackerel"
+    },
+    {
+      "date": "2026-08-11",
+      "meal": "breakfast",
+      "name": "Gluten Free Cinnamon Apple Muffins"
+    },
+    {
+      "date": "2026-08-11",
+      "meal": "lunch",
+      "name": "Cranberry and Orange Juice Spareribs"
+    },
+    {
+      "date": "2026-08-11",
+      "meal": "dinner",
+      "name": "Stuffed Salmon With Tomato-Olive Tapenade"
+    },
+    {
+      "date": "2026-08-12",
+      "meal": "breakfast",
+      "name": "Whole Wheat Blueberry Muffins"
+    },
+    {
+      "date": "2026-08-12",
+      "meal": "lunch",
+      "name": "Linguine and Clams In Garlic White Wine Sauce"
+    },
+    {
+      "date": "2026-08-12",
+      "meal": "dinner",
+      "name": "Quick and Easy Caprese Salad"
+    },
+    {
+      "date": "2026-08-13",
+      "meal": "breakfast",
+      "name": "Peach Carrot Coconut Vegan Pancake"
+    },
+    {
+      "date": "2026-08-13",
+      "meal": "lunch",
+      "name": "Strawberry and Chocolate Chip Panini"
+    },
+    {
+      "date": "2026-08-13",
+      "meal": "dinner",
+      "name": "Ginger Soy Chicken"
+    },
+    {
+      "date": "2026-08-14",
+      "meal": "breakfast",
+      "name": "Gluten Free Blueberry Muffins"
+    },
+    {
+      "date": "2026-08-14",
+      "meal": "lunch",
+      "name": "Fried Asparagus"
+    },
+    {
+      "date": "2026-08-14",
+      "meal": "dinner",
+      "name": "Falafel Burgers"
+    },
+    {
+      "date": "2026-08-15",
+      "meal": "breakfast",
+      "name": "Peanut Butter Banana French Toast"
+    },
+    {
+      "date": "2026-08-15",
+      "meal": "lunch",
+      "name": "Bridget Jones's Shepherd's Pie"
+    },
+    {
+      "date": "2026-08-15",
+      "meal": "dinner",
+      "name": "Slow Cooker Baked Potato Soup"
+    },
+    {
+      "date": "2026-08-16",
+      "meal": "breakfast",
+      "name": "Zucchini & Basil Frittata"
+    },
+    {
+      "date": "2026-08-16",
+      "meal": "lunch",
+      "name": "Excellent No Fail and Easy Keto Zucchini Lasagna"
+    },
+    {
+      "date": "2026-08-16",
+      "meal": "dinner",
+      "name": "BBQ Beef Brisket"
+    },
+    {
+      "date": "2026-08-17",
+      "meal": "breakfast",
+      "name": "Black Bean Garlic Shrimp Scramble"
+    },
+    {
+      "date": "2026-08-17",
+      "meal": "lunch",
+      "name": "Ancho Chipotle Chili"
+    },
+    {
+      "date": "2026-08-17",
+      "meal": "dinner",
+      "name": "Lemon Pilaf Chicken"
+    },
+    {
+      "date": "2026-08-18",
+      "meal": "breakfast",
+      "name": "Lemon Poppy Seed Muffins"
+    },
+    {
+      "date": "2026-08-18",
+      "meal": "lunch",
+      "name": "Butternut Squash Risotto With Pancetta and Sage Oil"
+    },
+    {
+      "date": "2026-08-18",
+      "meal": "dinner",
+      "name": "Chili-Garlic Stir Fry"
+    },
+    {
+      "date": "2026-08-19",
+      "meal": "breakfast",
+      "name": "Nutella Stuffed French Toast"
+    },
+    {
+      "date": "2026-08-19",
+      "meal": "lunch",
+      "name": "Spicy Korean Bbq Pork"
+    },
+    {
+      "date": "2026-08-19",
+      "meal": "dinner",
+      "name": "Old Fashioned Mac and Cheese"
+    },
+    {
+      "date": "2026-08-20",
+      "meal": "breakfast",
+      "name": "Yoghurt Chicken and Garlic Potatoes"
+    },
+    {
+      "date": "2026-08-20",
+      "meal": "lunch",
+      "name": "Coconut-Almond Crusted Tilapia"
+    },
+    {
+      "date": "2026-08-20",
+      "meal": "dinner",
+      "name": "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs"
+    },
+    {
+      "date": "2026-08-21",
+      "meal": "breakfast",
+      "name": "Yoghurt Chicken and Garlic Potatoes"
+    },
+    {
+      "date": "2026-08-21",
+      "meal": "lunch",
+      "name": "Cajun Seafood and Andouille Sausage Gumbo"
+    },
+    {
+      "date": "2026-08-21",
+      "meal": "dinner",
+      "name": "Pork chops with apples and onions"
+    },
+    {
+      "date": "2026-08-22",
+      "meal": "breakfast",
+      "name": "Broccoli Oatmeal Breakfast Casserole"
+    },
+    {
+      "date": "2026-08-22",
+      "meal": "lunch",
+      "name": "Italian Meatloaf with Hard Boiled Eggs"
+    },
+    {
+      "date": "2026-08-22",
+      "meal": "dinner",
+      "name": "Green Beans with Pearl Onions and Salmon"
+    },
+    {
+      "date": "2026-08-23",
+      "meal": "breakfast",
+      "name": "Carrot Oat Muffins"
+    },
+    {
+      "date": "2026-08-23",
+      "meal": "lunch",
+      "name": "Avocado Chicken Salad"
+    },
+    {
+      "date": "2026-08-23",
+      "meal": "dinner",
+      "name": "How to Make the Cheesiest Bowtie Mac and Cheese"
+    },
+    {
+      "date": "2026-08-24",
+      "meal": "breakfast",
+      "name": "Smoked Salmon Eggs Benedict With Lemon Dill Hollandaise"
+    },
+    {
+      "date": "2026-08-24",
+      "meal": "lunch",
+      "name": "Chinese Chicken Salad With Chipotle Dressing"
+    },
+    {
+      "date": "2026-08-24",
+      "meal": "dinner",
+      "name": "Lemon White Wine Chicken over Linguini"
+    },
+    {
+      "date": "2026-08-25",
+      "meal": "breakfast",
+      "name": "Sweet Potatoes Muffins"
+    },
+    {
+      "date": "2026-08-25",
+      "meal": "lunch",
+      "name": "Slow Cooker Beef Stew"
+    },
+    {
+      "date": "2026-08-25",
+      "meal": "dinner",
+      "name": "Chicken with White Wine Tarragon Cream Sauce"
+    },
+    {
+      "date": "2026-08-26",
+      "meal": "breakfast",
+      "name": "Overnight Steel Cut Oatmeal"
+    },
+    {
+      "date": "2026-08-26",
+      "meal": "lunch",
+      "name": "Mexican Casserole"
+    },
+    {
+      "date": "2026-08-26",
+      "meal": "dinner",
+      "name": "Chicken Cordon Bleu"
+    },
+    {
+      "date": "2026-08-27",
+      "meal": "breakfast",
+      "name": "Finger Foods: Frittata Muffins"
+    },
+    {
+      "date": "2026-08-27",
+      "meal": "lunch",
+      "name": "Light Greek Lemon Chicken Orzo Soup"
+    },
+    {
+      "date": "2026-08-27",
+      "meal": "dinner",
+      "name": "Superbowl Chili"
+    },
+    {
+      "date": "2026-08-28",
+      "meal": "breakfast",
+      "name": "Hatch Chile Cornbread Muffins"
+    },
+    {
+      "date": "2026-08-28",
+      "meal": "lunch",
+      "name": "Dutch Oven Paella"
+    },
+    {
+      "date": "2026-08-28",
+      "meal": "dinner",
+      "name": "Baked Crusty Chicken"
+    },
+    {
+      "date": "2026-08-29",
+      "meal": "breakfast",
+      "name": "Oatmeal Pancake (Yummy & Heart Healthy)"
+    },
+    {
+      "date": "2026-08-29",
+      "meal": "lunch",
+      "name": "Spicy Salad with Kidney Beans, Cheddar, and Nuts"
+    },
+    {
+      "date": "2026-08-29",
+      "meal": "dinner",
+      "name": "Crisp Winter Salad with Maple Gorgonzola Dressing"
+    },
+    {
+      "date": "2026-08-30",
+      "meal": "breakfast",
+      "name": "Coconut Bliss Smoothie"
+    },
+    {
+      "date": "2026-08-30",
+      "meal": "lunch",
+      "name": "Chicken Verde Enchilada Casserole"
+    },
+    {
+      "date": "2026-08-30",
+      "meal": "dinner",
+      "name": "Crispy Southern Fried Chicken"
+    },
+    {
+      "date": "2026-08-31",
+      "meal": "breakfast",
+      "name": "Peanut Butter and Apple Oatmeal Breakfast Bars"
+    },
+    {
+      "date": "2026-08-31",
+      "meal": "lunch",
+      "name": "Venison Stew"
+    },
+    {
+      "date": "2026-08-31",
+      "meal": "dinner",
+      "name": "Watermelon Feta and Mint Salad"
+    },
+    {
+      "date": "2026-09-02",
+      "meal": "breakfast",
+      "name": "Whole Grain Pumpkin Bread"
+    },
+    {
+      "date": "2026-09-02",
+      "meal": "lunch",
+      "name": "Easy Ginger Beef Broccoli"
+    },
+    {
+      "date": "2026-09-02",
+      "meal": "dinner",
+      "name": "How To Make Fried Chicken Without Frying"
+    },
+    {
+      "date": "2026-09-03",
+      "meal": "breakfast",
+      "name": "Spinach & Ham Quiche"
+    },
+    {
+      "date": "2026-09-03",
+      "meal": "lunch",
+      "name": "Easy Chicken with White Wine Sauce"
+    },
+    {
+      "date": "2026-09-03",
+      "meal": "dinner",
+      "name": "Chiquetaille: Cod Fish Salad"
+    },
+    {
+      "date": "2026-09-04",
+      "meal": "breakfast",
+      "name": "Gluten Free Blueberry Muffins"
+    },
+    {
+      "date": "2026-09-04",
+      "meal": "lunch",
+      "name": "Chicken Farfalle with Low-Fat Alfredo Sauce"
+    },
+    {
+      "date": "2026-09-04",
+      "meal": "dinner",
+      "name": "Cajun Seafood and Andouille Sausage Gumbo"
+    },
+    {
+      "date": "2026-09-05",
+      "meal": "breakfast",
+      "name": "White Chocolate Macadamia Banana Bread"
+    },
+    {
+      "date": "2026-09-05",
+      "meal": "lunch",
+      "name": "Spinach and Gorgonzola Stuffed Flank Steak"
+    },
+    {
+      "date": "2026-09-05",
+      "meal": "dinner",
+      "name": "Bridget Jones's Shepherd's Pie"
+    },
+    {
+      "date": "2026-09-06",
+      "meal": "breakfast",
+      "name": "Sun Dried Tomato and Herb Baked Eggs"
+    },
+    {
+      "date": "2026-09-06",
+      "meal": "lunch",
+      "name": "Pierogi Casserole"
+    },
+    {
+      "date": "2026-09-06",
+      "meal": "dinner",
+      "name": "Coconut and Whole Wheat Chicken Tenders"
+    },
+    {
+      "date": "2026-09-07",
+      "meal": "breakfast",
+      "name": "Asparagus and Asiago Frittata"
+    },
+    {
+      "date": "2026-09-07",
+      "meal": "lunch",
+      "name": "Loaded Baked Potato Soup with Crispy-Fried Potato Skins"
+    },
+    {
+      "date": "2026-09-07",
+      "meal": "dinner",
+      "name": "Chicken with White Wine Tarragon Cream Sauce"
+    },
+    {
+      "date": "2026-09-08",
+      "meal": "breakfast",
+      "name": "Turkey Sausage, Chard & Sweet Potato Breakfast Scramble"
+    },
+    {
+      "date": "2026-09-08",
+      "meal": "lunch",
+      "name": "Pasta With Chicken and Broccoli"
+    },
+    {
+      "date": "2026-09-08",
+      "meal": "dinner",
+      "name": "Stuffed mushrooms and Chow Mein noodles"
+    },
+    {
+      "date": "2026-09-09",
+      "meal": "breakfast",
+      "name": "Asparagus Eggs Benedict"
+    },
+    {
+      "date": "2026-09-09",
+      "meal": "lunch",
+      "name": "Spare Ribs"
+    },
+    {
+      "date": "2026-09-09",
+      "meal": "dinner",
+      "name": "Apple Roasted Pork Loin"
+    },
+    {
+      "date": "2026-09-10",
+      "meal": "breakfast",
+      "name": "Baked Oatmeal with Dried Cranberries"
+    },
+    {
+      "date": "2026-09-10",
+      "meal": "lunch",
+      "name": "Easy Chicken with White Wine Sauce"
+    },
+    {
+      "date": "2026-09-10",
+      "meal": "dinner",
+      "name": "Wintery Vegetable Beef Soup"
+    },
+    {
+      "date": "2026-09-11",
+      "meal": "breakfast",
+      "name": "Chocolate Coconut Banana Bread"
+    },
+    {
+      "date": "2026-09-11",
+      "meal": "lunch",
+      "name": "Baked Macaroni and Cheese"
+    },
+    {
+      "date": "2026-09-11",
+      "meal": "dinner",
+      "name": "Kenyan Pilau"
+    },
+    {
+      "date": "2026-09-12",
+      "meal": "breakfast",
+      "name": "Cherry Blueberry Muffins"
+    },
+    {
+      "date": "2026-09-12",
+      "meal": "lunch",
+      "name": "Red Lentil Soup with Chicken and Turnips"
+    },
+    {
+      "date": "2026-09-12",
+      "meal": "dinner",
+      "name": "Bacon Wrapped Tofu Tacos"
+    },
+    {
+      "date": "2026-09-13",
+      "meal": "breakfast",
+      "name": "Rosemary Rum Raisin Soda Bread with Pecans"
+    },
+    {
+      "date": "2026-09-13",
+      "meal": "lunch",
+      "name": "Braised Chicken with Artichoke Hearts & Olives"
+    },
+    {
+      "date": "2026-09-13",
+      "meal": "dinner",
+      "name": "Barbecued Lamb Chops"
+    },
+    {
+      "date": "2026-09-14",
+      "meal": "breakfast",
+      "name": "Hotcakes"
+    },
+    {
+      "date": "2026-09-14",
+      "meal": "lunch",
+      "name": "The Best Chicken Salad Sandwich"
+    },
+    {
+      "date": "2026-09-14",
+      "meal": "dinner",
+      "name": "Herbivoracious' White Bean and Kale Soup"
+    },
+    {
+      "date": "2026-09-15",
+      "meal": "breakfast",
+      "name": "Blueberry Banana Pancakes"
+    },
+    {
+      "date": "2026-09-15",
+      "meal": "lunch",
+      "name": "Boeuf Bourgignon"
+    },
+    {
+      "date": "2026-09-15",
+      "meal": "dinner",
+      "name": "Chinese Chicken Salad With Chipotle Dressing"
+    },
+    {
+      "date": "2026-09-16",
+      "meal": "breakfast",
+      "name": "Classic Eggs Benedict"
+    },
+    {
+      "date": "2026-09-16",
+      "meal": "lunch",
+      "name": "Farfalle with Shrimps, Tomatoes Basil Sauce"
+    },
+    {
+      "date": "2026-09-16",
+      "meal": "dinner",
+      "name": "Linguine and Clams In Garlic White Wine Sauce"
+    },
+    {
+      "date": "2026-09-17",
+      "meal": "breakfast",
+      "name": "Blueberry Banana Pancakes"
+    },
+    {
+      "date": "2026-09-17",
+      "meal": "lunch",
+      "name": "Falafel Burgers"
+    },
+    {
+      "date": "2026-09-17",
+      "meal": "dinner",
+      "name": "Saffron Chicken Tikka"
+    },
+    {
+      "date": "2026-09-18",
+      "meal": "breakfast",
+      "name": "Raspberry Walnut Coffee Cake"
+    },
+    {
+      "date": "2026-09-18",
+      "meal": "lunch",
+      "name": "Simple Roast Chicken"
+    },
+    {
+      "date": "2026-09-18",
+      "meal": "dinner",
+      "name": "Kale and Chickpea Soup with Lemon"
+    },
+    {
+      "date": "2026-09-19",
+      "meal": "breakfast",
+      "name": "Goldilocks Chia Seed Porridge"
+    },
+    {
+      "date": "2026-09-19",
+      "meal": "lunch",
+      "name": "Pecan Sandies"
+    },
+    {
+      "date": "2026-09-19",
+      "meal": "dinner",
+      "name": "A Post Thanksgiving “sopa De Tortilla”"
+    },
+    {
+      "date": "2026-09-20",
+      "meal": "breakfast",
+      "name": "Whole Wheat Blueberry Muffins"
+    },
+    {
+      "date": "2026-09-20",
+      "meal": "lunch",
+      "name": "Chicken and Vegetarian Tamales With Red Mole Sauce"
+    },
+    {
+      "date": "2026-09-20",
+      "meal": "dinner",
+      "name": "Curry and Sage Roast Chicken"
+    },
+    {
+      "date": "2026-09-21",
+      "meal": "breakfast",
+      "name": "Tropical Breakfast Quinoa"
+    },
+    {
+      "date": "2026-09-21",
+      "meal": "lunch",
+      "name": "Creamy Potato Soup"
+    },
+    {
+      "date": "2026-09-21",
+      "meal": "dinner",
+      "name": "Grilled Fish Sandwiches"
+    },
+    {
+      "date": "2026-09-22",
+      "meal": "breakfast",
+      "name": "Jumbo Blueberry Muffins"
+    },
+    {
+      "date": "2026-09-22",
+      "meal": "lunch",
+      "name": "How to Make the Cheesiest Bowtie Mac and Cheese"
+    },
+    {
+      "date": "2026-09-22",
+      "meal": "dinner",
+      "name": "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs"
+    },
+    {
+      "date": "2026-09-23",
+      "meal": "breakfast",
+      "name": "Butternut Squash Frittata"
+    },
+    {
+      "date": "2026-09-23",
+      "meal": "lunch",
+      "name": "Creamy Mushroom Soup ~ with a “Kick”"
+    },
+    {
+      "date": "2026-09-23",
+      "meal": "dinner",
+      "name": "Lemon, Garlic and Thyme Roast Chicken – Quick and Easy Method"
+    },
+    {
+      "date": "2026-09-24",
+      "meal": "breakfast",
+      "name": "Sweet Potatoes Muffins"
+    },
+    {
+      "date": "2026-09-24",
+      "meal": "lunch",
+      "name": "Ginger Chicken Stir-Fry"
+    },
+    {
+      "date": "2026-09-24",
+      "meal": "dinner",
+      "name": "Nachos Grande"
+    },
+    {
+      "date": "2026-09-25",
+      "meal": "breakfast",
+      "name": "Nutella Stuffed French Toast"
+    },
+    {
+      "date": "2026-09-25",
+      "meal": "lunch",
+      "name": "Quinoa Salad with Barberries & Nuts"
+    },
+    {
+      "date": "2026-09-25",
+      "meal": "dinner",
+      "name": "Classic French Onion Soup"
+    },
+    {
+      "date": "2026-09-26",
+      "meal": "breakfast",
+      "name": "Lemon Poppy Seed Muffins"
+    },
+    {
+      "date": "2026-09-26",
+      "meal": "lunch",
+      "name": "Greek Inspired Spring Omelet"
+    },
+    {
+      "date": "2026-09-26",
+      "meal": "dinner",
+      "name": "Pumpkin gnocchi with basil and Parmesan"
+    },
+    {
+      "date": "2026-09-27",
+      "meal": "breakfast",
+      "name": "Fluffy frittata with spinach"
+    },
+    {
+      "date": "2026-09-27",
+      "meal": "lunch",
+      "name": "Plantain Pizza"
+    },
+    {
+      "date": "2026-09-27",
+      "meal": "dinner",
+      "name": "Pancit Bihon (Filipino Pancit)"
+    },
+    {
+      "date": "2026-09-28",
+      "meal": "breakfast",
+      "name": "Frittata"
+    },
+    {
+      "date": "2026-09-28",
+      "meal": "lunch",
+      "name": "Minestrone Soup"
+    },
+    {
+      "date": "2026-09-28",
+      "meal": "dinner",
+      "name": "Coastal Avocado Salad with Grapes and Shrimp"
+    },
+    {
+      "date": "2026-09-29",
+      "meal": "breakfast",
+      "name": "Chilled Swiss Oatmeal"
+    },
+    {
+      "date": "2026-09-29",
+      "meal": "lunch",
+      "name": "Turkey and Sausage Boulettes"
+    },
+    {
+      "date": "2026-09-29",
+      "meal": "dinner",
+      "name": "Seared Scallops With Wilted Greens"
+    },
+    {
+      "date": "2026-09-30",
+      "meal": "breakfast",
+      "name": "Whole Wheat Blueberry Muffins"
+    },
+    {
+      "date": "2026-09-30",
+      "meal": "lunch",
+      "name": "Layered Baked Eggplant Parmesan"
+    },
+    {
+      "date": "2026-09-30",
+      "meal": "dinner",
+      "name": "Salmon Confit with Lemongrass Sauce"
+    },
+    {
+      "date": "2026-10-01",
+      "meal": "breakfast",
+      "name": "Hot Cross Buns"
+    },
+    {
+      "date": "2026-10-01",
+      "meal": "lunch",
+      "name": "Garam Masala Pork Chops with Mint Yogurt and Spiced Couscous"
+    },
+    {
+      "date": "2026-10-01",
+      "meal": "dinner",
+      "name": "Crab and Shrimp Burgers With Garlic Grits Fries"
+    },
+    {
+      "date": "2026-10-02",
+      "meal": "breakfast",
+      "name": "Crepes Suzette"
+    },
+    {
+      "date": "2026-10-02",
+      "meal": "lunch",
+      "name": "Game Day Jerk Wings"
+    },
+    {
+      "date": "2026-10-02",
+      "meal": "dinner",
+      "name": "Creamy Potato Soup"
+    },
+    {
+      "date": "2026-10-03",
+      "meal": "breakfast",
+      "name": "Apple, Cherry, Pear and Almond Breakfast Muffins"
+    },
+    {
+      "date": "2026-10-03",
+      "meal": "lunch",
+      "name": "Fall Farro Salad with Pomegranate, Walnut & Truffles"
+    },
+    {
+      "date": "2026-10-03",
+      "meal": "dinner",
+      "name": "Easy Pork Chops on Stuffing"
+    },
+    {
+      "date": "2026-10-04",
+      "meal": "breakfast",
+      "name": "Carrot Oat Muffins"
+    },
+    {
+      "date": "2026-10-04",
+      "meal": "lunch",
+      "name": "Grilled Ginger Miso Chicken"
+    },
+    {
+      "date": "2026-10-04",
+      "meal": "dinner",
+      "name": "Mexican Chicken Lettuce Wraps"
+    },
+    {
+      "date": "2026-10-05",
+      "meal": "breakfast",
+      "name": "Jumbo Blueberry Muffins"
+    },
+    {
+      "date": "2026-10-05",
+      "meal": "lunch",
+      "name": "Peri Peri Chicken and Savoury Rice"
+    },
+    {
+      "date": "2026-10-05",
+      "meal": "dinner",
+      "name": "Fire-Breathing Dragon Pasta"
+    },
+    {
+      "date": "2026-10-06",
+      "meal": "breakfast",
+      "name": "Chive and dill muffins"
+    },
+    {
+      "date": "2026-10-06",
+      "meal": "lunch",
+      "name": "Almost Guilt Free Mac and Cheese"
+    },
+    {
+      "date": "2026-10-06",
+      "meal": "dinner",
+      "name": "Baked Tortellini In Red Sauce"
+    },
+    {
+      "date": "2026-10-07",
+      "meal": "breakfast",
+      "name": "Jalapeno Cheese Quick Bread"
+    },
+    {
+      "date": "2026-10-07",
+      "meal": "lunch",
+      "name": "Creamy Polenta with Egg, Arrabiata & Bacon"
+    },
+    {
+      "date": "2026-10-07",
+      "meal": "dinner",
+      "name": "Flank Steak with Herbed Salsa"
+    },
+    {
+      "date": "2026-10-08",
+      "meal": "breakfast",
+      "name": "Greek Inspired Spring Omelet"
+    },
+    {
+      "date": "2026-10-08",
+      "meal": "lunch",
+      "name": "Turbo Chicken"
+    },
+    {
+      "date": "2026-10-08",
+      "meal": "dinner",
+      "name": "Bibimbab (Korean Rice w Vegetables & Beef)"
+    },
+    {
+      "date": "2026-10-09",
+      "meal": "breakfast",
+      "name": "Homemade Banana Bread"
+    },
+    {
+      "date": "2026-10-09",
+      "meal": "lunch",
+      "name": "Spicy Salmon Patties"
+    },
+    {
+      "date": "2026-10-09",
+      "meal": "dinner",
+      "name": "Spare Ribs"
+    },
+    {
+      "date": "2026-10-10",
+      "meal": "breakfast",
+      "name": "Strawberry Shortcake Pancakes"
+    },
+    {
+      "date": "2026-10-10",
+      "meal": "lunch",
+      "name": "Penne with Sausage, Tomatoes and Potatoes"
+    },
+    {
+      "date": "2026-10-10",
+      "meal": "dinner",
+      "name": "Buttermilk Skillet Fried Chicken"
+    },
+    {
+      "date": "2026-10-11",
+      "meal": "breakfast",
+      "name": "Peanut Butter Banana French Toast"
+    },
+    {
+      "date": "2026-10-11",
+      "meal": "lunch",
+      "name": "Japanese Fried Rice"
+    },
+    {
+      "date": "2026-10-11",
+      "meal": "dinner",
+      "name": "Creamy Mushrooms Over Soba Noodles (Vegan)"
+    },
+    {
+      "date": "2026-10-12",
+      "meal": "breakfast",
+      "name": "Moist Vegan Spelt Bran Muffins"
+    },
+    {
+      "date": "2026-10-12",
+      "meal": "lunch",
+      "name": "Chicken and Mango Skewer"
+    },
+    {
+      "date": "2026-10-12",
+      "meal": "dinner",
+      "name": "Swordfish with Orange Caramel Sauce"
+    },
+    {
+      "date": "2026-10-13",
+      "meal": "breakfast",
+      "name": "Blueberry Banana Pancakes"
+    },
+    {
+      "date": "2026-10-13",
+      "meal": "lunch",
+      "name": "Butternut Squash Risotto With Pancetta and Sage Oil"
+    },
+    {
+      "date": "2026-10-13",
+      "meal": "dinner",
+      "name": "Sweet Mustard BBQ Pork Chops"
+    },
+    {
+      "date": "2026-10-14",
+      "meal": "breakfast",
+      "name": "Whole Wheat Blueberry Muffins"
+    },
+    {
+      "date": "2026-10-14",
+      "meal": "lunch",
+      "name": "Easy Instant Pot Beef Tips and Rice"
+    },
+    {
+      "date": "2026-10-14",
+      "meal": "dinner",
+      "name": "Almond Horns"
+    },
+    {
+      "date": "2026-10-15",
+      "meal": "breakfast",
+      "name": "Coconut Bliss Smoothie"
+    },
+    {
+      "date": "2026-10-15",
+      "meal": "lunch",
+      "name": "Italian Tomato and Mozzarella Caprese"
+    },
+    {
+      "date": "2026-10-15",
+      "meal": "dinner",
+      "name": "Korean Extra Crispy Fried Chicken w Sweet Spicy Glaze"
+    },
+    {
+      "date": "2026-10-16",
+      "meal": "breakfast",
+      "name": "Jalapeno Cheese Quick Bread"
+    },
+    {
+      "date": "2026-10-16",
+      "meal": "lunch",
+      "name": "Asian Broiled Fish"
+    },
+    {
+      "date": "2026-10-16",
+      "meal": "dinner",
+      "name": "The Best Chicken Salad Sandwich"
+    },
+    {
+      "date": "2026-10-17",
+      "meal": "breakfast",
+      "name": "Blueberry Banana Pancakes"
+    },
+    {
+      "date": "2026-10-17",
+      "meal": "lunch",
+      "name": "Apple Cheddar Turkey Burgers With Chipotle Yogurt Sauce"
+    },
+    {
+      "date": "2026-10-17",
+      "meal": "dinner",
+      "name": "Chipotle Cheese Stuffed Black Bean Burgers with Avocado Creme"
+    },
+    {
+      "date": "2026-10-18",
+      "meal": "breakfast",
+      "name": "Strawberry Banana Stuffed Pancakes"
+    },
+    {
+      "date": "2026-10-18",
+      "meal": "lunch",
+      "name": "Salmon Frittata"
+    },
+    {
+      "date": "2026-10-18",
+      "meal": "dinner",
+      "name": "Stuffed Pork Tenderloin with Marsala-Port Sauce"
+    },
+    {
+      "date": "2026-10-19",
+      "meal": "breakfast",
+      "name": "Sweet Potato Hashbrown Breakfast Bake"
+    },
+    {
+      "date": "2026-10-19",
+      "meal": "lunch",
+      "name": "Lemon, Garlic and Thyme Roast Chicken – Quick and Easy Method"
+    },
+    {
+      "date": "2026-10-19",
+      "meal": "dinner",
+      "name": "Cheese Tortellini With Shrimp In Tomato Cream Sauce"
+    },
+    {
+      "date": "2026-10-20",
+      "meal": "breakfast",
+      "name": "Vegan Donuts"
+    },
+    {
+      "date": "2026-10-20",
+      "meal": "lunch",
+      "name": "Black Lentil and Couscous Salad"
+    },
+    {
+      "date": "2026-10-20",
+      "meal": "dinner",
+      "name": "Baked Polenta With Ricotta Cheese"
+    },
+    {
+      "date": "2026-10-21",
+      "meal": "breakfast",
+      "name": "Barbecued Shrimp & Grits"
+    },
+    {
+      "date": "2026-10-21",
+      "meal": "lunch",
+      "name": "Venison Stew"
+    },
+    {
+      "date": "2026-10-21",
+      "meal": "dinner",
+      "name": "Dragon Salad - Couscous Summer Salad"
+    },
+    {
+      "date": "2026-10-22",
+      "meal": "breakfast",
+      "name": "Sweet Potato Hashbrown Breakfast Bake"
+    },
+    {
+      "date": "2026-10-22",
+      "meal": "lunch",
+      "name": "Cajun Shrimp Chowder"
+    },
+    {
+      "date": "2026-10-22",
+      "meal": "dinner",
+      "name": "Parmesan chicken nuggets"
+    },
+    {
+      "date": "2026-10-23",
+      "meal": "breakfast",
+      "name": "Frittata with Mushrooms, Thyme, and Parmigiano Cheese"
+    },
+    {
+      "date": "2026-10-23",
+      "meal": "lunch",
+      "name": "Beef Lo Mein Noodles"
+    },
+    {
+      "date": "2026-10-23",
+      "meal": "dinner",
+      "name": "How to Make the Perfect Sweet Potato Sloppy Joes"
+    },
+    {
+      "date": "2026-10-24",
+      "meal": "breakfast",
+      "name": "Baked Eggs With Asparagus and Sun Dried Tomatoes"
+    },
+    {
+      "date": "2026-10-24",
+      "meal": "lunch",
+      "name": "Butternut Squash Gnocchi With Whiskey Cream Sauce"
+    },
+    {
+      "date": "2026-10-24",
+      "meal": "dinner",
+      "name": "Zucchini Quiche Appetizers"
+    },
+    {
+      "date": "2026-10-25",
+      "meal": "breakfast",
+      "name": "Cinnamon Eggless Coffee Cake"
+    },
+    {
+      "date": "2026-10-25",
+      "meal": "lunch",
+      "name": "Chicken Sausage, White Bean and Cabbage Soup"
+    },
+    {
+      "date": "2026-10-25",
+      "meal": "dinner",
+      "name": "Coconut and Whole Wheat Chicken Tenders"
+    },
+    {
+      "date": "2026-10-26",
+      "meal": "breakfast",
+      "name": "Curious George's Gluten-Free Banana Nut Bread"
+    },
+    {
+      "date": "2026-10-26",
+      "meal": "lunch",
+      "name": "Beans Hawaiian"
+    },
+    {
+      "date": "2026-10-26",
+      "meal": "dinner",
+      "name": "Easy and Delicious Taco Soup"
+    },
+    {
+      "date": "2026-10-27",
+      "meal": "breakfast",
+      "name": "Cheesy Potato Corn Scones"
+    },
+    {
+      "date": "2026-10-27",
+      "meal": "lunch",
+      "name": "Gambas Al Ajillo"
+    },
+    {
+      "date": "2026-10-27",
+      "meal": "dinner",
+      "name": "Chicken and White Bean Chili"
+    },
+    {
+      "date": "2026-10-28",
+      "meal": "breakfast",
+      "name": "Havarti and Asparagus Quiche"
+    },
+    {
+      "date": "2026-10-28",
+      "meal": "lunch",
+      "name": "Asparagus Lemon Risotto"
+    },
+    {
+      "date": "2026-10-28",
+      "meal": "dinner",
+      "name": "Zucchini Ribbon and Ricotta Pizza"
+    },
+    {
+      "date": "2026-10-29",
+      "meal": "breakfast",
+      "name": "Gluten Free Blueberry Muffins"
+    },
+    {
+      "date": "2026-10-29",
+      "meal": "lunch",
+      "name": "How To Make Fried Chicken Without Frying"
+    },
+    {
+      "date": "2026-10-29",
+      "meal": "dinner",
+      "name": "Tomato Stack Salad"
+    }
+  ]
+}

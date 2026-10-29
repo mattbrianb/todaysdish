@@ -1,10 +1,21 @@
 import os
 import requests
 import json
-from datetime import date
+from datetime import datetime, timedelta, timezone
 
 API_KEY = os.getenv("SPOONACULAR_API_KEY")
 BASE_URL = "https://api.spoonacular.com/recipes/random"
+
+TODAY_FILE = "today.json"
+HISTORY_FILE = "history.json"
+
+# Don't serve a dish again within this many days. Spoonacular's breakfast pool is
+# small (~200 recipes with images), so a much longer window would force repeats anyway.
+NO_REPEAT_DAYS = 90
+HISTORY_KEEP_DAYS = 365
+
+# South Africa is UTC+2 all year (no DST)
+SA_TZ = timezone(timedelta(hours=2))
 
 
 def image_exists(url):
@@ -17,54 +28,123 @@ def image_exists(url):
         return False
 
 
-def get_recipe_with_image(tags, attempts=3):
+def name_key(name):
+    return " ".join(str(name).lower().split())
+
+
+def load_history():
+    try:
+        with open(HISTORY_FILE, encoding="utf-8") as f:
+            return json.load(f).get("served", [])
+    except FileNotFoundError:
+        return []
+
+
+def save_history(served, today):
+    cutoff = str(today - timedelta(days=HISTORY_KEEP_DAYS))
+    served = [e for e in served if e["date"] >= cutoff]
+    with open(HISTORY_FILE, "w", encoding="utf-8") as f:
+        json.dump({"served": served}, f, indent=2, ensure_ascii=False)
+
+
+def to_dish(recipe):
+    ingredients = [
+        item["original"]
+        for item in recipe.get("extendedIngredients", [])
+    ]
+
+    steps = []
+    instructions = recipe.get("analyzedInstructions", [])
+    if instructions:
+        steps = [s["step"] for s in instructions[0]["steps"]]
+
+    return {
+        "id": recipe.get("id"),
+        "name": recipe["title"],
+        "image": recipe.get("image"),
+        "cookTime": recipe.get("readyInMinutes"),
+        "ingredients": ingredients,
+        "steps": steps
+    }
+
+
+def get_recipe_with_image(tags, last_served, used_today, attempts=4):
+    """Pick a recipe not served in the last NO_REPEAT_DAYS (by name or id).
+
+    If every candidate is a recent repeat, fall back to the one served longest ago
+    rather than failing the day.
+    """
+    fallback, fallback_date = None, None
+
     for _ in range(attempts):
         params = {
             "apiKey": API_KEY,
-            "number": 5,
+            "number": 10,
             "tags": tags
         }
 
-        response = requests.get(BASE_URL, params=params)
+        response = requests.get(BASE_URL, params=params, timeout=30)
         response.raise_for_status()
 
         for recipe in response.json()["recipes"]:
-            image = recipe.get("image")
-
-            if not image_exists(image):
+            keys = {name_key(recipe.get("title", "")), str(recipe.get("id"))}
+            if keys & used_today:
                 continue
 
-            ingredients = [
-                item["original"]
-                for item in recipe.get("extendedIngredients", [])
-            ]
+            if not image_exists(recipe.get("image")):
+                continue
 
-            steps = []
-            instructions = recipe.get("analyzedInstructions", [])
-            if instructions:
-                steps = [s["step"] for s in instructions[0]["steps"]]
+            served_on = max((last_served[k] for k in keys if k in last_served), default=None)
+            if served_on is None:
+                return to_dish(recipe)
 
-            return {
-                "name": recipe["title"],
-                "image": image,
-                "cookTime": recipe.get("readyInMinutes"),
-                "ingredients": ingredients,
-                "steps": steps
-            }
+            if fallback is None or served_on < fallback_date:
+                fallback, fallback_date = recipe, served_on
+
+    if fallback is not None:
+        print(f"[{tags}] no fresh recipe found, repeating one last served {fallback_date}")
+        return to_dish(fallback)
 
     raise RuntimeError(f"No valid recipe with image found for tags: {tags}")
 
 
 def main():
-    today = {
-        "date": str(date.today()),
-        "breakfast": get_recipe_with_image("breakfast"),
-        "lunch": get_recipe_with_image("main course"),
-        "dinner": get_recipe_with_image("dinner")
-    }
+    today = datetime.now(SA_TZ).date()
 
-    with open("today.json", "w") as f:
-        json.dump(today, f, indent=2)
+    # Retry runs exit early once today's dishes exist (FORCE=1 regenerates anyway)
+    if os.getenv("FORCE") != "1":
+        try:
+            with open(TODAY_FILE, encoding="utf-8") as f:
+                if json.load(f).get("date") == str(today):
+                    print(f"{TODAY_FILE} is already for {today}, nothing to do")
+                    return
+        except (FileNotFoundError, ValueError):
+            pass
+
+    # A forced re-run replaces today's picks, so drop them from history first
+    served = [e for e in load_history() if e["date"] != str(today)]
+
+    window_start = str(today - timedelta(days=NO_REPEAT_DAYS))
+    last_served = {}
+    for e in served:
+        if e["date"] < window_start:
+            continue
+        for k in (name_key(e["name"]), str(e.get("id"))):
+            if k != "None":
+                last_served[k] = max(last_served.get(k, ""), e["date"])
+
+    used_today = set()
+    result = {"date": str(today)}
+    for meal, tags in (("breakfast", "breakfast"), ("lunch", "main course"), ("dinner", "dinner")):
+        dish = get_recipe_with_image(tags, last_served, used_today)
+        result[meal] = dish
+        used_today |= {name_key(dish["name"]), str(dish["id"])}
+        served.append({"date": str(today), "meal": meal, "name": dish["name"], "id": dish["id"]})
+
+    with open(TODAY_FILE, "w") as f:
+        json.dump(result, f, indent=2)
+
+    save_history(served, today)
 
 
 if __name__ == "__main__":

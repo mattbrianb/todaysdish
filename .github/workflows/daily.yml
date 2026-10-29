@@ -6,6 +6,8 @@ permissions:
 on:
   schedule:
     - cron: "0 4 * * *"   # 06:00 South Africa (UTC+2)
+    - cron: "0 6 * * *"   # retry 08:00 SA, exits early if today's dishes exist
+    - cron: "0 9 * * *"   # retry 11:00 SA
   workflow_dispatch:
 
 jobs:
@@ -27,12 +29,14 @@ jobs:
       - name: Generate today's dishes
         env:
           SPOONACULAR_API_KEY: ${{ secrets.SPOONACULAR_API_KEY }}
+          # A manual run always picks fresh dishes; scheduled retries don't overwrite
+          FORCE: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
         run: python scripts/generate_today.py
 
       - name: Commit updated today.json
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add today.json
+          git add today.json history.json
           git commit -m "Update today's dishes" || echo "No changes"
           git push
