@@ -9,6 +9,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Condensed:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/diner.css">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#A8261F">
+<!-- Link previews. og.jpg is redrawn every morning by scripts/make_share_card.py -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Today's Dish">
+<meta property="og:title" content="Today's Dish: one menu, everybody eats">
+<meta property="og:description" content="Today's breakfast, lunch and dinner, picked for everyone. Just eat them.">
+<meta property="og:url" content="https://mattbrianb.github.io/todaysdish/">
+<meta property="og:image" content="https://mattbrianb.github.io/todaysdish/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body>
@@ -29,6 +44,7 @@
   </section>
 
   <div class="tiles" id="tiles"></div>
+  <p class="streak" id="streak" aria-live="polite" hidden></p>
 
   <div class="actions-col">
     <button type="button" class="btn-primary" onclick="openShareModal()">Tell your table</button>
@@ -57,6 +73,7 @@
     <p class="sheet-meal" id="recipeMeal"></p>
     <h2 class="sheet-name" id="recipeName"></h2>
     <p class="sheet-meta" id="recipeMeta"></p>
+    <button type="button" class="eat-btn" id="eatBtn" aria-pressed="false" onclick="toggleEating()">I'm eating this</button>
     <h3>Ingredients</h3>
     <ul id="recipeIngredients"></ul>
     <h3>Method</h3>
@@ -107,15 +124,21 @@ function renderBoard(data) {
     tile.type = "button";
     tile.setAttribute("aria-label", label + ": " + d.name + ". See recipe");
     tile.onclick = () => openRecipe(key, label);
+    tile.dataset.meal = key;
     const img = el("img");
     img.src = d.image;
     img.alt = "";
-    tile.append(img, el("span", "tile-label", label));
+    const photo = el("span", "tile-photo");
+    photo.append(img, el("span", "tile-check", "✓"));
+    tile.append(photo, el("span", "tile-label", label));
     if (cookTime(d)) tile.append(el("span", "tile-time", cookTime(d)));
     tile.append(el("span", "tile-hint", "See recipe"));
     tiles.append(tile);
   }
-  board.append(el("div", "board-foot", "No substitutions"));
+  board.append(el("div", "board-foot", "No substitutions"), el("div", "board-next", ""));
+  updateCountdown();
+  setInterval(updateCountdown, 30000);
+  renderEating();
 
   const names = MEALS.filter(([k]) => data[k]).map(([k, label]) => label + ": " + shortName(data[k].name));
   setShareText("Today's specials 🍽️ " + names.join(". ") + ". Everybody eats the same today:");
@@ -137,13 +160,93 @@ function openRecipe(key, label) {
   const steps = document.getElementById("recipeSteps");
   steps.replaceChildren(...(d.steps || []).map(s => el("li", "", s)));
 
+  openMeal = key;
+  renderEating();
   openOverlay("recipeOverlay");
+}
+
+/* Countdown: the daily job runs at 04:00 UTC (06:00 in South Africa) */
+function updateCountdown() {
+  const now = new Date();
+  const next = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 4));
+  if (next <= now) next.setUTCDate(next.getUTCDate() + 1);
+  const mins = Math.ceil((next - now) / 60000);
+  const h = Math.floor(mins / 60), m = mins % 60;
+  const node = document.querySelector(".board-next");
+  if (node) node.textContent = "New menu in " + (h ? h + "h " + m + "m" : m + "m");
+}
+
+/* "I'm eating this" and streak, kept on this device only (no accounts) */
+const EAT_KEY = "todaysdish_eating";
+let openMeal = null;
+
+function loadEating() {
+  try { return JSON.parse(localStorage.getItem(EAT_KEY)) || {}; } catch (e) { return {}; }
+}
+function saveEating(log) {
+  // Two months is plenty for a streak
+  const keep = Object.keys(log).sort().slice(-60);
+  try { localStorage.setItem(EAT_KEY, JSON.stringify(Object.fromEntries(keep.map(k => [k, log[k]])))); } catch (e) {}
+}
+function shiftDate(iso, days) {
+  const d = parseLocalDate(iso);
+  d.setDate(d.getDate() + days);
+  return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+}
+function streakDays(log, todayIso) {
+  // Today counts once picked; until then a streak running to yesterday is still alive
+  let day = (log[todayIso] || []).length ? todayIso : shiftDate(todayIso, -1);
+  let n = 0;
+  while ((log[day] || []).length) { n++; day = shiftDate(day, -1); }
+  return n;
+}
+
+function toggleEating() {
+  if (!today || !openMeal) return;
+  const log = loadEating();
+  const picks = new Set(log[today.date] || []);
+  const adding = !picks.has(openMeal);
+  if (adding) picks.add(openMeal); else picks.delete(openMeal);
+  if (picks.size) log[today.date] = [...picks]; else delete log[today.date];
+  saveEating(log);
+  renderEating();
+  if (adding) {
+    const n = streakDays(log, today.date);
+    showToast(n > 1 ? "Enjoy! 🔥 " + n + "-day streak" : "Enjoy! Come back tomorrow to start a streak 🔥");
+  }
+}
+
+function renderEating() {
+  if (!today) return;
+  const log = loadEating();
+  const picks = log[today.date] || [];
+  document.querySelectorAll(".tile").forEach(t => t.classList.toggle("eating", picks.includes(t.dataset.meal)));
+
+  const btn = document.getElementById("eatBtn");
+  const on = openMeal && picks.includes(openMeal);
+  btn.setAttribute("aria-pressed", on ? "true" : "false");
+  btn.textContent = on ? "✓ You're eating this" : "I'm eating this";
+
+  const n = streakDays(log, today.date);
+  const line = document.getElementById("streak");
+  const labels = MEALS.filter(([k]) => picks.includes(k)).map(([, l]) => l.toLowerCase());
+  if (picks.length) {
+    line.textContent = (n > 1 ? "🔥 " + n + "-day streak · " : "") + "You're eating today's " + labels.join(" and ");
+  } else if (n > 0) {
+    line.textContent = "🔥 " + n + "-day streak. Open a dish and tap I'm eating this to keep it going";
+  } else {
+    line.textContent = "Eating one of these? Open it and tap I'm eating this";
+  }
+  line.hidden = false;
 }
 
 // "no-cache" revalidates with the server so returning visitors never see yesterday's cached file
 fetch("today.json", { cache: "no-cache" })
   .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-  .then(data => { today = data; renderBoard(data); })
+  .then(data => {
+    today = data;
+    renderBoard(data);
+  })
   .catch(() => {
     document.getElementById("boardDate").textContent = "Refresh the page to see today's specials";
   });

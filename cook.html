@@ -9,6 +9,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Condensed:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/diner.css">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#A8261F">
 <style>
 .search-box { margin-top: 18px; max-width: 640px; margin-left: auto; margin-right: auto; }
 .search-row { display: flex; gap: 10px; flex-wrap: wrap; }
@@ -29,8 +34,30 @@
 .status { margin-top: 6px; color: var(--muted); font-size: 14px; font-weight: 700; min-height: 1em; }
 
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 18px; margin-top: 20px; }
-.details { display: none; }
-.details.open { display: block; }
+.result { display: flex; flex-direction: column; padding: 14px; }
+.result h2 { margin: 0 0 14px; font-size: 19px; }
+.result-photo {
+  display: block;
+  padding: 0;
+  margin: 0 0 12px;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg);
+  aspect-ratio: 3 / 2;
+  cursor: pointer;
+}
+.result-photo img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 0;
+  object-fit: cover;
+  transition: transform 200ms var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) { .result-photo:hover img { transform: scale(1.03); } }
+@media (prefers-reduced-motion: reduce) { .result-photo img { transition: none; } .result-photo:hover img { transform: none; } }
+.result .inline-btn { margin-top: auto; align-self: stretch; }
 .inline-btn {
   min-height: 44px;
   padding: 0 16px;
@@ -91,6 +118,25 @@
   <div id="resultsGrid" class="grid"></div>
 </main>
 
+<!-- Recipe sheet, opened from a result's photo or its button -->
+<div class="overlay" id="cookRecipeOverlay">
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="cookRecipeName">
+    <div class="sheet-head">
+      <div class="sheet-title">Off the menu</div>
+      <button type="button" class="close-btn" onclick="closeOverlay('cookRecipeOverlay')" aria-label="Close">✕</button>
+    </div>
+    <div id="cookRecipeImg"></div>
+    <p class="sheet-meal" id="cookRecipeMeal"></p>
+    <h2 class="sheet-name" id="cookRecipeName"></h2>
+    <p class="sheet-meta" id="cookRecipeMeta"></p>
+    <div id="cookRecipeMissing"></div>
+    <h3>Ingredients</h3>
+    <ul id="cookRecipeIngredients"></ul>
+    <h3>Method</h3>
+    <ol id="cookRecipeSteps"></ol>
+  </div>
+</div>
+
 <footer class="site-footer">
   <a href="./index.html">Today's specials</a>
   <a href="./cook.html" aria-current="page">Cook with what you have</a>
@@ -103,7 +149,8 @@
 
 <script>
 const WORKER_BASE_URL = "https://todaysdish-ingredients.mattbrianburnett.workers.dev";
-const TARGET_RESULTS = 50;
+// Each result costs one Worker call, so 24 keeps searches quick on mobile data
+const TARGET_RESULTS = 24;
 const CONCURRENCY = 5;
 const CANDIDATE_SAMPLE_PER_TIER = 60;
 
@@ -147,9 +194,11 @@ function effortBadge(level) {
   return '';
 }
 
-function toggleDetails(id) {
-  const el = document.getElementById(id);
-  if (el) el.classList.toggle("open");
+function el(tag, className, text) {
+  const e = document.createElement(tag);
+  if (className) e.className = className;
+  if (text !== undefined) e.textContent = text;
+  return e;
 }
 
 function missingBucket(m) {
@@ -201,42 +250,84 @@ function saveLastTop3(raw, diet, ids) {
   } catch {}
 }
 
-/* Render card */
+/* Render card: photo on top at a fixed shape and the button pinned to the bottom,
+   so cards in a row line up whatever the badge and title lengths */
+function photoUrl(recipe) {
+  const imgUrl = normalizeImageUrl(recipe.image);
+  return imgUrl ? (WORKER_BASE_URL + "/img?u=" + encodeURIComponent(imgUrl)) : "";
+}
+
 function renderCard(recipe, matchedCount, requiredCount) {
-  const id = safeText(recipe.id);
-  const detailsId = "details-" + id;
+  const card = el("article", "card result");
+  const open = () => openCookRecipe(recipe, matchedCount, requiredCount);
+
+  const photo = el("button", "result-photo");
+  photo.type = "button";
+  photo.setAttribute("aria-label", "See the recipe for " + safeText(recipe.name));
+  photo.onclick = open;
+  const src = photoUrl(recipe);
+  if (src) {
+    const img = el("img");
+    img.src = src;
+    img.alt = "";
+    img.loading = "lazy";
+    photo.append(img);
+  }
+
+  const badges = el("div", "badges");
+  badges.innerHTML = effortBadge(recipe.effort);  // fixed markup, no recipe text
+  badges.prepend(el("span", "badge good", "Matched inputs: " + matchedCount + "/" + requiredCount));
+  if (recipe.category) badges.append(el("span", "badge", "Category: " + safeText(recipe.category)));
+  badges.append(
+    el("span", "badge", "Used: " + safeText(recipe.usedIngredientCount)),
+    el("span", "badge accent", "Missing: " + safeText(recipe.missedIngredientCount))
+  );
+
+  const btn = el("button", "inline-btn", "Show full recipe");
+  btn.type = "button";
+  btn.onclick = open;
+
+  card.append(photo, badges, el("h2", "", safeText(recipe.name)), btn);
+  return card;
+}
+
+function openCookRecipe(recipe, matchedCount, requiredCount) {
+  const wrap = document.getElementById("cookRecipeImg");
+  const src = photoUrl(recipe);
+  if (src) {
+    const img = el("img", "sheet-img");
+    img.src = src;
+    img.alt = safeText(recipe.name);
+    wrap.replaceChildren(img);
+  } else {
+    wrap.replaceChildren();
+  }
+  document.getElementById("cookRecipeMeal").textContent = recipe.category ? safeText(recipe.category) : "Recipe";
+  document.getElementById("cookRecipeName").textContent = safeText(recipe.name);
+  document.getElementById("cookRecipeMeta").textContent = [
+    "Matched " + matchedCount + "/" + requiredCount,
+    recipe.effort ? "Effort: " + recipe.effort : ""
+  ].filter(Boolean).join(" · ");
 
   const missed = Array.isArray(recipe.missedIngredients) ? recipe.missedIngredients : [];
-  const ingredients = Array.isArray(recipe.ingredients) ? recipe.ingredients : [];
-  const steps = Array.isArray(recipe.steps) ? recipe.steps : [];
-
-  const imgUrl = normalizeImageUrl(recipe.image);
-  const proxied = imgUrl ? (WORKER_BASE_URL + "/img?u=" + encodeURIComponent(imgUrl)) : "";
-
-  return (
-    '<div class="card">' +
-      '<div class="badges">' +
-        '<span class="badge good">Matched inputs: ' + matchedCount + '/' + requiredCount + '</span>' +
-        effortBadge(recipe.effort) +
-        (recipe.category ? '<span class="badge">Category: ' + safeText(recipe.category) + '</span>' : '') +
-        '<span class="badge">Used: ' + safeText(recipe.usedIngredientCount) + '</span>' +
-        '<span class="badge accent">Missing: ' + safeText(recipe.missedIngredientCount) + '</span>' +
-      '</div>' +
-      '<h2>' + safeText(recipe.name) + '</h2>' +
-      (proxied ? '<img src="' + proxied + '" alt="" loading="lazy">' : '') +
-      '<button class="inline-btn" onclick="toggleDetails(\'' + detailsId + '\')">Show full recipe</button>' +
-      '<div class="details" id="' + detailsId + '">' +
-        '<hr class="sep">' +
-        (missed.length
-          ? '<h3>Missing ingredients</h3><ul>' + missed.map(m => '<li>' + safeText(m) + '</li>').join('') + '</ul>'
-          : '<div class="small">Looks like you have most of what’s needed.</div>'
-        ) +
-        '<h3>Ingredients</h3><ul>' + ingredients.map(i => '<li>' + safeText(i) + '</li>').join('') + '</ul>' +
-        '<hr class="sep">' +
-        '<h3>Method</h3><ol>' + steps.map(s => '<li>' + safeText(s) + '</li>').join('') + '</ol>' +
-      '</div>' +
-    '</div>'
+  const missing = document.getElementById("cookRecipeMissing");
+  missing.replaceChildren(
+    ...(missed.length
+      ? [el("h3", "", "You'll also need"), listOf("ul", missed)]
+      : [el("p", "small", "Looks like you have most of what's needed.")])
   );
+  document.getElementById("cookRecipeIngredients").replaceChildren(...listItems(recipe.ingredients));
+  document.getElementById("cookRecipeSteps").replaceChildren(...listItems(recipe.steps));
+  openOverlay("cookRecipeOverlay");
+}
+
+function listItems(items) {
+  return (Array.isArray(items) ? items : []).map(t => el("li", "", safeText(t)));
+}
+function listOf(tag, items) {
+  const list = el(tag);
+  list.append(...listItems(items));
+  return list;
 }
 /* Main search */
 async function searchByIngredients() {
@@ -388,9 +479,7 @@ async function searchByIngredients() {
 
     setStatus("Showing " + finalList.length + " ideas (Diet: " + dietLabel + ").");
 
-    gridEl.innerHTML = finalList
-      .map(r => renderCard(r, r._matchedCount || 1, r._requiredCount || requiredCount))
-      .join("");
+    gridEl.replaceChildren(...finalList.map(r => renderCard(r, r._matchedCount || 1, r._requiredCount || requiredCount)));
 
   } catch (e) {
     setStatus("Something went wrong. Please try again.");

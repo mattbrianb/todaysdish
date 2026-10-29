@@ -45,12 +45,39 @@ document.addEventListener("keydown", (e) => {
 let shareText = "Today's Dish 🍽️ Pick today's dish or cook with what you have:";
 function setShareText(text) { shareText = text; }
 
-function getShareUrl() {
+function siteRoot() {
   // Strip filename -> directory, ensure trailing slash
   return window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, "/");
 }
+
+// Share today's dated page (share/YYYY-MM-DD.html) when it exists: chat apps cache link
+// previews per URL, so a new URL each day means the preview shows today's letterboard.
+let shareUrl = null;
+fetch("today.json", { cache: "no-cache" })
+  .then(r => r.ok ? r.json() : null)
+  .then(data => {
+    if (!data || !/^\d{4}-\d{2}-\d{2}$/.test(data.date)) return;
+    const dated = siteRoot() + "share/" + data.date + ".html";
+    return fetch(dated, { method: "HEAD", cache: "no-cache" }).then(r => { if (r.ok) shareUrl = dated; });
+  })
+  .catch(() => {});
+
+function getShareUrl() {
+  return shareUrl || siteRoot();
+}
+
 function openShareModal() {
-  document.getElementById("shareLink").value = getShareUrl();
+  const url = getShareUrl();
+  // Phones get their own share menu (all their apps and recent chats); computers get ours
+  if (navigator.share && window.matchMedia("(pointer: coarse)").matches) {
+    navigator.share({ title: "Today's Dish", text: shareText, url })
+      .catch(err => { if (err.name !== "AbortError") showShareSheet(url); });
+    return;
+  }
+  showShareSheet(url);
+}
+function showShareSheet(url) {
+  document.getElementById("shareLink").value = url;
   openOverlay("shareOverlay");
 }
 function closeShareModal() { closeOverlay("shareOverlay"); }
