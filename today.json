@@ -1,91 +1,73 @@
 {
-  "date": "2026-10-28",
+  "date": "2026-10-29",
   "breakfast": {
-    "name": "Havarti and Asparagus Quiche",
-    "image": "https://img.spoonacular.com/recipes/646348-556x370.jpg",
+    "name": "Gluten Free Blueberry Muffins",
+    "image": "https://img.spoonacular.com/recipes/644800-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "8 stalks asparagus",
-      "1 cup cream",
-      "2 Eggs",
-      "1 1/4 cups Flour",
-      "1/2 pound Havarti with Dill Cheese (approximately \u00bd lb.)",
-      "1/2 teaspoon Salt",
-      "1 cup Sugar",
-      "3/4 cup cold, unsalted butter cut into small cubes",
-      "2 quarts (8 c.) water"
+      "2 teaspoons baking powder",
+      "1 1/2 cups Driscoll's Blueberries",
+      "2 large eggs",
+      "2 cups gluten-free all-purpose flour",
+      "2 teaspoons grated lemon zest",
+      "1/2 teaspoon salt",
+      "3/4 cup sugar",
+      "1/2 cup (1 stick) unsalted butter, melted and cooled",
+      "1 teaspoon vanilla extract",
+      "1/2 cup whole milk",
+      "1 teaspoon xanthan gum"
     ],
     "steps": [
-      "In the bowl of a food processor, combine flour, salt, and sugar.",
-      "Add butter and pulse until the mixture resembles the size of small peas.",
-      "Add the first 5 tablespoons of water, one at a time.Check consistency - if the mixture holds together when pinched, the crust is perfect  dont add any more water.If, however, the crust still crumbles apart and wont stay together when pinched, that means it wont stay together while rolling either; go ahead and add the last tablespoon of water one teaspoon at a time, rechecking the consistency between each teaspoon.The exact amount of water you need will depend on the amount of humidity in the air and therefore in the flour.Once finished, turn the dough out onto a piece of plastic wrap.Form the dough into a disk, and refrigerate 30 minutes before rolling it out.You want that flour to relax and the butter to be nice and cold  that will ensure you have a nice flaky crust.Meanwhile, boil a pot of water large enough to fit the stalks of asparagus.Trim the ends of your asparagus making sure they will fit nicely into your quiche pan, arranged like the spokes in a bicycle wheel with the ends touching in the middle.",
-      "Place in boiling water, and blanch for 2-3 minutes.",
-      "Remove from boiling water and place in an ice bath to stop the cooking and keep the color nice and vibrant green.Set aside.Preheat oven to 350 degrees.On a lightly floured surface, roll the dough out into a circle a few inches larger than your quiche or pie pan.Fold the dough back up over the rolling pin if needed, to gently lift the crust into the dish.Once the dough is neatly into the pan, make sure it is smoothly tucked into the corners.Trim excess crust from the edges leaving about a 1 border.Fold the excess dough under itself, making sure not to fold it over the edge of the pan, to ensure a nice even border.Crimp the dough between your fingers to make little pinches.Poke a few fork holes in it to allow the steam to escape, this will prevent a soggy bottom crust.Blind bake the crust for 5 minutes.This will prevent all of the custard from getting absorbed into the crust making it soggy.",
-      "Remove crust from oven and sprinkle with Havarti with Dill cheese.  Set aside.Increase oven temperature to 375 degrees.In a large bowl, combine eggs, heavy cream, and milk and whisk thoroughly.",
-      "Pour egg mixture gently over the cheese mixture.",
-      "Place asparagus stalks, tips pointing outwards into a spoke pattern like on a bicycle wheel, making sure the ends come together in the middle.",
-      "Bake 40 minutes.Check to make sure the crust isnt getting too brown.If it is, loosely drape a piece of foil over the top, making sure you dont lay it on the actual custard mixture in the middle.",
-      "Bake 10-12 minutes longer.To test doneness, slide a butter knife under the edge of one of the asparagus stalks.The knife should come out clean.It should be moist  after all the quiche is moist, but it should be free of egg mixture.If not, put it back in the oven with your tent foil on top for 3-4 more minutes."
+      "Preheat oven to 375F. Lightly butter or grease a 12-cup muffin pan or line with paper liners.Stir together flour, sugar, baking powder, xanthan gum and salt in a medium bowl until blended.",
+      "Whisk together butter, milk, eggs, lemon zest and vanilla in a large bowl until combined. Stir in flour mixture until partially moistened. Fold in blueberries until evenly mixed. Batter will be thick, do not over stir.Divide batter evenly between muffin cups, filling each about three-fourths full.",
+      "Bake 10 minutes. Rotate pan and continue to bake about 10 minutes longer or until muffins are golden brown and toothpick inserted in center comes out clean. Cool in pan 3 minutes.",
+      "Serve warm or remove to wire rack to cool completely."
     ]
   },
   "lunch": {
-    "name": "Asparagus Lemon Risotto",
-    "image": "https://img.spoonacular.com/recipes/632935-556x370.jpg",
+    "name": "How To Make Fried Chicken Without Frying",
+    "image": "https://img.spoonacular.com/recipes/647577-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 14.5 oz cans vegetable broth",
-      "2 1/2 cups water",
-      "1 tablespoon olive oil",
-      "1 cup minced onion",
-      "3 cloves garlic minced",
-      "1 1/2 cups uncooked arborio rice",
-      "or other short-grain rice",
-      "1/2 cup dry white wine",
-      "1/4 teaspoon pepper",
-      "1 1/2 pounds asparagus cut (sliced into 1 inch pieces)",
-      "1/2 cup frozen peas (don't thaw)",
-      "1/4 cup grated fresh parmesan cheese",
-      "1/4 cup chopped fresh parsley",
-      "1 teaspoon grated lemon rind",
-      "1 tablespoon fresh lemon juice"
+      "4 chicken thighs",
+      "2 Tbsp of extra virgin olive oil",
+      "rosemary",
+      "sage",
+      "tarragon",
+      "salt",
+      "pepper",
+      "6 Tbsp of bread crumbs",
+      "2 Tbsp of honey",
+      "2 Tbsp of vinegar"
     ],
     "steps": [
-      "In a large saucepan, combine broth and water. Bring to a simmer. Keep warm over low heat.",
-      "Heat oil in a large Dutch oven over medium heat.",
-      "Add onion; saute 5 minutes or until tender.",
-      "Add garlic; saute 30 seconds.",
-      "Add rice; cook 2 minutes, stirring constantly. Stir in wine; cook 2 minutes or until liquid is nearly absorbed, stirring constantly.",
-      "Mix in pepper.",
-      "Add broth mixture, 1/2 cup at a time, stirring constantly, cook until each portion of broth is absorbed before adding the next (about 25 minutes).",
-      "Add asparagus, and frozen peas,  during the last 10 minutes of cooking.",
-      "Remove from heat; stir in cheese and remaining ingredients.",
-      "T(Cooking):\"0:40\""
+      "Preheat the oven to 200C/400F.",
+      "Wash and dry the chicken thighs.",
+      "Mince the herbs.",
+      "In a bowl put the extra virgin olive oil, the minced herbs, salt and pepper.",
+      "Put the chicken inside the bowl and gently massage the chicken with the oil and herbs mixture.",
+      "Pass each thigh on the breadcrumbs and put on an oven tray covered with parchment paper.",
+      "Cook until well done, from 50 minutes to one hour, depending on your oven and the weight of the chicken pieces.",
+      "At half cooking time, turn each piece to the other side.",
+      "Prepare a sauce mixing the honey and vinegar.",
+      "Five minutes before taking the chicken out of the oven, brush each piece with the sauce."
     ]
   },
   "dinner": {
-    "name": "Zucchini Ribbon and Ricotta Pizza",
-    "image": "https://img.spoonacular.com/recipes/665779-556x370.jpg",
+    "name": "Tomato Stack Salad",
+    "image": "https://img.spoonacular.com/recipes/663638-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1, 12-inch prepared pizza crust",
-      "1/2 cup ricotta cheese",
-      "1 small zucchini (gently run a vegetable peeler the length of the zucchini to make thin \u201cribbons\u201d)",
-      "1 tablespoon olive oil",
-      "1 garlic clove, minced",
-      "2 teaspoons lemon zest",
-      "1/8 teaspoon salt",
-      "1/8 teaspoon ground black pepper",
-      "1/8 cup Kalamata olives, sliced",
-      "1 tablespoon pine nuts",
-      "1/4 cup shredded Parmesan cheese"
+      "Good balsamic vinegar for drizzling",
+      "2 tablespoons fresh chopped herbs (thyme, chive, rosemary...)",
+      "10 ounces soft goat cheese, room temperature",
+      "Salt to taste",
+      "4 ripe medium tomatoes"
     ],
     "steps": [
-      "Preheat your oven according to the pizza crust package directions.",
-      "In a medium-sized bowl, combine the zucchini, olive oil, garlic, lemon zest and salt and pepper. Toss to combine well.",
-      "Dollop the ricotta cheese around the pizza crust and spread it out slightly.",
-      "Mound the zucchini over the cheese, then sprinkle the olives evenly over the zucchini.",
-      "Sprinkle on the pine nuts, then the Parmesan cheese.",
-      "Bake according to the pizza crust instructions. The cheese should be slightly melted and the crust crispy."
+      "Mix the fresh herbs into the goat cheese.Slice the tomatoes into 4 thick rounds.",
+      "Sprinkle each tomato round with salt. Gently slather the layers of each tomato with the goat cheese.Stack the rounds to reassemble the tomato.",
+      "Drizzle with balsamic vinegar!"
     ]
   }
 }
