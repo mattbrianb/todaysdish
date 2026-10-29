@@ -198,6 +198,8 @@ a.btn-primary, a.btn-primary:hover { color: var(--btn-text); }
   transition: transform 160ms var(--ease-out), background-color 200ms ease, color 200ms ease;
 }
 .eat-btn[aria-pressed="true"] { background: var(--btn); color: var(--btn-text); }
+.crowd { margin: 6px 0 0; text-align: center; font-size: 14px; font-weight: 700; color: var(--red); letter-spacing: 0.04em; }
+.eat-count { margin: 4px 0 0; text-align: center; font-size: 14px; font-weight: 700; color: var(--muted); }
 .eat-btn:active { transform: scale(0.97); }
 
 /* Footer */

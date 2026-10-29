@@ -45,6 +45,7 @@
 
   <div class="tiles" id="tiles"></div>
   <p class="streak" id="streak" aria-live="polite" hidden></p>
+  <p class="crowd" id="crowd" hidden></p>
 
   <div class="actions-col">
     <button type="button" class="btn-primary" onclick="openShareModal()">Tell your table</button>
@@ -74,6 +75,7 @@
     <h2 class="sheet-name" id="recipeName"></h2>
     <p class="sheet-meta" id="recipeMeta"></p>
     <button type="button" class="eat-btn" id="eatBtn" aria-pressed="false" onclick="toggleEating()">I'm eating this</button>
+    <p class="eat-count" id="eatCount" hidden></p>
     <h3>Ingredients</h3>
     <ul id="recipeIngredients"></ul>
     <h3>Method</h3>
@@ -210,6 +212,7 @@ function toggleEating() {
   if (picks.size) log[today.date] = [...picks]; else delete log[today.date];
   saveEating(log);
   renderEating();
+  sendEating(openMeal, adding);
   if (adding) {
     const n = streakDays(log, today.date);
     showToast(n > 1 ? "Enjoy! 🔥 " + n + "-day streak" : "Enjoy! Come back tomorrow to start a streak 🔥");
@@ -238,6 +241,56 @@ function renderEating() {
     line.textContent = "Eating one of these? Open it and tap I'm eating this";
   }
   line.hidden = false;
+  renderCounts();
+}
+
+/* Shared count of everyone eating today's dishes (Cloudflare Worker + D1).
+   If the counter isn't reachable the lines stay hidden and nothing else changes. */
+const COUNTER_URL = "https://todaysdish-ingredients.mattbrianburnett.workers.dev/eats";
+const SHOW_COUNTS_FROM = 3; // a near-empty counter reads as nobody's here
+let counts = null;
+
+function deviceId() {
+  try {
+    let id = localStorage.getItem("todaysdish_device");
+    if (!id) {
+      id = crypto.randomUUID();
+      localStorage.setItem("todaysdish_device", id);
+    }
+    return id;
+  } catch (e) {
+    return null;
+  }
+}
+function takeCounts(c) {
+  if (c && typeof c.people === "number" && c.day === today.date) {
+    counts = c;
+    renderCounts();
+  }
+}
+function loadCounts() {
+  fetch(COUNTER_URL + "?day=" + encodeURIComponent(today.date))
+    .then(r => r.ok ? r.json() : null).then(takeCounts).catch(() => {});
+}
+function sendEating(meal, eating) {
+  const device = deviceId();
+  if (!device) return;
+  fetch(COUNTER_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ day: today.date, meal, device, eating })
+  }).then(r => r.ok ? r.json() : null).then(takeCounts).catch(() => {});
+}
+function renderCounts() {
+  const crowd = document.getElementById("crowd");
+  const people = counts ? counts.people : 0;
+  crowd.hidden = people < SHOW_COUNTS_FROM;
+  crowd.textContent = people.toLocaleString() + " people are eating today's specials";
+
+  const one = document.getElementById("eatCount");
+  const n = counts && openMeal ? counts[openMeal] || 0 : 0;
+  one.hidden = n < SHOW_COUNTS_FROM;
+  one.textContent = n.toLocaleString() + " people are eating this today";
 }
 
 // "no-cache" revalidates with the server so returning visitors never see yesterday's cached file
@@ -246,6 +299,7 @@ fetch("today.json", { cache: "no-cache" })
   .then(data => {
     today = data;
     renderBoard(data);
+    loadCounts();
   })
   .catch(() => {
     document.getElementById("boardDate").textContent = "Refresh the page to see today's specials";
