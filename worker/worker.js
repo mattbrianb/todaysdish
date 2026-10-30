@@ -14,13 +14,21 @@
 // Scheduled (Cron Trigger "0 5-10 * * *", i.e. 07:00 to 12:00 in South Africa): posts today's
 // carousel and story to Instagram once the images are uploaded, at most once a day.
 //
-// Secrets: IG_TOKEN (Instagram User access token, first one only; the Worker renews it weekly
-// and keeps the renewed one in D1), MEDIA_KEY (shared with the GitHub job), IP_SALT (optional).
+// Secrets: IG_TOKEN, MEDIA_KEY (shared with the GitHub job), IP_SALT (optional), and
+// IG_USER_ID when IG_TOKEN is a Meta system-user token. Two token kinds work:
+//   "EAA..." system-user token from the dashboard's Unified login: never expires, uses
+//            graph.facebook.com, and needs IG_USER_ID (the Instagram account's ID)
+//   "IG..."  Instagram User token from Instagram login: lasts 60 days, uses
+//            graph.instagram.com; the Worker renews it weekly and keeps the new one in D1
 //
 // Deployed by pasting into the Cloudflare dashboard; this file is the source of truth.
 
 const WORKER_URL = "https://todaysdish-ingredients.mattbrianburnett.workers.dev";
 const IG_API = "https://graph.instagram.com";
+const FB_API = "https://graph.facebook.com";
+
+// System-user tokens (Unified login) go through Facebook's Graph API and never expire
+const isSystemToken = token => token.startsWith("EAA");
 const MEDIA_KEEP_DAYS = 3;
 const MAX_POST_ATTEMPTS = 3;
 const TOKEN_REFRESH_DAYS = 7; // tokens last 60 days and must be renewed before then
@@ -62,7 +70,7 @@ async function igToken(env) {
     await setSetting(env, "ig_token_seed", seed);
   }
   const row = await getSetting(env, "ig_token");
-  if (Date.now() - row.updated_at > TOKEN_REFRESH_DAYS * 86400000) {
+  if (!isSystemToken(row.value) && Date.now() - row.updated_at > TOKEN_REFRESH_DAYS * 86400000) {
     const r = await fetch(`${IG_API}/refresh_access_token?grant_type=ig_refresh_token&access_token=${encodeURIComponent(row.value)}`);
     const j = await r.json().catch(() => ({}));
     if (r.ok && j.access_token) {
@@ -74,10 +82,11 @@ async function igToken(env) {
 }
 
 async function igCall(path, params, token, method = "POST") {
+  const api = isSystemToken(token) ? FB_API : IG_API;
   const body = new URLSearchParams({ ...params, access_token: token });
   const r = method === "POST"
-    ? await fetch(`${IG_API}/${path}`, { method: "POST", body })
-    : await fetch(`${IG_API}/${path}?${body}`);
+    ? await fetch(`${api}/${path}`, { method: "POST", body })
+    : await fetch(`${api}/${path}?${body}`);
   const j = await r.json().catch(() => ({}));
   if (!r.ok || j.error) throw new Error(`Instagram ${path.split("/").pop()}: ${j.error ? j.error.message : "HTTP " + r.status}`);
   return j;
@@ -112,8 +121,15 @@ async function publishDay(env, day) {
     const capRow = await env.DB.prepare("SELECT data FROM media WHERE key = ?").bind(day + "/caption.txt").first();
     const caption = capRow ? new TextDecoder().decode(new Uint8Array(capRow.data)) : "";
     const token = await igToken(env);
-    const me = await igCall("me", { fields: "user_id,username" }, token, "GET");
-    const uid = me.user_id || me.id;
+    let uid, me;
+    if (isSystemToken(token)) {
+      if (!env.IG_USER_ID) throw new Error("IG_USER_ID secret is not set");
+      uid = env.IG_USER_ID;
+      me = await igCall(uid, { fields: "username" }, token, "GET");
+    } else {
+      me = await igCall("me", { fields: "user_id,username" }, token, "GET");
+      uid = me.user_id || me.id;
+    }
     const mediaUrl = k => `${WORKER_URL}/media/${k}`;
 
     // Carousel: one container per slide, then the carousel itself
@@ -468,10 +484,20 @@ if (url.pathname === "/img") {
         const posts = await env.DB.prepare("SELECT day, media_id, story_id, attempts, error, posted_at FROM ig_posts ORDER BY day DESC LIMIT 7").all();
         const token = await getSetting(env, "ig_token");
         const media = await env.DB.prepare("SELECT key, length(data) AS bytes FROM media ORDER BY key DESC LIMIT 20").all();
+        let account;
+        try {
+          const t = await igToken(env);
+          account = isSystemToken(t)
+            ? (env.IG_USER_ID ? await igCall(env.IG_USER_ID, { fields: "username" }, t, "GET") : { error: "IG_USER_ID secret is not set" })
+            : await igCall("me", { fields: "user_id,username" }, t, "GET");
+        } catch (e) {
+          account = { error: e.message };
+        }
         return json({
           today: saToday(),
+          account,
           posts: posts.results,
-          token: token ? { renewed_days_ago: Math.floor((Date.now() - token.updated_at) / 86400000) } : null,
+          token: token ? (isSystemToken(token.value) ? { kind: "system user, never expires" } : { kind: "Instagram, renewed weekly", renewed_days_ago: Math.floor((Date.now() - token.updated_at) / 86400000) }) : null,
           media: media.results,
         });
       }

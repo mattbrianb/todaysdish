@@ -36,6 +36,13 @@ jobs:
           if [ -z "$MEDIA_KEY" ]; then echo "Add the MEDIA_KEY repository secret first"; exit 1; fi
           python scripts/upload_instagram.py
 
+      - name: Check which Instagram account the Worker posts to
+        env:
+          MEDIA_KEY: ${{ secrets.MEDIA_KEY }}
+        run: |
+          curl -s "https://todaysdish-ingredients.mattbrianburnett.workers.dev/ig/status" -H "Authorization: Bearer $MEDIA_KEY" \
+            | python -c "import json,sys; d=json.load(sys.stdin); print('Account:', d.get('account')); print('Token:', d.get('token')); print('Recent posts:', d.get('posts'))"
+
       - name: Post now
         env:
           MEDIA_KEY: ${{ secrets.MEDIA_KEY }}
