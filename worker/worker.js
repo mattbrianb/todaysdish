@@ -199,6 +199,33 @@ async function publishInstagram(env, day, row, keys, slides) {
   }
 }
 
+// Posting as the Page needs the Page's own token. A system-user token gets it from me/accounts
+// (or the Page itself); posting with the system-user token instead fails with a misleading
+// "publish_actions is deprecated" error, so never fall back to it.
+async function pageAccessToken(token, page) {
+  const reasons = [];
+  try {
+    const a = await fbCall("me/accounts", { fields: "id,name,access_token", limit: "100" }, token, "GET");
+    const hit = (a.data || []).find(x => String(x.id) === String(page));
+    if (hit && hit.access_token) return hit.access_token;
+    const ids = (a.data || []).map(x => `${x.id} (${x.name})`).join(", ") || "none";
+    reasons.push(`the token can't see Page ${page}; it can see: ${ids}`);
+  } catch (e) {
+    reasons.push(e.message);
+  }
+  try {
+    const p = await fbCall(page, { fields: "access_token" }, token, "GET");
+    if (p.access_token) return p.access_token;
+    reasons.push("the Page returned no access_token");
+  } catch (e) {
+    // New-style Pages also have a profile ID (the one in the web address) that can't post
+    reasons.push(/nonexisting field \(access_token\)/.test(e.message)
+      ? `${page} looks like the Page's profile ID, not its Page ID; set FB_PAGE_ID to the Page ID listed above`
+      : e.message);
+  }
+  throw new Error(`No Page token for ${page}: ${reasons.join(" | ")}. Assign the Page to the system user (content permission) and generate the token with pages_manage_posts, pages_read_engagement and pages_show_list`);
+}
+
 // Facebook Page: the same slides as one multi-photo post (links are clickable there), then a story
 async function publishFacebook(env, day, row, keys, slides) {
   if (row.fb_post_id) return { status: "already posted", post_id: row.fb_post_id };
@@ -209,12 +236,7 @@ async function publishFacebook(env, day, row, keys, slides) {
     const token = env.FB_TOKEN || await igToken(env);
     if (!isSystemToken(token)) throw new Error("Facebook needs a Meta system-user token: set FB_TOKEN");
     const page = env.FB_PAGE_ID;
-    // Posting as the Page needs a Page token; the system-user token can ask for one
-    let pageToken = token;
-    try {
-      const p = await fbCall(page, { fields: "access_token" }, token, "GET");
-      if (p.access_token) pageToken = p.access_token;
-    } catch (e) { /* the system-user token may be allowed to post directly */ }
+    const pageToken = await pageAccessToken(token, page);
 
     const message = (await mediaText(env, day + "/facebook.txt")) || (await mediaText(env, day + "/caption.txt")) || "";
     const params = { message };
@@ -575,10 +597,12 @@ if (url.pathname === "/img") {
         }
         let facebook_page = null;
         if (env.FB_PAGE_ID) {
+          const fbToken = env.FB_TOKEN || await igToken(env);
           try {
-            facebook_page = await fbCall(env.FB_PAGE_ID, { fields: "name" }, env.FB_TOKEN || await igToken(env), "GET");
+            const pageToken = await pageAccessToken(fbToken, env.FB_PAGE_ID);
+            facebook_page = { ...(await fbCall(env.FB_PAGE_ID, { fields: "name" }, pageToken, "GET")), can_post: true };
           } catch (e) {
-            facebook_page = { error: e.message };
+            facebook_page = { can_post: false, error: e.message };
           }
         }
         return json({
