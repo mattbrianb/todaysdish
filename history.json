@@ -2744,6 +2744,24 @@
       "date": "2026-10-29",
       "meal": "dinner",
       "name": "Tomato Stack Salad"
+    },
+    {
+      "date": "2026-10-30",
+      "meal": "breakfast",
+      "name": "Homemade Chewy Granola Bars",
+      "id": 646941
+    },
+    {
+      "date": "2026-10-30",
+      "meal": "lunch",
+      "name": "Green Thai Curry with Beef",
+      "id": 645541
+    },
+    {
+      "date": "2026-10-30",
+      "meal": "dinner",
+      "name": "Lebanese Falafel",
+      "id": 649407
     }
   ]
 }
