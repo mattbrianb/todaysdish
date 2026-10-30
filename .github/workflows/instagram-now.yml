@@ -1,0 +1,46 @@
+name: Post to Instagram now
+
+# Manual button: draws today's post from the current today.json, uploads it to the Worker
+# and asks it to post right away. Doesn't change today's dishes. Safe to run twice:
+# the Worker never posts the same day twice.
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests pillow
+
+      - name: Draw today's Instagram post
+        run: python scripts/make_instagram.py
+
+      - name: Upload to the Worker
+        env:
+          MEDIA_KEY: ${{ secrets.MEDIA_KEY }}
+        run: |
+          if [ -z "$MEDIA_KEY" ]; then echo "Add the MEDIA_KEY repository secret first"; exit 1; fi
+          python scripts/upload_instagram.py
+
+      - name: Post now
+        env:
+          MEDIA_KEY: ${{ secrets.MEDIA_KEY }}
+        run: |
+          DAY=$(python -c "import json; print(json.load(open('today.json'))['date'])")
+          RESULT=$(curl -s -X POST "https://todaysdish-ingredients.mattbrianburnett.workers.dev/ig/publish?day=$DAY" -H "Authorization: Bearer $MEDIA_KEY")
+          echo "$RESULT"
+          echo "$RESULT" | grep -q '"status":"\(posted\|already posted\)"'

@@ -6,10 +6,160 @@
 //   /eats             "I'm eating this" counter (GET counts, POST a tap); needs the D1
 //                     binding DB, see worker/schema.sql. Without it the route answers
 //                     503 and the site simply hides the counter.
+//   /media/<day>/<file> today's Instagram images and caption: PUT by the daily GitHub job
+//                     (Authorization: Bearer MEDIA_KEY), GET is public so Instagram can fetch them
+//   /ig/publish       POST (Bearer MEDIA_KEY) to post a day's carousel and story now
+//   /ig/status        GET (Bearer MEDIA_KEY) recent posting results and token age
+//
+// Scheduled (Cron Trigger "0 5-10 * * *", i.e. 07:00 to 12:00 in South Africa): posts today's
+// carousel and story to Instagram once the images are uploaded, at most once a day.
+//
+// Secrets: IG_TOKEN (Instagram User access token, first one only; the Worker renews it weekly
+// and keeps the renewed one in D1), MEDIA_KEY (shared with the GitHub job), IP_SALT (optional).
 //
 // Deployed by pasting into the Cloudflare dashboard; this file is the source of truth.
 
+const WORKER_URL = "https://todaysdish-ingredients.mattbrianburnett.workers.dev";
+const IG_API = "https://graph.instagram.com";
+const MEDIA_KEEP_DAYS = 3;
+const MAX_POST_ATTEMPTS = 3;
+const TOKEN_REFRESH_DAYS = 7; // tokens last 60 days and must be renewed before then
+
+// The site's day is South African (UTC+2 all year)
+function saToday() {
+  return new Date(Date.now() + 2 * 3600 * 1000).toISOString().slice(0, 10);
+}
+
+function bearerOk(request, env) {
+  return Boolean(env.MEDIA_KEY) && request.headers.get("Authorization") === "Bearer " + env.MEDIA_KEY;
+}
+
+async function sha256Hex(s) {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s));
+  return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, "0")).join("");
+}
+
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+// ---- Settings (Instagram token) ----
+async function getSetting(env, key) {
+  return env.DB.prepare("SELECT value, updated_at FROM settings WHERE key = ?").bind(key).first();
+}
+async function setSetting(env, key, value) {
+  await env.DB
+    .prepare("INSERT INTO settings (key, value, updated_at) VALUES (?, ?, ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value, updated_at = excluded.updated_at")
+    .bind(key, value, Date.now()).run();
+}
+
+// The token lives in D1 so the Worker can renew it. Changing the IG_TOKEN secret
+// (say, after it lapsed) replaces the stored one.
+async function igToken(env) {
+  if (!env.IG_TOKEN) throw new Error("IG_TOKEN secret is not set");
+  const seed = await sha256Hex(env.IG_TOKEN);
+  const seeded = await getSetting(env, "ig_token_seed");
+  if (!seeded || seeded.value !== seed) {
+    await setSetting(env, "ig_token", env.IG_TOKEN);
+    await setSetting(env, "ig_token_seed", seed);
+  }
+  const row = await getSetting(env, "ig_token");
+  if (Date.now() - row.updated_at > TOKEN_REFRESH_DAYS * 86400000) {
+    const r = await fetch(`${IG_API}/refresh_access_token?grant_type=ig_refresh_token&access_token=${encodeURIComponent(row.value)}`);
+    const j = await r.json().catch(() => ({}));
+    if (r.ok && j.access_token) {
+      await setSetting(env, "ig_token", j.access_token);
+      return j.access_token;
+    }
+  }
+  return row.value;
+}
+
+async function igCall(path, params, token, method = "POST") {
+  const body = new URLSearchParams({ ...params, access_token: token });
+  const r = method === "POST"
+    ? await fetch(`${IG_API}/${path}`, { method: "POST", body })
+    : await fetch(`${IG_API}/${path}?${body}`);
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok || j.error) throw new Error(`Instagram ${path.split("/").pop()}: ${j.error ? j.error.message : "HTTP " + r.status}`);
+  return j;
+}
+
+// Instagram downloads the image, then the container must reach FINISHED before publishing
+async function waitReady(id, token) {
+  for (let i = 0; i < 24; i++) {
+    const j = await igCall(id, { fields: "status_code" }, token, "GET");
+    if (j.status_code === "FINISHED") return;
+    if (j.status_code === "ERROR" || j.status_code === "EXPIRED") throw new Error(`Instagram container ${j.status_code}`);
+    await sleep(5000);
+  }
+  throw new Error("Instagram container not ready after 2 minutes");
+}
+
+// ---- Daily Instagram post ----
+async function publishDay(env, day) {
+  const done = await env.DB.prepare("SELECT * FROM ig_posts WHERE day = ?").bind(day).first();
+  if (done && done.media_id) return { day, status: "already posted", media_id: done.media_id };
+  if (done && done.attempts >= MAX_POST_ATTEMPTS) return { day, status: "gave up", error: done.error };
+
+  const keys = (await env.DB.prepare("SELECT key FROM media WHERE key LIKE ?").bind(day + "/%").all()).results.map(r => r.key);
+  const slideNo = k => parseInt((k.match(/post-(\d+)\.jpg$/) || [])[1], 10);
+  const slides = keys.filter(k => slideNo(k) > 0).sort((a, b) => slideNo(a) - slideNo(b));
+  if (!slides.length) return { day, status: "waiting for images" };
+
+  await env.DB
+    .prepare("INSERT INTO ig_posts (day, attempts) VALUES (?, 1) ON CONFLICT(day) DO UPDATE SET attempts = attempts + 1")
+    .bind(day).run();
+  try {
+    const capRow = await env.DB.prepare("SELECT data FROM media WHERE key = ?").bind(day + "/caption.txt").first();
+    const caption = capRow ? new TextDecoder().decode(new Uint8Array(capRow.data)) : "";
+    const token = await igToken(env);
+    const me = await igCall("me", { fields: "user_id,username" }, token, "GET");
+    const uid = me.user_id || me.id;
+    const mediaUrl = k => `${WORKER_URL}/media/${k}`;
+
+    // Carousel: one container per slide, then the carousel itself
+    const children = [];
+    for (const k of slides) {
+      const c = await igCall(`${uid}/media`, { image_url: mediaUrl(k), is_carousel_item: "true" }, token);
+      children.push(c.id);
+    }
+    for (const id of children) await waitReady(id, token);
+    const carousel = await igCall(`${uid}/media`, { media_type: "CAROUSEL", children: children.join(","), caption }, token);
+    await waitReady(carousel.id, token);
+    const post = await igCall(`${uid}/media_publish`, { creation_id: carousel.id }, token);
+    await env.DB
+      .prepare("UPDATE ig_posts SET media_id = ?, posted_at = ?, error = NULL WHERE day = ?")
+      .bind(post.id, Date.now(), day).run();
+
+    // Story is a bonus: a failure here never undoes the post
+    let story = null;
+    if (keys.includes(day + "/story.jpg")) {
+      try {
+        const s = await igCall(`${uid}/media`, { media_type: "STORIES", image_url: mediaUrl(day + "/story.jpg") }, token);
+        await waitReady(s.id, token);
+        story = (await igCall(`${uid}/media_publish`, { creation_id: s.id }, token)).id;
+        await env.DB.prepare("UPDATE ig_posts SET story_id = ? WHERE day = ?").bind(story, day).run();
+      } catch (e) {
+        await env.DB.prepare("UPDATE ig_posts SET error = ? WHERE day = ?").bind("story: " + e.message, day).run();
+      }
+    }
+    return { day, status: "posted", media_id: post.id, story_id: story, username: me.username };
+  } catch (e) {
+    await env.DB.prepare("UPDATE ig_posts SET error = ? WHERE day = ?").bind(e.message, day).run();
+    return { day, status: "failed", error: e.message };
+  }
+}
+
+async function runScheduled(env) {
+  const cutoff = Date.now() - MEDIA_KEEP_DAYS * 86400000;
+  await env.DB.prepare("DELETE FROM media WHERE created_at < ?").bind(cutoff).run();
+  return publishDay(env, saToday());
+}
+
 export default {
+  async scheduled(event, env, ctx) {
+    ctx.waitUntil(runScheduled(env));
+  },
+
   async fetch(request, env) {
     const url = new URL(request.url);
 
@@ -257,11 +407,6 @@ if (url.pathname === "/img") {
       return Number.isFinite(t) && Math.abs(t - Date.now()) < 2 * 86400000;
     }
 
-    async function sha256Hex(s) {
-      const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s));
-      return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, "0")).join("");
-    }
-
     async function eatCounts(day) {
       const perMeal = await env.DB
         .prepare("SELECT meal, COUNT(*) AS n FROM eats WHERE day = ? GROUP BY meal")
@@ -280,6 +425,57 @@ if (url.pathname === "/img") {
         "Today'sDish Ingredients API ✅ (SMART MATCH + TIER FILL + RANDOM)\n\n/search?ingredients=onion,pepper,tomato,chicken&number=50&diet=any\n/recipe?id=52772&ingredients=onion,pepper,tomato,chicken&diet=any\n/eats?day=YYYY-MM-DD\n",
         { headers: corsHeaders }
       );
+    }
+
+    // -------- /media (Instagram images, kept a few days) --------
+    if (url.pathname.startsWith("/media/")) {
+      if (!env || !env.DB) return json({ error: "Not set up" }, 503);
+      const key = url.pathname.slice("/media/".length);
+      if (!/^\d{4}-\d{2}-\d{2}\/[a-z0-9-]+\.(jpg|txt)$/.test(key)) return json({ error: "Bad key" }, 400);
+
+      if (request.method === "PUT") {
+        if (!bearerOk(request, env)) return json({ error: "Unauthorized" }, 401);
+        const data = await request.arrayBuffer();
+        if (!data.byteLength || data.byteLength > 1900000) return json({ error: "Bad size" }, 413);
+        const type = key.endsWith(".jpg") ? "image/jpeg" : "text/plain; charset=utf-8";
+        await env.DB
+          .prepare("INSERT INTO media (key, data, content_type, created_at) VALUES (?, ?, ?, ?) ON CONFLICT(key) DO UPDATE SET data = excluded.data, content_type = excluded.content_type, created_at = excluded.created_at")
+          .bind(key, data, type, Date.now()).run();
+        return json({ ok: true, key, bytes: data.byteLength });
+      }
+
+      if (request.method === "GET" || request.method === "HEAD") {
+        const row = await env.DB.prepare("SELECT data, content_type FROM media WHERE key = ?").bind(key).first();
+        if (!row) return new Response("Not found", { status: 404 });
+        return new Response(request.method === "HEAD" ? null : new Uint8Array(row.data), {
+          headers: { "Content-Type": row.content_type, "Cache-Control": "public, max-age=3600" },
+        });
+      }
+      return json({ error: "Method not allowed" }, 405);
+    }
+
+    // -------- /ig (manual post and status, private) --------
+    if (url.pathname === "/ig/publish" || url.pathname === "/ig/status") {
+      if (!env || !env.DB) return json({ error: "Not set up" }, 503);
+      if (!bearerOk(request, env)) return json({ error: "Unauthorized" }, 401);
+
+      if (url.pathname === "/ig/publish" && request.method === "POST") {
+        const day = url.searchParams.get("day") || saToday();
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) return json({ error: "Invalid day" }, 400);
+        return json(await publishDay(env, day));
+      }
+      if (url.pathname === "/ig/status" && request.method === "GET") {
+        const posts = await env.DB.prepare("SELECT day, media_id, story_id, attempts, error, posted_at FROM ig_posts ORDER BY day DESC LIMIT 7").all();
+        const token = await getSetting(env, "ig_token");
+        const media = await env.DB.prepare("SELECT key, length(data) AS bytes FROM media ORDER BY key DESC LIMIT 20").all();
+        return json({
+          today: saToday(),
+          posts: posts.results,
+          token: token ? { renewed_days_ago: Math.floor((Date.now() - token.updated_at) / 86400000) } : null,
+          media: media.results,
+        });
+      }
+      return json({ error: "Method not allowed" }, 405);
     }
 
     // -------- /eats (counter) --------

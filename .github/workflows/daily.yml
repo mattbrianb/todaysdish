@@ -38,6 +38,15 @@ jobs:
           FORCE: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
         run: python scripts/make_share_card.py
 
+      # The Worker posts these to Instagram from 07:00 SA; re-uploading the same day is harmless
+      - name: Draw today's Instagram post
+        run: python scripts/make_instagram.py
+
+      - name: Upload Instagram post to the Worker
+        env:
+          MEDIA_KEY: ${{ secrets.MEDIA_KEY }}
+        run: python scripts/upload_instagram.py
+
       - name: Commit updated today.json
         run: |
           git config user.name "github-actions"
