@@ -104,7 +104,7 @@ button { font-family: inherit; }
 
 /* Photo tiles under the board */
 .tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 18px 0 0; }
-.tile { display: flex; flex-direction: column; align-items: stretch; gap: 8px; text-align: center; }
+.tile { display: flex; flex-direction: column; align-items: stretch; gap: 10px; text-align: center; }
 .tile-open {
   display: flex;
   flex-direction: column;
@@ -166,19 +166,18 @@ button { font-family: inherit; }
 .tile.eating .tile-check { opacity: 1; transform: scale(1); }
 .tile.eating img { outline: 3px solid var(--btn); outline-offset: -3px; }
 .tile-label { font-size: 17px; font-weight: 700; letter-spacing: 0.02em; }
-.tile-time { margin-top: -4px; font-size: 14px; color: var(--muted); }
+.tile-time { margin-top: -6px; font-size: 14px; font-weight: 500; color: var(--muted); }
 .tile-hint {
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--red);
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
+@media (hover: hover) and (pointer: fine) { .tile-open:hover .tile-hint { text-decoration: underline; text-underline-offset: 3px; } }
 @media (hover: hover) and (pointer: fine) { .tile-open:hover img { transform: translateY(-2px); } }
 .tile-open:active img { transform: scale(0.97); }
 
 /* Buttons and links */
-.actions-col { display: flex; flex-direction: column; gap: 12px; align-items: center; margin: 22px 0 0; }
+.actions-col { display: flex; flex-direction: column; gap: 14px; align-items: center; margin: 30px 0 0; }
 .btn-primary {
   width: 100%;
   min-height: 54px;
@@ -199,7 +198,7 @@ a.btn-primary { display: flex; align-items: center; justify-content: center; tex
 a.btn-primary, a.btn-primary:hover { color: var(--btn-text); }
 .btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
 .text-link { font-size: 15px; font-weight: 700; text-underline-offset: 3px; padding: 6px 0; }
-.streak { margin: 16px 0 0; text-align: center; font-size: 15px; font-weight: 700; line-height: 1.4; }
+.streak { margin: 22px 0 0; text-align: center; font-size: 15px; font-weight: 700; line-height: 1.4; }
 .eat-btn {
   margin: 14px 0 4px;
   width: 100%;
@@ -230,11 +229,12 @@ a.btn-primary, a.btn-primary:hover { color: var(--btn-text); }
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 8px 18px;
+  gap: 4px 18px;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 500;
 }
-.site-footer a { text-decoration: none; padding: 8px 0; }
+.site-footer a { text-decoration: none; padding: 8px 0; color: var(--muted); }
+.site-footer a:hover { color: var(--red); }
 .site-footer a[aria-current="page"] { color: var(--red); }
 .theme-btn {
   min-width: 44px;
@@ -248,7 +248,7 @@ a.btn-primary, a.btn-primary:hover { color: var(--btn-text); }
   justify-content: center;
   cursor: pointer;
 }
-.footer-note { width: 100%; text-align: center; font-size: 12px; font-weight: 500; color: var(--muted); }
+.footer-note { width: 100%; margin: 6px 0 0; text-align: center; font-size: 12px; font-weight: 500; color: var(--muted); }
 
 /* Section heading used on cook and about */
 .page-title {
@@ -504,4 +504,4 @@ body.dark .share-dot { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18); }
 .ig-tag[hidden] { display: none; }
 
 /* Instagram and Facebook together, on their own line under the footer links */
-.footer-social { width: 100%; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 22px; }
+.footer-social { width: 100%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 20px; }
