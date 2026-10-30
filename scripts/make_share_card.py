@@ -40,6 +40,10 @@ def font(size, weight="Medium"):
     return f
 
 
+def logo_font(size):
+    return ImageFont.truetype(os.path.join(FONT_DIR, "Pacifico-Regular.ttf"), size)
+
+
 def short_name(name):
     # Same clean-up as the site's board (index.html shortName)
     n = str(name or "").strip()

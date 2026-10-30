@@ -42,7 +42,7 @@ document.addEventListener("keydown", (e) => {
 
 /* Share */
 // Pages can replace this with something specific (index.html names today's dishes)
-let shareText = "Today's Dish 🍽️ Pick today's dish or cook with what you have:";
+let shareText = "Today's Dish 🍽️ One menu, everybody eats #TodaysDish";
 function setShareText(text) { shareText = text; }
 
 function siteRoot() {
