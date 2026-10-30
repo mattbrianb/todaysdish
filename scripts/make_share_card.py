@@ -17,7 +17,7 @@ from datetime import date, timedelta
 import requests
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
-SITE_URL = os.getenv("SITE_URL", "https://mattbrianb.github.io/todaysdish/")
+SITE_URL = os.getenv("SITE_URL", "https://www.todaysdish.food/")
 KEEP_DAYS = 14
 
 W, H = 1200, 630
