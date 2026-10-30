@@ -1,8 +1,9 @@
-name: Post to Instagram now
+name: Post to Instagram and Facebook now
 
 # Manual button: draws today's post from the current today.json, uploads it to the Worker
-# and asks it to post right away. Doesn't change today's dishes. Safe to run twice:
-# the Worker never posts the same day twice.
+# and asks it to post right away (Instagram, plus the Facebook Page once FB_PAGE_ID is set
+# in the Worker). Doesn't change today's dishes. Safe to run twice: the Worker never
+# posts the same day twice on either network.
 
 permissions:
   contents: read
@@ -26,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: pip install requests pillow
 
-      - name: Draw today's Instagram post
+      - name: Draw today's post
         run: python scripts/make_instagram.py
 
       - name: Upload to the Worker
@@ -36,18 +37,26 @@ jobs:
           if [ -z "$MEDIA_KEY" ]; then echo "Add the MEDIA_KEY repository secret first"; exit 1; fi
           python scripts/upload_instagram.py
 
-      - name: Check which Instagram account the Worker posts to
+      - name: Check which accounts the Worker posts to
         env:
           MEDIA_KEY: ${{ secrets.MEDIA_KEY }}
         run: |
           curl -s "https://todaysdish-ingredients.mattbrianburnett.workers.dev/ig/status" -H "Authorization: Bearer $MEDIA_KEY" \
-            | python -c "import json,sys; d=json.load(sys.stdin); print('Account:', d.get('account')); print('Token:', d.get('token')); print('Recent posts:', d.get('posts'))"
+            | python -c "import json,sys; d=json.load(sys.stdin); print('Instagram account:', d.get('account')); print('Facebook Page:', d.get('facebook_page') or 'not set up (no FB_PAGE_ID)'); print('Token:', d.get('token')); print('Recent posts:', d.get('posts'))"
 
       - name: Post now
         env:
           MEDIA_KEY: ${{ secrets.MEDIA_KEY }}
         run: |
           DAY=$(python -c "import json; print(json.load(open('today.json'))['date'])")
-          RESULT=$(curl -s -X POST "https://todaysdish-ingredients.mattbrianburnett.workers.dev/ig/publish?day=$DAY" -H "Authorization: Bearer $MEDIA_KEY")
-          echo "$RESULT"
-          echo "$RESULT" | grep -q '"status":"\(posted\|already posted\)"'
+          curl -s -X POST "https://todaysdish-ingredients.mattbrianburnett.workers.dev/ig/publish?day=$DAY" -H "Authorization: Bearer $MEDIA_KEY" > result.json
+          python - <<'EOF'
+          import json, sys
+          r = json.load(open("result.json"))
+          ok = ("posted", "already posted")
+          print("Instagram:", r.get("status"), r.get("error") or r.get("media_id") or "")
+          fb = r.get("facebook")
+          print("Facebook:", "not set up" if fb is None else f"{fb.get('status')} {fb.get('error') or fb.get('post_id') or ''}")
+          if r.get("status") not in ok or (fb is not None and fb.get("status") not in ok):
+              sys.exit("Something didn't post, see above")
+          EOF

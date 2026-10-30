@@ -12,10 +12,14 @@
 //   /ig/status        GET (Bearer MEDIA_KEY) recent posting results and token age
 //
 // Scheduled (Cron Trigger "0 5-10 * * *", i.e. 07:00 to 12:00 in South Africa): posts today's
-// carousel and story to Instagram once the images are uploaded, at most once a day.
+// carousel and story to Instagram, and the same slides plus a story to the Facebook Page when
+// FB_PAGE_ID is set, once the images are uploaded. Each network posts at most once a day and
+// retries on its own, so a failure on one never blocks or repeats the other.
 //
-// Secrets: IG_TOKEN, MEDIA_KEY (shared with the GitHub job), IP_SALT (optional), and
-// IG_USER_ID when IG_TOKEN is a Meta system-user token. Two token kinds work:
+// Secrets: IG_TOKEN, MEDIA_KEY (shared with the GitHub job), IP_SALT (optional),
+// IG_USER_ID when IG_TOKEN is a Meta system-user token, and for Facebook FB_PAGE_ID plus
+// FB_TOKEN (optional; defaults to IG_TOKEN, which must then be a system-user token with Page
+// permissions). Two Instagram token kinds work:
 //   "EAA..." system-user token from the dashboard's Unified login: never expires, uses
 //            graph.facebook.com, and needs IG_USER_ID (the Instagram account's ID)
 //   "IG..."  Instagram User token from Instagram login: lasts 60 days, uses
@@ -81,16 +85,18 @@ async function igToken(env) {
   return row.value;
 }
 
-async function igCall(path, params, token, method = "POST") {
-  const api = isSystemToken(token) ? FB_API : IG_API;
+async function graphCall(api, label, path, params, token, method = "POST") {
   const body = new URLSearchParams({ ...params, access_token: token });
   const r = method === "POST"
     ? await fetch(`${api}/${path}`, { method: "POST", body })
     : await fetch(`${api}/${path}?${body}`);
   const j = await r.json().catch(() => ({}));
-  if (!r.ok || j.error) throw new Error(`Instagram ${path.split("/").pop()}: ${j.error ? j.error.message : "HTTP " + r.status}`);
+  if (!r.ok || j.error) throw new Error(`${label} ${path.split("/").pop()}: ${j.error ? j.error.message : "HTTP " + r.status}`);
   return j;
 }
+const igCall = (path, params, token, method) =>
+  graphCall(isSystemToken(token) ? FB_API : IG_API, "Instagram", path, params, token, method);
+const fbCall = (path, params, token, method) => graphCall(FB_API, "Facebook", path, params, token, method);
 
 // Instagram downloads the image, then the container must reach FINISHED before publishing
 async function waitReady(id, token) {
@@ -103,23 +109,52 @@ async function waitReady(id, token) {
   throw new Error("Instagram container not ready after 2 minutes");
 }
 
-// ---- Daily Instagram post ----
+// ---- Daily posts ----
+const mediaUrl = k => `${WORKER_URL}/media/${k}`;
+
+async function mediaText(env, key) {
+  const row = await env.DB.prepare("SELECT data FROM media WHERE key = ?").bind(key).first();
+  return row ? new TextDecoder().decode(new Uint8Array(row.data)) : null;
+}
+
+// The Facebook columns came after the table; add them once if an older database lacks them
+let fbColumnsReady = false;
+async function ensureFbColumns(env) {
+  if (fbColumnsReady) return;
+  for (const col of ["fb_post_id TEXT", "fb_story_id TEXT", "fb_attempts INTEGER NOT NULL DEFAULT 0", "fb_error TEXT"]) {
+    try { await env.DB.prepare(`ALTER TABLE ig_posts ADD COLUMN ${col}`).run(); } catch (e) { /* already there */ }
+  }
+  fbColumnsReady = true;
+}
+
 async function publishDay(env, day) {
-  const done = await env.DB.prepare("SELECT * FROM ig_posts WHERE day = ?").bind(day).first();
-  if (done && done.media_id) return { day, status: "already posted", media_id: done.media_id };
-  if (done && done.attempts >= MAX_POST_ATTEMPTS) return { day, status: "gave up", error: done.error };
+  await ensureFbColumns(env);
+  await env.DB.prepare("INSERT OR IGNORE INTO ig_posts (day, attempts) VALUES (?, 0)").bind(day).run();
+  const row = await env.DB.prepare("SELECT * FROM ig_posts WHERE day = ?").bind(day).first();
+  const fbWanted = Boolean(env.FB_PAGE_ID);
+  const igDone = row.media_id || row.attempts >= MAX_POST_ATTEMPTS;
+  const fbDone = !fbWanted || row.fb_post_id || row.fb_attempts >= MAX_POST_ATTEMPTS;
 
-  const keys = (await env.DB.prepare("SELECT key FROM media WHERE key LIKE ?").bind(day + "/%").all()).results.map(r => r.key);
-  const slideNo = k => parseInt((k.match(/post-(\d+)\.jpg$/) || [])[1], 10);
-  const slides = keys.filter(k => slideNo(k) > 0).sort((a, b) => slideNo(a) - slideNo(b));
-  if (!slides.length) return { day, status: "waiting for images" };
+  let slides = [], keys = [];
+  if (!igDone || !fbDone) {
+    keys = (await env.DB.prepare("SELECT key FROM media WHERE key LIKE ?").bind(day + "/%").all()).results.map(r => r.key);
+    const slideNo = k => parseInt((k.match(/post-(\d+)\.jpg$/) || [])[1], 10);
+    slides = keys.filter(k => slideNo(k) > 0).sort((a, b) => slideNo(a) - slideNo(b));
+    if (!slides.length) return { day, status: "waiting for images" };
+  }
 
-  await env.DB
-    .prepare("INSERT INTO ig_posts (day, attempts) VALUES (?, 1) ON CONFLICT(day) DO UPDATE SET attempts = attempts + 1")
-    .bind(day).run();
+  const result = { day, ...(await publishInstagram(env, day, row, keys, slides)) };
+  if (fbWanted) result.facebook = await publishFacebook(env, day, row, keys, slides);
+  return result;
+}
+
+async function publishInstagram(env, day, row, keys, slides) {
+  if (row.media_id) return { status: "already posted", media_id: row.media_id };
+  if (row.attempts >= MAX_POST_ATTEMPTS) return { status: "gave up", error: row.error };
+
+  await env.DB.prepare("UPDATE ig_posts SET attempts = attempts + 1 WHERE day = ?").bind(day).run();
   try {
-    const capRow = await env.DB.prepare("SELECT data FROM media WHERE key = ?").bind(day + "/caption.txt").first();
-    const caption = capRow ? new TextDecoder().decode(new Uint8Array(capRow.data)) : "";
+    const caption = (await mediaText(env, day + "/caption.txt")) || "";
     const token = await igToken(env);
     let uid, me;
     if (isSystemToken(token)) {
@@ -130,7 +165,6 @@ async function publishDay(env, day) {
       me = await igCall("me", { fields: "user_id,username" }, token, "GET");
       uid = me.user_id || me.id;
     }
-    const mediaUrl = k => `${WORKER_URL}/media/${k}`;
 
     // Carousel: one container per slide, then the carousel itself
     const children = [];
@@ -158,10 +192,55 @@ async function publishDay(env, day) {
         await env.DB.prepare("UPDATE ig_posts SET error = ? WHERE day = ?").bind("story: " + e.message, day).run();
       }
     }
-    return { day, status: "posted", media_id: post.id, story_id: story, username: me.username };
+    return { status: "posted", media_id: post.id, story_id: story, username: me.username };
   } catch (e) {
     await env.DB.prepare("UPDATE ig_posts SET error = ? WHERE day = ?").bind(e.message, day).run();
-    return { day, status: "failed", error: e.message };
+    return { status: "failed", error: e.message };
+  }
+}
+
+// Facebook Page: the same slides as one multi-photo post (links are clickable there), then a story
+async function publishFacebook(env, day, row, keys, slides) {
+  if (row.fb_post_id) return { status: "already posted", post_id: row.fb_post_id };
+  if (row.fb_attempts >= MAX_POST_ATTEMPTS) return { status: "gave up", error: row.fb_error };
+
+  await env.DB.prepare("UPDATE ig_posts SET fb_attempts = fb_attempts + 1 WHERE day = ?").bind(day).run();
+  try {
+    const token = env.FB_TOKEN || await igToken(env);
+    if (!isSystemToken(token)) throw new Error("Facebook needs a Meta system-user token: set FB_TOKEN");
+    const page = env.FB_PAGE_ID;
+    // Posting as the Page needs a Page token; the system-user token can ask for one
+    let pageToken = token;
+    try {
+      const p = await fbCall(page, { fields: "access_token" }, token, "GET");
+      if (p.access_token) pageToken = p.access_token;
+    } catch (e) { /* the system-user token may be allowed to post directly */ }
+
+    const message = (await mediaText(env, day + "/facebook.txt")) || (await mediaText(env, day + "/caption.txt")) || "";
+    const params = { message };
+    let i = 0;
+    for (const k of slides) {
+      const photo = await fbCall(`${page}/photos`, { url: mediaUrl(k), published: "false" }, pageToken);
+      params[`attached_media[${i++}]`] = JSON.stringify({ media_fbid: photo.id });
+    }
+    const post = await fbCall(`${page}/feed`, params, pageToken);
+    await env.DB.prepare("UPDATE ig_posts SET fb_post_id = ?, fb_error = NULL WHERE day = ?").bind(post.id, day).run();
+
+    let story = null;
+    if (keys.includes(day + "/story.jpg")) {
+      try {
+        const photo = await fbCall(`${page}/photos`, { url: mediaUrl(day + "/story.jpg"), published: "false" }, pageToken);
+        const st = await fbCall(`${page}/photo_stories`, { photo_id: photo.id }, pageToken);
+        story = st.post_id || st.id || "posted";
+        await env.DB.prepare("UPDATE ig_posts SET fb_story_id = ? WHERE day = ?").bind(story, day).run();
+      } catch (e) {
+        await env.DB.prepare("UPDATE ig_posts SET fb_error = ? WHERE day = ?").bind("story: " + e.message, day).run();
+      }
+    }
+    return { status: "posted", post_id: post.id, story_id: story };
+  } catch (e) {
+    await env.DB.prepare("UPDATE ig_posts SET fb_error = ? WHERE day = ?").bind(e.message, day).run();
+    return { status: "failed", error: e.message };
   }
 }
 
@@ -481,7 +560,8 @@ if (url.pathname === "/img") {
         return json(await publishDay(env, day));
       }
       if (url.pathname === "/ig/status" && request.method === "GET") {
-        const posts = await env.DB.prepare("SELECT day, media_id, story_id, attempts, error, posted_at FROM ig_posts ORDER BY day DESC LIMIT 7").all();
+        await ensureFbColumns(env);
+        const posts = await env.DB.prepare("SELECT day, media_id, story_id, attempts, error, posted_at, fb_post_id, fb_story_id, fb_attempts, fb_error FROM ig_posts ORDER BY day DESC LIMIT 7").all();
         const token = await getSetting(env, "ig_token");
         const media = await env.DB.prepare("SELECT key, length(data) AS bytes FROM media ORDER BY key DESC LIMIT 20").all();
         let account;
@@ -493,9 +573,18 @@ if (url.pathname === "/img") {
         } catch (e) {
           account = { error: e.message };
         }
+        let facebook_page = null;
+        if (env.FB_PAGE_ID) {
+          try {
+            facebook_page = await fbCall(env.FB_PAGE_ID, { fields: "name" }, env.FB_TOKEN || await igToken(env), "GET");
+          } catch (e) {
+            facebook_page = { error: e.message };
+          }
+        }
         return json({
           today: saToday(),
           account,
+          facebook_page,
           posts: posts.results,
           token: token ? (isSystemToken(token.value) ? { kind: "system user, never expires" } : { kind: "Instagram, renewed weekly", renewed_days_ago: Math.floor((Date.now() - token.updated_at) / 86400000) }) : null,
           media: media.results,

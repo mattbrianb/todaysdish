@@ -3,7 +3,8 @@
 Writes to instagram/YYYY-MM-DD/:
   post-1.jpg ... post-5.jpg   1080x1350 carousel: the board, one slide per dish, a sign-off
   story.jpg                   1080x1920 story with the board and the web address
-  caption.txt                 the post caption
+  caption.txt                 the Instagram caption
+  facebook.txt                the same caption for the Facebook Page, with a clickable link
 
 Usage: python scripts/make_instagram.py [out_dir]
 """
@@ -296,6 +297,17 @@ def caption(data, people_yesterday=None):
     return "\n".join(lines) + "\n"
 
 
+def facebook_caption(text):
+    """Facebook makes links clickable, so swap "link in bio" for the real address."""
+    text = text.replace(" (link in bio)", "")
+    lines = text.split("\n")
+    for i, line in enumerate(lines):
+        if line.startswith("Made it?"):
+            lines.insert(i, f"👉 https://www.{SITE}")
+            break
+    return "\n".join(lines)
+
+
 def main():
     import json
     with open("today.json", encoding="utf-8") as f:
@@ -311,9 +323,12 @@ def main():
     for i, s in enumerate(slides, start=1):
         s.save(os.path.join(out, f"post-{i}.jpg"), quality=90, optimize=True, progressive=True)
     story(data).save(os.path.join(out, "story.jpg"), quality=90, optimize=True, progressive=True)
+    text = caption(data, yesterday_count(date.fromisoformat(data["date"])))
     with open(os.path.join(out, "caption.txt"), "w", encoding="utf-8") as f:
-        f.write(caption(data, yesterday_count(date.fromisoformat(data["date"]))))
-    print(f"wrote {len(slides)} post slides, story.jpg and caption.txt to {out}")
+        f.write(text)
+    with open(os.path.join(out, "facebook.txt"), "w", encoding="utf-8") as f:
+        f.write(facebook_caption(text))
+    print(f"wrote {len(slides)} post slides, story.jpg, caption.txt and facebook.txt to {out}")
 
 
 if __name__ == "__main__":

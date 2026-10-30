@@ -21,14 +21,19 @@ CREATE TABLE IF NOT EXISTS media (
   created_at INTEGER NOT NULL
 );
 
-/* Instagram: one row per day posted (or tried) */
+/* Daily posts: one row per day, Instagram and Facebook Page tracked separately.
+   (The Worker adds the fb_ columns itself on databases created before Facebook support.) */
 CREATE TABLE IF NOT EXISTS ig_posts (
   day TEXT PRIMARY KEY,
   media_id TEXT,
   story_id TEXT,
   attempts INTEGER NOT NULL DEFAULT 0,
   error TEXT,
-  posted_at INTEGER
+  posted_at INTEGER,
+  fb_post_id TEXT,
+  fb_story_id TEXT,
+  fb_attempts INTEGER NOT NULL DEFAULT 0,
+  fb_error TEXT
 );
 
 /* Instagram: the renewed access token */
