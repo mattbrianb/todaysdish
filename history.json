@@ -2762,6 +2762,24 @@
       "meal": "dinner",
       "name": "Lebanese Falafel",
       "id": 649407
+    },
+    {
+      "date": "2026-10-31",
+      "meal": "breakfast",
+      "name": "Breakfast: Waffles",
+      "id": 636087
+    },
+    {
+      "date": "2026-10-31",
+      "meal": "lunch",
+      "name": "Baked Honey Sriracha Chicken Wings",
+      "id": 633651
+    },
+    {
+      "date": "2026-10-31",
+      "meal": "dinner",
+      "name": "Paneer jalfrezi",
+      "id": 654532
     }
   ]
 }
