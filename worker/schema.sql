@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS media (
 );
 
 /* Daily posts: one row per day, Instagram and Facebook Page tracked separately.
-   (The Worker adds the fb_ columns itself on databases created before Facebook support.) */
+   (The Worker adds the fb_ and busy_until columns itself on databases created before Facebook support.) */
 CREATE TABLE IF NOT EXISTS ig_posts (
   day TEXT PRIMARY KEY,
   media_id TEXT,
@@ -33,10 +33,11 @@ CREATE TABLE IF NOT EXISTS ig_posts (
   fb_post_id TEXT,
   fb_story_id TEXT,
   fb_attempts INTEGER NOT NULL DEFAULT 0,
-  fb_error TEXT
+  fb_error TEXT,
+  busy_until INTEGER
 );
 
-/* Instagram: the renewed access token */
+/* Instagram: the renewed access token; when the Worker last started the daily GitHub job */
 CREATE TABLE IF NOT EXISTS settings (
   key TEXT PRIMARY KEY,
   value TEXT NOT NULL,

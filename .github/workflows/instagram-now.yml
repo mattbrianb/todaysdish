@@ -53,7 +53,7 @@ jobs:
           python - <<'EOF'
           import json, sys
           r = json.load(open("result.json"))
-          ok = ("posted", "already posted")
+          ok = ("posted", "already posted", "posting already in progress")
           print("Instagram:", r.get("status"), r.get("error") or r.get("media_id") or "")
           fb = r.get("facebook")
           print("Facebook:", "not set up" if fb is None else f"{fb.get('status')} {fb.get('error') or fb.get('post_id') or ''}")

@@ -15,8 +15,6 @@ HISTORY_FILE = "history.json"
 NO_REPEAT_DAYS = 90
 HISTORY_KEEP_DAYS = 365
 
-# South Africa is UTC+2 all year (no DST)
-SA_TZ = timezone(timedelta(hours=2))
 
 
 def image_exists(url):
@@ -117,7 +115,8 @@ def get_recipe_with_image(tags, last_served, used_today, attempts=4):
 
 
 def main():
-    today = datetime.now(SA_TZ).date()
+    # The menu changes at 00:00 GMT
+    today = datetime.now(timezone.utc).date()
 
     # Retry runs exit early once today's dishes exist (FORCE=1 regenerates anyway)
     if os.getenv("FORCE") != "1":

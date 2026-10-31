@@ -11,12 +11,17 @@
 //   /ig/publish       POST (Bearer MEDIA_KEY) to post a day's carousel and story now
 //   /ig/status        GET (Bearer MEDIA_KEY) recent posting results and token age
 //
-// Scheduled (Cron Trigger "0 5-10 * * *", i.e. 07:00 to 12:00 in South Africa): posts today's
-// carousel and story to Instagram, and the same slides plus a story to the Facebook Page when
-// FB_PAGE_ID is set, once the images are uploaded. Each network posts at most once a day and
-// retries on its own, so a failure on one never blocks or repeats the other.
+// Scheduled (Cron Trigger "*/5 * * * *"): the menu changes at 00:00 GMT. GitHub's own scheduler
+// often runs hours late, so at 00:00 the Worker starts the daily GitHub job itself (needs
+// GH_TOKEN) and keeps nudging it every 30 minutes while the site still shows yesterday. Once
+// the site shows today's menu it posts today's carousel and story to Instagram, and the same
+// slides plus a story to the Facebook Page when FB_PAGE_ID is set. The GitHub job also asks
+// for the post the moment the site updates; a lock stops the two posting together. Each
+// network posts at most once a day and retries on its own, so a failure on one never blocks
+// or repeats the other.
 //
 // Secrets: IG_TOKEN, MEDIA_KEY (shared with the GitHub job), IP_SALT (optional),
+// GH_TOKEN (fine-grained GitHub token for this repo only, Actions: read and write),
 // IG_USER_ID when IG_TOKEN is a Meta system-user token, and for Facebook FB_PAGE_ID plus
 // FB_TOKEN (optional; defaults to IG_TOKEN, which must then be a system-user token with Page
 // permissions). Two Instagram token kinds work:
@@ -36,10 +41,15 @@ const isSystemToken = token => token.startsWith("EAA");
 const MEDIA_KEEP_DAYS = 3;
 const MAX_POST_ATTEMPTS = 3;
 const TOKEN_REFRESH_DAYS = 7; // tokens last 60 days and must be renewed before then
+const SITE_TODAY = "https://www.todaysdish.food/today.json";
+const GH_DISPATCH = "https://api.github.com/repos/mattbrianb/todaysdish/actions/workflows/daily.yml/dispatches";
+const DISPATCH_EVERY_MS = 30 * 60000; // a run plus the Pages deploy takes about 5 minutes
+const MAX_DISPATCHES = 8;
+const POST_LOCK_MS = 10 * 60000;
 
-// The site's day is South African (UTC+2 all year)
-function saToday() {
-  return new Date(Date.now() + 2 * 3600 * 1000).toISOString().slice(0, 10);
+// The menu day is GMT: a new one at 00:00 UTC
+function utcToday() {
+  return new Date().toISOString().slice(0, 10);
 }
 
 function bearerOk(request, env) {
@@ -121,7 +131,7 @@ async function mediaText(env, key) {
 let fbColumnsReady = false;
 async function ensureFbColumns(env) {
   if (fbColumnsReady) return;
-  for (const col of ["fb_post_id TEXT", "fb_story_id TEXT", "fb_attempts INTEGER NOT NULL DEFAULT 0", "fb_error TEXT"]) {
+  for (const col of ["fb_post_id TEXT", "fb_story_id TEXT", "fb_attempts INTEGER NOT NULL DEFAULT 0", "fb_error TEXT", "busy_until INTEGER"]) {
     try { await env.DB.prepare(`ALTER TABLE ig_posts ADD COLUMN ${col}`).run(); } catch (e) { /* already there */ }
   }
   fbColumnsReady = true;
@@ -141,6 +151,22 @@ async function publishDay(env, day) {
     const slideNo = k => parseInt((k.match(/post-(\d+)\.jpg$/) || [])[1], 10);
     slides = keys.filter(k => slideNo(k) > 0).sort((a, b) => slideNo(a) - slideNo(b));
     if (!slides.length) return { day, status: "waiting for images" };
+
+    // The GitHub job and the cron can ask at the same moment: only one of them posts
+    const now = Date.now();
+    const claim = await env.DB
+      .prepare("UPDATE ig_posts SET busy_until = ? WHERE day = ? AND (busy_until IS NULL OR busy_until < ?)")
+      .bind(now + POST_LOCK_MS, day, now).run();
+    if (!claim.meta || claim.meta.changes !== 1) return { day, status: "posting already in progress" };
+    try {
+      // The other caller may have finished just before we took the lock
+      const fresh = await env.DB.prepare("SELECT * FROM ig_posts WHERE day = ?").bind(day).first();
+      const result = { day, ...(await publishInstagram(env, day, fresh, keys, slides)) };
+      if (fbWanted) result.facebook = await publishFacebook(env, day, fresh, keys, slides);
+      return result;
+    } finally {
+      await env.DB.prepare("UPDATE ig_posts SET busy_until = NULL WHERE day = ?").bind(day).run();
+    }
   }
 
   const result = { day, ...(await publishInstagram(env, day, row, keys, slides)) };
@@ -266,10 +292,58 @@ async function publishFacebook(env, day, row, keys, slides) {
   }
 }
 
+// The date of the menu visitors see right now (skipping caches), or null if it can't be read
+async function siteDay() {
+  try {
+    const r = await fetch(SITE_TODAY + "?t=" + Date.now(), { cf: { cacheTtl: 0 }, headers: { "Cache-Control": "no-cache" } });
+    return r.ok ? (await r.json()).date || null : null;
+  } catch (e) {
+    return null;
+  }
+}
+
+// Start the daily GitHub job (force=false: it skips the recipe lookup if today's menu exists)
+async function dispatchDaily(env) {
+  const r = await fetch(GH_DISPATCH, {
+    method: "POST",
+    headers: {
+      Authorization: "Bearer " + env.GH_TOKEN,
+      Accept: "application/vnd.github+json",
+      "User-Agent": "todaysdish-worker",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ ref: "main", inputs: { force: "false" } }),
+  });
+  if (r.status !== 204) throw new Error(`GitHub ${r.status}: ${(await r.text()).slice(0, 200)}`);
+}
+
+// While the site shows an old menu, start the job at most every 30 minutes, 8 times a day
+async function nudgeDaily(env, day) {
+  if (!env.GH_TOKEN) return { status: "GH_TOKEN secret is not set" };
+  const saved = await getSetting(env, "dispatch");
+  let rec = saved ? JSON.parse(saved.value) : {};
+  if (rec.day !== day) rec = { day, count: 0, at: 0 };
+  if (rec.count >= MAX_DISPATCHES) return { status: "gave up for today", ...rec };
+  if (Date.now() - rec.at < DISPATCH_EVERY_MS) return { status: "job started, waiting", ...rec };
+  rec = { day, count: rec.count + 1, at: Date.now() };
+  try {
+    await dispatchDaily(env);
+    delete rec.error;
+  } catch (e) {
+    rec.error = e.message;
+  }
+  await setSetting(env, "dispatch", JSON.stringify(rec));
+  return { status: rec.error ? "could not start the job" : "job started", ...rec };
+}
+
 async function runScheduled(env) {
   const cutoff = Date.now() - MEDIA_KEEP_DAYS * 86400000;
   await env.DB.prepare("DELETE FROM media WHERE created_at < ?").bind(cutoff).run();
-  return publishDay(env, saToday());
+  const day = utcToday();
+  const live = await siteDay();
+  // Post only once visitors can see the same menu the post shows
+  if (live !== day) return { day, site: live, menu: await nudgeDaily(env, day) };
+  return publishDay(env, day);
 }
 
 export default {
@@ -517,7 +591,7 @@ if (url.pathname === "/img") {
     const MAX_TAPS_PER_IP_PER_DAY = 30; // a busy household or office, not a script
     const KEEP_DAYS = 30;
 
-    // The site's day is South African; allow a day either side of UTC for other time zones
+    // The menu day is GMT; allow a day either side for other time zones
     function dayOk(day) {
       if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) return false;
       const t = Date.parse(day + "T00:00:00Z");
@@ -577,7 +651,7 @@ if (url.pathname === "/img") {
       if (!bearerOk(request, env)) return json({ error: "Unauthorized" }, 401);
 
       if (url.pathname === "/ig/publish" && request.method === "POST") {
-        const day = url.searchParams.get("day") || saToday();
+        const day = url.searchParams.get("day") || utcToday();
         if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) return json({ error: "Invalid day" }, 400);
         return json(await publishDay(env, day));
       }
@@ -605,8 +679,12 @@ if (url.pathname === "/img") {
             facebook_page = { can_post: false, error: e.message };
           }
         }
+        const dispatch = await getSetting(env, "dispatch");
         return json({
-          today: saToday(),
+          today: utcToday(),
+          site_shows: await siteDay(),
+          last_job_start: dispatch ? JSON.parse(dispatch.value) : null,
+          github_token: Boolean(env.GH_TOKEN),
           account,
           facebook_page,
           posts: posts.results,

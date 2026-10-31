@@ -228,7 +228,7 @@ CTAS = [
     "Keep your streak going: tap \"I'm eating this\" at todaysdish.food (link in bio).",
     "See how many people are eating today's specials at todaysdish.food (link in bio).",
     "Full recipes and the \"I'm eating this\" button: todaysdish.food (link in bio).",
-    "New menu every morning at 6 on todaysdish.food. Tap \"I'm eating this\" and come back tomorrow.",
+    "New menu every day at midnight GMT on todaysdish.food. Tap \"I'm eating this\" and come back tomorrow.",
 ]
 TREND_TAG = "#TodaysDish"
 SOCIAL_PROOF_FROM = 20  # a small number in a public post reads as nobody's here

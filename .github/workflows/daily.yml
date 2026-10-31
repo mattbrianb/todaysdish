@@ -3,12 +3,23 @@ name: Daily Dish Generator
 permissions:
   contents: write
 
+# The menu changes at 00:00 GMT. The Cloudflare Worker starts this job at exactly 00:00
+# (GitHub's own scheduler often runs hours late) and again every 30 minutes until the site
+# shows today's menu. The schedule below is only a backup in case the Worker can't.
 on:
   schedule:
-    - cron: "0 4 * * *"   # 06:00 South Africa (UTC+2)
-    - cron: "0 6 * * *"   # retry 08:00 SA, exits early if today's dishes exist
-    - cron: "0 9 * * *"   # retry 11:00 SA
+    - cron: "10 0 * * *"
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Pick new dishes even if today's are already up"
+        type: boolean
+        default: true
+
+# Two starts at once would pick dishes twice; the second waits and then finds them done
+concurrency:
+  group: daily-menu
+  cancel-in-progress: false
 
 jobs:
   generate:
@@ -29,16 +40,16 @@ jobs:
       - name: Generate today's dishes
         env:
           SPOONACULAR_API_KEY: ${{ secrets.SPOONACULAR_API_KEY }}
-          # A manual run always picks fresh dishes; scheduled retries don't overwrite
-          FORCE: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
+          # A manual run picks fresh dishes; the Worker's starts and the backup don't overwrite
+          FORCE: ${{ github.event_name == 'workflow_dispatch' && format('{0}', inputs.force) == 'true' && '1' || '0' }}
         run: python scripts/generate_today.py
 
       - name: Draw today's share card
         env:
-          FORCE: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
+          FORCE: ${{ github.event_name == 'workflow_dispatch' && format('{0}', inputs.force) == 'true' && '1' || '0' }}
         run: python scripts/make_share_card.py
 
-      # The Worker posts these to Instagram from 07:00 SA; re-uploading the same day is harmless
+      # Re-uploading the same day is harmless; the Worker never posts a day twice
       - name: Draw today's Instagram post
         run: python scripts/make_instagram.py
 
@@ -54,3 +65,29 @@ jobs:
           git add today.json history.json og.jpg share
           git commit -m "Update today's dishes" || echo "No changes"
           git push
+
+      # Post the moment visitors can see the new menu (the Worker's cron is the fallback)
+      - name: Post to Instagram and Facebook once the site shows today's menu
+        env:
+          MEDIA_KEY: ${{ secrets.MEDIA_KEY }}
+        run: |
+          DAY=$(python -c "import json; print(json.load(open('today.json'))['date'])")
+          for i in $(seq 1 60); do
+            LIVE=$(curl -s -H "Cache-Control: no-cache" "https://www.todaysdish.food/today.json?t=$(date +%s)" | python -c "import json,sys; print(json.load(sys.stdin).get('date',''))" 2>/dev/null || true)
+            [ "$LIVE" = "$DAY" ] && break
+            echo "Site still shows ${LIVE:-nothing}, waiting for $DAY"
+            sleep 20
+          done
+          if [ "$LIVE" != "$DAY" ]; then echo "Site not updated after 20 minutes; the Worker will post once it is"; exit 0; fi
+          echo "Site shows $DAY, posting"
+          curl -s -X POST "https://todaysdish-ingredients.mattbrianburnett.workers.dev/ig/publish?day=$DAY" -H "Authorization: Bearer $MEDIA_KEY" > result.json
+          python - <<'PY'
+          import json, sys
+          r = json.load(open("result.json"))
+          ok = ("posted", "already posted", "posting already in progress")
+          print("Instagram:", r.get("status"), r.get("error") or r.get("media_id") or "")
+          fb = r.get("facebook")
+          print("Facebook:", "not set up" if fb is None else f"{fb.get('status')} {fb.get('error') or fb.get('post_id') or ''}")
+          if r.get("status") not in ok or (fb is not None and fb.get("status") not in ok):
+              sys.exit("Something didn't post, see above (the Worker retries every 5 minutes)")
+          PY

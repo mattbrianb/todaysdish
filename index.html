@@ -22,7 +22,7 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "z5w3vgtm2a");
 </script>
-<!-- Link previews. og.jpg is redrawn every morning by scripts/make_share_card.py -->
+<!-- Link previews. og.jpg is redrawn at 00:00 GMT each day by scripts/make_share_card.py -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Today's Dish">
 <meta property="og:title" content="Today's Dish: one menu, everybody eats">
@@ -192,10 +192,10 @@ function openRecipe(key, label) {
   openOverlay("recipeOverlay");
 }
 
-/* Countdown: the daily job runs at 04:00 UTC (06:00 in South Africa) */
+/* Countdown: the menu changes at 00:00 GMT */
 function updateCountdown() {
   const now = new Date();
-  const next = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 4));
+  const next = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
   if (next <= now) next.setUTCDate(next.getUTCDate() + 1);
   const mins = Math.ceil((next - now) / 60000);
   const h = Math.floor(mins / 60), m = mins % 60;
