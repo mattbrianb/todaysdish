@@ -1,5 +1,6 @@
 import os
 import random
+import re
 import requests
 import json
 from datetime import datetime, timedelta, timezone
@@ -28,7 +29,8 @@ def image_exists(url):
 
 
 def name_key(name):
-    return " ".join(str(name).lower().split())
+    # "Breakfast: Waffles" and "Waffles" are the same dish
+    return " ".join(clean_name(name).lower().split())
 
 
 def load_history():
@@ -46,6 +48,14 @@ def save_history(served, today):
         json.dump({"served": served}, f, indent=2, ensure_ascii=False)
 
 
+# Some titles repeat the meal ("Breakfast: Waffles"); the board already labels it
+MEAL_PREFIX = re.compile(r"^\s*(breakfast|brunch|lunch|dinner|supper|dessert|snack)\s*:\s*", re.I)
+
+
+def clean_name(title):
+    return MEAL_PREFIX.sub("", str(title)).strip() or str(title).strip()
+
+
 def to_dish(recipe):
     ingredients = [
         item["original"]
@@ -59,7 +69,7 @@ def to_dish(recipe):
 
     return {
         "id": recipe.get("id"),
-        "name": recipe["title"],
+        "name": clean_name(recipe["title"]),
         "image": recipe.get("image"),
         "cookTime": recipe.get("readyInMinutes"),
         "ingredients": ingredients,

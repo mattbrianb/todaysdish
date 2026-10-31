@@ -1,4 +1,7 @@
-"""Draw today's letterboard as a link-preview image and write a dated share page.
+"""Letterboard drawing helpers, used by make_instagram.py and make_preview_card.py.
+
+No longer run by the daily job: shares now use the plain website with the fixed card
+from make_preview_card.py. Running it by hand still draws a dated share page:
 
 Outputs (paths relative to the repo root):
   og.jpg                 latest card, used by index.html's preview tags

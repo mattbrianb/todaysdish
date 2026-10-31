@@ -45,25 +45,12 @@ document.addEventListener("keydown", (e) => {
 let shareText = "Today's Dish 🍽️ One menu, everybody eats #TodaysDish";
 function setShareText(text) { shareText = text; }
 
-function siteRoot() {
-  // Strip filename -> directory, ensure trailing slash
-  return window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, "/");
-}
-
-// Share today's dated page (share/YYYY-MM-DD.html) when it exists: chat apps cache link
-// previews per URL, so a new URL each day means the preview shows today's letterboard.
-let shareUrl = null;
-fetch("today.json", { cache: "no-cache" })
-  .then(r => r.ok ? r.json() : null)
-  .then(data => {
-    if (!data || !/^\d{4}-\d{2}-\d{2}$/.test(data.date)) return;
-    const dated = siteRoot() + "share/" + data.date + ".html";
-    return fetch(dated, { method: "HEAD", cache: "no-cache" }).then(r => { if (r.ok) shareUrl = dated; });
-  })
-  .catch(() => {});
+// Always the plain website over https: it shows whatever today's menu is, and its preview
+// card never names dishes, so a preview a chat app saved days ago is still right
+const SITE_URL = "https://www.todaysdish.food/";
 
 function getShareUrl() {
-  return shareUrl || siteRoot();
+  return SITE_URL;
 }
 
 function openShareModal() {

@@ -44,11 +44,6 @@ jobs:
           FORCE: ${{ github.event_name == 'workflow_dispatch' && format('{0}', inputs.force) == 'true' && '1' || '0' }}
         run: python scripts/generate_today.py
 
-      - name: Draw today's share card
-        env:
-          FORCE: ${{ github.event_name == 'workflow_dispatch' && format('{0}', inputs.force) == 'true' && '1' || '0' }}
-        run: python scripts/make_share_card.py
-
       # Re-uploading the same day is harmless; the Worker never posts a day twice
       - name: Draw today's Instagram post
         run: python scripts/make_instagram.py
@@ -62,7 +57,7 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add today.json history.json og.jpg share
+          git add today.json history.json
           git commit -m "Update today's dishes" || echo "No changes"
           git push
 
