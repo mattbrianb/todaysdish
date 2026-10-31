@@ -10,6 +10,8 @@
 //                     (Authorization: Bearer MEDIA_KEY), GET is public so Instagram can fetch them
 //   /ig/publish       POST (Bearer MEDIA_KEY) to post a day's carousel and story now
 //   /ig/status        GET (Bearer MEDIA_KEY) recent posting results and token age
+//   /health           GET, public: Worker version, when the cron last ran, whether GH_TOKEN
+//                     is set and the last job start (no secrets, safe to open in a browser)
 //
 // Scheduled (Cron Trigger "*/5 * * * *"): the menu changes at 00:00 GMT. GitHub's own scheduler
 // often runs hours late, so at 00:00 the Worker starts the daily GitHub job itself (needs
@@ -46,6 +48,7 @@ const GH_DISPATCH = "https://api.github.com/repos/mattbrianb/todaysdish/actions/
 const DISPATCH_EVERY_MS = 30 * 60000; // a run plus the Pages deploy takes about 5 minutes
 const MAX_DISPATCHES = 8;
 const POST_LOCK_MS = 10 * 60000;
+const WORKER_VERSION = "2026-10-31 midnight";
 
 // The menu day is GMT: a new one at 00:00 UTC
 function utcToday() {
@@ -319,7 +322,10 @@ async function dispatchDaily(env) {
 
 // While the site shows an old menu, start the job at most every 30 minutes, 8 times a day
 async function nudgeDaily(env, day) {
-  if (!env.GH_TOKEN) return { status: "GH_TOKEN secret is not set" };
+  if (!env.GH_TOKEN) {
+    await setSetting(env, "dispatch", JSON.stringify({ day, count: 0, at: 0, error: "GH_TOKEN secret is not set" }));
+    return { status: "GH_TOKEN secret is not set" };
+  }
   const saved = await getSetting(env, "dispatch");
   let rec = saved ? JSON.parse(saved.value) : {};
   if (rec.day !== day) rec = { day, count: 0, at: 0 };
@@ -337,6 +343,7 @@ async function nudgeDaily(env, day) {
 }
 
 async function runScheduled(env) {
+  await setSetting(env, "cron_tick", new Date().toISOString());
   const cutoff = Date.now() - MEDIA_KEEP_DAYS * 86400000;
   await env.DB.prepare("DELETE FROM media WHERE created_at < ?").bind(cutoff).run();
   const day = utcToday();
@@ -643,6 +650,22 @@ if (url.pathname === "/img") {
         });
       }
       return json({ error: "Method not allowed" }, 405);
+    }
+
+    // -------- /health (public, no secrets) --------
+    if (url.pathname === "/health") {
+      const out = { version: WORKER_VERSION, now: new Date().toISOString(), github_token_set: Boolean(env.GH_TOKEN) };
+      if (env && env.DB) {
+        try {
+          const tick = await getSetting(env, "cron_tick");
+          const dispatch = await getSetting(env, "dispatch");
+          out.cron_last_ran = tick ? tick.value : "never (check the Cron Trigger is */5 * * * *)";
+          out.last_job_start = dispatch ? JSON.parse(dispatch.value) : null;
+        } catch (e) {
+          out.db_error = e.message;
+        }
+      }
+      return json(out);
     }
 
     // -------- /ig (manual post and status, private) --------
