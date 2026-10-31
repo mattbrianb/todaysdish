@@ -8,13 +8,13 @@ function toggleDark() {
   localStorage.setItem("dark", document.body.classList.contains("dark"));
 }
 
-function showToast(msg) {
+function showToast(msg, ms = 1600) {
   const t = document.getElementById("toast");
   if (!t) return;
   t.textContent = msg;
   t.classList.add("show");
   clearTimeout(showToast._timer);
-  showToast._timer = setTimeout(() => { t.classList.remove("show"); }, 1600);
+  showToast._timer = setTimeout(() => { t.classList.remove("show"); }, ms);
 }
 
 /* Overlays (share sheet, recipe sheet) */
@@ -69,31 +69,45 @@ function showShareSheet(url) {
 }
 function closeShareModal() { closeOverlay("shareOverlay"); }
 
-async function copyShareLink() {
-  const link = document.getElementById("shareLink").value;
+async function copyText(text, toast, ms) {
   try {
-    await navigator.clipboard.writeText(link);
-    showToast("Copied link ✅");
+    await navigator.clipboard.writeText(text);
+    showToast(toast, ms);
   } catch (e) {
-    window.prompt("Copy this link:", link);
+    window.prompt("Copy this:", text);
   }
 }
+function copyShareLink() {
+  return copyText(document.getElementById("shareLink").value, "Copied link ✅");
+}
+
+// Facebook, Instagram and TikTok won't let a website fill in the message, so these copy
+// today's specials and the link, then open the place to paste them
+const PASTE_TARGETS = {
+  facebook: { url: u => `https://www.facebook.com/sharer/sharer.php?u=${u}&hashtag=%23TodaysDish`, toast: "Message copied ✅ Paste it above the link" },
+  instagram: { url: () => "https://www.instagram.com/direct/inbox/", toast: "Message copied ✅ Paste it into a chat" },
+  tiktok: { url: () => "https://www.tiktok.com/messages", toast: "Message copied ✅ Paste it into a chat" },
+};
+
 function shareTo(platform) {
   const link = document.getElementById("shareLink").value;
   const text = encodeURIComponent(shareText);
   const u = encodeURIComponent(link);
 
+  const paste = PASTE_TARGETS[platform];
+  if (paste) {
+    copyText(shareText + " " + link, paste.toast, 3500);
+    window.open(paste.url(u), "_blank", "noopener,noreferrer");
+    return;
+  }
   copyShareLink();
 
   let target = "";
   if (platform === "whatsapp") target = `https://wa.me/?text=${text}%20${u}`;
-  if (platform === "facebook") target = `https://www.facebook.com/sharer/sharer.php?u=${u}`;
   if (platform === "x") target = `https://twitter.com/intent/tweet?text=${text}%20${u}`;
   if (platform === "telegram") target = `https://t.me/share/url?url=${u}&text=${text}`;
   if (platform === "email") target = `mailto:?subject=Today's%20Dish&body=${text}%0A%0A${u}`;
   if (platform === "reddit") target = `https://www.reddit.com/submit?url=${u}&title=${text}`;
-  if (platform === "instagram") target = "https://www.instagram.com/";
-  if (platform === "tiktok") target = "https://www.tiktok.com/";
 
   if (target) window.open(target, "_blank", "noopener,noreferrer");
 }
@@ -139,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <input class="copy-input" id="shareLink" readonly aria-label="Link to share">
           <button type="button" class="copy-btn" onclick="copyShareLink()">Copy</button>
         </div>
-        <p class="modal-note">Instagram and TikTok can't take a shared link directly, so those buttons copy it for you to paste.</p>
+        <p class="modal-note">Facebook, Instagram and TikTok don't let websites fill in a message, so those buttons copy it for you to paste.</p>
       </div>
     </div>`);
 });
