@@ -2780,6 +2780,24 @@
       "meal": "dinner",
       "name": "Paneer jalfrezi",
       "id": 654532
+    },
+    {
+      "date": "2026-11-01",
+      "meal": "breakfast",
+      "name": "Wild Blueberry Lemon Muffins",
+      "id": 665329
+    },
+    {
+      "date": "2026-11-01",
+      "meal": "lunch",
+      "name": "Lemony Zucchini Fritters",
+      "id": 631754
+    },
+    {
+      "date": "2026-11-01",
+      "meal": "dinner",
+      "name": "Grilled Chicken Hunter Style",
+      "id": 645647
     }
   ]
 }
