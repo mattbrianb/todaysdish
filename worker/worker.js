@@ -48,7 +48,7 @@ const GH_DISPATCH = "https://api.github.com/repos/mattbrianb/todaysdish/actions/
 const DISPATCH_EVERY_MS = 30 * 60000; // a run plus the Pages deploy takes about 5 minutes
 const MAX_DISPATCHES = 8;
 const POST_LOCK_MS = 10 * 60000;
-const WORKER_VERSION = "2026-10-31 midnight";
+const WORKER_VERSION = "2026-11-02 instagram retry";
 
 // The menu day is GMT: a new one at 00:00 UTC
 function utcToday() {
@@ -113,13 +113,33 @@ const fbCall = (path, params, token, method) => graphCall(FB_API, "Facebook", pa
 
 // Instagram downloads the image, then the container must reach FINISHED before publishing
 async function waitReady(id, token) {
+  let hiccups = 0;
   for (let i = 0; i < 24; i++) {
-    const j = await igCall(id, { fields: "status_code" }, token, "GET");
+    let j;
+    try {
+      j = await igCall(id, { fields: "status_code" }, token, "GET");
+    } catch (e) {
+      // Right after creation Instagram can briefly answer "Unsupported get request"
+      if (!/Unsupported get request/i.test(e.message) || ++hiccups > 3) throw e;
+      await sleep(5000);
+      continue;
+    }
     if (j.status_code === "FINISHED") return;
     if (j.status_code === "ERROR" || j.status_code === "EXPIRED") throw new Error(`Instagram container ${j.status_code}`);
     await sleep(5000);
   }
   throw new Error("Instagram container not ready after 2 minutes");
+}
+
+// Create a container. Instagram has answered with id "0" (which can never be checked or
+// published), so ask again when the id isn't a real one
+async function createContainer(uid, params, token) {
+  for (let i = 0; i < 3; i++) {
+    const c = await igCall(`${uid}/media`, params, token);
+    if (/^[1-9]\d*$/.test(String(c.id))) return String(c.id);
+    await sleep(3000);
+  }
+  throw new Error("Instagram returned no usable container id");
 }
 
 // ---- Daily posts ----
@@ -198,13 +218,12 @@ async function publishInstagram(env, day, row, keys, slides) {
     // Carousel: one container per slide, then the carousel itself
     const children = [];
     for (const k of slides) {
-      const c = await igCall(`${uid}/media`, { image_url: mediaUrl(k), is_carousel_item: "true" }, token);
-      children.push(c.id);
+      children.push(await createContainer(uid, { image_url: mediaUrl(k), is_carousel_item: "true" }, token));
     }
     for (const id of children) await waitReady(id, token);
-    const carousel = await igCall(`${uid}/media`, { media_type: "CAROUSEL", children: children.join(","), caption }, token);
-    await waitReady(carousel.id, token);
-    const post = await igCall(`${uid}/media_publish`, { creation_id: carousel.id }, token);
+    const carousel = await createContainer(uid, { media_type: "CAROUSEL", children: children.join(","), caption }, token);
+    await waitReady(carousel, token);
+    const post = await igCall(`${uid}/media_publish`, { creation_id: carousel }, token);
     await env.DB
       .prepare("UPDATE ig_posts SET media_id = ?, posted_at = ?, error = NULL WHERE day = ?")
       .bind(post.id, Date.now(), day).run();
@@ -213,9 +232,9 @@ async function publishInstagram(env, day, row, keys, slides) {
     let story = null;
     if (keys.includes(day + "/story.jpg")) {
       try {
-        const s = await igCall(`${uid}/media`, { media_type: "STORIES", image_url: mediaUrl(day + "/story.jpg") }, token);
-        await waitReady(s.id, token);
-        story = (await igCall(`${uid}/media_publish`, { creation_id: s.id }, token)).id;
+        const s = await createContainer(uid, { media_type: "STORIES", image_url: mediaUrl(day + "/story.jpg") }, token);
+        await waitReady(s, token);
+        story = (await igCall(`${uid}/media_publish`, { creation_id: s }, token)).id;
         await env.DB.prepare("UPDATE ig_posts SET story_id = ? WHERE day = ?").bind(story, day).run();
       } catch (e) {
         await env.DB.prepare("UPDATE ig_posts SET error = ? WHERE day = ?").bind("story: " + e.message, day).run();
