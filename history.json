@@ -2798,6 +2798,24 @@
       "meal": "dinner",
       "name": "Grilled Chicken Hunter Style",
       "id": 645647
+    },
+    {
+      "date": "2026-11-02",
+      "meal": "breakfast",
+      "name": "Make Ahead Quiche",
+      "id": 650650
+    },
+    {
+      "date": "2026-11-02",
+      "meal": "lunch",
+      "name": "Japanese Chicken Donburi",
+      "id": 648460
+    },
+    {
+      "date": "2026-11-02",
+      "meal": "dinner",
+      "name": "Vietnamese Banh Mi",
+      "id": 664828
     }
   ]
 }
