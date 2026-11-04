@@ -2834,6 +2834,24 @@
       "meal": "dinner",
       "name": "Tex-Mex Tilapia Bowl",
       "id": 663051
+    },
+    {
+      "date": "2026-11-04",
+      "meal": "breakfast",
+      "name": "Vegetable Cheddar Quiche",
+      "id": 664533
+    },
+    {
+      "date": "2026-11-04",
+      "meal": "lunch",
+      "name": "Enchiladas Verdes (Green Enchiladas)",
+      "id": 642403
+    },
+    {
+      "date": "2026-11-04",
+      "meal": "dinner",
+      "name": "Vegetable Fried Rice",
+      "id": 664553
     }
   ]
 }
