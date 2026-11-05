@@ -2852,6 +2852,24 @@
       "meal": "dinner",
       "name": "Vegetable Fried Rice",
       "id": 664553
+    },
+    {
+      "date": "2026-11-05",
+      "meal": "breakfast",
+      "name": "Lemon Scented Polenta Pancakes with Blueberry Thyme Syrup",
+      "id": 649777
+    },
+    {
+      "date": "2026-11-05",
+      "meal": "lunch",
+      "name": "BLT Sandwich",
+      "id": 635342
+    },
+    {
+      "date": "2026-11-05",
+      "meal": "dinner",
+      "name": "Ham with Orange Rosemary Marmalade Glaze",
+      "id": 646217
     }
   ]
 }
