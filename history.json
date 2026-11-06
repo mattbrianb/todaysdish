@@ -2870,6 +2870,24 @@
       "meal": "dinner",
       "name": "Ham with Orange Rosemary Marmalade Glaze",
       "id": 646217
+    },
+    {
+      "date": "2026-11-06",
+      "meal": "breakfast",
+      "name": "Buckwheat Banana Pancakes",
+      "id": 636385
+    },
+    {
+      "date": "2026-11-06",
+      "meal": "lunch",
+      "name": "Rotisserie Chicken and Bean Tostadas",
+      "id": 1098354
+    },
+    {
+      "date": "2026-11-06",
+      "meal": "dinner",
+      "name": "Salmon, Watercress, Fennel and Baby Beetroot Salad With Lemony \"Caviar\" Dressing",
+      "id": 659143
     }
   ]
 }
