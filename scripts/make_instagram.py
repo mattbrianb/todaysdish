@@ -1,7 +1,9 @@
-"""Draw today's Instagram images and caption in the diner letterboard style.
+"""Draw today's Instagram images and caption.
 
 Writes to instagram/YYYY-MM-DD/:
-  post-1.jpg ... post-5.jpg   1080x1350 carousel: the board, one slide per dish, a sign-off
+  post-1.jpg ... post-5.jpg   1080x1350 carousel: a cover (the day's specials on a red diner
+                              badge over a full-bleed photo), one full-bleed slide per dish
+                              with "swipe for more", and the letterboard sign-off
   story.jpg                   1080x1920 story with the board and the web address
   caption.txt                 the Instagram caption
   facebook.txt                the same caption for the Facebook Page, with a clickable link
@@ -13,7 +15,7 @@ import re
 import sys
 from datetime import date
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFilter, ImageOps
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from make_share_card import (  # noqa: E402  (shared drawing helpers)
@@ -27,9 +29,7 @@ SITE = "todaysdish.food"
 MUTED = (94, 74, 60)
 
 
-def big_photo_url(url):
-    # Spoonacular serves larger copies of the same photo; 636x393 is the biggest
-    return re.sub(r"-\d+x\d+\.(jpg|png)$", r"-636x393.\1", url or "")
+from photos import big_photo_url, sharp  # noqa: E402,F401  (big_photo_url is used by make_reel too)
 
 
 def checker(d, y, width, sq=40):
@@ -100,44 +100,101 @@ def footer(d, img_h, text="Full recipes at " + SITE):
     checker(d, img_h - 40, W)
 
 
-def slide_board(data):
-    img = Image.new("RGB", (W, H), CREAM)
+# ---- Full-bleed photo slides ---------------------------------------------------
+WHITE = (255, 255, 255)
+YELLOW = (255, 196, 37)
+
+
+def full_photo(url, dim=(0.3, 0.25, 0.45)):
+    """The sharpened recipe photo filling the slide, darkened top, middle and bottom."""
+    img = ImageOps.fit(sharp(url), (W, H), Image.LANCZOS)
+    img = img.filter(ImageFilter.UnsharpMask(radius=2, percent=60, threshold=2))
+    shade = Image.new("L", (1, H))
+    top, mid, bottom = dim
+    for y in range(H):
+        f = y / (H - 1)
+        a = top + (mid - top) * f * 2 if f < 0.5 else mid + (bottom - mid) * (f - 0.5) * 2
+        shade.putpixel((0, y), int(255 * a))
+    return Image.composite(Image.new("RGB", (W, H), (0, 0, 0)), img, shade.resize((W, H)))
+
+
+def tracked(d, text, f, cx, y, fill, tracking):
+    x = cx - spaced_width(d, text, f, tracking) / 2
+    for ch in text:
+        d.text((x, y), ch, font=f, fill=fill)
+        x += d.textlength(ch, font=f) + tracking
+
+
+def with_soft_shadow(img, draw):
+    """Run draw(d, colour_or_None) twice: once blurred and black for the shadow, then for real."""
+    shade = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    draw(ImageDraw.Draw(shade), (0, 0, 0, 200))
+    shade = shade.filter(ImageFilter.GaussianBlur(10))
+    img.paste(shade, (0, 0), shade)
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    draw(ImageDraw.Draw(layer), None)
+    img.paste(layer, (0, 0), layer)
+    return img
+
+
+def arrow(d, x=W - 150, y=H - 120, colour=WHITE):
+    d.line((x, y, x + 90, y), fill=colour, width=6)
+    d.polygon([(x + 92, y), (x + 70, y - 14), (x + 70, y + 14)], fill=colour)
+
+
+def slide_cover(data, hero="dinner"):
+    """The grid tile: today's specials on a red diner badge over the hero dish."""
+    img = full_photo(data[hero].get("image"), (0.25, 0.2, 0.35))
     d = ImageDraw.Draw(img)
-    checker(d, 0, W)
-    centered(d, "Today's Dish", logo_font(96), W / 2, 50, RED)
-    draw_spaced(d, "ONE MENU · EVERYBODY EATS", font(30, "Bold"), W / 2, 240, INK, 7)
-    board(d, (70, 300, W - 70, 892), menu_rows(d, data, W - 260, 0.9))
-    # A strip of today's three photos under the board
-    x, y, size, gap = 100, 916, 280, 20
-    for key, _ in MEALS:
-        dish = data.get(key) or {}
-        paste_photo(img, dish.get("image"), (x, y, x + size, y + size))
-        x += size + gap
-    footer(d, H, f"Tap I'm eating this at {SITE}  ·  {TREND_TAG}")
+    centered(d, "Today's Dish", logo_font(64), W / 2, 66, WHITE)
+    day = date.fromisoformat(data["date"])
+    title = font(96, "Bold")
+    lines = ["TODAY'S SPECIALS"]
+    sub = day.strftime("%A %d %B").replace(" 0", " ").upper()
+    bh = 120 + len(lines) * title.size * 1.08 + 70
+    top = H / 2 - bh / 2
+    d.rounded_rectangle((110, top, W - 110, top + bh), radius=28, fill=RED)
+    d.rounded_rectangle((128, top + 18, W - 128, top + bh - 18), radius=20, outline=CREAM, width=3)
+    tracked(d, "TODAY'S MENU", font(32, "Bold"), W / 2, top + 44, YELLOW, 10)
+    y = top + 100
+    for line in lines:
+        tracked(d, line, title, W / 2, y, CREAM, 2)
+        y += title.size * 1.08
+    tracked(d, sub, font(34, "Bold"), W / 2, y + 14, CREAM, 6)
+    arrow(d)
     return img
 
 
 def slide_dish(data, key, label, number):
+    """One dish full-bleed: "TODAY'S BREAKFAST" in white, the dish in gold, swipe prompt."""
     dish = data[key]
-    img = Image.new("RGB", (W, H), CREAM)
-    d = ImageDraw.Draw(img)
-    checker(d, 0, W)
-    pill(d, f"{number}  ·  {label.upper()}", font(34, "Bold"), W / 2, 92, FELT, GOLD)
-    paste_photo(img, dish.get("image"), (60, 190, W - 60, 190 + 720), radius=24)
-    f, lines = fit_lines(d, short_name(dish["name"]), W - 140, (76, 68, 60, 54, 48), 3)
-    y = 960
-    for line in lines:
-        draw_spaced(d, line, font(f.size, "Bold"), W / 2, y, INK, 3)
-        y += f.size + 10
-    meta = []
-    if dish.get("cookTime"):
-        h, m = divmod(int(dish["cookTime"]), 60)
-        meta.append(" ".join(filter(None, [f"{h} hr" if h else "", f"{m} min" if m else ""])))
-    if dish.get("ingredients"):
-        meta.append(f"{len(dish['ingredients'])} ingredients")
-    centered(d, "  ·  ".join(meta), font(38), W / 2, y + 18, MUTED)
-    footer(d, H, "Recipe at " + SITE)
-    return img
+    img = full_photo(dish.get("image"), (0.35, 0.3, 0.55))
+    sub = "READY IN " + nice_time(dish["cookTime"]).upper() if dish.get("cookTime") else ""
+
+    def draw(d, shade):
+        centered(d, "Today's Dish", logo_font(64), W / 2, 70, shade or WHITE)
+        f1 = font(110, "Bold")
+        f2, lines = fit_lines(d, short_name(dish["name"]).upper(), W - 120, (112, 100, 88, 78, 70), 2)
+        f2 = font(f2.size, "Bold")
+        head = f"TODAY'S {label.upper()}"
+        while d.textlength(head, font=f1) > W - 120 and f1.size > 60:
+            f1 = font(f1.size - 6, "Bold")
+        block = f1.size * 1.02 + len(lines) * f2.size * 1.02 + (70 if sub else 0)
+        y = H / 2 - block / 2 - 20
+        tracked(d, head, f1, W / 2, y, shade or WHITE, 2)
+        y += f1.size * 1.02
+        for line in lines:
+            tracked(d, line, f2, W / 2, y, shade or YELLOW, 2)
+            y += f2.size * 1.02
+        if sub:
+            tracked(d, sub, font(36, "Bold"), W / 2, y + 30, shade or WHITE, 6)
+        if shade is None:
+            f = font(32, "Bold")
+            text = "SWIPE FOR MORE"
+            tw = spaced_width(d, text, f, 5)
+            tracked(d, text, f, W - 174 - tw / 2, H - 140, WHITE, 5)
+            arrow(d)
+    return with_soft_shadow(img, draw)
 
 
 def slide_signoff(data):
@@ -150,7 +207,7 @@ def slide_signoff(data):
         ("EVERYBODY EATS", font(64, "Bold"), LETTER, 8, 120),
         ("EATING ONE TODAY?", font(40), GOLD, 6, 56),
         ("TAP I'M EATING THIS", font(40), GOLD, 6, 100),
-        ("NEW MENU EVERY MORNING", font(30), LETTER, 6, 30),
+        ("NEW MENU EVERY DAY", font(30), LETTER, 6, 30),
     ]
     board(d, (90, 280, W - 90, 900), rows)
     centered(d, SITE, font(72, "Bold"), W / 2, 960, RED)
@@ -315,7 +372,7 @@ def main():
     out = sys.argv[1] if len(sys.argv) > 1 else os.path.join("instagram", data["date"])
     os.makedirs(out, exist_ok=True)
 
-    slides = [slide_board(data)]
+    slides = [slide_cover(data)]
     for n, (key, label) in enumerate(MEALS, start=2):
         if data.get(key):
             slides.append(slide_dish(data, key, label, n - 1))

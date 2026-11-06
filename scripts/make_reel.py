@@ -195,16 +195,8 @@ class Reel:
 # draws its own title in the middle; intro, outro and end card are shared with the brand.
 
 def fetch_raw(url):
-    import io
-    import requests
-    for u in (big_photo_url(url), url):
-        try:
-            r = requests.get(u, timeout=15)
-            r.raise_for_status()
-            return Image.open(io.BytesIO(r.content)).convert("RGB")
-        except Exception:
-            continue
-    return Image.new("RGB", (636, 393), FELT)
+    from photos import sharp
+    return sharp(url)
 
 
 def smooth(t):

@@ -25,7 +25,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests pillow imageio-ffmpeg
+        run: pip install requests pillow imageio-ffmpeg onnxruntime numpy
 
       - name: Draw today's post
         run: python scripts/make_instagram.py

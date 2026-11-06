@@ -35,7 +35,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests pillow imageio-ffmpeg
+        run: pip install requests pillow imageio-ffmpeg onnxruntime numpy
 
       - name: Generate today's dishes
         env:
