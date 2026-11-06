@@ -6,7 +6,7 @@
 //   /eats             "I'm eating this" counter (GET counts, POST a tap); needs the D1
 //                     binding DB, see worker/schema.sql. Without it the route answers
 //                     503 and the site simply hides the counter.
-//   /media/<day>/<file> today's Instagram images and caption: PUT by the daily GitHub job
+//   /media/<day>/<file> today's Instagram images, Reel video and captions: PUT by the daily GitHub job
 //                     (Authorization: Bearer MEDIA_KEY), GET is public so Instagram can fetch them
 //   /ig/publish       POST (Bearer MEDIA_KEY) to post a day's carousel and story now
 //   /ig/status        GET (Bearer MEDIA_KEY) recent posting results and token age
@@ -17,7 +17,10 @@
 // often runs hours late, so at 00:00 the Worker starts the daily GitHub job itself (needs
 // GH_TOKEN) and keeps nudging it every 30 minutes while the site still shows yesterday. Once
 // the site shows today's menu it posts today's carousel and story to Instagram, and the same
-// slides plus a story to the Facebook Page when FB_PAGE_ID is set. The GitHub job also asks
+// slides plus a story to the Facebook Page when FB_PAGE_ID is set. A few minutes later, on its
+// own cron ticks, it posts the day's Reel (reel.mp4): one tick creates it, later ticks wait for
+// Instagram to process the video and publish it, so the Reel never adds to the carousel's work
+// or holds it up. The GitHub job also asks
 // for the post the moment the site updates; a lock stops the two posting together. Each
 // network posts at most once a day and retries on its own, so a failure on one never blocks
 // or repeats the other.
@@ -48,7 +51,7 @@ const GH_DISPATCH = "https://api.github.com/repos/mattbrianb/todaysdish/actions/
 const DISPATCH_EVERY_MS = 30 * 60000; // a run plus the Pages deploy takes about 5 minutes
 const MAX_DISPATCHES = 8;
 const POST_LOCK_MS = 10 * 60000;
-const WORKER_VERSION = "2026-11-02 instagram retry";
+const WORKER_VERSION = "2026-11-06 daily reel";
 
 // The menu day is GMT: a new one at 00:00 UTC
 function utcToday() {
@@ -154,7 +157,8 @@ async function mediaText(env, key) {
 let fbColumnsReady = false;
 async function ensureFbColumns(env) {
   if (fbColumnsReady) return;
-  for (const col of ["fb_post_id TEXT", "fb_story_id TEXT", "fb_attempts INTEGER NOT NULL DEFAULT 0", "fb_error TEXT", "busy_until INTEGER"]) {
+  for (const col of ["fb_post_id TEXT", "fb_story_id TEXT", "fb_attempts INTEGER NOT NULL DEFAULT 0", "fb_error TEXT", "busy_until INTEGER",
+    "reel_container TEXT", "reel_id TEXT", "reel_attempts INTEGER NOT NULL DEFAULT 0", "reel_error TEXT"]) {
     try { await env.DB.prepare(`ALTER TABLE ig_posts ADD COLUMN ${col}`).run(); } catch (e) { /* already there */ }
   }
   fbColumnsReady = true;
@@ -361,6 +365,41 @@ async function nudgeDaily(env, day) {
   return { status: rec.error ? "could not start the job" : "job started", ...rec };
 }
 
+// The day's Reel, one small step per cron tick: create the container, then on later ticks
+// check Instagram has processed the video and publish it. Up to 3 containers a day.
+async function publishReel(env, day) {
+  await ensureFbColumns(env);
+  const row = await env.DB.prepare("SELECT * FROM ig_posts WHERE day = ?").bind(day).first();
+  if (!row || !row.media_id) return { status: "waiting for the carousel" };
+  if (row.reel_id) return { status: "already posted", reel_id: row.reel_id };
+  const has = await env.DB.prepare("SELECT 1 FROM media WHERE key = ?").bind(day + "/reel.mp4").first();
+  if (!has) return { status: "no reel today" };
+  const fail = async msg => {
+    await env.DB.prepare("UPDATE ig_posts SET reel_container = NULL, reel_error = ? WHERE day = ?").bind(msg, day).run();
+    return { status: "failed", error: msg };
+  };
+  try {
+    const token = await igToken(env);
+    const uid = isSystemToken(token) ? env.IG_USER_ID : (await igCall("me", { fields: "user_id" }, token, "GET")).user_id;
+    if (!row.reel_container) {
+      if (row.reel_attempts >= MAX_POST_ATTEMPTS) return { status: "gave up", error: row.reel_error };
+      await env.DB.prepare("UPDATE ig_posts SET reel_attempts = reel_attempts + 1 WHERE day = ?").bind(day).run();
+      const caption = (await mediaText(env, day + "/reel-caption.txt")) || (await mediaText(env, day + "/caption.txt")) || "";
+      const id = await createContainer(uid, { media_type: "REELS", video_url: mediaUrl(day + "/reel.mp4"), caption, share_to_feed: "true" }, token);
+      await env.DB.prepare("UPDATE ig_posts SET reel_container = ?, reel_error = NULL WHERE day = ?").bind(id, day).run();
+      return { status: "processing", container: id };
+    }
+    const j = await igCall(row.reel_container, { fields: "status_code" }, token, "GET");
+    if (j.status_code === "ERROR" || j.status_code === "EXPIRED") return fail(`Instagram Reel ${j.status_code}`);
+    if (j.status_code !== "FINISHED") return { status: "processing", container: row.reel_container };
+    const post = await igCall(`${uid}/media_publish`, { creation_id: row.reel_container }, token);
+    await env.DB.prepare("UPDATE ig_posts SET reel_id = ?, reel_error = NULL WHERE day = ?").bind(post.id, day).run();
+    return { status: "posted", reel_id: post.id };
+  } catch (e) {
+    return fail(e.message);
+  }
+}
+
 async function runScheduled(env) {
   await setSetting(env, "cron_tick", new Date().toISOString());
   const cutoff = Date.now() - MEDIA_KEEP_DAYS * 86400000;
@@ -369,7 +408,11 @@ async function runScheduled(env) {
   const live = await siteDay();
   // Post only once visitors can see the same menu the post shows
   if (live !== day) return { day, site: live, menu: await nudgeDaily(env, day) };
-  return publishDay(env, day);
+  const posts = await publishDay(env, day);
+  // The Reel only on a tick that posted nothing else, so one run never does both
+  const quiet = posts.status === "already posted" && (!posts.facebook || ["already posted", "gave up"].includes(posts.facebook.status));
+  if (quiet) posts.reel = await publishReel(env, day);
+  return posts;
 }
 
 export default {
@@ -648,13 +691,13 @@ if (url.pathname === "/img") {
     if (url.pathname.startsWith("/media/")) {
       if (!env || !env.DB) return json({ error: "Not set up" }, 503);
       const key = url.pathname.slice("/media/".length);
-      if (!/^\d{4}-\d{2}-\d{2}\/[a-z0-9-]+\.(jpg|txt)$/.test(key)) return json({ error: "Bad key" }, 400);
+      if (!/^\d{4}-\d{2}-\d{2}\/[a-z0-9-]+\.(jpg|txt|mp4)$/.test(key)) return json({ error: "Bad key" }, 400);
 
       if (request.method === "PUT") {
         if (!bearerOk(request, env)) return json({ error: "Unauthorized" }, 401);
         const data = await request.arrayBuffer();
         if (!data.byteLength || data.byteLength > 1900000) return json({ error: "Bad size" }, 413);
-        const type = key.endsWith(".jpg") ? "image/jpeg" : "text/plain; charset=utf-8";
+        const type = key.endsWith(".jpg") ? "image/jpeg" : key.endsWith(".mp4") ? "video/mp4" : "text/plain; charset=utf-8";
         await env.DB
           .prepare("INSERT INTO media (key, data, content_type, created_at) VALUES (?, ?, ?, ?) ON CONFLICT(key) DO UPDATE SET data = excluded.data, content_type = excluded.content_type, created_at = excluded.created_at")
           .bind(key, data, type, Date.now()).run();
@@ -699,7 +742,7 @@ if (url.pathname === "/img") {
       }
       if (url.pathname === "/ig/status" && request.method === "GET") {
         await ensureFbColumns(env);
-        const posts = await env.DB.prepare("SELECT day, media_id, story_id, attempts, error, posted_at, fb_post_id, fb_story_id, fb_attempts, fb_error FROM ig_posts ORDER BY day DESC LIMIT 7").all();
+        const posts = await env.DB.prepare("SELECT day, media_id, story_id, attempts, error, posted_at, fb_post_id, fb_story_id, fb_attempts, fb_error, reel_id, reel_attempts, reel_error FROM ig_posts ORDER BY day DESC LIMIT 7").all();
         const token = await getSetting(env, "ig_token");
         const media = await env.DB.prepare("SELECT key, length(data) AS bytes FROM media ORDER BY key DESC LIMIT 20").all();
         let account;

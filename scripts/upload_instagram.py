@@ -1,4 +1,4 @@
-"""Upload today's Instagram slides, story and caption to the Worker, which posts them.
+"""Upload today's Instagram slides, story, Reel and captions to the Worker, which posts them.
 
 Reads instagram/YYYY-MM-DD/ (from make_instagram.py) and PUTs each file to
 WORKER_URL/media/YYYY-MM-DD/<file> with the MEDIA_KEY secret. Does nothing if
@@ -22,7 +22,7 @@ def main():
     with open("today.json", encoding="utf-8") as f:
         day = json.load(f)["date"]
     folder = os.path.join("instagram", day)
-    files = sorted(n for n in os.listdir(folder) if n.endswith((".jpg", ".txt")))
+    files = sorted(n for n in os.listdir(folder) if n.endswith((".jpg", ".txt", ".mp4")))
     if not any(n.startswith("post-") for n in files):
         sys.exit(f"No slides in {folder}")
 

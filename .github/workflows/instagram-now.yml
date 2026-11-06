@@ -25,10 +25,15 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests pillow
+        run: pip install requests pillow imageio-ffmpeg
 
       - name: Draw today's post
         run: python scripts/make_instagram.py
+
+      # The Worker posts the Reel on its own a few minutes after the carousel
+      - name: Make today's Reel
+        continue-on-error: true
+        run: python scripts/make_reel.py
 
       - name: Upload to the Worker
         env:

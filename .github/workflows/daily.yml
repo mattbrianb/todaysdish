@@ -35,7 +35,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests pillow
+        run: pip install requests pillow imageio-ffmpeg
 
       - name: Generate today's dishes
         env:
@@ -47,6 +47,11 @@ jobs:
       # Re-uploading the same day is harmless; the Worker never posts a day twice
       - name: Draw today's Instagram post
         run: python scripts/make_instagram.py
+
+      # A Reel problem never stops the rest: the day just goes without one
+      - name: Make today's Reel
+        continue-on-error: true
+        run: python scripts/make_reel.py
 
       - name: Upload Instagram post to the Worker
         env:
