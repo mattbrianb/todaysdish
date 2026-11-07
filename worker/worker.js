@@ -51,7 +51,7 @@ const GH_DISPATCH = "https://api.github.com/repos/mattbrianb/todaysdish/actions/
 const DISPATCH_EVERY_MS = 30 * 60000; // a run plus the Pages deploy takes about 5 minutes
 const MAX_DISPATCHES = 8;
 const POST_LOCK_MS = 10 * 60000;
-const WORKER_VERSION = "2026-11-06 daily reel";
+const WORKER_VERSION = "2026-11-07 reels tab only";
 
 // The menu day is GMT: a new one at 00:00 UTC
 function utcToday() {
@@ -366,7 +366,8 @@ async function nudgeDaily(env, day) {
 }
 
 // The day's Reel, one small step per cron tick: create the container, then on later ticks
-// check Instagram has processed the video and publish it. Up to 3 containers a day.
+// check Instagram has processed the video and publish it. Up to 3 containers a day. It goes to
+// the Reels tab only (share_to_feed false): the carousel is the day's post on the profile grid.
 async function publishReel(env, day) {
   await ensureFbColumns(env);
   const row = await env.DB.prepare("SELECT * FROM ig_posts WHERE day = ?").bind(day).first();
@@ -385,7 +386,7 @@ async function publishReel(env, day) {
       if (row.reel_attempts >= MAX_POST_ATTEMPTS) return { status: "gave up", error: row.reel_error };
       await env.DB.prepare("UPDATE ig_posts SET reel_attempts = reel_attempts + 1 WHERE day = ?").bind(day).run();
       const caption = (await mediaText(env, day + "/reel-caption.txt")) || (await mediaText(env, day + "/caption.txt")) || "";
-      const id = await createContainer(uid, { media_type: "REELS", video_url: mediaUrl(day + "/reel.mp4"), caption, share_to_feed: "true" }, token);
+      const id = await createContainer(uid, { media_type: "REELS", video_url: mediaUrl(day + "/reel.mp4"), caption, share_to_feed: "false" }, token);
       await env.DB.prepare("UPDATE ig_posts SET reel_container = ?, reel_error = NULL WHERE day = ?").bind(id, day).run();
       return { status: "processing", container: id };
     }
