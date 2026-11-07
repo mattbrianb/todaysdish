@@ -1,83 +1,76 @@
 {
-  "date": "2026-11-06",
+  "date": "2026-11-07",
   "breakfast": {
-    "id": 636385,
-    "name": "Buckwheat Banana Pancakes",
-    "image": "https://img.spoonacular.com/recipes/636385-556x370.jpg",
-    "cookTime": 30,
+    "id": 661602,
+    "name": "Sterling Cooper Blini with Caviar",
+    "image": "https://img.spoonacular.com/recipes/661602-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "5 tablespoons almond milk (or milk)",
-      "\u00bd teaspoon baking powder",
-      "\u00bc teaspoon baking soda",
-      "1 medium banana, sliced",
-      "\u00bc cup buckwheat flour",
-      "\u00bd teaspoon cinnamon",
-      "\u00bd tablespoon flax seed",
-      "\u00bd tablespoon maple syrup",
-      "\u00bd tablespoon oil, optional",
-      "3 tablespoons plain yogurt (I used regular, not Greek, but Greek yogurt would probably work)",
-      "\u00bc cup rolled oats, ground into flour in a food processor or blender",
-      "1/8 teaspoon salt",
-      "\u00bd teaspoon vanilla"
+      "1/2 teaspoon baking powder",
+      "1/2 cup butter",
+      "Caviar, for topping",
+      "1 egg",
+      "1/2 cup sifted all-purpose flour",
+      "\u00be cup milk",
+      "3 tablespoons sour cream, plus additional for topping blini",
+      "1/2 teaspoon sugar"
     ],
     "steps": [
-      "Preheat a large skillet over medium heat for 3-5 minutes while you make the batter.",
-      "Whisk together the flours, flax seed, baking powder, baking soda and salt.",
-      "Add the yogurt, milk, maple syrup, vanilla and oil, if using.",
-      "Mix until smooth (there is no gluten in this batter, so no worries about over-mixing and creating tough pancakes). Batter should be thick, but if you like thinner pancakes, add an additional tablespoon or two of milk. Fold in sliced bananas.Grease with a few drops of oil and spread around the pan.",
-      "Add batter,  cup at a time (batter should sizzle when it hits the pan). Cook for about 2 minutes on each side (the first pancakes will take the longest to cook) and serve warm, with lots of maple syrup, additional bananas, nuts, chocolate chips, etc."
+      "In a large bowl, sift the flour and baking powder together.",
+      "Add the milk, sugar and 2 tablespoons sour cream. Beat the egg until frothy, add to batter and stir well.",
+      "Let batter stand for 20 minutes.Melt butter on a griddle or large skillet.  Fry small (2-3 inch) pancakes in very hot butter.",
+      "Drain on paper towels. Top each blini with sour cream and caviar before serving."
     ]
   },
   "lunch": {
-    "id": 1098354,
-    "name": "Rotisserie Chicken and Bean Tostadas",
-    "image": "https://img.spoonacular.com/recipes/1098354-556x370.jpg",
-    "cookTime": 30,
+    "id": 641727,
+    "name": "Dulce De Leche Cr\u00e8me Br\u00fbl\u00e9e",
+    "image": "https://img.spoonacular.com/recipes/641727-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "2 cups rotisserie chicken \u2013 shredded",
-      "6 small corn tortillas",
-      "1/3 can refried beans",
-      "1/2 tomato, diced small",
-      "1 jalape\u00f1o, sliced",
-      "Shredded iceberg lettuce",
-      "Cotija cheese (Mexican queso)",
-      "1 lime \u2013 cut into wedges",
-      "6 teaspoons guacamole",
-      "Salsa"
+      "2 cups cream",
+      "3 tablespoons Dulce de leche",
+      "1/2 cup sugar",
+      "5 large egg yolks"
     ],
     "steps": [
-      "Preheat oven to 350 degrees.",
-      "Place corn tortillas on a cookie sheet and bake for 16-17 minutes or until the edges brown and curl.Cool cooked tortillas at room temperature.To build the tostadas, start by spreading 1-2 tablespoons of refried beans on each tortilla.Next, top with a handful of shredded rotisserie chicken, shredded iceberg lettuce, diced tomato, and guacamole.",
-      "Drizzle with the juice of one lime wedge.",
-      "Sprinkle with cotija cheese.",
-      "Drizzle with salsa.",
-      "Garnish with jalapeos.",
-      "Serve open-faced.Makes 6 tostadas. Serving size is 2 tostadas."
+      "Oven: 325F",
+      "Place six ramekins in a water bath.",
+      "Whisk eggs and sugar until pale, then slowly pour the hot cream into the yolks, whisking thoroughly.",
+      "Pour custards into ramekins and bake ~35 min. until set. Chill at least 3 hours before serving.",
+      "To serve, sprinkle ~2 tsp sugar evenly over each custard and heat with a kitchen torch until a burnt crust forms atop each custard."
     ]
   },
   "dinner": {
-    "id": 659143,
-    "name": "Salmon, Watercress, Fennel and Baby Beetroot Salad With Lemony \"Caviar\" Dressing",
-    "image": "https://img.spoonacular.com/recipes/659143-556x370.jpg",
+    "id": 638343,
+    "name": "Chicken Stew For The Soul",
+    "image": "https://img.spoonacular.com/recipes/638343-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "4 teaspoons Ar\u00ebnkha MSC caviar substitute",
-      "12 cooked baby beets",
-      "1 bay leaf",
-      "freshly ground black pepper",
-      "6 tbsp extra virgin olive oil",
-      "1 head fennel, outside leaves discarded, finely sliced",
-      "2 tbsp lemon juice",
-      "4 110g (4oz) skinless salmon fillets",
-      "tarragon stalks",
-      "few tarragon leaves",
-      "1 bunch watercress, picked over, washed & dried",
-      "1 tablespoon white wine"
+      "5 cardamoms",
+      "1 kg chicken",
+      "1 cinnamon stick broken",
+      "1 cup coconut milk",
+      "1 sprig curry leaves",
+      "fresh coriander",
+      "1/2 teaspoon garam masala",
+      "3 teaspoons ginger garlic paste",
+      "1 teaspoon ginger-garlic paste",
+      "2 green chillies",
+      "1 teaspoon ground red chilli",
+      "1 teaspoon ground coriander",
+      "1 teaspoon ground tumeric",
+      "juice of 1 lemon",
+      "1 large onion",
+      "2 potatoes",
+      "salt to taste"
     ],
     "steps": [
-      "Place the salmon in a pan, cover with water, and add the wine, bay and tarragon stalks.  Bring to the boil and then immediately turn off and leave for a couple of minutes to cook in the residual heat.",
-      "Remove to a plate with a slotted spoon and leave to cool before flaking into large pieces.Make the dressing by lightly whisking the olive oil and lemon juice together. Stir in the Arnkha MSC and season with some black pepper.Next, arrange the watercress, beets and fennel in 4 shallow salad bowls, then add the salmon and tarragon.",
-      "Drizzle over the Arnkha MSC dressing and serve."
+      "Slice the onions, slit the chillies, cube the potatoes and keep aside.",
+      "Heat oil in a heavy bottomed pan or pressure cooker, splutter mustard seeds.",
+      "Add the whole spices and stir till you begin to get the aroma of the spices.",
+      "Add sliced onions,curry leaves and green chillies and saute.Stir in the ground coriander and add the marinaded chicken. Stir so that the chicken is covered well in the sauteed mixture.Cover and let it cook. When it is half done add the cubed potatoes.When the chicken is almost done add the garam masala,salt and coconut milk and stir.When done put off the heat and garnish with chopped fresh coriander.Have I forgotten the most important ingredient? Stir it with lots of love for the family and friends who will partake of the meal.",
+      "Serve hot chicken stew with freshly made appams."
     ]
   }
 }

@@ -2888,6 +2888,24 @@
       "meal": "dinner",
       "name": "Salmon, Watercress, Fennel and Baby Beetroot Salad With Lemony \"Caviar\" Dressing",
       "id": 659143
+    },
+    {
+      "date": "2026-11-07",
+      "meal": "breakfast",
+      "name": "Sterling Cooper Blini with Caviar",
+      "id": 661602
+    },
+    {
+      "date": "2026-11-07",
+      "meal": "lunch",
+      "name": "Dulce De Leche Crème Brûlée",
+      "id": 641727
+    },
+    {
+      "date": "2026-11-07",
+      "meal": "dinner",
+      "name": "Chicken Stew For The Soul",
+      "id": 638343
     }
   ]
 }
