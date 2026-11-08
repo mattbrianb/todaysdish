@@ -127,14 +127,25 @@ const SHARE_TARGETS = [
 ];
 const ENVELOPE = '<path d="M3 5.5h18v13H3z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>';
 
-/* Monday email: a sign-up form in every footer, and a one-time card after the first
-   "I'm eating this" (index.html calls offerMondayEmail). The Worker sends a confirm link. */
+/* Monday email. Three ways in: a pop-up that appears by itself a few seconds into a visit
+   (or right after a first "I'm eating this"), a "Get the menu by email" link on the home
+   page, and a form in every footer. The Worker emails a confirm link. */
 const SUBSCRIBE_URL = "https://todaysdish-ingredients.mattbrianburnett.workers.dev/subscribe";
-const NEWS_KEY = "todaysdish_news"; // "offered" once the card has shown, "subscribed" after a sign-up
+const NEWS_KEY = "todaysdish_news";             // "subscribed" after a sign-up
+const NEWS_SHOWN_KEY = "todaysdish_news_shown"; // when the pop-up last opened by itself
+const NEWS_POPUP_DELAY_MS = 8000;
+const NEWS_POPUP_AGAIN_DAYS = 14;               // closed or ignored: ask again after two weeks
 const MAIL_ICON = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>';
 
-function newsState() { try { return localStorage.getItem(NEWS_KEY) || ""; } catch (e) { return ""; } }
-function setNewsState(v) { try { localStorage.setItem(NEWS_KEY, v); } catch (e) {} }
+function store(k, v) {
+  try {
+    if (v === undefined) return localStorage.getItem(k) || "";
+    localStorage.setItem(k, v);
+  } catch (e) {}
+  return "";
+}
+function newsState() { return store(NEWS_KEY); }
+function setNewsState(v) { store(NEWS_KEY, v); }
 
 function newsForm() {
   return `<form class="news-form" onsubmit="return subscribeEmail(event)" novalidate>
@@ -167,7 +178,6 @@ async function subscribeEmail(e) {
     const j = await r.json().catch(() => ({}));
     if (!r.ok) throw new Error(j.error || "");
     setNewsState("subscribed");
-    form.closest(".news, .news-pop").classList.add("done");
     form.outerHTML = `<p class="news-done">Nearly there! Check your inbox and tap the link to confirm. 📬</p>`;
     note.textContent = "";
   } catch (err) {
@@ -178,29 +188,45 @@ async function subscribeEmail(e) {
   return false;
 }
 
-// After someone's first "I'm eating this": a small card from the bottom, shown only once
-function offerMondayEmail() {
-  if (newsState()) return;
-  setNewsState("offered");
-  setTimeout(function show() {
-    // Wait for any open sheet (the recipe) to close first
-    if (document.querySelector(".overlay.open")) { setTimeout(show, 1500); return; }
+// The pop-up: the same sheet as the recipe and share ones (a drawer on phones, a card on computers)
+function openMondayEmail() {
+  if (!document.getElementById("newsOverlay")) {
     document.body.insertAdjacentHTML("beforeend", `
-      <div class="news-pop" id="newsPop" role="dialog" aria-labelledby="newsPopTitle">
-        <button type="button" class="close-btn news-close" onclick="closeNewsPop()" aria-label="No thanks">✕</button>
-        <p class="news-title" id="newsPopTitle">Never miss a menu</p>
-        <p class="news-sub">Every Monday morning: that day's specials and last week's menu, in your inbox.</p>
-        ${newsForm()}
+      <div class="overlay" id="newsOverlay">
+        <div class="sheet news-sheet" role="dialog" aria-modal="true" aria-labelledby="newsTitle">
+          <div class="sheet-head">
+            <div class="sheet-title" id="newsTitle">The Monday menu</div>
+            <button type="button" class="close-btn" onclick="closeOverlay('newsOverlay')" aria-label="Close">✕</button>
+          </div>
+          <p class="news-hero">📬 Never miss a menu</p>
+          <p class="news-sub">Every Monday morning we email that day's breakfast, lunch and dinner, plus everything from last week's menu. Free, one email a week.</p>
+          ${newsForm()}
+          <button type="button" class="news-later" onclick="closeOverlay('newsOverlay')">No thanks</button>
+        </div>
       </div>`);
-    requestAnimationFrame(() => requestAnimationFrame(() => document.getElementById("newsPop").classList.add("open")));
-  }, 2200);
+    // Let the browser lay it out closed first, so it slides in
+    document.getElementById("newsOverlay").getBoundingClientRect();
+  }
+  openOverlay("newsOverlay");
+  const input = document.querySelector("#newsOverlay .news-input");
+  if (input && window.matchMedia("(pointer: fine)").matches) setTimeout(() => input.focus(), 300);
 }
-function closeNewsPop() {
-  const p = document.getElementById("newsPop");
-  if (!p) return;
-  p.classList.remove("open");
-  setTimeout(() => p.remove(), 400);
+
+// Opens by itself at most once every two weeks, never for subscribers or over another sheet
+function autoMondayEmail(delay) {
+  if (newsState() === "subscribed" || document.body.dataset.noPopup !== undefined) return;
+  const last = Number(store(NEWS_SHOWN_KEY)) || 0;
+  if (Date.now() - last < NEWS_POPUP_AGAIN_DAYS * 86400000) return;
+  clearTimeout(autoMondayEmail.timer);
+  autoMondayEmail.timer = setTimeout(function show() {
+    if (document.querySelector(".overlay.open")) { autoMondayEmail.timer = setTimeout(show, 1500); return; }
+    if (newsState() === "subscribed") return;
+    store(NEWS_SHOWN_KEY, String(Date.now()));
+    openMondayEmail();
+  }, delay);
 }
+// index.html: right after a first "I'm eating this", sooner than the timer
+function offerMondayEmail() { autoMondayEmail(2200); }
 
 function shareIcon(t) {
   if (t.round) {
@@ -232,25 +258,29 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </div>`);
 
-  // Footer: the Monday email form and the contact address, on every page
+  // Footer: the Monday email form (always there, for anyone who closed the pop-up) and the contact address
   const footer = document.querySelector(".site-footer");
   if (footer) {
     const social = footer.querySelector(".footer-social");
     if (social) social.insertAdjacentHTML("afterbegin", `<a class="ig-link" href="mailto:hello@todaysdish.food">${MAIL_ICON}hello@todaysdish.food</a>`);
-    const block = newsState() === "subscribed" || new URLSearchParams(location.search).get("email") === "confirmed"
-      ? ""
-      : `<div class="news"><p class="news-title">The Monday menu</p>
-          <p class="news-sub">That day's specials and last week's menu, in your inbox every Monday morning.</p>${newsForm()}</div>`;
-    footer.insertAdjacentHTML("afterbegin", block);
+    if (document.body.dataset.noPopup === undefined) {
+      footer.insertAdjacentHTML("afterbegin", `<div class="news" id="mondayEmail"><p class="news-title">The Monday menu</p>
+          <p class="news-sub">That day's specials and last week's menu, in your inbox every Monday morning.</p>${newsForm()}</div>`);
+    }
   }
 
   // Back from the confirm link in the email
   const params = new URLSearchParams(location.search);
   const status = params.get("email");
   if (status) {
-    if (status === "confirmed") setNewsState("subscribed");
-    setTimeout(() => showToast(status === "confirmed" ? "You're on the list ✅ See you Monday" : "That link has expired. Sign up again at the bottom of the page", 4500), 400);
+    if (status === "confirmed") {
+      setNewsState("subscribed");
+      setTimeout(() => showToast("You're on the list ✅ See you Monday", 4500), 400);
+    } else {
+      setTimeout(() => { showToast("That link has expired. Sign up again here", 4500); openMondayEmail(); }, 400);
+    }
     params.delete("email");
     history.replaceState(null, "", location.pathname + (params.toString() ? "?" + params : "") + location.hash);
   }
+  autoMondayEmail(NEWS_POPUP_DELAY_MS);
 });

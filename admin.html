@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin • Today's Dish</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Condensed:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/diner.css">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#A8261F">
+<!-- No analytics here on purpose: session recording would capture subscriber addresses.
+     The list comes from the Worker (/admin/subscribers) and needs the ADMIN_KEY secret as the
+     password, so this page holds nothing private itself. -->
+<style>
+.admin { margin-top: 18px; }
+.admin [hidden] { display: none !important; }
+.admin > form, #panel { display: flex; flex-direction: column; gap: 16px; }
+#panel .page-title { margin-top: 0; }
+.login { display: flex; flex-direction: column; gap: 10px; }
+.login label { font-weight: 700; font-size: 15px; }
+.login-row { display: flex; gap: 8px; }
+.login .news-input { background: var(--card); }
+.msg { min-height: 1.3em; margin: 0; font-size: 14px; color: var(--red); font-weight: 700; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.stat { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 14px 10px; text-align: center; }
+.stat b { display: block; font-size: 30px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.stat span { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.stat.active b { color: var(--red); }
+.week { margin: 0; font-size: 15px; line-height: 1.5; color: var(--muted); text-align: center; }
+.tools { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.tools .news-input { flex: 1; min-width: 160px; background: var(--card); }
+.chip {
+  min-height: 40px; padding: 0 14px; border: 1px solid var(--border); border-radius: 999px;
+  background: transparent; color: var(--ink); font: 700 13px "Roboto Condensed", Arial, sans-serif;
+  letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer;
+}
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.list { list-style: none; margin: 0; padding: 0; background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.list li { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-top: 1px solid var(--border); }
+.list li:first-child { border-top: none; }
+.who { flex: 1; min-width: 0; }
+.who .addr { font-weight: 700; font-size: 16px; overflow-wrap: anywhere; }
+.who .when { font-size: 13px; color: var(--muted); }
+.tag { flex-shrink: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 9px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); }
+.tag.active { background: var(--gold); border-color: var(--gold); color: #2B1A12; }
+.remove { flex-shrink: 0; min-height: 36px; padding: 0 10px; border: none; background: none; color: var(--red); font: 700 13px "Roboto Condensed", Arial, sans-serif; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.empty { padding: 22px 14px; text-align: center; color: var(--muted); }
+.signout { align-self: center; }
+</style>
+</head>
+<body data-no-popup>
+<script src="assets/common.js"></script>
+<div class="checker" aria-hidden="true"></div>
+
+<header class="site-header">
+  <a class="logo" href="./index.html">Today's Dish</a>
+  <p class="tagline">Admin</p>
+</header>
+
+<main class="wrap admin">
+  <form class="login" id="login" onsubmit="return signIn(event)">
+    <label for="key">Admin password</label>
+    <div class="login-row">
+      <input class="news-input" id="key" type="password" autocomplete="current-password" required>
+      <button class="news-btn" type="submit">Open</button>
+    </div>
+    <p class="msg" id="loginMsg" role="status"></p>
+  </form>
+
+  <section id="panel" hidden>
+    <h1 class="page-title">The Monday menu</h1>
+    <div class="stats">
+      <div class="stat active"><b id="nActive">0</b><span>Subscribed</span></div>
+      <div class="stat"><b id="nPending">0</b><span>Not confirmed</span></div>
+      <div class="stat"><b id="nGone">0</b><span>Unsubscribed</span></div>
+    </div>
+    <p class="week" id="week"></p>
+    <div class="tools">
+      <input class="news-input" id="search" type="search" placeholder="Search emails" aria-label="Search emails" oninput="render()">
+      <button type="button" class="chip" data-filter="active" aria-pressed="true" onclick="setFilter(this)">Subscribed</button>
+      <button type="button" class="chip" data-filter="all" aria-pressed="false" onclick="setFilter(this)">Everyone</button>
+      <button type="button" class="chip" onclick="exportCsv()">Download CSV</button>
+    </div>
+    <ul class="list" id="list"></ul>
+    <p class="msg" id="panelMsg" role="status"></p>
+    <button type="button" class="text-link link-btn signout" onclick="signOut()">Sign out</button>
+  </section>
+</main>
+
+<script>
+const API = "https://todaysdish-ingredients.mattbrianburnett.workers.dev/admin/";
+const KEY = "todaysdish_admin"; // this browser tab only (sessionStorage), gone when it closes
+let rows = [], filter = "active", data = null;
+
+function getKey() { try { return sessionStorage.getItem(KEY) || ""; } catch (e) { return ""; } }
+function setKey(v) { try { v ? sessionStorage.setItem(KEY, v) : sessionStorage.removeItem(KEY); } catch (e) {} }
+
+async function api(path, init = {}) {
+  const r = await fetch(API + path, { ...init, headers: { ...(init.headers || {}), Authorization: "Bearer " + getKey() } });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) { const e = new Error(j.error || "Couldn't reach the Worker"); e.status = r.status; throw e; }
+  return j;
+}
+
+async function load() {
+  data = await api("subscribers");
+  rows = data.subscribers || [];
+  document.getElementById("login").hidden = true;
+  document.getElementById("panel").hidden = false;
+  render();
+}
+
+async function signIn(e) {
+  e.preventDefault();
+  const msg = document.getElementById("loginMsg");
+  setKey(document.getElementById("key").value.trim());
+  msg.textContent = "Checking…";
+  try {
+    await load();
+    msg.textContent = "";
+  } catch (err) {
+    setKey("");
+    msg.textContent = err.message;
+  }
+  return false;
+}
+function signOut() {
+  setKey("");
+  location.reload();
+}
+
+const fmt = t => t ? new Date(t).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }) : "";
+const LABEL = { active: "Subscribed", pending: "Not confirmed", unsubscribed: "Unsubscribed" };
+
+function render() {
+  const count = s => rows.filter(r => r.status === s).length;
+  document.getElementById("nActive").textContent = count("active");
+  document.getElementById("nPending").textContent = count("pending");
+  document.getElementById("nGone").textContent = count("unsubscribed");
+
+  const w = data && data.this_week;
+  document.getElementById("week").textContent = !data.email_sending
+    ? "Email sending is off: the RESEND_API_KEY secret isn't set."
+    : w && w.done ? `Week of ${fmt(Date.parse(w.week))}: sent to ${w.sent}.`
+    : w ? `Week of ${fmt(Date.parse(w.week))}: sending, ${w.sent} so far${w.paused_until ? ", carrying on " + fmt(Date.parse(w.paused_until)) : ""}.`
+    : "The next email goes out Monday at 06:00 South African time.";
+
+  const q = document.getElementById("search").value.trim().toLowerCase();
+  const shown = rows.filter(r => (filter === "all" || r.status === filter) && (!q || r.email.includes(q)));
+  const list = document.getElementById("list");
+  if (!shown.length) {
+    list.innerHTML = `<li class="empty">${rows.length ? "Nobody matches." : "No sign-ups yet."}</li>`;
+    return;
+  }
+  list.replaceChildren(...shown.map(r => {
+    const li = document.createElement("li");
+    const who = document.createElement("div");
+    who.className = "who";
+    const addr = document.createElement("div");
+    addr.className = "addr";
+    addr.textContent = r.email;
+    const when = document.createElement("div");
+    when.className = "when";
+    when.textContent = r.confirmed_at ? "Since " + fmt(r.confirmed_at) : "Signed up " + fmt(r.created_at);
+    who.append(addr, when);
+    const tag = document.createElement("span");
+    tag.className = "tag " + r.status;
+    tag.textContent = LABEL[r.status] || r.status;
+    const rm = document.createElement("button");
+    rm.type = "button";
+    rm.className = "remove";
+    rm.textContent = "Remove";
+    rm.setAttribute("aria-label", "Remove " + r.email);
+    rm.onclick = () => removeOne(r.email);
+    li.append(who, tag, rm);
+    return li;
+  }));
+}
+
+function setFilter(btn) {
+  filter = btn.dataset.filter;
+  document.querySelectorAll(".chip[data-filter]").forEach(b => b.setAttribute("aria-pressed", b === btn ? "true" : "false"));
+  render();
+}
+
+async function removeOne(email) {
+  if (!confirm(`Remove ${email} completely? They won't get any more emails, and their address is deleted.`)) return;
+  const msg = document.getElementById("panelMsg");
+  try {
+    await api("remove", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email }) });
+    rows = rows.filter(r => r.email !== email);
+    render();
+    showToast("Removed ✅");
+    msg.textContent = "";
+  } catch (err) {
+    msg.textContent = err.message;
+  }
+}
+
+function exportCsv() {
+  const lines = [["email", "status", "signed_up", "confirmed"], ...rows.map(r => [r.email, r.status, fmt(r.created_at), fmt(r.confirmed_at)])];
+  const csv = lines.map(l => l.map(v => `"${String(v).replace(/"/g, '""')}"`).join(",")).join("\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv" }));
+  a.download = "todaysdish-subscribers.csv";
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+// Still signed in from earlier in this tab
+if (getKey()) load().catch(() => { setKey(""); });
+</script>
+</body>
+</html>

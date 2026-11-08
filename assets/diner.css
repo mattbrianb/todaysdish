@@ -550,29 +550,25 @@ body.dark .share-dot { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18); }
 .news-btn:disabled { opacity: 0.7; cursor: default; }
 .news-note { margin: 8px 0 0; min-height: 1.2em; font-size: 12px; color: var(--muted); }
 .news-done { margin: 4px 0 0; font-size: 16px; font-weight: 700; line-height: 1.4; }
-.news-pop {
-  position: fixed;
-  left: 50%;
-  bottom: 14px;
-  width: min(440px, calc(100% - 24px));
-  padding: 18px 18px 14px;
-  background: var(--card);
-  color: var(--ink);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-  text-align: center;
-  z-index: 10000;
-  opacity: 0;
-  transform: translate(-50%, 24px);
-  transition: opacity 350ms var(--ease-out), transform 350ms var(--ease-out);
+/* The pop-up uses the shared sheet; these only set its content */
+.news-sheet { text-align: center; }
+.news-hero { margin: 6px 0 0; font-size: 26px; font-weight: 700; line-height: 1.2; }
+.news-sheet .news-sub { margin: 8px 0 16px; font-size: 16px; }
+.news-later {
+  margin: 4px auto 0;
+  min-height: 44px;
+  padding: 0 14px;
+  border: none;
+  background: none;
+  color: var(--muted);
+  font: 500 14px "Roboto Condensed", Arial, sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
 }
-.news-pop.open { opacity: 1; transform: translate(-50%, 0); }
-.news-pop .news-title { padding: 0 40px; }
-.news-close { position: absolute; top: 8px; right: 8px; }
+/* A button that reads as a text link (opens the pop-up from the home page) */
+.link-btn { border: none; background: none; color: var(--ink); cursor: pointer; font-family: inherit; text-decoration: underline; }
+.link-btn:hover { color: var(--red); }
 @media (max-width: 380px) {
   .news-form { flex-direction: column; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .news-pop, .news-pop.open { transform: translate(-50%, 0); }
 }
