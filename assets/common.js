@@ -1,5 +1,7 @@
 /* Today's Dish: shared behaviour for every page (theme, toast, share sheet).
-   Load as the first element inside <body> so the dark theme applies before paint. */
+   Load as the first element inside <body> so the dark theme applies before paint.
+   Pages load it (and diner.css) as ?v=YYYYMMDD: bump that on every page when either changes,
+   or returning visitors keep the old copy for up to 10 minutes. */
 
 if (localStorage.getItem("dark") === "true") document.body.classList.add("dark");
 
