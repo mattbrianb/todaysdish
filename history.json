@@ -2906,6 +2906,24 @@
       "meal": "dinner",
       "name": "Chicken Stew For The Soul",
       "id": 638343
+    },
+    {
+      "date": "2026-11-08",
+      "meal": "breakfast",
+      "name": "Watching What I Eat: Peanut Butter Banana Oat Breakfast Cookies with Carob / Chocolate Chips",
+      "id": 945221
+    },
+    {
+      "date": "2026-11-08",
+      "meal": "lunch",
+      "name": "Hawaiian Chicken Chili",
+      "id": 646358
+    },
+    {
+      "date": "2026-11-08",
+      "meal": "dinner",
+      "name": "Blackberry Balsamic Drumsticks",
+      "id": 635182
     }
   ]
 }
