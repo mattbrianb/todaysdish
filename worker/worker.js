@@ -15,6 +15,7 @@
 //   /subscribe        POST {email} from the site's Monday email form; sends a confirmation email
 //   /confirm?t=       the link in that email: turns the sign-up on, then back to the site
 //   /unsubscribe?t=   GET shows an Unsubscribe button, POST unsubscribes (Gmail one-click too)
+//   /admin/subscribers, /admin/remove  the admin page (Bearer ADMIN_KEY): list and remove subscribers
 //   /newsletter/preview  GET, public: this Monday email built from today's menu (?confirm=1 for
 //                     the confirmation email); /newsletter/test?to= POST (Bearer MEDIA_KEY) sends it
 //
@@ -30,7 +31,8 @@
 // network posts at most once a day and retries on its own, so a failure on one never blocks
 // or repeats the other. On Mondays from 04:00 UTC, quiet ticks send the weekly email.
 //
-// Secrets: RESEND_API_KEY (Resend, sending only, for the Monday email), IG_TOKEN, MEDIA_KEY (shared with the GitHub job), IP_SALT (optional),
+// Secrets: RESEND_API_KEY (Resend, sending only, for the Monday email), ADMIN_KEY (the admin
+// page password), IG_TOKEN, MEDIA_KEY (shared with the GitHub job), IP_SALT (optional),
 // GH_TOKEN (fine-grained GitHub token for this repo only, Actions: read and write),
 // IG_USER_ID when IG_TOKEN is a Meta system-user token, and for Facebook FB_PAGE_ID plus
 // FB_TOKEN (optional; defaults to IG_TOKEN, which must then be a system-user token with Page
@@ -56,7 +58,7 @@ const GH_DISPATCH = "https://api.github.com/repos/mattbrianb/todaysdish/actions/
 const DISPATCH_EVERY_MS = 30 * 60000; // a run plus the Pages deploy takes about 5 minutes
 const MAX_DISPATCHES = 8;
 const POST_LOCK_MS = 10 * 60000;
-const WORKER_VERSION = "2026-11-08 monday email";
+const WORKER_VERSION = "2026-11-08 subscriber admin";
 
 // The menu day is GMT: a new one at 00:00 UTC
 function utcToday() {
@@ -682,7 +684,7 @@ export default {
     const corsHeaders = {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
     };
     // ---- Image proxy: /img?u=https://... ----
 if (url.pathname === "/img") {
@@ -984,6 +986,35 @@ if (url.pathname === "/img") {
         }
       }
       return json(out);
+    }
+
+    // -------- Admin page (www.todaysdish.food/admin.html): subscribers, needs Bearer ADMIN_KEY --------
+    if (url.pathname.startsWith("/admin/")) {
+      if (!env || !env.DB) return json({ error: "Not set up" }, 503);
+      if (!env.ADMIN_KEY || env.ADMIN_KEY.length < 12) return json({ error: "Add an ADMIN_KEY secret (12+ characters) to the Worker first" }, 503);
+      if (request.headers.get("Authorization") !== "Bearer " + env.ADMIN_KEY) {
+        await sleep(1500); // slows down guessing
+        return json({ error: "Wrong password" }, 401);
+      }
+      await ensureSubscribers(env);
+
+      if (url.pathname === "/admin/subscribers" && request.method === "GET") {
+        const rows = (await env.DB.prepare("SELECT email, status, created_at, confirmed_at FROM subscribers ORDER BY COALESCE(confirmed_at, created_at) DESC").all()).results || [];
+        const news = await getSetting(env, "newsletter");
+        return json({
+          subscribers: rows,
+          email_sending: Boolean(env.RESEND_API_KEY),
+          this_week: news ? JSON.parse(news.value) : null,
+        });
+      }
+      // Removing deletes the address entirely (someone asked to be forgotten, or a typo)
+      if (url.pathname === "/admin/remove" && request.method === "POST") {
+        let body;
+        try { body = await request.json(); } catch { return json({ error: "Bad JSON" }, 400); }
+        const r = await env.DB.prepare("DELETE FROM subscribers WHERE email = ?").bind(cleanEmail(body.email)).run();
+        return json({ ok: true, removed: r.meta ? r.meta.changes : 0 });
+      }
+      return json({ error: "Not found" }, 404);
     }
 
     // -------- Monday email: sign up, confirm, unsubscribe --------
