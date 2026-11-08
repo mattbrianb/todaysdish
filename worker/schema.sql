@@ -47,3 +47,17 @@ CREATE TABLE IF NOT EXISTS settings (
   value TEXT NOT NULL,
   updated_at INTEGER NOT NULL
 );
+
+/* Monday email: one row per address. status is pending (until the confirm link is clicked),
+   active or unsubscribed. Only the address is kept; ip_hash is the same daily-salted hash
+   the counter uses, to limit sign-ups. (The Worker also creates this table itself.) */
+CREATE TABLE IF NOT EXISTS subscribers (
+  email TEXT PRIMARY KEY,
+  token TEXT NOT NULL UNIQUE,
+  status TEXT NOT NULL,
+  created_at INTEGER NOT NULL,
+  confirmed_at INTEGER,
+  confirm_sent_at INTEGER,
+  ip_hash TEXT
+);
+CREATE INDEX IF NOT EXISTS subscribers_by_status ON subscribers (status, email);

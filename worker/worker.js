@@ -12,6 +12,11 @@
 //   /ig/status        GET (Bearer MEDIA_KEY) recent posting results and token age
 //   /health           GET, public: Worker version, when the cron last ran, whether GH_TOKEN
 //                     is set and the last job start (no secrets, safe to open in a browser)
+//   /subscribe        POST {email} from the site's Monday email form; sends a confirmation email
+//   /confirm?t=       the link in that email: turns the sign-up on, then back to the site
+//   /unsubscribe?t=   GET shows an Unsubscribe button, POST unsubscribes (Gmail one-click too)
+//   /newsletter/preview  GET, public: this Monday email built from today's menu (?confirm=1 for
+//                     the confirmation email); /newsletter/test?to= POST (Bearer MEDIA_KEY) sends it
 //
 // Scheduled (Cron Trigger "*/5 * * * *"): the menu changes at 00:00 GMT. GitHub's own scheduler
 // often runs hours late, so at 00:00 the Worker starts the daily GitHub job itself (needs
@@ -23,9 +28,9 @@
 // or holds it up. The GitHub job also asks
 // for the post the moment the site updates; a lock stops the two posting together. Each
 // network posts at most once a day and retries on its own, so a failure on one never blocks
-// or repeats the other.
+// or repeats the other. On Mondays from 04:00 UTC, quiet ticks send the weekly email.
 //
-// Secrets: IG_TOKEN, MEDIA_KEY (shared with the GitHub job), IP_SALT (optional),
+// Secrets: RESEND_API_KEY (Resend, sending only, for the Monday email), IG_TOKEN, MEDIA_KEY (shared with the GitHub job), IP_SALT (optional),
 // GH_TOKEN (fine-grained GitHub token for this repo only, Actions: read and write),
 // IG_USER_ID when IG_TOKEN is a Meta system-user token, and for Facebook FB_PAGE_ID plus
 // FB_TOKEN (optional; defaults to IG_TOKEN, which must then be a system-user token with Page
@@ -51,7 +56,7 @@ const GH_DISPATCH = "https://api.github.com/repos/mattbrianb/todaysdish/actions/
 const DISPATCH_EVERY_MS = 30 * 60000; // a run plus the Pages deploy takes about 5 minutes
 const MAX_DISPATCHES = 8;
 const POST_LOCK_MS = 10 * 60000;
-const WORKER_VERSION = "2026-11-07 reels tab only";
+const WORKER_VERSION = "2026-11-08 monday email";
 
 // The menu day is GMT: a new one at 00:00 UTC
 function utcToday() {
@@ -401,6 +406,246 @@ async function publishReel(env, day) {
   }
 }
 
+// ---- Monday email (Resend) ----
+// Visitors sign up on the site (POST /subscribe), confirm from an email (GET /confirm), and
+// every Monday from 04:00 UTC (06:00 in South Africa) get that day's menu plus last week's.
+// Sending uses Resend's free plan (about 100 emails a day), so each cron tick sends at most
+// NEWS_BATCH and a daily-limit answer pauses the send until the next UTC day; it picks up where
+// it stopped. Without the RESEND_API_KEY secret, sign-ups are still saved and the confirmation
+// emails go out once the key is set.
+const RESEND_API = "https://api.resend.com";
+// No reply address: replies go to noreply@, which has no routing rule, so they never reach the inbox
+const NEWS_FROM = "Today's Dish <noreply@todaysdish.food>";
+const SITE = "https://www.todaysdish.food/";
+const NEWS_SEND_HOUR_UTC = 4;
+const NEWS_BATCH = 50;
+const CONFIRMS_PER_TICK = 10;
+const SIGNUPS_PER_IP_PER_DAY = 5;
+const CONFIRM_RESEND_MS = 60 * 60000; // one confirmation email an hour per address, at most
+const PENDING_KEEP_DAYS = 7;
+
+let subscribersReady = false;
+async function ensureSubscribers(env) {
+  if (subscribersReady) return;
+  await env.DB.prepare(`CREATE TABLE IF NOT EXISTS subscribers (
+    email TEXT PRIMARY KEY, token TEXT NOT NULL UNIQUE, status TEXT NOT NULL,
+    created_at INTEGER NOT NULL, confirmed_at INTEGER, confirm_sent_at INTEGER, ip_hash TEXT)`).run();
+  await env.DB.prepare("CREATE INDEX IF NOT EXISTS subscribers_by_status ON subscribers (status, email)").run();
+  subscribersReady = true;
+}
+
+const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const cleanEmail = e => String(e || "").trim().toLowerCase();
+const emailOk = e => e.length <= 254 && /^[^\s@<>()",;:]+@[^\s@<>()",;:]+\.[a-z]{2,}$/.test(e);
+const dishName = n => String(n || "").replace(/^(breakfast|lunch|dinner)\s*:\s*/i, "").replace(/^how to (make|cook)\s+/i, "").replace(/\s+recipe$/i, "").trim();
+const unsubUrl = token => `${WORKER_URL}/unsubscribe?t=${token}`;
+
+function newToken() {
+  const a = new Uint8Array(18);
+  crypto.getRandomValues(a);
+  return [...a].map(b => b.toString(16).padStart(2, "0")).join("");
+}
+
+function shiftDay(iso, days) {
+  const d = new Date(iso + "T00:00:00Z");
+  d.setUTCDate(d.getUTCDate() + days);
+  return d.toISOString().slice(0, 10);
+}
+const weekday = iso => new Date(iso + "T00:00:00Z").toLocaleDateString("en-GB", { weekday: "long", timeZone: "UTC" });
+const shortDate = iso => new Date(iso + "T00:00:00Z").toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short", timeZone: "UTC" });
+const mondayOf = iso => shiftDay(iso, -((new Date(iso + "T00:00:00Z").getUTCDay() + 6) % 7));
+
+async function resend(env, path, payload, idempotencyKey) {
+  const headers = { Authorization: "Bearer " + env.RESEND_API_KEY, "Content-Type": "application/json" };
+  if (idempotencyKey) headers["Idempotency-Key"] = idempotencyKey;
+  const r = await fetch(RESEND_API + path, { method: "POST", headers, body: JSON.stringify(payload) });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) {
+    const err = new Error(`Resend ${r.status}: ${(j && (j.message || j.name)) || "error"}`);
+    err.status = r.status;
+    throw err;
+  }
+  return j;
+}
+
+// One frame for both emails: cream page, red checker strip, the logo, then the content
+function emailShell(inner, footer) {
+  const checker = `<div style="height:12px;background:repeating-linear-gradient(90deg,#A8261F 0 12px,#F3E9D8 12px 24px)"></div>`;
+  return `<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"></head>
+<body style="margin:0;padding:0;background:#F3E9D8;color:#2B1A12;font-family:'Roboto Condensed',Arial,Helvetica,sans-serif">
+${checker}
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F3E9D8"><tr><td align="center" style="padding:24px 14px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px">
+<tr><td align="center" style="padding:4px 0 18px"><a href="${SITE}" style="font-family:Pacifico,'Brush Script MT',cursive;font-size:34px;color:#A8261F;text-decoration:none">Today's Dish</a>
+<div style="font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#5E4A3C;padding-top:2px">One menu · Everybody eats</div></td></tr>
+${inner}
+<tr><td style="padding:22px 6px 0;font-size:12px;line-height:1.6;color:#5E4A3C;text-align:center">${footer}</td></tr>
+</table></td></tr></table>
+${checker}
+</body></html>`;
+}
+
+const button = (href, label) =>
+  `<a href="${href}" style="display:inline-block;background:#A8261F;color:#ffffff;text-decoration:none;font-weight:700;font-size:16px;letter-spacing:1.5px;text-transform:uppercase;padding:15px 30px;border-radius:999px">${label}</a>`;
+
+function confirmEmail(email, token) {
+  const link = `${WORKER_URL}/confirm?t=${token}`;
+  const inner = `<tr><td style="background:#FFFBF3;border-radius:16px;padding:28px 24px;text-align:center">
+<div style="font-size:24px;font-weight:700;padding-bottom:10px">One tap and you're on the list</div>
+<div style="font-size:16px;line-height:1.55;color:#2B1A12;padding-bottom:22px">Every Monday morning we'll email you that day's breakfast, lunch and dinner, plus everything that was on last week's menu.</div>
+${button(link, "Yes, sign me up")}
+<div style="font-size:13px;line-height:1.5;color:#5E4A3C;padding-top:20px">Didn't ask for this? Just ignore this email and you won't hear from us.</div>
+</td></tr>`;
+  return {
+    from: NEWS_FROM,
+    to: [email],
+    subject: "Confirm your Monday menu email",
+    html: emailShell(inner, `Sent because this address was entered at <a href="${SITE}" style="color:#A8261F">todaysdish.food</a>.`),
+    text: `Confirm your Today's Dish email\n\nEvery Monday morning we'll email you that day's breakfast, lunch and dinner, plus last week's menu.\n\nYes, sign me up: ${link}\n\nDidn't ask for this? Just ignore this email.`,
+  };
+}
+
+// Today's menu and last week's from the live site
+async function weeklyMenu(day) {
+  const get = async f => {
+    const r = await fetch(SITE + f + "?t=" + Date.now(), { cf: { cacheTtl: 0 } });
+    if (!r.ok) throw new Error(`${f}: HTTP ${r.status}`);
+    return r.json();
+  };
+  const today = await get("today.json");
+  if (today.date !== day) throw new Error(`site shows ${today.date}, not ${day}`);
+  let lastWeek = [];
+  try {
+    const served = (await get("history.json")).served || [];
+    const from = shiftDay(day, -7);
+    const byDay = new Map();
+    for (const e of served) {
+      if (e.date >= from && e.date < day) {
+        if (!byDay.has(e.date)) byDay.set(e.date, {});
+        byDay.get(e.date)[e.meal] = dishName(e.name);
+      }
+    }
+    lastWeek = [...byDay.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([date, meals]) => ({ date, ...meals }));
+  } catch (e) { /* last week is a bonus */ }
+  return { today, lastWeek };
+}
+
+const MEAL_LABELS = [["breakfast", "Breakfast"], ["lunch", "Lunch"], ["dinner", "Dinner"]];
+
+function weeklyEmail(menu, email, token) {
+  const { today, lastWeek } = menu;
+  const names = MEAL_LABELS.filter(([k]) => today[k]).map(([k]) => dishName(today[k].name));
+  const cards = MEAL_LABELS.filter(([k]) => today[k]).map(([k, label]) => {
+    const d = today[k];
+    const time = d.cookTime ? `Ready in ${d.cookTime >= 60 ? Math.floor(d.cookTime / 60) + " hr " : ""}${d.cookTime % 60 ? (d.cookTime % 60) + " min" : ""}`.trim() : "";
+    return `<tr><td style="padding:0 0 14px"><a href="${SITE}" style="text-decoration:none;color:#2B1A12;display:block;background:#FFFBF3;border-radius:16px;overflow:hidden">
+${d.image ? `<img src="${esc(d.image)}" alt="" width="560" style="display:block;width:100%;max-width:560px;height:auto;border:0">` : ""}
+<div style="padding:14px 18px 16px"><div style="font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#A8261F">${label}</div>
+<div style="font-size:21px;font-weight:700;line-height:1.25;padding-top:4px">${esc(dishName(d.name))}</div>
+${time ? `<div style="font-size:14px;color:#5E4A3C;padding-top:4px">${esc(time)}</div>` : ""}</div></a></td></tr>`;
+  }).join("");
+  const board = `<tr><td style="background:#8A5A35;border-radius:14px;padding:8px">
+<div style="background:#1D1D1D;border-radius:8px;padding:20px 16px;text-align:center;color:#F4F4F0;font-weight:700;letter-spacing:2px;text-transform:uppercase">
+<div style="font-size:20px">Today's specials</div><div style="font-size:13px;color:#F4F4F0;padding-top:4px">${esc(shortDate(today.date))}</div>
+${MEAL_LABELS.filter(([k]) => today[k]).map(([k, label]) => `<div style="font-size:12px;color:#F2C14E;padding-top:12px">${label}</div><div style="font-size:16px;padding-top:2px">${esc(dishName(today[k].name))}</div>`).join("")}
+</div></td></tr><tr><td style="height:16px"></td></tr>`;
+  const week = lastWeek.length ? `<tr><td style="padding:10px 0 0"><div style="background:#FFFBF3;border-radius:16px;padding:18px">
+<div style="font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#A8261F;padding-bottom:6px">Last week's menu</div>
+${lastWeek.map(w => `<div style="font-size:14px;line-height:1.5;padding:8px 0;border-top:1px solid rgba(43,26,18,0.12)"><b>${esc(shortDate(w.date))}</b><br>${MEAL_LABELS.filter(([k]) => w[k]).map(([k]) => esc(w[k])).join(" · ")}</div>`).join("")}
+</div></td></tr>` : "";
+  const inner = `<tr><td style="text-align:center;padding:0 6px 16px;font-size:17px;line-height:1.5">Happy ${esc(weekday(today.date))}! Here's what everybody's eating today.</td></tr>
+${board}${cards}
+<tr><td align="center" style="padding:8px 0 6px">${button(SITE, "See the recipes")}</td></tr>
+<tr><td align="center" style="padding:4px 0 6px;font-size:14px;color:#5E4A3C">Tap "I'm eating this" and keep your streak going. New menu every day at midnight GMT.</td></tr>
+${week}
+<tr><td align="center" style="padding:18px 0 0;font-size:14px">Made one? Post your plate with <b>#TodaysDish</b> · <a href="https://www.instagram.com/todaysdish.food/" style="color:#A8261F">@todaysdish.food</a></td></tr>`;
+  const footer = `You're getting this because you signed up at todaysdish.food. One email a week, every Monday.<br>
+<a href="${unsubUrl(token)}" style="color:#A8261F">Unsubscribe</a> · Replies to this address aren't read.`;
+  const text = [`Today's Dish: ${shortDate(today.date)}`, "",
+    ...MEAL_LABELS.filter(([k]) => today[k]).map(([k, l]) => `${l}: ${dishName(today[k].name)}`), "",
+    `See the recipes: ${SITE}`, "",
+    ...(lastWeek.length ? ["Last week's menu:", ...lastWeek.map(w => `${shortDate(w.date)}: ${MEAL_LABELS.filter(([k]) => w[k]).map(([k]) => w[k]).join(" / ")}`), ""] : []),
+    `Unsubscribe: ${unsubUrl(token)}`].join("\n");
+  return {
+    from: NEWS_FROM,
+    to: [email],
+    subject: `${weekday(today.date)}'s menu: ${names.join(", ")}`,
+    html: emailShell(inner, footer),
+    text,
+    headers: { "List-Unsubscribe": `<${unsubUrl(token)}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" },
+  };
+}
+
+// Send confirmation emails that are still owed (no key yet, or Resend was down)
+async function sendOwedConfirmations(env) {
+  if (!env.RESEND_API_KEY) return { status: "RESEND_API_KEY secret is not set" };
+  const rows = (await env.DB.prepare("SELECT email, token FROM subscribers WHERE status = 'pending' AND confirm_sent_at IS NULL LIMIT ?").bind(CONFIRMS_PER_TICK).all()).results || [];
+  let sent = 0;
+  for (const r of rows) {
+    try {
+      await resend(env, "/emails", confirmEmail(r.email, r.token));
+      await env.DB.prepare("UPDATE subscribers SET confirm_sent_at = ? WHERE email = ?").bind(Date.now(), r.email).run();
+      sent++;
+    } catch (e) {
+      return { sent, error: e.message };
+    }
+  }
+  return { sent };
+}
+
+// The Monday send, a batch per cron tick, resuming where it stopped
+async function runNewsletter(env, day) {
+  await ensureSubscribers(env);
+  await env.DB.prepare("DELETE FROM subscribers WHERE status = 'pending' AND created_at < ?").bind(Date.now() - PENDING_KEEP_DAYS * 86400000).run();
+  const out = { confirmations: await sendOwedConfirmations(env) };
+  if (!env.RESEND_API_KEY) return out;
+
+  const week = mondayOf(day);
+  const saved = await getSetting(env, "newsletter");
+  let rec = saved ? JSON.parse(saved.value) : {};
+  if (rec.week !== week) {
+    if (day === week && new Date().getUTCHours() < NEWS_SEND_HOUR_UTC) return { ...out, weekly: "waiting for 04:00 UTC" };
+    rec = { week, cursor: "", sent: 0, done: false };
+  }
+  if (rec.done) return { ...out, weekly: "sent", sent: rec.sent };
+  if (rec.paused_until && rec.paused_until > day) return { ...out, weekly: "paused until " + rec.paused_until, sent: rec.sent };
+
+  const rows = (await env.DB.prepare("SELECT email, token FROM subscribers WHERE status = 'active' AND email > ? ORDER BY email LIMIT ?").bind(rec.cursor, NEWS_BATCH).all()).results || [];
+  if (!rows.length) {
+    rec.done = true;
+    rec.finished_at = new Date().toISOString();
+  } else {
+    try {
+      const menu = await weeklyMenu(day);
+      await resend(env, "/emails/batch", rows.map(r => weeklyEmail(menu, r.email, r.token)), `weekly-${week}-${rec.cursor || "start"}`);
+      rec.cursor = rows[rows.length - 1].email;
+      rec.sent += rows.length;
+      delete rec.error;
+      delete rec.paused_until;
+    } catch (e) {
+      rec.error = e.message;
+      // 429 is the free plan's daily limit (or a burst): carry on tomorrow
+      if (e.status === 429) rec.paused_until = shiftDay(day, 1);
+    }
+  }
+  await setSetting(env, "newsletter", JSON.stringify(rec));
+  return { ...out, weekly: rec.done ? "sent" : rec.error ? "error" : "sending", sent: rec.sent, error: rec.error };
+}
+
+// A small page in the site's look for the unsubscribe step
+function page(title, body) {
+  return new Response(`<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)} · Today's Dish</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Condensed:wght@500;700&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#F3E9D8;color:#2B1A12;font-family:'Roboto Condensed',Arial,sans-serif;text-align:center}
+.c{height:24px;background:repeating-conic-gradient(#A8261F 0 25%,#F3E9D8 0 50%) 0 0/24px 24px}
+main{max-width:460px;margin:0 auto;padding:36px 18px}a.l{font-family:Pacifico,cursive;font-size:36px;color:#A8261F;text-decoration:none}
+.card{background:#FFFBF3;border-radius:16px;padding:26px 20px;margin-top:22px;box-shadow:0 8px 18px rgba(43,26,18,.18)}
+h1{font-size:24px;margin:0 0 10px}p{font-size:16px;line-height:1.5;margin:0 0 18px}
+button,.b{display:inline-block;border:0;border-radius:999px;background:#A8261F;color:#fff;font:700 16px 'Roboto Condensed',Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:15px 28px;cursor:pointer;text-decoration:none}</style></head>
+<body><div class="c"></div><main><a class="l" href="${SITE}">Today's Dish</a><div class="card">${body}</div></main></body></html>`,
+    { headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" } });
+}
+
 async function runScheduled(env) {
   await setSetting(env, "cron_tick", new Date().toISOString());
   const cutoff = Date.now() - MEDIA_KEEP_DAYS * 86400000;
@@ -413,6 +658,16 @@ async function runScheduled(env) {
   // The Reel only on a tick that posted nothing else, so one run never does both
   const quiet = posts.status === "already posted" && (!posts.facebook || ["already posted", "gave up"].includes(posts.facebook.status));
   if (quiet) posts.reel = await publishReel(env, day);
+  // Email only on a tick that did no posting (posted or given up on both networks), so a
+  // run never does both; a problem there never touches the posts
+  const settled = s => ["already posted", "gave up"].includes(s);
+  if (settled(posts.status) && (!posts.facebook || settled(posts.facebook.status))) {
+    try {
+      posts.email = await runNewsletter(env, day);
+    } catch (e) {
+      posts.email = { error: e.message };
+    }
+  }
   return posts;
 }
 
@@ -731,6 +986,96 @@ if (url.pathname === "/img") {
       return json(out);
     }
 
+    // -------- Monday email: sign up, confirm, unsubscribe --------
+    if (url.pathname === "/subscribe" && request.method === "POST") {
+      if (!env || !env.DB) return json({ error: "Not set up" }, 503);
+      await ensureSubscribers(env);
+      let body;
+      try { body = await request.json(); } catch { return json({ error: "Bad JSON" }, 400); }
+      if (body.website) return json({ ok: true }); // the hidden field only bots fill in
+      const email = cleanEmail(body.email);
+      if (!emailOk(email)) return json({ error: "Please check your email address" }, 400);
+
+      const ip = request.headers.get("CF-Connecting-IP") || "";
+      const ipHash = await sha256Hex((env.IP_SALT || "todaysdish") + "|" + utcToday() + "|" + ip);
+      const recent = await env.DB.prepare("SELECT COUNT(*) AS n FROM subscribers WHERE ip_hash = ? AND created_at > ?").bind(ipHash, Date.now() - 86400000).first();
+      if (recent && recent.n >= SIGNUPS_PER_IP_PER_DAY) return json({ error: "Too many sign-ups, try again tomorrow" }, 429);
+
+      const row = await env.DB.prepare("SELECT * FROM subscribers WHERE email = ?").bind(email).first();
+      // Already on the list: same answer as a new sign-up, so the form never reveals who's subscribed
+      if (row && row.status === "active") return json({ ok: true });
+      let token = row ? row.token : newToken();
+      if (!row) {
+        await env.DB.prepare("INSERT INTO subscribers (email, token, status, created_at, ip_hash) VALUES (?, ?, 'pending', ?, ?)").bind(email, token, Date.now(), ipHash).run();
+      } else {
+        // Coming back after unsubscribing, or asking again: start over as pending
+        await env.DB.prepare("UPDATE subscribers SET status = 'pending', created_at = ?, ip_hash = ? WHERE email = ?").bind(Date.now(), ipHash, email).run();
+        if (row.status === "pending" && row.confirm_sent_at && Date.now() - row.confirm_sent_at < CONFIRM_RESEND_MS) return json({ ok: true });
+        await env.DB.prepare("UPDATE subscribers SET confirm_sent_at = NULL WHERE email = ?").bind(email).run();
+      }
+      if (env.RESEND_API_KEY) {
+        try {
+          await resend(env, "/emails", confirmEmail(email, token));
+          await env.DB.prepare("UPDATE subscribers SET confirm_sent_at = ? WHERE email = ?").bind(Date.now(), email).run();
+        } catch (e) { /* the cron sends it later */ }
+      }
+      return json({ ok: true });
+    }
+
+    if (url.pathname === "/confirm" && request.method === "GET") {
+      if (!env || !env.DB) return Response.redirect(SITE, 303);
+      await ensureSubscribers(env);
+      const t = url.searchParams.get("t") || "";
+      if (/^[0-9a-f]{36}$/.test(t)) {
+        await env.DB.prepare("UPDATE subscribers SET status = 'active', confirmed_at = ? WHERE token = ? AND status = 'pending'").bind(Date.now(), t).run();
+        const row = await env.DB.prepare("SELECT status FROM subscribers WHERE token = ?").bind(t).first();
+        if (row && row.status === "active") return Response.redirect(SITE + "?email=confirmed", 303);
+      }
+      return Response.redirect(SITE + "?email=expired", 303);
+    }
+
+    // GET shows a button (mail scanners open links, so a visit alone never unsubscribes);
+    // POST unsubscribes, which is also what Gmail's one-click unsubscribe sends
+    if (url.pathname === "/unsubscribe") {
+      if (!env || !env.DB) return Response.redirect(SITE, 303);
+      await ensureSubscribers(env);
+      const t = url.searchParams.get("t") || "";
+      const row = /^[0-9a-f]{36}$/.test(t) ? await env.DB.prepare("SELECT status FROM subscribers WHERE token = ?").bind(t).first() : null;
+      if (request.method === "POST") {
+        if (row) await env.DB.prepare("UPDATE subscribers SET status = 'unsubscribed' WHERE token = ?").bind(t).run();
+        return page("Unsubscribed", `<h1>You're unsubscribed</h1><p>No more Monday emails. Today's menu is always waiting at the website.</p><a class="b" href="${SITE}">See today's menu</a>`);
+      }
+      if (!row || row.status !== "active") {
+        return page("Unsubscribed", `<h1>You're not on the list</h1><p>This address won't get the Monday email.</p><a class="b" href="${SITE}">See today's menu</a>`);
+      }
+      return page("Unsubscribe", `<h1>Stop the Monday email?</h1><p>You'll stop getting the weekly menu. You can sign up again any time.</p>
+<form method="post" action="/unsubscribe?t=${t}"><button type="submit">Unsubscribe</button></form>`);
+    }
+
+    // The Monday email with today's menu: public preview, and a test send (Bearer MEDIA_KEY)
+    if (url.pathname === "/newsletter/preview" && request.method === "GET") {
+      try {
+        const msg = weeklyEmail(await weeklyMenu(utcToday()), "you@example.com", "0".repeat(36));
+        return new Response(url.searchParams.get("confirm") ? confirmEmail("you@example.com", "0".repeat(36)).html : msg.html,
+          { headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" } });
+      } catch (e) {
+        return json({ error: e.message }, 503);
+      }
+    }
+    if (url.pathname === "/newsletter/test" && request.method === "POST") {
+      if (!bearerOk(request, env)) return json({ error: "Unauthorized" }, 401);
+      if (!env.RESEND_API_KEY) return json({ error: "RESEND_API_KEY secret is not set" }, 503);
+      const to = cleanEmail(url.searchParams.get("to"));
+      if (!emailOk(to)) return json({ error: "Add ?to=you@example.com" }, 400);
+      try {
+        const msg = weeklyEmail(await weeklyMenu(utcToday()), to, "0".repeat(36));
+        msg.subject = "[Test] " + msg.subject;
+        return json({ ok: true, id: (await resend(env, "/emails", msg)).id });
+      } catch (e) {
+        return json({ error: e.message }, 502);
+      }
+    }
+
     // -------- /ig (manual post and status, private) --------
     if (url.pathname === "/ig/publish" || url.pathname === "/ig/status") {
       if (!env || !env.DB) return json({ error: "Not set up" }, 503);
@@ -766,7 +1111,15 @@ if (url.pathname === "/img") {
           }
         }
         const dispatch = await getSetting(env, "dispatch");
+        await ensureSubscribers(env);
+        const subs = (await env.DB.prepare("SELECT status, COUNT(*) AS n FROM subscribers GROUP BY status").all()).results || [];
+        const news = await getSetting(env, "newsletter");
         return json({
+          email: {
+            resend_key: Boolean(env.RESEND_API_KEY),
+            subscribers: Object.fromEntries(subs.map(r => [r.status, r.n])),
+            this_week: news ? JSON.parse(news.value) : null,
+          },
           today: utcToday(),
           site_shows: await siteDay(),
           last_job_start: dispatch ? JSON.parse(dispatch.value) : null,
