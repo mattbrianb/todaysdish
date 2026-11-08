@@ -127,6 +127,81 @@ const SHARE_TARGETS = [
 ];
 const ENVELOPE = '<path d="M3 5.5h18v13H3z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>';
 
+/* Monday email: a sign-up form in every footer, and a one-time card after the first
+   "I'm eating this" (index.html calls offerMondayEmail). The Worker sends a confirm link. */
+const SUBSCRIBE_URL = "https://todaysdish-ingredients.mattbrianburnett.workers.dev/subscribe";
+const NEWS_KEY = "todaysdish_news"; // "offered" once the card has shown, "subscribed" after a sign-up
+const MAIL_ICON = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>';
+
+function newsState() { try { return localStorage.getItem(NEWS_KEY) || ""; } catch (e) { return ""; } }
+function setNewsState(v) { try { localStorage.setItem(NEWS_KEY, v); } catch (e) {} }
+
+function newsForm() {
+  return `<form class="news-form" onsubmit="return subscribeEmail(event)" novalidate>
+      <input class="news-input" type="email" name="email" required placeholder="Your email" aria-label="Your email" autocomplete="email">
+      <input class="news-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="news-btn" type="submit">Sign me up</button>
+    </form>
+    <p class="news-note" role="status">Just your email, used only for this. Unsubscribe any time.</p>`;
+}
+
+async function subscribeEmail(e) {
+  e.preventDefault();
+  const form = e.target;
+  const note = form.nextElementSibling;
+  const email = form.email.value.trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+    note.textContent = "Please check your email address.";
+    form.email.focus();
+    return false;
+  }
+  const btn = form.querySelector("button");
+  btn.disabled = true;
+  btn.textContent = "Signing up…";
+  try {
+    const r = await fetch(SUBSCRIBE_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, website: form.website.value })
+    });
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(j.error || "");
+    setNewsState("subscribed");
+    form.closest(".news, .news-pop").classList.add("done");
+    form.outerHTML = `<p class="news-done">Nearly there! Check your inbox and tap the link to confirm. 📬</p>`;
+    note.textContent = "";
+  } catch (err) {
+    note.textContent = err.message || "That didn't go through. Please try again.";
+    btn.disabled = false;
+    btn.textContent = "Sign me up";
+  }
+  return false;
+}
+
+// After someone's first "I'm eating this": a small card from the bottom, shown only once
+function offerMondayEmail() {
+  if (newsState()) return;
+  setNewsState("offered");
+  setTimeout(function show() {
+    // Wait for any open sheet (the recipe) to close first
+    if (document.querySelector(".overlay.open")) { setTimeout(show, 1500); return; }
+    document.body.insertAdjacentHTML("beforeend", `
+      <div class="news-pop" id="newsPop" role="dialog" aria-labelledby="newsPopTitle">
+        <button type="button" class="close-btn news-close" onclick="closeNewsPop()" aria-label="No thanks">✕</button>
+        <p class="news-title" id="newsPopTitle">Never miss a menu</p>
+        <p class="news-sub">Every Monday morning: that day's specials and last week's menu, in your inbox.</p>
+        ${newsForm()}
+      </div>`);
+    requestAnimationFrame(() => requestAnimationFrame(() => document.getElementById("newsPop").classList.add("open")));
+  }, 2200);
+}
+function closeNewsPop() {
+  const p = document.getElementById("newsPop");
+  if (!p) return;
+  p.classList.remove("open");
+  setTimeout(() => p.remove(), 400);
+}
+
 function shareIcon(t) {
   if (t.round) {
     return `<svg class="share-logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="${t.color}" d="${t.path}"/></svg>`;
@@ -156,4 +231,26 @@ document.addEventListener("DOMContentLoaded", () => {
         <p class="modal-note">Facebook, Instagram and TikTok don't let websites fill in a message, so those buttons copy it for you to paste.</p>
       </div>
     </div>`);
+
+  // Footer: the Monday email form and the contact address, on every page
+  const footer = document.querySelector(".site-footer");
+  if (footer) {
+    const social = footer.querySelector(".footer-social");
+    if (social) social.insertAdjacentHTML("afterbegin", `<a class="ig-link" href="mailto:hello@todaysdish.food">${MAIL_ICON}hello@todaysdish.food</a>`);
+    const block = newsState() === "subscribed" || new URLSearchParams(location.search).get("email") === "confirmed"
+      ? ""
+      : `<div class="news"><p class="news-title">The Monday menu</p>
+          <p class="news-sub">That day's specials and last week's menu, in your inbox every Monday morning.</p>${newsForm()}</div>`;
+    footer.insertAdjacentHTML("afterbegin", block);
+  }
+
+  // Back from the confirm link in the email
+  const params = new URLSearchParams(location.search);
+  const status = params.get("email");
+  if (status) {
+    if (status === "confirmed") setNewsState("subscribed");
+    setTimeout(() => showToast(status === "confirmed" ? "You're on the list ✅ See you Monday" : "That link has expired. Sign up again at the bottom of the page", 4500), 400);
+    params.delete("email");
+    history.replaceState(null, "", location.pathname + (params.toString() ? "?" + params : "") + location.hash);
+  }
 });

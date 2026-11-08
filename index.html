@@ -243,6 +243,7 @@ function toggleEating(meal = openMeal) {
   if (adding) {
     const n = streakDays(log, today.date);
     showToast(n > 1 ? "Enjoy! 🔥 " + n + "-day streak" : "Enjoy! Come back tomorrow to start a streak 🔥");
+    offerMondayEmail();
   }
 }
 
