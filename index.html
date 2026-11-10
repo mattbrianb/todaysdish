@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Condensed:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/diner.css?v=20261110">
+<link rel="stylesheet" href="assets/diner.css?v=20261110b">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -37,7 +37,7 @@
 </head>
 
 <body>
-<script src="assets/common.js?v=20261110"></script>
+<script src="assets/common.js?v=20261110b"></script>
 <div class="checker" aria-hidden="true"></div>
 
 <header class="site-header">
@@ -52,6 +52,13 @@
       <div class="board-date" id="boardDate">· · ·</div>
     </div>
   </section>
+
+  <!-- Shown until a visitor has tapped "I'm eating this" once -->
+  <ol class="howto" id="howto" hidden>
+    <li><b>1</b>See today's three dishes</li>
+    <li><b>2</b>Tap "I'm eating this"</li>
+    <li><b>3</b>Come back tomorrow for a new menu</li>
+  </ol>
 
   <div class="tiles" id="tiles"></div>
   <p class="streak" id="streak" aria-live="polite" hidden></p>
@@ -142,35 +149,36 @@ function renderBoard(data) {
   for (const [key, label] of MEALS) {
     const d = data[key];
     if (!d) continue;
-    // One card per dish: the photo and the name open the recipe, the button says "I'm eating this"
+    // One card per dish: a big photo with the meal and dish written on it opens the recipe;
+    // underneath, "I'm eating this" and a "See recipe" link
     const tile = el("div", "tile");
     tile.dataset.meal = key;
     const photo = el("button", "tile-photo");
     photo.type = "button";
-    photo.tabIndex = -1;
-    photo.setAttribute("aria-hidden", "true");
+    photo.setAttribute("aria-label", label + ": " + d.name + ". See recipe");
     photo.onclick = () => openRecipe(key, label);
     const img = el("img");
     img.src = d.image;
     img.alt = "";
-    photo.append(img, el("span", "tile-check", "✓"));
-
-    const open = el("button", "tile-open");
-    open.type = "button";
-    open.setAttribute("aria-label", label + ": " + d.name + ". See recipe");
-    open.onclick = () => openRecipe(key, label);
-    open.append(el("span", "tile-label", [label, cookTime(d)].filter(Boolean).join(" · ")),
-      el("span", "tile-name", shortName(d.name)), el("span", "tile-hint", "See recipe ›"));
+    zoomPastBars(img, d);
+    const text = el("span", "tile-text");
+    text.append(el("span", "tile-label", [label, cookTime(d)].filter(Boolean).join(" · ")), el("span", "tile-name", shortName(d.name)));
+    photo.append(img, text, el("span", "tile-check", "✓"));
 
     const eat = el("button", "tile-eat", "I'm eating this");
     eat.type = "button";
     eat.setAttribute("aria-pressed", "false");
     eat.setAttribute("aria-label", "I'm eating today's " + label.toLowerCase());
     eat.onclick = () => toggleEating(key);
+    const open = el("button", "tile-open", "See recipe ›");
+    open.type = "button";
+    open.tabIndex = -1;
+    open.setAttribute("aria-hidden", "true");
+    open.onclick = () => openRecipe(key, label);
     const row = el("div", "tile-row");
-    row.append(eat, el("span", "tile-count"));
+    row.append(eat, el("span", "tile-count"), open);
 
-    tile.append(photo, open, row);
+    tile.append(photo, row);
     tiles.append(tile);
   }
   board.append(el("div", "board-foot", "No substitutions"), el("div", "board-next", ""));
@@ -182,11 +190,18 @@ function renderBoard(data) {
   setShareText("Today's specials 🍽️ " + names.join(". ") + ". Everybody eats the same today #TodaysDish");
 }
 
+// Some photos have white bars baked in at the sides (imagePad, measured by the daily job)
+function zoomPastBars(img, d) {
+  const pad = Number(d.imagePad) || 0;
+  if (pad > 0 && pad < 0.35) img.style.setProperty("--zoom", (1 / (1 - 2 * pad)).toFixed(3));
+}
+
 function openRecipe(key, label) {
   const d = today[key];
   const img = el("img", "sheet-img");
   img.src = d.image;
   img.alt = d.name;
+  zoomPastBars(img, d);
   document.getElementById("recipeImgWrap").replaceChildren(img);
   document.getElementById("recipeMeal").textContent = label;
   document.getElementById("recipeName").textContent = d.name;
@@ -260,6 +275,7 @@ function renderEating() {
   if (!today) return;
   const log = loadEating();
   const picks = log[today.date] || [];
+  document.getElementById("howto").hidden = Object.keys(log).length > 0;
   document.querySelectorAll(".tile").forEach(t => {
     const on = picks.includes(t.dataset.meal);
     t.classList.toggle("eating", on);

@@ -56,6 +56,32 @@ def clean_name(title):
     return MEAL_PREFIX.sub("", str(title)).strip() or str(title).strip()
 
 
+def side_padding(url):
+    """Some recipe photos come with white bars baked in at the sides. Returns the width of one
+    bar as a fraction of the photo (0 if there are none), so the site can zoom past them."""
+    try:
+        import io
+        from PIL import Image
+        r = requests.get(url, timeout=15)
+        r.raise_for_status()
+        img = Image.open(io.BytesIO(r.content)).convert("L")
+        w, h = img.size
+        px = img.load()
+
+        def white(x):
+            return sum(px[x, y] >= 242 for y in range(0, h, 4)) >= 0.97 * len(range(0, h, 4))
+
+        left = next((x for x in range(w // 2) if not white(x)), w // 2)
+        right = next((x for x in range(w // 2) if not white(w - 1 - x)), w // 2)
+        bar = min(left, right)
+        # Small bars aren't worth a zoom; a photo that is mostly white is a white plate, not bars
+        if bar < 0.03 * w or bar > 0.3 * w:
+            return 0
+        return round((bar + 2) / w, 3)
+    except Exception:
+        return 0
+
+
 def to_dish(recipe):
     ingredients = [
         item["original"]
@@ -67,7 +93,7 @@ def to_dish(recipe):
     if instructions:
         steps = [s["step"] for s in instructions[0]["steps"]]
 
-    return {
+    dish = {
         "id": recipe.get("id"),
         "name": clean_name(recipe["title"]),
         "image": recipe.get("image"),
@@ -75,6 +101,10 @@ def to_dish(recipe):
         "ingredients": ingredients,
         "steps": steps
     }
+    pad = side_padding(recipe.get("image")) if recipe.get("image") else 0
+    if pad:
+        dish["imagePad"] = pad
+    return dish
 
 
 def meal_label(tags):
