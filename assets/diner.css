@@ -675,3 +675,26 @@ body.dark .share-dot { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18); }
 @media (prefers-reduced-motion: reduce) {
   .fridge:active { transform: none; }
 }
+
+/* Home page on a computer: the three dishes side by side, so the whole menu fits one screen */
+@media (min-width: 900px) {
+  .home .site-header { padding-top: 8px; }
+  .home .logo { font-size: 32px; }
+  .home .wrap { max-width: 1020px; }
+  .home .board-frame { margin-top: 12px; padding: 8px; }
+  .home .board { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 4px 30px; padding: 14px; }
+  .home .board-foot { margin-top: 0; }
+  .home .howto { display: flex; justify-content: center; gap: 34px; margin-top: 12px; }
+  .home .howto li { display: flex; align-items: center; gap: 8px; }
+  .home .howto b { margin: 0; }
+  .home .tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 14px; }
+  .home .tile-text { padding: 44px 14px 12px; }
+  .home .tile-name { font-size: 21px; }
+  .home .tile-row { padding: 10px 12px; }
+  .home .tile-eat { min-height: 42px; padding: 0 16px; font-size: 14px; }
+  .home .streak { margin-top: 12px; }
+  .home .actions-col { margin-top: 4px; }
+  .home .fridge { max-width: 620px; margin: 10px auto 0; padding: 10px 14px 10px 16px; }
+  .home .site-footer { max-width: 1020px; margin-top: 16px; padding: 8px 18px 12px; }
+  .home .footer-note { margin-top: 2px; }
+}
