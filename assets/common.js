@@ -200,7 +200,7 @@ function openMondayEmail() {
             <div class="sheet-title" id="newsTitle">The Monday menu</div>
             <button type="button" class="close-btn" onclick="closeOverlay('newsOverlay')" aria-label="Close">✕</button>
           </div>
-          <p class="news-hero">📬 Never miss a menu</p>
+          <p class="news-hero">Never miss a menu</p>
           <p class="news-sub">Every Monday morning we email that day's breakfast, lunch and dinner, plus everything from last week's menu. Free, one email a week.</p>
           ${newsForm()}
           <button type="button" class="news-later" onclick="closeOverlay('newsOverlay')">No thanks</button>
