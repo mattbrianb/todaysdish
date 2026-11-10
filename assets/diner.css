@@ -92,12 +92,15 @@ button { font-family: inherit; }
   display: flex;
   flex-direction: column;
   gap: 6px;
+  min-height: 300px;
   justify-content: center;
 }
 .board-title { font-size: 21px; font-weight: 700; }
 .board-date { font-size: 13px; }
 .board-meal { margin-top: 10px; font-size: 15px; font-weight: 700; color: var(--gold); }
 .board-dish { font-size: 17px; line-height: 1.35; }
+button.board-dish { padding: 0; border: none; background: none; color: inherit; font-family: inherit; font-weight: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer; }
+@media (hover: hover) and (pointer: fine) { button.board-dish:hover { color: var(--gold); } }
 .board-foot { margin-top: 10px; font-size: 12px; }
 .board-next { font-size: 13px; color: var(--gold); }
 
@@ -127,108 +130,84 @@ button { font-family: inherit; }
   justify-content: center;
 }
 
-/* Dish cards under the board: a big photo with the meal and dish on it, then "I'm eating this" */
-.tiles { display: flex; flex-direction: column; gap: 14px; margin: 16px 0 0; }
-.tile {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  transition: border-color 200ms ease;
-}
-.tile.eating { border-color: var(--btn); }
-.tile-photo {
-  position: relative;
-  display: block;
-  width: 100%;
-  padding: 0;
-  border: none;
-  background: var(--felt);
-  color: #FFFFFF;
-  font-family: inherit;
-  text-align: left;
-  cursor: pointer;
-  overflow: hidden;
-}
-.tile img {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  display: block;
-  transform: scale(var(--zoom, 1));
-  transition: transform 400ms var(--ease-out);
-}
-/* Dark fade so white text reads on any photo */
-.tile-text {
-  position: absolute;
-  inset: auto 0 0 0;
-  padding: 56px 16px 14px;
+/* Photo tiles under the board */
+.tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 18px 0 0; }
+.tile { display: flex; flex-direction: column; align-items: stretch; gap: 10px; text-align: center; }
+.tile-open {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.55) 45%, rgba(0, 0, 0, 0.82) 100%);
+  gap: 6px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  text-align: center;
 }
-.tile-label { font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); }
-.tile-name { font-size: 26px; font-weight: 700; line-height: 1.15; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); text-wrap: balance; }
-.tile-row { display: flex; align-items: center; gap: 10px; padding: 12px; }
+/* One-tap "I'm eating this" under each photo */
 .tile-eat {
-  min-height: 46px;
-  padding: 0 20px;
+  min-height: 44px;
+  padding: 0 6px;
   border: 2px solid var(--btn);
   border-radius: 999px;
   background: transparent;
   color: var(--ink);
-  font: 700 15px "Roboto Condensed", Arial, sans-serif;
-  letter-spacing: 0.04em;
-  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.1;
   cursor: pointer;
   transition: transform 160ms var(--ease-out), background-color 200ms ease, color 200ms ease;
 }
 .tile-eat[aria-pressed="true"] { background: var(--btn); color: var(--btn-text); }
 .tile-eat:active { transform: scale(0.97); }
-.tile-count { flex: 1; min-width: 0; font-size: 13px; font-weight: 700; color: var(--red); }
-.tile-open {
-  min-height: 44px;
-  padding: 0 4px;
-  border: none;
-  background: transparent;
-  color: var(--red);
-  font: 700 15px "Roboto Condensed", Arial, sans-serif;
-  white-space: nowrap;
-  cursor: pointer;
+.tile-count { min-height: 1.2em; font-size: 13px; font-weight: 700; color: var(--red); }
+.tile img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+  background: var(--card);
+  transform: scale(var(--zoom, 1));
 }
+.tile-photo { position: relative; display: block; border-radius: 8px; overflow: hidden; }
 /* "You're eating this" badge on the photo */
 .tile-check {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 34px;
-  height: 34px;
+  top: 6px;
+  right: 6px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: var(--btn);
   color: #FFFFFF;
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   opacity: 0;
   transform: scale(0.9);
   transition: opacity 200ms var(--ease-out), transform 200ms var(--ease-out);
 }
 .tile.eating .tile-check { opacity: 1; transform: scale(1); }
-@media (hover: hover) and (pointer: fine) {
-  .tile-photo:hover img { transform: scale(calc(var(--zoom, 1) * 1.03)); }
-  .tile-open:hover { text-decoration: underline; text-underline-offset: 3px; }
+.tile.eating .tile-photo { outline: 3px solid var(--btn); outline-offset: -3px; }
+.tile-label { font-size: 17px; font-weight: 700; letter-spacing: 0.02em; }
+.tile-time { margin-top: -6px; font-size: 14px; font-weight: 500; color: var(--muted); }
+.tile-hint {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--red);
 }
-@media (max-width: 380px) { .tile-name { font-size: 22px; } .tile-eat { padding: 0 14px; } }
-@media (prefers-reduced-motion: reduce) { .tile-photo:hover img { transform: scale(var(--zoom, 1)); } }
+@media (hover: hover) and (pointer: fine) { .tile-open:hover .tile-hint { text-decoration: underline; text-underline-offset: 3px; } }
+.tile-photo { transition: transform 160ms var(--ease-out); }
+@media (hover: hover) and (pointer: fine) { .tile-open:hover .tile-photo { transform: translateY(-2px); } }
+.tile-open:active .tile-photo { transform: scale(0.97); }
 
 /* "Cook from your fridge": the way off the menu, as its own card */
 .fridge {
-  margin: 22px 0 0;
+  margin: 14px 0 0;
   padding: 14px 14px 14px 16px;
   display: flex;
   align-items: center;
@@ -249,7 +228,7 @@ button { font-family: inherit; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
 /* Buttons and links */
-.actions-col { display: flex; flex-direction: column; gap: 14px; align-items: center; margin: 10px 0 0; }
+.actions-col { display: flex; flex-direction: column; gap: 14px; align-items: center; margin: 26px 0 0; }
 .btn-primary {
   width: 100%;
   min-height: 54px;
@@ -270,7 +249,7 @@ a.btn-primary { display: flex; align-items: center; justify-content: center; tex
 a.btn-primary, a.btn-primary:hover { color: var(--btn-text); }
 .btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
 .text-link { font-size: 15px; font-weight: 700; text-underline-offset: 3px; padding: 6px 0; }
-.streak { margin: 16px 0 0; text-align: center; font-size: 15px; font-weight: 700; line-height: 1.4; }
+.streak { margin: 22px 0 0; text-align: center; font-size: 15px; font-weight: 700; line-height: 1.4; }
 .eat-btn {
   margin: 14px 0 4px;
   width: 100%;
@@ -552,8 +531,7 @@ body.dark .share-dot { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18); }
   .toast, .toast.show { transform: translate(-50%, 0); }
   .share-icon:hover .share-dot, .share-icon:hover .share-logo { translate: none; scale: none; }
   .share-icon:hover .share-dot svg, .share-icon:hover .share-logo { animation: none; }
-  .tile img { transition: none; }
-  .tile-open:hover img { transform: none; }
+  .tile-open:hover .tile-photo { transform: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .tile-check { transform: none; }
@@ -676,25 +654,58 @@ body.dark .share-dot { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18); }
   .fridge:active { transform: none; }
 }
 
-/* Home page on a computer: the three dishes side by side, so the whole menu fits one screen */
+/* The wide photo card parts stay out of the way on phones */
+.tile-row { display: contents; }
+.tile-text, .tile-more { display: none; }
+
+/* Home page on a computer: the board as always, then the three dishes as wide photo cards */
 @media (min-width: 900px) {
-  .home .site-header { padding-top: 8px; }
-  .home .logo { font-size: 32px; }
   .home .wrap { max-width: 1020px; }
-  .home .board-frame { margin-top: 12px; padding: 8px; }
-  .home .board { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 4px 30px; padding: 14px; }
-  .home .board-foot { margin-top: 0; }
-  .home .howto { display: flex; justify-content: center; gap: 34px; margin-top: 12px; }
-  .home .howto li { display: flex; align-items: center; gap: 8px; }
-  .home .howto b { margin: 0; }
-  .home .tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 14px; }
-  .home .tile-text { padding: 44px 14px 12px; }
-  .home .tile-name { font-size: 21px; }
-  .home .tile-row { padding: 10px 12px; }
-  .home .tile-eat { min-height: 42px; padding: 0 16px; font-size: 14px; }
-  .home .streak { margin-top: 12px; }
-  .home .actions-col { margin-top: 4px; }
-  .home .fridge { max-width: 620px; margin: 10px auto 0; padding: 10px 14px 10px 16px; }
-  .home .site-footer { max-width: 1020px; margin-top: 16px; padding: 8px 18px 12px; }
-  .home .footer-note { margin-top: 2px; }
+  .home .board-frame, .home .howto, .home .actions-col, .home .fridge { max-width: 484px; margin-left: auto; margin-right: auto; }
+  .home .tiles { gap: 16px; }
+  .home .tile {
+    gap: 0;
+    text-align: left;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .home .tile.eating { border-color: var(--btn); }
+  .home .tile.eating .tile-photo { outline: none; }
+  .home .tile-open { gap: 0; }
+  .home .tile-photo { border-radius: 0; background: var(--felt); }
+  .home .tile-open:hover .tile-photo, .home .tile-open:active .tile-photo { transform: none; }
+  .home .tile img { aspect-ratio: 16 / 10; border-radius: 0; }
+  .home .tile-label, .home .tile-time, .home .tile-hint { display: none; }
+  .home .tile-text {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 44px 14px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-align: left;
+    color: #FFFFFF;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.55) 45%, rgba(0, 0, 0, 0.82) 100%);
+  }
+  .home .tile-kicker { font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); }
+  .home .tile-name { font-size: 21px; font-weight: 700; line-height: 1.15; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
+  .home .tile-check { top: 10px; right: 10px; }
+  .home .tile-row { display: flex; align-items: center; gap: 10px; padding: 10px 12px; }
+  .home .tile-eat { min-height: 42px; padding: 0 16px; white-space: nowrap; }
+  .home .tile-count { flex: 1; min-width: 0; min-height: 0; }
+  .home .tile-more {
+    display: inline-block;
+    min-height: 42px;
+    padding: 0 2px;
+    border: none;
+    background: transparent;
+    color: var(--red);
+    font: 700 15px "Roboto Condensed", Arial, sans-serif;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .home .tile-more:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
