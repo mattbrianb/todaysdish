@@ -131,7 +131,7 @@ const ENVELOPE = '<path d="M3 5.5h18v13H3z" fill="none" stroke="#fff" stroke-wid
 
 /* Monday email. Three ways in: a pop-up that appears by itself a few seconds into a visit
    (or right after a first "I'm eating this"), a "Get the menu by email" link on the home
-   page, and a form in every footer. The Worker emails a confirm link. */
+   page, and a "Menu by email" button in every footer. The Worker emails a confirm link. */
 const SUBSCRIBE_URL = "https://todaysdish-ingredients.mattbrianburnett.workers.dev/subscribe";
 const NEWS_KEY = "todaysdish_news";             // "subscribed" after a sign-up
 const NEWS_SHOWN_KEY = "todaysdish_news_shown"; // when the pop-up last opened by itself
@@ -260,15 +260,15 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </div>`);
 
-  // Footer: the Monday email form (always there, for anyone who closed the pop-up) and the contact address
+  // Footer: a "Menu by email" button (opens the sign-up pop-up any time) and the contact address
   const footer = document.querySelector(".site-footer");
   if (footer) {
     const social = footer.querySelector(".footer-social");
-    if (social) social.insertAdjacentHTML("afterbegin", `<a class="ig-link" href="mailto:hello@todaysdish.food">${MAIL_ICON}hello@todaysdish.food</a>`);
-    if (document.body.dataset.noPopup === undefined) {
-      footer.insertAdjacentHTML("afterbegin", `<div class="news" id="mondayEmail"><p class="news-title">The Monday menu</p>
-          <p class="news-sub">That day's specials and last week's menu, in your inbox every Monday morning.</p>${newsForm()}</div>`);
+    if (social && document.body.dataset.noPopup === undefined) {
+      social.insertAdjacentHTML("afterbegin", `<button type="button" class="mail-btn" onclick="openMondayEmail()">${MAIL_ICON}Menu by email</button>`);
     }
+    const note = footer.querySelector(".footer-note");
+    if (note) note.insertAdjacentHTML("beforeend", ` · <a href="mailto:hello@todaysdish.food">hello@todaysdish.food</a>`);
   }
 
   // Back from the confirm link in the email

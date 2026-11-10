@@ -92,7 +92,6 @@ button { font-family: inherit; }
   display: flex;
   flex-direction: column;
   gap: 6px;
-  min-height: 300px;
   justify-content: center;
 }
 .board-title { font-size: 21px; font-weight: 700; }
@@ -102,82 +101,130 @@ button { font-family: inherit; }
 .board-foot { margin-top: 10px; font-size: 12px; }
 .board-next { font-size: 13px; color: var(--gold); }
 
-/* Photo tiles under the board */
-.tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 18px 0 0; }
-.tile { display: flex; flex-direction: column; align-items: stretch; gap: 10px; text-align: center; }
-.tile-open {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+/* Menu cards under the board: photo left, dish and "I'm eating this" right */
+.tiles { display: flex; flex-direction: column; gap: 12px; margin: 16px 0 0; }
+.tile {
+  display: grid;
+  grid-template-columns: 104px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  column-gap: 14px;
+  row-gap: 8px;
+  align-items: start;
+  padding: 10px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: border-color 200ms ease;
+}
+.tile.eating { border-color: var(--btn); }
+.tile-photo {
+  grid-row: 1 / span 2;
+  position: relative;
+  display: block;
   padding: 0;
   border: none;
   background: transparent;
-  color: var(--ink);
   cursor: pointer;
-  text-align: center;
 }
-/* One-tap "I'm eating this" under each photo */
+.tile img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+  background: var(--bg);
+  transition: transform 160ms var(--ease-out);
+}
+.tile-open {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 2px 0 0;
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.tile-label { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); }
+.tile-name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.tile-hint { font-size: 14px; font-weight: 500; color: var(--muted); }
+.tile-row { display: flex; align-items: center; gap: 10px; min-width: 0; }
 .tile-eat {
   min-height: 44px;
-  padding: 0 6px;
+  padding: 0 16px;
   border: 2px solid var(--btn);
   border-radius: 999px;
   background: transparent;
   color: var(--ink);
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.1;
+  font: 700 14px "Roboto Condensed", Arial, sans-serif;
+  white-space: nowrap;
   cursor: pointer;
   transition: transform 160ms var(--ease-out), background-color 200ms ease, color 200ms ease;
 }
 .tile-eat[aria-pressed="true"] { background: var(--btn); color: var(--btn-text); }
 .tile-eat:active { transform: scale(0.97); }
-.tile-count { min-height: 1.2em; font-size: 13px; font-weight: 700; color: var(--red); }
-.tile img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 8px;
-  object-fit: cover;
-  display: block;
-  background: var(--card);
-  transition: transform 160ms var(--ease-out);
-}
-.tile-photo { position: relative; display: block; }
+.tile-count { font-size: 13px; font-weight: 700; color: var(--red); }
 /* "You're eating this" badge on the photo */
 .tile-check {
   position: absolute;
   top: 6px;
   right: 6px;
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   background: var(--btn);
   color: #FFFFFF;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   opacity: 0;
   transform: scale(0.9);
   transition: opacity 200ms var(--ease-out), transform 200ms var(--ease-out);
 }
 .tile.eating .tile-check { opacity: 1; transform: scale(1); }
-.tile.eating img { outline: 3px solid var(--btn); outline-offset: -3px; }
-.tile-label { font-size: 17px; font-weight: 700; letter-spacing: 0.02em; }
-.tile-time { margin-top: -6px; font-size: 14px; font-weight: 500; color: var(--muted); }
-.tile-hint {
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--red);
+@media (hover: hover) and (pointer: fine) {
+  .tile-open:hover .tile-name { color: var(--red); }
+  .tile-open:hover .tile-hint { text-decoration: underline; text-underline-offset: 3px; }
 }
-@media (hover: hover) and (pointer: fine) { .tile-open:hover .tile-hint { text-decoration: underline; text-underline-offset: 3px; } }
-@media (hover: hover) and (pointer: fine) { .tile-open:hover img { transform: translateY(-2px); } }
-.tile-open:active img { transform: scale(0.97); }
+.tile-photo:active img { transform: scale(0.97); }
+@media (max-width: 350px) { .tile { grid-template-columns: 84px minmax(0, 1fr); column-gap: 10px; } }
+
+/* "Cook from your fridge": the way off the menu, as its own card */
+.fridge {
+  margin: 22px 0 0;
+  padding: 14px 14px 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--gold);
+  color: #2B1A12;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: transform 160ms var(--ease-out);
+}
+.fridge:hover { color: #2B1A12; }
+.fridge:active { transform: scale(0.98); }
+.fridge svg { flex-shrink: 0; }
+.fridge-text { flex: 1; display: flex; flex-direction: column; gap: 2px; font-size: 14px; line-height: 1.35; }
+.fridge-text b { font-size: 17px; }
+.fridge-go { font-size: 28px; font-weight: 700; line-height: 1; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
 /* Buttons and links */
-.actions-col { display: flex; flex-direction: column; gap: 14px; align-items: center; margin: 30px 0 0; }
+.actions-col { display: flex; flex-direction: column; gap: 14px; align-items: center; margin: 10px 0 0; }
 .btn-primary {
   width: 100%;
   min-height: 54px;
@@ -198,7 +245,7 @@ a.btn-primary { display: flex; align-items: center; justify-content: center; tex
 a.btn-primary, a.btn-primary:hover { color: var(--btn-text); }
 .btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
 .text-link { font-size: 15px; font-weight: 700; text-underline-offset: 3px; padding: 6px 0; }
-.streak { margin: 22px 0 0; text-align: center; font-size: 15px; font-weight: 700; line-height: 1.4; }
+.streak { margin: 16px 0 0; text-align: center; font-size: 15px; font-weight: 700; line-height: 1.4; }
 .eat-btn {
   margin: 14px 0 4px;
   width: 100%;
@@ -571,4 +618,34 @@ body.dark .share-dot { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18); }
 .link-btn:hover { color: var(--red); }
 @media (max-width: 380px) {
   .news-form { flex-direction: column; }
+}
+
+/* Footer row: "Menu by email", then round icon links */
+.footer-social { gap: 8px 10px; margin-top: 6px; }
+.footer-social .ig-link {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--ink);
+}
+.mail-btn {
+  min-height: 44px;
+  padding: 0 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font: 700 14px "Roboto Condensed", Arial, sans-serif;
+  cursor: pointer;
+}
+.mail-btn:hover { color: var(--red); }
+.footer-note a { padding: 0; text-decoration: underline; text-underline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  .tile-photo:active img, .fridge:active { transform: none; }
 }
