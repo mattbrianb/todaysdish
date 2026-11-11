@@ -2960,6 +2960,24 @@
       "meal": "dinner",
       "name": "Lamb Burgers With Tzatziki Sauce",
       "id": 649195
+    },
+    {
+      "date": "2026-11-11",
+      "meal": "breakfast",
+      "name": "Classic scones",
+      "id": 639637
+    },
+    {
+      "date": "2026-11-11",
+      "meal": "lunch",
+      "name": "Moroccan Spiced Chicken Under A Brick",
+      "id": 652442
+    },
+    {
+      "date": "2026-11-11",
+      "meal": "dinner",
+      "name": "Greek Yogurt Chicken Salad",
+      "id": 645384
     }
   ]
 }

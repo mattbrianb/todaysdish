@@ -1,87 +1,68 @@
 {
-  "date": "2026-11-10",
+  "date": "2026-11-11",
   "breakfast": {
-    "id": 633428,
-    "name": "Baked Apple Pancake",
-    "image": "https://img.spoonacular.com/recipes/633428-556x370.jpg",
+    "id": 639637,
+    "name": "Classic scones",
+    "image": "https://img.spoonacular.com/recipes/639637-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 whl apple peeled, thinly sliced",
-      "1/2 cup Butter or margarine",
-      "1 tablespoon Cinnamon",
-      "3 whl eggs",
-      "1 cup flour",
-      "1/2 cup Milk",
-      "Nuts and raisins, chopped",
-      "1/4 teaspoon salt",
-      "3/4 cup Sugar"
+      "3/4 cup milk",
+      "2 cups self raising flour",
+      "strawberry jam and cream, for serving",
+      "50g unsalted butter, softened"
     ],
     "steps": [
-      "Preheat oven to 450F.",
-      "Saute apple slices in butter over medium heat until tender.",
-      "Add sugar, cinnamon, nuts and raisins to the pan, stirring to coat apple.",
-      "Remove from heat and set aside.For the batter, melt butter in the microwave, set aside to cool. Spray skillet with Pam. In a bowl beat eggs until light. Slowly add flour and salt, blending until smooth. Beat in melted butter and milk.",
-      "Pour apple filling into skillet and top with batter.",
-      "Bake 15 minutes.Reduce oven temperature to 350F and bake five to ten minutes more.",
-      "Cut pancake into four pieces and serve with favorite topping.NOTES : Barbara Michel had this one marked as \"good !\" I have made the changes in the recipe that she indicated."
-    ],
-    "imagePad": 0.085
+      "Using fingertips, rub butter into flour until mixture resembles fine breadcrumbs.Make a well in the centre of the dry ingredients and add milk, stirring with a metal spatula or butter knife until mixture comes away from the sides of the bowl. If mixture is dry, add a little extra milk.Turn mixture onto a lightly floured bench and bring the dough together until a rough ball of dough is formed. Do not over-knead. Pat dough to 2 cm thickness. With a clean knife, quarter the dough or use a round cutter to cut rounds.Arrange scones onto a baking paper lined tray and bake at 220C for 12-15 minutes until golden and they sound hollow when lightly tapped on the base.",
+      "Serve scones straight from the oven with jam and cream."
+    ]
   },
   "lunch": {
-    "id": 650606,
-    "name": "Madras Beef Curry",
-    "image": "https://img.spoonacular.com/recipes/650606-556x370.jpg",
+    "id": 652442,
+    "name": "Moroccan Spiced Chicken Under A Brick",
+    "image": "https://img.spoonacular.com/recipes/652442-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 teaspoon garam masala",
-      "1/2 teaspoon ground cinnamon",
-      "2 teaspoons curry powder (mild or hot)",
+      "1 whole chicken (3-4 lb.), backbone removed, butterflied",
+      "4 garlic cloves",
+      "1/4 cup fresh cilantro leaves",
+      "2 teaspoons sea salt",
+      "1 teaspoon finely grated lemon zest",
+      "1/4 teaspoon saffron threads",
+      "4 tablespoons olive oil",
+      "1 tablespoon paprika",
+      "1 teaspoon ground cumin",
       "1/2 teaspoon freshly ground black pepper",
-      "1/2 teaspoon salt",
-      "1/4 teaspoon cayenne pepper (or more to taste)",
-      "1 tablespoon light brown sugar",
-      "2 garlic cloves, crushed",
-      "2 teaspoons grated ginger",
-      "2 tablespoons lemon juice",
-      "1/4 cup olive or vegetable oil",
-      "1 pound beef thinly sliced",
-      "14 1/2 ounces can diced tomatoes",
-      "Chopped green onions",
-      "Steamed basmati rice"
+      "1/4 teaspoon cayenne, or to taste"
     ],
     "steps": [
-      "Slice the beef thinly (as for a stir fry) and place in a medium bowl.",
-      "Add all of the other ingredients, except the tomatoes, green onions and rice and combine to coat the meat well.",
-      "Let sit for 10-15 minutes to flavor the meat.",
-      "Heat a medium pan with a lid over medium heat.",
-      "Add the meat and brown well, stirring occasionally. Continue to cook over medium heat until all of the meat juices have evaporated and only oil remains in the bottom of the pan with the meat.",
-      "Add the tomatoes, stir to combine and lower the heat to medium low. Cover and simmer, stirring occasionally, until the meat is tender and most of the moisture from the tomatoes has been absorbed by the meat, about 30 minutes. If sauce becomes too thick before the beef is tender, add  cup water and continue to simmer with the lid on.",
-      "Taste and adjust the seasoning adding additional salt if needed. Madras curries are often spicy.",
-      "Additional cayenne pepper may be added at this point if a spicier curry is desired.",
-      "Serve over steamed basmati rice with chopped green onions on top."
+      "Combine garlic, cilantro, one teaspoon salt, lemon zest and saffron in a mortar with pestle.",
+      "Smash to a paste.",
+      "Add 3 tablespoons olive oil and stir to combine.",
+      "Rub chicken all over with paste, including between skin and breast meat.",
+      "Place on tray or platter, skin side up and cover loosely with plastic wrap.",
+      "Refrigerate at least 2 hours and up to 6 hours.",
+      "Remove from refrigerator 30 minutes before roasting."
     ]
   },
   "dinner": {
-    "id": 649195,
-    "name": "Lamb Burgers With Tzatziki Sauce",
-    "image": "https://img.spoonacular.com/recipes/649195-556x370.jpg",
-    "cookTime": 45,
+    "id": 645384,
+    "name": "Greek Yogurt Chicken Salad",
+    "image": "https://img.spoonacular.com/recipes/645384-556x370.jpg",
+    "cookTime": 30,
     "ingredients": [
-      "1 cucumber, seeded and diced",
-      "1 egg",
-      "2 tablespoons extra virgin olive oil",
-      "1/4 cup chopped flat leaf parsley",
-      "1 handful of minced fresh dill",
-      "12 Cloves garlic, peeled and cut in ha",
-      "1 pint Greek yogurt",
-      "1 pound ground lamb",
-      "4 hamburger buns",
-      "juice of 2 lemons",
-      "Kosher salt & pepper to taste"
+      "\u00bd cup cashews, roughly chopped",
+      "1 pound chicken breasts, cooked and cubed into bite sized pieces",
+      "1/3 cup craisins (raisins work, too)",
+      "2 teaspoon Dijon mustard",
+      "garlic powder",
+      "\u00bd cup plain Greek yogurt",
+      "salt"
     ],
     "steps": [
-      "For the lamb burger, mix 1 pound ground lamb, 1 egg, 1 splash of extra virgin olive oil, the juice of 1 lemon, 1/4 cup chopped flat leaf parsley, and 6 cloves of chopped garlic. Season with kosher salt &amp; pepper to taste and let sit for  to 1 hour.Grill burgers to your liking.For the tzatziki sauce, mix together 1 pint Greek yogurt, 1 diced cucumber, juice of 1 lemon, 1 tablespoon extra virgin olive oil, 6 garlic cloves (add garlic bit by bit until you have the level of garlic you like), 1 handful minced fresh dill, and kosher salt and fresh cracked pepper to taste. Refrigerate overnight to let the flavors intensify.",
-      "Serve the grilled burgers on toasted buns and add a dollop of the sauce on top."
+      "Start by cooking some chicken breasts. I like boiling them in chicken broth or stock, but feel free to boil in water, too. Boiling the chicken in broth, however, will give it significantly more flavor. Bring the chicken broth/stock to a boil and put in whole chicken breasts. Cook until no pink remains. Depending on the size of the chicken breasts, this could take anywhere from 15 - 20 minutes.While the chicken is boiling, put together your sauce.",
+      "Whisk together greek yogurt, dijon mustard, and garlic powder together until well mixed.",
+      "Add in salt and pepper, to taste.Next, stir in dried cranberries or raisins and cashews. If you're worried about the cashews getting too soft, you could add them right before serving!After the chicken is done boiling, I like to let it rest for about 5 minutes. This ensures that the juice stays in the chicken instead of spilling out when you cut it!Dice up the chicken and mix it into the sauce.",
+      "Serve."
     ]
   }
 }
