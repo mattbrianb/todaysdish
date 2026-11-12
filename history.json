@@ -2978,6 +2978,24 @@
       "meal": "dinner",
       "name": "Greek Yogurt Chicken Salad",
       "id": 645384
+    },
+    {
+      "date": "2026-11-12",
+      "meal": "breakfast",
+      "name": "Breakfast Biscuits and Gravy",
+      "id": 636026
+    },
+    {
+      "date": "2026-11-12",
+      "meal": "lunch",
+      "name": "Instant Pot Hawaiian Chicken",
+      "id": 982365
+    },
+    {
+      "date": "2026-11-12",
+      "meal": "dinner",
+      "name": "Chicken Suya",
+      "id": 716342
     }
   ]
 }

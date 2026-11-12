@@ -1,68 +1,71 @@
 {
-  "date": "2026-11-11",
+  "date": "2026-11-12",
   "breakfast": {
-    "id": 639637,
-    "name": "Classic scones",
-    "image": "https://img.spoonacular.com/recipes/639637-556x370.jpg",
+    "id": 636026,
+    "name": "Breakfast Biscuits and Gravy",
+    "image": "https://img.spoonacular.com/recipes/636026-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3/4 cup milk",
-      "2 cups self raising flour",
-      "strawberry jam and cream, for serving",
-      "50g unsalted butter, softened"
+      "2 teaspoons Baking powder",
+      "1/2 cup butter",
+      "3 tablespoons All-purpose flour",
+      "2 teaspoons Fresh sage leaves",
+      "1/4 teaspoon Ground allspice",
+      "1/2 teaspoon Paprika",
+      "1 1/2 pounds Pork sausage",
+      "1 1/2 teaspoons salt",
+      "Salt and freshly ground black pepper",
+      "1 3/4 cups Unbleached all-purpose flour",
+      "Unsalted butter, or as needed",
+      "4 cups whole milk",
+      "cup Plain yogurt"
     ],
     "steps": [
-      "Using fingertips, rub butter into flour until mixture resembles fine breadcrumbs.Make a well in the centre of the dry ingredients and add milk, stirring with a metal spatula or butter knife until mixture comes away from the sides of the bowl. If mixture is dry, add a little extra milk.Turn mixture onto a lightly floured bench and bring the dough together until a rough ball of dough is formed. Do not over-knead. Pat dough to 2 cm thickness. With a clean knife, quarter the dough or use a round cutter to cut rounds.Arrange scones onto a baking paper lined tray and bake at 220C for 12-15 minutes until golden and they sound hollow when lightly tapped on the base.",
-      "Serve scones straight from the oven with jam and cream."
-    ]
+      "Preheat the oven to 425F. Cover a baking sheet with a piece of parchment paper.",
+      "Make the biscuits: sift the flour, baking powder, and salt together into a large bowl. Using two knives or a pastry blender, cut in the butter until the texture rangers from cornmeal to the size of small peas. (These two steps can be done quickly in a food processor.) Using a fork, gradually mix in the yogurt, then the milk, until the dough is quite soft and somewhat sticky. Work quickly without overworking the dough. Turn it out onto a lightly floured surface and knead it briefly, just long enough to get it to hold together.",
+      "Roll it out so it is about 1 1/4 inches thick, and cut it into 2 i",
+      "While the biscuits are baking, prepare the sausages: place all the sausage ingredients in a large bowl and mix thoroughly, using your fingers.To test the seasoning, fry a tiny patty and taste; adjust if necessary.",
+      "Place the patties in a large heavy or nonstick skillet over medium-high heat, and cook until they are crisp and brown on the outside and cooked through inside, about 8 minutes per side.",
+      "Transfer the sausage patties to a warmed platter and keep warm."
+    ],
+    "imagePad": 0.085
   },
   "lunch": {
-    "id": 652442,
-    "name": "Moroccan Spiced Chicken Under A Brick",
-    "image": "https://img.spoonacular.com/recipes/652442-556x370.jpg",
-    "cookTime": 45,
+    "id": 982365,
+    "name": "Instant Pot Hawaiian Chicken",
+    "image": "https://img.spoonacular.com/recipes/982365-556x370.jpg",
+    "cookTime": 18,
     "ingredients": [
-      "1 whole chicken (3-4 lb.), backbone removed, butterflied",
-      "4 garlic cloves",
-      "1/4 cup fresh cilantro leaves",
-      "2 teaspoons sea salt",
-      "1 teaspoon finely grated lemon zest",
-      "1/4 teaspoon saffron threads",
-      "4 tablespoons olive oil",
-      "1 tablespoon paprika",
-      "1 teaspoon ground cumin",
-      "1/2 teaspoon freshly ground black pepper",
-      "1/4 teaspoon cayenne, or to taste"
+      "1 (16 oz) barbecue sauce",
+      "3-4 chicken breasts",
+      "1 (20 oz) Dole Pineapple Tidbits (drained)"
     ],
     "steps": [
-      "Combine garlic, cilantro, one teaspoon salt, lemon zest and saffron in a mortar with pestle.",
-      "Smash to a paste.",
-      "Add 3 tablespoons olive oil and stir to combine.",
-      "Rub chicken all over with paste, including between skin and breast meat.",
-      "Place on tray or platter, skin side up and cover loosely with plastic wrap.",
-      "Refrigerate at least 2 hours and up to 6 hours.",
-      "Remove from refrigerator 30 minutes before roasting."
+      "First, place your trivet in the bottom of the Instant Pot and add about a cup of water (depending on the size of the Instant Pot) and a tablespoon of the pineapple juice.",
+      "Next, mix together your Dole pineapple tidbits and the barbecue sauce. Cover the chicken breasts with the barbecue pineapple mixture, and then place onto the trivet.",
+      "Make sure the lid is securely sealed and then place the Instant Pot on manual mode and cook with High pressure for about 13 minutes. Don't forget to place the steam valve over to \"sealing\".",
+      "When time is up hit cancel and allow 5-10 minutes to naturally release pressure.",
+      "Remove your chicken from the Instant Pot with tongs and serve over a bed of rice, or for a healthier version, over a bed of lettuce."
     ]
   },
   "dinner": {
-    "id": 645384,
-    "name": "Greek Yogurt Chicken Salad",
-    "image": "https://img.spoonacular.com/recipes/645384-556x370.jpg",
-    "cookTime": 30,
+    "id": 716342,
+    "name": "Chicken Suya",
+    "image": "https://img.spoonacular.com/recipes/716342-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "\u00bd cup cashews, roughly chopped",
-      "1 pound chicken breasts, cooked and cubed into bite sized pieces",
-      "1/3 cup craisins (raisins work, too)",
-      "2 teaspoon Dijon mustard",
-      "garlic powder",
-      "\u00bd cup plain Greek yogurt",
-      "salt"
+      "1.5 Tablespoons of Suya Spice",
+      "1 pound Chicken",
+      "1 teaspoon of chilli powder",
+      "1 cooking spoon groundnut oil",
+      "Seasoning cubes",
+      "Onions and Tomatoes for Garnishing",
+      "Salt to taste"
     ],
     "steps": [
-      "Start by cooking some chicken breasts. I like boiling them in chicken broth or stock, but feel free to boil in water, too. Boiling the chicken in broth, however, will give it significantly more flavor. Bring the chicken broth/stock to a boil and put in whole chicken breasts. Cook until no pink remains. Depending on the size of the chicken breasts, this could take anywhere from 15 - 20 minutes.While the chicken is boiling, put together your sauce.",
-      "Whisk together greek yogurt, dijon mustard, and garlic powder together until well mixed.",
-      "Add in salt and pepper, to taste.Next, stir in dried cranberries or raisins and cashews. If you're worried about the cashews getting too soft, you could add them right before serving!After the chicken is done boiling, I like to let it rest for about 5 minutes. This ensures that the juice stays in the chicken instead of spilling out when you cut it!Dice up the chicken and mix it into the sauce.",
-      "Serve."
+      "Heat the oven to 500 F.Wash and season the chicken with the Suya spice, chilli powder, seasoning cubes, salt and drizzle the oil over it.",
+      "Place the chicken in the oven and grill for 40 minutes. Check the chicken occasionally and flip on both sides so it can cook properly.",
+      "Serve hot garnished with the onions and tomato and a bit of suya spice sprinkled over the chicken."
     ]
   }
 }
