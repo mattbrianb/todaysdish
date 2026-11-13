@@ -2996,6 +2996,24 @@
       "meal": "dinner",
       "name": "Chicken Suya",
       "id": 716342
+    },
+    {
+      "date": "2026-11-13",
+      "meal": "breakfast",
+      "name": "Caramelized cranberries coconut pancakes",
+      "id": 637055
+    },
+    {
+      "date": "2026-11-13",
+      "meal": "lunch",
+      "name": "Khachapuri",
+      "id": 648852
+    },
+    {
+      "date": "2026-11-13",
+      "meal": "dinner",
+      "name": "Dolsot Bibimbap",
+      "id": 641559
     }
   ]
 }
