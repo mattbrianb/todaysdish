@@ -1,101 +1,66 @@
 {
-  "date": "2026-11-13",
+  "date": "2026-11-14",
   "breakfast": {
-    "id": 637055,
-    "name": "Caramelized cranberries coconut pancakes",
-    "image": "https://img.spoonacular.com/recipes/637055-556x370.jpg",
+    "id": 650844,
+    "name": "Mango-Berry Swirled Smoothies",
+    "image": "https://img.spoonacular.com/recipes/650844-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 tsp baking powder",
-      "1 tablespoon brown sugar",
-      "1 cup coconut flour",
-      "2 cups coconut milk",
-      "1 cup fresh cranberries",
-      "4 eggs",
-      "1/2 teaspoon salt",
-      "1 tsp vanilla extract",
-      "1 cup whole wheat flour"
+      "1 cup fresh or frozen blueberries",
+      "juice of 1 orange",
+      "2 mangoes, peeled and pitted",
+      "1 cup 100% pomegranate juice, plus more if necessary",
+      "1 cup fresh or frozen strawberries (4 or 5 large ones)"
     ],
     "steps": [
-      "Heat a nonstick sauce pan over medium flame.",
-      "Add cranberries, brown sugar and vanilla extract to the pan.",
-      "Mix, cover and cook for 4-5 minutes till the cranberries are soft and mash it with a spoon.Turn off the flame and let it cool for a while.In a mixing bowl combine all the dry ingredients.In another bowl whip the eggs and mix in the milk.",
-      "Add the cranberries mix to the egg and milk. Beat thoroughly.",
-      "Pour the liquid ingredients to the dry ingredients and mix well.",
-      "Let it stand for 2 minutes.In the meantime heat the griddle or fry pan over medium flame and grease it with cooking spray or oil of your choice.",
-      "Pour a spoonful of the batter into the pan and shape it round.",
-      "Let it cook for 2 minutes or until golden brown. The pancake would rise a bit. Flip to the other side and cook again for 2 minutes or until golden brown. Repeat the same process for all the pancakes.",
-      "Drizzle sweetener of your choice and top it with cream if desired and serve warm."
+      "Smoothie 1: blueberries, strawberries, pomegranate juice Smoothie 2: mangos, orange juice",
+      "If you have an immersion blender, place the ingredients for each smoothie into its own quart-sized mason jar or a really large cup. Blend one smoothie, rinse off the blender, then blend the other.If you're using a blender, blend smoothies one at a time, rinsing the blender between uses.",
+      "Pour the smoothies together into serving cups, creating a swirled effect."
     ]
   },
   "lunch": {
-    "id": 648852,
-    "name": "Khachapuri",
-    "image": "https://img.spoonacular.com/recipes/648852-556x370.jpg",
+    "id": 633765,
+    "name": "Baked Rigatoni With Sausage",
+    "image": "https://img.spoonacular.com/recipes/633765-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 package dry yeast",
-      "1 teaspoon sugar",
-      "1/4 cup water, warm (110 degrees)",
-      "3/4 cup milk, room temp.",
-      "2 tablespoons sugar",
-      "1/2 cup butter, melted",
-      "1 teaspoon salt",
-      "3 1/2 cups flour (all-purpose or bread 8 ounces muenster cheese 8 ounces Jarlsberg or Swiss cheese 8 ounces white cheddar 2 eggs, beaten slightly 2 tablespoons parsley, chopped 1/4 teaspoon pepper, white",
-      "8 ounces muenster cheese",
-      "8 ounces Jarlsberg or Swiss cheese",
-      "8 ounces white cheddar",
-      "2 eggs, beaten slightly",
-      "2 tablespoons parsley, chopped",
-      "1/4 teaspoon pepper, white",
-      "1Dissolve yeast and 1 tsp sugar in 1/4 cup water and let stand 5-10 minutes to proof until foamy. Add milk, 2 Tbs sugar, butter, salt, and enough flour to make a soft dough. Place in greased bowl and turn to coat all sides. cover and let rise until double",
-      "2Twist and pinch ends together to make a rough knob. Cover with a buttered 12\" square of waxed paper and let rise until double in bulk. Brush loaf with glaze of 1 egg white + 1 Tbs water (or use margarine).",
-      "3Bake 40-50 min. @ 375 or until deep golden brown. Remove bread from pan, place directly on oven rack, and bake for an additional 5 minutes to brown bottom crust. Cool on rack for 45 minutes before cutting into wedges."
+      "Leaves from 1 small bunch basil",
+      "Freshly ground black pepper",
+      "1 large can (28 ounces) peeled whole tomatoes",
+      "1 pound fresh mozzarella",
+      "3 garlic cloves, chopped",
+      "3/4 pound Italian sausage",
+      "Kosher Salt",
+      "1 tablespoon extra-virgin olive oil",
+      "1 large onion, chopped",
+      "1 cup freshly grated Parmigiano-Reggiano",
+      "1 pound rigatoni"
     ],
     "steps": [
-      "Dissolve yeast and 1 tsp sugar in 1/4 cup water and let stand 5-10 minutes to proof until foamy.",
-      "Add milk, 2 tbs sugar, butter, salt, and enough flour to make a soft dough.",
-      "Place in greased bowl and turn to coat all sides. cover and let rise until double in bulk. shred cheeses, combine all filling ingredients and refrigerate. grease a 9\" springform pan very well. punch down dough, shape into a ball, and roll to a 20\" circle. Ease dough into pan (fold in half to lift and unfold in pan) letting excess hang over the edge. mound cheese filling onto dough in pan and bring dough up over the filling, folding to make 8-12 evenly-spaced pleats.",
-      "Twist and pinch ends together to make a rough knob. Cover with a buttered 12\" square of waxed paper and let rise until double in bulk.",
-      "Brush loaf with glaze of 1 egg white + 1 tbs water (or use margarine).",
-      "Bake 40-50 min. @ 375 or until deep golden brown.",
-      "Remove bread from pan, place directly on oven rack, and bake for an additional 5 minutes to brown bottom crust. Cool on rack for 45 minutes before cutting into wedges."
-    ],
-    "imagePad": 0.085
+      "Bring a large pot of salted water to a boil over high heat for the pasta.Meanwhile, heat 1 tablespoon olive oil in a large skillet over medium-high heat.",
+      "Add the sausage and saute for 3 to 4 minutes until brown, but not fully cooked.",
+      "Drain sausage and place in a 9x13 baking dish.",
+      "Add the remaining 1 tablespoon olive oil to the skillet, then add the onion and garlic, and cook until translucent ( 3 to 4 minutes).",
+      "Add the tomatoes and their juices into a bowl and crush with your hands to break them up; pour tomatoes into the skillet with the basil and cook it down until slightly thickened (about 15 minutes).",
+      "Add the rigatoni to the boiling water, give it a stir, and cook for 6 to 7 minutes, it should be slightly firm as it will cook further in the oven. Ladle out 1/2 cup of the pasta cooking water and reserve; then drain the rigatoni.Preheat the oven to 450 degrees F.",
+      "Add the tomato sauce, rigatoni, and the reserved pasta water to the baking dish. Break up half the mozzarella over the mixture, season with salt and pepper, and gently mix with a spoon. Dust with the Parmigiano and drizzle with more olive oil.",
+      "Bake for 15 minutes.",
+      "Spread the remaining mozzarella in an even layer over the top and continue to bake for another 10 minutes or until golden brown and bubbly."
+    ]
   },
   "dinner": {
-    "id": 641559,
-    "name": "Dolsot Bibimbap",
-    "image": "https://img.spoonacular.com/recipes/641559-556x370.jpg",
-    "cookTime": 45,
+    "id": 1044252,
+    "name": "Shredded Roast Beef Stuffed Sweet Potatoes (Whole 30 & PALEO)",
+    "image": "https://img.spoonacular.com/recipes/1044252-556x370.jpg",
+    "cookTime": 490,
     "ingredients": [
-      "3 cups fresh baby spinach",
-      "1 1/2 cups bean sprouts",
-      "3/4 pound thin strips sirloin, rib eye or bulgogi beef",
-      "4 dolsot stone bowls (available at Asian markets)",
-      "10 ounces cabbage kimchi",
-      "1 cup carrots, julienned",
-      "4 egg yolks",
-      "1 cup fresh shiitake mushrooms, thinly sliced",
-      "1 garlic clove, minced",
-      "1 cup green onions, chopped",
-      "1 cup Korean barbecue bulgogi marinade",
-      "1/4 cup kochujang vinegared hot pepper paste",
-      "Pinch of salt",
-      "1/4 cup sesame oil",
-      "2 teaspoons toasted sesame seeds",
-      "4 cups short grain white rice, cooked",
-      "Pinch of sugar",
-      "3 cups high grade Korean sushi rice",
-      "3/4 cup firm tofu, rinsed and cut into 1-inch cubes",
-      "1 cup zucchini, julienned"
+      "beef broth",
+      "2 lb roast",
+      "salt and pepper to taste",
+      "6 sweet potatoes"
     ],
     "steps": [
-      "Marinate beef and tofu overnight in Korean barbecue marinade.Cook rice and keep warm.In sesame oil and a pinch of salt, saut carrots and zucchini until almost tender. If necessary add a bit more sesame oil and toss in the remaining vegetables, garlic and a pinch of sugar and continue to saut approximately 2 minutes, or until the vegetables are almost done (they will continue to cook in the dolsot or stone bowl)Broil or barbecue the beef.",
-      "Pour a 1/2 - 1 teaspoon of sesame oil in the base of each stone bowl. Divide rice between the 4 stone bowls. Arrange all ingredients on top of the rice side by side around the bowl. Put a teaspoon (or more depending on taste) of the Korean chilli paste on top of the vegetables and in the middle of the bowl place an egg yolk.",
-      "Pour a tablespoon of sesame seed oil around the edge of the bowl.",
-      "Place stone bowl on top of stove and on high heat leave for approx 5 minutes or until you can hear the rice popping and crackling.",
-      "Remove from heat and serve. Be very careful as the stone bowl will be extremely hot."
+      "Place the roast in Crock Pot, cover with beef broth,  and cook on low for 8 hours. Fully cook the sweet potatoes when ready. When roast is finished, shred and serve over the sweet potatoes."
     ]
   }
 }
