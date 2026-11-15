@@ -1,66 +1,70 @@
 {
-  "date": "2026-11-14",
+  "date": "2026-11-15",
   "breakfast": {
-    "id": 650844,
-    "name": "Mango-Berry Swirled Smoothies",
-    "image": "https://img.spoonacular.com/recipes/650844-556x370.jpg",
+    "id": 644848,
+    "name": "Gluten Free Pancakes",
+    "image": "https://img.spoonacular.com/recipes/644848-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 cup fresh or frozen blueberries",
-      "juice of 1 orange",
-      "2 mangoes, peeled and pitted",
-      "1 cup 100% pomegranate juice, plus more if necessary",
-      "1 cup fresh or frozen strawberries (4 or 5 large ones)"
+      "2 tablespoons agave nectar",
+      "1 teaspoon baking powder",
+      "1 cup blanched almond flour",
+      "2 large eggs",
+      "1/4 cup almond milk, or preferred milk alternative",
+      "pinch of salt",
+      "3/4 cup tapioca flour",
+      "1/2 teaspoon vanilla",
+      "1 1/2 cups warm water",
+      "1/4 teaspoon distilled white vinegar",
+      "1 teaspoon xanthan gum"
     ],
     "steps": [
-      "Smoothie 1: blueberries, strawberries, pomegranate juice Smoothie 2: mangos, orange juice",
-      "If you have an immersion blender, place the ingredients for each smoothie into its own quart-sized mason jar or a really large cup. Blend one smoothie, rinse off the blender, then blend the other.If you're using a blender, blend smoothies one at a time, rinsing the blender between uses.",
-      "Pour the smoothies together into serving cups, creating a swirled effect."
+      "Start by making the buttermilk.",
+      "Mix together the almond milk and vinegar, set aside.In a large bowl, whisk together all of the dry ingredients: almond flour, tapioca flour, xanthan gum, salt, and baking powder.In a medium-sized bowl, whisk together all of the wet ingredients: agave nectar, eggs, milk mixture, water, and vanilla.",
+      "Whisk the wet ingredients into the dry, mixing well.",
+      "Add warm water one tablespoon at a time if the batter needs to be thinned out more.",
+      "Heat a skillet or griddle over medium heat.Lightly grease the skillet and, using an ice cream scoop, pour in the batter. Then, spread it out with the back of a spoon.Cook for 1 minute, or until the bottom of the pancake is firm.Flip it over, squish it down with a spatula, and cook an additional 1-2 minutes or until done.Set aside on a plate and repeat with the remaining batter. Makes 10-12 pancakes.",
+      "Serve with Earth Balance butter and syrup or fruit. Delicious!"
     ]
   },
   "lunch": {
-    "id": 633765,
-    "name": "Baked Rigatoni With Sausage",
-    "image": "https://img.spoonacular.com/recipes/633765-556x370.jpg",
+    "id": 652696,
+    "name": "Mushroom Spinach Soup",
+    "image": "https://img.spoonacular.com/recipes/652696-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "Leaves from 1 small bunch basil",
-      "Freshly ground black pepper",
-      "1 large can (28 ounces) peeled whole tomatoes",
-      "1 pound fresh mozzarella",
-      "3 garlic cloves, chopped",
-      "3/4 pound Italian sausage",
-      "Kosher Salt",
-      "1 tablespoon extra-virgin olive oil",
-      "1 large onion, chopped",
-      "1 cup freshly grated Parmigiano-Reggiano",
-      "1 pound rigatoni"
+      "4 tablespoons Butter",
+      "1 cup Celery, minced",
+      "3 cups Chicken broth",
+      "3 Cloves garlic, minced",
+      "2 cups Heavy cream",
+      "3 cups Mushrooms, sliced",
+      "1 cup Onion, minced",
+      "Salt to taste",
+      "16 ounces Spinach, chopped",
+      "1 1/2 teaspoons White pepper"
     ],
     "steps": [
-      "Bring a large pot of salted water to a boil over high heat for the pasta.Meanwhile, heat 1 tablespoon olive oil in a large skillet over medium-high heat.",
-      "Add the sausage and saute for 3 to 4 minutes until brown, but not fully cooked.",
-      "Drain sausage and place in a 9x13 baking dish.",
-      "Add the remaining 1 tablespoon olive oil to the skillet, then add the onion and garlic, and cook until translucent ( 3 to 4 minutes).",
-      "Add the tomatoes and their juices into a bowl and crush with your hands to break them up; pour tomatoes into the skillet with the basil and cook it down until slightly thickened (about 15 minutes).",
-      "Add the rigatoni to the boiling water, give it a stir, and cook for 6 to 7 minutes, it should be slightly firm as it will cook further in the oven. Ladle out 1/2 cup of the pasta cooking water and reserve; then drain the rigatoni.Preheat the oven to 450 degrees F.",
-      "Add the tomato sauce, rigatoni, and the reserved pasta water to the baking dish. Break up half the mozzarella over the mixture, season with salt and pepper, and gently mix with a spoon. Dust with the Parmigiano and drizzle with more olive oil.",
-      "Bake for 15 minutes.",
-      "Spread the remaining mozzarella in an even layer over the top and continue to bake for another 10 minutes or until golden brown and bubbly."
-    ]
+      "Saute onion, celery. garlic and mushrooms in butter until tender.",
+      "Add spinach, chicken broth and heavy cream. Bring to a simmer.",
+      "Add pepper and salt. Thicken with Roux.",
+      "Garnish with a slice of mushroom and fresh chopped spinach."
+    ],
+    "imagePad": 0.085
   },
   "dinner": {
-    "id": 1044252,
-    "name": "Shredded Roast Beef Stuffed Sweet Potatoes (Whole 30 & PALEO)",
-    "image": "https://img.spoonacular.com/recipes/1044252-556x370.jpg",
-    "cookTime": 490,
+    "id": 659316,
+    "name": "Saucy Shredded Barbecue Chicken",
+    "image": "https://img.spoonacular.com/recipes/659316-556x370.jpg",
+    "cookTime": 480,
     "ingredients": [
-      "beef broth",
-      "2 lb roast",
-      "salt and pepper to taste",
-      "6 sweet potatoes"
+      "12 oz barbecue sauce \u2013 your favorite",
+      "1 lbs frozen chicken breasts, boneless, skinless",
+      "4 hamburger buns"
     ],
     "steps": [
-      "Place the roast in Crock Pot, cover with beef broth,  and cook on low for 8 hours. Fully cook the sweet potatoes when ready. When roast is finished, shred and serve over the sweet potatoes."
+      "In a crockpot spray the bottom and side with cooking spray.",
+      "Add your chicken and barbecue sauce.  Cook on low for 8-10 hours or on high for 4-5 hours.During the last hour of cooking, I like to shred the chicken with two forks.  Just pull them apart.  The chicken should shred very easily."
     ]
   }
 }
