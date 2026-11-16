@@ -1,70 +1,76 @@
 {
-  "date": "2026-11-15",
+  "date": "2026-11-16",
   "breakfast": {
-    "id": 644848,
-    "name": "Gluten Free Pancakes",
-    "image": "https://img.spoonacular.com/recipes/644848-556x370.jpg",
-    "cookTime": 45,
+    "id": 622598,
+    "name": "Pittata - Pizza Frittata",
+    "image": "https://img.spoonacular.com/recipes/622598-556x370.jpg",
+    "cookTime": 30,
     "ingredients": [
-      "2 tablespoons agave nectar",
-      "1 teaspoon baking powder",
-      "1 cup blanched almond flour",
-      "2 large eggs",
-      "1/4 cup almond milk, or preferred milk alternative",
-      "pinch of salt",
-      "3/4 cup tapioca flour",
-      "1/2 teaspoon vanilla",
-      "1 1/2 cups warm water",
-      "1/4 teaspoon distilled white vinegar",
-      "1 teaspoon xanthan gum"
+      "8 eggs",
+      "fresh basil",
+      "1/2 cup milk",
+      "freshly grated Parmesan cheese",
+      "pepperoni",
+      "1/4 cup shredded mozzarella cheese"
     ],
     "steps": [
-      "Start by making the buttermilk.",
-      "Mix together the almond milk and vinegar, set aside.In a large bowl, whisk together all of the dry ingredients: almond flour, tapioca flour, xanthan gum, salt, and baking powder.In a medium-sized bowl, whisk together all of the wet ingredients: agave nectar, eggs, milk mixture, water, and vanilla.",
-      "Whisk the wet ingredients into the dry, mixing well.",
-      "Add warm water one tablespoon at a time if the batter needs to be thinned out more.",
-      "Heat a skillet or griddle over medium heat.Lightly grease the skillet and, using an ice cream scoop, pour in the batter. Then, spread it out with the back of a spoon.Cook for 1 minute, or until the bottom of the pancake is firm.Flip it over, squish it down with a spatula, and cook an additional 1-2 minutes or until done.Set aside on a plate and repeat with the remaining batter. Makes 10-12 pancakes.",
-      "Serve with Earth Balance butter and syrup or fruit. Delicious!"
+      "Pre-heat oven to ~450\u00b0F (230\u00b0C), top heat only.",
+      "On the stove, heat cooking fat in a large oven-safe skillet over medium heat.",
+      "Beat the eggs with the milk (again milk is optional), salt, pepper, and any herbs or spices desired.",
+      "Add any desired add-ins (other than cheese) to the skillet. For the pittata, we didn't use anything, but this is when you would add your cooked vegetables or raw vegetables that don't require much cooking (e.g. bell pepper).",
+      "Pour in the egg mixture and tilt the skillet to ensure it evenly surrounds any add-ins. Now distribute the shredded cheese and pepperoni slices (if using).",
+      "Allow the eggs to cook on the stove until the edges of the eggs are set. The center will still be a bit jiggly. Now is a good time to top with Parmesan cheese (be generous!)",
+      "Transfer the pan to the hot oven and bake until the eggs are puffed and browned with a firm center.",
+      "Remove from oven and let cool for a couple minutes before cutting into wedges."
     ]
   },
   "lunch": {
-    "id": 652696,
-    "name": "Mushroom Spinach Soup",
-    "image": "https://img.spoonacular.com/recipes/652696-556x370.jpg",
+    "id": 640619,
+    "name": "Creamy Chicken Orzo Soup",
+    "image": "https://img.spoonacular.com/recipes/640619-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "4 tablespoons Butter",
-      "1 cup Celery, minced",
-      "3 cups Chicken broth",
-      "3 Cloves garlic, minced",
-      "2 cups Heavy cream",
-      "3 cups Mushrooms, sliced",
-      "1 cup Onion, minced",
-      "Salt to taste",
-      "16 ounces Spinach, chopped",
-      "1 1/2 teaspoons White pepper"
+      "2 tablespoons olive oil",
+      "1 cup celery, thinly sliced",
+      "1 cup baby carrots, thinly sliced",
+      "1 small onion, chopped",
+      "1 teaspoon kosher salt",
+      "1 teaspoon fresh ground black pepper",
+      "1 12.5 oz can Swanson Premium Chunk Chicken, drained",
+      "2 14.5 oz cans Swanson Chicken broth + 2 cans water",
+      "1/8 teaspoon poultry seasoning",
+      "1 cup Orzo, uncooked",
+      "1 cup cream of chicken condensed soup"
     ],
     "steps": [
-      "Saute onion, celery. garlic and mushrooms in butter until tender.",
-      "Add spinach, chicken broth and heavy cream. Bring to a simmer.",
-      "Add pepper and salt. Thicken with Roux.",
-      "Garnish with a slice of mushroom and fresh chopped spinach."
-    ],
-    "imagePad": 0.085
+      "In a large pot over medium heat, saute the vegetables in olive oil for about 10 minutes, until vegetables are tender.",
+      "Add the drained can of chicken and stir.",
+      "Season the chicken and vegetables with salt and pepper. Stir.",
+      "Increase the heat to medium-high and add the chicken broth plus 2 cans of warm water and stir.",
+      "Allow the soup to simmer for 15 minutes then add the uncooked pasta and seasoning. Stir.",
+      "Let the soup simmer for 20 minutes, stirring occasionally.",
+      "Add the condensed soup, stir until the broth is creamy and serve."
+    ]
   },
   "dinner": {
-    "id": 659316,
-    "name": "Saucy Shredded Barbecue Chicken",
-    "image": "https://img.spoonacular.com/recipes/659316-556x370.jpg",
-    "cookTime": 480,
+    "id": 643633,
+    "name": "Fresh Tomato Mozzarella Side Salad",
+    "image": "https://img.spoonacular.com/recipes/643633-556x370.jpg",
+    "cookTime": 15,
     "ingredients": [
-      "12 oz barbecue sauce \u2013 your favorite",
-      "1 lbs frozen chicken breasts, boneless, skinless",
-      "4 hamburger buns"
+      "1/4 cup Balsamic vinegar",
+      "4 Fresh basil leaves, finely chopped or shredded",
+      "1/2 cup Extra virgin olive oil",
+      "Kosher salt (or any other coarse salt)",
+      "Bel Gioioso Fresh Mozzarella (about 16 oz.)",
+      "4 Vine ripened tomatoes OR 4-6 Roma tomatoes"
     ],
     "steps": [
-      "In a crockpot spray the bottom and side with cooking spray.",
-      "Add your chicken and barbecue sauce.  Cook on low for 8-10 hours or on high for 4-5 hours.During the last hour of cooking, I like to shred the chicken with two forks.  Just pull them apart.  The chicken should shred very easily."
+      "Slice the mozzarella into 1/2 inch slices.Slice the tomatoes into slices.Arrange the slices alternating the mozzarella and tomatoes in a row.",
+      "Drizzle with olive oil and then with balsamic vinegar",
+      "Sprinkle with a pinch of Kosher salt.Stack 4 basil leaves together at a time and roll up tightly like a log.Make slices along the rolled up leaves diagonally with a knife. Loosen the leaves and you should see strips of basil leaves.",
+      "Sprinkle the strings of basil over the slices of mozzarella and tomatoes.",
+      "Serve chilled."
     ]
   }
 }
