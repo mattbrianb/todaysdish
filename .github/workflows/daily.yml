@@ -81,13 +81,16 @@ jobs:
           if [ "$LIVE" != "$DAY" ]; then echo "Site not updated after 20 minutes; the Worker will post once it is"; exit 0; fi
           echo "Site shows $DAY, posting"
           curl -s -X POST "https://todaysdish-ingredients.mattbrianburnett.workers.dev/ig/publish?day=$DAY" -H "Authorization: Bearer $MEDIA_KEY" > result.json
+          # The website is already updated by now, so a post that didn't go out is a warning, not a
+          # failed job: the Worker keeps trying on its own (and waits out Meta's request limit)
           python - <<'PY'
-          import json, sys
+          import json
           r = json.load(open("result.json"))
           ok = ("posted", "already posted", "posting already in progress")
-          print("Instagram:", r.get("status"), r.get("error") or r.get("media_id") or "")
+          retry = f" (next try {r['retry_at']})" if r.get("retry_at") else ""
+          print("Instagram:", r.get("status"), (r.get("error") or r.get("media_id") or "") + retry)
           fb = r.get("facebook")
           print("Facebook:", "not set up" if fb is None else f"{fb.get('status')} {fb.get('error') or fb.get('post_id') or ''}")
           if r.get("status") not in ok or (fb is not None and fb.get("status") not in ok):
-              sys.exit("Something didn't post, see above (the Worker retries every 5 minutes)")
+              print("::warning::Something didn't post yet, see above. The website is fine and the Worker keeps trying on its own.")
           PY

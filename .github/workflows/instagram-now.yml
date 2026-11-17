@@ -54,7 +54,8 @@ jobs:
           MEDIA_KEY: ${{ secrets.MEDIA_KEY }}
         run: |
           DAY=$(python -c "import json; print(json.load(open('today.json'))['date'])")
-          curl -s -X POST "https://todaysdish-ingredients.mattbrianburnett.workers.dev/ig/publish?day=$DAY" -H "Authorization: Bearer $MEDIA_KEY" > result.json
+          # force=1: try Instagram now even if the Worker gave up for today or is waiting out Meta's limit
+          curl -s -X POST "https://todaysdish-ingredients.mattbrianburnett.workers.dev/ig/publish?day=$DAY&force=1" -H "Authorization: Bearer $MEDIA_KEY" > result.json
           python - <<'EOF'
           import json, sys
           r = json.load(open("result.json"))

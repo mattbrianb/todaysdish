@@ -9,6 +9,7 @@
 //   /media/<day>/<file> today's Instagram images, Reel video and captions: PUT by the daily GitHub job
 //                     (Authorization: Bearer MEDIA_KEY), GET is public so Instagram can fetch them
 //   /ig/publish       POST (Bearer MEDIA_KEY) to post a day's carousel and story now
+//                     (?force=1, the manual button: try Instagram even if it gave up or is waiting)
 //   /ig/status        GET (Bearer MEDIA_KEY) recent posting results and token age
 //   /health           GET, public: Worker version, when the cron last ran, whether GH_TOKEN
 //                     is set and the last job start (no secrets, safe to open in a browser)
@@ -29,7 +30,9 @@
 // or holds it up. The GitHub job also asks
 // for the post the moment the site updates; a lock stops the two posting together. Each
 // network posts at most once a day and retries on its own, so a failure on one never blocks
-// or repeats the other. On Mondays from 04:00 UTC, quiet ticks send the weekly email.
+// or repeats the other. When Meta answers "Application request limit reached", Instagram waits
+// an hour before trying again (that doesn't use up a try) and then only publishes the carousel
+// it already built. On Mondays from 04:00 UTC, quiet ticks send the weekly email.
 //
 // Secrets: RESEND_API_KEY (Resend, sending only, for the Monday email), ADMIN_KEY (the admin
 // page password), IG_TOKEN, MEDIA_KEY (shared with the GitHub job), IP_SALT (optional),
@@ -52,13 +55,17 @@ const FB_API = "https://graph.facebook.com";
 const isSystemToken = token => token.startsWith("EAA");
 const MEDIA_KEEP_DAYS = 3;
 const MAX_POST_ATTEMPTS = 3;
+// Meta's "Application request limit reached" means too many requests, not a broken post:
+// wait this long before asking again, and don't count it as one of the tries
+const RATE_LIMIT_WAIT_MS = 60 * 60000;
+const isRateLimit = msg => /request limit reached|too many calls|rate limit/i.test(msg || "");
 const TOKEN_REFRESH_DAYS = 7; // tokens last 60 days and must be renewed before then
 const SITE_TODAY = "https://www.todaysdish.food/today.json";
 const GH_DISPATCH = "https://api.github.com/repos/mattbrianb/todaysdish/actions/workflows/daily.yml/dispatches";
 const DISPATCH_EVERY_MS = 30 * 60000; // a run plus the Pages deploy takes about 5 minutes
 const MAX_DISPATCHES = 8;
 const POST_LOCK_MS = 10 * 60000;
-const WORKER_VERSION = "2026-11-08 subscriber admin";
+const WORKER_VERSION = "2026-11-17 instagram waits";
 
 // The menu day is GMT: a new one at 00:00 UTC
 function utcToday() {
@@ -165,18 +172,20 @@ let fbColumnsReady = false;
 async function ensureFbColumns(env) {
   if (fbColumnsReady) return;
   for (const col of ["fb_post_id TEXT", "fb_story_id TEXT", "fb_attempts INTEGER NOT NULL DEFAULT 0", "fb_error TEXT", "busy_until INTEGER",
-    "reel_container TEXT", "reel_id TEXT", "reel_attempts INTEGER NOT NULL DEFAULT 0", "reel_error TEXT"]) {
+    "reel_container TEXT", "reel_id TEXT", "reel_attempts INTEGER NOT NULL DEFAULT 0", "reel_error TEXT",
+    "ig_container TEXT", "ig_retry_at INTEGER"]) {
     try { await env.DB.prepare(`ALTER TABLE ig_posts ADD COLUMN ${col}`).run(); } catch (e) { /* already there */ }
   }
   fbColumnsReady = true;
 }
 
-async function publishDay(env, day) {
+// force (the manual "post now" button) tries Instagram even after it gave up or is waiting
+async function publishDay(env, day, force = false) {
   await ensureFbColumns(env);
   await env.DB.prepare("INSERT OR IGNORE INTO ig_posts (day, attempts) VALUES (?, 0)").bind(day).run();
   const row = await env.DB.prepare("SELECT * FROM ig_posts WHERE day = ?").bind(day).first();
   const fbWanted = Boolean(env.FB_PAGE_ID);
-  const igDone = row.media_id || row.attempts >= MAX_POST_ATTEMPTS;
+  const igDone = row.media_id || (!force && row.attempts >= MAX_POST_ATTEMPTS);
   const fbDone = !fbWanted || row.fb_post_id || row.fb_attempts >= MAX_POST_ATTEMPTS;
 
   let slides = [], keys = [];
@@ -195,7 +204,7 @@ async function publishDay(env, day) {
     try {
       // The other caller may have finished just before we took the lock
       const fresh = await env.DB.prepare("SELECT * FROM ig_posts WHERE day = ?").bind(day).first();
-      const result = { day, ...(await publishInstagram(env, day, fresh, keys, slides)) };
+      const result = { day, ...(await publishInstagram(env, day, fresh, keys, slides, force)) };
       if (fbWanted) result.facebook = await publishFacebook(env, day, fresh, keys, slides);
       return result;
     } finally {
@@ -203,40 +212,55 @@ async function publishDay(env, day) {
     }
   }
 
-  const result = { day, ...(await publishInstagram(env, day, row, keys, slides)) };
+  const result = { day, ...(await publishInstagram(env, day, row, keys, slides, force)) };
   if (fbWanted) result.facebook = await publishFacebook(env, day, row, keys, slides);
   return result;
 }
 
-async function publishInstagram(env, day, row, keys, slides) {
+async function publishInstagram(env, day, row, keys, slides, force = false) {
   if (row.media_id) return { status: "already posted", media_id: row.media_id };
-  if (row.attempts >= MAX_POST_ATTEMPTS) return { status: "gave up", error: row.error };
+  if (!force && row.attempts >= MAX_POST_ATTEMPTS) return { status: "gave up", error: row.error };
+  // Meta said the app made too many requests: leave it alone until the wait is over
+  if (!force && row.ig_retry_at && Date.now() < row.ig_retry_at) {
+    return { status: "waiting", error: row.error, retry_at: new Date(row.ig_retry_at).toISOString() };
+  }
 
-  await env.DB.prepare("UPDATE ig_posts SET attempts = attempts + 1 WHERE day = ?").bind(day).run();
+  await env.DB.prepare("UPDATE ig_posts SET attempts = attempts + 1, ig_retry_at = NULL WHERE day = ?").bind(day).run();
   try {
     const caption = (await mediaText(env, day + "/caption.txt")) || "";
     const token = await igToken(env);
-    let uid, me;
+    let uid, me = {};
     if (isSystemToken(token)) {
       if (!env.IG_USER_ID) throw new Error("IG_USER_ID secret is not set");
       uid = env.IG_USER_ID;
-      me = await igCall(uid, { fields: "username" }, token, "GET");
     } else {
       me = await igCall("me", { fields: "user_id,username" }, token, "GET");
       uid = me.user_id || me.id;
     }
 
-    // Carousel: one container per slide, then the carousel itself
-    const children = [];
-    for (const k of slides) {
-      children.push(await createContainer(uid, { image_url: mediaUrl(k), is_carousel_item: "true" }, token));
+    // A finished carousel from an earlier try only needs publishing, which saves about 20 requests
+    let carousel = row.ig_container || null;
+    if (!carousel) {
+      // Carousel: one container per slide, then the carousel itself
+      const children = [];
+      for (const k of slides) {
+        children.push(await createContainer(uid, { image_url: mediaUrl(k), is_carousel_item: "true" }, token));
+      }
+      for (const id of children) await waitReady(id, token);
+      carousel = await createContainer(uid, { media_type: "CAROUSEL", children: children.join(","), caption }, token);
+      await waitReady(carousel, token);
+      await env.DB.prepare("UPDATE ig_posts SET ig_container = ? WHERE day = ?").bind(carousel, day).run();
     }
-    for (const id of children) await waitReady(id, token);
-    const carousel = await createContainer(uid, { media_type: "CAROUSEL", children: children.join(","), caption }, token);
-    await waitReady(carousel, token);
-    const post = await igCall(`${uid}/media_publish`, { creation_id: carousel }, token);
+    let post;
+    try {
+      post = await igCall(`${uid}/media_publish`, { creation_id: carousel }, token);
+    } catch (e) {
+      // An expired or broken carousel can't be published: build a new one next time
+      if (!isRateLimit(e.message)) await env.DB.prepare("UPDATE ig_posts SET ig_container = NULL WHERE day = ?").bind(day).run();
+      throw e;
+    }
     await env.DB
-      .prepare("UPDATE ig_posts SET media_id = ?, posted_at = ?, error = NULL WHERE day = ?")
+      .prepare("UPDATE ig_posts SET media_id = ?, posted_at = ?, error = NULL, ig_container = NULL WHERE day = ?")
       .bind(post.id, Date.now(), day).run();
 
     // Story is a bonus: a failure here never undoes the post
@@ -253,6 +277,13 @@ async function publishInstagram(env, day, row, keys, slides) {
     }
     return { status: "posted", media_id: post.id, story_id: story, username: me.username };
   } catch (e) {
+    if (isRateLimit(e.message)) {
+      const retryAt = Date.now() + RATE_LIMIT_WAIT_MS;
+      await env.DB
+        .prepare("UPDATE ig_posts SET attempts = MAX(attempts - 1, 0), ig_retry_at = ?, error = ? WHERE day = ?")
+        .bind(retryAt, e.message, day).run();
+      return { status: "retrying later", error: e.message, retry_at: new Date(retryAt).toISOString() };
+    }
     await env.DB.prepare("UPDATE ig_posts SET error = ? WHERE day = ?").bind(e.message, day).run();
     return { status: "failed", error: e.message };
   }
@@ -662,7 +693,8 @@ async function runScheduled(env) {
   if (quiet) posts.reel = await publishReel(env, day);
   // Email only on a tick that did no posting (posted or given up on both networks), so a
   // run never does both; a problem there never touches the posts
-  const settled = s => ["already posted", "gave up"].includes(s);
+  // ("waiting" means Instagram is sitting out Meta's request limit, so this tick posted nothing)
+  const settled = s => ["already posted", "gave up", "waiting"].includes(s);
   if (settled(posts.status) && (!posts.facebook || settled(posts.facebook.status))) {
     try {
       posts.email = await runNewsletter(env, day);
@@ -1115,7 +1147,7 @@ if (url.pathname === "/img") {
       if (url.pathname === "/ig/publish" && request.method === "POST") {
         const day = url.searchParams.get("day") || utcToday();
         if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) return json({ error: "Invalid day" }, 400);
-        return json(await publishDay(env, day));
+        return json(await publishDay(env, day, url.searchParams.get("force") === "1"));
       }
       if (url.pathname === "/ig/status" && request.method === "GET") {
         await ensureFbColumns(env);

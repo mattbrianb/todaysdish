@@ -22,7 +22,9 @@ CREATE TABLE IF NOT EXISTS media (
 );
 
 /* Daily posts: one row per day, Instagram and Facebook Page tracked separately.
-   (The Worker adds the fb_, busy_until and reel_ columns itself on databases created before Facebook support.) */
+   ig_container is a finished carousel waiting to be published; ig_retry_at is when Instagram may be
+   asked again after Meta's request limit.
+   (The Worker adds the fb_, busy_until, reel_ and ig_container/ig_retry_at columns itself on older databases.) */
 CREATE TABLE IF NOT EXISTS ig_posts (
   day TEXT PRIMARY KEY,
   media_id TEXT,
@@ -38,7 +40,9 @@ CREATE TABLE IF NOT EXISTS ig_posts (
   reel_container TEXT,
   reel_id TEXT,
   reel_attempts INTEGER NOT NULL DEFAULT 0,
-  reel_error TEXT
+  reel_error TEXT,
+  ig_container TEXT,
+  ig_retry_at INTEGER
 );
 
 /* Instagram: the renewed access token; when the Worker last started the daily GitHub job */
