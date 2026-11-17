@@ -1,76 +1,72 @@
 {
-  "date": "2026-11-16",
+  "date": "2026-11-17",
   "breakfast": {
-    "id": 622598,
-    "name": "Pittata - Pizza Frittata",
-    "image": "https://img.spoonacular.com/recipes/622598-556x370.jpg",
-    "cookTime": 30,
+    "id": 656481,
+    "name": "Poached Egg With Spinach and Tomato",
+    "image": "https://img.spoonacular.com/recipes/656481-556x370.jpg",
+    "cookTime": 20,
     "ingredients": [
-      "8 eggs",
-      "fresh basil",
-      "1/2 cup milk",
-      "freshly grated Parmesan cheese",
-      "pepperoni",
-      "1/4 cup shredded mozzarella cheese"
+      "2 slices whole grain bread",
+      "2 eggs",
+      "1 tablespoon white vinegar",
+      "olive oil",
+      "2 cloves of garlic, sliced finely",
+      "pinch of dried chilli flakes",
+      "1 bunch fresh spinach leaves, chopped roughly",
+      "salt and pepper to taste",
+      "1 tomato, sliced finely into rounds"
     ],
     "steps": [
-      "Pre-heat oven to ~450\u00b0F (230\u00b0C), top heat only.",
-      "On the stove, heat cooking fat in a large oven-safe skillet over medium heat.",
-      "Beat the eggs with the milk (again milk is optional), salt, pepper, and any herbs or spices desired.",
-      "Add any desired add-ins (other than cheese) to the skillet. For the pittata, we didn't use anything, but this is when you would add your cooked vegetables or raw vegetables that don't require much cooking (e.g. bell pepper).",
-      "Pour in the egg mixture and tilt the skillet to ensure it evenly surrounds any add-ins. Now distribute the shredded cheese and pepperoni slices (if using).",
-      "Allow the eggs to cook on the stove until the edges of the eggs are set. The center will still be a bit jiggly. Now is a good time to top with Parmesan cheese (be generous!)",
-      "Transfer the pan to the hot oven and bake until the eggs are puffed and browned with a firm center.",
-      "Remove from oven and let cool for a couple minutes before cutting into wedges."
+      "Take a wide skillet and fill it with enough water so the eggs can be submerged. Bring it up to a steady boil and then drop the temperature so it's at a steady simmer.",
+      "Add the vinegar.Break one egg into a bowl and slowly pour into the boiling water. Do the same with the second egg.",
+      "Let it cook until the white is cooked around the yolk, about two to three minutes.In the meanwhile, heat another wide frying pan and add some olive oil.",
+      "Add the garlic and chilli and saut for about a minute until fragrant.",
+      "Add the spinach, mix gently and cover. Cook for a minute and shut off the heat. Season to taste with salt and pepper. Separate amidst the two slices of toast and add some slices of tomato.Top each bed of vegetables with a poached egg. Season with some salt and pepper.",
+      "Serve immediately."
     ]
   },
   "lunch": {
-    "id": 640619,
-    "name": "Creamy Chicken Orzo Soup",
-    "image": "https://img.spoonacular.com/recipes/640619-556x370.jpg",
+    "id": 636415,
+    "name": "Buffalo Chicken Pizza",
+    "image": "https://img.spoonacular.com/recipes/636415-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "2 tablespoons olive oil",
-      "1 cup celery, thinly sliced",
-      "1 cup baby carrots, thinly sliced",
-      "1 small onion, chopped",
-      "1 teaspoon kosher salt",
-      "1 teaspoon fresh ground black pepper",
-      "1 12.5 oz can Swanson Premium Chunk Chicken, drained",
-      "2 14.5 oz cans Swanson Chicken broth + 2 cans water",
-      "1/8 teaspoon poultry seasoning",
-      "1 cup Orzo, uncooked",
-      "1 cup cream of chicken condensed soup"
+      "\u00bc cup crumbled blue cheese",
+      "4 pounds Butter, melted",
+      "1 can (9.75 ounces) Chicken Breast in Water, drained",
+      "3 tablespoons Frank's\u00ae RedHot\u00ae Sauce",
+      "1/2 of a green pepper, thinly sliced",
+      "1 package (10 ounces) prepared thin pizza crust (12-inch)"
     ],
     "steps": [
-      "In a large pot over medium heat, saute the vegetables in olive oil for about 10 minutes, until vegetables are tender.",
-      "Add the drained can of chicken and stir.",
-      "Season the chicken and vegetables with salt and pepper. Stir.",
-      "Increase the heat to medium-high and add the chicken broth plus 2 cans of warm water and stir.",
-      "Allow the soup to simmer for 15 minutes then add the uncooked pasta and seasoning. Stir.",
-      "Let the soup simmer for 20 minutes, stirring occasionally.",
-      "Add the condensed soup, stir until the broth is creamy and serve."
+      "Heat the oven to 425F.  Stir the chicken, hot sauce and butter in a medium bowl.",
+      "Spread the chicken mixture on the pizza crust to within 1/2-inch of the edge.  Top with the pepper and cheese.",
+      "Bake for 10 minutes or until the chicken mixture is hot and bubbling."
     ]
   },
   "dinner": {
-    "id": 643633,
-    "name": "Fresh Tomato Mozzarella Side Salad",
-    "image": "https://img.spoonacular.com/recipes/643633-556x370.jpg",
-    "cookTime": 15,
+    "id": 632071,
+    "name": "All American Sloppy Joes",
+    "image": "https://img.spoonacular.com/recipes/632071-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "1/4 cup Balsamic vinegar",
-      "4 Fresh basil leaves, finely chopped or shredded",
-      "1/2 cup Extra virgin olive oil",
-      "Kosher salt (or any other coarse salt)",
-      "Bel Gioioso Fresh Mozzarella (about 16 oz.)",
-      "4 Vine ripened tomatoes OR 4-6 Roma tomatoes"
+      "100 grams American barbecue sauce",
+      "4 Homemade burger buns, split, toasted, and buttere",
+      "2 Garlic cloves, minced",
+      "1/2 Green bell pepper, diced",
+      "450 grams Ground beef",
+      "1 teaspoon Hot sauce",
+      "1 tablespoon Olive oil",
+      "Salt and freshly ground black pepper",
+      "2 Shallots, chopped",
+      "180 grams Tomato sauce",
+      "2/3 tablespoon Worcestershire sauce"
     ],
     "steps": [
-      "Slice the mozzarella into 1/2 inch slices.Slice the tomatoes into slices.Arrange the slices alternating the mozzarella and tomatoes in a row.",
-      "Drizzle with olive oil and then with balsamic vinegar",
-      "Sprinkle with a pinch of Kosher salt.Stack 4 basil leaves together at a time and roll up tightly like a log.Make slices along the rolled up leaves diagonally with a knife. Loosen the leaves and you should see strips of basil leaves.",
-      "Sprinkle the strings of basil over the slices of mozzarella and tomatoes.",
-      "Serve chilled."
+      "Heat the olive oil in a large skillet.",
+      "Add in minced garlic, shallots, and green bell pepper.  Stir until fragrant and tender, about 3 minutes. Season it with salt and black pepper.",
+      "Add the ground beef to the vegetables. Stir and cook about 5 minutes, until the meat is no longer pink and fully cooked.",
+      "Add tomato sauce, barbecue sauce, Worcestershire, and hot sauce into the skillet. Stir to combine. Simmer until thickened.To serve, spoon and pile sloppy meat onto the toasted, buttered bun bottoms and cover with bun tops with your favourite side dish or pickles."
     ]
   }
 }
