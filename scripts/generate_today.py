@@ -3,6 +3,7 @@ import random
 import re
 import requests
 import json
+import time
 from datetime import datetime, timedelta, timezone
 
 API_KEY = os.getenv("SPOONACULAR_API_KEY")
@@ -16,6 +17,20 @@ HISTORY_FILE = "history.json"
 NO_REPEAT_DAYS = 90
 HISTORY_KEEP_DAYS = 365
 
+
+
+def get_with_retries(url, params, tries=3):
+    # A dropped connection or a server hiccup at midnight shouldn't cost the day's menu
+    # (12 Nov 2026 failed on "Remote end closed connection"). Other answers return as they are.
+    for i in range(tries):
+        try:
+            r = requests.get(url, params=params, timeout=30)
+            if r.status_code < 500 or i == tries - 1:
+                return r
+        except (requests.ConnectionError, requests.Timeout):
+            if i == tries - 1:
+                raise
+        time.sleep(5 * (i + 1))
 
 
 def image_exists(url):
@@ -129,7 +144,7 @@ def get_recipe_with_image(tags, last_served, used_today, attempts=4):
             "tags": tag_options[(start + attempt) % len(tag_options)]
         }
 
-        response = requests.get(BASE_URL, params=params, timeout=30)
+        response = get_with_retries(BASE_URL, params)
         response.raise_for_status()
 
         for recipe in response.json()["recipes"]:
