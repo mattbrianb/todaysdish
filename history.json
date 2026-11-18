@@ -3086,6 +3086,24 @@
       "meal": "dinner",
       "name": "All American Sloppy Joes",
       "id": 632071
+    },
+    {
+      "date": "2026-11-18",
+      "meal": "breakfast",
+      "name": "Cherry Coconut Milk Smoothie",
+      "id": 794350
+    },
+    {
+      "date": "2026-11-18",
+      "meal": "lunch",
+      "name": "Chili-Garlic Stir Fry",
+      "id": 638586
+    },
+    {
+      "date": "2026-11-18",
+      "meal": "dinner",
+      "name": "Fish Crocchette Appetizer",
+      "id": 642927
     }
   ]
 }

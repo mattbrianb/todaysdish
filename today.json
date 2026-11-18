@@ -1,72 +1,82 @@
 {
-  "date": "2026-11-17",
+  "date": "2026-11-18",
   "breakfast": {
-    "id": 656481,
-    "name": "Poached Egg With Spinach and Tomato",
-    "image": "https://img.spoonacular.com/recipes/656481-556x370.jpg",
-    "cookTime": 20,
+    "id": 794350,
+    "name": "Cherry Coconut Milk Smoothie",
+    "image": "https://img.spoonacular.com/recipes/794350-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "2 slices whole grain bread",
-      "2 eggs",
-      "1 tablespoon white vinegar",
-      "olive oil",
-      "2 cloves of garlic, sliced finely",
-      "pinch of dried chilli flakes",
-      "1 bunch fresh spinach leaves, chopped roughly",
-      "salt and pepper to taste",
-      "1 tomato, sliced finely into rounds"
+      "1 frozen banana, sliced (2/3 cup frozen slices)",
+      "2 cups fresh cherries, pitted",
+      "2/3 cup coconut milk",
+      "1/3 cup almond or hemp milk, or more as needed",
+      "1 teaspoon vanilla"
     ],
     "steps": [
-      "Take a wide skillet and fill it with enough water so the eggs can be submerged. Bring it up to a steady boil and then drop the temperature so it's at a steady simmer.",
-      "Add the vinegar.Break one egg into a bowl and slowly pour into the boiling water. Do the same with the second egg.",
-      "Let it cook until the white is cooked around the yolk, about two to three minutes.In the meanwhile, heat another wide frying pan and add some olive oil.",
-      "Add the garlic and chilli and saut for about a minute until fragrant.",
-      "Add the spinach, mix gently and cover. Cook for a minute and shut off the heat. Season to taste with salt and pepper. Separate amidst the two slices of toast and add some slices of tomato.Top each bed of vegetables with a poached egg. Season with some salt and pepper.",
-      "Serve immediately."
+      "Combine all of the ingredients in a blender and process until smooth.",
+      "Add a bit more almond or hemp milk if the mixture is too thick.Tip: To freeze bananas for smoothies, peel the banana and cut into slices.",
+      "Place the slices on a baking sheet lined with parchment paper and freeze. Once frozen, transfer to a freezer-friendly container or freezer bag. The bananas will freeze well for up to 4 to 6 months."
     ]
   },
   "lunch": {
-    "id": 636415,
-    "name": "Buffalo Chicken Pizza",
-    "image": "https://img.spoonacular.com/recipes/636415-556x370.jpg",
+    "id": 638586,
+    "name": "Chili-Garlic Stir Fry",
+    "image": "https://img.spoonacular.com/recipes/638586-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "\u00bc cup crumbled blue cheese",
-      "4 pounds Butter, melted",
-      "1 can (9.75 ounces) Chicken Breast in Water, drained",
-      "3 tablespoons Frank's\u00ae RedHot\u00ae Sauce",
-      "1/2 of a green pepper, thinly sliced",
-      "1 package (10 ounces) prepared thin pizza crust (12-inch)"
+      "2 teaspoons sesame oil, divided",
+      "12 ounces boneless, skinless chicken breast, cubed",
+      "4 large stalks bok choy, chopped (stalk and leaf divided)",
+      "8 ounces snow peas",
+      "3 mediums carrots, peeled and chopped",
+      "1 yellow pepper, sliced",
+      "1 orange pepper, sliced",
+      "3 mediums green onions, white and green parts, chopped",
+      "Sauce",
+      "3/4 cup low sodium chicken broth",
+      "2 tablespoons cooking sherry",
+      "2 teaspoons cornstarch",
+      "2 tablespoons Sriracha or other chili-garlic sauce",
+      "6 cloves garlic, minced",
+      "1 teaspoon sesame oil",
+      "Stir fry",
+      "Stir fry"
     ],
     "steps": [
-      "Heat the oven to 425F.  Stir the chicken, hot sauce and butter in a medium bowl.",
-      "Spread the chicken mixture on the pizza crust to within 1/2-inch of the edge.  Top with the pepper and cheese.",
-      "Bake for 10 minutes or until the chicken mixture is hot and bubbling."
+      "I a wok or large skillet, heat 1 teaspoon sesame oil over medium-high heat.",
+      "Add chicken and saute until cooked through. Set aside and cover.",
+      "In the same pan, heat 1 teaspoon sesame oil over medium-high heat.",
+      "Add bok choy stalks (not the leaves), carrots and snow peas and saute until just tender. Set aside and cover.",
+      "Meanwhile, in a medium bowl, combine broth, sherry, cornstarch and Sriracha.",
+      "Heat final teaspoon sesame oil over medium high heat and add garlic.",
+      "Saute until fragrant, 30 seconds to 1 minute.",
+      "Add sauce and bring to a boil. Stir until it thickens then add chicken, veggies, bok choy leaves and green onion. Stir until all are coated and heated through."
     ]
   },
   "dinner": {
-    "id": 632071,
-    "name": "All American Sloppy Joes",
-    "image": "https://img.spoonacular.com/recipes/632071-556x370.jpg",
+    "id": 642927,
+    "name": "Fish Crocchette Appetizer",
+    "image": "https://img.spoonacular.com/recipes/642927-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "100 grams American barbecue sauce",
-      "4 Homemade burger buns, split, toasted, and buttere",
-      "2 Garlic cloves, minced",
-      "1/2 Green bell pepper, diced",
-      "450 grams Ground beef",
-      "1 teaspoon Hot sauce",
-      "1 tablespoon Olive oil",
-      "Salt and freshly ground black pepper",
-      "2 Shallots, chopped",
-      "180 grams Tomato sauce",
-      "2/3 tablespoon Worcestershire sauce"
+      "Bread crumbs",
+      "Canola oil",
+      "500 grams cod fillet (or any white fish fillet)",
+      "2 eggs",
+      "100 grams flour",
+      "1 clove garlic",
+      "1/2 Grated rind of a lemon",
+      "1 cup milk",
+      "50 grams parmesan cheese",
+      "1 bunch chopped parsley",
+      "400 grams potatoes",
+      "Salt",
+      "150 grams tuna in olive oil"
     ],
     "steps": [
-      "Heat the olive oil in a large skillet.",
-      "Add in minced garlic, shallots, and green bell pepper.  Stir until fragrant and tender, about 3 minutes. Season it with salt and black pepper.",
-      "Add the ground beef to the vegetables. Stir and cook about 5 minutes, until the meat is no longer pink and fully cooked.",
-      "Add tomato sauce, barbecue sauce, Worcestershire, and hot sauce into the skillet. Stir to combine. Simmer until thickened.To serve, spoon and pile sloppy meat onto the toasted, buttered bun bottoms and cover with bun tops with your favourite side dish or pickles."
+      "Begin to cook the fish and potatoes.Cook cod in a saucepan.Boil the potatoes in their skins in a pot with the water or in the microwave in a container with two inches of water (for the cooking time in the microwave, read the instruction booklet)",
+      "Let cool cod, eliminated any remaining bones. In a bowl add the mashed potatoes, the minced cod, the garlic cooked in the milk, tuna, drained, Parmesan, chopped parsley, salt , egg and the half lemon zest grated.",
+      "Mix well the mixture , form into balls to the same size if possible.Coat in white flour, dip in beaten egg and into bread crumbs, fry in canola oil (325 degrees F) until golden , dry on paper towels."
     ]
   }
 }
