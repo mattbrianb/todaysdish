@@ -31,7 +31,8 @@
 // or holds it up. The GitHub job also asks
 // for the post the moment the site updates; a lock stops the two posting together. Each
 // network posts at most once a day and retries on its own, so a failure on one never blocks
-// or repeats the other. Instagram (carousel and Reel) gets at most one publish request a day:
+// or repeats the other. Instagram (carousel and Reel) and the Facebook Page each get at most one
+// publish request a day, claimed in D1 first so only one caller can ever send it:
 // Meta has answered with errors and posted anyway, so after an error the Worker looks for the
 // post instead of publishing again. Meta's request limit before publishing means waiting an hour.
 // The IG_PAUSED variable set to 1 stops all Instagram posting (Facebook carries on). On Mondays from 04:00 UTC, quiet ticks send the weekly email.
@@ -67,7 +68,7 @@ const GH_DISPATCH = "https://api.github.com/repos/mattbrianb/todaysdish/actions/
 const DISPATCH_EVERY_MS = 30 * 60000; // a run plus the Pages deploy takes about 5 minutes
 const MAX_DISPATCHES = 8;
 const POST_LOCK_MS = 10 * 60000;
-const WORKER_VERSION = "2026-11-19 one instagram post a day";
+const WORKER_VERSION = "2026-11-19 one post a day everywhere";
 
 // The menu day is GMT: a new one at 00:00 UTC
 function utcToday() {
@@ -175,7 +176,7 @@ async function ensureFbColumns(env) {
   if (fbColumnsReady) return;
   for (const col of ["fb_post_id TEXT", "fb_story_id TEXT", "fb_attempts INTEGER NOT NULL DEFAULT 0", "fb_error TEXT", "busy_until INTEGER",
     "reel_container TEXT", "reel_id TEXT", "reel_attempts INTEGER NOT NULL DEFAULT 0", "reel_error TEXT",
-    "ig_retry_at INTEGER", "ig_publish_at INTEGER", "reel_publish_at INTEGER"]) {
+    "ig_retry_at INTEGER", "ig_publish_at INTEGER", "reel_publish_at INTEGER", "fb_publish_at INTEGER"]) {
     try { await env.DB.prepare(`ALTER TABLE ig_posts ADD COLUMN ${col}`).run(); } catch (e) { /* already there */ }
   }
   fbColumnsReady = true;
@@ -288,8 +289,12 @@ async function publishInstagram(env, day, row, keys, slides, force = false) {
     const carousel = await createContainer(uid, { media_type: "CAROUSEL", children: children.join(","), caption }, token);
     await waitReady(carousel, token);
 
-    // Note the request before sending it, so not even a crash halfway can lead to a second one
-    await env.DB.prepare("UPDATE ig_posts SET ig_publish_at = ? WHERE day = ?").bind(Date.now(), day).run();
+    // Claim the day's one publish request before sending it. Only one caller can win the claim,
+    // so a crash halfway or the GitHub job and the cron overlapping can never send a second one
+    const claim = await env.DB
+      .prepare("UPDATE ig_posts SET ig_publish_at = ? WHERE day = ? AND (ig_publish_at IS NULL OR ? = 1)")
+      .bind(Date.now(), day, force ? 1 : 0).run();
+    if (!claim.meta || claim.meta.changes !== 1) return { status: "posting already in progress" };
     let mediaId;
     try {
       mediaId = String((await igCall(`${uid}/media_publish`, { creation_id: carousel }, token)).id);
@@ -355,16 +360,42 @@ async function pageAccessToken(token, page) {
 }
 
 // Facebook Page: the same slides as one multi-photo post (links are clickable there), then a story
+// Today's post on the Page, if there is one (see findDayPost: an error answer can still post)
+async function findPagePost(page, pageToken, day) {
+  const since = Date.parse(day + "T00:00:00Z");
+  const list = await fbCall(`${page}/published_posts`, { fields: "id,created_time", limit: "10" }, pageToken, "GET");
+  const hit = (list.data || []).find(p => Date.parse(String(p.created_time).replace(/([+-]\d{2})(\d{2})$/, "$1:$2")) >= since);
+  return hit ? String(hit.id) : null;
+}
+
+// Like Instagram: at most one feed post request a day; after an error the Worker only looks
 async function publishFacebook(env, day, row, keys, slides) {
   if (row.fb_post_id) return { status: "already posted", post_id: row.fb_post_id };
   if (row.fb_attempts >= MAX_POST_ATTEMPTS) return { status: "gave up", error: row.fb_error };
 
   await env.DB.prepare("UPDATE ig_posts SET fb_attempts = fb_attempts + 1 WHERE day = ?").bind(day).run();
+  const record = async id => {
+    await env.DB.prepare("UPDATE ig_posts SET fb_post_id = ?, fb_error = NULL WHERE day = ?").bind(id, day).run();
+  };
+  const stop = async msg => {
+    await env.DB.prepare("UPDATE ig_posts SET fb_attempts = ?, fb_error = ? WHERE day = ?").bind(MAX_POST_ATTEMPTS, msg, day).run();
+    return { status: "not posted", error: msg };
+  };
   try {
     const token = env.FB_TOKEN || await igToken(env);
     if (!isSystemToken(token)) throw new Error("Facebook needs a Meta system-user token: set FB_TOKEN");
     const page = env.FB_PAGE_ID;
     const pageToken = await pageAccessToken(token, page);
+
+    // A post request already went out for this day: only look for it
+    if (row.fb_publish_at) {
+      const existing = await findPagePost(page, pageToken, day);
+      if (existing) {
+        await record(existing);
+        return { status: "already posted", post_id: existing };
+      }
+      return stop("a post request was already sent and no post was found; not sending another so nothing posts twice");
+    }
 
     const message = (await mediaText(env, day + "/facebook.txt")) || (await mediaText(env, day + "/caption.txt")) || "";
     const params = { message };
@@ -373,8 +404,24 @@ async function publishFacebook(env, day, row, keys, slides) {
       const photo = await fbCall(`${page}/photos`, { url: mediaUrl(k), published: "false" }, pageToken);
       params[`attached_media[${i++}]`] = JSON.stringify({ media_fbid: photo.id });
     }
-    const post = await fbCall(`${page}/feed`, params, pageToken);
-    await env.DB.prepare("UPDATE ig_posts SET fb_post_id = ?, fb_error = NULL WHERE day = ?").bind(post.id, day).run();
+    const claim = await env.DB
+      .prepare("UPDATE ig_posts SET fb_publish_at = ? WHERE day = ? AND fb_publish_at IS NULL")
+      .bind(Date.now(), day).run();
+    if (!claim.meta || claim.meta.changes !== 1) return { status: "posting already in progress" };
+    let postId;
+    try {
+      postId = String((await fbCall(`${page}/feed`, params, pageToken)).id);
+    } catch (e) {
+      // The post may be up despite the error: look for it instead of posting again
+      await sleep(15000);
+      try {
+        postId = await findPagePost(page, pageToken, day);
+      } catch (c) {
+        postId = null;
+      }
+      if (!postId) return stop(`${e.message}; no post found (or couldn't check), so not sending another`);
+    }
+    await record(postId);
 
     let story = null;
     if (keys.includes(day + "/story.jpg")) {
@@ -387,7 +434,7 @@ async function publishFacebook(env, day, row, keys, slides) {
         await env.DB.prepare("UPDATE ig_posts SET fb_error = ? WHERE day = ?").bind("story: " + e.message, day).run();
       }
     }
-    return { status: "posted", post_id: post.id, story_id: story };
+    return { status: "posted", post_id: postId, story_id: story };
   } catch (e) {
     await env.DB.prepare("UPDATE ig_posts SET fb_error = ? WHERE day = ?").bind(e.message, day).run();
     return { status: "failed", error: e.message };
@@ -472,7 +519,10 @@ async function publishReel(env, day) {
     if (j.status_code === "ERROR" || j.status_code === "EXPIRED") return fail(`Instagram Reel ${j.status_code}`);
     if (j.status_code !== "FINISHED") return { status: "processing", container: row.reel_container };
     // Like the carousel: one publish request a day, noted first, never repeated after an error
-    await env.DB.prepare("UPDATE ig_posts SET reel_publish_at = ? WHERE day = ?").bind(Date.now(), day).run();
+    const claim = await env.DB
+      .prepare("UPDATE ig_posts SET reel_publish_at = ? WHERE day = ? AND reel_publish_at IS NULL")
+      .bind(Date.now(), day).run();
+    if (!claim.meta || claim.meta.changes !== 1) return { status: "posting already in progress" };
     let post;
     try {
       post = await igCall(`${uid}/media_publish`, { creation_id: row.reel_container }, token);

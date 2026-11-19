@@ -22,8 +22,8 @@ CREATE TABLE IF NOT EXISTS media (
 );
 
 /* Daily posts: one row per day, Instagram and Facebook Page tracked separately.
-   ig_retry_at is when Instagram may be asked again after Meta's request limit. ig_publish_at and
-   reel_publish_at note that the day's one publish request went out, so it is never sent twice.
+   ig_retry_at is when Instagram may be asked again after Meta's request limit. ig_publish_at,
+   reel_publish_at and fb_publish_at note that the day's one publish request went out, so it is never sent twice.
    (The Worker adds the fb_, busy_until, reel_, ig_retry_at and _publish_at columns itself on older databases.) */
 CREATE TABLE IF NOT EXISTS ig_posts (
   day TEXT PRIMARY KEY,
@@ -43,7 +43,8 @@ CREATE TABLE IF NOT EXISTS ig_posts (
   reel_error TEXT,
   ig_retry_at INTEGER,
   ig_publish_at INTEGER,
-  reel_publish_at INTEGER
+  reel_publish_at INTEGER,
+  fb_publish_at INTEGER
 );
 
 /* Instagram: the renewed access token; when the Worker last started the daily GitHub job */
