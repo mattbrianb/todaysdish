@@ -3122,6 +3122,24 @@
       "meal": "dinner",
       "name": "Chicken Enchilada Salad Wraps",
       "id": 638074
+    },
+    {
+      "date": "2026-11-20",
+      "meal": "breakfast",
+      "name": "Healthy Southwestern Oatmeal",
+      "id": 646515
+    },
+    {
+      "date": "2026-11-20",
+      "meal": "lunch",
+      "name": "Slow Cooker Chicken and Dumplings",
+      "id": 715383
+    },
+    {
+      "date": "2026-11-20",
+      "meal": "dinner",
+      "name": "Easy Gluten Free Vegetarian Pasta Salad",
+      "id": 641972
     }
   ]
 }

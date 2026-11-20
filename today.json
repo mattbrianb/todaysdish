@@ -1,75 +1,68 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "breakfast": {
-    "id": 643514,
-    "name": "Fresh Herb Omelette",
-    "image": "https://img.spoonacular.com/recipes/643514-556x370.jpg",
-    "cookTime": 45,
+    "id": 646515,
+    "name": "Healthy Southwestern Oatmeal",
+    "image": "https://img.spoonacular.com/recipes/646515-556x370.jpg",
+    "cookTime": 15,
     "ingredients": [
-      "2 eggs",
-      "1/4 teaspoon black pepper",
-      "1/8 cup green onion, chopped",
-      "4 cherry tomatoes",
-      "1 sprig of fresh basil, chopped",
-      "1/8 cup parmesan cheese, shredded",
-      "olive oil"
+      "1/2 teaspoon chili powder",
+      "2 egg whites",
+      "1/2 cup old fashioned oats",
+      "4 tablespoons reduced fat cheddar cheese",
+      "Salt to taste",
+      "2 scallions, chopped (both white and green parts)"
     ],
     "steps": [
-      "Stir your eggs together in a bowl with the pepper making sure to break the yolks.",
-      "Heat a pan to medium-high and pour enough olive oil to cover the bottom of the pan.",
-      "Pour your egg into the pan. Cook for 1-2 minutes or until the egg stops bubbling and begins to solidify.",
-      "Flip the egg over and heat the other side until it is cooked through.",
-      "Place on your plate.",
-      "Add your toppings and enjoy!"
+      "Bring 1 1/2 c. water to a boil; add the oats. reduce to a simmer, and cook for about 10 minutes, until the mixture is starting to be more oats than water.",
+      "Add the scallions and chili powder, and cook until excess liquid is gone.",
+      "Add the egg whites, stirring constantly, and cook until the whites are opaque and mixed in.Turn into a serving bowl, add salt and cheddar, and start your day!"
     ]
   },
   "lunch": {
-    "id": 649487,
-    "name": "Lemon - Garlic Chicken",
-    "image": "https://img.spoonacular.com/recipes/649487-556x370.jpg",
-    "cookTime": 45,
+    "id": 715383,
+    "name": "Slow Cooker Chicken and Dumplings",
+    "image": "https://img.spoonacular.com/recipes/715383-556x370.jpg",
+    "cookTime": 11,
     "ingredients": [
-      "2 whole chicken breasts, split in half",
-      "1 tablespoon fresh mint or 1 tsp. dried mint",
-      "1 teaspoon Chopped garlic",
-      "1/2 cup fresh lemon juice",
-      "2 tablespoons olive oil",
-      "Salt and pepper to taste"
+      "4 tbsp butter",
+      "1 can of biscuits ( I used Pillsbury\u00ae Grands)",
+      "2 cans condensed cream of chicken soup",
+      "1 Tbsp flour",
+      "1 finely chopped onion",
+      "1 tsp parsley",
+      "1 tsp pepper",
+      "2 tsp poultry seasoning",
+      "3 boneless skinless chicken breasts",
+      "2 cups water"
     ],
     "steps": [
-      "Wash and pat dry chicken breasts.",
-      "Place chicken in a shallow glass dish.",
-      "Combine lemon juice, olive oil, mint, garlic, salt and pepper.",
-      "Pour over chicken breasts. Cover dish and marinate chicken for several hours or overnight in refrigerator, turning occasionally.",
-      "Brush grill with vegetable oil.",
-      "Place chicken on grill skin side up, about 6 inches from medium - hot coals. Cook, turning every 8 to 10 minutes, and baste occasionally. Grill"
-    ],
-    "imagePad": 0.085
+      "Place Slow Cooker on high.",
+      "Add chicken breasts, butter, water, soup, flour, onion, poultry seasoning, pepper, and parsley. Stir and mix well. Cook on high for 4 hours. Take two forks and start shredding chicken in the mixture.After shredding chicken, tear small pieces of biscuit dough and place in slow cooker for remaining 2 hours. Stirring occasionally."
+    ]
   },
   "dinner": {
-    "id": 638074,
-    "name": "Chicken Enchilada Salad Wraps",
-    "image": "https://img.spoonacular.com/recipes/638074-556x370.jpg",
+    "id": 641972,
+    "name": "Easy Gluten Free Vegetarian Pasta Salad",
+    "image": "https://img.spoonacular.com/recipes/641972-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3 oz. light cream cheese softened",
-      "1/4 cup light sour cream",
-      "1/2 tsp chili powder",
-      "1/2 tsp cumin",
-      "1 clove garlic, minced",
-      "1 (12.5 oz) can Swanson Premium Chunk Chicken, drained and broken up",
-      "1/2 cup shredded cheddar cheese",
-      "1 (10 oz) can diced tomatoes with green chilies, drained (like Ro*Tel)",
-      "2 green onions, diced",
-      "2 Tbsp chopped fresh cilantro",
-      "lettuce",
-      "6 burrito sized tortillas, warm just enough to soften them"
+      "1 lb. gluten-free pasta",
+      "2 Tbsp. Greek plain yogurt",
+      "1 tsp. orange zest",
+      "2 tsp. fresh orange juice",
+      "2 Tbsp. olive oil",
+      "1 lb. fresh grapes",
+      "1/4 cup finely chopped fresh cilantro",
+      "1/4 tsp. sea salt",
+      "1/4 tsp. black pepper"
     ],
     "steps": [
-      "In a bowl, blend together the cream cheese, sour cream, chili powder, cumin, and garlic.",
-      "Fold in the cheese, chicken, tomatoes with green chilies, green onion and cilantro into the cream cheese mixture.",
-      "Divide mixture between the tortillas and top with lettuce.",
-      "Roll up burrito style and serve."
+      "Cook pasta according to package directions.",
+      "Drain and set aside to cool for 10 minutes.",
+      "In a large bowl, combine all ingredients; gently toss to combine.",
+      "Transfer pasta salad to four serving bowls.",
+      "Serve chilled."
     ]
   }
 }
