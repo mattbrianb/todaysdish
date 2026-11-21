@@ -1,68 +1,81 @@
 {
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "breakfast": {
-    "id": 646515,
-    "name": "Healthy Southwestern Oatmeal",
-    "image": "https://img.spoonacular.com/recipes/646515-556x370.jpg",
-    "cookTime": 15,
+    "id": 658850,
+    "name": "Royal Wedding Pear and Coriander Scones",
+    "image": "https://img.spoonacular.com/recipes/658850-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "1/2 teaspoon chili powder",
-      "2 egg whites",
-      "1/2 cup old fashioned oats",
-      "4 tablespoons reduced fat cheddar cheese",
-      "Salt to taste",
-      "2 scallions, chopped (both white and green parts)"
+      "1 pear, peeled, cored and chopped",
+      "2 cups of gluten-free flour",
+      "1 teaspoon xanthan gum)",
+      "1 teaspoon baking soda",
+      "1 tablespoon baking powder",
+      "1/2 teaspoon salt",
+      "8 tablespoons cold unsalted butter, cubed",
+      "1/4 cup sucanat",
+      "2 eggs, separated",
+      "1/2 cup sour cream",
+      "1 teaspoon coriander"
     ],
     "steps": [
-      "Bring 1 1/2 c. water to a boil; add the oats. reduce to a simmer, and cook for about 10 minutes, until the mixture is starting to be more oats than water.",
-      "Add the scallions and chili powder, and cook until excess liquid is gone.",
-      "Add the egg whites, stirring constantly, and cook until the whites are opaque and mixed in.Turn into a serving bowl, add salt and cheddar, and start your day!"
+      "Preheat your oven to 40",
+      "In a large bowl, whisk together flour, soda, powder and salt.",
+      "Cut in the butter with your fingers until grainy, like cornmeal.",
+      "Add sugar and whisk in.",
+      "Add pear and toss in.",
+      "Make a well in the center and fill with 1 egg and sour cream.",
+      "Mix in with a fork until the dough comes together.",
+      "Turn out onto a floured board and knead slightly until smooth.",
+      "Roll into a log and cut into 8 triangles and place on an ungreased cookie sheet.",
+      "Place the coriander between two pieces of wax paper and gently break with a rolling pin until crushed.  Try not to lose yourself in the gorgeous fragrance!",
+      "Gently wash the tops of the scones with the remaining beaten egg and sprinkle with coriander.",
+      "Bake for 16 minutes or until browned on top."
     ]
   },
   "lunch": {
-    "id": 715383,
-    "name": "Slow Cooker Chicken and Dumplings",
-    "image": "https://img.spoonacular.com/recipes/715383-556x370.jpg",
-    "cookTime": 11,
+    "id": 644643,
+    "name": "Ginger Soy Chicken",
+    "image": "https://img.spoonacular.com/recipes/644643-556x370.jpg",
+    "cookTime": 45,
     "ingredients": [
-      "4 tbsp butter",
-      "1 can of biscuits ( I used Pillsbury\u00ae Grands)",
-      "2 cans condensed cream of chicken soup",
-      "1 Tbsp flour",
-      "1 finely chopped onion",
-      "1 tsp parsley",
-      "1 tsp pepper",
-      "2 tsp poultry seasoning",
-      "3 boneless skinless chicken breasts",
-      "2 cups water"
+      "3 tablespoons of Butter",
+      "3 cloves of Garlic",
+      "5 1/2 inches Piece of Ginger, Chopped",
+      "1 Lime, Juiced",
+      "1/4 cup soy sauce",
+      "1/2 teaspoon Sugar",
+      "1/8 cup of Teriyaki",
+      "1 whole Chicken",
+      "1 tablespoon of Worcestershire"
     ],
     "steps": [
-      "Place Slow Cooker on high.",
-      "Add chicken breasts, butter, water, soup, flour, onion, poultry seasoning, pepper, and parsley. Stir and mix well. Cook on high for 4 hours. Take two forks and start shredding chicken in the mixture.After shredding chicken, tear small pieces of biscuit dough and place in slow cooker for remaining 2 hours. Stirring occasionally."
+      "Cut the butter into six pieces and place it under the skin of the chicken.In a baking dish mix up the soy, teriyaki, worcestershire, sugar, garlic, lime and ginger.Stuff the lime halves into the cavity of the bird and cover it with the delicious soy mixture.Cover the bird and place it into an oven preheated to 350 degrees for 1 hour.After the hour is up, remove the cover, baste the bird and then turn the temperature up to 375 degrees. Cook it for an additional 45 minutes or until the internal temperature reads 165 degrees.If the top is getting to dark , you can place a piece of aluminum foil lightly over the top (don't seal it, just lay it over the top)."
     ]
   },
   "dinner": {
-    "id": 641972,
-    "name": "Easy Gluten Free Vegetarian Pasta Salad",
-    "image": "https://img.spoonacular.com/recipes/641972-556x370.jpg",
+    "id": 638338,
+    "name": "Chicken Spaghettini With Fried Capers",
+    "image": "https://img.spoonacular.com/recipes/638338-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 lb. gluten-free pasta",
-      "2 Tbsp. Greek plain yogurt",
-      "1 tsp. orange zest",
-      "2 tsp. fresh orange juice",
-      "2 Tbsp. olive oil",
-      "1 lb. fresh grapes",
-      "1/4 cup finely chopped fresh cilantro",
-      "1/4 tsp. sea salt",
-      "1/4 tsp. black pepper"
+      "1 pound boneless chicken",
+      "6 tablespoons extra virgin olive oil",
+      "3 tablespoons Capers",
+      "2 teaspoons chili flakes (or less if you dont want it too spicy)",
+      "3 cloves of fresh crushed garlic",
+      "3 tablespoons fresh lemon zest",
+      "Juice from 1/2 lemon",
+      "600 grams fresh spaghettini pasta",
+      "fresh pepper and salt",
+      "Fresh shaved parm",
+      "Fresh shaved parm"
     ],
     "steps": [
-      "Cook pasta according to package directions.",
-      "Drain and set aside to cool for 10 minutes.",
-      "In a large bowl, combine all ingredients; gently toss to combine.",
-      "Transfer pasta salad to four serving bowls.",
-      "Serve chilled."
+      "Fry chicken (a pre-bought roaster will work too) and shred it with your hands...no chopping.",
+      "Pour out chicken fat (leave some chunks) from pan and add olive oil, capers, chili flakes, garlic and cook 3-5 min on medium heat.",
+      "Add chicken plus lemon zest, then squeeze in juice from lemon for good measure.",
+      "Cook spaghettini and then mix everything together and finish with basil, fresh parm and pepper and sea salt."
     ]
   }
 }
