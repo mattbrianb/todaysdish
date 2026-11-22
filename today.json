@@ -1,81 +1,84 @@
 {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "breakfast": {
-    "id": 658850,
-    "name": "Royal Wedding Pear and Coriander Scones",
-    "image": "https://img.spoonacular.com/recipes/658850-556x370.jpg",
+    "id": 660227,
+    "name": "Skinny Green Monster Smoothie",
+    "image": "https://img.spoonacular.com/recipes/660227-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 pear, peeled, cored and chopped",
-      "2 cups of gluten-free flour",
-      "1 teaspoon xanthan gum)",
-      "1 teaspoon baking soda",
-      "1 tablespoon baking powder",
-      "1/2 teaspoon salt",
-      "8 tablespoons cold unsalted butter, cubed",
-      "1/4 cup sucanat",
-      "2 eggs, separated",
-      "1/2 cup sour cream",
-      "1 teaspoon coriander"
+      "1 small frozen ripe banana, peeled",
+      "2 cups baby spinach",
+      "1 tbsp Peanut Butter",
+      "3/4 cup unsweetened vanilla almond milk",
+      "1/2 cup plain fat-free Greek yogurt"
     ],
     "steps": [
-      "Preheat your oven to 40",
-      "In a large bowl, whisk together flour, soda, powder and salt.",
-      "Cut in the butter with your fingers until grainy, like cornmeal.",
-      "Add sugar and whisk in.",
-      "Add pear and toss in.",
-      "Make a well in the center and fill with 1 egg and sour cream.",
-      "Mix in with a fork until the dough comes together.",
-      "Turn out onto a floured board and knead slightly until smooth.",
-      "Roll into a log and cut into 8 triangles and place on an ungreased cookie sheet.",
-      "Place the coriander between two pieces of wax paper and gently break with a rolling pin until crushed.  Try not to lose yourself in the gorgeous fragrance!",
-      "Gently wash the tops of the scones with the remaining beaten egg and sprinkle with coriander.",
-      "Bake for 16 minutes or until browned on top."
+      "Place all ingredients in a blender and blend until smooth."
     ]
   },
   "lunch": {
-    "id": 644643,
-    "name": "Ginger Soy Chicken",
-    "image": "https://img.spoonacular.com/recipes/644643-556x370.jpg",
+    "id": 659109,
+    "name": "Salmon Quinoa Risotto",
+    "image": "https://img.spoonacular.com/recipes/659109-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3 tablespoons of Butter",
-      "3 cloves of Garlic",
-      "5 1/2 inches Piece of Ginger, Chopped",
-      "1 Lime, Juiced",
-      "1/4 cup soy sauce",
-      "1/2 teaspoon Sugar",
-      "1/8 cup of Teriyaki",
-      "1 whole Chicken",
-      "1 tablespoon of Worcestershire"
+      "1 cup Quinoa",
+      "1 medium Onion (diced)",
+      "8 Leaves of Kale (stems removed and cut into ribbons)",
+      "5 Garlic Cloves (finely chopped)",
+      "3 tablespoons Olive Oil (divided)",
+      "10 ounces Poached Salmon (flaked)*",
+      "32 ounces Organic Vegetable Stock",
+      "Salt",
+      "Pepper"
     ],
     "steps": [
-      "Cut the butter into six pieces and place it under the skin of the chicken.In a baking dish mix up the soy, teriyaki, worcestershire, sugar, garlic, lime and ginger.Stuff the lime halves into the cavity of the bird and cover it with the delicious soy mixture.Cover the bird and place it into an oven preheated to 350 degrees for 1 hour.After the hour is up, remove the cover, baste the bird and then turn the temperature up to 375 degrees. Cook it for an additional 45 minutes or until the internal temperature reads 165 degrees.If the top is getting to dark , you can place a piece of aluminum foil lightly over the top (don't seal it, just lay it over the top)."
+      "In a 4 quart saucepan, heat 2 tablespoons of olive oil over medium high heat.",
+      "When oil is shimmering, add diced onion.",
+      "Saute onion until transparent.",
+      "Add quinoa to onion mixture and stir, to toast quinoa, for 2 minutes.",
+      "Add 1 cup of vegetable stock to quinoa and onions.",
+      "Stir until stock is absorbed.  Once stock is absorbed, add 1 cup of stock.",
+      "Continue stirring until stock is absorbed.",
+      "Add remaining stock in 1/2 cup intervals, stirring until all stock is absorbed.",
+      "Remove from heat.",
+      "While preparing the onion quinoa mixture, heat 1 tablespoon of oil in a saute pan with chopped garlic (over medium high heat).",
+      "Once garlic is sizzling, add chopped kale to the pan.",
+      "Turn kale to coat with oil and garlic.",
+      "Turn kale mixture until fragrant (approximately 2 minutes).",
+      "Remove kale mixture from heat.",
+      "Once quinoa is complete, add kale and salmon.",
+      "Stir to combine.",
+      "Add salt and pepper to taste."
     ]
   },
   "dinner": {
-    "id": 638338,
-    "name": "Chicken Spaghettini With Fried Capers",
-    "image": "https://img.spoonacular.com/recipes/638338-556x370.jpg",
+    "id": 632812,
+    "name": "Asian Chicken and Broccoli With Chili Garlic Sauce",
+    "image": "https://img.spoonacular.com/recipes/632812-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 pound boneless chicken",
-      "6 tablespoons extra virgin olive oil",
-      "3 tablespoons Capers",
-      "2 teaspoons chili flakes (or less if you dont want it too spicy)",
-      "3 cloves of fresh crushed garlic",
-      "3 tablespoons fresh lemon zest",
-      "Juice from 1/2 lemon",
-      "600 grams fresh spaghettini pasta",
-      "fresh pepper and salt",
-      "Fresh shaved parm",
-      "Fresh shaved parm"
+      "1 tablespoon sesame oil",
+      "4 cups broccoli florets",
+      "2 cups chicken breast, cooked and chopped",
+      "1/4 cup low sodium chicken broth",
+      "tablespoons rice vinegar",
+      "1 tablespoon Mirin",
+      "1/2 cup water",
+      "1/2 teaspoon chili garlic sauce",
+      "1 tablespoon fish sauce",
+      "1 teaspoon soy sauce",
+      "1/2 tablespoon cornstarch",
+      "1 cup green onion, sliced",
+      "2 cups brown basmati rice, cooked"
     ],
     "steps": [
-      "Fry chicken (a pre-bought roaster will work too) and shred it with your hands...no chopping.",
-      "Pour out chicken fat (leave some chunks) from pan and add olive oil, capers, chili flakes, garlic and cook 3-5 min on medium heat.",
-      "Add chicken plus lemon zest, then squeeze in juice from lemon for good measure.",
-      "Cook spaghettini and then mix everything together and finish with basil, fresh parm and pepper and sea salt."
+      "Combine rice vinegar, Mirin, water, chili garlic sauce, fish sauce, soy sauce and cornstarch in a bowl.",
+      "Preheat a large skillet over medium-high heat and spray with cooking spray.",
+      "Add sesame oil and stir fry broccoli for 3  4 minutes until crisp-tender.",
+      "Add 1/4 cup chicken broth if needed to keep from burning.",
+      "Add cooked chicken and sauce. Cook another 3  4 minutes until sauce thickens and chicken is heated through.",
+      "Serve with basmati rice."
     ]
   }
 }

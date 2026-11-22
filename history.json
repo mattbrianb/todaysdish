@@ -3158,6 +3158,24 @@
       "meal": "dinner",
       "name": "Chicken Spaghettini With Fried Capers",
       "id": 638338
+    },
+    {
+      "date": "2026-11-22",
+      "meal": "breakfast",
+      "name": "Skinny Green Monster Smoothie",
+      "id": 660227
+    },
+    {
+      "date": "2026-11-22",
+      "meal": "lunch",
+      "name": "Salmon Quinoa Risotto",
+      "id": 659109
+    },
+    {
+      "date": "2026-11-22",
+      "meal": "dinner",
+      "name": "Asian Chicken and Broccoli With Chili Garlic Sauce",
+      "id": 632812
     }
   ]
 }
