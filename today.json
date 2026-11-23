@@ -1,84 +1,77 @@
 {
-  "date": "2026-11-22",
+  "date": "2026-11-23",
   "breakfast": {
-    "id": 660227,
-    "name": "Skinny Green Monster Smoothie",
-    "image": "https://img.spoonacular.com/recipes/660227-556x370.jpg",
+    "id": 634514,
+    "name": "Bean and Cheese Huevos Rancheros",
+    "image": "https://img.spoonacular.com/recipes/634514-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 small frozen ripe banana, peeled",
-      "2 cups baby spinach",
-      "1 tbsp Peanut Butter",
-      "3/4 cup unsweetened vanilla almond milk",
-      "1/2 cup plain fat-free Greek yogurt"
+      "2 tablespoons Black Bean Salsa",
+      "2 tablespoons Butter",
+      "2 Chorizo Sausages, casings removed",
+      "2 Eggs",
+      "1 tablespoon Extra Virgin Olive Oil",
+      "10 2-inchs Flour Tortillas",
+      "1 tablespoon Garlic, minced",
+      "1/2 cup Mexican Shredded Cheese",
+      "2 tablespoons Peperoncini",
+      "16 ounces Refried Beans",
+      "1/4 cup Water",
+      "1/2 Medium Yellow Onionc, diced",
+      "1/2 Medium Yellow Onionc, diced"
     ],
     "steps": [
-      "Place all ingredients in a blender and blend until smooth."
-    ]
+      "Saut the onion in EVOO over medium heat until almost translucent then add the garlic, cook until tender about 1-2 minutes.",
+      "Remove the onion and garlic and set aside, cook the Chorizo for about 5 minutes trying to break the meat up as much as possible.",
+      "Drain off the excess grease then add back in the onion mixture and cook for another 5 minutes. While the Chorizo is cooking put the water and refried beans into a soup pot over medium heat to warm and thin out. In a 2nd frying pan melt 1 Tbs. of the butter to soften and brown the tortillas. Turn the broiler on, place the tortilla's on a baking sheet then spread half of the refried beans onto each tortilla.",
+      "Place half of the meat onto each tortilla then cover with 1/4 C. of the cheese on each tortilla.",
+      "Place under the broiler until the cheese has melted. While you wait for the cheese to melt cook the 2 eggs in the remaining butter just until over medium. Bring the baking sheet out of the oven and place each tortilla onto a plate, then top each with an egg. Top with 1 Tbs. salsa and 1 Tbs. peperoncini, from this point use any other optional toppings you would like."
+    ],
+    "imagePad": 0.129
   },
   "lunch": {
-    "id": 659109,
-    "name": "Salmon Quinoa Risotto",
-    "image": "https://img.spoonacular.com/recipes/659109-556x370.jpg",
+    "id": 665734,
+    "name": "Zucchini Chicken Omelette",
+    "image": "https://img.spoonacular.com/recipes/665734-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 cup Quinoa",
-      "1 medium Onion (diced)",
-      "8 Leaves of Kale (stems removed and cut into ribbons)",
-      "5 Garlic Cloves (finely chopped)",
-      "3 tablespoons Olive Oil (divided)",
-      "10 ounces Poached Salmon (flaked)*",
-      "32 ounces Organic Vegetable Stock",
-      "Salt",
-      "Pepper"
+      "3 Eggs",
+      "1 tablespoon Water",
+      "150 grams Zucchini, grated",
+      "Salt and pepper to taste",
+      "1 tablespoon Oil",
+      "80 grams Milanese chicken left over, diced"
     ],
     "steps": [
-      "In a 4 quart saucepan, heat 2 tablespoons of olive oil over medium high heat.",
-      "When oil is shimmering, add diced onion.",
-      "Saute onion until transparent.",
-      "Add quinoa to onion mixture and stir, to toast quinoa, for 2 minutes.",
-      "Add 1 cup of vegetable stock to quinoa and onions.",
-      "Stir until stock is absorbed.  Once stock is absorbed, add 1 cup of stock.",
-      "Continue stirring until stock is absorbed.",
-      "Add remaining stock in 1/2 cup intervals, stirring until all stock is absorbed.",
-      "Remove from heat.",
-      "While preparing the onion quinoa mixture, heat 1 tablespoon of oil in a saute pan with chopped garlic (over medium high heat).",
-      "Once garlic is sizzling, add chopped kale to the pan.",
-      "Turn kale to coat with oil and garlic.",
-      "Turn kale mixture until fragrant (approximately 2 minutes).",
-      "Remove kale mixture from heat.",
-      "Once quinoa is complete, add kale and salmon.",
-      "Stir to combine.",
-      "Add salt and pepper to taste."
+      "Beat eggs and water in a bowl.",
+      "Mix in grated zucchini and season with salt and pepper.",
+      "Heat the oil in a small, non-stick skillet. When hot, add half the egg mixture and cook for 1 minute until the egg begins to set. Scatter evenly with half diced chicken.",
+      "Cook for a further 1-2 minutes, until the egg is golden underneath, and just set on top. Slide out onto a serving plate, folding it over as you go. Repeat.",
+      "Serve the omelette with your favourite salad."
     ]
   },
   "dinner": {
-    "id": 632812,
-    "name": "Asian Chicken and Broccoli With Chili Garlic Sauce",
-    "image": "https://img.spoonacular.com/recipes/632812-556x370.jpg",
+    "id": 660366,
+    "name": "Smoked Salmon and Mascarpone Calzone",
+    "image": "https://img.spoonacular.com/recipes/660366-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 tablespoon sesame oil",
-      "4 cups broccoli florets",
-      "2 cups chicken breast, cooked and chopped",
-      "1/4 cup low sodium chicken broth",
-      "tablespoons rice vinegar",
-      "1 tablespoon Mirin",
-      "1/2 cup water",
-      "1/2 teaspoon chili garlic sauce",
-      "1 tablespoon fish sauce",
-      "1 teaspoon soy sauce",
-      "1/2 tablespoon cornstarch",
-      "1 cup green onion, sliced",
-      "2 cups brown basmati rice, cooked"
+      "black pepper",
+      "1 egg white, lightly beaten",
+      "extra virgin olive oil",
+      "1 small handful chives, finely chopped",
+      "kosher salt",
+      "1 leek",
+      "1/2 cup mascarpone",
+      "1 pizza dough",
+      "4 slices smoked salmon"
     ],
     "steps": [
-      "Combine rice vinegar, Mirin, water, chili garlic sauce, fish sauce, soy sauce and cornstarch in a bowl.",
-      "Preheat a large skillet over medium-high heat and spray with cooking spray.",
-      "Add sesame oil and stir fry broccoli for 3  4 minutes until crisp-tender.",
-      "Add 1/4 cup chicken broth if needed to keep from burning.",
-      "Add cooked chicken and sauce. Cook another 3  4 minutes until sauce thickens and chicken is heated through.",
-      "Serve with basmati rice."
+      "Preheat your oven to 450F and place the top rack in the lower third of your oven.  Like a baking sheet with parchment paper (optional, for easier cleanup).Wash and pat dry the leek.  Slice the leek lengthwise, then cut each half into long, very thin strips.",
+      "Cut the strips into short pieces, about  long.  Set aside.Divide the dough into two equal parts, and roll out each into a 10 circle.  Gently spread a thin layer of mascarpone on the surface of the dough, leaving at least a  crust.In a small bowl, break up the smoked salmon using your fingers until it is fluffy.  You want the filling of the calzone to be pretty even, or it will fall apart as you eat it.Divide the salmon between the two crusts, arranging it only on one side of the crust (in a half-moon shape), again leave at least a  crust.",
+      "Sprinkle the chives and leeks over the salmon, then lightly salt and pepper.  Finally, drizzle with about 1 tsp of olive oil.Fold each calzone in half, making sure that the crusts line up.  Using the tines of a fork, gently press down the edge all the way around the rounded side of the calzone to seal it.  Make sure you get a tight seal  this will help the calzone puff up during baking.",
+      "Brush the tops of each calzone with egg white.",
+      "Bake at 450F for about 15 minutes, or until golden brown and delicious."
     ]
   }
 }

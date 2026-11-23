@@ -3176,6 +3176,24 @@
       "meal": "dinner",
       "name": "Asian Chicken and Broccoli With Chili Garlic Sauce",
       "id": 632812
+    },
+    {
+      "date": "2026-11-23",
+      "meal": "breakfast",
+      "name": "Bean and Cheese Huevos Rancheros",
+      "id": 634514
+    },
+    {
+      "date": "2026-11-23",
+      "meal": "lunch",
+      "name": "Zucchini Chicken Omelette",
+      "id": 665734
+    },
+    {
+      "date": "2026-11-23",
+      "meal": "dinner",
+      "name": "Smoked Salmon and Mascarpone Calzone",
+      "id": 660366
     }
   ]
 }
