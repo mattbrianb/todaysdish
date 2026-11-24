@@ -3194,6 +3194,24 @@
       "meal": "dinner",
       "name": "Smoked Salmon and Mascarpone Calzone",
       "id": 660366
+    },
+    {
+      "date": "2026-11-24",
+      "meal": "breakfast",
+      "name": "Bananas Foster French Toast By Mommie Cooks",
+      "id": 634234
+    },
+    {
+      "date": "2026-11-24",
+      "meal": "lunch",
+      "name": "Skirt Steak Fajitas",
+      "id": 660234
+    },
+    {
+      "date": "2026-11-24",
+      "meal": "dinner",
+      "name": "Red Kidney Bean Jambalaya",
+      "id": 782601
     }
   ]
 }
