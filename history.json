@@ -3212,6 +3212,24 @@
       "meal": "dinner",
       "name": "Red Kidney Bean Jambalaya",
       "id": 782601
+    },
+    {
+      "date": "2026-11-25",
+      "meal": "breakfast",
+      "name": "Mixed Berry Yogurt with Almonds",
+      "id": 652111
+    },
+    {
+      "date": "2026-11-25",
+      "meal": "lunch",
+      "name": "Roast Chicken with Apples and Rosemary",
+      "id": 658418
+    },
+    {
+      "date": "2026-11-25",
+      "meal": "dinner",
+      "name": "Warm Duck Salad With Roasted Beetroot",
+      "id": 664960
     }
   ]
 }
