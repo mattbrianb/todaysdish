@@ -1,91 +1,80 @@
 {
-  "date": "2026-11-25",
+  "date": "2026-11-26",
   "breakfast": {
-    "id": 652111,
-    "name": "Mixed Berry Yogurt with Almonds",
-    "image": "https://img.spoonacular.com/recipes/652111-556x370.jpg",
+    "id": 641650,
+    "name": "Dried Cherry-Almond Scones",
+    "image": "https://img.spoonacular.com/recipes/641650-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1 cup mixed berries (thawed if from frozen)",
-      "1/4 cup oats, granola, or other whole grain cereal",
-      "1 cup Greek yogurt (nonfat, plain)",
-      "Whole almonds (about 10)"
+      "1/2 teaspoon almond extract",
+      "1/2 cup chopped toasted almonds",
+      "1 tablespoon baking powder",
+      "1/2 teaspoon baking soda",
+      "1 cup dried cherries",
+      "2 large eggs",
+      "500g Plain flour, sifted",
+      "1/2 tsp Salt",
+      "2 tbsp Sugar",
+      "6 tablespoons unsalted butter, cut into pieces",
+      "2/3 cup buttermik",
+      "2/3 cup buttermik"
     ],
     "steps": [
-      "You can put this together a variety of ways. It looks great layered in a glass cup or bowl.Variations. This breakfast lends itself to endless variations. If this is for dessert and you want something more decadent, use a creamier vanilla yogurt or layer in a bit of maple syrup on top of the yogurt.  Any kind of nut will do (Toast them for maximum crunch and flavor). If you dont have berries on hand, this works well with just about any fruit."
-    ]
+      "Preheat oven to 400 degree F.  Stir together flour, 1/4 cup sugar, and next 3 ingredients in a large bowl; cut int butter with a pastry blender or fork until crumbly.  Stir in cherries and almonds.",
+      "Whisk together buttermilk, 1 egg, and almond extract; add to flour mixture, stirring with a fork just until dry ingredients are moistened and mixture forms a shaggy dough.Use floured hands to pat dough into a 1/2-inch thick, 10-x7-inch rectangle on a lightly floured surface; cut into 16 rectangles.",
+      "Place scone dough on a parchment paper-lined baking sheet.",
+      "Whisk together remaining egg and 1 teaspoon water.",
+      "Brush scones with egg wash; sprinkle with remaining 1/4 cup sugar.",
+      "Bake in preheated oven for 12 to 15 minutes or until golden."
+    ],
+    "imagePad": 0.085
   },
   "lunch": {
-    "id": 658418,
-    "name": "Roast Chicken with Apples and Rosemary",
-    "image": "https://img.spoonacular.com/recipes/658418-556x370.jpg",
+    "id": 633344,
+    "name": "Bacon Wrapped Pork Tenderloin",
+    "image": "https://img.spoonacular.com/recipes/633344-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "4-6 fresh apples, quartered and cored (anything but Granny Smith)",
-      "3 onions, peeled and cut into large chunks",
-      "3 head garlic, broken into cloves, peeled",
-      "8 sprigs fresh rosemary",
-      "4 lemons quartered (reserve one for garnish)",
-      "1/2 cup Raimondo Sicilian Lemon Balsamic Vinegar",
-      "Seasoning - make a rub with the following - garlic powder, salt, pepper and thyme.",
-      "2 roasting chickens",
-      "1 can of stock (chicken or veggie)"
+      "6 slices of bacon",
+      "freshly ground black pepper",
+      "coarse salt",
+      "10 leaves fresh sage",
+      "1 pinch garlic powder",
+      "2 pounds pork tenderloin"
     ],
     "steps": [
-      "Preheat oven to 400 degrees.  Position a rack in the lower third of the oven.  Rinse the chicken, then dry it very well with paper towels, inside and out.",
-      "Place apples, rosemary, 3 lemons, onions, and garlic in a single layer in shallow roasting pan. Season with salt and pepper. Toss well and pour in the vinegar. Season the chicken well with the rub and place breast-side-up on top of the veggies and fruits.",
-      "Put the rest of the veggies and fruit in the cavity of the chicken.",
-      "Roast for 30 minutes, until the breast is firm and just beginning to brown in spots. Using tongs, turn the chicken breast-down and roast for 20 minutes longer, until the skin is lightly browned and the thermometer registers 175 to 18",
-      "Tilt the chicken to drain the cavity juices into the pan and remove the goodies from the inside and bottom of pan.  Now transfer the bird to a cutting board.",
-      "Remove the rack from the pan and spoon off the fat. Set the pan over high heat.",
-      "Add the stock and cook, scraping up any browned bits and leftover pieces of goodies. Squeeze the last lemon to release the juices. Carve the chicken and pass the chunky jus at the table."
+      "Remove about an inch off the tapered end of each tenderloin to make a perfect cylinder.Season with salt, pepper, and a pinch of garlic powder.",
+      "Lay the bacon strips in a overlapping line on a sheet of cling wrap.",
+      "Place sage leaves all over bacon (about 9-10 leaves).",
+      "Place 1 piece of tenderloin across the short ends of the bacon and roll to cover with the bacon.Repeat with the other tenderloin segments.Preheat oven to 425 F.",
+      "Place the tenderloin in non-stick pan and sear on all sides over medium-high heat.",
+      "Transfer the pan to the preheated oven and cook for 8-10 minutes, turning the pieces after 5 minutes to ensure even cooking."
     ]
   },
   "dinner": {
-    "id": 664960,
-    "name": "Warm Duck Salad With Roasted Beetroot",
-    "image": "https://img.spoonacular.com/recipes/664960-556x370.jpg",
+    "id": 645754,
+    "name": "Grilled Lemongrass Shrimp",
+    "image": "https://img.spoonacular.com/recipes/645754-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "500g ( - 1.1 pound) of duck breast meat (about 2slabs) \u2013 skin left on",
-      "300g ( - 1/2 pound +) baby beets or beetroot",
-      "zest of 1 orange",
-      "2 teaspoons honey",
-      "1 teaspoon salt",
-      "3 cups of rocket or arugula greens",
-      "4 tablespoons of toasted almond flakes or pine nuts",
-      "1 can of mandarin orange segments (drained)",
-      "Bunch of fresh mint or basil",
-      "Shaved parmesan cheese or crumbled goat or feta cheese",
-      "Juice of 1 orange (about 6 tablespoons)",
-      "2 tablespoons extra virgin olive oil",
-      "4 teaspoons balsamic vinegar",
-      "salt and pepper to taste"
+      "4 bamboo skewers (10-inch) soaked in",
+      "1/2 teaspoon ground chili paste",
+      "1/2 teaspoon fish sauce",
+      "4 cloves garlic, minced",
+      "1/4 cup minced lemongrass",
+      "1 pound medium raw shrimp peeled and deveined",
+      "1 pch salt",
+      "1 tablespoon Soy sauce",
+      "1 teaspoon sugar",
+      "2 tablespoons vegetable oil",
+      "1/4 cup Water"
     ],
     "steps": [
-      "Pre-heat the oven to 200 deg Celsius (400 F).",
-      "Start by roasting the beetroots. Clean the beets of all mud and trim the stems. Wrap each beet tightly in aluminum foil.",
-      "Place the wrapped beets on a pan and in a 200 deg Celsius oven for 30 to 40mins. They are done when they are very tender.",
-      "While the beets are cooking, use a peeler and peel an orange, taking note to get as much of zest and as little of pith (the white parts) as possible. Stack the strips of orange zest and cut into fine strips with a sharp knife. Set aside.",
-      "Clean and dry the duck breasts. Score the skin of the duck. Make cuts into the fat layer and take care not to cut into the meat layer. Rub some salt into the skin side only of the duck.",
-      "Add the duck breasts to a clean and COLD pan. Do not add any oil.",
-      "Place the pan on the stove and turn the heat to medium.",
-      "As the pan heats up, the fat from the duck will render off and the skin will brown beautifully. Always keep the heat to between medium to medium-high. Never use high heat as the skin will burn before the duck is cooked through. Once the skin is a gorgeous dark golden brown, flip the duck breasts to the other side and cook for a few more minutes till the other sides are also golden brown. Be careful not to overcook the duck. Set the cooked duck aside and leave to rest covered with foil. Duck, like beef must be rested. The resting time is half that of cooking time. If the duck was cooked for 6 mins, then it should be rested for at least 3 minutes.",
-      "While the duck is resting, make the vinaigrette. Squeeze the juice of the zested orange into a bowl. About 5 to 6 tablespoons of juice.",
-      "Add 2 tablespoons of extra virgin olive oil. Use the best quality one you have.",
-      "Add 4 teaspoons of balsamic vinegar.",
-      "Add salt and pepper to taste.",
-      "Whisk the mixture well. Set aside.",
-      "When the beets are done, remove them from the oven and let them cool for a few minutes so that they are easier to hold. Put on some disposable gloves (else get blood red stained fingers later). Open the foil-wrapped beets. Using the rough surface of each piece of foil, rub the beets with the foil to remove the skin.",
-      "Cut the cooked beets into small pieces. Set aside in a bowl.",
-      "Drizzle 2 tablespoons of vinaigrette into the beets.",
-      "Add 2 teaspoons of honey. Toss well to coat the beets with the dressing.",
-      "Slice the rested duck into thin slices. The meat should be a beautiful pink.",
-      "Serve by layering the salad with greens, nuts and cheese of your choice, and the duck and beets.",
-      "I like rocket greens with fresh basil or mint, mandarin orange segments, toasted almond flakes or pine nuts and some shaved parmesan cheese or some crumbed feta or goats cheese.",
-      "Garnish with the orange zest.",
-      "Trickle the vinaigrette over the salad.",
-      "Best served immediately."
-    ]
+      "Combine the lemongrass, garlic, soy sauce, fish sauce, chili paste, salt, sugar, and oil in a bowl.",
+      "Add the shrimp and marinate for 15 minutes. Thread the shrimp on the skewers and set them aside. Start a charcoal grill or preheat a gas grill to moderate heat. Just before serving, grill the shrimp, turning the skewers, until just done, about 2 or 3 minutes total, depending on the size. If you don't have a grill, trim the",
+      "Serves 4 as an Appetizer",
+      "Pleasures of the Vietnamese Table, by Mai Pham.Note: Vietnamese cuisine comes from an extraordinarily rich tradition, one that combines Chinese, French, and Indian influences. Acclaimed chef, cooking teacher and restaurateur Mai Pham has returned to her native land on numerous occasions to learn the secrets of its regional cuisine.The following recipe is excerpted from her latest book, Pleasures of the Vietnamese Table, a compilation of over 100 classic recipes that define Vietnamese cuisine today. These recipes are accompanied by marvelous stories and family anecdotes, as well as fine black and white photographs of the author's native land."
+    ],
+    "imagePad": 0.117
   }
 }

@@ -3230,6 +3230,24 @@
       "meal": "dinner",
       "name": "Warm Duck Salad With Roasted Beetroot",
       "id": 664960
+    },
+    {
+      "date": "2026-11-26",
+      "meal": "breakfast",
+      "name": "Dried Cherry-Almond Scones",
+      "id": 641650
+    },
+    {
+      "date": "2026-11-26",
+      "meal": "lunch",
+      "name": "Bacon Wrapped Pork Tenderloin",
+      "id": 633344
+    },
+    {
+      "date": "2026-11-26",
+      "meal": "dinner",
+      "name": "Grilled Lemongrass Shrimp",
+      "id": 645754
     }
   ]
 }
