@@ -1,80 +1,70 @@
 {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "breakfast": {
-    "id": 641650,
-    "name": "Dried Cherry-Almond Scones",
-    "image": "https://img.spoonacular.com/recipes/641650-556x370.jpg",
+    "id": 644860,
+    "name": "Gluten Free Waffles",
+    "image": "https://img.spoonacular.com/recipes/644860-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "1/2 teaspoon almond extract",
-      "1/2 cup chopped toasted almonds",
-      "1 tablespoon baking powder",
-      "1/2 teaspoon baking soda",
-      "1 cup dried cherries",
-      "2 large eggs",
-      "500g Plain flour, sifted",
-      "1/2 tsp Salt",
-      "2 tbsp Sugar",
-      "6 tablespoons unsalted butter, cut into pieces",
-      "2/3 cup buttermik",
-      "2/3 cup buttermik"
+      "3 teaspoons of baking Powder",
+      "1/2 tsp Himalania Pink salt",
+      "1 cup of brown rice",
+      "1/2 cup of Potato starch",
+      "1/4 cup tapioca flour",
+      "1/2 cup of coconut oil",
+      "1 1/2 cup of Coconut Milk",
+      "2 tsp honey",
+      "1/2 teaspoon of Baking soda",
+      "3 eggs"
     ],
     "steps": [
-      "Preheat oven to 400 degree F.  Stir together flour, 1/4 cup sugar, and next 3 ingredients in a large bowl; cut int butter with a pastry blender or fork until crumbly.  Stir in cherries and almonds.",
-      "Whisk together buttermilk, 1 egg, and almond extract; add to flour mixture, stirring with a fork just until dry ingredients are moistened and mixture forms a shaggy dough.Use floured hands to pat dough into a 1/2-inch thick, 10-x7-inch rectangle on a lightly floured surface; cut into 16 rectangles.",
-      "Place scone dough on a parchment paper-lined baking sheet.",
-      "Whisk together remaining egg and 1 teaspoon water.",
-      "Brush scones with egg wash; sprinkle with remaining 1/4 cup sugar.",
-      "Bake in preheated oven for 12 to 15 minutes or until golden."
-    ],
-    "imagePad": 0.085
-  },
-  "lunch": {
-    "id": 633344,
-    "name": "Bacon Wrapped Pork Tenderloin",
-    "image": "https://img.spoonacular.com/recipes/633344-556x370.jpg",
-    "cookTime": 45,
-    "ingredients": [
-      "6 slices of bacon",
-      "freshly ground black pepper",
-      "coarse salt",
-      "10 leaves fresh sage",
-      "1 pinch garlic powder",
-      "2 pounds pork tenderloin"
-    ],
-    "steps": [
-      "Remove about an inch off the tapered end of each tenderloin to make a perfect cylinder.Season with salt, pepper, and a pinch of garlic powder.",
-      "Lay the bacon strips in a overlapping line on a sheet of cling wrap.",
-      "Place sage leaves all over bacon (about 9-10 leaves).",
-      "Place 1 piece of tenderloin across the short ends of the bacon and roll to cover with the bacon.Repeat with the other tenderloin segments.Preheat oven to 425 F.",
-      "Place the tenderloin in non-stick pan and sear on all sides over medium-high heat.",
-      "Transfer the pan to the preheated oven and cook for 8-10 minutes, turning the pieces after 5 minutes to ensure even cooking."
+      "Mix all dry ingredients in a large bowl, and slowly mix in wet ingredients. Cook on low in waffle machine."
     ]
   },
-  "dinner": {
-    "id": 645754,
-    "name": "Grilled Lemongrass Shrimp",
-    "image": "https://img.spoonacular.com/recipes/645754-556x370.jpg",
+  "lunch": {
+    "id": 661522,
+    "name": "Steak With Blue Cheese Sherry Sauce",
+    "image": "https://img.spoonacular.com/recipes/661522-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "4 bamboo skewers (10-inch) soaked in",
-      "1/2 teaspoon ground chili paste",
-      "1/2 teaspoon fish sauce",
-      "4 cloves garlic, minced",
-      "1/4 cup minced lemongrass",
-      "1 pound medium raw shrimp peeled and deveined",
-      "1 pch salt",
-      "1 tablespoon Soy sauce",
-      "1 teaspoon sugar",
-      "2 tablespoons vegetable oil",
-      "1/4 cup Water"
+      "3 tablespoons blue cheese crumbles",
+      "2 tablespoons Olive Oil, plus extra for brushing steaks",
+      "2 teaspoons parsley, finely chopped",
+      "2 tablespoons Sherry (inexpensive cooking Sherry is okay!)",
+      "2/3 pound top round"
+    ],
+    "steps": []
+  },
+  "dinner": {
+    "id": 654913,
+    "name": "Pasta With Chicken and Mushrooms",
+    "image": "https://img.spoonacular.com/recipes/654913-556x370.jpg",
+    "cookTime": 45,
+    "ingredients": [
+      "1/4 cup Balsamic Vinegar",
+      "1 bay leaf",
+      "6 Chicken Breast Halves, skinned & boned",
+      "2 cups chicken broth",
+      "1/4 cup flour",
+      "1 pound Linguini, uncooked",
+      "1/2 pound mushrooms, sliced",
+      "2 teaspoons olive oil",
+      "1/2 teaspoon pepper",
+      "1/4 teaspoon salt",
+      "1/4 teaspoon Thyme"
     ],
     "steps": [
-      "Combine the lemongrass, garlic, soy sauce, fish sauce, chili paste, salt, sugar, and oil in a bowl.",
-      "Add the shrimp and marinate for 15 minutes. Thread the shrimp on the skewers and set them aside. Start a charcoal grill or preheat a gas grill to moderate heat. Just before serving, grill the shrimp, turning the skewers, until just done, about 2 or 3 minutes total, depending on the size. If you don't have a grill, trim the",
-      "Serves 4 as an Appetizer",
-      "Pleasures of the Vietnamese Table, by Mai Pham.Note: Vietnamese cuisine comes from an extraordinarily rich tradition, one that combines Chinese, French, and Indian influences. Acclaimed chef, cooking teacher and restaurateur Mai Pham has returned to her native land on numerous occasions to learn the secrets of its regional cuisine.The following recipe is excerpted from her latest book, Pleasures of the Vietnamese Table, a compilation of over 100 classic recipes that define Vietnamese cuisine today. These recipes are accompanied by marvelous stories and family anecdotes, as well as fine black and white photographs of the author's native land."
+      "Bring 6 quarts of salted water to a rolling boil in a large pot. Season the flour with salt and pepper. Dredge the chicken in the seasoned flour.Shake off any excess.",
+      "Heat the oil in a large, heavy non-stick skillet over high heat. Brown the chicken on one side (about 3 minutes).",
+      "Add the garlic. Turn the chicken. Scatter the mushrooms over the chicken. Cook for 3 minutes, shaking the skillet to distribute the mushrooms.",
+      "Add the vinegar, broth, bay leaves, and thyme. Cover the skillet lightly. Cook, over medium heat for 10 minutes, turning the chicken once. Uncover.",
+      "Transfer the chicken to a warm plate. Cover with foil. Continue cooking the mushrooms for another 7 minutes. Cook the pasta, stirring frequently, in the boiling salted water until al dente.",
+      "Drain.",
+      "Place on a warm serving plate. Arrange the chicken pieces over the pasta.",
+      "Remove the bay leaf from the sauce.",
+      "Pour the mushroom sauce over the chicken and pasta.",
+      "Serve."
     ],
-    "imagePad": 0.117
+    "imagePad": 0.085
   }
 }
