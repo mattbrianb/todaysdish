@@ -3266,6 +3266,24 @@
       "meal": "dinner",
       "name": "Pasta With Chicken and Mushrooms",
       "id": 654913
+    },
+    {
+      "date": "2026-11-28",
+      "meal": "breakfast",
+      "name": "Traditional Banana Bread",
+      "id": 663756
+    },
+    {
+      "date": "2026-11-28",
+      "meal": "lunch",
+      "name": "Whole Wheat No-Yeast Pizza with Roasted Garlic, Sweet Potatoes, and Onions",
+      "id": 665294
+    },
+    {
+      "date": "2026-11-28",
+      "meal": "dinner",
+      "name": "Mediterranean eggplants",
+      "id": 651407
     }
   ]
 }

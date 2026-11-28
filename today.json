@@ -1,70 +1,89 @@
 {
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "breakfast": {
-    "id": 644860,
-    "name": "Gluten Free Waffles",
-    "image": "https://img.spoonacular.com/recipes/644860-556x370.jpg",
+    "id": 663756,
+    "name": "Traditional Banana Bread",
+    "image": "https://img.spoonacular.com/recipes/663756-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3 teaspoons of baking Powder",
-      "1/2 tsp Himalania Pink salt",
-      "1 cup of brown rice",
-      "1/2 cup of Potato starch",
-      "1/4 cup tapioca flour",
-      "1/2 cup of coconut oil",
-      "1 1/2 cup of Coconut Milk",
-      "2 tsp honey",
-      "1/2 teaspoon of Baking soda",
-      "3 eggs"
+      "1 cup granulated sugar",
+      "8 tablespoons unsalted butter, room temperature",
+      "2 large eggs",
+      "3 ripe bananas",
+      "1 1/2 tablespoons milk",
+      "1 teaspoon ground cinnamon",
+      "2 cups all-purpose flour",
+      "1 teaspoon baking powder",
+      "1 teaspoon baking soda",
+      "1 teaspoon salt"
     ],
     "steps": [
-      "Mix all dry ingredients in a large bowl, and slowly mix in wet ingredients. Cook on low in waffle machine."
+      "Preheat your oven to 325 degrees F. Butter a 9x5x3-inch loaf pan.",
+      "Cream the sugar and butter in a large mixing bowl.",
+      "Add the eggs to the sugar mixture, one at a time. Beat well after adding each egg.",
+      "In a small bowl, mash the bananas with a fork.",
+      "Add the milk and cinnamon to the banana mash.",
+      "In another medium-sized bowl, add the flour, baking powder, soda and salt and mix together well.",
+      "Add the banana mixture to the butter mixture. Stir until combined.",
+      "Add the dry ingredients to the banana mixture and stir until well combined.",
+      "Pour the batter into the loaf pan and bake for 1 hour.",
+      "Bread should be done when a toothpick inserted into the center comes out clean.",
+      "Allow to cool on a rack for at least 15 minutes before slicing and serving."
     ]
   },
   "lunch": {
-    "id": 661522,
-    "name": "Steak With Blue Cheese Sherry Sauce",
-    "image": "https://img.spoonacular.com/recipes/661522-556x370.jpg",
+    "id": 665294,
+    "name": "Whole Wheat No-Yeast Pizza with Roasted Garlic, Sweet Potatoes, and Onions",
+    "image": "https://img.spoonacular.com/recipes/665294-556x370.jpg",
     "cookTime": 45,
     "ingredients": [
-      "3 tablespoons blue cheese crumbles",
-      "2 tablespoons Olive Oil, plus extra for brushing steaks",
-      "2 teaspoons parsley, finely chopped",
-      "2 tablespoons Sherry (inexpensive cooking Sherry is okay!)",
-      "2/3 pound top round"
-    ],
-    "steps": []
-  },
-  "dinner": {
-    "id": 654913,
-    "name": "Pasta With Chicken and Mushrooms",
-    "image": "https://img.spoonacular.com/recipes/654913-556x370.jpg",
-    "cookTime": 45,
-    "ingredients": [
-      "1/4 cup Balsamic Vinegar",
-      "1 bay leaf",
-      "6 Chicken Breast Halves, skinned & boned",
-      "2 cups chicken broth",
-      "1/4 cup flour",
-      "1 pound Linguini, uncooked",
-      "1/2 pound mushrooms, sliced",
-      "2 teaspoons olive oil",
-      "1/2 teaspoon pepper",
-      "1/4 teaspoon salt",
-      "1/4 teaspoon Thyme"
+      "1 tablespoon baking powder",
+      "Bulb of garlic",
+      "1 Tablespoon olive oil",
+      "1 red onion, cubed",
+      "1 roasted bulb of garlic",
+      "1 tsp rosemary",
+      "1/2 teaspoon salt",
+      "1 cup shredded mozzarella",
+      "1/2 cup skim milk",
+      "2 medium sweet potatoes, peeled and cubed",
+      "1 tsp thyme",
+      "4 cups of water",
+      "1 cup whole wheat flour",
+      "Piece of foil",
+      "Piece of foil"
     ],
     "steps": [
-      "Bring 6 quarts of salted water to a rolling boil in a large pot. Season the flour with salt and pepper. Dredge the chicken in the seasoned flour.Shake off any excess.",
-      "Heat the oil in a large, heavy non-stick skillet over high heat. Brown the chicken on one side (about 3 minutes).",
-      "Add the garlic. Turn the chicken. Scatter the mushrooms over the chicken. Cook for 3 minutes, shaking the skillet to distribute the mushrooms.",
-      "Add the vinegar, broth, bay leaves, and thyme. Cover the skillet lightly. Cook, over medium heat for 10 minutes, turning the chicken once. Uncover.",
-      "Transfer the chicken to a warm plate. Cover with foil. Continue cooking the mushrooms for another 7 minutes. Cook the pasta, stirring frequently, in the boiling salted water until al dente.",
-      "Drain.",
-      "Place on a warm serving plate. Arrange the chicken pieces over the pasta.",
-      "Remove the bay leaf from the sauce.",
-      "Pour the mushroom sauce over the chicken and pasta.",
-      "Serve."
+      "Roasted Garlic Instructions:Preheat oven to 400 degrees F.",
+      "Cut the top off the bulb of garlic, exposing the cloves.",
+      "Place the garlic on a sheet of foil large enough to wrap it up.",
+      "Drizzle olive oil over top of garlic bulb and sprinkle with salt.Tightly wrap the garlic in the foil.",
+      "Place foil in the oven and cook for 45 minutes.",
+      "Remove and unwrap garlic. Turn upside down and squeeze the cloves out of the garlic skin"
+    ]
+  },
+  "dinner": {
+    "id": 651407,
+    "name": "Mediterranean eggplants",
+    "image": "https://img.spoonacular.com/recipes/651407-556x370.jpg",
+    "cookTime": 45,
+    "ingredients": [
+      "50 g almonds, ground",
+      "4 Tbs homemade bread crumbs",
+      "1 egg",
+      "4 small eggplants",
+      "50 g feta cheese, crumbled",
+      "Fresh dill, chives or basil, chopped",
+      "100 g mozzarella cheese, coarsely grated",
+      "2 tablespoons olive oil",
+      "\u00bd tsp pepper",
+      "350 g fresh sausage without the casing, approximately 8 links"
     ],
-    "imagePad": 0.085
+    "steps": [
+      "Wash eggplants, cut the stems and halve lengthwise. Scoop out the middle.In a bowl mix and combine sausage meat, egg, feta cheese, mozzarella, almonds and pepper.With a spoon, stuff the eggplants.",
+      "Sprinkle with breadcrumbs (about  tablespoon on each eggplant) and olive oil.",
+      "Place the eggplants on a baking sheet lined with parchment paper and bake in the oven for 25 minutes on 230C.",
+      "Serve hot, sprinkled with fresh, chopped dill, chives or basil."
+    ]
   }
 }
